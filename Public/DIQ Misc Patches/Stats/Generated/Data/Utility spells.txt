@@ -1,0 +1,40 @@
+// =================================== Utility Spells container to remove bar clutter ====================================
+
+new entry "Shout_DIQ_Utility_Spells_Container"
+type "SpellData"
+data "SpellType" "Shout"
+data "ContainerSpells" "Teleport_All;Shout_SailorCat_MassUnsummon;Shout_SailorCat_MassUnsummon_Local;Target_RemoveBrokenObjects;Shout_Open_Creation;Shout_Open_Respec;Shout_Open_Mirror;LOKE_GLASSES_GIVE_GLASSES;LOKE_GLASSES_REMOVE_GLASSES"
+data "TargetConditions" "Self()"
+data "Icon" "PassiveFeature_Generic_Threat"
+data "DisplayName" "h6186a929ge943g4ba9g98f1g972f22701086"
+data "Description" "hed650636g1cc7g4e9agae18g33bd8f98af98"
+data "CastTextEvent" "Cast"
+data "UseCosts" ""
+data "SpellAnimation" ""
+data "VerbalIntent" "Utility"
+data "SpellFlags" "IsLinkedSpellContainer"
+
+new entry "Teleport_All"
+using "Teleport_All"
+type "SpellData"
+data "SpellContainerID" "Shout_DIQ_Utility_Spells_Container"
+
+new entry "Shout_SailorCat_MassUnsummon"
+using "Shout_SailorCat_MassUnsummon"
+type "SpellData"
+data "SpellContainerID" "Shout_DIQ_Utility_Spells_Container"
+
+new entry "Shout_SailorCat_MassUnsummon_Local"
+using "Shout_SailorCat_MassUnsummon_Local"
+type "SpellData"
+data "SpellContainerID" "Shout_DIQ_Utility_Spells_Container"
+
+new entry "Target_RemoveBrokenObjects"
+using "Target_RemoveBrokenObjects"
+type "SpellData"
+data "SpellContainerID" "Shout_DIQ_Utility_Spells_Container"
+
+new entry "Target_TCP_SummonChest"
+using "Target_TCP_SummonChest"
+type "SpellData"
+data "SpellContainerID" "Shout_DIQ_Utility_Spells_Container"

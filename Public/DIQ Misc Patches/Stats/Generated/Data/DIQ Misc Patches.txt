@@ -1,0 +1,393 @@
+// ==================================== Make some weapons with fire VFX show in cutscenes ====================================
+
+// VEO/JWL Crafting upgrade
+new entry "JWL_MAG_Fire_FireDamage_Quarterstaff_UP1"
+type "Weapon"
+using "JWL_MAG_Fire_FireDamage_Quarterstaff_UP1"
+data "DefaultBoosts" "WeaponEnchantment(2);WeaponProperty(Magical)"
+
+new entry "MAG_Fire_FireDamage_Quarterstaff"
+type "Weapon"
+using "MAG_Fire_FireDamage_Quarterstaff"
+data "DefaultBoosts" "WeaponEnchantment(1);WeaponProperty(Magical)"
+
+new entry "WPN_Scimitar_FlameBlade"
+type "Weapon"
+using "WPN_Scimitar_FlameBlade"
+data "DefaultBoosts" "CannotBeDisarmed()"
+
+new entry "MAG_Fire_AlwaysDippedInFire_Greatsword"
+type "Weapon"
+using "MAG_Fire_AlwaysDippedInFire_Greatsword"
+data "DefaultBoosts" "WeaponProperty(Magical)"
+
+// ==================================== Make the 4d8 Fire damage from Better Cambion Summon only work for Cambions ====================================
+
+new entry "WPN_Halberd_Cambion"
+type "Weapon"
+using "WPN_Halberd_Cambion"
+data "DefaultBoosts" "WeaponProperty(Magical)"
+data "PassivesOnEquip" "Goon_WPN_Halberd_Cambion_Passive"
+
+new entry "Goon_WPN_Halberd_Cambion_Passive"
+type "PassiveData"
+data "DisplayName" "h9e12dfe9g3b00g45dcgb231gb565edf9449b"
+data "Description" "h0c94e075gf395g4a17gb4fbg75001c0d7a69"
+data "Boosts" "IF(Character() and Tagged('CAMBION')):WeaponDamage(4d8, Fire)"
+
+// ==================================== Swap gargantuan for large in Veenab's library, because gargantuan is way overkill ====================================
+
+new entry "VBT_ENLARGE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "VBT_ENLARGE"
+data "Boosts" "ObjectSize(Huge);ScaleMultiplier(1.69)"
+
+// ==================================== Ensnaring Strike missing from Damage Combos ====================================
+
+new entry "ENSNARING_STRIKE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "ENSNARING_STRIKE"
+data "Description" "ha6582f71g1442g4acagbbebg726e31d01acd"
+data "Boosts" "Advantage(AttackTarget);Disadvantage(AttackRoll);ActionResourceBlock(Movement);Disadvantage(SavingThrow,Dexterity);Attribute(Grounded);Resistance(Fire, Vulnerable)"
+
+// ==================================== Make all the ADPP and Automated Summons stuff pop up together for consistency and less people asking how to get their Automate Summons back "I only have Undead Automation" etc. ====================================
+
+new entry "SHORT_REST"
+type "StatusData"
+data "StatusType" "BOOST"
+using "SHORT_REST"
+data "OnApplyFunctors" "IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES')):ApplyStatus(SAILORCAT_ADPP_PASSIVES,100,-1);IF(Player() and Tagged('PLAYABLE') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES_AUX')):ApplyStatus(SAILORCAT_ADPP_PASSIVES_AUX,100,-1);IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_AUTOMATED_SUMMONS_PASSIVES')):ApplyStatus(SAILORCAT_AUTOMATED_SUMMONS_PASSIVES,100,-1)"
+data "OnRemoveFunctors" "IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES')):ApplyStatus(SAILORCAT_ADPP_PASSIVES,100,-1);IF(Player() and Tagged('PLAYABLE') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES_AUX')):ApplyStatus(SAILORCAT_ADPP_PASSIVES_AUX,100,-1);IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_AUTOMATED_SUMMONS_PASSIVES')):ApplyStatus(SAILORCAT_AUTOMATED_SUMMONS_PASSIVES,100,-1)"
+
+new entry "NON_LETHAL"
+type "StatusData"
+data "StatusType" "BOOST"
+using "NON_LETHAL"
+data "OnApplyFunctors" "IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES')):ApplyStatus(SAILORCAT_ADPP_PASSIVES,100,-1);IF(Player() and Tagged('PLAYABLE') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES_AUX')):ApplyStatus(SAILORCAT_ADPP_PASSIVES_AUX,100,-1);IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_AUTOMATED_SUMMONS_PASSIVES')):ApplyStatus(SAILORCAT_AUTOMATED_SUMMONS_PASSIVES,100,-1)"
+data "OnRemoveFunctors" "IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES')):ApplyStatus(SAILORCAT_ADPP_PASSIVES,100,-1);IF(Player() and Tagged('PLAYABLE') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES_AUX')):ApplyStatus(SAILORCAT_ADPP_PASSIVES_AUX,100,-1);IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_AUTOMATED_SUMMONS_PASSIVES')):ApplyStatus(SAILORCAT_AUTOMATED_SUMMONS_PASSIVES,100,-1)"
+
+// ==================================== Trying to make 5E Spells Mind Whip not empty AI brains on to the floor when it has to pick between moving or attacking ====================================
+
+new entry "Target_TashasMindWhip"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_TashasMindWhip"
+data "Description" "h35ddfb4bge571g48ebg8ad6gda948d6de5b6"
+data "Level" "2"
+data "SpellSchool" "Enchantment"
+data "TargetRadius" "18"
+data "SpellRoll" "not SavingThrow(Ability.Intelligence, SourceSpellDC())"
+data "SpellSuccess" "DealDamage(3d6, Psychic, Magical);AI_IGNORE:IF(Player() or Ally()):ApplyStatus(MIND_WHIP,100,1);AI_IGNORE:IF(not Player() and Enemy()):ApplyStatus(MIND_WHIP_ENEMY,100,1);AI_ONLY:ApplyStatus(STUNNED,100,1)"
+
+new entry "MIND_WHIP"
+type "StatusData"
+using "MIND_WHIP"
+data "Description" "h61f58e4dg5857g4303g8a98g8ef045af5464"
+data "OnApplyFunctors" "ApplyStatus(MIND_WHIP_ACTION_BLOCK,100,1);ApplyStatus(MIND_WHIP_BONUS_ACTION_BLOCK,100,1);ApplyStatus(MIND_WHIP_UNBLOCK,100,1)"
+
+new entry "MIND_WHIP_ACTION_BLOCK"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MIND_WHIP_ACTION_BLOCK"
+data "Boosts" "ActionResourceBlock(ActionPoint);ActionResourceBlock(Movement)"
+data "OnApplyFunctors" "RestoreResource(ActionPoint,100%,0);RestoreResource(Movement,100%,0)"
+data "TickType" "EndTurn"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
+
+new entry "MIND_WHIP_BONUS_ACTION_BLOCK"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MIND_WHIP_BONUS_ACTION_BLOCK"
+data "Boosts" "ActionResourceBlock(BonusActionPoint);ActionResourceBlock(Movement)"
+data "TickType" "EndTurn"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
+
+new entry "MIND_WHIP_UNBLOCK"
+type "StatusData"
+using "MIND_WHIP_UNBLOCK"
+data "Boosts" "UnlockSpell(Shout_MindWhip_Unblock_Action);UnlockSpell(Shout_MindWhip_Unblock_BonusAction)"
+data "RemoveConditions" "SpellId('Shout_MindWhip_Unblock_Action') or SpellId('Shout_MindWhip_Unblock_BonusAction')"
+
+// ==================================== Vanilla exploit with Boots of Striding fix ====================================
+
+new entry "MAG_UNMOVABLE"
+type "StatusData"
+data "StatusType" "BOOST"
+data "RemoveConditions" "not HasSpellFlag(SpellFlags.Concentration)"
+
+// ==================================== Monk Equipment AIO tooltip fix ====================================
+
+new entry "MAG_Marsh_Strider_Passive"
+type "PassiveData"
+using "MAG_Marsh_Strider_Passive"
+data "Description" "h7920b39bg75f5g44ecga83dg40a756099eea"
+
+// ==================================== Valdacil's Spell Adjustments bug fixes????????????????????????? ====================================
+
+new entry "Target_MagicWeapon_5"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_MagicWeapon_5"
+data "SpellProperties" "IF(Item()):ApplyStatus(MAGIC_WEAPON_MASTER,100,-1);IF(Item()):ApplyStatus(MAGIC_WEAPON_5,100,-1);IF(not Item()):ApplyEquipmentStatus(MainHand,MAGIC_WEAPON_MASTER,100,-1);IF(not Item()):ApplyEquipmentStatus(MainHand,MAGIC_WEAPON_5,100,-1)"
+
+// ==================================== Mirror VEO's design of disarm immunity just with a much more clear implementation ====================================
+// Did not test these.
+
+new entry "Goon_Disarm_Immunity"
+type "PassiveData"
+data "DisplayName" ""
+data "Description" ""
+data "StatsFunctorContext" "OnCreate"
+data "StatsFunctors" "ApplyStatus(Goon_Disarm_Immunity, 100, -1)"
+data "Properties" "IsHidden"
+
+new entry "Goon_Disarm_Immunity_Status"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" ""
+data "Description" ""
+data "Icon" ""
+data "StackPriority" "1"
+data "Boosts" "StatusImmunity(DISARMED)"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+new entry "Goon_Voss_Disarm_Immunity"
+type "PassiveData"
+using "Goon_Disarm_Immunity"
+data "Conditions" "IF(not player and Tagged('GITHYANKI', context.Source))"
+
+new entry "MAG_GreaterSilver_Greatsword"
+type "Weapon"
+using "MAG_GreaterSilver_Greatsword"
+data "PassivesOnEquip" "MAG_Legendary_PsionicWeapon_Passive;MAG_Legendary_PsionicResistance_Passive;Goon_Voss_Disarm_Immunity"
+
+new entry "MAG_Legendary_Avernus_Passive"
+type "PassiveData"
+using "MAG_Legendary_Avernus_Passive"
+data "StatsFunctors" "ApplyStatus(MAG_THE_THORNS_WEAPON_BOND, 100, -1);ApplyStatus(Goon_Disarm_Immunity_Status, 100, -1)"
+
+// ==================================== Remove permanent HP buff from the well introduced in Power Hunger, reverting them to vanilla but keeping the change to remove stacking with temp HP ====================================
+
+new entry "HAG_WELL_GOOD"
+type "StatusData"
+data "StatusType" "BOOST"
+using "HAG_WELL_GOOD"
+// Refreshed
+data "DisplayName" "h0b605d85g2b41g4ed0g8da4gcc420026fa11;1"
+// <LSTag Tooltip="HitPoints">Hit point</LSTag> maximum increased by 10 until the next Long Rest.
+data "Description" "ha939a997g35c3g4327g9669gbb729b3124a4;1"
+data "Icon" "statIcons_Refreshed"
+data "FormatColor" "Gold"
+data "StackId" "HAG_WELL_GOOD"
+data "StackPriority" "10"
+data "Boosts" "IncreaseMaxHP(10)"
+data "StatusPropertyFlags" "IgnoreResting"
+
+new entry "HAG_WELL_BAD"
+type "StatusData"
+data "StatusType" "BOOST"
+using "HAG_WELL_BAD"
+// Nauseated
+data "DisplayName" "h6a1092d0gad02g465egb335g175c25f2c89d;1"
+// Vulnerable to Psychic and Acid damage until next Long Rest.
+data "Description" "h09c67718g86e2g47abg9b69g8c7bfb650533;1"
+data "Icon" "statIcons_Nauseated"
+data "FormatColor" "PoisonGreen"
+data "Boosts" "Resistance(Psychic, Vulnerable);Resistance(Acid, Vulnerable)"
+data "StatusPropertyFlags" "ApplyToDead"
+data "Passives" ""
+data "StackId" "HAG_WELL_BAD"
+data "StackPriority" "20"
+
+// ==================================== If Gortash bugs out and doesn't apply his buff this should stop him from spamming his 150 temp HP ====================================
+
+new entry "Interrupt_WYR_Gortash_Gortane"
+type "InterruptData"
+using "Interrupt_WYR_Gortash_Gortane"
+data "Cooldown" "OncePerCombat"
+
+// ==================================== Highly contested Monk entry compatibility patching - OneDeezNnutsDMartialArts/Druid QoL/Vessel/WayOfTheBoulder/Hexblade ====================================
+// I've only personally tested to make sure the first and second condition are functional.
+
+new entry "MartialArts_DextrousUnarmedAttacks"
+type "PassiveData"
+using "MartialArts_DextrousUnarmedAttacks"
+data "BoostConditions" "(IsDexterityGreaterThanStrength() and not Tagged('BOULDER', context.Source) and not Tagged('VESSEL', context.Source) and not HasStatus('ASTRALSELF_EMPOWERED_WISDOM', context.Source) and not (HasStatus('SHILLELAGH', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Wisdom >= context.Source.Dexterity)) or (HasStatus('PACT_BLADE', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)) or (HasStatus('HEXBLADE_BLADE', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)))"
+
+new entry "CL_Passive_OneDnD_MartialArts_DextrousAttacks"
+type "PassiveData"
+using "CL_Passive_OneDnD_MartialArts_DextrousAttacks"
+data "BoostConditions" "(IsDexterityGreaterThanStrength() and not Tagged('BOULDER', context.Source) and not Tagged('VESSEL', context.Source) and not HasStatus('ASTRALSELF_EMPOWERED_WISDOM', context.Source) and not (HasStatus('SHILLELAGH', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Wisdom >= context.Source.Dexterity)) or (HasStatus('PACT_BLADE', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)) or (HasStatus('HEXBLADE_BLADE', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)))"
+
+// ==================================== Attempts to fix this damn ring from Lathander's Armory ====================================
+
+new entry "CSS_Lathander_Pass_IlluminateAC" 
+type "PassiveData"
+using "CSS_Lathander_Pass_IlluminateAC" 
+data "BoostContext" "OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
+data "BoostConditions" "HasObscuredState(ObscuredState.Clear,context.Source)"
+data "Boosts" "AC(1)"
+
+new entry "CSS_Lathander_Pass_IlluminateAC" 
+type "PassiveData"
+data "DisplayName" "h6fa00c3cgb104g4440g89c2gdf230400c0bd;1"
+data "Description" "h60927545ge7e5g4eb2g8785g0ed11a45fe16;1"
+data "Properties" "Highlighted"
+data "BoostContext" "OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
+data "BoostConditions" "IF(HasObscuredState(ObscuredState.Clear, context.Source))"
+data "Boosts" "AC(1)"
+
+// ==================================== Fix conflict between Druid Quality of Life and Vanilla Equipment Overhaul, and in the process disable shapeshift toggle ====================================
+// Note: I should do a proper merge of this shit for the best of both worlds instead of this band-aid.
+
+new entry "MAG_Warlock_Quickened_Gloves"
+type "Armor"
+using "MAG_Warlock_Quickened_Gloves"
+data "RootTemplate" "4b1b3dcd-dcbc-4a93-a848-f16510d76d82"
+data "PassivesOnEquip" "MAG_Warlock_Quickened_Cantrips_Passive_Overhaul"
+data "StatusOnEquip" "MAG_WARLOCK_QUICKENED_CANTRIPS_TECHNICAL_OVERHAUL"
+
+new entry "MAG_Zhentarim_Demonspirit_Gloves"
+type "Armor"
+using "MAG_Zhentarim_Demonspirit_Gloves"
+data "RootTemplate" "7ef359b6-79af-4414-99bc-f93bc5eeed77"
+data "PassivesOnEquip" "MAG_Zhentarim_Demonspirit_Gloves_Passive_Overhaul"
+data "StatusOnEquip" "MAG_ZHENTARIM_DEMONSPIRIT_AURA_OVERHAUL_TECHNICAL"
+
+new entry "MAG_CQCaster_CloseRangedSpellMastery_Gloves"
+type "Armor"
+using "MAG_CQCaster_CloseRangedSpellMastery_Gloves"
+data "RootTemplate" "c9f03464-488c-4f3f-aa2f-6d4c8e48a106"
+
+new entry "MAG_Warlock_Twinned_Gloves"
+type "Armor"
+using "MAG_Warlock_Twinned_Gloves"
+data "RootTemplate" "fc4fd633-bc45-4ff4-90e6-2e454f7ceaa0"
+data "PassivesOnEquip" "MAG_Extended_Target_Cantrip_Passive_Overhaul"
+data "StatusOnEquip" "MAG_EXTENDED_TARGET_CANTRIPS_TECHNICAL_OVERHAUL"
+
+// ==================================== Allow Dodge, Get Ready and Hurry Up to be used while Immobilized but not while out of combat ====================================
+
+new entry "Shout_Hurry"
+type "SpellData"
+using "Shout_Hurry"
+data "RequirementConditions" "Combat()"
+data "Requirements" "Combat"
+
+new entry "GR_Shout_Ready"
+type "SpellData"
+using "GR_Shout_Ready"
+data "RequirementConditions" "Combat()"
+data "Requirements" "Combat"
+
+new entry "Shout_Dodge"
+type "SpellData"
+using "Shout_Dodge"
+data "RequirementConditions" "Combat()"
+data "Requirements" "Combat"
+
+// ==================================== HeavyArmorMoveSpeed_SE - Add tooltip visibility for player clarity ====================================
+
+new entry "IsWearingHeavyArmor_13"
+type "PassiveData"
+using "IsWearingHeavyArmor_13"
+data "Properties" "Highlighted"
+data "DisplayName" "hdb671db5gc473g4c5cgbc20gb33849e43a36"
+data "Description" "hfe823e2cgda3eg474eg81b9gbcb416d33d1e"
+data "DescriptionParams" "Distance(3);4"
+
+// ==================================== Make Flail of Ages Enhanced work with Disarming Attack from Arsenal Overhaul ====================================
+
+new entry "MAG_BG_OfAges_Flail"
+using "MAG_BG_OfAges_Flail"
+type "Weapon"
+data "BoostsOnEquipMainHand" "UnlockSpell(Target_ConcussiveSmash);UnlockSpell(Target_HinderingSmash);UnlockSpell(Shout_LHB_ElementalAge);UnlockSpell(Target_DisarmingAttack_Flail)"
+
+// ==================================== Nerf glove passive for Elven Weaponry - Paladin ====================================
+
+new entry "EW_BA_BlessedHand_Passive_I"
+using "EW_BA_BlessedHand_Passive_I"
+type "PassiveData"
+data "Description" "h8dcb3690g0420g435bg88aeg0eb4ed7f34cc;1"
+data "Boosts" "UnlockSpellVariant(SpellId('Target_Help'),ModifyUseCosts(Replace,BonusActionPoint,1,0,ActionPoint))"
+
+new entry "EW_BA_BlessedHand_Passive_II"
+using "EW_BA_BlessedHand_Passive_II"
+type "PassiveData"
+data "Description" "h027cfe16g350dg43c8gac97g46a6628b0384;1"
+
+// ==================================== Allow sneak attack outside of combat (without hiding) for Rogue Extra's Swashbuckler subclass, remove movement block from Steady Aim and replace it with more forgiving mechanics and description ====================================
+
+new entry "RAKISHAUDACITY"
+using "RAKISHAUDACITY"
+type "StatusData"
+data "StatusType" "BOOST"
+data "AuraStatuses" "TARGET:IF(Character()):ApplyStatus(SNEAK_ENEMY,100,1)"
+
+// Steady Aim rework
+new entry "Shout_SteadyAim"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_SteadyAim"
+data "Description" "hc0bc6718g548bg49a0ga4a4g27c238a87c66"
+data "SpellProperties" "ApplyStatus(STEADYAIM,100,1);ApplyStatus(GOON_STEADYAIM_LOSE_MOVEMENT,100,1)"
+
+new entry "STEADYAIM"
+type "StatusData"
+data "StatusType" "BOOST"
+using "STEADYAIM"
+data "Description" "h50ffdbf5ga58cg4e8bg9c47g9a2e50dffeda"
+
+new entry "Steady_AimActive"
+type "PassiveData"
+using "Steady_AimActive"
+data "StatsFunctorContext" "OnAttack;OnMovedDistance" 
+
+// ==================================== Fix bugged tooltip in Mobility Overhaul and reduce duration of Off Balance from jumping ====================================
+
+new entry "UnarmoredMovement_1"
+using "UnarmoredMovement_1"
+type "PassiveData"
+data "Description" "3048fe61f8834940b9a70e9d70b4a171;4"
+
+new entry "MO_Jump_Off_Balanced_Self"
+type "SpellData"
+using "MO_Jump_Off_Balanced_Self"
+data "SpellSuccess" "ApplyStatus(SELF, OFF_BALANCED,100,1)"
+
+// ==================================== Clerics Subclass and Valdacil's Spell Adjustments compatibility patching ====================================
+
+new entry "RAY_OF_ENFEEBLEMENT"
+using "RAY_OF_ENFEEBLEMENT"
+type "StatusData"
+data "StatusType" "BOOST"
+data "Description" "hcc2c6058g412cg439aga60cg989e2c34292e"
+data "Boosts" "HalveWeaponDamage(Strength);HalveWeaponDamage(Dexterity);Disadvantage(SavingThrow,Strength);Disadvantage(SavingThrow,Dexterity);Disadvantage(SavingThrow,Constitution);Resistance(Necrotic, Vulnerable)"
+
+new entry "Projectile_RayOfEnfeeblement"
+using "Projectile_RayOfEnfeeblement"
+type "SpellData"
+data "SpellType" "Projectile"
+data "Description" "h2f68d483g7ca5g4160g89c9g73b42e315cb2"
+data "Cooldown" ""
+data "SpellSuccess" "ApplyStatus(RAY_OF_ENFEEBLEMENT,100,10);SpawnExtraProjectiles(Val_Projectile_RayOfEnfeeblement_Explosion);IF(HasPassive('ImprovedReaper', context.Source)):ApplyStatus(SELF,SELF_RAYOFENFEEBLEMENT,100,1);ApplyStatus(RAYOFENFEEBLEMENT_AURA,100,1);ApplyStatus(RAY_OF_ENFEEBLEMENT,100,10)"
+data "ExtraDescription" ""
+
+// ==================================== Spells Rebalanced and Valdacil's Spell Adjustments compatibility patching ====================================
+
+new entry "Target_PhantasmalForce"
+using "Target_PhantasmalForce"
+type "SpellData"
+data "SpellType" "Target"
+data "TargetConditions" "Character() and not Self()"
+data "TooltipStatusApply" "ApplyStatus(PHANTASMAL_FORCE,100,10)"
+data "DamageType" "Psychic"
+data "AreaRadius" ""
+
+new entry "PHANTASMAL_FORCE_PSYCHIC"
+type "StatusData"
+data "StatusType" "BOOST"
+using "PHANTASMAL_FORCE_PSYCHIC"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"

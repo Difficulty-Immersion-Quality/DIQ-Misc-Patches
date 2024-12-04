@@ -1,0 +1,15 @@
+key "EncumberedMultiplier","35"
+
+key "HeavilyEncumberedMultiplier","45"
+
+key "CarryLimitMultiplier","50"
+
+new entry "GLO_Volo"
+type "Character"
+using "GLO_Volo"
+data "DefaultBoosts" "Tag(BLOCK_PICKPOCKET)"
+
+new entry "GLO_Jergal"
+type "Character"
+using "GLO_Jergal"
+data "DefaultBoosts" "ProficiencyBonus(SavingThrow, Wisdom); BlockRegainHP(Living;Construct); Tag(BLOCK_PICKPOCKET)"

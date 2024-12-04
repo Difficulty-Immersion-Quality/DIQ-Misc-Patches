@@ -1,0 +1,13 @@
+// ==================================== Rebalance - Feats missing tooltip edit ====================================
+
+new entry "HeavilyArmored"
+type "PassiveData"
+using "HeavilyArmored"
+data "Description" "h91f18f2bgaee5g43cag993eg676cc5e3e049"
+
+// ==================================== Crown actually uses the character's stat ====================================
+
+new entry "SYR_Druid_Headwear_DruidCrown_Wildshape_Passive"
+type "PassiveData"
+using "SYR_Druid_Headwear_DruidCrown_Wildshape_Passive"
+data "Boosts" "IF(ClassLevelHigherOrEqualThan(1,'Druid')):ProficiencyBonus(Skill,Persuasion);IF(ConditionResult(context.Source.Wisdom >= 18)):AbilityOverrideMinimum(Intelligence,13);IF(ConditionResult(context.Source.Wisdom >= 18)):AbilityOverrideMinimum(Charisma,13)"

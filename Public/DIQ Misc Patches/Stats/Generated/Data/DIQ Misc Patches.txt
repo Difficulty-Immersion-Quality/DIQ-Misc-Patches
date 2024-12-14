@@ -33,6 +33,7 @@ new entry "Goon_WPN_Halberd_Cambion_Passive"
 type "PassiveData"
 data "DisplayName" "h9e12dfe9g3b00g45dcgb231gb565edf9449b"
 data "Description" "h0c94e075gf395g4a17gb4fbg75001c0d7a69"
+data "DescriptionParams" "DealDamage(4d8, Fire)"
 data "Boosts" "IF(Character() and Tagged('CAMBION')):WeaponDamage(4d8, Fire)"
 
 // ==================================== Swap gargantuan for large in Veenab's library, because gargantuan is way overkill ====================================

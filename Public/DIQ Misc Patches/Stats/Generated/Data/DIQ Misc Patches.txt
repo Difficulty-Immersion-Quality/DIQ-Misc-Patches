@@ -1,3 +1,12 @@
+// ==================================== Fix conflcit between Expansion and Barbarian QOL? ====================================
+
+new entry "RAGE_STOP_REMOVE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "RAGE_STOP_REMOVE"
+data "RemoveConditions" ""
+data "RemoveEvents" ""
+
 // ==================================== Make some weapons with fire VFX show in cutscenes ====================================
 
 // VEO/JWL Crafting upgrade

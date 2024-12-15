@@ -1,3 +1,41 @@
+// ==================================== Fix Metamagic Extended machine broke ====================================
+
+new entry "METAMAGIC_TRANSMUTED_ACID"
+type "StatusData"
+data "StatusType" "BOOST"
+using "METAMAGIC_TRANSMUTED_ACID"
+data "StackId" "TRANSMUTED_SPELL"
+
+new entry "METAMAGIC_TRANSMUTED_COLD"
+type "StatusData"
+data "StatusType" "BOOST"
+using "METAMAGIC_TRANSMUTED_COLD"
+data "StackId" "TRANSMUTED_SPELL"
+
+new entry "METAMAGIC_TRANSMUTED_FIRE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "METAMAGIC_TRANSMUTED_FIRE"
+data "StackId" "TRANSMUTED_SPELL"
+
+new entry "METAMAGIC_TRANSMUTED_LIGHTNING"
+type "StatusData"
+data "StatusType" "BOOST"
+using "METAMAGIC_TRANSMUTED_LIGHTNING"
+data "StackId" "TRANSMUTED_SPELL"
+
+new entry "METAMAGIC_TRANSMUTED_POISON"
+type "StatusData"
+data "StatusType" "BOOST"
+using "METAMAGIC_TRANSMUTED_POISON"
+data "StackId" "TRANSMUTED_SPELL"
+
+new entry "METAMAGIC_TRANSMUTED_THUNDER"
+type "StatusData"
+data "StatusType" "BOOST"
+using "METAMAGIC_TRANSMUTED_THUNDER"
+data "StackId" "TRANSMUTED_SPELL"
+
 // ==================================== Fix conflcit between Expansion and Barbarian QOL? ====================================
 
 new entry "RAGE_STOP_REMOVE"

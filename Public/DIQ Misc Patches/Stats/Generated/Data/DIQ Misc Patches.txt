@@ -1,4 +1,12 @@
-// ==================================== Stop NPCs from Rage spamming ====================================
+// ==================================== Make Spiritual Weapon summons not slow as shit ====================================
+// All other summons inherit from Greataxe
+
+new entry "SpiritualWeapon_Greataxe"
+type "Character"
+using "SpiritualWeapon_Greataxe"
+data "ActionResources" "BonusActionPoint:1;Movement:9"
+
+// ==================================== Health buffs for Minthara and Wyll prior to recruitment ====================================
 
 new entry "Goon_Buff_Companion_Temporary"
 type "PassiveData"

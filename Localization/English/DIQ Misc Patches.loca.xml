@@ -49,7 +49,7 @@
 	<content contentuid="h20585462g60b3g4f16gaec3g5cd52e4762e0" version="1">Heavy Bleeding</content>
 	<content contentuid="h764e4e3cg67bbg4e07g993ag2d7613215c74" version="1">Creature is &lt;LSTag Type="Status" Tooltip="BLEEDING"&gt;Bleeding&lt;/LSTag&gt; profusely, taking an additional [2] Slashing damage at the start of each turn and has &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on Constitution &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;. &lt;br&gt;&lt;br&gt;Removed by healing.</content>
 	<content contentuid="h81c2adc4gcf67g4049g8129g1e06741fd05e" version="1">Argument. Solved. </content>
-	<content contentuid="hb2d4506fg3172g455bgb8b3gb6f41aec9730" version="1">Target has &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;, Ability Checks, and &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;. Additionally, target takes 1d8 poison damage per turn</content>
+	<content contentuid="hb2d4506fg3172g455bgb8b3gb6f41aec9730" version="1">Target has &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;, &lt;LSTag Tooltip="AbilityCheck"&gt;Ability Checks&lt;/LSTag&gt;, and &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;. Additionally, target takes 1d8 poison damage per turn</content>
 	<content contentuid="h786e8a25g0ff1g40b7gb10ag98c7ffe70184" version="1">Extremely Long</content>
 	<content contentuid="heaa58c9bg511fg4dfeg9969g5eca61cc79e3" version="1">Pikes are especially long weapons, boasting the furthest reach of all melee weapons. Useful for supporting allies from relative safety.</content>
 	<content contentuid="hec88d0cdg2240g4ef8g9a87g4eb24061aceb" version="1">Heavy Draw</content>
@@ -102,4 +102,7 @@ Removed when &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Helped&lt;/LSTag&gt
 
     <content contentuid="h9e12dfe9g3b00g45dcgb231gb565edf9449b" version="1">Cambion's Cauteriser</content>
 	<content contentuid="h0c94e075gf395g4a17gb4fbg75001c0d7a69" version="1">This halberd slashes with burning fury dealing an additional [1], but only for its Devil master.</content>
+
+    <content contentuid="h9a0c39bfg34a6g44ddgbdcdgde0109b0e026" version="1">Goon's Protection</content>
+    <content contentuid="hea3f4b93gb5dbg4ebeg9a3bgf6f4f838a63b" version="1">This character is under the protection of Goonsack, being granted [1] &lt;LSTag Tooltip="TemporaryHitPoints"&gt;temporary hit points&lt;/LSTag&gt; until recruitment.</content>
 </contentList>

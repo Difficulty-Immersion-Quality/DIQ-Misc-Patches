@@ -102,7 +102,4 @@ Removed when &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Helped&lt;/LSTag&gt
 
     <content contentuid="h9e12dfe9g3b00g45dcgb231gb565edf9449b" version="1">Cambion's Cauteriser</content>
 	<content contentuid="h0c94e075gf395g4a17gb4fbg75001c0d7a69" version="1">This halberd slashes with burning fury dealing an additional [1], but only for its Devil master.</content>
-
-    <content contentuid="h9a0c39bfg34a6g44ddgbdcdgde0109b0e026" version="1">Goon's Protection</content>
-    <content contentuid="hea3f4b93gb5dbg4ebeg9a3bgf6f4f838a63b" version="1">This character is under the protection of Goonsack, being granted [1] &lt;LSTag Tooltip="TemporaryHitPoints"&gt;temporary hit points&lt;/LSTag&gt; until recruitment.</content>
 </contentList>

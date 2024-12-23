@@ -30,32 +30,18 @@ end)
 --
 --Ext.Events.StatsLoaded:Subscribe(OnStatsLoaded)
 
-local targetCharacters = {
-    ["S_Player_Wyll_c774d764-4a17-48dc-b470-32ace9ce447d"] = true,
-    ["S_GOB_DrowCommander_25721313-0c15-4935-8176-9f134385451b"] = true
-}
+-- Gale's Character ID
+local galeCharID = "S_Player_Gale_ad9af97d-75da-406a-ae13-7071c563f604"
 
+-- Function to apply the WildMagic passive to Gale
+local function applyWildMagicPassive(charID)
+    if charID == galeCharID then
+        Osi.AddPassive(charID, "WildMagic")
+    end
+end
+
+-- Listener for when gameplay starts
 Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level_name, is_editor_mode)
-    for i, v in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter")) do
-        Ext.Timer.WaitFor(100, function()
-            local charID = v.Uuid and v.Uuid.EntityUuid or v  -- Ensure we get the EntityUuid if available
-            if type(charID) == "string" and targetCharacters[charID] then
-                local flagName = "PassiveApplied_" .. charID  -- Unique flag for each character
-                if not Osi.DB_GlobalFlagExists(flagName) then
-                    Osi.AddPassive(charID, "Goon_Buff_Companion_Temporary")
-                    Osi.DB_GlobalFlagSet(flagName)  -- Set the flag to indicate passive has been applied
-                end
-            end
-        end)
-    end
-end)
-
-Ext.Osiris.RegisterListener("CharacterJoinedParty", 1, "after", function(charID)
-    if targetCharacters[charID] then
-        local flagName = "PassiveApplied_" .. charID  -- Same flag used for tracking
-        if Osi.DB_GlobalFlagExists(flagName) then
-            Osi.RemovePassive(charID, "Goon_Buff_Companion_Temporary")
-            Osi.DB_GlobalFlagClear(flagName)  -- Clear the flag to ensure no reapplication
-        end
-    end
+    -- Apply WildMagic passive to Gale
+    applyWildMagicPassive(galeCharID)
 end)

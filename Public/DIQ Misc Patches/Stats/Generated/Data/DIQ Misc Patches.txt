@@ -1,3 +1,11 @@
+// ==================================== Stop NPCs cancelling Banishment ====================================
+
+new entry "SYR_Target_Banishment_Cancel"
+type "SpellData"
+data "SpellType" "Target"
+using "SYR_Target_Banishment_Cancel"
+data "RequirementConditions" "IS(Player(context.Source))”
+
 // ==================================== Make Spiritual Weapon summons not slow as shit ====================================
 // All other summons inherit from Greataxe
 

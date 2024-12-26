@@ -166,6 +166,7 @@ data "Cooldown" "OncePerCombat"
 data "RequirementConditions" "IsProficientWithEquippedWeapon()"
 
 // ==================================== Projectile ====================================
+// Possibly force the AI to use Rapid Shot properly by mirroring the design of Bless
 
 new entry "Projectile_Shortbow_Rapid"
 using "Projectile_Shortbow_Rapid"
@@ -174,6 +175,16 @@ data "SpellType" "Projectile"
 data "Cooldown" "OncePerCombat"
 data "Description" "h5fc214aega6dfg4797g99a5g5f714a6810c9"
 data "AIFlags" "CanNotUse"
+data "CombatAIOverrideSpell" "Projectile_Shortbow_Rapid_AI"
+
+new entry "Projectile_Shortbow_Rapid_AI"
+type "SpellData"
+data "SpellType" "Target"
+using "Projectile_Shortbow_Rapid"
+data "TargetConditions" "not Dead() and Enemy()"
+data "AmountOfTargets" ""
+data "MaximumTargets" "3"
+data "CombatAIOverrideSpell" ""
 
 // ==================================== Shout ====================================
 

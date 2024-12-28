@@ -1,0 +1,34 @@
+// Longsword: fixes force damage against concentrating targets and adds advantage to saving throws against spells
+new entry "CSS_HelmStatue_Longsword"
+type "Weapon"
+using "CSS_HelmStatue_Longsword"
+data "Boosts" "Initiative(3);Advantage(Skill,Perception)"
+data "PassivesOnEquip" "CSS_HelmArmor_Pass_DivineVigilance;CSS_HelmArmor_Pass_Weavebane"
+
+new entry "CSS_HelmArmor_Pass_Weavebane"
+type "PassiveData"
+using "CSS_HelmArmor_Pass_Weavebane"
+data "Boosts" "IF(IsMeleeAttack() and IsConcentrating(context.Target)):CharacterWeaponDamage(1d6,Force);IF(IsSpell()):RollBonus(SavingThrow, Advantage)"
+
+
+// Chest armour: fixes Faithguard +2 AC remaining on target even if they no longer have Shield of Faith
+new entry "CSS_HelmArmory_Pass_Faithguard"
+type "PassiveData"
+using "CSS_HelmArmory_Pass_Faithguard"
+data "StatsFunctorContext" "OnStatusApplied"
+data "Conditions" "StatusId('SHIELD_OF_FAITH')"
+data "StatsFunctors" "ApplyStatus(HELMARMORY_FAITHGUARD,100,-1)"
+
+new entry "HELMARMORY_FAITHGUARD"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "h96487335ga28eg4d11ga040g3988f3187acc;1"
+data "Description" "h433f9e7cg1f4dg4680ga58ag1299b22eca8e;1"
+data "DescriptionParams" "2"
+data "Icon" "Spell_Abjuration_ShieldOfFaith"
+data "StackId" "HELM_FAITHGUARD"
+data "StackType" ""
+data "Boosts" "AC(2)"
+data "Passives" ""
+data "RemoveConditions" "StatusId('SHIELD_OF_FAITH')"
+data "RemoveEvents" "OnStatusRemoved"

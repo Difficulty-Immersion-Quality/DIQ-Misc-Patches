@@ -98,7 +98,7 @@ The &lt;LSTag Tooltip="AttackRoll"&gt;Attack Roll&lt;/LSTag&gt; bonus for &lt;LS
 	<content contentuid="h8065a5acg6c5fg4d5dga066g40c0411924a3" version="1">Assistance</content>
     <content contentuid="h704e8f78gd53fg4f66g8296gc127ab992969" version="1">A party member is assisting you for this skill check.</content>
 
-    <content contentuid="ha6582f71g1442g4acagbbebg726e31d01acd" version="1">Cannot move and takes [1] per turn. &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; against the creature have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt;, while the creature's Attack Rolls and Dexterity &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; have &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt;. &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Fire damage.
+    <content contentuid="ha6582f71g1442g4acagbbebg726e31d01acd" version="1">Cannot move and takes [1] per turn. &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; against the creature have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt;, while the creature's &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; and &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; have &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt;. &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Fire damage.
 Removed when &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Helped&lt;/LSTag&gt;.</content>
 
     <content contentuid="h9e12dfe9g3b00g45dcgb231gb565edf9449b" version="1">Cambion's Cauteriser</content>

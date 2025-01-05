@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <save>
-	<version major="4" minor="0" revision="9" build="328" lslib_meta="v1,bswap_guids" />
+	<version major="4" minor="0" revision="9" build="326" />
 	<region id="Templates">
 		<node id="Templates">
 			<children>
@@ -37,19 +37,19 @@
 					<attribute id="VocalIdle3ResourceID" type="FixedString" value="426d2849-177d-3c78-d632-a203f292b101" />
 					<attribute id="CharacterVisualResourceID" type="FixedString" value="0cbb8c47-b5b4-cef1-297b-de9485d39266" />
 					<attribute id="GeneratePortrait" type="LSString" value="Icon_Zombie" />
-					<attribute id="Race" type="guid" value="56b3ae88-2b72-4838-9f3b-00929aeae6e1" />
+					<attribute id="Race" type="guid" value="56b3ae88-2b72-4838-3b9f-9200ea9ae1e6" />
 					<attribute id="Archetype" type="FixedString" value="zombie" />
 					<children>
 						<node id="Tags">
 							<children>
 								<node id="Tag">
-									<attribute id="Object" type="guid" value="6181b81c-b910-4e1c-b9ec-5099ac210ae7" />
+									<attribute id="Object" type="guid" value="6181b81c-b910-4e1c-ecb9-995021ace70a" />
 								</node>
 								<node id="Tag">
-									<attribute id="Object" type="guid" value="90101158-141e-4896-8e60-f8db03f6dde3" />
+									<attribute id="Object" type="guid" value="90101158-141e-4896-608e-dbf8f603e3dd" />
 								</node>
 								<node id="Tag">
-									<attribute id="Object" type="guid" value="0a79a905-d41f-401f-a0e4-a2401143fc17" />
+									<attribute id="Object" type="guid" value="0a79a905-d41f-401f-e4a0-40a2431117fc" />
 								</node>
 							</children>
 						</node>

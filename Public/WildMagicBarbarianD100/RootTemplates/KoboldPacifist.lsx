@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <save>
-	<version major="4" minor="0" revision="9" build="328" lslib_meta="v1,bswap_guids" />
+	<version major="4" minor="0" revision="9" build="313" />
 	<region id="Templates">
 		<node id="Templates">
 			<children>
@@ -9,15 +9,16 @@
 					<attribute id="Name" type="LSString" value="Kobolds_Inventor" />
 					<attribute id="LevelName" type="FixedString" value="" />
 					<attribute id="Type" type="FixedString" value="character" />
-					<attribute id="ParentTemplateId" type="FixedString" value="1a1415cd-0e96-4e9f-961e-480dc29bc008" />
+					<attribute id="ParentTemplateId" type="FixedString" value="1a1415cd-0e96-4e9f-961e-480dc29bc008" />	
+					<!--<attribute id="PhysicsTemplate" type="FixedString" value="90c71852-67e4-e7e5-2f34-785508bd8479" />-->
 					<attribute id="DisplayName" type="TranslatedString" handle="h3925993fg85d1g4331g90a4g461979556c4f" version="1" />
 					<attribute id="Icon" type="FixedString" value="ee9ba200-9d3d-890a-ae00-e62bb9e80974-EQP_Dagger_(Icon_Kobold)" />
 					<attribute id="CanOpenDoors" type="bool" value="True" />
 					<attribute id="Stats" type="FixedString" value="Kobold_Percy" />
 					<attribute id="SpellSet" type="FixedString" value="CommonNPCActions" />
 					<attribute id="Equipment" type="FixedString" value="EQP_Unarmed_Lute" />
-					<attribute id="VisualTemplate" type="FixedString" value="ab4c400d-6287-a77d-3948-45a5f01ed913" />
-					<attribute id="CharacterVisualResourceID" type="FixedString" value="d2907efe-9357-4d6e-b20c-0790f097ee52" />
+					<attribute id="VisualTemplate" type="FixedString" value="a3f2cad3-11d3-4316-4670-6bf33caf5d61" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="42198e56-03a2-a0cd-bd04-3079bc5bd49f" />
 					<attribute id="Archetype" type="FixedString" value="mage" />
 					<children>
 						<node id="SkillList">

@@ -1,3 +1,11 @@
+// ==================================== Spellsword cooked my AOE jump ====================================
+
+new entry "Target_Jump"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Jump"
+data "SpellProperties" "ApplyStatus(LONG_JUMP,100,10);IF(not Combat()):ApplyStatus(SYR_LONG_JUMP_AURA,100,1);TARGET:IF(Self()):ApplyStatus(SELF,VG_SPELL_WAS_SELF,100,1)"
+
 // ==================================== Stop NPCs cancelling Banishment ====================================
 
 new entry "SYR_Target_Banishment_Cancel"

@@ -103,6 +103,4 @@ Removed when &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Helped&lt;/LSTag&gt
 
     <content contentuid="h9e12dfe9g3b00g45dcgb231gb565edf9449b" version="1">Cambion's Cauteriser</content>
 	<content contentuid="h0c94e075gf395g4a17gb4fbg75001c0d7a69" version="1">This halberd slashes with burning fury dealing an additional [1], but only for its Devil master.</content>
-
-	<content contentuid="h8d029ad7g3c19g4502ga7e1g89c4ea067a33" version="1">Choose a point within range to fill a [1] radius for the duration. The darkness spreads around corners.&lt;br&gt;&lt;Br&gt;A creature with &lt;LSTag Type="Passive" Tooltip="Darkvision"&gt;darkvision&lt;/LSTag&gt; can't see through this darkness, and nonmagical light can't illuminate it.</content>
 </contentList>

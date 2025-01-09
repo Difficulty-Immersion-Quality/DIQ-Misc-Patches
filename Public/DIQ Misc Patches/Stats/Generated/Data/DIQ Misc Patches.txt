@@ -1,4 +1,4 @@
-// ==================================== Compatibility partch for Expansion and True Darkness - 5e RAW ====================================
+// ==================================== Compatibility patch for Expansion and True Darkness - 5e RAW ====================================
 
 new entry "BLINDED"
 type "StatusData"
@@ -12,7 +12,7 @@ new entry "TARGET_INVOKE_DARKNESS"
 type "SpellData"
 data "SpellType" "Target"
 using "TARGET_INVOKE_DARKNESS"
-data "Description" "h8d029ad7g3c19g4502ga7e1g89c4ea067a33"
+data "Description" "hf645e523dabe4f4582d14d37e5300b4a3522"
 
 // ==================================== Spellsword cooked my AOE jump ====================================
 

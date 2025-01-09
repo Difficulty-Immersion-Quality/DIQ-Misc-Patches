@@ -1,3 +1,19 @@
+// ==================================== Compatibility partch for Expansion and True Darkness - 5e RAW ====================================
+
+new entry "BLINDED"
+type "StatusData"
+data "StatusType" "BOOST"
+using "BLINDED"
+data "Boosts" "IF(not (TD_BlindFighting() or (HasPassive('Blindsense',context.Source) and not (HasPassive('Deafness',context.Source) or HasStatus('SG_Deafened',context.Source))))):Disadvantage(AttackRoll);IF(not (TD_BlindFighting(context.Target) or (HasPassive('Blindsense',context.Source) and not (HasPassive('Deafness',context.Source) or HasStatus('SG_Deafened',context.Source))))):Advantage(AttackTarget)"
+
+// ==================================== Blackguard's Darkness tooltip to reflect that of True Darkness - 5e RAW ====================================
+
+new entry "TARGET_INVOKE_DARKNESS"
+type "SpellData"
+data "SpellType" "Target"
+using "TARGET_INVOKE_DARKNESS"
+data "Description" "h8d029ad7g3c19g4502ga7e1g89c4ea067a33"
+
 // ==================================== Spellsword cooked my AOE jump ====================================
 
 new entry "Target_Jump"

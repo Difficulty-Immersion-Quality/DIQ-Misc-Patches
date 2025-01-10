@@ -22,13 +22,30 @@ data "SpellType" "Target"
 using "Target_Jump"
 data "SpellProperties" "ApplyStatus(LONG_JUMP,100,10);IF(not Combat()):ApplyStatus(SYR_LONG_JUMP_AURA,100,1);TARGET:IF(Self()):ApplyStatus(SELF,VG_SPELL_WAS_SELF,100,1)"
 
-// ==================================== Stop NPCs cancelling Banishment ====================================
+// ==================================== Syrchalis' spell fixes ====================================
 
 new entry "SYR_Target_Banishment_Cancel"
 type "SpellData"
 data "SpellType" "Target"
 using "SYR_Target_Banishment_Cancel"
 data "RequirementConditions" "IS(Player(context.Source))”
+
+new entry "SYR_Barkskin_Passive"
+type "PassiveData"
+using "SYR_Barkskin_Passive"
+data "StatsFunctorContext" "OnDamaged"
+
+new entry "SYR_REVIVIFY_TEMPHP"
+type "StatusData"
+data "StatusType" "BOOST"
+using "SYR_REVIVIFY_TEMPHP"
+data "SoundLoop" "Spell_Status_Buff_MO"
+data "StackId" "TEMPORARY_HP"
+data "StackPriority" "1"
+data "RemoveConditions" "not HasTemporaryHP()"
+data "RemoveEvents" "OnDamage"
+data "ManagedStatusEffectType" "Positive"
+data "ManagedStatusEffectGroup" "6435c10a-c67d-4f79-8813-b84b0762f92b"
 
 // ==================================== Make Spiritual Weapon summons not slow as shit ====================================
 // All other summons inherit from Greataxe

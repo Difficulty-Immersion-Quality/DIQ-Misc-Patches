@@ -151,7 +151,18 @@ data "Description" "h3c9bc881g2763g4881g96c0g4dd58fff7d05;1"
 
 // ==================================== Rebalance - Level 5 Spells ====================================
 
-// Flamestrike - follow up attacks, Flamestrike Remembrance, nor Flamestrike Echo being granted?
+// Flamestrike - Alleged bug report claiming the recast spell don't show was wrong, but there are issues with the tooltips having incorrect status names in LStags.
+new entry "Target_FlameStrike"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_FlameStrike"
+data "Description" "h84fcd915gd8c6g43e5ga1eagcd3da465d43b;1"
+
+new entry "SYR_FLAMESTRIKE_RECAST_5B"
+type "StatusData"
+data "StatusType" "BOOST"
+using "SYR_FLAMESTRIKE_RECAST_5B"
+data "Description" "h5e222416gc405g44afg994dg2da0aa4e5b90;1"
 
 
 // Contagion - Slimy Contagion never stuns?

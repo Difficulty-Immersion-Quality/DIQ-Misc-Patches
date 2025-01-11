@@ -22,31 +22,6 @@ data "SpellType" "Target"
 using "Target_Jump"
 data "SpellProperties" "ApplyStatus(LONG_JUMP,100,10);IF(not Combat()):ApplyStatus(SYR_LONG_JUMP_AURA,100,1);TARGET:IF(Self()):ApplyStatus(SELF,VG_SPELL_WAS_SELF,100,1)"
 
-// ==================================== Syrchalis' spell fixes ====================================
-
-new entry "SYR_Target_Banishment_Cancel"
-type "SpellData"
-data "SpellType" "Target"
-using "SYR_Target_Banishment_Cancel"
-data "RequirementConditions" "IS(Player(context.Source))”
-
-new entry "SYR_Barkskin_Passive"
-type "PassiveData"
-using "SYR_Barkskin_Passive"
-data "StatsFunctorContext" "OnDamaged"
-
-new entry "SYR_REVIVIFY_TEMPHP"
-type "StatusData"
-data "StatusType" "BOOST"
-using "SYR_REVIVIFY_TEMPHP"
-data "SoundLoop" "Spell_Status_Buff_MO"
-data "StackId" "TEMPORARY_HP"
-data "StackPriority" "1"
-data "RemoveConditions" "not HasTemporaryHP()"
-data "RemoveEvents" "OnDamage"
-data "ManagedStatusEffectType" "Positive"
-data "ManagedStatusEffectGroup" "6435c10a-c67d-4f79-8813-b84b0762f92b"
-
 // ==================================== Make Spiritual Weapon summons not slow as shit ====================================
 // All other summons inherit from Greataxe
 
@@ -379,7 +354,6 @@ using "Interrupt_WYR_Gortash_Gortane"
 data "Cooldown" "OncePerCombat"
 
 // ==================================== Highly contested Monk entry compatibility patching - OneDeezNnutsDMartialArts/Druid QoL/Vessel/WayOfTheBoulder/Hexblade ====================================
-// I've only personally tested to make sure the first and second condition are functional.
 
 new entry "MartialArts_DextrousUnarmedAttacks"
 type "PassiveData"
@@ -390,24 +364,6 @@ new entry "CL_Passive_OneDnD_MartialArts_DextrousAttacks"
 type "PassiveData"
 using "CL_Passive_OneDnD_MartialArts_DextrousAttacks"
 data "BoostConditions" "(IsDexterityGreaterThanStrength() and not Tagged('BOULDER', context.Source) and not Tagged('VESSEL', context.Source) and not HasStatus('ASTRALSELF_EMPOWERED_WISDOM', context.Source) and not (HasStatus('SHILLELAGH', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Wisdom >= context.Source.Dexterity)) or (HasStatus('PACT_BLADE', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)) or (HasStatus('HEXBLADE_BLADE', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)))"
-
-// ==================================== Attempts to fix this damn ring from Lathander's Armory ====================================
-
-new entry "CSS_Lathander_Pass_IlluminateAC" 
-type "PassiveData"
-using "CSS_Lathander_Pass_IlluminateAC" 
-data "BoostContext" "OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
-data "BoostConditions" "HasObscuredState(ObscuredState.Clear,context.Source)"
-data "Boosts" "AC(1)"
-
-new entry "CSS_Lathander_Pass_IlluminateAC" 
-type "PassiveData"
-data "DisplayName" "h6fa00c3cgb104g4440g89c2gdf230400c0bd;1"
-data "Description" "h60927545ge7e5g4eb2g8785g0ed11a45fe16;1"
-data "Properties" "Highlighted"
-data "BoostContext" "OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
-data "BoostConditions" "IF(HasObscuredState(ObscuredState.Clear, context.Source))"
-data "Boosts" "AC(1)"
 
 // ==================================== Fix conflict between Druid Quality of Life and Vanilla Equipment Overhaul, and in the process disable shapeshift toggle ====================================
 // Note: I should do a proper merge of this shit for the best of both worlds instead of this band-aid.
@@ -526,38 +482,3 @@ new entry "MO_Jump_Off_Balanced_Self"
 type "SpellData"
 using "MO_Jump_Off_Balanced_Self"
 data "SpellSuccess" "ApplyStatus(SELF, OFF_BALANCED,100,1)"
-
-// ==================================== Clerics Subclass and Valdacil's Spell Adjustments compatibility patching ====================================
-
-new entry "RAY_OF_ENFEEBLEMENT"
-using "RAY_OF_ENFEEBLEMENT"
-type "StatusData"
-data "StatusType" "BOOST"
-data "Description" "hcc2c6058g412cg439aga60cg989e2c34292e"
-data "Boosts" "HalveWeaponDamage(Strength);HalveWeaponDamage(Dexterity);Disadvantage(SavingThrow,Strength);Disadvantage(SavingThrow,Dexterity);Disadvantage(SavingThrow,Constitution);Resistance(Necrotic, Vulnerable)"
-
-new entry "Projectile_RayOfEnfeeblement"
-using "Projectile_RayOfEnfeeblement"
-type "SpellData"
-data "SpellType" "Projectile"
-data "Description" "h2f68d483g7ca5g4160g89c9g73b42e315cb2"
-data "Cooldown" ""
-data "SpellSuccess" "ApplyStatus(RAY_OF_ENFEEBLEMENT,100,10);SpawnExtraProjectiles(Val_Projectile_RayOfEnfeeblement_Explosion);IF(HasPassive('ImprovedReaper', context.Source)):ApplyStatus(SELF,SELF_RAYOFENFEEBLEMENT,100,1);ApplyStatus(RAYOFENFEEBLEMENT_AURA,100,1);ApplyStatus(RAY_OF_ENFEEBLEMENT,100,10)"
-data "ExtraDescription" ""
-
-// ==================================== Spells Rebalanced and Valdacil's Spell Adjustments compatibility patching ====================================
-
-new entry "Target_PhantasmalForce"
-using "Target_PhantasmalForce"
-type "SpellData"
-data "SpellType" "Target"
-data "TargetConditions" "Character() and not Self()"
-data "TooltipStatusApply" "ApplyStatus(PHANTASMAL_FORCE,100,10)"
-data "DamageType" "Psychic"
-data "AreaRadius" ""
-
-new entry "PHANTASMAL_FORCE_PSYCHIC"
-type "StatusData"
-data "StatusType" "BOOST"
-using "PHANTASMAL_FORCE_PSYCHIC"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"

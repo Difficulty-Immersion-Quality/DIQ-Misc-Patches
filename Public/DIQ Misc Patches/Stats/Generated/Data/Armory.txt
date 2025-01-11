@@ -1,4 +1,22 @@
-// ==================================== Cahoot ====================================
+// ==================================== Attempts to fix this damn ring from Lathander's Armory ====================================
+
+new entry "CSS_Lathander_Pass_IlluminateAC" 
+type "PassiveData"
+using "CSS_Lathander_Pass_IlluminateAC" 
+data "BoostContext" "OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
+data "BoostConditions" "HasObscuredState(ObscuredState.Clear,context.Source)"
+data "Boosts" "AC(1)"
+
+new entry "CSS_Lathander_Pass_IlluminateAC" 
+type "PassiveData"
+data "DisplayName" "h6fa00c3cgb104g4440g89c2gdf230400c0bd;1"
+data "Description" "h60927545ge7e5g4eb2g8785g0ed11a45fe16;1"
+data "Properties" "Highlighted"
+data "BoostContext" "OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
+data "BoostConditions" "IF(HasObscuredState(ObscuredState.Clear, context.Source))"
+data "Boosts" "AC(1)"
+
+// ==================================== Cahoot's Helm's Armory fixes ====================================
 
 // Longsword: fixes force damage against concentrating targets and adds advantage to saving throws against spells
 new entry "CSS_HelmStatue_Longsword"
@@ -13,7 +31,6 @@ using "CSS_HelmArmor_Pass_Weavebane"
 data "Boosts" "IF(IsMeleeAttack() and IsConcentrating(context.Target)):CharacterWeaponDamage(1d6,Force);IF(IsSpell()):RollBonus(SavingThrow, Advantage)"
 data "Description" "h26e9271ag521dg49begb54eg511971cdde17"
 
-
 // Chest armour: fixes Faithguard +2 AC remaining on target even if they no longer have Shield of Faith
 new entry "CSS_HelmArmory_Pass_Faithguard"
 type "PassiveData"
@@ -23,8 +40,7 @@ data "Conditions" "StatusId('SHIELD_OF_FAITH')"
 data "StatsFunctors" "ApplyStatus(HELMARMORY_FAITHGUARD,100,-1)"
 data "Description" "h5259232cg94bcg4f1fg86cag49bd2775aea0"
 
-// ==================================== New Status ====================================
-
+// New status
 new entry "HELMARMORY_FAITHGUARD"
 type "StatusData"
 data "StatusType" "BOOST"
@@ -39,8 +55,7 @@ data "Passives" ""
 data "RemoveConditions" "StatusId('SHIELD_OF_FAITH')"
 data "RemoveEvents" "OnStatusRemoved"
 
-// ==================================== Additional loca changes ====================================
-
+// Additional loca changes
 new entry "CSS_HelmArmory_Pass_ShieldHeal"
 type "PassiveData"
 using "CSS_HelmArmory_Pass_ShieldHeal"

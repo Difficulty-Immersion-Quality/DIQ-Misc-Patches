@@ -79,7 +79,7 @@ The &lt;LSTag Tooltip="AttackRoll"&gt;Attack Roll&lt;/LSTag&gt; bonus for &lt;LS
 	<content contentuid="ha8fa3b21gfb5bg4074gb7cfg8eaa3694cfd9" version="1">You must wait until you have </content>
 
 	<content contentuid="h91f18f2bgaee5g43cag993eg676cc5e3e049" version="1">You have &lt;LSTag Tooltip="ArmourProficiency"&gt;Armour Proficiency&lt;/LSTag&gt; with Heavy Armour and increased one &lt;LSTag Tooltip="Abilities"&gt;Ability&lt;/LSTag&gt; by 1.</content>
-	<content contentuid="h71c367dfg56dag44b8gb2a2gc68d5ab8e016" version="1">You gain &lt;LSTag Tooltip=""ArmourProficiency"&gt;Armour Proficiency&lt;/LSTag&gt; with Heavy Armour and you increase one &lt;LSTag Tooltip="Abilities"&gt;Ability&lt;/LSTag&gt; by 1.</content>
+	<content contentuid="h71c367dfg56dag44b8gb2a2gc68d5ab8e016" version="1">You gain &lt;LSTag Tooltip=""ArmourProficiency"&gt;Armour Proficiency&lt;/LSTag&gt; with Heavy Armour and increase one &lt;LSTag Tooltip="Abilities"&gt;Ability&lt;/LSTag&gt; by 1.</content>
 
 	<content contentuid="h50ffdbf5ga58cg4e8bg9c47g9a2e50dffeda" version="1">You have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on your next &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; on the current turn, the &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; is lost upon &lt;LSTag Tooltip="MovementSpeed"&gt;moving&lt;/LSTag&gt;.</content>
 	<content contentuid="hc0bc6718g548bg49a0ga4a4g27c238a87c66" version="1">You give yourself &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on your next &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; on the current turn, the &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; is lost upon &lt;LSTag Tooltip="MovementSpeed"&gt;moving&lt;/LSTag&gt;.</content>

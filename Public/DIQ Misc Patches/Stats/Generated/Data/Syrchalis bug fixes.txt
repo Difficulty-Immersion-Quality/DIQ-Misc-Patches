@@ -1,13 +1,110 @@
-// ==================================== Rebalance - Feats missing tooltip edit ====================================
+// ==================================== Rebalance - Feats ====================================
 
+// Heavily Armoured - add missing tooltip
 new entry "HeavilyArmored"
 type "PassiveData"
 using "HeavilyArmored"
+// You have Armour Proficiency with Heavy Armour and increased one Ability by 1.
 data "Description" "h91f18f2bgaee5g43cag993eg676cc5e3e049"
 
-// ==================================== Crown actually uses the character's stat ====================================
+// Also has a FeatDescriptions.lsx overwrite to fix the description on feat selection
+// You gain Armour Proficiency with Heavy Armour and increase one Ability by 1.
 
+//<node id="FeatDescription">
+    //<attribute id="Description" type="TranslatedString" handle="h71c367dfg56dag44b8gb2a2gc68d5ab8e016" version="1" />
+    //<attribute id="DisplayName" type="TranslatedString" handle="h75a791a4g89d7g4796gaa53g2adad2b64396" version="1" />
+    //<attribute id="ExactMatch" type="FixedString" value="HeavilyArmored" />
+    //<attribute id="FeatId" type="guid" value="7bc235ac-7eeb-49d3-8249-c3313d87af75" />
+    //<attribute id="UUID" type="guid" value="8ee6c346-ccdf-4335-a342-a15261051035" />
+
+// ==================================== Druid Wildshape Items - Weapons Armor and More Gear ====================================
+
+// Druid Crown - was only applying if the stat was over 18 and not equal to it
 new entry "SYR_Druid_Headwear_DruidCrown_Wildshape_Passive"
 type "PassiveData"
 using "SYR_Druid_Headwear_DruidCrown_Wildshape_Passive"
 data "Boosts" "IF(ClassLevelHigherOrEqualThan(1,'Druid')):ProficiencyBonus(Skill,Persuasion);IF(ConditionResult(context.Source.Wisdom >= 18)):AbilityOverrideMinimum(Intelligence,13);IF(ConditionResult(context.Source.Wisdom >= 18)):AbilityOverrideMinimum(Charisma,13)"
+
+// Tempest Displacer ring - was not giving lightning charges from spells
+
+
+// ==================================== Rebalance - Level 1 Spells ====================================
+
+// Ensaring Strike DC is too high?
+
+
+// False life damage reduction doesn't work properly, reducing attacks instead of when attacked
+
+
+// ==================================== Rebalance - Level 2 Spells ====================================
+
+// Barkskin - stacks were decreasing even when attacks missed
+new entry "SYR_Barkskin_Passive"
+type "PassiveData"
+using "SYR_Barkskin_Passive"
+data "StatsFunctorContext" "OnDamaged"
+
+// Calm Emotions - agitates friendlies?
+
+
+// Invisiibility - still requires concentration?
+
+
+// ==================================== Rebalance - Level 3 Spells ====================================
+
+// Revivify - temp HP was not being applied, does not inherit from "MAG_TEMPORARY_HP"
+new entry "SYR_REVIVIFY_TEMPHP"
+type "StatusData"
+data "StatusType" "BOOST"
+using "SYR_REVIVIFY_TEMPHP"
+data "SoundLoop" "Spell_Status_Buff_MO"
+data "StackId" "TEMPORARY_HP"
+data "StackPriority" "1"
+data "RemoveConditions" "not HasTemporaryHP()"
+data "RemoveEvents" "OnDamage"
+data "ManagedStatusEffectType" "Positive"
+data "ManagedStatusEffectGroup" "6435c10a-c67d-4f79-8813-b84b0762f92b"
+
+// Blink - removes buffs when exiting the ether?
+
+
+// Elemental Weapon - doesn't apply to certain weapons? E.g. Light Crossbow +1
+
+
+// Vampiric Touch - doesn't work as a scroll
+
+
+// ==================================== Rebalance - Level 4 Spells ====================================
+
+// Banishment - npcs were always cancel their Banishments
+new entry "SYR_Target_Banishment_Cancel"
+type "SpellData"
+data "SpellType" "Target"
+using "SYR_Target_Banishment_Cancel"
+data "RequirementConditions" "IS(Player(context.Source))”
+
+// Olituke's Resilient Sphere - cancel Olituke's Resilient Sphere is blocked by Olituke's Resilient Sphere
+
+
+// ==================================== Rebalance - Level 5 Spells ====================================
+
+// Flamestrike - follow up attacks, Flamestrike Remembrance, nor Flamestrike Echo being granted?
+
+
+// Contagion - Slimy Contagion never stuns?
+
+
+// ==================================== Rebalance - Level 6 Spells ====================================
+
+// Wall of Ice - pillars can occasionally get buried in the ground or just don't spawn
+
+
+// ==================================== Rebalance - Class Spells ====================================
+
+// Hypnotic Gaze - doesn't give a maintain version of the spell on cast, instead gives a duplicate spell with features such as a Short Rest cooldown, which should be on the main spell?
+
+
+// Holy Rebuke - does not scale the same as cantrips like intended?
+
+
+// ==================================== Rebalance - Class Spells ====================================

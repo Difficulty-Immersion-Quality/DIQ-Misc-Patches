@@ -79,27 +79,34 @@ data "StatsFunctorContext" "OnDamaged"
 
 // ==================================== Rebalance - Level 3 Spells ====================================
 
-// Revivify - temp HP was not being applied, does not inherit from "MAG_TEMPORARY_HP"
+// Revivify - temp HP was not being applied, and after adding ApplyToDead to temp HP would down the character again. Solution: delay application by moving the temp HP to passive so the revival can process properly.
 new entry "SYR_REVIVIFY_TEMPHP"
 type "StatusData"
 data "StatusType" "BOOST"
 using "SYR_REVIVIFY_TEMPHP"
-data "SoundLoop" "Spell_Status_Buff_MO"
-data "StackId" "TEMPORARY_HP"
-data "StackPriority" "1"
-data "RemoveConditions" "not HasTemporaryHP()"
-data "RemoveEvents" "OnDamage"
-data "ManagedStatusEffectType" "Positive"
-data "ManagedStatusEffectGroup" "6435c10a-c67d-4f79-8813-b84b0762f92b"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;ApplyToDead"
+data "Passives" "Syr_Revivify_TempHP_Passive"
 
-// Blink - removes buffs when exiting the ether?
+// New Passive for SYR_REVIVIFY_TEMPHP
+new entry "Syr_Revivify_TempHP_Passive"
+type "PassiveData"
+data "Boosts" "TemporaryHP(MaxHP/4)"
 
+// Blink - while this is a vanilla bug, it breaks concentration while you're in the ether. We can merge the changes from the "Blink Fixed" mod by Drakexop to prevent this issue.
+new entry "BLINK_VANISH"
+type "StatusData"
+data "StatusType" "BOOST"
+using "BLINK_VANISH"
+data "Description" "h2bf31e1ag630dg460eg9be9g3ce6dfe9bbf9;1"
+data "Boosts" "ActionResourceBlock(Interupt_CounterSpell_MindFlayer);ActionResourceBlock(ReactionActionPoint);ActionResourceBlock(Interrupt_Portent_1);ActionResourceBlock(Interrupt_Portent_2);ActionResourceBlock(Interrupt_Portent_3);ActionResourceBlock(Interrupt_Portent_4);ActionResourceBlock(Interrupt_Portent_5);ActionResourceBlock(Interrupt_Portent_6);ActionResourceBlock(Interrupt_Portent_7);ActionResourceBlock(Interrupt_Portent_8);ActionResourceBlock(Interrupt_Portent_9);ActionResourceBlock(Interrupt_Portent_10);ActionResourceBlock(Interrupt_Portent_11);ActionResourceBlock(Interrupt_Portent_12);ActionResourceBlock(Interrupt_Portent_13);ActionResourceBlock(Interrupt_Portent_14);ActionResourceBlock(Interrupt_Portent_15);ActionResourceBlock(Interrupt_Portent_16);ActionResourceBlock(Interrupt_Portent_17);ActionResourceBlock(Interrupt_Portent_18);ActionResourceBlock(Interrupt_Portent_19);ActionResourceBlock(Interrupt_Portent_20);"
+data "StatusGroups" ""
 
-// Elemental Weapon - doesn't apply to certain weapons? E.g. Light Crossbow +1
-
-
-// Vampiric Touch - doesn't work as a scroll
-
+new entry "GASEOUSFORM_BLINK"
+type "StatusData"
+data "StatusType" "POLYMORPHED"
+using "GASEOUSFORM_BLINK"
+data "Icon" "Spell_Transmutation_Blink"
+data "Boosts" "ActionResourceBlock(Interupt_CounterSpell_MindFlayer);ActionResourceBlock(ReactionActionPoint);ActionResourceBlock(Interrupt_Portent_1);ActionResourceBlock(Interrupt_Portent_2);ActionResourceBlock(Interrupt_Portent_3);ActionResourceBlock(Interrupt_Portent_4);ActionResourceBlock(Interrupt_Portent_5);ActionResourceBlock(Interrupt_Portent_6);ActionResourceBlock(Interrupt_Portent_7);ActionResourceBlock(Interrupt_Portent_8);ActionResourceBlock(Interrupt_Portent_9);ActionResourceBlock(Interrupt_Portent_10);ActionResourceBlock(Interrupt_Portent_11);ActionResourceBlock(Interrupt_Portent_12);ActionResourceBlock(Interrupt_Portent_13);ActionResourceBlock(Interrupt_Portent_14);ActionResourceBlock(Interrupt_Portent_15);ActionResourceBlock(Interrupt_Portent_16);ActionResourceBlock(Interrupt_Portent_17);ActionResourceBlock(Interrupt_Portent_18);ActionResourceBlock(Interrupt_Portent_19);ActionResourceBlock(Interrupt_Portent_20);;Invulnerable();ActionResourceBlock(Movement);Advantage(Ability, Strength); Advantage(Ability, Dexterity); Advantage(Ability, Constitution); Attribute(Floating);IgnoreFallDamage();VoicebarkBlock();BlockSpellCast();DialogueBlock();CanShootThrough(true);CanWalkThrough(true);Resistance(Slashing,ResistantToNonMagical);Resistance(Piercing,ResistantToNonMagical);Resistance(Bludgeoning,ResistantToNonMagical);Resistance(Acid,ResistantToNonMagical);Resistance(Thunder,ResistantToNonMagical);Resistance(Necrotic,ResistantToNonMagical);Resistance(Fire,ResistantToNonMagical);Resistance(Lightning,ResistantToNonMagical);Resistance(Cold,ResistantToNonMagical);Resistance(Psychic,ResistantToNonMagical);Resistance(Poison,ResistantToNonMagical);Resistance(Radiant,ResistantToNonMagical);Resistance(Force,ResistantToNonMagical);StatusImmunity(BLEEDING)"
 
 // ==================================== Rebalance - Level 4 Spells ====================================
 

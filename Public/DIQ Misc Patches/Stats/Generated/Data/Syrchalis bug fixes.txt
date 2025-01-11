@@ -110,15 +110,44 @@ data "Boosts" "ActionResourceBlock(Interupt_CounterSpell_MindFlayer);ActionResou
 
 // ==================================== Rebalance - Level 4 Spells ====================================
 
-// Banishment - npcs were always cancel their Banishments
+// Banishment - npcs would always cancel their Banishments. Adjustment inherited by Olituke's Resilient Sphere too.
 new entry "SYR_Target_Banishment_Cancel"
 type "SpellData"
 data "SpellType" "Target"
 using "SYR_Target_Banishment_Cancel"
-data "RequirementConditions" "IS(Player(context.Source))”
+data "SpellProperties" "AI_IGNORE:RemoveStatus(BANISHED)"
+data "RequirementConditions" "Player(context.Source)"
 
-// Olituke's Resilient Sphere - cancel Olituke's Resilient Sphere is blocked by Olituke's Resilient Sphere
+// Olituke's Resilient Sphere - unfortunately the caster can not cancel the status on other targets, so it's been adjusted to only be a self cast for the target.
+new entry "Target_ResilientSphere"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_ResilientSphere"
+data "SpellSuccess" "ApplyStatus(RESILIENT_SPHERE,100,3);IF(Ally() and not Self()):ApplyStatus(SYR_RESILIENT_SPHERE_OWNER,100,3);IF(Self()):ApplyStatus(SYR_RESILIENT_SPHERE_OWNER,100,3)"
 
+// These upcasts did not give the cancel abilities the same duration as "RESILIENT_SPHERE" itself? 
+new entry "Target_ResilientSphere_5"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_ResilientSphere_5"
+data "SpellSuccess" "ApplyStatus(RESILIENT_SPHERE,100,4);IF(Ally() and not Self()):ApplyStatus(SYR_RESILIENT_SPHERE_OWNER,100,4);IF(Self()):ApplyStatus(SYR_RESILIENT_SPHERE_OWNER,100,4)"
+data "TooltipStatusApply" "ApplyStatus(RESILIENT_SPHERE,100,4)"
+
+new entry "Target_ResilientSphere_6"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_ResilientSphere_6"
+data "SpellSuccess" "ApplyStatus(RESILIENT_SPHERE,100,5);IF(Ally() and not Self()):ApplyStatus(SYR_RESILIENT_SPHERE_OWNER,100,5);IF(Self()):ApplyStatus(SYR_RESILIENT_SPHERE_OWNER,100,5)"
+data "TooltipStatusApply" "ApplyStatus(RESILIENT_SPHERE,100,5)"
+
+new entry "SYR_Target_ResilientSphere_Cancel"
+type "SpellData"
+data "SpellType" "Target"
+using "SYR_Target_Banishment_Cancel"
+data "TargetRadius" "1"
+data "SpellProperties" "RemoveStatus(SELF,RESILIENT_SPHERE);RemoveStatus(SELF,SYR_RESILIENT_SPHERE_OWNER)"
+data "TargetConditions" "Self() and HasStatus('RESILIENT_SPHERE')"
+data "Description" "h3c9bc881g2763g4881g96c0g4dd58fff7d05;1"
 
 // ==================================== Rebalance - Level 5 Spells ====================================
 

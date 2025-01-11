@@ -27,6 +27,13 @@ data "Boosts" "IF(ClassLevelHigherOrEqualThan(1,'Druid')):ProficiencyBonus(Skill
 
 // Tempest Displacer ring - was not giving lightning charges from spells
 
+// ==================================== Rebalance - Nerfs ====================================
+
+//new entry "GreatWeaponMaster_BonusDamage"
+//type "PassiveData"
+//using "GreatWeaponMaster_BonusDamage"
+//data "Description" "h0e3b16b6gebb9g4a57g8e9ag59930e80f8c2;1"
+//data "DescriptionParams" "LevelMapValue(SYR_GWM_SS_Penalty);LevelMapValue(SYR_GWM_SS_Damage)"
 
 // ==================================== Rebalance - Level 1 Spells ====================================
 

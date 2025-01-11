@@ -33,7 +33,12 @@ data "Boosts" "IF(ClassLevelHigherOrEqualThan(1,'Druid')):ProficiencyBonus(Skill
 // Ensaring Strike DC is too high?
 
 
-// False life damage reduction doesn't work properly, reducing attacks instead of when attacked
+// False life - damage reduction was alleged in a bug report to not work properly, reducing attacks instead of when attacked. What I found was instead that it didn't work at all, removing context.Source fixes it.
+new entry "SYR_False_Life_DR_Passive"
+type "PassiveData"
+data "DisplayName" "ha0180935g478ag43f4ga251ga140eeb78609;1"
+data "Properties" "IsHidden"
+data "Boosts" "IF(HasStatus('FALSE_LIFE')):DamageReduction(All, Flat, 1);IF(HasStatus('FALSE_LIFE_2')):DamageReduction(All, Flat, 2);IF(HasStatus('FALSE_LIFE_3')):DamageReduction(All, Flat, 3);IF(HasStatus('FALSE_LIFE_4')):DamageReduction(All, Flat, 4);IF(HasStatus('FALSE_LIFE_5')):DamageReduction(All, Flat, 5);IF(HasStatus('FALSE_LIFE_6')):DamageReduction(All, Flat, 6)"
 
 
 // ==================================== Rebalance - Level 2 Spells ====================================

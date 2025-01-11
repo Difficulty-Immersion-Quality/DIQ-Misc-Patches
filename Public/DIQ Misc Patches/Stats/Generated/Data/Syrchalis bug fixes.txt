@@ -108,6 +108,25 @@ using "GASEOUSFORM_BLINK"
 data "Icon" "Spell_Transmutation_Blink"
 data "Boosts" "ActionResourceBlock(Interupt_CounterSpell_MindFlayer);ActionResourceBlock(ReactionActionPoint);ActionResourceBlock(Interrupt_Portent_1);ActionResourceBlock(Interrupt_Portent_2);ActionResourceBlock(Interrupt_Portent_3);ActionResourceBlock(Interrupt_Portent_4);ActionResourceBlock(Interrupt_Portent_5);ActionResourceBlock(Interrupt_Portent_6);ActionResourceBlock(Interrupt_Portent_7);ActionResourceBlock(Interrupt_Portent_8);ActionResourceBlock(Interrupt_Portent_9);ActionResourceBlock(Interrupt_Portent_10);ActionResourceBlock(Interrupt_Portent_11);ActionResourceBlock(Interrupt_Portent_12);ActionResourceBlock(Interrupt_Portent_13);ActionResourceBlock(Interrupt_Portent_14);ActionResourceBlock(Interrupt_Portent_15);ActionResourceBlock(Interrupt_Portent_16);ActionResourceBlock(Interrupt_Portent_17);ActionResourceBlock(Interrupt_Portent_18);ActionResourceBlock(Interrupt_Portent_19);ActionResourceBlock(Interrupt_Portent_20);;Invulnerable();ActionResourceBlock(Movement);Advantage(Ability, Strength); Advantage(Ability, Dexterity); Advantage(Ability, Constitution); Attribute(Floating);IgnoreFallDamage();VoicebarkBlock();BlockSpellCast();DialogueBlock();CanShootThrough(true);CanWalkThrough(true);Resistance(Slashing,ResistantToNonMagical);Resistance(Piercing,ResistantToNonMagical);Resistance(Bludgeoning,ResistantToNonMagical);Resistance(Acid,ResistantToNonMagical);Resistance(Thunder,ResistantToNonMagical);Resistance(Necrotic,ResistantToNonMagical);Resistance(Fire,ResistantToNonMagical);Resistance(Lightning,ResistantToNonMagical);Resistance(Cold,ResistantToNonMagical);Resistance(Psychic,ResistantToNonMagical);Resistance(Poison,ResistantToNonMagical);Resistance(Radiant,ResistantToNonMagical);Resistance(Force,ResistantToNonMagical);StatusImmunity(BLEEDING)"
 
+// Bestow Curse: Addle - Is unpredictable and is often not skipping enemy turns, they bug out and stand there for a moment though, before attacking. "Cursed: Filled with Dread" is applied at the end of their turn and removed at the start most of the time, making it non-functional.
+// I don't even really know why this works where it didn't before, but it does.
+new entry "SYR_BESTOWCURSE_CURSE_MENTAL"
+type "StatusData"
+data "StatusType" "BOOST"
+using "SYR_BESTOWCURSE_CURSE_MENTAL"
+data "TickType" ""
+data "OnTickRoll" ""
+data "OnTickFail" ""
+data "Passives" "Syr_Bestowcurse_Curse_Mental_Passive"
+
+new entry "Syr_Bestowcurse_Curse_Mental_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "DisplayName" "hecd9906egd25cg4cc0gb572g385100df550e;1"
+data "Description" "h42b7d1bag136dg49c5ga2d5g96b4f472cb38;1"
+data "StatsFunctors" "IF(not SavingThrow(Ability.Wisdom,SourceSpellDC())):ApplyStatus(CURSE_SKIPPED_TURN,100,1)"
+data "StatsFunctorContext" "OnTurn"
+
 // ==================================== Rebalance - Level 4 Spells ====================================
 
 // Banishment - npcs would always cancel their Banishments. Adjustment inherited by Olituke's Resilient Sphere too.
@@ -164,13 +183,9 @@ data "StatusType" "BOOST"
 using "SYR_FLAMESTRIKE_RECAST_5B"
 data "Description" "h5e222416gc405g44afg994dg2da0aa4e5b90;1"
 
-
-// Contagion - Slimy Contagion never stuns?
-
-
 // ==================================== Rebalance - Level 6 Spells ====================================
 
-// Wall of Ice - pillars can occasionally get buried in the ground or just don't spawn
+// Wall of Ice - pillars can occasionally get buried in the ground or just don't spawn. Self reported by Syrchalis, probably a deep rabbit hole.
 
 
 // ==================================== Rebalance - Class Spells ====================================

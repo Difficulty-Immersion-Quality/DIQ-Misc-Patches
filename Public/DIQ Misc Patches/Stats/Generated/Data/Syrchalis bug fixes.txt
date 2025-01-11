@@ -190,10 +190,25 @@ data "Description" "h5e222416gc405g44afg994dg2da0aa4e5b90;1"
 
 // ==================================== Rebalance - Class Spells ====================================
 
-// Hypnotic Gaze - doesn't give a maintain version of the spell on cast, instead gives a duplicate spell with features such as a Short Rest cooldown, which should be on the main spell?
+// Hypnotic Gaze - was inheriting from the wrong spell, origninal instead of maintain
+new entry "Target_HypnoticGaze_Maintain"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_HypnoticGaze_Maintain"
+data "TargetRadius" "9"
+data "UseCosts" "BonusActionPoint:1"
 
+// Holy Rebuke - tooltips not updated with new damage scaling
+new entry "Target_HolyRebuke"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_HolyRebuke"
+data "DescriptionParams" "DealDamage(LevelMapValue(D4Cantrip),Radiant)"
 
-// Holy Rebuke - does not scale the same as cantrips like intended?
-
+new entry "HOLY_REBUKE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "HOLY_REBUKE"
+data "DescriptionParams" "DealDamage(LevelMapValue(D4Cantrip),Radiant)
 
 // ==================================== Rebalance - Class Spells ====================================

@@ -73,6 +73,7 @@ data "Boosts" "IF(HasStatus('WET', context.Target)):Advantage(AttackRoll)"
 
 // ==================================== Rebalance - Nerfs ====================================
 
+// Just a tooltip fix for a missing + that can't be taken from "DescriptionParams". Commented out because we use another mod for GWM in DIQ.
 //new entry "GreatWeaponMaster_BonusDamage"
 //type "PassiveData"
 //using "GreatWeaponMaster_BonusDamage"
@@ -238,7 +239,7 @@ data "Description" "h5e222416gc405g44afg994dg2da0aa4e5b90;1"
 
 // ==================================== Rebalance - Level 6 Spells ====================================
 
-// Wall of Ice - pillars can occasionally get buried in the ground or just don't spawn. Self reported by Syrchalis, probably a deep rabbit hole.
+// Wall of Ice - pillars can occasionally get buried in the ground or just don't spawn. Self reported by Syrchalis, probably a deep rabbit hole and not worth the time investment to fix.
 
 
 // ==================================== Rebalance - Class Spells ====================================

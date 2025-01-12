@@ -1,3 +1,20 @@
+new entry "Goon_Summon_Potion_Healing_x50"
+type "PassiveData"
+data "DisplayName" "hd701ed72gc3e9g4162g957fg513c16f91234"
+data "Description" "h49522c5cg0c15g45a8gb648g2cab00a813a3"
+data "DescriptionParams" "50"
+data "Icon" "Item_CONS_Potion_Healing_A"
+data "Properties" "Highlighted;ExecuteOnce"
+data "StatsFunctorContext" "OnCreate;OnCombatStarted;OnTurn"
+data "StatsFunctors" "SummonInInventory(860b0a70-649a-4177-a584-d6503f8458c1,Permanent,1,false,false,false)"
+
+// ==================================== Death Soul Sorcerer Subclass has a random ass "fix" for Gloves of Battlemage's Power, which breaks the real fixes for it from Vanilla Equipment Overhaul/Unofficial Bug Fixer ====================================
+
+new entry "MAG_Gish_ArcaneAcuity_Gloves"
+type "Armor"
+using "MAG_Gish_ArcaneAcuity_Gloves"
+data "PassivesOnEquip" "MAG_Gish_ArcaneAcuity_Gloves_Passive"
+
 // ==================================== Compatibility patch for Expansion and True Darkness - 5e RAW ====================================
 
 new entry "BLINDED"

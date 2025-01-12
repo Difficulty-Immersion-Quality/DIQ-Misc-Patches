@@ -26,6 +26,50 @@ using "SYR_Druid_Headwear_DruidCrown_Wildshape_Passive"
 data "Boosts" "IF(ClassLevelHigherOrEqualThan(1,'Druid')):ProficiencyBonus(Skill,Persuasion);IF(ConditionResult(context.Source.Wisdom >= 18)):AbilityOverrideMinimum(Intelligence,13);IF(ConditionResult(context.Source.Wisdom >= 18)):AbilityOverrideMinimum(Charisma,13)"
 
 // Tempest Displacer ring - was not giving lightning charges from spells
+new entry "SYR_Ring_Druid_Tempest_Displacer_LightningCharge_Spell_Passive"
+type "PassiveData"
+using "SYR_Ring_Druid_Tempest_Displacer_LightningCharge_Spell_Passive"
+data "StatsFunctorContext" "OnDamage"
+data "Conditions" "(IsSpell() or IsSavingThrow()) and not IsWeaponAttack() and not IsUnarmedAttack() and not HasStatus('SYR_CHARGED_CHAINLIGHTNING_ONCE', context.Source)"
+
+// Stormheart Gloves - advantage from targets being wet doesn't work in wildshape
+new entry "SYR_Gloves_Druid_ChargedLightning"
+type "Armor"
+using "_Hand_Magic_Metal"
+data "RootTemplate" "ce6cecd5-6d9d-46c7-939b-2558ea19ff16"
+data "ItemGroup" ""
+data "Rarity" "VeryRare"
+data "Boosts" ""
+data "PassivesOnEquip" "MAG_ChargedLightning_Charge_OnUnarmedDamage_Passive;SYR_ChargedLightning_Gloves_ApplyInWildshape_Passive;SYR_Gloves_Druid_ChargedLightning_Deluge_Passive;SYR_Gloves_Druid_ChargedLightning_WetAdvantage_Passive;SYR_Gloves_Druid_ChargedLightning_WetAdvantage_ApplyInWildshape_Passive"
+data "ValueUUID" "a229f048-70b0-4b0c-88cb-29b5c6bdb2d0"
+data "ValueScale" "3"
+
+// NEW: Checks for wildshape
+new entry "SYR_Gloves_Druid_ChargedLightning_WetAdvantage_ApplyInWildshape_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnStatusApplied"
+data "StatsFunctors" "IF(StatusHasStatusGroup(context.StatusId, 'SG_Polymorph_BeastShape')):ApplyStatus(SYR_Gloves_Druid_ChargedLightning_WetAdvantage_ApplyInWildshape_Status, 100, -1)"
+
+// NEW: Status to apply Passive
+new entry "SYR_Gloves_Druid_ChargedLightning_WetAdvantage_ApplyInWildshape_Status"
+type "StatusData"
+data "StatusType" "BOOST"
+//"not HasStatus('SG_Polymorph_BeastShape')" is needed when swapping from one wildshape directly to another
+using "SYR_Gear_Wildshape_Status_Template"
+data "DisplayName" "h99780ecfgcf29g42bdg9fcfg7e8286a32716;1"
+data "Description" "he6432b3eg4c40g4b20g9bd2gaedcd881dd38;1"
+data "DescriptionParams" "2"
+data "Icon" "Item_MAG_ChargedLightning_AbilityCheckBoost_Gloves"
+data "Passives" "SYR_Gloves_Druid_ChargedLightning_WetAdvantage_Wildshape_Passive"
+
+// NEW: Passive with functionality
+new entry "SYR_Gloves_Druid_ChargedLightning_WetAdvantage_Wildshape_Passive"
+type "PassiveData"
+data "DisplayName" "h04c27da9g92f0g4caag9936gbd73fbd0b092;2"
+data "Description" "hfa1b021ega3c0g40a0gaa99g97af03e3066e;1"
+data "TooltipPermanentWarnings" "519572ac-7528-4880-abfc-5668c5fcc6f4"
+data "Boosts" "IF(HasStatus('WET', context.Target)):Advantage(AttackRoll)"
 
 // ==================================== Rebalance - Nerfs ====================================
 
@@ -236,6 +280,4 @@ new entry "HOLY_REBUKE"
 type "StatusData"
 data "StatusType" "BOOST"
 using "HOLY_REBUKE"
-data "DescriptionParams" "DealDamage(LevelMapValue(D4Cantrip),Radiant)
-
-// ==================================== Rebalance - Class Spells ====================================
+data "DescriptionParams" "DealDamage(LevelMapValue(D4Cantrip),Radiant)"

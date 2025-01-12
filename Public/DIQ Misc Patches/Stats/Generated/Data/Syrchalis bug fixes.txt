@@ -181,6 +181,25 @@ data "Description" "h42b7d1bag136dg49c5ga2d5g96b4f472cb38;1"
 data "StatsFunctors" "IF(not SavingThrow(Ability.Wisdom,SourceSpellDC())):ApplyStatus(CURSE_SKIPPED_TURN,100,1)"
 data "StatsFunctorContext" "OnTurn"
 
+// Hunger of Hadar - missing upcast information. Added "TooltipDamageList".
+new entry "Target_HungerOfHadar_4"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_HungerOfHadar_4"
+data "TooltipDamageList" "DealDamage(3d6,Cold);DealDamage(3d6,Acid,,,,ad727a13-c6f0-4b5b-aefd-aac79c6ed46e)"
+
+new entry "Target_HungerOfHadar_5"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_HungerOfHadar_5"
+data "TooltipDamageList" "DealDamage(4d6,Cold);DealDamage(4d6,Acid,,,,ad727a13-c6f0-4b5b-aefd-aac79c6ed46e)"
+
+new entry "Target_HungerOfHadar_6"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_HungerOfHadar_6"
+data "TooltipDamageList" "DealDamage(5d6,Cold);DealDamage(5d6,Acid,,,,ad727a13-c6f0-4b5b-aefd-aac79c6ed46e)"
+
 // ==================================== Rebalance - Level 4 Spells ====================================
 
 // Banishment - npcs would always cancel their Banishments. Adjustment inherited by Olituke's Resilient Sphere too.

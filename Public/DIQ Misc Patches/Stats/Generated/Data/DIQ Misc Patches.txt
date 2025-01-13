@@ -1,3 +1,19 @@
+// ==================================== Dark Urge Rebirth - Add missing DescriptionParams, increase Save DC, and add some sweat and blood splatter for flavour. ====================================
+
+new entry "DARK_ENDURANCE_DOWNED"
+type "StatusData"
+data "StatusType" "DOWNED"
+using "DARK_ENDURANCE_DOWNED"
+data "DescriptionParams" "RegainHitPoints(3d4)"
+data "OnApplyFunctors" "RemoveStatus(DARK_ENDURANCE);RegainHitPoints(3d4);IF(not SavingThrow(Ability.Wisdom,15)):ApplyStatus(DARK_POSSESSION,100,2)"
+data "SplatterBloodAmount" "1.0"
+
+new entry "DARK_POSSESSION"
+type "StatusData"
+data "StatusType" "BOOST"
+using "DARK_POSSESSION"
+data "SplatterSweatAmount" "1"
+
 // ==================================== Death Soul Sorcerer Subclass has a random ass "fix" for Gloves of Battlemage's Power, which breaks the real fixes for it from Vanilla Equipment Overhaul/Unofficial Bug Fixer ====================================
 
 new entry "MAG_Gish_ArcaneAcuity_Gloves"

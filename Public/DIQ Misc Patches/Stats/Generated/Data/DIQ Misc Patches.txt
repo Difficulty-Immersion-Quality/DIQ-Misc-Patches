@@ -1,3 +1,11 @@
+// ==================================== Speak with Dead Reworks and Tweaks - Remove "IgnoreResting" ====================================
+
+// Amulet of Lost Voices etc. will give the buff permanently, we don't want that really. Self-casting the buff after a rest is enough QoL and in line with other buff spells.
+new entry "SPEAK_WITH_DEAD_RECAST"
+type "StatusData"
+using "SPEAK_WITH_DEAD_RECAST"
+data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;DisableOverhead;ApplyToDead"
+
 // ==================================== Aza's Viconia Weapon and Shield & VEO compatibility patch ====================================
 
 new entry "MAG_Viconia_Mace"

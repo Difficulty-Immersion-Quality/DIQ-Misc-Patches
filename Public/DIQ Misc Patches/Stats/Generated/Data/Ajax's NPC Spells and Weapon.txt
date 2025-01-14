@@ -19,7 +19,8 @@ type "SpellData"
 data "SpellType" "Target"
 using "Target_LOW_OskarsBeloved_Possession"
 data "UseCosts" "ActionPoint:1"
-data "Cooldown" "OncePerRest"  
+data "Cooldown" "OncePerRest"
+data "SpellProperties" "AI_ONLY:ApplyStatus(DOMINATE_PERSON,100,10);AI_ONLY:ApplyStatus(AI_HELPER_BUFF_LARGE,100,1)"
 
 new entry "NPC_HellfireOrb"
 type "SpellData"
@@ -320,7 +321,7 @@ type "SpellData"
 data "SpellType" "Target"
 using "Target_UND_LoneDuergar_AnimateDead"
 data "Cooldown" "OncePerCombat"
-data "SpellProperties" "AI_IGNORE:SwitchDeathType(Explode);AI_IGNORE:AOE:ApplyStatus(EXPLODE,100,1);AI_IGNORE:Spawn(e7191344-8bd6-4587-a4a5-0431c6882892, Projectile_AiHelper_Summon_Weak,UND_LONEDUERGAR_ZOMBIE);AI_ONLY:Resurrect(100,20);"
+data "SpellProperties" "AI_ONLY:ApplyStatus(AI_HELPER_BUFF_LARGE,100,1);AI_IGNORE:SwitchDeathType(Explode);AI_IGNORE:AOE:ApplyStatus(EXPLODE,100,1);AI_IGNORE:Spawn(e7191344-8bd6-4587-a4a5-0431c6882892, Projectile_AiHelper_Summon_Weak,UND_LONEDUERGAR_ZOMBIE);AI_ONLY:Resurrect(100,20);"
 data "TargetRadius" "22"
 data "AreaRadius" "8"
 data "TargetConditions" "Dead() and not Tagged('BLOCK_RESURRECTION') and not Player() and TargetSizeEqualOrSmaller(Size.Large) and Tagged('HUMANOID')"
@@ -419,3 +420,41 @@ data "Boosts" "UnlockSpell(Stolen_RolanMagicMissile);UnlockSpell(Stolen_RolanMag
 data "Weight" "10"
 data "ValueUUID" "9b6a4ab2-323b-4030-89ab-030252bb6214"
 data "Unique" "1"
+
+// ==================================== Ajax's Passive.txt ====================================
+
+// Assuming these are for that Wild MAgic Druid mod
+
+//new entry "WildMagicDruid"
+//type "PassiveData"
+//data "DisplayName" "h6e3e5c4agae0cg13f2gc40eg49be885c8b76;2"
+//data "Description" "h263a196cg6da2g1ad8g1604gb8306d1aefab;1"
+//data "Icon" "PassiveFeature_WildMagicSurge"
+//data "Properties" "Highlighted"
+//data "StatsFunctorContext" "OnCast"
+//data "Conditions" "not IsCantrip() and HasSpellFlag(SpellFlags.Spell)"
+//data "StatsFunctors" "IF(Tagged('SORCERER_WILD_MAGIC_GUARANTEED', context.Source)):TriggerRandomCast(1,,WildMagicDruid);IF(HasStatus('TIDES_OF_CHAOS',context.Source) and not Tagged('SORCERER_WILD_MAGIC_GUARANTEED', context.Source)):TriggerRandomCast(11,,WildMagicDruid);IF(not HasStatus('TIDES_OF_CHAOS',context.Source) and not (HasStatus('WILD_MAGIC_GUARANTEED',context.Source) or Tagged('SORCERER_WILD_MAGIC_SUPRESSED', context.Source))):TriggerRandomCast(19,,WildMagicDruid);IF(HasStatus('TIDES_OF_CHAOS',context.Source)):RemoveStatus(SELF,TIDES_OF_CHAOS)"
+
+//new entry "WildMagicShape"
+//type "PassiveData"
+//data "DisplayName" "h183d8111gd585gb9b6g65dagbb5ce998108f;4"
+//data "Description" "h67ebaa3dge034gca38g2881g573d99031121;6"
+//data "Icon" "PassiveFeature_RelentlessRage"
+//data "Properties" "Highlighted;OncePerLongRest"
+//data "StatsFunctorContext" "OnStatusApplied"
+//data "Conditions" "HasStatus('SG_Polymorph_BeastShape', context.Source)"
+//data "StatsFunctors" "IF(Tagged('SORCERER_WILD_MAGIC_GUARANTEED', context.Source)):TriggerRandomCast(1,,WildMagicDruid);IF(HasStatus('TIDES_OF_CHAOS',context.Source) and not Tagged('SORCERER_WILD_MAGIC_GUARANTEED', context.Source)):TriggerRandomCast(11,,WildMagicDruid);IF(not HasStatus('TIDES_OF_CHAOS',context.Source) and not (HasStatus('WILD_MAGIC_GUARANTEED',context.Source) or Tagged('SORCERER_WILD_MAGIC_SUPRESSED', context.Source))):TriggerRandomCast(11,,WildMagicDruid);IF(HasStatus('TIDES_OF_CHAOS',context.Source)):RemoveStatus(SELF,TIDES_OF_CHAOS)"
+
+// No clue
+
+//new entry "ARM_TalismanOfJergal_Passive"
+//type "PassiveData"
+//data "DisplayName" "h0a7c9239g8ceagbf33g211egdae04c26802b;1"
+//data "Description" "h5e56cda4gdb3fg9d03g40fbgadd485292ece;2"
+
+// A thing for Aylin in CX
+new entry "NPC_CbD"
+type "PassiveData"
+data "Properties" "Highlighted"
+data "StatsFunctorContext" "OnDamage"
+data "StatsFunctors" "TARGET:IF(Character() and Party() and not Ally() and not Dead() and not Summon() and not Tagged('SUMMON')):ApplyStatus(LOW_STORMSHORETABERNACLE_GODCURSED,100,1)"

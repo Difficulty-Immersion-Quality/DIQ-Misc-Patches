@@ -107,4 +107,10 @@ Removed when &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Helped&lt;/LSTag&gt
 
     <content contentuid="h9e12dfe9g3b00g45dcgb231gb565edf9449b" version="1">Cambion's Cauteriser</content>
 	<content contentuid="h0c94e075gf395g4a17gb4fbg75001c0d7a69" version="1">This halberd slashes with burning fury dealing an additional [1], but only for its Devil master.</content>
+
+	<content contentuid="h5bf0d594gdfc7g4555gbdfbgb0cceef34f14" version="1">Conjure Basket Full of Equipment</content>
+	<content contentuid="ha3b19175gac84g4809gbb84g759bab16c236" version="1">Conjure a Basket Full of Equipment into your inventory.</content>
+	<content contentuid="h78d72228g7f39g47f9g95f6g84d748886d3c" version="1">This spell conjures a Ghost Basket into your inventory that will disappear after 10 turns. Take your desired items out of the Ghost Basket before that. Everything left in the Ghost Basket will disappear forever.</content>
+	<content contentuid="h150a4fd4g0f35g4706g83aeg6c3169ef9a51" version="1">Basket Full of Equipment Summoned</content>
+	<content contentuid="ha81b4b97g243dg4619g8233ge722d4b06126" version="1">You summoned a temporary Basket Full of Equipment to your inventory. It and all its contents will disappear soon.</content>
 </contentList>

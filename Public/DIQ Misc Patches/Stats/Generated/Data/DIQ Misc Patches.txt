@@ -1,11 +1,20 @@
+// ==================================== Stop Lodestones from working in combat ====================================
+
+//new entry "FOCUSLODESTONES_Lodestone_Template"
+//type "Object"
+//using "FOCUSLODESTONES_Lodestone_Template"
+//data "Requirements" "!Combat"
+
 // ==================================== Action Surge displaying both per turn and short rest cooldowns for some reason? ====================================
 
 // Gonna kick the mod responsible in the dick
-new entry "Shout_ActionSurge"
-type "SpellData"
-data "SpellType" "Shout"
-using "Shout_ActionSurge"
-data "Cooldown" "OncePerShortRest"
+// Even hard overwriting the whole entry doesn't work, wtf man
+
+//new entry "Shout_ActionSurge"
+//type "SpellData"
+//data "SpellType" "Shout"
+//using "Shout_ActionSurge"
+//data "Cooldown" "OncePerShortRest"
 
 // ==================================== Barkskin Armour - Being weird as fuck an not giving 16 AC with the inheritence, despite displaying so in game ====================================
 

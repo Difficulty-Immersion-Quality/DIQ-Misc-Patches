@@ -54,7 +54,7 @@
 	<content contentuid="heaa58c9bg511fg4dfeg9969g5eca61cc79e3" version="1">Pikes are especially long weapons, boasting the furthest reach of all melee weapons. Useful for supporting allies from relative safety.</content>
 	<content contentuid="hec88d0cdg2240g4ef8g9a87g4eb24061aceb" version="1">Heavy Draw</content>
 	<content contentuid="hb96b393fg30b6g4a32gbde5g71d9bc97afff" version="1">This bow has an especially heavy draw weight. Both your &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; and &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; are important to be effective with this weapon. &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; and Damage rolls receive a [1] bonus.
-The &lt;LSTag Tooltip="AttackRoll"&gt;Attack Roll&lt;/LSTag&gt; bonus for &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; is capped at [2] ([3]), however, the damage bonus is uncapped.</content>
+The &lt;LSTag Tooltip="AttackRoll"&gt;Attack Roll&lt;/LSTag&gt; bonus for &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; is capped at [2], however, the damage bonus is uncapped.</content>
 	<content contentuid="hcc08a20egaee5g417aga0dbg4d280051f045" version="1">Mighty Overdraw</content>
 	<content contentuid="h4848b0f1g3ab2g42c5g8011g8c56aaa46915" version="1">You draw the bow way further than normal for a mighty shot that hits with extreme force, at the cost of accuracy. Take a [1] &lt;LSTag Tooltip="AttackRoll"&gt;Attack Roll&lt;/LSTag&gt; penalty in exchange for an extra [2].</content>
 	<content contentuid="h8e2878dcgf3c5g49ffga48eg467dce13f925" version="1">Ease of Use</content>

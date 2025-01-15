@@ -1,3 +1,78 @@
+// ==================================== Barkskin Armour - Being weird as fuck an not giving 16 AC with the inheritence, despite displaying so in game ====================================
+
+new entry "MAG_Druid_Late_Hide_Armor_1"
+type "Armor"
+using "ARM_Hide_Body_1"
+data "RootTemplate" "a1d321be-ff4c-423a-bc50-bcad85a3a83a"
+data "ArmorClass" "13"
+data "ValueUUID" "240eb257-ef20-4877-89bd-6956b4b7c41a"
+data "ArmorType" "Leather"
+data "Rarity" "Rare"
+data "Boosts" "Advantage(SavingThrow, Constitution)"
+data "PassivesOnEquip" "EqLib_HideBody_Passive;EqLib_MediumBody_Passive;MAG_Barkskin_Shield_Passive"
+data "StatusOnEquip" "MAG_BARKSKIN;MAG_BARKSKIN_TECHNICAL"
+data "Ability Modifier Cap" ""
+data "Proficiency Group" "LightArmor"
+data "Unique" "1"
+
+// VEO
+//new entry "MAG_Druid_Late_Hide_Armor_1"
+//type "Armor"
+//using "MAG_Druid_Late_Hide_Armor_1"
+//data "RootTemplate" "a1d321be-ff4c-423a-bc50-bcad85a3a83a"
+//data "ArmorClass" "10"
+//data "ArmorType" ""
+//data "PassivesOnEquip" "EqLib_HideBody_Passive;EqLib_MediumBody_Passive;MAG_Barkskin_Shield_Passive;MAG_Bladeward_Barkskin_Passive"
+//data "StatusOnEquip" "MAG_BARKSKIN;MAG_BARKSKIN_TECHNICAL;BLADE_WARD"
+//data "Ability Modifier Cap" ""
+//data "Proficiency Group" ""
+
+// Rebalance Level 2 Spells
+//new entry "MAG_Druid_Late_Hide_Armor_1"
+//type "Armor"
+//using "MAG_Druid_Late_Hide_Armor_1"
+//data "ArmorClass" "16"
+
+// Vanilla
+//new entry "MAG_Druid_Late_Hide_Armor_1"
+//type "Armor"
+//using "ARM_Hide_Body_1"
+//data "RootTemplate" "a1d321be-ff4c-423a-bc50-bcad85a3a83a"
+//data "ArmorClass" "12"
+//data "ValueUUID" "240eb257-ef20-4877-89bd-6956b4b7c41a"
+//data "Rarity" "Rare"
+//data "Boosts" "Advantage(SavingThrow, Constitution)"
+//data "PassivesOnEquip" "MAG_Barkskin_Shield_Passive"
+//data "StatusOnEquip" "MAG_BARKSKIN;MAG_BARKSKIN_TECHNICAL"
+//data "Unique" "1"
+
+//new entry "ARM_Hide_Body_1"
+//type "Armor"
+//using "ARM_Hide_Body"
+//data "RootTemplate" "94ed8ec8-93a4-4a8c-bc47-55cb3faae7c0"
+//data "ArmorClass" "13"
+//data "ValueLevel" "2"
+//data "ValueUUID" "4024ce6c-f02d-4d7c-8033-869ada06ef82"
+//data "ValueScale" "1"
+//data "Rarity" "Uncommon"
+//data "PassivesOnEquip" "ARM_Balance_1_Passive"
+
+//new entry "ARM_Hide_Body"
+//type "Armor"
+//using "_Body"
+//data "RootTemplate" "b78fabcc-d2df-4c74-b5d4-1eda6dc4c071"
+//data "ArmorClass" "12"
+//data "ValueScale" "0.8"
+//data "Weight" "5.4"
+//data "ArmorType" "Hide"
+//data "MinAmount" "1"
+//data "MaxAmount" "1"
+//data "Priority" "1"
+//data "MinLevel" "1"
+//data "Armor Class Ability" "Dexterity"
+//data "Ability Modifier Cap" "2"
+//data "Proficiency Group" "MediumArmor"
+
 // ==================================== Speak with Dead Reworks and Tweaks - Remove "IgnoreResting" ====================================
 
 // Amulet of Lost Voices etc. will give the buff permanently, we don't want that really. Self-casting the buff after a rest is enough QoL and in line with other buff spells.

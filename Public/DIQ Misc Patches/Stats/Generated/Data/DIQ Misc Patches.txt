@@ -1,10 +1,19 @@
+// ==================================== Action Surge displaying both per turn and short rest cooldowns for some reason? ====================================
+
+// Gonna kick the mod responsible in the dick
+new entry "Shout_ActionSurge"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_ActionSurge"
+data "Cooldown" "OncePerShortRest"
+
 // ==================================== Barkskin Armour - Being weird as fuck an not giving 16 AC with the inheritence, despite displaying so in game ====================================
 
 new entry "MAG_Druid_Late_Hide_Armor_1"
 type "Armor"
 using "ARM_Hide_Body_1"
 data "RootTemplate" "a1d321be-ff4c-423a-bc50-bcad85a3a83a"
-data "ArmorClass" "13"
+data "ArmorClass" "14"
 data "ValueUUID" "240eb257-ef20-4877-89bd-6956b4b7c41a"
 data "ArmorType" "Leather"
 data "Rarity" "Rare"

@@ -16,7 +16,9 @@ data "BoostContext" "OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied
 data "BoostConditions" "IF(HasObscuredState(ObscuredState.Clear, context.Source))"
 data "Boosts" "AC(1)"
 
-// ========================= Cahoot's Lathander's Armory fix for Ruined Dawnmaster's Crest not applying bonus healing ================================== 
+// ========================= Cahoot's Lathander's Armory  ================================== 
+
+// Fixes the Lathander's Crest trinket, having it heal properly
 
 // Add technical status to armour to track the wearer
 new entry "CSS_LATHANDER_CREST_TRINKET"
@@ -37,6 +39,15 @@ type "StatusData"
 data "StatusType" "BOOST"
 data "StackId" "LATHANDER_SURGEOFLIGHT_TECHNICAL"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+
+// tooltip clarification for Aegis of the Aster's Spell Save DC
+
+// Replaces +1 spell save DC in Boosts with the existing High Spellcasting passive in PassivesOnEquip
+new entry "CSS_WPN_LATHANDER_GRDOFATH_A"
+type "Armor"
+using "CSS_WPN_LATHANDER_GRDOFATH_A"
+data "Boosts" "Advantage(SavingThrow, Dexterity)"
+data "PassivesOnEquip" "MAG_ShieldRiposte_Passive;CSS_Lathander_Pass_BalduHeal;MAG_SpellSaveDC_Enchantment_Lesser_Passive"
 
 // ==================================== Cahoot's Helm's Armory fixes ====================================
 

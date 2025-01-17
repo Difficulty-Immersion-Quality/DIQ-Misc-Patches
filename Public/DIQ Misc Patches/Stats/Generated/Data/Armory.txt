@@ -1,21 +1,3 @@
-// ==================================== Attempts to fix this damn ring from Lathander's Armory ====================================
-
-new entry "CSS_Lathander_Pass_IlluminateAC" 
-type "PassiveData"
-using "CSS_Lathander_Pass_IlluminateAC" 
-data "BoostContext" "OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
-data "BoostConditions" "HasObscuredState(ObscuredState.Clear,context.Source)"
-data "Boosts" "AC(1)"
-
-new entry "CSS_Lathander_Pass_IlluminateAC" 
-type "PassiveData"
-data "DisplayName" "h6fa00c3cgb104g4440g89c2gdf230400c0bd;1"
-data "Description" "h60927545ge7e5g4eb2g8785g0ed11a45fe16;1"
-data "Properties" "Highlighted"
-data "BoostContext" "OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
-data "BoostConditions" "IF(HasObscuredState(ObscuredState.Clear, context.Source))"
-data "Boosts" "AC(1)"
-
 // ========================= Cahoot's Lathander's Armory  ================================== 
 
 // Fixes the Lathander's Crest trinket, having it heal properly
@@ -41,13 +23,34 @@ data "StackId" "LATHANDER_SURGEOFLIGHT_TECHNICAL"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
 
 // tooltip clarification for Aegis of the Aster's Spell Save DC
-
 // Replaces +1 spell save DC in Boosts with the existing High Spellcasting passive in PassivesOnEquip
 new entry "CSS_WPN_LATHANDER_GRDOFATH_A"
 type "Armor"
 using "CSS_WPN_LATHANDER_GRDOFATH_A"
 data "Boosts" "Advantage(SavingThrow, Dexterity)"
 data "PassivesOnEquip" "MAG_ShieldRiposte_Passive;CSS_Lathander_Pass_BalduHeal;MAG_SpellSaveDC_Enchantment_Lesser_Passive"
+
+// ILLUMINATED SHIT SHOULD WORK NOW
+new entry "CSS_Lathander_Pass_IlluminateAC" 
+type "PassiveData"
+using "CSS_Lathander_Pass_IlluminateAC" 
+data "BoostContext" "OnObscurityChanged;OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
+data "BoostConditions" "HasObscuredState(ObscuredState.Clear,context.Source)"
+data "Boosts" "AC(1)"
+
+new entry "CSS_Lathander_Pass_IlluminateConc" 
+type "PassiveData"
+using "CSS_Lathander_Pass_IlluminateConc" 
+data "BoostContext" "OnObscurityChanged;OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
+data "BoostConditions" "HasObscuredState(ObscuredState.Clear,context.Source)"
+data "Boosts" "Advantage(Concentration)"
+
+new entry "CSS_Lathander_Pass_IlluminateConc2" 
+type "PassiveData"
+using "CSS_Lathander_Pass_IlluminateConc2" 
+data "BoostContext" "OnObscurityChanged;OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
+data "BoostConditions" "not HasObscuredState(ObscuredState.Clear,context.Source)"
+data "Boosts" "Resistance(Piercing, Vulnerable);Resistance(Slashing, Vulnerable)"
 
 // ==================================== Cahoot's Helm's Armory fixes ====================================
 

@@ -16,6 +16,28 @@ data "BoostContext" "OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied
 data "BoostConditions" "IF(HasObscuredState(ObscuredState.Clear, context.Source))"
 data "Boosts" "AC(1)"
 
+// ========================= Cahoot's Lathander's Armory fix for Ruined Dawnmaster's Crest not applying bonus healing ================================== 
+
+// Add technical status to armour to track the wearer
+new entry "CSS_LATHANDER_CREST_TRINKET"
+type "Armor"
+using "CSS_LATHANDER_CREST_TRINKET"
+data "StatusOnEquip" "LATHANDER_SURGEOFLIGHT_TECHNICAL"
+
+// Passive only gives 3 hit points to entity that has the technical status. SELF parameter removed from RegainHitPoints()
+new entry "CSS_Lathander_Pass_SurgeOfLight"
+type "PassiveData"
+using "CSS_Lathander_Pass_SurgeOfLight"
+data "Conditions" "HasStatus('LATHANDER_SURGEOFLIGHT_TECHNICAL', context.Target)"
+data "StatsFunctors" "IF(not HasStatus('MAG_HEAL_SELF_ONCE_TECHNICAL', context.Source)):RegainHitPoints(3);ApplyStatus(SELF, MAG_HEAL_SELF_ONCE_TECHNICAL, 100, 0)"
+
+// New technical status
+new entry "LATHANDER_SURGEOFLIGHT_TECHNICAL"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StackId" "LATHANDER_SURGEOFLIGHT_TECHNICAL"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+
 // ==================================== Cahoot's Helm's Armory fixes ====================================
 
 // Longsword: fixes force damage against concentrating targets and adds advantage to saving throws against spells

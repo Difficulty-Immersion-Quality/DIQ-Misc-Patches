@@ -407,13 +407,6 @@ using "MIND_WHIP_UNBLOCK"
 data "Boosts" "UnlockSpell(Shout_MindWhip_Unblock_Action);UnlockSpell(Shout_MindWhip_Unblock_BonusAction)"
 data "RemoveConditions" "SpellId('Shout_MindWhip_Unblock_Action') or SpellId('Shout_MindWhip_Unblock_BonusAction')"
 
-// ==================================== Vanilla exploit with Boots of Striding fix ====================================
-
-new entry "MAG_UNMOVABLE"
-type "StatusData"
-data "StatusType" "BOOST"
-data "RemoveConditions" "not HasSpellFlag(SpellFlags.Concentration)"
-
 // ==================================== Monk Equipment AIO tooltip fix ====================================
 
 new entry "MAG_Marsh_Strider_Passive"

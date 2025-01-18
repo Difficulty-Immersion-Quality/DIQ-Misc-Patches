@@ -1,3 +1,14 @@
+// There's no saving throw
+// (Tagged('UNDEAD', context.Target) needs to be context.Target
+// ApplyStatus(TURNED, 100, 3) needs to have SWAP as the first parameter as otherwise it turns yourself lmao
+
+//new entry "CSS_Lathy_Pass_HolyRebuked"
+//type "PassiveData"
+//data "Properties" "IsHidden"
+//data "StatsFunctorContext" "OnAttacked"
+//data "Conditions" "IsMeleeAttack() and HasDamageEffectFlag(DamageFlags.Hit) and (Tagged('UNDEAD', context.Target))"
+//data "StatsFunctors" "ApplyStatus(TURNED, 100, 3)"
+
 // ========================= Cahoot's Lathander's Armory  ================================== 
 
 // Fixes the Lathander's Crest trinket, having it heal properly

@@ -113,4 +113,7 @@ Removed when &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Helped&lt;/LSTag&gt
 	<content contentuid="h78d72228g7f39g47f9g95f6g84d748886d3c" version="1">This spell conjures a Ghost Basket into your inventory that will disappear after 10 turns. Take your desired items out of the Ghost Basket before that. Everything left in the Ghost Basket will disappear forever.</content>
 	<content contentuid="h150a4fd4g0f35g4706g83aeg6c3169ef9a51" version="1">Basket Full of Equipment Summoned</content>
 	<content contentuid="ha81b4b97g243dg4619g8233ge722d4b06126" version="1">You summoned a temporary Basket Full of Equipment to your inventory. It and all its contents will disappear soon.</content>
+
+	<content contentuid="ef9e7845-5e5c-4428-966a-254736279961" version="1">Soul Reclaim</content>
+	<content contentuid="h9afaba63g1dc8g41d8g9c5fg3cb5d4295e99" version="2">Absorb ambient life force upon taking damage, restoring [1], and an additional [2] matching your &lt;LSTag Tooltip="ProficiencyBonus"&gt;Proficiency Bonus&lt;/LSTag&gt;.</content>
 </contentList>

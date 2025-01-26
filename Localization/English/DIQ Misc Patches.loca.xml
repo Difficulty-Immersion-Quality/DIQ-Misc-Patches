@@ -114,6 +114,10 @@ Removed when &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Helped&lt;/LSTag&gt
 	<content contentuid="h150a4fd4g0f35g4706g83aeg6c3169ef9a51" version="1">Basket Full of Equipment Summoned</content>
 	<content contentuid="ha81b4b97g243dg4619g8233ge722d4b06126" version="1">You summoned a temporary Basket Full of Equipment to your inventory. It and all its contents will disappear soon.</content>
 
+	<content contentuid="h76164e62g39b2g4eafg9f7egead0e51d1bb6" version="1">Toggles your veil's visuals on and off, if you have one selected from the mirror or character creation.</content>
+
 	<content contentuid="ef9e7845-5e5c-4428-966a-254736279961" version="1">Soul Reclaim</content>
 	<content contentuid="h9afaba63g1dc8g41d8g9c5fg3cb5d4295e99" version="2">Absorb ambient life force upon taking damage, restoring [1], and an additional [2] matching your &lt;LSTag Tooltip="ProficiencyBonus"&gt;Proficiency Bonus&lt;/LSTag&gt;.</content>
+
+
 </contentList>

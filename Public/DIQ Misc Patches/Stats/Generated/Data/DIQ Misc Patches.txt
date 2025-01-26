@@ -1,12 +1,12 @@
 // ==================================== Absolute Wrath - Soul Reclaim ====================================
 
 // Was using OnAttacked instead of looking for damage, description gave misinformation due to DescriptionParams not supporting "+""
-new entry "Mod_Soul_Reclaim"
-type "PassiveData"
-using "Mod_Soul_Reclaim"
-data "Description" "h9afaba63g1dc8g41d8g9c5fg3cb5d4295e99;1"
-data "DescriptionParams" "RegainHitPoints(1d4);RegainHitPoints(ProficiencyBonus)"
-data "StatsFunctorContext" "OnDamaged"
+//new entry "Mod_Soul_Reclaim"
+//type "PassiveData"
+//using "Mod_Soul_Reclaim"
+//data "Description" "h9afaba63g1dc8g41d8g9c5fg3cb5d4295e99;1"
+//data "DescriptionParams" "RegainHitPoints(1d4);RegainHitPoints(ProficiencyBonus)"
+//data "StatsFunctorContext" "OnDamaged"
 
 // ==================================== Stop Lodestones from working in combat ====================================
 

@@ -1,3 +1,16 @@
+// ==================================== AOE version of "Target_Prestidigitation_Fire" for lighting room fulls of candles and shit ====================================
+// aint started
+
+//new entry "Zone_Prestidigitation_Fire"
+//type "SpellData"
+//data "SpellType" "Target"
+//using "Target_Prestidigitation"
+//data "SpellContainerID" "Target_Prestidigitation"
+//data "SpellProperties" "TARGET:IF(Item() and HasStatus('BURNING')):RemoveStatus(BURNING);TARGET:IF(Item() and not HasStatus('BURNING')):ApplyStatus(BURNING,100,-1);TARGET:IF(Character() and (HasStatus('DIPPED_FIRE',GetActiveWeapon()) or HasStatus('BURNING',GetActiveWeapon()))):ApplyEquipmentStatus(MainHand,BURNING_REMOVAL,100,0)"
+//data "TargetConditions" "(Character() and (HasStatus('DIPPED_FIRE',GetActiveWeapon()) or HasStatus('BURNING',GetActiveWeapon()))) or Item()"
+//data "DisplayName" "h791afe39g7f77g48dega27fgc0472f2177a5;1"
+//data "Description" "hd579d008g05dbg4a4bg9c9cg8ee61d667897;1"
+
 // ==================================== Absolute Wrath - Soul Reclaim ====================================
 
 // Was using OnAttacked instead of looking for damage, description gave misinformation due to DescriptionParams not supporting "+""
@@ -376,6 +389,7 @@ data "OnApplyFunctors" "IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') 
 data "OnRemoveFunctors" "IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES')):ApplyStatus(SAILORCAT_ADPP_PASSIVES,100,-1);IF(Player() and Tagged('PLAYABLE') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES_AUX')):ApplyStatus(SAILORCAT_ADPP_PASSIVES_AUX,100,-1);IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_AUTOMATED_SUMMONS_PASSIVES')):ApplyStatus(SAILORCAT_AUTOMATED_SUMMONS_PASSIVES,100,-1)"
 
 // ==================================== Trying to make 5E Spells Mind Whip not empty AI brains on to the floor when it has to pick between moving or attacking ====================================
+// Needs testing for QA
 
 new entry "Target_TashasMindWhip"
 type "SpellData"

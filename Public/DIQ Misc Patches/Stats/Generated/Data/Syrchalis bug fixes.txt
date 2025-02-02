@@ -89,6 +89,13 @@ data "DisplayName" "ha0180935g478ag43f4ga251ga140eeb78609;1"
 data "Properties" "IsHidden"
 data "Boosts" "IF(HasStatus('FALSE_LIFE')):DamageReduction(All, Flat, 1);IF(HasStatus('FALSE_LIFE_2')):DamageReduction(All, Flat, 2);IF(HasStatus('FALSE_LIFE_3')):DamageReduction(All, Flat, 3);IF(HasStatus('FALSE_LIFE_4')):DamageReduction(All, Flat, 4);IF(HasStatus('FALSE_LIFE_5')):DamageReduction(All, Flat, 5);IF(HasStatus('FALSE_LIFE_6')):DamageReduction(All, Flat, 6)"
 
+// Ensaring Strike - Base projectile spell was using "DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType)"
+new entry "Projectile_EnsnaringStrike"
+type "SpellData"
+data "SpellType" "Projectile"
+using "Projectile_EnsnaringStrike"
+data "SpellSuccess" "IF(not SavingThrow(Ability.Strength, ManeuverSaveDC()+2,AdvantageOnRestrained(),DisadvantageOnRestrained())):ApplyStatus(ENSNARING_STRIKE,100,3);DealDamage(MainRangedWeapon, MainRangedWeaponDamageType);ExecuteWeaponFunctors(MainHand)"
+
 // Ensaring Strike - not all entries were swapped from SourceSpellDC() to ManeuverSaveDC()+2.
 new entry "Projectile_EnsnaringStrike_5"
 type "SpellData"

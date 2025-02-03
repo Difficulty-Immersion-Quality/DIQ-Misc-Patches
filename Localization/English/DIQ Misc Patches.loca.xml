@@ -119,5 +119,13 @@ Removed when &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Helped&lt;/LSTag&gt
 	<content contentuid="ef9e7845-5e5c-4428-966a-254736279961" version="1">Soul Reclaim</content>
 	<content contentuid="h9afaba63g1dc8g41d8g9c5fg3cb5d4295e99" version="2">Absorb ambient life force upon taking damage, restoring [1], and an additional [2] matching your &lt;LSTag Tooltip="ProficiencyBonus"&gt;Proficiency Bonus&lt;/LSTag&gt;.</content>
 
+	<content contentuid="h17c63c40g1669g46b8ga3e0gd5a0c618ac02" version="1">A wicked moment, person, or thing that cannot be slain by sword or spell haunts your mind and flickers in your peripheral vision. You carry it wherever your adventure takes you - or perhaps it carries you.
 
+Your experiences have granted you &lt;LSTag Type="Tooltip" Tooltip="Expertise"&gt;Expertise&lt;/LSTag&gt; in &lt;LSTag Tooltip="Intimidation"&gt;Intimidation&lt;/LSTag&gt;, and &lt;LSTag Type="Passive" Tooltip="Darkvision"&gt;Darkvision&lt;/LSTag&gt;.
+
+When you kill an enemy or score a &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hit&lt;/LSTag&gt;, all nearby enemies must succeed a &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or suffer &lt;LSTag Type="Status" Tooltip="BLEEDING"&gt;Bleeding&lt;/LSTag&gt; for 2 turns.
+
+Once per long rest, when reduced to 0 &lt;LSTag Tooltip=&quot;HitPoints&quot;&gt;Hit Points&lt;/LSTag&gt;, the Dark Urge seizes control, pulling you back from the brink of death. You recover [1], but without succeeding a &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; you may lose yourself to its will, seeking violence upon any around you.</content>
+
+	<content contentuid="h6c370b06g022bg4c7bg959cgfbd1c26cbb3b" version="1">Once per long rest, when reduced to 0 &lt;LSTag Tooltip=&quot;HitPoints&quot;&gt;Hit Points&lt;/LSTag&gt;, the Dark Urge seizes control, pulling you back from the brink of death. You recover [1], but without succeeding a &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; you may lose yourself to its will, seeking violence upon any around you.</content>
 </contentList>

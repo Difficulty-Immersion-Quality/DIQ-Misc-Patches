@@ -1,3 +1,11 @@
+// ==================================== Remove Attribute(InventoryBound) from Necromancy of Thay ====================================
+
+new entry "FOR_DANGEROUSBOOK_BOUNDTO"
+type "StatusData"
+data "StatusType" "BOOST"
+using "FOR_DANGEROUSBOOK_BOUNDTO"
+data "Boosts" ""
+
 // ==================================== AOE version of "Target_Prestidigitation_Fire" for lighting room fulls of candles and shit ====================================
 // aint started
 

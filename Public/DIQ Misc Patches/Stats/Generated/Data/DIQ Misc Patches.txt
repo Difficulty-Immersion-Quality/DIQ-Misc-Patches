@@ -1,10 +1,11 @@
 // ==================================== Give chances of getting your action point back after being picked up from a downed state ====================================
+// Restore Reactions too
 
 new entry "DOWNED"
 type "StatusData"
 data "StatusType" "DOWNED"
 using "DOWNED"
-data "OnRemoveFunctors" "ResetCombatTurn();RestoreResource(Movement, 100%, 0);RestoreResource(BonusActionPoint, 100%, 0);IF(SavingThrow(Ability, Dexterity, 20)):RestoreResource(ActionPoint, 100%, 0)"
+data "OnRemoveFunctors" "ResetCombatTurn();RestoreResource(Movement, 100%, 0);RestoreResource(BonusActionPoint, 100%, 0);RestoreResource(ReactionActionPoint, 100%, 0);IF(SavingThrow(Ability, Dexterity, 20)):RestoreResource(ActionPoint, 100%, 0)"
 
 // ==================================== Remove Attribute(InventoryBound) from Necromancy of Thay ====================================
 

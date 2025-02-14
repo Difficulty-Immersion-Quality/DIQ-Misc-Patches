@@ -1,3 +1,25 @@
+// ==================================== Make Wifi Potions not get placed in Simple Sorting Bags potions container? ====================================
+
+new entry "FallenStar_Wifi_Healing_Potion_Small"
+type "Object"
+using "FallenStar_Wifi_Healing_Potion_Small"
+data "DefaultBoosts" "data "DefaultBoosts" "CriticalHit(AttackTarget,Failure,Never);CriticalHit(AttackTarget,Success,Never);Tag(NOSORT)"
+
+new entry "FallenStar_Wifi_Healing_Potion_Greater"
+type "Object"
+using "FallenStar_Wifi_Healing_Potion_Greater"
+data "DefaultBoosts" "data "DefaultBoosts" "CriticalHit(AttackTarget,Failure,Never);CriticalHit(AttackTarget,Success,Never);Tag(NOSORT)"
+
+new entry "FallenStar_Wifi_Healing_Potion_Superior"
+type "Object"
+using "FallenStar_Wifi_Healing_Potion_Superior"
+data "DefaultBoosts" "data "DefaultBoosts" "CriticalHit(AttackTarget,Failure,Never);CriticalHit(AttackTarget,Success,Never);Tag(NOSORT)"
+
+new entry "FallenStar_Wifi_Healing_Potion_Supreme"
+type "Object"
+using "FallenStar_Wifi_Healing_Potion_Supreme"
+data "DefaultBoosts" "data "DefaultBoosts" "CriticalHit(AttackTarget,Failure,Never);CriticalHit(AttackTarget,Success,Never);Tag(NOSORT)"
+
 // ==================================== Give chances of getting your action point back after being picked up from a downed state ====================================
 // Restore Reactions too
 
@@ -9,11 +31,13 @@ data "OnRemoveFunctors" "ResetCombatTurn();RestoreResource(Movement, 100%, 0);Re
 
 // ==================================== Remove Attribute(InventoryBound) from Necromancy of Thay ====================================
 
+// Also remove data "DefaultBoosts" "Tag(NOSORT)" so it gets picked up by Simple Sorting Containers
 new entry "FOR_DANGEROUSBOOK_BOUNDTO"
 type "StatusData"
 data "StatusType" "BOOST"
 using "FOR_DANGEROUSBOOK_BOUNDTO"
 data "Boosts" ""
+data "DefaultBoosts" ""
 
 // ==================================== AOE version of "Target_Prestidigitation_Fire" for lighting room fulls of candles and shit ====================================
 // aint started

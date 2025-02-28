@@ -1,15 +1,21 @@
+// ==================================== Carry capacity changes ====================================
+
 key "EncumberedMultiplier","35"
 
 key "HeavilyEncumberedMultiplier","45"
 
 key "CarryLimitMultiplier","50"
 
+// ==================================== Block pickpocketing for Volo and Withers ====================================
+
 new entry "GLO_Volo"
 type "Character"
 using "GLO_Volo"
-data "DefaultBoosts" "Tag(BLOCK_PICKPOCKET)"
+// data "DefaultBoosts" "BlockRegainHP(Undead;Construct)"
+data "DefaultBoosts" "BlockRegainHP(Undead;Construct);Tag(BLOCK_PICKPOCKET)"
 
 new entry "GLO_Jergal"
 type "Character"
 using "GLO_Jergal"
-data "DefaultBoosts" "ProficiencyBonus(SavingThrow, Wisdom); BlockRegainHP(Living;Construct); Tag(BLOCK_PICKPOCKET)"
+// data "DefaultBoosts" "ProficiencyBonus(SavingThrow, Wisdom); BlockRegainHP(Living;Construct)"
+data "DefaultBoosts" "ProficiencyBonus(SavingThrow, Wisdom);BlockRegainHP(Living;Construct);Tag(BLOCK_PICKPOCKET)"

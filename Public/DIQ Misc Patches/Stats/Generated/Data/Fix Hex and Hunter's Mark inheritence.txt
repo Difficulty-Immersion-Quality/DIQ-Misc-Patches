@@ -1,13 +1,3 @@
-// ==================================== VEO Set Harold's Reposition Malefactor to Once Per Combat and implement Adjustable Shove-Pull Targeting ====================================
-
-// Harold - VEO 
-new entry "Target_MAG_RetrievingShot_ShortRest"
-type "SpellData"
-data "SpellType" "Target"
-using "Target_MAG_RetrievingShot_ShortRest"
-data "Cooldown" "OncePerCombat"
-data "SpellSuccess" "Force(-9, OriginToTarget, Neutral);DealDamage(MainRangedWeapon/2, MainRangedWeaponDamageType)"
-
 // ==================================== Target_PsionicPull, Target_SteelWatcher_Biped_RetrievingShot, Target_MAG_RetrievingShot, and Target_MAG_RetrievingShot_ShortRest (from VEO) all inherit from Target_Hex (in a chain) and Valdacil's Spell Adjustments just breaks them all ====================================
 
 new entry "Target_PsionicPull"

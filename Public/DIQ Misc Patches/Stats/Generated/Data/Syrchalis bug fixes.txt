@@ -1,11 +1,11 @@
 // ==================================== Rebalance - Feats ====================================
 
 // Heavily Armoured - add missing tooltip
-new entry "HeavilyArmored"
-type "PassiveData"
-using "HeavilyArmored"
+// new entry "HeavilyArmored"
+// type "PassiveData"
+// using "HeavilyArmored"
 // You have Armour Proficiency with Heavy Armour and increased one Ability by 1.
-data "Description" "h91f18f2bgaee5g43cag993eg676cc5e3e049"
+// data "Description" "h91f18f2bgaee5g43cag993eg676cc5e3e049"
 
 // Also has a FeatDescriptions.lsx overwrite to fix the description on feat selection
 // You gain Armour Proficiency with Heavy Armour and increase one Ability by 1.

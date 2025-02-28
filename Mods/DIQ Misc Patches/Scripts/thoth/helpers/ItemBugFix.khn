@@ -1,0 +1,105 @@
+--Blocks SpellFail statuses from trigging OnStatusApply effects
+function StatusDoesNotInvokeOnStatusApply()
+    return StatusId('PERFORM_POSITIVE_DOS2_1')
+    | StatusId('PERFORM_POSITIVE_DOS2_2')
+    | StatusId('PERFORM_POSITIVE_DOS2_3')
+    | StatusId('DOS2_JOIN_1')
+    | StatusId('DOS2_JOIN_2')
+    | StatusId('DOS2_JOIN_3')
+    | StatusId('PERFORM_POSITIVE')
+    | StatusId('PERFORM_POSITIVE_THEPOWER')
+    | StatusId('PERFORM_POSITIVE_STARGAZING')
+    | StatusId('PERFORM_POSITIVE_BARDDANCE')
+    | StatusId('PERFORM_NEGATIVE')
+    | StatusId('DASH')
+    | StatusId('DASH_STACKED')
+    | StatusId('DASH_STACKED_2')
+    | StatusId('SNEAKING') 
+    | StatusId('SNEAKING_CLEAR')
+    | StatusId('SNEAKING_LIGHTLY_OBSCURED')
+    | StatusId('SNEAKING_HEAVILY_OBSCURED')
+    | StatusId('DISENGAGE') 
+    | StatusId('NON_LETHAL')
+    | StatusId('MONK_SOUND_SWITCH')
+    | StatusId('FLANKED')
+    | StatusId('MAG_FROST_DURATION_TECHNICAL')
+    | StatusId('MAG_FROST_FROZEN_CHECK_TECHNICAL') 
+    | StatusId('MAG_RADIANT_RADIATING_ORB_DURATION_TECHNICAL')
+    | StatusId('MAG_ZOC_FORCE_CONDUIT_DURATION_TECHNICAL')
+    | StatusId('MAG_FIRE_HEAT_DURATION_TECHNICAL')
+    | StatusId('MAG_THUNDER_REVERBERATION_DURATION_TECHNICAL')
+    | StatusId('MAG_PSYCHIC_MENTAL_FATIGUE_DURATION_TECHNICAL')
+    | StatusId('YSRSLIDFWWADNIWHWIHLY_YWNK')
+    | StatusId('SAVED_AGAINST_HOSTILE_SPELL')
+    | StatusId('COLDBRIM_CHILL_ONCE')
+    | StatusId('ARCANE_ECHOMALEFACTION_ONCE')
+end
+
+--Greatly shortens race and sex checks
+function IDP(race,sex,entity)
+  entity = entity or context.Source
+  result = Tagged(race,entity) & Tagged(sex,entity)
+  return ConditionResult(result.Result)    
+end
+
+--JuuM_GetHighestAbility({'Intelligence','Wisdom','Charisma'})
+function GetHighestAbility(abilities,entity)
+    local entity = entity or context.Source
+    local highestValue = 0
+    local highestAbility = abilities[1]
+    --will return first ability if tie
+    for _,ability in ipairs(abilities) do
+        if entity[ability] > highestValue then
+            highestValue = entity[ability]
+            highestAbility = Ability[ability]
+        end
+    end
+    return highestAbility
+end
+
+--Counterspell fix
+function TryCounterspellHigherLevel(level)
+    local spellPowerLevel = SpellPowerLevelEqualOrLessThan(level)
+    if not spellPowerLevel.Result then
+        local counterspellDC = 10 + context.HitDescription.SpellPowerLevel
+        local ability = GetHighestAbility({'Intelligence','Charisma'},context.Observer)        
+        local st = AbilityCheck(ability, counterspellDC, false, false, 0, context.Observer, context.Observer)
+        return ConditionResult(st.Result,{},{},st.Chance)
+    end
+    return ConditionResult(true,{},{},1.0)
+end
+
+--Recasted spell DC fix
+function RecastSpellDC(abilities, fallbackDC, entity)
+    local entity = entity or context.Source
+    local spellDC = fallbackDC or 10 -- Global default so that we don't return 0
+    local abilities = abilities or {'Intelligence','Wisdom','Charisma'}
+    local ability = GetHighestAbility(abilities,entity)
+    if entity.IsValid then
+        try
+            spellDC = CalculateSpellDC(ability, entity)
+        catch e then
+        end
+    end
+    return spellDC
+end
+
+--Recasted Telekinesis fix
+function RecastTelekinesisCheck()
+    local result = Dead() | Item() | Ally()
+    if not result.Result then
+        local st = ~SavingThrow(Ability.Strength, RecastSpellDC())
+        return ConditionResult(st.Result, {}, {}, st.Chance)
+    end
+    return result
+end
+
+--Twinned Spell projectile fix
+function TwinnedProjectileSpellCheck()
+    return ~NumberOfTargetsGreaterThan(1) & TargetRadiusGreaterThan(1.5) & ~AreaRadiusGreaterThan(0) & (HasSpellFlag(SpellFlags.Spell) | NonSpellMetamagicAbilities()) & SpellTypeIs(SpellType.Projectile) & ~MetamagicExclusionSpells() & ~IsSpellChildOrVariantFromContext('Projectile_WitchBolt')
+end
+
+--Adds item spell variants to Metamagic exclusion list
+function MetamagicExclusionSpells()
+    return SpellId('Target_MistyStep') | SpellId('Target_WildMagic_Teleport') | SpellId('Target_SpeakWithDead') | SpellId('Target_SpeakWithDead_FreeRecast') | SpellId('Target_SpeakWithDead_Amulet_CHA') | SpellId('Target_Light') | SpellId('Projectile_ChainLightning') | SpellId('Projectile_MAG_Legendary_Chromatic_ChainLightning') | SpellId('Target_UNI_MistyStep_DrowCommander_Amulet') | SpellId('Target_WYR_Circus_TeleportBoots_MistyStep') | SpellId('Target_UNI_MistyStep_Nightwalkers') | SpellId('Target_UND_Light_Tower_Ring')
+end

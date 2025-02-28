@@ -1,0 +1,194 @@
+// ==================================== Recast Sunbeam - Fix to spell using the last spellcasting ability obtained via leveling up (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "Zone_Sunbeam_Recreate"
+type "SpellData"
+data "SpellType" "Zone"
+using "Zone_Sunbeam_Recreate"
+// data "SpellRoll" "not SavingThrow(Ability.Constitution, SourceSpellDC())"
+data "SpellRoll" "not SavingThrow(Ability.Constitution, RecastSpellDC())"
+
+// ==================================== Telekinesis (recast) - Fix to spell using the last spellcasting ability obtained via leveling up (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "Throw_Telekinesis_Recast"
+type "SpellData"
+data "SpellType" "Throw"
+using "Throw_Telekinesis_Recast"
+data "SpellRoll" "RecastTelekinesisCheck()"
+data "ThrowableSpellRoll" "RecastTelekinesisCheck()"
+
+// ==================================== Blink - Fix to vanish effect breaking concentration (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+// Added Gaseous Form's Blink too, not sure if I should, ought to test and take a closer look
+// Refer to Syrchalis bug fixes.txt and compare implementations
+
+new entry "BLINK_VANISH"
+type "StatusData"
+data "StatusType" "INCAPACITATED"
+using "BLINK_VANISH"
+data "StatusGroups" "SG_Condition"
+
+new entry "GASEOUSFORM_BLINK"
+type "StatusData"
+data "StatusType" "POLYMORPHED"
+using "GASEOUSFORM_BLINK"
+data "StatusGroups" "SG_Condition"
+
+// ==================================== Shadow Blade - Fix to attacks from Shadow Blade not applying Advantage on obscured targets, and now grants intrinsic proficiency to the summoner (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "SHADOW_BLADE"
+type "StatusData"
+data "StatusType" "EFFECT"
+using "SHADOW_BLADE"
+// data "Boosts" "Attribute(InventoryBound)"
+data "Boosts" "Attribute(InventoryBound);IntrinsicSummonerProficiency()"
+
+new entry "ShadowBlade_Passive"
+type "PassiveData"
+using "ShadowBlade_Passive"
+// data "BoostContext" "OnAttack"
+data "BoostContext" "OnAttack"
+// data "Boosts" "IF(AttackedWithPassiveSourceWeapon() and not HasObscuredState(ObscuredState.Clear)):Advantage(AttackRoll)"
+data "Boosts" "IF(IsMeleeWeaponAttack() and not HasObscuredState(ObscuredState.Clear)):Advantage(AttackRoll)"
+
+// ==================================== Shield - Fix to provide charges of Arcane Ward based on the spell slot level used (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+// I've also included all class variants and levels 7-9
+
+// Wizard
+new entry "Interrupt_Shield_Wizard"
+type "InterruptData"
+using "Interrupt_Shield_Wizard"
+// data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_WIZARD,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):ApplyStatus(SELF,ARCANE_WARD,100,-1)"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_WIZARD,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Wizard_1,true,true,true)"
+
+new entry "Interrupt_Shield_Wizard_2"
+type "InterruptData"
+using "Interrupt_Shield_Wizard_2"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_WIZARD,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Wizard_2,true,true,true)"
+
+new entry "Interrupt_Shield_Wizard_3"
+type "InterruptData"
+using "Interrupt_Shield_Wizard_3"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_WIZARD,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Wizard_3,true,true,true)"
+
+new entry "Interrupt_Shield_Wizard_4"
+type "InterruptData"
+using "Interrupt_Shield_Wizard_4"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_WIZARD,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Wizard_4,true,true,true)"
+
+new entry "Interrupt_Shield_Wizard_5"
+type "InterruptData"
+using "Interrupt_Shield_Wizard_5"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_WIZARD,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Wizard_5,true,true,true)"
+
+new entry "Interrupt_Shield_Wizard_6"
+type "InterruptData"
+using "Interrupt_Shield_Wizard_6"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_WIZARD,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Wizard_6,true,true,true)"
+
+new entry "Interrupt_Shield_Wizard_7"
+type "InterruptData"
+using "Interrupt_Shield_Wizard_7"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_WIZARD,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Wizard_7,true,true,true)"
+
+new entry "Interrupt_Shield_Wizard_8"
+type "InterruptData"
+using "Interrupt_Shield_Wizard_8"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_WIZARD,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Wizard_8,true,true,true)"
+
+new entry "Interrupt_Shield_Wizard_9"
+type "InterruptData"
+using "Interrupt_Shield_Wizard_9"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_WIZARD,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Wizard_9,true,true,true)"
+
+// Sorcerer
+new entry "Interrupt_Shield_Sorcerer"
+type "InterruptData"
+using "Interrupt_Shield_Sorcerer"
+// data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_SORCERER,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1)"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_SORCERER,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Sorcerer_1,true,true,true)"
+
+new entry "Interrupt_Shield_Sorcerer_2"
+type "InterruptData"
+using "Interrupt_Shield_Sorcerer_2"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_SORCERER,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Sorcerer_2,true,true,true)"
+
+new entry "Interrupt_Shield_Sorcerer_3"
+type "InterruptData"
+using "Interrupt_Shield_Sorcerer_3"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_SORCERER,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Sorcerer_3,true,true,true)"
+
+new entry "Interrupt_Shield_Sorcerer_4"
+type "InterruptData"
+using "Interrupt_Shield_Sorcerer_4"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_SORCERER,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Sorcerer_4,true,true,true)"
+
+new entry "Interrupt_Shield_Sorcerer_5"
+type "InterruptData"
+using "Interrupt_Shield_Sorcerer_5"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_SORCERER,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Sorcerer_5,true,true,true)"
+
+new entry "Interrupt_Shield_Sorcerer_6"
+type "InterruptData"
+using "Interrupt_Shield_Sorcerer_6"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_SORCERER,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Sorcerer_6,true,true,true)"
+
+new entry "Interrupt_Shield_Sorcerer_7"
+type "InterruptData"
+using "Interrupt_Shield_Sorcerer_7"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_SORCERER,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Sorcerer_7,true,true,true)"
+
+new entry "Interrupt_Shield_Sorcerer_8"
+type "InterruptData"
+using "Interrupt_Shield_Sorcerer_8"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_SORCERER,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Sorcerer_8,true,true,true)"
+
+new entry "Interrupt_Shield_Sorcerer_9"
+type "InterruptData"
+using "Interrupt_Shield_Sorcerer_9"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_SORCERER,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Sorcerer_9,true,true,true)"
+
+// Warlock
+new entry "Interrupt_Shield_Warlock"
+type "InterruptData"
+using "Interrupt_Shield_Warlock"
+// data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_WARLOCK,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1)"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_WARLOCK,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Warlock_1,true,true,true)"
+
+new entry "Interrupt_Shield_Warlock_2"
+type "InterruptData"
+using "Interrupt_Shield_Warlock_2"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_WARLOCK,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Warlock_2,true,true,true)"
+
+new entry "Interrupt_Shield_Warlock_3"
+type "InterruptData"
+using "Interrupt_Shield_Warlock_3"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_WARLOCK,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Warlock_3,true,true,true)"
+
+new entry "Interrupt_Shield_Warlock_4"
+type "InterruptData"
+using "Interrupt_Shield_Warlock_4"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_WARLOCK,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Warlock_4,true,true,true)"
+
+new entry "Interrupt_Shield_Warlock_5"
+type "InterruptData"
+using "Interrupt_Shield_Warlock_5"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_WARLOCK,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Warlock_5,true,true,true)"
+
+new entry "Interrupt_Shield_Warlock_6"
+type "InterruptData"
+using "Interrupt_Shield_Warlock_6"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_WARLOCK,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Warlock_6,true,true,true)"
+
+new entry "Interrupt_Shield_Warlock_7"
+type "InterruptData"
+using "Interrupt_Shield_Warlock_7"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_WARLOCK,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Warlock_7,true,true,true)"
+
+new entry "Interrupt_Shield_Warlock_8"
+type "InterruptData"
+using "Interrupt_Shield_Warlock_8"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_WARLOCK,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Warlock_8,true,true,true)"
+
+new entry "Interrupt_Shield_Warlock_9"
+type "InterruptData"
+using "Interrupt_Shield_Warlock_9"
+data "Properties" "IF(HasInterruptedAttack()):AdjustRoll(-5);IF(IsSpellChildOrVariantFromContext('Projectile_MagicMissile')):SetRoll(0);ApplyStatus(INTERRUPT_SHIELD_WARLOCK,100,1);ApplyStatus(OBSERVER_OBSERVER,SHIELD,100,1);IF(HasPassive('ArcaneWard',context.Source)):UseSpell(OBSERVER_OBSERVER,Shout_Shield_Warlock_9,true,true,true)"

@@ -121,8 +121,13 @@ Once per long rest, when reduced to 0 &lt;LSTag Tooltip=&quot;HitPoints&quot;&gt
 	<content contentuid="h31b31c1ag1e73g4f59gba48gbc43529c7456" version="1">Your staff, club, javelin, spear, trident or mace becomes magical: it deals [1], adding your &lt;LSTag Tooltip="SpellcastingAbilityModifier"&gt;Spellcasting Ability&lt;/LSTag&gt; to its &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; and &lt;LSTag Tooltip=""&gt;Damage Rolls&lt;/LSTag&gt;.</content>
 
 
-
-
-
 	<content contentuid="hb51441aag0602g4421g8b9cg27b31a9a781c" version="1">Targets hit with this weapon must succeed a &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; or become &lt;LSTag Type="Status" Tooltip="SILENCED"&gt;Silenced&lt;/LSTag&gt; for 2 turns.</content>
+
+
+	<content contentuid="h83878dd5g08a3ge822g37f7g0aa8563198b6" version="1">Usable once per &lt;LSTag Tooltip="ShortRest"&gt;Short Rest&lt;/LSTag&gt; or once per &lt;LSTag Type="Spell" Tooltip="Shout_Wildshape_Panther"&gt;Wild Shape&lt;/LSTag&gt;.</content>
+	<content contentuid="ha1a8e9d7g355cgcc59gf904gd37219f32d2a" version="1">Illusion Blade</content>
+	<content contentuid="h0820b331g09b3ga641gf011gacbc0bc8a8e9" version="1">Justiciar's Scimitar</content>
+	<content contentuid="h15d2f24ag6b53gefefg192eg54cd208d78fa" version="1">You are considered &lt;LSTagTooltip="WeaponProficiency"&gt;Proficient&lt;/LSTag&gt; with this weapon while wielding it. </content>
+	<content contentuid="h9dc131acg4f5bg4dedg9a43gaefa64ac4ae8" version="1">Spew forth a column of acid.</content>
+	<content contentuid="hc9ca24a3g15f4g4e9cgb1fcg64167e6dba3e" version="1">Spew forth a column of lightning.</content>
 </contentList>

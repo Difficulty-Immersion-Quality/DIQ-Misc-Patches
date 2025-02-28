@@ -1,0 +1,29 @@
+// ==================================== Fist of Four Thunders - Fix to spell not triggering Martial Arts: Bonus Unarmed Strike (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "Zone_Thunderwave_Monk"
+type "SpellData"
+data "SpellType" "Zone"
+using "Zone_Thunderwave_Monk"
+data "SpellProperties" "ApplyStatus(SELF,MARTIAL_ARTS_BONUS_UNARMED_STRIKE,100,1)"
+
+// ==================================== Prophecy: Delivering Alms - Vanilla game references non-existant passive (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "Divination_Ally_Downed"
+type "PassiveData"
+using "Divination_Damage_Fire"
+data "Icon" "GenericIcon_Intent_Utility"
+data "StatsFunctorContext" "OnCast"
+data "Conditions" "SpellId('Target_Help') and Ally(context.Target)"
+data "StatsFunctors" "ApplyStatus(SELF,PORTENT,100,1);RemoveStatus(SELF,DIVINATION_ALLY_HELP)"
+
+// ==================================== Primal Stampede - Fix to damage type not matching and benefiting from attack type (Melee Unarmed) (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "Rush_Primal_Stampede"
+type "SpellData"
+data "SpellType" "Rush"
+using "Rush_Primal_Stampede"
+// data "SpellSuccess" "DealDamage(1d4+StrengthModifier,Bludgeoning);TARGET:IF(not SavingThrow(Ability.Strength,10+GetModifier(context.Source.Strength))):ApplyStatus(PRONE,100,2)"
+data "SpellSuccess" "DealDamage(UnarmedDamage,Bludgeoning);TARGET:IF(not SavingThrow(Ability.Strength,10+GetModifier(context.Source.Strength))):ApplyStatus(PRONE,100,2)"
+// data "TooltipDamageList" "DealDamage(1d4+StrengthModifier, Bludgeoning)"
+data "TooltipDamageList" "DealDamage(UnarmedDamage,Bludgeoning)"
+

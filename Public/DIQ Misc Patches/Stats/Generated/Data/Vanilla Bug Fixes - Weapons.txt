@@ -1,0 +1,196 @@
+// ==================================== Gold Wyrmling Staff, Flame Blade and Everburn Blade - These weapons with fire VFX are hidden in cutscenes, for some reason, I would prefer to see my cool fire sword (Credit to Goonsack - Goonsack Land) ====================================
+
+new entry "MAG_Fire_FireDamage_Quarterstaff"
+type "Weapon"
+using "MAG_Fire_FireDamage_Quarterstaff"
+// data "DefaultBoosts" "WeaponEnchantment(1);WeaponProperty(Magical);HiddenDuringCinematic()"
+data "DefaultBoosts" "WeaponEnchantment(1);WeaponProperty(Magical)"
+
+new entry "WPN_Scimitar_FlameBlade"
+type "Weapon"
+using "WPN_Scimitar_FlameBlade"
+// data "DefaultBoosts" "HiddenDuringCinematic();CannotBeDisarmed()"
+data "DefaultBoosts" "CannotBeDisarmed()"
+
+new entry "MAG_Fire_AlwaysDippedInFire_Greatsword"
+type "Weapon"
+using "MAG_Fire_AlwaysDippedInFire_Greatsword"
+// data "DefaultBoosts" "HiddenDuringCinematic();WeaponProperty(Magical)"
+data "DefaultBoosts" "WeaponProperty(Magical)"
+
+// ==================================== Hellfire Greataxe - Fix to 'Hellflame Cleave' and 'Hellfire' surface not ignoring fire resistance (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "Zone_MAG_Automaton_Human_Steelwatcher_HellfireCleave"
+type "SpellData"
+data "SpellType" "Zone"
+using "Zone_MAG_Automaton_Human_Steelwatcher_HellfireCleave"
+// data "SpellSuccess" "DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);DealDamage(2d6, Fire,Magical,,0,,false,false,false,true);IF(not HasStatus('BURNING_HELLFIRE')):ApplyStatus(BURNING_HELLFIRE,100,1);"
+data "SpellSuccess" "DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);DealDamage(2d6, Fire,Magical);IF(not HasStatus('BURNING_HELLFIRE')):ApplyStatus(BURNING_HELLFIRE,100,1);"
+// data "SpellFail" "DealDamage((MainMeleeWeapon)/2, MainMeleeWeaponDamageType);DealDamage((2d6)/2, Fire,Magical,,0,,false,false,false,true)"
+data "SpellFail" "DealDamage((MainMeleeWeapon)/2, MainMeleeWeaponDamageType);DealDamage((2d6)/2, Fire,Magical)"
+
+// ==================================== Rat Bat - Fix to bonus 1d6 Piercing damage not displaying on the weapon (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "TWN_RatCatcher"
+type "Weapon"
+using "TWN_RatCatcher"
+// data "WeaponFunctors" "DealDamage(1d6,Piercing)"
+data "WeaponFunctors" ""
+data "DefaultBoosts" "WeaponEnchantment(1);WeaponProperty(Magical);WeaponDamage(1d6,Piercing)"
+
+// ==================================== Staff of the Ram - Fix to passive functioning on every attack made by the wielder, fix to missing additional Force damage (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "MAG_LC_OfTheRam_Quarterstaff"
+type "Weapon"
+using "MAG_LC_OfTheRam_Quarterstaff"
+data "DefaultBoosts" "WeaponEnchantment(2);WeaponProperty(Magical);WeaponDamage(1d6,Force)"
+
+new entry "MAG_StaffOFRam_KnockStun_Passive"
+type "PassiveData"
+using "MAG_StaffOFRam_KnockStun_Passive"
+// data "TooltipSave" "Constitution"
+data "TooltipSave" ""
+// data "StatsFunctorContext" "OnAttack"
+data "StatsFunctorContext" "OnDamage"
+// data "Conditions" "AttackedWithPassiveSourceWeapon() and not Ally() and TargetSizeEqualOrSmaller(Size.Large) and not Tagged('DRAGON') and not SavingThrow(Ability.Constitution, 8, false, false, context.Target)"
+data "Conditions" "AttackedWithPassiveSourceWeapon() and (TargetSizeEqualOrSmaller(Size.Large) and not Tagged('DRAGON'))"
+// data "StatsFunctors" "IF(not Ally()):Force(2,OriginToEntity,Aggressive);IF(Ally()):Force(2,OriginToEntity,Friendly);ApplyStatus(STUNNED, 100, 1)"
+data "StatsFunctors" "IF(not Ally()):Force(2,OriginToEntity,Aggressive);IF(not Ally() and not SavingThrow(Ability.Constitution,8, false, false, context.Target)):ApplyStatus(STUNNED, 100, 1);IF(Ally()):Force(2,OriginToEntity,Friendly)"
+
+// ==================================== Justiciar's Scimitar - Fix to 'Shadow-Blinding' not functioning in Honour mode, fix to 'Illusion Blade' passive being hidden, fix to proficiency not being stated (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "MAG_Justiciar_Scimitar"
+type "Weapon"
+using "MAG_Justiciar_Scimitar"
+// data "PassivesOnEquip" "MAG_ShadowBlinding_Weapon_Passive;MAG_IllusionBlade_Passive"
+data "PassivesOnEquip" "MAG_ShadowBlinding_Weapon_Passive;MAG_IllusionBlade_Passive;MAG_JusticiarsScimitar_Proficiency_Passive"
+
+new entry "MAG_ShadowBlinding_Weapon_Passive"
+type "PassiveData"
+using "MAG_ShadowBlinding_Weapon_Passive"
+data "TooltipSave" "Constitution"
+// data "StatsFunctors" "IF(not SavingThrow(Ability.Constitution, 14)):ApplyStatus(BLINDED,100,2)"
+data "StatsFunctors" "IF(not SavingThrow(Ability.Constitution, 14, false, false, context.Target)):ApplyStatus(BLINDED,100,2)"
+
+new entry "MAG_IllusionBlade_Passive"
+type "PassiveData"
+using "MAG_IllusionBlade_Passive"
+// data "Properties" "IsHidden"
+data "Properties" ""
+// Illusion Blade
+data "DisplayName" "ha1a8e9d7g355cgcc59gf904gd37219f32d2a;1"
+
+new entry "MAG_JusticiarsScimitar_Proficiency_Passive"
+type "PassiveData"
+data "DisplayName" "h0820b331g09b3ga641gf011gacbc0bc8a8e9;1"
+data "Description" "h15d2f24ag6b53gefefg192eg54cd208d78fa;1"
+
+// ==================================== Handmaiden's Mace - Fix to passive chance to inflict Poisoned condition being hidden (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "MAG_Viconia_Mace"
+type "Weapon"
+using "MAG_Viconia_Mace"
+data "PassivesOnEquip" "MAG_Infernal_Weapon_Passive"
+
+// ==================================== Hellbeard Halberd - Fix to passive chance to inflict Poisoned condition being hidden (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "MAG_Infernal_Hellbeard_Halberd"
+type "Weapon"
+using "MAG_Infernal_Hellbeard_Halberd"
+data "PassivesOnEquip" "MAG_Infernal_Weapon_Passive"
+
+// ==================================== Bonesaw - Fix to weapon not granting any weapon actions and displaying "1d6" in description (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "MAG_Surgeon_Bonesaw"
+type "Weapon"
+using "MAG_Surgeon_Bonesaw"
+data "DefaultBoosts" "WeaponEnchantment(1);WeaponProperty(Magical);IF(Tagged('ACT2_TWN_HOSPITAL_NURSE',context.Source)):WeaponDamage(1d6,Necrotic)"
+// data "Boosts" "IF (Tagged('ACT2_TWN_HOSPITAL_NURSE',context.Source)):UnlockSpell(Target_SurgeryEnabler_Bonesaw_Nurse); IF (Tagged('ACT2_TWN_HOSPITAL_NURSE',context.Source)):CharacterWeaponDamage(1d6,Necrotic)"
+data "Boosts" "IF(Tagged('ACT2_TWN_HOSPITAL_NURSE',context.Source)):UnlockSpell(Target_SurgeryEnabler_Bonesaw_Nurse)"
+// data "BoostsOnEquipMainHand" "IF (Tagged('PLAYABLE')):UnlockSpell(Target_OpeningAttack); IF (Tagged('PLAYABLE')):UnlockSpell(Target_Slash_New); IF (Tagged('PLAYABLE')):UnlockSpell(Target_MAG_WeaponAction_Bonesaw)"
+data "BoostsOnEquipMainHand" "IF(Tagged('PLAYABLE',context.Source)):UnlockSpell(Target_OpeningAttack);IF(Tagged('PLAYABLE',context.Source)):UnlockSpell(Target_Slash_New);IF(Tagged('PLAYABLE',context.Source)):UnlockSpell(Target_MAG_WeaponAction_Bonesaw)"
+
+// ==================================== Bonesaw - Fix to weapon not granting any weapon actions and displaying "1d6" in description (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "MAG_Surgeon_Leech"
+type "Weapon"
+using "MAG_Surgeon_Leech"
+data "DefaultBoosts" "WeaponEnchantment(1);WeaponProperty(Magical);IF(Tagged('ACT2_TWN_HOSPITAL_NURSE',context.Source)):WeaponDamage(1d6,Necrotic)"
+// data "Boosts" "IF (Tagged('ACT2_TWN_HOSPITAL_NURSE',context.Source)):UnlockSpell(Target_SurgeryEnabler_Leech_Nurse); IF (Tagged('ACT2_TWN_HOSPITAL_NURSE',context.Source)):CharacterWeaponDamage(1d6,Necrotic)"
+data "Boosts" "IF(Tagged('ACT2_TWN_HOSPITAL_NURSE',context.Source)):UnlockSpell(Target_SurgeryEnabler_Leech_Nurse)"
+// data "BoostsOnEquipMainHand" "IF (Tagged('PLAYABLE')):UnlockSpell(Target_PiercingThrust); IF (Tagged('PLAYABLE')):UnlockSpell(Target_MAG_WeaponAction_Leech)"
+data "BoostsOnEquipMainHand" "IF(Tagged('PLAYABLE',context.Source)):UnlockSpell(Target_PiercingThrust);IF(Tagged('PLAYABLE',context.Source)):UnlockSpell(Target_MAG_WeaponAction_Leech)"
+
+// ==================================== Bonesaw - Fix to weapon not granting any weapon actions and displaying "1d6" in description (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "MAG_Surgeon_Syringe"
+type "Weapon"
+using "WPN_Dagger_1"
+data "DefaultBoosts" "WeaponEnchantment(1);WeaponProperty(Magical);IF(Tagged('ACT2_TWN_HOSPITAL_NURSE',context.Source)):WeaponDamage(1d6,Necrotic)"
+// data "Boosts" "IF (Tagged('ACT2_TWN_HOSPITAL_NURSE',context.Source)):UnlockSpell(Target_SurgeryEnabler_Syringe_Nurse); IF (Tagged('ACT2_TWN_HOSPITAL_NURSE',context.Source)):CharacterWeaponDamage(1d6,Necrotic)"
+data "Boosts" "IF(Tagged('ACT2_TWN_HOSPITAL_NURSE',context.Source)):UnlockSpell(Target_SurgeryEnabler_Syringe_Nurse)"
+// data "BoostsOnEquipMainHand" "IF (Tagged('PLAYABLE')):UnlockSpell(Target_PiercingThrust); IF (Tagged('PLAYABLE')):UnlockSpell(Target_MAG_WeaponAction_Syringe)"
+data "BoostsOnEquipMainHand" "IF(Tagged('PLAYABLE',context.Source)):UnlockSpell(Target_PiercingThrust);IF(Tagged('PLAYABLE',context.Source)):UnlockSpell(Target_MAG_WeaponAction_Syringe)"
+
+// ==================================== Bonesaw - Fix to weapon not granting any weapon actions and displaying "1d6" in description (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "MAG_Surgeon_Trepan"
+type "Weapon"
+using "MAG_Surgeon_Trepan"
+data "DefaultBoosts" "WeaponEnchantment(1);WeaponProperty(Magical);IF(Tagged('ACT2_TWN_HOSPITAL_NURSE',context.Source)):WeaponDamage(1d6,Necrotic)"
+// data "Boosts" "IF (Tagged('ACT2_TWN_HOSPITAL_NURSE',context.Source)):UnlockSpell(Target_SurgeryEnabler_Trepan_Nurse); IF (Tagged('ACT2_TWN_HOSPITAL_NURSE',context.Source)):CharacterWeaponDamage(1d6,Necrotic)"
+data "Boosts" "IF(Tagged('ACT2_TWN_HOSPITAL_NURSE',context.Source)):UnlockSpell(Target_SurgeryEnabler_Trepan_Nurse)"
+// data "BoostsOnEquipMainHand" "IF (Tagged('PLAYABLE')):UnlockSpell(Target_OpeningAttack); IF (Tagged('PLAYABLE')):UnlockSpell(Target_PiercingThrust); IF (Tagged('PLAYABLE')):UnlockSpell(Target_MAG_WeaponAction_Trepan)"
+data "BoostsOnEquipMainHand" "IF(Tagged('PLAYABLE',context.Source)):UnlockSpell(Target_OpeningAttack);IF(Tagged('PLAYABLE',context.Source)):UnlockSpell(Target_PiercingThrust);IF(Tagged('PLAYABLE',context.Source)):UnlockSpell(Target_MAG_WeaponAction_Trepan)"
+
+// ==================================== Crimson Mischief - Fix to 'Prey Upon the Weak' not functioning in Honour mode (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "MAG_TheCrimson_Shortsword"
+type "Weapon"
+using "MAG_TheCrimson_Shortsword"
+// data "DefaultBoosts" "WeaponEnchantment(2);WeaponProperty(Magical);IF(HasHPPercentageEqualOrLessThan(50, context.Target)):WeaponDamage(1d4, Piercing)"
+data "DefaultBoosts" "WeaponEnchantment(2);WeaponProperty(Magical);IF(HasHPPercentageEqualOrLessThan(50, context.Target)):WeaponDamage(1d4, Piercing);IF(HasStatus('MAG_THE_CRIMSON_VICIOUS', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and HasAdvantage() and not HasDisadvantage()):WeaponDamage(7, Piercing)"
+
+// ==================================== Exterminator's Axe - Fix to 'Scourge of Pests' affecting Insects when it instead affected Myconids (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "UND_DuergarRaft_PestKillerAxe"
+type "Weapon"
+using "UND_DuergarRaft_PestKillerAxe"
+// data "DefaultBoosts" "WeaponProperty(Magical)"
+data "DefaultBoosts" "WeaponProperty(Magical);IF(TargetSizeEqualOrSmaller(Size.Small) or Tagged('PLANT',context.Target) or Tagged('MYCONID',context.Target)):WeaponDamage(1d6, Fire)"
+
+// ==================================== Shining Staver-of-Skulls - Fix to innate 'Light' status being permanently lost when overwritten by a player-cast Light (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+// Vanilla
+new entry "MAG_Radiant_Radiating_Hammer"
+type "Weapon"
+using "MAG_Radiant_Radiating_Hammer"
+data "PassivesOnEquip" "MAG_Radiant_Radiating_Hammer_Passive"
+
+// Custom
+new entry "MAG_Radiant_Radiating_Hammer_Passive"
+type "PassiveData"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnStatusApply;OnStatusRemove;OnEquip"
+data "Conditions" "not HasStatus('LIGHT', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand)) and not HasStatus('LIGHT_MAG_Radiant_Radiating_Hammer', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand))"
+data "StatsFunctors" "ApplyEquipmentStatus(MeleeMainHand,LIGHT_MAG_Radiant_Radiating_Hammer,100,-1)"
+
+new entry "LIGHT_MAG_Radiant_Radiating_Hammer"
+type "StatusData"
+data "StatusType" "BOOST"
+using "LIGHT"
+data "StackId" ""
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;IgnoreResting"
+data "StatusGroups" "SG_Light"
+data "IsUnique" ""
+
+// ==================================== Duke Ravengard's Longsword - Fix to 'Stirring Execution' granting temporary HP based on the recipient's charisma, not the caster's (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "MAG_TEMP_HP_CHARISMA"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MAG_TEMP_HP_CHARISMA"
+// data "DescriptionParams" "max(1,CharismaModifier)"
+data "DescriptionParams" "max(1,Cause.CharismaModifier)"
+// data "Boosts" "TemporaryHP(max(1,CharismaModifier))"
+data "Boosts" "TemporaryHP(max(1,Cause.CharismaModifier))"

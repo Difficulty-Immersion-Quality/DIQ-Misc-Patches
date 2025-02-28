@@ -1,0 +1,112 @@
+// ==================================== Boots of Speed - Fix to 'Click Heels' incorrectly giving disadvantage to the wearer's opportunity attacks (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "CLICK_HEELS"
+type "StatusData"
+data "StatusType" "BOOST"
+using "CLICK_HEELS"
+// data "Boosts" "ActionResourceMultiplier(Movement,200,0);IF(IsReactionAttack(context.Source)):Disadvantage(AttackRoll)"
+data "Boosts" "ActionResourceMultiplier(Movement,200,0);IF(IsReactionAttack(context.Source)):Disadvantage(AttackTarget)"
+
+// ==================================== The Reviving Hands - Fix to 'Aegis Palms' not applying Death Ward to revived targets when dead (not downed) (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "MAG_Revivify_Gloves_Passive"
+type "PassiveData"
+using "MAG_Revivify_Gloves_Passive"
+// data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnHeal) and Character()):ApplyStatus(BLADE_WARD,100,2);IF(context.HasContextFlag(StatsFunctorContext.OnAttack) and Character() and IsRevivifySpell()):ApplyStatus(MAG_DEATH_WARD_ON_DEAD,100,2)"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnHeal) and Character()):ApplyStatus(BLADE_WARD,100,2);IF(context.HasContextFlag(StatsFunctorContext.OnAttack) and IsRevivifySpell()):ApplyStatus(MAG_DEATH_WARD_ON_DEAD,100,2)"
+
+// ==================================== After Death Do Us Part - Fix to 'Shadow Possession' clearing itself instantly upon revival (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "MAG_DEATH_DO_SHADOW_POSSESION_DOWNED"
+type "StatusData"
+data "StatusType" "DOWNED"
+using "MAG_DEATH_DO_SHADOW_POSSESION_DOWNED"
+data "Boosts" "AbilityFailedSavingThrow(Strength);AbilityFailedSavingThrow(Dexterity);CriticalHit(AttackTarget,Success,Always,2.5);IF(not DistanceToTargetGreaterThan(3)):Advantage(AttackTarget);IF(DistanceToTargetGreaterThan(3)):Disadvantage(AttackTarget);StatusImmunity(SG_Prone);StatusImmunity(SHOCKWAVE)"
+// data "OnApplyFunctors" "IF(HasStatus('MAG_DEATH_DO_SHADOW_POSSESION_DOWNED_OVERRIDE')):Stabilize();RemoveStatus(RAGE);RemoveStatus(SG_Mad);IF(HasStatus('MAG_DEATH_DO_SHADOW_POSSESION_DOWNED_OVERRIDE')):ApplyStatus(MAG_DEATH_DO_SHADOW_POSSESION, 100, -1)"
+data "OnApplyFunctors" "RemoveStatus(RAGE);RemoveStatus(SG_Mad);IF(HasStatus('MAG_DEATH_DO_SHADOW_POSSESION_DOWNED_OVERRIDE')):Stabilize();IF(HasStatus('MAG_DEATH_DO_SHADOW_POSSESION_DOWNED_OVERRIDE')):ApplyStatus(MAG_DEATH_DO_SHADOW_POSSESION, 100, -1)"
+
+// ==================================== Boots of Striding - Fix to 'Unmovable' not ever being removed when concentration was broken if the boots were unequipped (Credit to Goonsack - Goonsack Land) ====================================
+
+new entry "MAG_Paladin_MomentumOnConcentration_Boots"
+type "Armor"
+using "MAG_Paladin_MomentumOnConcentration_Boots"
+// data "PassivesOnEquip" "MAG_Paladin_MomentumOnConcentration_Boots_Passive;MAG_Paladin_MomentumOnConcentration_Boots_Technical_Passive"
+data "PassivesOnEquip" "MAG_Paladin_MomentumOnConcentration_Boots_Passive"
+
+new entry "MAG_UNMOVABLE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MAG_UNMOVABLE"
+data "Passives" "MAG_Paladin_MomentumOnConcentration_Boots_Technical_Passive"
+
+// ==================================== Gloves of Battlemage's Power - Fix to 'Battlemage's Power' not providing Arcane Acuity (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+// I refactored this one quite a bit, also note that multiple mods out there might have edited entries for this one, such as Death Soul, where they just slap the Arcane Acuity helmet passive on etc.
+
+// Vanilla entries
+new entry "MAG_Gish_ArcaneAcuity_Gloves"
+type "Armor"
+using "MAG_Gish_ArcaneAcuity_Gloves"
+// data "PassivesOnEquip" "MAG_Gish_ArcaneAcuity_Gloves_Passive"
+data "PassivesOnEquip" "MAG_Gish_ArcaneAcuity_Gloves_Passive;Goon_ArcaneAcuity_Gloves_Technical_Passive"
+
+new entry "MAG_Gish_ArcaneAcuity_Gloves_Passive"
+type "PassiveData"
+using "MAG_Gish_ArcaneAcuity_Gloves_Passive"
+// data "StatsFunctorContext" "OnStatusApply"
+data "StatsFunctorContext" "OnStatusApplied"
+data "Conditions" "HasStatus('ArcaneAcuity_Gloves_OnAttack_Technical') and HasStatus('ArcaneAcuity_Gloves_OnStatus_Technical')"
+// data "StatsFunctors" "IF(IsWeaponAttack()):ApplyStatus(SELF, MAG_GISH_ARCANE_ACUITY, 100, 2);IF(IsWeaponAttack()):ApplyStatus(SELF, MAG_GISH_ARCANE_ACUITY_DURATION_TECHNICAL, 100, 1)"
+data "StatsFunctors" "ApplyStatus(SELF, MAG_GISH_ARCANE_ACUITY, 100, 2);ApplyStatus(SELF, MAG_GISH_ARCANE_ACUITY_DURATION_TECHNICAL, 100, 1);RemoveStatus(GOON_ARCANEACUITY_GLOVES_ONATTACK_TECHNICAL);RemoveStatus(GOON_ARCANEACUITY_GLOVES_ONSTATUS_TECHNICAL)"
+
+// Custom entries
+new entry "Goon_ArcaneAcuity_Gloves_Technical_Passive"
+type "PassiveData"
+data "Properties" "IsHidden;OncePerAttack"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnAttack)):ApplyStatus(SELF,GOON_ARCANEACUITY_GLOVES_ONATTACK_TECHNICAL,100,1);IF(context.HasContextFlag(StatsFunctorContext.OnStatusApply)):ApplyStatus(SELF,GOON_ARCANEACUITY_GLOVES_ONSTATUS_TECHNICAL,100,1)"
+data "StatsFunctorContext" "OnAttack;OnStatusApply"
+data "Conditions" "(context.HasContextFlag(StatsFunctorContext.OnAttack) and IsWeaponAttack()) or (context.HasContextFlag(StatsFunctorContext.OnStatusApply) and not Self() and not StatusDoesNotInvokeOnStatusApply())"
+
+new entry "GOON_ARCANEACUITY_GLOVES_ONATTACK_TECHNICAL"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StackType" "Ignore"
+data "TickType" "EndTurn"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+new entry "GOON_ARCANEACUITY_GLOVES_ONSTATUS_TECHNICAL"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StackType" "Ignore"
+data "TickType" "EndTurn"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+// ==================================== Ring of Feywild Sparks - Make the +1 Spell Save DC visible (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "MAG_OfFeywildSparks_Ring"
+type "Armor"
+using "MAG_OfFeywildSparks_Ring"
+// data "Boosts" "SpellSaveDC(1)"
+data "Boosts" ""
+// data "PassivesOnEquip" "MAG_FeyWildSpark_WildMagic_Passive"
+data "PassivesOnEquip" "MAG_FeyWildSpark_WildMagic_Passive;MAG_SpellSaveDC_Enchantment_Lesser_Passive"
+
+// ==================================== Cloak of the Weave - Fix to 'Absorb Elements' not functioning at all (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "MAG_EndGameCaster_Cloak"
+type "Armor"
+using "MAG_EndGameCaster_Cloak"
+// data "PassivesOnEquip" "MAG_ArcaneEnchantment_Lesser_Passive;Absorb_Elements_Passive"
+data "PassivesOnEquip" "MAG_ArcaneEnchantment_Lesser_Passive;Absorb_Elements_Passive;Absorb_Elements_Technical_Passive;MAG_Interrupt_MAG_Interrupt_AbsorbElements_Resource_Passive"
+
+// ==================================== Shadeclinger Armour - Buff wasn't removed when item was unequipped (Credit to Cahoot - The Batman of BG3 modding) ====================================
+
+new entry "MAG_Harpers_ArmorOfShadows_Passive"
+type "PassiveData"
+using "MAG_Harpers_ArmorOfShadows_Passive"
+// data "StatsFunctorContext" "OnObscurityChanged;OnCreate"
+data "StatsFunctorContext" ""
+// data "StatsFunctors" "IF(not HasObscuredState(ObscuredState.Clear)):ApplyStatus(MAG_HARPERS_OBSCURITY_SAVING_THROWS, 100, -1);IF(HasObscuredState(ObscuredState.Clear)):RemoveStatus(MAG_HARPERS_OBSCURITY_SAVING_THROWS)"
+data "StatsFunctors" ""
+data "Boosts" "Advantage(AllSavingThrows)"
+data "BoostContext" "OnObscurityChanged;OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
+data "BoostConditions" "not HasObscuredState(ObscuredState.Clear,context.Source)"

@@ -1,0 +1,6 @@
+// ==================================== If Gortash bugs out and doesn't apply his buff this should stop him from spamming his 150 temp HP ====================================
+
+new entry "Interrupt_WYR_Gortash_Gortane"
+type "InterruptData"
+using "Interrupt_WYR_Gortash_Gortane"
+data "Cooldown" "OncePerCombat"

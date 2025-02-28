@@ -1,0 +1,43 @@
+// ==================================== Rebalance - Level 1 Spells, Valdacil's Spell Adjustments and Spellsword ====================================
+
+// Spellsword cooked my AOE jump
+new entry "Target_Jump"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Jump"
+data "SpellProperties" "ApplyStatus(LONG_JUMP,100,10);IF(not Combat()):ApplyStatus(SYR_LONG_JUMP_AURA,100,1);TARGET:IF(Self()):ApplyStatus(SELF,VG_SPELL_WAS_SELF,100,1)"
+
+// ==================================== Cleric Subclasses - Release & Valdacil's Spell Adjustments ====================================
+
+new entry "RAY_OF_ENFEEBLEMENT"
+using "RAY_OF_ENFEEBLEMENT"
+type "StatusData"
+data "StatusType" "BOOST"
+data "Description" "hcc2c6058g412cg439aga60cg989e2c34292e"
+data "Boosts" "HalveWeaponDamage(Strength);HalveWeaponDamage(Dexterity);Disadvantage(SavingThrow,Strength);Disadvantage(SavingThrow,Dexterity);Disadvantage(SavingThrow,Constitution);Resistance(Necrotic, Vulnerable)"
+
+new entry "Projectile_RayOfEnfeeblement"
+using "Projectile_RayOfEnfeeblement"
+type "SpellData"
+data "SpellType" "Projectile"
+data "Description" "h2f68d483g7ca5g4160g89c9g73b42e315cb2"
+data "Cooldown" ""
+data "SpellSuccess" "ApplyStatus(RAY_OF_ENFEEBLEMENT,100,10);SpawnExtraProjectiles(Val_Projectile_RayOfEnfeeblement_Explosion);IF(HasPassive('ImprovedReaper', context.Source)):ApplyStatus(SELF,SELF_RAYOFENFEEBLEMENT,100,1);ApplyStatus(RAYOFENFEEBLEMENT_AURA,100,1);ApplyStatus(RAY_OF_ENFEEBLEMENT,100,10)"
+data "ExtraDescription" ""
+
+// ==================================== Rebalance - Level 4 Spells & Valdacil's Spell Adjustments ====================================
+
+new entry "Target_PhantasmalForce"
+using "Target_PhantasmalForce"
+type "SpellData"
+data "SpellType" "Target"
+data "TargetConditions" "Character() and not Self()"
+data "TooltipStatusApply" "ApplyStatus(PHANTASMAL_FORCE,100,10)"
+data "DamageType" "Psychic"
+data "AreaRadius" ""
+
+new entry "PHANTASMAL_FORCE_PSYCHIC"
+type "StatusData"
+data "StatusType" "BOOST"
+using "PHANTASMAL_FORCE_PSYCHIC"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"

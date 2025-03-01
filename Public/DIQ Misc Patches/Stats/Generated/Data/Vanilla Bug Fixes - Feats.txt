@@ -1,0 +1,60 @@
+// ==================================== Magic Initiate: Sorcerer & Magic Initiate: Wizard - Fix to 'Shield' requiring a spell slot to use when learned via this feat (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+// This seems way too elaborate when it can probably just use "data "Cooldown" "OncePerRest""
+// Cahoot handles this differently in "Feats Overhaul", haven't looked at it
+
+// new entry "Interrupt_Shield_WizardMI"
+// type "InterruptData"
+// using "Interrupt_Shield_Wizard"
+// data "Cost" "ReactionActionPoint:1;Interrupt_ShieldWizardMI_Charge:1"
+// data "EnableCondition" "HasActionResource('Interrupt_ShieldWizardMI_Charge', 1, 0, false, false, context.Source) and (not HasStatus('SG_Polymorph') or Tagged('MINDFLAYER') or HasStatus('SG_Disguise'))"
+// data "EnableContext" "OnStatusApplied;OnStatusRemoved;OnActionResourcesChanged"
+
+// new entry "Interrupt_Shield_SorcererMI"
+// type "InterruptData"
+// using "Interrupt_Shield_Sorcerer"
+// data "Cost" "ReactionActionPoint:1;Interrupt_ShieldSorcererMI_Charge:1"
+// data "EnableCondition" "HasActionResource('Interrupt_ShieldSorcererMI_Charge', 1, 0, false, false, context.Source) and (not HasStatus('SG_Polymorph') or Tagged('MINDFLAYER') or HasStatus('SG_Disguise'))"
+// data "EnableContext" "OnStatusApplied;OnStatusRemoved;OnActionResourcesChanged"
+
+// new entry "MagicInitiate_Wizard"
+// type "PassiveData"
+// using "MagicInitiate_Wizard"
+// data "Boosts" "ActionResourceOverride(Interrupt_ShieldWizardMI_Charge,1,0)"
+
+// new entry "MagicInitiate_Sorcerer"
+// type "PassiveData"
+// using "MagicInitiate_Sorcerer"
+// data "Boosts" "ActionResourceOverride(Interrupt_ShieldSorcererMI_Charge,1,0)"
+
+// ==================================== Shield Master: Block - Fix to failed saving throw damage not being reduced by half (Goonsack - Goonsack Land) ====================================
+// In Cahoot's "Feats Overhaul" "AreaDamageEvade()" is used same as Monk and Rogue's Evasion, making it no longer a reaction but a passive boost
+
+// new entry "Interrupt_ShieldMaster"
+// type "InterruptData"
+// using "Interrupt_ShieldMaster"
+// data "Conditions" "IsAbleToReact(context.Observer) and Self(context.Target,context.Observer) and HasDamageEffectFlag(DamageFlags.SavingThrow) and HasSpellFlag(SpellFlags.CanAreaDamageEvade) and not AnyEntityIsItem()"
+// data "Conditions" "IsAbleToReact(context.Observer) and Self(context.Target,context.Observer) and HasSpellFlag(SpellFlags.CanAreaDamageEvade) and not AnyEntityIsItem()"
+// data "Properties" "SetRoll(0)"
+// data "Properties" "IF(HasDamageEffectFlag(DamageFlags.SavingThrow)):ApplyStatus(GOON_SHIELD_MASTER_TECHNICAL_SUCCESS,100,1);IF(not HasDamageEffectFlag(DamageFlags.SavingThrow)):ApplyStatus(GOON_SHIELD_MASTER_TECHNICAL_FAIL,100,1)"
+
+// new entry "GOON_SHIELD_MASTER_TECHNICAL_SUCCESS"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// data "DisplayName" "h8267cfd7geaf7g4cebgaae3g56ca79cd6714;1"
+// data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator;DisableCombatlog"
+// data "Boosts" "DamageReduction(All, Flat, 1000)"
+// data "Passives" "Goon_Shield_Master_Technical_Passive"
+
+// new entry "GOON_SHIELD_MASTER_TECHNICAL_FAIL"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// data "DisplayName" "h8267cfd7geaf7g4cebgaae3g56ca79cd6714;1"
+// data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator;DisableCombatlog"
+// data "Boosts" "DamageReduction(All, Half)"
+// data "Passives" "Goon_Shield_Master_Technical_Passive"
+
+// new entry "Goon_Shield_Master_Technical_Passive"
+// type "PassiveData"
+// data "Properties" "IsHidden"
+// data "StatsFunctorContext" "OnDamaged;OnDamagedPrevented"
+// data "StatsFunctors" "RemoveStatus(GOON_SHIELD_MASTER_TECHNICAL_SUCCESS);RemoveStatus(GOON_SHIELD_MASTER_TECHNICAL_FAIL)"

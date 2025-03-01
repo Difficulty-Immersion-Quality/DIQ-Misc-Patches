@@ -1,5 +1,5 @@
 // ==================================== Acid Breath - Fix to description stating it is cast in a cone (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
-// Unneeded due to Dragonborn and Breath Weapon Enhanced by ChizFreak
+// Unneeded due to "Dragonborn and Breath Weapon Enhanced" by ChizFreak
 
 // new entry "Zone_BreathWeapon_Acid"
 // type "SpellData"
@@ -11,11 +11,12 @@
 // data "Description" "h9dc131acg4f5bg4dedg9a43gaefa64ac4ae8;1"
 
 // ==================================== Lightning Breath - Fix to description stating it is cast in a cone (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
-// Unneeded due to Dragonborn and Breath Weapon Enhanced by ChizFreak
+// Unneeded due to "Dragonborn and Breath Weapon Enhanced" by ChizFreak
 
 // new entry "Zone_BreathWeapon_Lightning"
 // type "SpellData"
 // data "SpellType" "Zone"
+// using "Zone_BreathWeapon_Acid"
 // using "Zone_BreathWeapon_Lightning"
 // Spew forth a cone of lightning.
 // data "Description" "h8341db4fgd559g4466gbf40ga233267ace44;1"
@@ -23,11 +24,12 @@
 // data "Description" "hc9ca24a3g15f4g4e9cgb1fcg64167e6dba3e;1"
 
 // ==================================== Fire Breat (Line) - Fix to data ""Angle" "60""" being in the line entry inherited from the cone entry (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
-// Unneeded due to Dragonborn and Breath Weapon Enhanced by ChizFreak
+// Unneeded due to "Dragonborn and Breath Weapon Enhanced" by ChizFreak
 
 // new entry "Zone_BreathWeapon_Fire_Line"
 // type "SpellData"
 // data "SpellType" "Zone"
+// using "Zone_BreathWeapon_Fire_Cone"
 // using "Zone_BreathWeapon_Fire_Line"
 // data "Angle" ""
 

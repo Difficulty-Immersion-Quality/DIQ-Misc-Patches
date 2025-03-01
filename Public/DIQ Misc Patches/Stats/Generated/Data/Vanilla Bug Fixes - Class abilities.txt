@@ -1,12 +1,28 @@
+// ==================================== Heart of the Storm - Fix to the effect functioning with cantrips (Credit to JuuM) ====================================
+
+new entry "Interrupt_HeartOfTheStorm_Lightning"
+type "InterruptData"
+using "Interrupt_HeartOfTheStorm_Lightning"
+// data "Conditions" "Self(context.Source, context.Observer) and IsSpell() and SpellDamageTypeIs(DamageType.Lightning) and not AnyEntityIsItem()"
+data "Conditions" "Self(context.Source, context.Observer) and IsSpell() and SpellDamageTypeIs(DamageType.Lightning) and not AnyEntityIsItem() and not IsCantrip()"
+
+new entry "Interrupt_HeartOfTheStorm_Thunder"
+type "InterruptData"
+using "Interrupt_HeartOfTheStorm_Thunder"
+// data "Conditions" "Self(context.Source, context.Observer) and IsSpell() and SpellDamageTypeIs(DamageType.Thunder) and not AnyEntityIsItem()"
+data "Conditions" "Self(context.Source, context.Observer) and IsSpell() and SpellDamageTypeIs(DamageType.Thunder) and not AnyEntityIsItem() and not IsCantrip()"
+
 // ==================================== Fist of Four Thunders - Fix to spell not triggering Martial Arts: Bonus Unarmed Strike (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
 
 new entry "Zone_Thunderwave_Monk"
 type "SpellData"
 data "SpellType" "Zone"
+// using "Zone_Thunderwave"
 using "Zone_Thunderwave_Monk"
 data "SpellProperties" "ApplyStatus(SELF,MARTIAL_ARTS_BONUS_UNARMED_STRIKE,100,1)"
 
 // ==================================== Prophecy: Delivering Alms - Vanilla game references non-existant passive (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+// Swapped to the missing vanilla entry name instead of a new custom one
 
 new entry "Divination_Ally_Downed"
 type "PassiveData"

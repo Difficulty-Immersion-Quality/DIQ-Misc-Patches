@@ -2,37 +2,59 @@
 
 new entry "MAG_Fire_FireDamage_Quarterstaff"
 type "Weapon"
+// using "WPN_Quarterstaff_1"
 using "MAG_Fire_FireDamage_Quarterstaff"
 // data "DefaultBoosts" "WeaponEnchantment(1);WeaponProperty(Magical);HiddenDuringCinematic()"
 data "DefaultBoosts" "WeaponEnchantment(1);WeaponProperty(Magical)"
 
 new entry "WPN_Scimitar_FlameBlade"
 type "Weapon"
+// using "_BaseWeapon"
 using "WPN_Scimitar_FlameBlade"
 // data "DefaultBoosts" "HiddenDuringCinematic();CannotBeDisarmed()"
 data "DefaultBoosts" "CannotBeDisarmed()"
 
 new entry "MAG_Fire_AlwaysDippedInFire_Greatsword"
 type "Weapon"
+// using "WPN_Greatsword_1"
 using "MAG_Fire_AlwaysDippedInFire_Greatsword"
 // data "DefaultBoosts" "HiddenDuringCinematic();WeaponProperty(Magical)"
 data "DefaultBoosts" "WeaponProperty(Magical)"
+
+// ==================================== Shadow Blade - Fix to attacks from Shadow Blade not applying Advantage on obscured targets, and now grants intrinsic proficiency to the summoner (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "SHADOW_BLADE"
+type "StatusData"
+data "StatusType" "EFFECT"
+using "SHADOW_BLADE"
+// data "Boosts" "Attribute(InventoryBound)"
+data "Boosts" "Attribute(InventoryBound);IntrinsicSummonerProficiency()"
+
+new entry "ShadowBlade_Passive"
+type "PassiveData"
+using "ShadowBlade_Passive"
+// data "BoostContext" "OnAttack"
+data "BoostContext" "OnAttack"
+// data "Boosts" "IF(AttackedWithPassiveSourceWeapon() and not HasObscuredState(ObscuredState.Clear)):Advantage(AttackRoll)"
+data "Boosts" "IF(IsMeleeWeaponAttack() and not HasObscuredState(ObscuredState.Clear)):Advantage(AttackRoll)"
 
 // ==================================== Hellfire Greataxe - Fix to 'Hellflame Cleave' and 'Hellfire' surface not ignoring fire resistance (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
 
 new entry "Zone_MAG_Automaton_Human_Steelwatcher_HellfireCleave"
 type "SpellData"
 data "SpellType" "Zone"
+// using "Zone_SteelWatcher_Biped_ControlledCombustion"
 using "Zone_MAG_Automaton_Human_Steelwatcher_HellfireCleave"
-// data "SpellSuccess" "DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);DealDamage(2d6, Fire,Magical,,0,,false,false,false,true);IF(not HasStatus('BURNING_HELLFIRE')):ApplyStatus(BURNING_HELLFIRE,100,1);"
-data "SpellSuccess" "DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);DealDamage(2d6, Fire,Magical);IF(not HasStatus('BURNING_HELLFIRE')):ApplyStatus(BURNING_HELLFIRE,100,1);"
-// data "SpellFail" "DealDamage((MainMeleeWeapon)/2, MainMeleeWeaponDamageType);DealDamage((2d6)/2, Fire,Magical,,0,,false,false,false,true)"
-data "SpellFail" "DealDamage((MainMeleeWeapon)/2, MainMeleeWeaponDamageType);DealDamage((2d6)/2, Fire,Magical)"
+// data "SpellSuccess" "DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);DealDamage(2d6, Fire,Magical);IF(not HasStatus('BURNING_HELLFIRE')):ApplyStatus(BURNING_HELLFIRE,100,1);"
+data "SpellSuccess" "DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);DealDamage(2d6, Fire,Magical,,0,,false,false,false,true);IF(not HasStatus('BURNING_HELLFIRE')):ApplyStatus(BURNING_HELLFIRE,100,1);"
+// data "SpellFail" "DealDamage((MainMeleeWeapon)/2, MainMeleeWeaponDamageType);DealDamage((2d6)/2, Fire,Magical)"
+data "SpellFail" "DealDamage((MainMeleeWeapon)/2, MainMeleeWeaponDamageType);DealDamage((2d6)/2, Fire,Magical,,0,,false,false,false,true)"
 
 // ==================================== Rat Bat - Fix to bonus 1d6 Piercing damage not displaying on the weapon (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
 
 new entry "TWN_RatCatcher"
 type "Weapon"
+// using "WPN_Greatclub_1"
 using "TWN_RatCatcher"
 // data "WeaponFunctors" "DealDamage(1d6,Piercing)"
 data "WeaponFunctors" ""
@@ -42,6 +64,7 @@ data "DefaultBoosts" "WeaponEnchantment(1);WeaponProperty(Magical);WeaponDamage(
 
 new entry "MAG_LC_OfTheRam_Quarterstaff"
 type "Weapon"
+// using "WPN_Quarterstaff_2"
 using "MAG_LC_OfTheRam_Quarterstaff"
 data "DefaultBoosts" "WeaponEnchantment(2);WeaponProperty(Magical);WeaponDamage(1d6,Force)"
 

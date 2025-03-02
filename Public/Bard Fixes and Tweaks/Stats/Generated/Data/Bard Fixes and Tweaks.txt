@@ -1,9 +1,48 @@
 // ==================================== Increasing compatibility through proper self inheritence entries  ====================================
 
+// ==================================== Slashing Flourish (Melee) - Fix to tooltip damage not correctly stating Bardic Inspiration bonus (Credit to zero3042 - Bard Fixes and Tweaks) ====================================
+
+new entry "Zone_BladeFlourish_Slashing"
+type "SpellData"
+data "SpellType" "Zone"
+// using "Zone_Cleave"
+using "Zone_BladeFlourish_Slashing"
+// data "TooltipDamageList" "DealDamage(MainMeleeWeapon+1d6, MainWeaponDamageType)"
+data "TooltipDamageList" "DealDamage(MainMeleeWeapon + LevelMapValue(BardicInspiration), MainMeleeWeaponDamageType)"
+
+// ==================================== Slashing Flourish (Ranged) - Fix to target selection allowing the same target to be picked twice (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
+
+new entry "Projectile_BladeFlourish_Slashing"
+type "SpellData"
+data "SpellType" "Projectile"
+// using "Projectile_MainHandAttack"
+using "Projectile_BladeFlourish_Slashing"
+// data "SpellFlags" "HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful"
+data "SpellFlags" "HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;IgnorePreviouslyPickedEntities"
+
+
+
+
+// Vanilla
 new entry "CollegeOfLore_Proficiency"
 type "PassiveData"
 using "CollegeOfLore_Proficiency"
+// Gain Proficiency in Arcana, Intimidation and Sleight of Hand.
+// data "Description" "hf232d3e3g0926g4d8bga86cg3a680ff04884;3"
+// Gain &lt;LSTag Tooltip="Proficiency"&gt;Proficiency&lt;/LSTag&gt; in 3 skills of your choosing.
 data "Description" "h2d1139fcg83adg418cga914g3623f97eeb3d;3"
+
+new entry "Projectile_BladeFlourish_Defensive"
+type "SpellData"
+data "SpellType" "Projectile"
+// using "Projectile_MainHandAttack"
+using "Projectile_BladeFlourish_Defensive"
+// data "SpellFail" "IF(HasStatus('YSRSLIDFWWADNIWHWIHLY')):SpawnExtraProjectiles(Projectile_BladeFlourish_Defensive);ApplyStatus(YSRSLIDFWWADNIWHWIHLY_YWNK,100,1)"
+data "SpellFail" ""
+
+
+
+
 
 new entry "Blade_Flourish_Movement_Speed"
 type "PassiveData"
@@ -14,12 +53,6 @@ data "Description" "h051ffef6gc18fg49ebga204g0268a7d710e0;1"
 data "StatsFunctorContext" "OnAttack"
 data "Conditions" "IsWeaponAttack() and IsMainHandAttack()"
 data "StatsFunctors" "ApplyStatus(SELF,Blade_Flourish_Movement_Speed_Boost,100,1)"
-
-new entry "Projectile_BladeFlourish_Defensive"
-type "SpellData"
-data "SpellType" "Projectile"
-using "Projectile_BladeFlourish_Defensive"
-data "SpellFail" ""
 
 new entry "Projectile_BladeFlourish_Slashing"
 type "SpellData"

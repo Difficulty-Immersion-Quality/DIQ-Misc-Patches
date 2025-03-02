@@ -1,6 +1,6 @@
 // ==================================== (See) Invisibility Rework by drkekyll - Prevent invisible entities from having advantage against targets with Blindsight ====================================
 // Thanks to the frequently used inheritence of "INVISIBLE" not many "Boosts" fields warrant overwriting
-// We don't both with Invisible Weapon, it's not relevant for this fix
+// We don't bother with Invisible Weapon, it's not relevant for this fix
 
 // Invisible
 new entry "INVISIBLE"

@@ -1,0 +1,72 @@
+// ==================================== (See) Invisibility Rework by drkekyll - Prevent invisible entities from having advantage against targets with Blindsight ====================================
+// Thanks to the frequently used inheritence of "INVISIBLE" not many "Boosts" fields warrant overwriting
+// We don't both with Invisible Weapon, it's not relevant for this fix
+
+// Invisible
+new entry "INVISIBLE"
+type "StatusData"
+data "StatusType" "INVISIBLE"
+using "INVISIBLE"
+// data "Boosts" "IgnoreLeaveAttackRange; Invisibility(); Advantage(AttackRoll); DetectDisturbancesBlock(true);"
+data "Boosts" "IgnoreLeaveAttackRange; Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget);IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);"
+
+// Invisibility
+new entry "INVISIBILITY"
+type "StatusData"
+data "StatusType" "INVISIBLE"
+using "INVISIBILITY"
+// data "Boosts" "IgnoreLeaveAttackRange; Invisibility(); Advantage(AttackRoll); DetectDisturbancesBlock(true);"
+data "Boosts" "IgnoreLeaveAttackRange; Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget);IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);"
+
+// Shadowblend
+new entry "SHADOWBLEND"
+type "StatusData"
+data "StatusType" "INVISIBLE"
+// using "INVISIBLE"
+using "SHADOWBLEND"
+// data "Boosts" "IgnoreLeaveAttackRange; Invisibility(); Advantage(AttackRoll); DetectDisturbancesBlock(true);"
+data "Boosts" "IgnoreLeaveAttackRange; Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget);IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);"
+
+// Gloomweave
+new entry "INVISIBILITY_SHADARKAI_GLOOMWEAVER"
+type "StatusData"
+data "StatusType" "INVISIBLE"
+// using "INVISIBLE"
+using "INVISIBILITY_SHADARKAI_GLOOMWEAVER"
+// data "Boosts" "IgnoreLeaveAttackRange; Invisibility(); Advantage(AttackRoll); DetectDisturbancesBlock(true); UnlockSpell(Target_MistyEscape_ShadarKai_GloomWeaver)"
+data "Boosts" "IgnoreLeaveAttackRange; Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget);IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);UnlockSpell(Target_MistyEscape_ShadarKai_GloomWeaver)"
+
+// Hide in Plain Sight
+new entry "HIDE_IN_PLAIN_SIGHT"
+type "StatusData"
+data "StatusType" "INVISIBLE"
+using "HIDE_IN_PLAIN_SIGHT"
+// data "Boosts" "IgnoreLeaveAttackRange; Invisibility(); Advantage(AttackRoll); DetectDisturbancesBlock(true); Skill(Stealth, 10)"
+data "Boosts" "IgnoreLeaveAttackRange; Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget);IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);Skill(Stealth, 10)"
+
+// Misty Escape
+new entry "MISTY_ESCAPE_INVISIBLE"
+type "StatusData"
+data "StatusType" "INVISIBLE"
+// using "INVISIBLE"
+using "MISTY_ESCAPE_INVISIBLE"
+// data "Boosts" "IgnoreLeaveAttackRange; Invisibility(); Advantage(AttackRoll); DetectDisturbancesBlock(true); UnlockSpell(Target_MistyStep_Free)"
+data "Boosts" "IgnoreLeaveAttackRange;Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget); IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);UnlockSpell(Target_MistyStep_Free)"
+
+// Prowl
+new entry "INVISIBILITY_PANTHER"
+type "StatusData"
+data "StatusType" "INVISIBLE"
+// using "INVISIBILITY"
+using "INVISIBILITY_PANTHER"
+// data "Boosts" "IgnoreLeaveAttackRange; Invisibility(); Advantage(AttackRoll); DetectDisturbancesBlock(true); Advantage(Skill, Stealth)"
+data "Boosts" "IgnoreLeaveAttackRange; Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget);IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);Advantage(AttackRoll);Advantage(Skill, Stealth)"
+
+// BONUS FIX: Syntax error fix for "LOW_POLTERGEIST_INVISIBLE_SEEN"
+new entry "LOW_POLTERGEIST_INVISIBLE_SEEN"
+type "StatusData"
+data "StatusType" "INVISIBLE"
+// using "LOW_POLTERGEIST_INVISIBLE"
+using "LOW_POLTERGEIST_INVISIBLE_SEEN"
+// data "RemoveConditions" "IsStatusEvent(StatusEvent.OnAttacked) or not HasStatus('SEE_INVISIBILITY_REVEAL'))"
+data "RemoveConditions" "IsStatusEvent(StatusEvent.OnAttacked) or not HasStatus('SEE_INVISIBILITY_REVEAL')"

@@ -17,7 +17,7 @@ type "StatusData"
 data "StatusType" "INVISIBLE"
 using "INVISIBLE"
 // data "Boosts" "IgnoreLeaveAttackRange; Invisibility(); Advantage(AttackRoll); DetectDisturbancesBlock(true);"
-data "Boosts" "IgnoreLeaveAttackRange; Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget);IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);"
+data "Boosts" "IgnoreLeaveAttackRange;Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget);IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);"
 
 // Invisibility
 new entry "INVISIBILITY"
@@ -25,7 +25,7 @@ type "StatusData"
 data "StatusType" "INVISIBLE"
 using "INVISIBILITY"
 // data "Boosts" "IgnoreLeaveAttackRange; Invisibility(); Advantage(AttackRoll); DetectDisturbancesBlock(true);"
-data "Boosts" "IgnoreLeaveAttackRange; Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget);IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);"
+data "Boosts" "IgnoreLeaveAttackRange;Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget);IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);"
 
 // Shadowblend
 new entry "SHADOWBLEND"
@@ -34,7 +34,7 @@ data "StatusType" "INVISIBLE"
 // using "INVISIBLE"
 using "SHADOWBLEND"
 // data "Boosts" "IgnoreLeaveAttackRange; Invisibility(); Advantage(AttackRoll); DetectDisturbancesBlock(true);"
-data "Boosts" "IgnoreLeaveAttackRange; Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget);IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);"
+data "Boosts" "IgnoreLeaveAttackRange;Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget);IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);"
 
 // Gloomweave
 new entry "INVISIBILITY_SHADARKAI_GLOOMWEAVER"
@@ -43,7 +43,7 @@ data "StatusType" "INVISIBLE"
 // using "INVISIBLE"
 using "INVISIBILITY_SHADARKAI_GLOOMWEAVER"
 // data "Boosts" "IgnoreLeaveAttackRange; Invisibility(); Advantage(AttackRoll); DetectDisturbancesBlock(true); UnlockSpell(Target_MistyEscape_ShadarKai_GloomWeaver)"
-data "Boosts" "IgnoreLeaveAttackRange; Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget);IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);UnlockSpell(Target_MistyEscape_ShadarKai_GloomWeaver)"
+data "Boosts" "IgnoreLeaveAttackRange;Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget);IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);UnlockSpell(Target_MistyEscape_ShadarKai_GloomWeaver)"
 
 // Hide in Plain Sight
 new entry "HIDE_IN_PLAIN_SIGHT"
@@ -52,7 +52,7 @@ data "StatusType" "INVISIBLE"
 // using "INVISIBLE"
 using "HIDE_IN_PLAIN_SIGHT"
 // data "Boosts" "IgnoreLeaveAttackRange; Invisibility(); Advantage(AttackRoll); DetectDisturbancesBlock(true); Skill(Stealth, 10)"
-data "Boosts" "IgnoreLeaveAttackRange; Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget);IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);Skill(Stealth, 10)"
+data "Boosts" "IgnoreLeaveAttackRange;Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget);IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);Skill(Stealth, 10)"
 
 // Misty Escape
 new entry "MISTY_ESCAPE_INVISIBLE"
@@ -61,7 +61,7 @@ data "StatusType" "INVISIBLE"
 // using "INVISIBLE"
 using "MISTY_ESCAPE_INVISIBLE"
 // data "Boosts" "IgnoreLeaveAttackRange; Invisibility(); Advantage(AttackRoll); DetectDisturbancesBlock(true); UnlockSpell(Target_MistyStep_Free)"
-data "Boosts" "IgnoreLeaveAttackRange;Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget); IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);UnlockSpell(Target_MistyStep_Free)"
+data "Boosts" "IgnoreLeaveAttackRange;Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget);IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);UnlockSpell(Target_MistyStep_Free)"
 
 // Prowl
 new entry "INVISIBILITY_PANTHER"
@@ -70,4 +70,4 @@ data "StatusType" "INVISIBLE"
 // using "INVISIBILITY"
 using "INVISIBILITY_PANTHER"
 // data "Boosts" "IgnoreLeaveAttackRange; Invisibility(); Advantage(AttackRoll); DetectDisturbancesBlock(true); Advantage(Skill, Stealth)"
-data "Boosts" "IgnoreLeaveAttackRange; Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget);IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);Advantage(Skill, Stealth)"
+data "Boosts" "IgnoreLeaveAttackRange;Invisibility();IF(not CanSeeInvisible()):Disadvantage(AttackTarget);IF(not CanSeeInvisible(context.Target,context.Source)):Advantage(AttackRoll);DetectDisturbancesBlock(true);Advantage(Skill, Stealth)"

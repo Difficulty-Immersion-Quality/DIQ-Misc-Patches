@@ -208,7 +208,7 @@ type "PassiveData"
 using "MAG_Marsh_Strider_Passive"
 // data "Description" "h3cec0bf4g98a9g474eg886dga3d4b1a889d20;2"
 // While Boots of the Marsh Strider are equipped your &lt;LSTag Type="Spell" Tooltip="Projectile_Jump"&gt;Jump&lt;/LSTag&gt;; distance is increased by [1], and your &lt;LSTag Tooltip="MovementSpeed"&gt;Movement Speed&lt;/LSTag&gt; is increased by [2].
-data "Description" "h7920b39bg75f5g44ecga83dg40a756099eea"
+data "Description" "h7920b39bg75f5g44ecga83dg40a756099eea;1"
 
 // ==================================== Veil and Venom - Rogue Equipment ====================================
 

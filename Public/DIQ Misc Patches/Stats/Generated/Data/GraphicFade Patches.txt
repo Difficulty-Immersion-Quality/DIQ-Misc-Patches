@@ -1,0 +1,229 @@
+// ==================================== Beast and Bow - Ranger Equipment ====================================
+
+// Archer's Eye Charm: change Wisdom bonus to give +4 Wisdom instead, with max of 22 (previously set Wisdom to 20)
+new entry "BB_ArchersEyeCharm"
+type "Armor"
+using "BB_ArchersEyeCharm"
+data "Boosts" "Ability(Wisdom,4,22);UnlockSpell(BB_Shout_ArcherEyeCharm)"
+
+// Farstrider's Reach: add action cost to Arrow of the Farstrider weapon ability (previously no cost)
+new entry "BB_Projectile_Farstrider"
+type "SpellData"
+data "SpellType" "Projectile"
+using "BB_Projectile_Farstrider"
+data "UseCosts" "ActionPoint:1"
+
+// ==================================== Chaos and Control - Sorcere Equipment ====================================
+
+// Arcane Shroud spell: add the status to the tooltip (dunno why this wasn't already there - this way you don't need to include stuff like status duration in the passive's description)
+new entry "CC_Shout_ArcaneShroud"
+type "SpellData"
+data "SpellType" "Shout"
+using "CC_Shout_ArcaneShroud"
+data "TooltipStatusApply" "ApplyStatus(CC_ARCANE_SHROUD, 100, 2)"
+
+// Gloves of the Arcanist’s Gambit: nerfed Sorcerous Wager passive to only give +1 bonus for every two spell levels used (previously +1 bonus for every spell level used)
+// Will need to modify the description for the passive (including original description line here for you to change yourself)
+new entry "CC_SorcerousWager_Passive"
+type "PassiveData"
+using "CC_SorcerousWager_Passive"
+// 	When you cast a spell and spend at least 1 &lt;LSTag Type="ActionResource" Tooltip="SorceryPoint"&gt;Sorcery Point&lt;/LSTag&gt;, you gain a bonus to your &lt;LSTag Tooltip="AttackRoll"&gt;Spell Attack Rolls&lt;/LSTag&gt; and &lt;LSTag Tooltip="SpellDifficultyClass"&gt;Spell Save DC&lt;/LSTag&gt; equal to half the spell level cast, rounded up. This bonus lasts 1 turn. This effect can only occur once per turn.
+data "Description" "h00ccd4e2g61a2g49d0g9f76g3df8d72168a1;1"
+
+new entry "CC_SORCEROUS_WAGER_TWO" // note I changed the actual statuses themselves instead of the passive to make it simplest to change the bonuses in the future if I wanted to
+type "StatusData"
+data "StatusType" "BOOST"
+using "CC_SORCEROUS_WAGER_TWO"
+data "DescriptionParams" "1"
+data "Boosts" "RollBonus(MeleeSpellAttack,1);RollBonus(RangedSpellAttack, 1);SpellSaveDC(1)"
+
+new entry "CC_SORCEROUS_WAGER_THREE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "CC_SORCEROUS_WAGER_THREE"
+data "DescriptionParams" "2"
+data "Boosts" "RollBonus(MeleeSpellAttack,2);RollBonus(RangedSpellAttack, 2);SpellSaveDC(2)"
+
+new entry "CC_SORCEROUS_WAGER_FOUR"
+type "StatusData"
+data "StatusType" "BOOST"
+using "CC_SORCEROUS_WAGER_FOUR"
+data "DescriptionParams" "2"
+data "Boosts" "RollBonus(MeleeSpellAttack,2);RollBonus(RangedSpellAttack, 2);SpellSaveDC(2)"
+
+new entry "CC_SORCEROUS_WAGER_FIVE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "CC_SORCEROUS_WAGER_FIVE"
+data "DescriptionParams" "3"
+data "Boosts" "RollBonus(MeleeSpellAttack,4);RollBonus(RangedSpellAttack, 3);SpellSaveDC(3)"
+
+new entry "CC_SORCEROUS_WAGER_SIX"
+type "StatusData"
+data "StatusType" "BOOST"
+using "CC_SORCEROUS_WAGER_SIX"
+data "DescriptionParams" "3"
+data "Boosts" "RollBonus(MeleeSpellAttack,4);RollBonus(RangedSpellAttack, 3);SpellSaveDC(3)"
+
+new entry "CC_SORCEROUS_WAGER_SEVEN"
+type "StatusData"
+data "StatusType" "BOOST"
+using "CC_SORCEROUS_WAGER_SEVEN"
+data "DescriptionParams" "4"
+data "Boosts" "RollBonus(MeleeSpellAttack,4);RollBonus(RangedSpellAttack, 4);SpellSaveDC(4)"
+
+new entry "CC_SORCEROUS_WAGER_EIGHT"
+type "StatusData"
+data "StatusType" "BOOST"
+using "CC_SORCEROUS_WAGER_EIGHT"
+data "DescriptionParams" "4"
+data "Boosts" "RollBonus(MeleeSpellAttack,4);RollBonus(RangedSpellAttack, 4);SpellSaveDC(4)"
+
+new entry "CC_SORCEROUS_WAGER_NINE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "CC_SORCEROUS_WAGER_NINE"
+data "DescriptionParams" "5"
+data "Boosts" "RollBonus(MeleeSpellAttack,5);RollBonus(RangedSpellAttack, 5);SpellSaveDC(5)"
+
+// ==================================== Faith and Fortitude - Cleric Equipment ====================================
+
+// Staff of Resurrection: fix localization for the Heal spell, as it inherits from the vanilla spell but Syrchalis spell rebalance changed how the spell works
+new entry "Target_ClericStaff_Heal"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_ClericStaff_Heal"
+// Heal a target for [1] and remove &lt;LSTag Type="Status" Tooltip="BLINDED"&gt;Blindness&lt;/LSTag&gt; and any diseases.
+data "Description" "h8963d80dg07f9g4cd6g9eaag2d551f53f2c2;1"
+data "DescriptionParams" "RegainHitPoints(30)"
+
+// Helm of Luminous Devotion: remove Channel Divinity cost from Divine Retribution (not sure if cost was intended but otherwise it's just a worse Radiance of the Dawn)
+new entry "Shout_DivineRetribution"
+type "SpellData"
+using "Shout_DivineRetribution"
+data "UseCosts" "ActionPoint:1"
+
+// Pendant of Divine Duality: make Branding Smite not cost a spell slot and also not be concentration (in line with Syrchalis spell rebalance)
+new entry "Target_Smite_Branding_DivineDuality"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Smite_Branding_DivineDuality"
+data "HitCosts" "BonusActionPoint:1"
+data "SpellFlags" "IsSpell;HasVerbalComponent;IsMelee;IsHarmful"
+
+// Pendant of Divine Duality: increase Cure Wounds heal to 4d8 to be in line with UA8 Healing Buffs mod (you can delete this since DIQ doesn't use that mod (but it should))
+new entry "Target_CureWounds_DivineDuality"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_CureWounds_DivineDuality"
+data "SpellProperties" "RegainHitPoints(4d8+SpellCastingAbilityModifier)"
+data "TooltipDamageList" "RegainHitPoints(4d8+SpellCastingAbilityModifier)"
+
+// Life-Weaver Crossbow: increase Lifeweaver spell radius to 3m (previously 2m I think - really small)
+new entry "Projectile_LifeWeaver_Heal"
+type "SpellData"
+data "SpellType" "Projectile"
+using "Projectile_LifeWeaver_Heal"
+data "AreaRadius" "3"
+data "ExplodeRadius" "3"
+
+// ==================================== Grove and Growl - Druid Equipment ====================================
+
+// Staff of the Ancient Guardian: decrease spell save DC bonus to +2 (previously +3) (using an existing vanilla passive)
+new entry "DruidEquipmentAct3_Staff_of_the_Ancient_Guardian"
+type "Weapon"
+using "WPN_Quarterstaff_1"
+using "DruidEquipmentAct3_Staff_of_the_Ancient_Guardian"
+data "PassivesOnEquip" "MAG_SpellSaveDC_Enchantment_Passive"
+
+// Feywild Ring: fix for not being able to be Helped when downed with ring equipped
+// Not a change to the ring's entry itself, but instead using a Khonsu script and modifying Target_Help
+new entry "Target_Help"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Help"
+data "TargetConditions" "Character() and not Self() and (not Enemy() or Player()) and (HasHelpableCondition() or HasHelpableConditionGG())"
+
+// ==================================== Might and Metal - Fighter Equipment  ====================================
+
+// ==================================== Pact and Power - Warlock Equipment  ====================================
+
+// Amulet of the Eternal Hunger: decrease Insatiable's AC bonus to half your Charisma modifier, rounded down, up to max of +4 AC (previously was equal to Charisma modifier)
+new entry "PP_Insatiable_Passive"
+type "PassiveData"
+using "PP_Insatiable_Passive"
+// 	The amulet's hunger claws at your very being, demanding sacrifice for its power. At the start of combat, you suffer [1] but become armoued with shadowy energy. Until combat ends, you gain a bonus to &lt;LSTag Tooltip="ArmourClass"&gt;Armour Class&lt;/LSTag&gt; equal to half your Charisma &lt;LSTag Tooltip="AbilityModifier"&gt;Modifier&lt;/LSTag&gt;, rounded up, up to a max of +4.
+data "Description" "hb84c60b9g49afg49eagafc1g894388e1c278;1"
+
+new entry "PP_Insatiable_Buff_Passive"
+type "PassiveData"
+using "PP_Insatiable_Buff_Passive"
+// The amulet's insatiable hunger sinks its teeth into you, forging a shield of dark power from your stolen life force. Until combat ends, you have a bonus to &lt;LSTag Tooltip="ArmourClass"&gt;Armour Class&lt;/LSTag&gt; equal to half your Charisma &lt;LSTag Tooltip="AbilityModifier"&gt;Modifier&lt;/LSTag&gt;, rounded up, up to a max of +4.
+data "Description" "h612819fcge6d0g4d57gb472g9c8de5025616;1"
+data "DescriptionParams" ""
+data "Boosts" "IF(ConditionResult(context.Source.Charisma >= 12) and ConditionResult(context.Source.Charisma <= 15)):AC(1);IF(ConditionResult(context.Source.Charisma  >= 16) and ConditionResult(context.Source.Charisma  <= 19)):AC(2);IF(ConditionResult(context.Source.Charisma  >= 20) and ConditionResult(context.Source.Charisma  <= 23)):AC(3);IF(ConditionResult(context.Source.Charisma  >= 24)):AC(4)"
+
+new entry "PP_INSATIABLE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "PP_INSATIABLE"
+data "Description" "h612819fcge6d0g4d57gb472g9c8de5025616;1" // uses same loca handle as PP_Insatiable_Buff_Passive
+
+// Soulknife of the Everlasting Pact: [Pact of the Tome]: decrease damage to 1d8
+new entry "PP_EverlastingPact_Text_Passive"
+type "PassiveData"
+using "PP_EverlastingPact_Text_Passive"
+data "Description" "h3775309cgc80cg41a8g9aaag251b9565f3c5;1"
+// The dagger resonates with the eternal nature of your pact, granting you unique benefits that reflect your chosen pact.&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Passive" Tooltip="PactOfTheBlade"&gt;Pact of the Blade&lt;/LSTag&gt; - While &lt;LSTag Type="Status" Tooltip="PACT_BLADE"&gt;Pact Weapon&lt;/LSTag&gt; is active, your weapon deals an additional [1] and you gain &lt;LSTag Tooltip="Resistance"&gt;Resistance&lt;/LSTag&gt; to Psychic damage. This effect can only occur once per turn.&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Passive" Tooltip="PactOfTheChain"&gt;Pact of the Chain&lt;/LSTag&gt; - Your familiars gain an additional +[2] to &lt;LSTag Tooltip="ArmourClass"&gt;Armour Class&lt;/LSTag&gt; and &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;, in addition to &lt;LSTag Tooltip="TemporaryHitPoints"&gt;temporary hit points&lt;/LSTag&gt; equal to twice your Warlock level.&lt;br&gt;&lt;br&gt;&lt;LSTag Type="Passive" Tooltip="PactOfTheTome"&gt;Pact of the Tome&lt;/LSTag&gt; - You gain +[3] to spell &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; and &lt;LSTag Tooltip="SpellDifficultyClass"&gt;Spell Save DC&lt;/LSTag&gt;, and your cantrips also deal an additonal [4]. This effect can only occur once per turn.
+data "DescriptionParams" "DealDamage(2d6,Psychic);2;2;DealDamage(1d8,Psychic)"
+
+new entry "PP_EP_Tome_Passive" // note that this is a hidden passive so no description to change
+type "PassiveData"
+using "PP_EP_Tome_Passive"
+data "StatsFunctors" "IF(IsSpell() and IsCantrip()):DealDamage(1d8,Psychic)"
+
+// ==================================== Rage and Resilience - Barbarian Equipment ====================================
+
+// ==================================== Song and Steel - Bard Equipment ====================================
+
+// Visage of Vanishing Laughter: decrease Charismatic Focus' spell attack roll and spell save DC bonus to +2 (previously +3)
+new entry "SS_CharismaticFocus"
+type "PassiveData"
+using "SS_CharismaticFocus"
+data "DescriptionParams" "2"
+data "Boosts" "RollBonus(MeleeSpellAttack, 2);RollBonus(RangedSpellAttack,2);SpellSaveDC(2)"
+
+// ==================================== Unarmed and Upgraded - Monk Equipment ====================================
+
+// Sunspark Short: remove concentration from Sunspark Ray (it doesn't have a recast like Sunbeam, which it inherits from)
+new entry "Zone_MAG_Monk_BowShot"
+type "SpellData"
+data "SpellType" "Zone"
+using "Zone_MAG_Monk_BowShot"
+data "SpellFlags" "HasSomaticComponent;IsHarmful;IsDefaultWeaponAction"
+
+// Boots of the Marsh Strider: Tooltip didn't reflect descriptionparams
+new entry "MAG_Marsh_Strider_Passive"
+type "PassiveData"
+using "MAG_Marsh_Strider_Passive"
+// data "Description" "h3cec0bf4g98a9g474eg886dga3d4b1a889d20;2"
+// While Boots of the Marsh Strider are equipped your &lt;LSTag Type="Spell" Tooltip="Projectile_Jump"&gt;Jump&lt;/LSTag&gt;; distance is increased by [1], and your &lt;LSTag Tooltip="MovementSpeed"&gt;Movement Speed&lt;/LSTag&gt; is increased by [2].
+data "Description" "h7920b39bg75f5g44ecga83dg40a756099eea"
+
+// ==================================== Veil and Venom - Rogue Equipment ====================================
+
+// ==================================== Wands and Weave - Wizard Equipment ====================================
+
+// Hood of the Archmage: change Intelligence bonus to give +4 Intelligence instead, with max of 22 (previously set Intelligence to 20)
+new entry "WW_Wizard_Equipment_Hood_of_the_Archmage"
+type "Armor"
+using "WW_Wizard_Equipment_Hood_of_the_Archmage"
+data "Boosts" "Ability(Intelligence,4,22)"
+
+// Band of the Ascendant Spellcaster: decrease Ascendant Might's spell attack roll and spell save DC bonus to +2 (previously +3)
+new entry "WW_Ascendant_Spellcaster_Passive"
+type "PassiveData"
+using "WW_Ascendant_Spellcaster_Passive"
+data "DescriptionParams" "2"
+data "Boosts" "RollBonus(MeleeSpellAttack, 2);RollBonus(RangedSpellAttack,2);SpellSaveDC(2)"
+

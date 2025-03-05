@@ -75,14 +75,6 @@ type "PassiveData"
 // data "Description" "3048fe614f8834940b9a70e9d70b4a171;4"
 data "Description" "3048fe61f8834940b9a70e9d70b4a171;4"
 
-// ==================================== Unarmed and Upgraded - Monk Equipment - Fix bugged tooltip ====================================
-
-new entry "MAG_Marsh_Strider_Passive"
-type "PassiveData"
-using "MAG_Marsh_Strider_Passive"
-// data "Description" "h3cec0bf4g98a9g474eg886dga3d4b1a889d20;2"
-data "Description" "h7920b39bg75f5g44ecga83dg40a756099eea"
-
 // ==================================== Target_PsionicPull, Target_SteelWatcher_Biped_RetrievingShot, Target_MAG_RetrievingShot, and Target_MAG_RetrievingShot_ShortRest (from VEO) all inherit from Target_Hex (in a chain) and Valdacil's Spell Adjustments just breaks them all ====================================
 
 new entry "Target_PsionicPull"

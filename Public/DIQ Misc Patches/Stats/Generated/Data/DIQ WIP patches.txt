@@ -86,16 +86,6 @@ data "RequirementConditions" "not HasStatus('RAGE') and not HasStatus('CALM_EMOT
 //data "DisplayName" "h791afe39g7f77g48dega27fgc0472f2177a5;1"
 //data "Description" "hd579d008g05dbg4a4bg9c9cg8ee61d667897;1"
 
-// ==================================== Absolute Wrath - Soul Reclaim ====================================
-
-// Was using OnAttacked instead of looking for damage, description gave misinformation due to DescriptionParams not supporting "+""
-//new entry "Mod_Soul_Reclaim"
-//type "PassiveData"
-//using "Mod_Soul_Reclaim"
-//data "Description" "h9afaba63g1dc8g41d8g9c5fg3cb5d4295e99;1"
-//data "DescriptionParams" "RegainHitPoints(1d4);RegainHitPoints(ProficiencyBonus)"
-//data "StatsFunctorContext" "OnDamaged"
-
 // ==================================== Stop Lodestones from working in combat ====================================
 
 //new entry "FOCUSLODESTONES_Lodestone_Template"

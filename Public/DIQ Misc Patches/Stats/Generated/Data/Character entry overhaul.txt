@@ -357,6 +357,41 @@ using "LOW_RamazithsTower_Nightsong_Shard"
 data "Passives" "AttackOfOpportunity;DarknessRules;ImmuneToDisarm;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;MagicResistance;LOW_RamazithsTower_Nightsong_Deva_Interrupt;DivineHealth;CX_Paladin_Boost;Mod_Titans_Reach;FullSwing_Passive;FrontFace_Radiant_Feat;Radiant_Strike_Lightbringerfeat;Feat_two_lightorbs;featRadiatingOrb_Ring_Passlight";RadiatingOrb_ArmorLightff;PotentCantrip;NPC_CbD;ArmyArcana"
 data "NecroticResistance" "Resistant"
 
+// Mind-Claw of Tu'narath - W'wargaz summons in Crèche Y'llek
+new entry "CRE_Githyanki_Inquisitor_VlaakithsMindSword"
+type "Character"
+// using "SpiritualWeapon_Greatsword"
+using "CRE_Githyanki_Inquisitor_VlaakithsMindSword"
+// data "Vitality" "30"
+data "Vitality" "20"
+data "AcidResistance" "Resistant"
+data "ForceResistance" "Resistant"
+// data "PsychicResistance" "Immune"
+data "PsychicResistance" "Resistant"
+data "RadiantResistance" "Resistant"
+
+// Mindsteal Link - used by W'wargaz in Crèche Y'llek, with all his bitch ass swords
+new entry "CRE_MINDSTEAL_LINK_SOURCE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "CRE_MINDSTEAL_LINK_SOURCE"
+// Leeching the psychic energy of those around him.&lt;br&gt;&lt;br&gt;Receives a +[1] bonus to Armour Class and deals an additional [2] per creature he's connected to.
+// data "Description" "hcdb13a9dg8210g4286g812cgb4825e8b6d47;3"
+// Leeching the psychic energy of those around him.&lt;br&gt;&lt;br&gt;Receives a +[1] bonus to &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; and deals an additional [2] per creature he's connected to.
+data "Description" "h9bad13c1g6a92g46acgbcdag237575ea748b;1"
+// data "DescriptionParams" "1;DealDamage(1d4, Psychic)"
+data "DescriptionParams" "1;DealDamage(1,Psychic)"
+// data "Boosts" "AC(1);CharacterWeaponDamage(1d4, Psychic)"
+data "Boosts" "RollBonus(Attack,1);CharacterWeaponDamage(1,Psychic)"
+
+new entry "CRE_MINDSTEAL_LINK_TARGET"
+type "StatusData"
+data "StatusType" "BOOST"
+// data "DescriptionParams" "2"
+data "DescriptionParams" "1"
+// data "Boosts" "Resistance(Psychic, Vulnerable); AC(-2);"
+data "Boosts" "Resistance(Psychic, Vulnerable); AC(-1);"
+
 // ==================================== Large Humanoids - Giants and Ogres ====================================
 // "_Base" > "_Humanoid" > "_Giants" > "Ogre"
 //                                   > "_Giants_Gustav"

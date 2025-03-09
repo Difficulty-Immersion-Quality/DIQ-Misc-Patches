@@ -1,0 +1,48 @@
+// =================================== Remove Flourish weapon action and Thrown weapon property from all versions ===================================
+
+new entry "UND_SwordInStone"
+type "Weapon"
+using "UND_SwordInStone"
+data "BoostsOnEquipMainHand" "UnlockSpell(Target_PommelStrike);UnlockSpell(Target_Slash_New);UnlockSpell(Rush_SpringAttack)"
+data "Weapon Properties" "Versatile;Melee;Dippable;Magical;Finesse"
+
+new entry "UND_SwordInStoneV2"
+type "Weapon"
+using "UND_SwordInStone"
+data "BoostsOnEquipMainHand" "UnlockSpell(Target_PommelStrike);UnlockSpell(Target_Slash_New);UnlockSpell(Rush_SpringAttack)"
+data "Weapon Properties" "Versatile;Melee;Dippable;Magical;Finesse"
+
+// Legendary: replace ignore slashing resistance passive with improved critical passive
+new entry "UND_SwordInStoneV3"
+type "Weapon"
+using "UND_SwordInStoneV3"
+data "BoostsOnEquipMainHand" "UnlockSpell(Target_PommelStrike);UnlockSpell(Target_Slash_New);UnlockSpell(Rush_SpringAttack)"
+data "PassivesOnEquip" "MAG_HighestCaster_CantripBooster_Passive;MAG_WYR_Orin_Bhaalist_Dagger_ImprovedCritical_Passive;MAG_Light_PhalarAluve_Passive"
+data "Weapon Properties" "Versatile;Melee;Dippable;Magical;Finesse"
+
+// =================================== Increase cooldown on spell slot recovery to per long rest ===================================
+
+new entry "Shout_MAG_SpellSlotRestoration_PhalarAluve"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_MAG_SpellSlotRestoration_PhalarAluve"
+data "Cooldown" "OncePerRestPerItem"
+
+new entry "Shout_MAG_SpellSlotRestoration_PhalarAluve_1"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_MAG_SpellSlotRestoration_PhalarAluve_1"
+data "Cooldown" "OncePerRestPerItem"
+
+new entry "Shout_MAG_SpellSlotRestoration_PhalarAluve_2"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_MAG_SpellSlotRestoration_PhalarAluve_2"
+data "Cooldown" "OncePerRestPerItem"
+
+new entry "Shout_MAG_SpellSlotRestoration_PhalarAluve_3"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_MAG_SpellSlotRestoration_PhalarAluve_3"
+data "Cooldown" "OncePerRestPerItem"
+

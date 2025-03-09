@@ -1,0 +1,13 @@
+new entry "NPC_CbD"
+type "PassiveData"
+data "Properties" "Highlighted"
+data "StatsFunctorContext" "OnDamage"
+data "StatsFunctors" "TARGET:IF(Character() and Party() and not Ally() and not Dead() and not Summon() and not Tagged('SUMMON')):ApplyStatus(LOW_STORMSHORETABERNACLE_GODCURSED,100,-1)"
+
+new entry "NPC_DamageReduction"
+type "PassiveData"
+data "DisplayName" "h5b4280056a754abe83ad50c05af217cfg861;1"
+data "Description" "hfef70fe222774b49b7eb7812b9c04e27cage;1"
+data "Icon" "PassiveFeature_Durable"
+data "Properties" "Highlighted"
+data "Boosts" "DamageReduction(All, Flat, ProficiencyBonus)"

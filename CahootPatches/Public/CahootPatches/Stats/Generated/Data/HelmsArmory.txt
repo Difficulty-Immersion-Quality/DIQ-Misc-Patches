@@ -1,0 +1,50 @@
+// ==================================== Longsword: fixes force damage against concentrating targets and adds advantage to saving throws against spells ====================================
+
+new entry "CSS_HelmStatue_Longsword"
+type "Weapon"
+using "CSS_HelmStatue_Longsword"
+data "Boosts" "Initiative(3);Advantage(Skill,Perception)"
+data "PassivesOnEquip" "CSS_HelmArmor_Pass_DivineVigilance;CSS_HelmArmor_Pass_Weavebane"
+
+new entry "CSS_HelmArmor_Pass_Weavebane"
+type "PassiveData"
+using "CSS_HelmArmor_Pass_Weavebane"
+data "Boosts" "IF(IsMeleeAttack() and IsConcentrating(context.Target)):CharacterWeaponDamage(1d6,Force);IF(IsSpell()):RollBonus(SavingThrow, Advantage)"
+data "Description" "h26e9271ag521dg49begb54eg511971cdde17"
+
+// ==================================== Chest armour: fixes Faithguard +2 AC remaining on target even if they no longer have Shield of Faith ====================================
+
+new entry "CSS_HelmArmory_Pass_Faithguard"
+type "PassiveData"
+using "CSS_HelmArmory_Pass_Faithguard"
+data "StatsFunctorContext" "OnStatusApplied"
+data "Conditions" "StatusId('SHIELD_OF_FAITH')"
+data "StatsFunctors" "ApplyStatus(HELMARMORY_FAITHGUARD,100,-1)"
+data "Description" "h5259232cg94bcg4f1fg86cag49bd2775aea0"
+
+// New status
+new entry "HELMARMORY_FAITHGUARD"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "h96487335ga28eg4d11ga040g3988f3187acc;1"
+data "Description" "h433f9e7cg1f4dg4680ga58ag1299b22eca8e;1"
+data "DescriptionParams" "2"
+data "Icon" "Spell_Abjuration_ShieldOfFaith"
+data "StackId" "HELM_FAITHGUARD"
+data "StackType" ""
+data "Boosts" "AC(2)"
+data "Passives" ""
+data "RemoveConditions" "StatusId('SHIELD_OF_FAITH')"
+data "RemoveEvents" "OnStatusRemoved"
+
+// ==================================== Additional loca changes ====================================
+
+new entry "CSS_HelmArmory_Pass_ShieldHeal"
+type "PassiveData"
+using "CSS_HelmArmory_Pass_ShieldHeal"
+data "Description" "h02da00cdgac67g45f4g8516g806b0ee900b7"
+
+new entry "CSS_HelmArmor_Pass_DivineVigilance"
+type "PassiveData"
+using "CSS_HelmArmor_Pass_DivineVigilance"
+data "Description" "ha910c197g7b7ag443dga5cagace2a219dde8"

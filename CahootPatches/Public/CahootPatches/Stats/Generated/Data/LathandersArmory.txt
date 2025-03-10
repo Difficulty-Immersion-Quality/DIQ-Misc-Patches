@@ -1,0 +1,82 @@
+// ================================= Sunwheel Mantle: change Crusader's Mantle to inherit from base game spell + have short rest cooldown =================================
+
+new entry "CSS_Lathy_CrusadersMantle"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_CrusadersMantle"
+data "Cooldown" "OncePerShortRestPerItem"
+data "Icon" "CSS_Lathy_CrusaderMantle_Icon"
+data "UseCosts" "BonusActionPoint:1"
+
+// ================================= Ruined Dawnmaster's Crest: fix Surge of Light's heal not triggering properly =================================
+
+new entry "CSS_Lathander_Pass_SurgeOfLight"
+type "PassiveData"
+using "CSS_Lathander_Pass_SurgeOfLight"
+data "StatsFunctorContext" "OnHealed"
+data "Conditions" "HasStatus('LATHANDER_SURGEOFLIGHT_TECHNICAL', context.Target)"
+data "StatsFunctors" "IF(not HasStatus('MAG_HEAL_SELF_ONCE_TECHNICAL', context.Source)):RegainHitPoints(3);ApplyStatus(SELF, MAG_HEAL_SELF_ONCE_TECHNICAL, 100, 0)"
+
+new entry "LATHANDER_SURGEOFLIGHT_TECHNICAL"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StackId" "LATHANDER_SURGEOFLIGHT_TECHNICAL"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+
+// ================================= Sunburst Signet and Sky Compass Ring: fix passives' BoostContexts to make them more reliably trigger their Boosts =================================
+
+new entry "CSS_Lathander_Pass_IlluminateAC" 
+type "PassiveData"
+using "CSS_Lathander_Pass_IlluminateAC"
+data "BoostContext" "OnObscurityChanged;OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
+data "BoostConditions" "HasObscuredState(ObscuredState.Clear,context.Source)"
+data "Boosts" "AC(1)"
+
+new entry "CSS_Lathander_Pass_IlluminateConc" 
+type "PassiveData"
+using "CSS_Lathander_Pass_IlluminateConc"
+data "BoostContext" "OnObscurityChanged;OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
+data "BoostConditions" "HasObscuredState(ObscuredState.Clear,context.Source)"
+data "Boosts" "Advantage(Concentration)"
+
+new entry "CSS_Lathander_Pass_IlluminateConc2" 
+type "PassiveData"
+using "CSS_Lathander_Pass_IlluminateConc2"
+data "BoostContext" "OnObscurityChanged;OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
+data "BoostConditions" "not HasObscuredState(ObscuredState.Clear,context.Source)"
+data "Boosts" "Resistance(Piercing, Vulnerable);Resistance(Slashing, Vulnerable)"
+
+// ================================= Sunburst Signet: add short rest cooldown to Daylight variants, and fix inheritances for variants to inherit from base game spells =================================
+
+new entry "CSS_Lathy_Daylight_Container"
+type "SpellData"
+data "SpellType" "Target"
+using "CSS_Lathy_Daylight_Container"
+data "Cooldown" "OncePerShortRestPerItem"
+
+new entry "CSS_Lathy_Spell_Daylight_S"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Daylight"
+data "SpellContainerID" "CSS_Lathy_Daylight_Container"
+data "Icon" "CSS_Lathander_Daylight_Icon"
+// Dawn's Light: Sphere
+data "DisplayName" "h0a0c739bg96c5g4e47gba5cg6831a6604782;1"
+data "Description" "hc04888ccg3e30g4faegaa40g75906c4ff62e;1"
+data "UseCosts" "ActionPoint:1"
+
+new entry "CSS_Lathy_Spell_Daylight_Item"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Daylight_Enchantment"
+data "Icon" "CSS_Lathander_Daylight_Icon"
+// Dawn's Light: Enchant Item
+data "DisplayName" "h3f6b9952g6dd6g48c9g927bgb0d26c3e0b95;1"
+data "Description" "h2a05f823g53fdg47b3gb24cg41116a4cc174;1"
+data "UseCosts" "ActionPoint:1"
+
+
+
+
+
+

@@ -620,7 +620,7 @@ new entry "MOO_ZealotOfTheAbsolute_Duergar"
 type "Character"
 using "MOO_ZealotOfTheAbsolute_Duergar"
 // data "Passives" "AttackOfOpportunity;DarknessRules;SuperiorDarkvision;Dwarf_DwarvenResilience;Duergar_DuergarResilience;SunlightSensitivity;FightingStyle_GreatWeaponFighting"
-data "Passives" "CX_Fighter_Boost;Dwarf_DwarvenResilience;Duergar_DuergarResilience;SunlightSensitivity;AttackOfOpportunity;SuperiorDarkvision;DarknessRules;FightingStyle_GreatWeaponFighting"
+data "Passives" "CX_Paladin_Boost;Dwarf_DwarvenResilience;Duergar_DuergarResilience;SunlightSensitivity;AttackOfOpportunity;SuperiorDarkvision;DarknessRules;FightingStyle_GreatWeaponFighting"
 
 // ==================================== Githyanki ====================================
 
@@ -1901,11 +1901,6 @@ new entry "MOO_ZealotOfTheAbsolute_Drow"
 type "Character"
 using "MOO_ZealotOfTheAbsolute_Drow"
 data "Passives" "CX_Paladin_Boost;AttackOfOpportunity;FeyAncestry;SunlightSensitivity;DarknessRules;Darkvision;FightingStyle_GreatWeaponFighting"
-
-new entry "MOO_ZealotOfTheAbsolute_Duergar"
-type "Character"
-using "MOO_ZealotOfTheAbsolute_Duergar"
-data "Passives" "CX_Paladin_Boost;AttackOfOpportunity;DarknessRules;SuperiorDarkvision;Dwarf_DwarvenResilience;Duergar_DuergarResilience;SunlightSensitivity;FightingStyle_GreatWeaponFighting"
 
 new entry "MOO_ZealotOfTheAbsolute_Elf"
 type "Character"

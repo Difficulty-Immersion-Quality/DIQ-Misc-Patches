@@ -1,0 +1,115 @@
+// ==================================== Barkskin Armour - Being weird as fuck an not giving 16 AC with the inheritence, despite displaying so in game ====================================
+
+new entry "MAG_Druid_Late_Hide_Armor_1"
+type "Armor"
+using "ARM_Hide_Body_1"
+data "RootTemplate" "a1d321be-ff4c-423a-bc50-bcad85a3a83a"
+data "ArmorClass" "14"
+data "ValueUUID" "240eb257-ef20-4877-89bd-6956b4b7c41a"
+data "ArmorType" "Leather"
+data "Rarity" "Rare"
+data "Boosts" "Advantage(SavingThrow, Constitution)"
+data "PassivesOnEquip" "EqLib_HideBody_Passive;EqLib_MediumBody_Passive;MAG_Barkskin_Shield_Passive"
+data "StatusOnEquip" "MAG_BARKSKIN;MAG_BARKSKIN_TECHNICAL"
+data "Ability Modifier Cap" ""
+data "Proficiency Group" "LightArmor"
+data "Unique" "1"
+
+// ==================================== VEO - Set Harold's Reposition Malefactor to Once Per Combat and implement Adjustable Shove-Pull Targeting ====================================
+
+// Harold - VEO 
+new entry "Target_MAG_RetrievingShot_ShortRest"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_MAG_RetrievingShot_ShortRest"
+data "Cooldown" "OncePerCombat"
+data "SpellSuccess" "Force(-9, OriginToTarget, Neutral);DealDamage(MainRangedWeapon/2, MainRangedWeaponDamageType)"
+
+// ==================================== VEO Nerfs ====================================
+
+// Club of Hill Giant Strength
+new entry "UND_StrengthChair_Leg_Overhaul_Passive"
+type "PassiveData"
+using "UND_StrengthChair_Leg_Overhaul_Passive"
+data "DescriptionParams" "19"
+data "Boosts" "AbilityOverrideMinimum(Strength,19)"
+
+// Markoheshkir
+new entry "MAG_PrecisionCasting_Passive"
+type "PassiveData"
+using "MAG_PrecisionCasting_Passive"
+data "DescriptionParams" "1d4;1d4;2"
+data "Boosts" "SpellSaveDC(2);IF(IsSpell()):RollBonus(MeleeSpellAttack, 1d4);IF(IsSpell()):RollBonus(RangedSpellAttack, 1d4);IF(IsSpell()):DamageBonus(-1d4)"
+
+// Despair of Athkatla
+new entry "MAG_UnstableCasting_Passive"
+type "PassiveData"
+using "MAG_UnstableCasting_Passive"
+data "DescriptionParams" "1d4;1d4;1"
+data "Boosts" "SpellSaveDC(-1);IF(IsSpell()):RollBonus(MeleeSpellAttack, -1d4);IF(IsSpell()):RollBonus(RangedSpellAttack, -1d4);IF(IsSpell()):DamageBonus(2d4)"
+
+// Despair of Athkatla
+new entry "MAG_UnstableCasting_Passive_2"
+type "PassiveData"
+using "MAG_UnstableCasting_Passive_2"
+data "DescriptionParams" "1d6;1d8;2"
+data "Boosts" "SpellSaveDC(-2);IF(IsSpell()):RollBonus(MeleeSpellAttack, -1d6);IF(IsSpell()):RollBonus(RangedSpellAttack, -1d6);IF(IsSpell()):DamageBonus(1d8)"
+
+// Despair of Athkatla
+new entry "MAG_UnstableCasting_Passive_3"
+type "PassiveData"
+using "MAG_UnstableCasting_Passive_3"
+data "DescriptionParams" "1d8;2d6;3"
+data "Boosts" "SpellSaveDC(-3);IF(IsSpell()):RollBonus(MeleeSpellAttack, -1d8);IF(IsSpell()):RollBonus(RangedSpellAttack, -1d8);IF(IsSpell()):DamageBonus(2d6)"
+
+// Stalker Gloves
+new entry "MAG_ForcefulSneakAttack_Passive_Overhaul"
+type "PassiveData"
+using "MAG_ForcefulSneakAttack_Passive_Overhaul"
+data "DescriptionParams" "DealDamage(Level/4, Force)"
+data "StatsFunctors" "DealDamage(Level/4, Force,Magical)"
+
+// Ringe of Poison Resistance
+new entry "MAG_PoisonCoating_Passive_Overhaul"
+type "PassiveData"
+using "MAG_PoisonCoating_Passive_Overhaul"
+data "DescriptionParams" "DealDamage(1d4, Poison)"
+
+new entry "DIPPED_POISON_OVERHAUL"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DescriptionParams" "DealDamage(1d4,Poison)"
+data "Boosts" "WeaponDamage(1d4, Poison)"
+data "RemoveConditions" "not HasPassive(MAG_PoisonCoating_Passive_Overhaul)"
+data "RemoveEvents" "OnEquip;OnUnequip"
+
+// ==================================== Remove those changes to heavy armour design, including Dex AC bonuses is just eh ====================================
+
+// Ring Mail
+new entry "ARM_RingMail_Body"
+type "Armor"
+using "ARM_RingMail_Body"
+data "Armor Class Ability" ""
+data "Ability Modifier Cap" ""
+
+// Ring Mail +1
+new entry "ARM_RingMail_Body_1"
+type "Armor"
+using "ARM_RingMail_Body_1"
+data "Armor Class Ability" ""
+data "Ability Modifier Cap" ""
+
+// Ring Mail +2
+new entry "ARM_RingMail_Body_2"
+type "Armor"
+using "ARM_RingMail_Body_2"
+data "Armor Class Ability" ""
+data "Ability Modifier Cap" ""
+
+// Adamantine Splint Armour
+new entry "MAG_MeleeDebuff_AttackDebuff2_OnDamage_SplintMail"
+type "Armor"
+using "MAG_MeleeDebuff_AttackDebuff2_OnDamage_SplintMail"
+data "ArmorClass" "18"
+data "Armor Class Ability" ""
+data "Ability Modifier Cap" ""

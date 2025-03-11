@@ -1159,6 +1159,18 @@ data "Passives" "CX_Paladin_Boost;AttackOfOpportunity;FeyAncestry;SunlightSensit
 //  │   │   │       └─ "Test_Throwing_Tiny"
 //  │   │   └─ "_Giants_Gustav"
 
+new entry "_Giants"
+type "Character"
+using "_Giants"
+// data "Passives" "AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Barbarian_Boost;AttackOfOpportunity;DarknessRules"
+
+new entry "Ogre"
+type "Character"
+using "Ogre"
+// data "Passives" "OgreCurse;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Barbarian_Boost;AttackOfOpportunity;Darkvision;DarknessRules;OgreCurse"
+
 // ==================================== Githyanki ====================================
 
 // "_Base"

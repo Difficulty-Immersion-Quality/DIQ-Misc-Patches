@@ -2,3 +2,15 @@ new treasuretable "LOW_SorcerousSundries_TolnaTomeMonger"
 CanMerge 1
 new subtable "1,1"
 object category "I_DeGreaser_Rolans_Stolen_Spellbook",1,0,0,0,0,0,0,0
+
+// Sister Lidwin - House of Healing
+new treasuretable "TWN_Hospital_CorpseTender"
+CanMerge 1
+new subtable "1,1"
+object category "I_JWL_DiscordantInstruments_TriageKit",1,0,0,0,0,0,0,0
+
+// Entharl Danthelon - Wyrm's Crossing (Danthelon's Dancing Axe)
+new treasuretable "WYR_Danthelon_Trader"
+CanMerge 1
+new subtable "1,1"
+object category "I_JWL_DiscordantInstruments_TriageKit",1,0,0,0,0,0,0,0

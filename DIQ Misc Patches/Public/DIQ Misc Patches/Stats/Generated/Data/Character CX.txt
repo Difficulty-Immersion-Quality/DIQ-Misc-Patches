@@ -2674,20 +2674,28 @@ using "HalfOrc_Caster"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Magic_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
 
-// Shuurga
+// Manip Shuurga - Flaming Fist
 new entry "COL_TadpolingCenter_Prisoner_HalfOrc_Caster"
 type "Character"
 using "HalfOrc_Caster"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L2;CX_Spells_L3;CX_Spells_L3C;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
 
-// The infamous Z'rell who just stands there and skips her turn
+// Jord - Harpers, Jaheira's Family
+new entry "LOW_JaheirasEldestSon"
+type "Character"
+using "LOW_JaheirasEldestSon"
+// data "Passives" "AttackOfOpportunity;DarknessRules;WildStrike;PrimalStrike;WildStrike_2"
+data "Passives" "CX_Druid_Boost;CX_Magic_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules;WildStrike;PrimalStrike;WildStrike_2"
+
+// Disciple Z'rell - Cult of the Absolute (May she one day be cured of her inability to engage in combat, amen)
 new entry "MOO_Executioner"
 type "Character"
 using "MOO_Executioner"
 // data "Passives" "AttackOfOpportunity;DarknessRules;DarkOnesBlessing;AgonizingBlast;TAD_PsionicBacklash"
 data "Passives" "CX_Warlock_Boost;CX_Magic_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules;DarkOnesBlessing;AgonizingBlast;TAD_PsionicBacklash"
 
+// Kansif - Cult of the Absolute
 new entry "SCL_DriderCaravan_Kansif"
 type "Character"
 using "SCL_DriderCaravan_Kansif"
@@ -2699,56 +2707,61 @@ data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L1;CX_Spells_L2;CX_Spe
 //  │   ├─ "END_CityWatchMelee_HalfOrc"
 //  │   ├─ "HalfOrc_Barbarian"
 //  │   │   ├─ "SCL_DriderCaravan_Bedi"
-//  │   │   └─ TWN_Morgue_ShadowCursed_HalfOrc_Barbarian"
+//  │   │   └─ TWN_Morgue_ShadowCursed_HalfOrc_Barbarian"   --- Shadow-Cursed Half-Orc
 //  │   ├─ "HalfOrc_Paladin"
 //  │   ├─ "LOW_Bartender_Half_Orc_Melee"
-//  │   ├─ "LOW_BlushingMermaid_Patron_HalfOrc_Melee"
+//  │   ├─ "LOW_BlushingMermaid_Patron_HalfOrc_Melee"       --- Slog
 //  │   ├─ "LOW_GuildSmugglers_Guard_01"
 //  │   ├─ "LOW_HagSurvivor_HalfOrc_Melee"
 //  │   ├─ "LOW_HouseOfHope_HalfOrc_Debtor"
 //  │   ├─ "LOW_Skoona"
 //  │   ├─ "LOW_Undercellar_Entrance_Halforc_Barbarian"
-//  │   ├─ "WYR_Balduran"
+//  │   ├─ "WYR_Balduran"                                   --- Yeah not my Balduran
 //  │   ├─ "WYR_DanthelonShop_HalfOrc_Melee"
-//  │   ├─ "WYR_Gortash_ManifestationOfTyranny"
+//  │   ├─ "WYR_Gortash_ManifestationOfTyranny"             
 //  │   ├─ "WYR_MessHallBodyguard_07"
-//  │   └─ WYR_RefugeeCamp_HalfOrc_Melee"
+//  │   └─ WYR_RefugeeCamp_HalfOrc_Melee"                   --- Gronch
 
 new entry "HalfOrc_Melee"
 type "Character"
 using "HalfOrc_Melee"
-data "Strength" "18"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Fighter_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Martial_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
 
+// Watcher Guardian - The Watch / Watcher Guardian - The Watch (Gather Your Allies summon)
 new entry "END_CityWatchMelee_HalfOrc"
 type "Character"
 using "END_CityWatchMelee_HalfOrc"
-// data "Passives" "AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Fighter_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules;FightingStyle_GreatWeaponFighting;GreatWeaponMaster_BonusAttack;GreatWeaponMaster_BonusDamage"
+// data "Passives" "AttackOfOpportunity;DarknessRules;FightingStyle_GreatWeaponFighting;GreatWeaponMaster_BonusAttack;GreatWeaponMaster_BonusDamage"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules;FightingStyle_GreatWeaponFighting;GreatWeaponMaster_BonusAttack;GreatWeaponMaster_BonusDamage"
 
 new entry "HalfOrc_Barbarian"
 type "Character"
 using "HalfOrc_Barbarian"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Barbarian_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Barbarian_Boost;CX_Martial_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
 
-// Drider Caravan guard
+// Bedi - Cult of the Absolute
 new entry "SCL_DriderCaravan_Bedi"
 type "Character"
 using "SCL_DriderCaravan_Bedi"
-// data "Passives" "AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Barbarian_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules;ExtraAttack;DangerSense;TotemSpirit_Wolf"
+// data "Passives" "ExtraAttack;DangerSense;TotemSpirit_Wolf;AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Barbarian_Boost;CX_Martial_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules;ExtraAttack;DangerSense;TotemSpirit_Wolf"
 
-// Doesn't look to be actually used
 new entry "HalfOrc_Paladin"
 type "Character"
 using "HalfOrc_Paladin"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Paladin_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
 
-// Ulumpha - member of the Dead Eyes. Supposed to be a Paladin but not reflected in her stat entries (instead given Paladin spells directly in her local character)
-// Increase her Charisma and change Progression from NPC_Fighter to NPC_Paladin
+// Galem Meats - The Guild, Big Huido's gang
+new entry "LOW_GuildSmugglers_Guard_01"
+type "Character"
+using "LOW_GuildSmugglers_Guard_01"
+// data "Passives" "AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
+
+// Ulumpha - member of the Dead Eyes (Supposed to be a Paladin but not reflected in her stat entries, instead given Paladin spells directly in her local character. Made her a proper Paladin.)
 new entry "LOW_HagSurvivor_HalfOrc_Melee"
 type "Character"
 using "LOW_HagSurvivor_HalfOrc_Melee"
@@ -2757,55 +2770,42 @@ data "Charisma" "14"
 // data "Progressions" "0e6da493-5a37-423b-8c28-629462b22faa"
 data "Progressions" "8726b2c4-edc0-4905-2fb8-a460baba3307"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Paladin_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
 
+// Shameful Eternal Debtor - House of Hope
 new entry "LOW_HouseOfHope_HalfOrc_Debtor"
 type "Character"
 using "LOW_HouseOfHope_HalfOrc_Debtor"
 // data "Passives" "AttackOfOpportunity;DarknessRules;LOW_EternalDebtors_Explosion"
-data "Passives" "CX_Fighter_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules;LOW_EternalDebtors_Explosion"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules;LOW_EternalDebtors_Explosion"
 
-// Enforcer Skoona
+// Enforcer Skoona - Bouncer at the Elfsong Tavern (She shouldn't have Darkvision unless it's otherwise explained)
 new entry "LOW_Skoona"
 type "Character"
 using "LOW_Skoona"
-// She actually IS given the Half-Orc racial passives. She's also given Darkvision for some reason??
 // data "Passives" "AttackOfOpportunity;DarknessRules;FightingStyle_TwoWeaponFighting;Darkvision;RelentlessEndurance;SavageAttacks;ImprovedCritical;DualWielder_BonusAC;DualWielder_PassiveBonuses;FightingStyle_Defense;ExtraAttack_2"
-data "Passives" "CX_Fighter_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules;Darkvision;FightingStyle_TwoWeaponFighting;DualWielder_BonusAC;DualWielder_PassiveBonuses;FightingStyle_Defense;ImprovedCritical;ExtraAttack_2"
+data "Passives" "CX_Fighter_Boost;CX_Barbarian_Boost;CX_Martial_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules;FightingStyle_TwoWeaponFighting;DualWielder_BonusAC;DualWielder_PassiveBonuses;FightingStyle_Defense;ImprovedCritical;ExtraAttack_2"
 
-// Tusgront
+// Tusgront - The Guild
 new entry "LOW_Undercellar_Entrance_Halforc_Barbarian"
 type "Character"
 using "LOW_Undercellar_Entrance_Halforc_Barbarian"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Barbarian_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Barbarian_Boost;CX_Martial_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
 
-// Did they originally intend to make Balduran a half-orc??
-// new entry "WYR_Balduran"
-// type "Character"
-// using "HalfOrc_Melee"
-// data "Vitality" "72"
-
-// Gortash fight phase 2 - interesting that they put this here. Assuming Bane is supposed to be a half-orc in lore or something? Don't know how you wanna approach this so just gonna leave it unchanged here
-// new entry "WYR_Gortash_ManifestationOfTyranny"
-// type "Character"
-// using "HalfOrc_Melee"
-// data "Dexterity" "12"
-// data "Constitution" "12"
-// data "Intelligence" "6"
-// data "Wisdom" "6"
-// data "Charisma" "6"
-// data "Vitality" "8"
-// data "XPReward" "40806669-8c6b-4068-8bc4-07e4981bb020"
-// data "Weight" "1"
-// data "PersonalStatusImmunities" "PRONE"
+// Manifestation of Tyranny - Gortash summon
+new entry "WYR_Gortash_ManifestationOfTyranny"
+type "Character"
+using "WYR_Gortash_ManifestationOfTyranny"
 // data "Passives" "AttackOfOpportunity;DarknessRules;Ethereal"
-// data "ForceResistance" "Immune"
-// data "PoisonResistance" "Immune"
-// data "PsychicResistance" "Immune"
-// data "Progressions" ""
-// data "Proficiency Group" "MartialWeapons;SimpleWeapons"
-// data "DifficultyStatuses" "STATUS_EASY: HEALTHREDUCTION_EASYMODE; STATUS_HARD: HEALTHBOOST_HARDCORE; STATUS_HARD: WYR_GORTASH_GORTANE_HARDCORE"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules;Ethereal"
+
+// Lady Durinbold's Bodyguard
+new entry "WYR_MessHallBodyguard_07"
+type "Character"
+using "WYR_MessHallBodyguard_07"
+// data "Passives" "AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
 
 // Rogue, Cleric, and Ranger don't appear to actually be used anywhere
 // "_HalfOrc"
@@ -2813,7 +2813,7 @@ data "Passives" "CX_Barbarian_Boost;SavageAttacks;RelentlessEndurance;AttackOfOp
 //  ├─ "HalfOrc_Ranger"
 //  ├─ "HalfOrc_Rogue"
 //  │   ├─ "LOW_Guildhall_Swarm_Melee_HalfOrc"
-//  │   └─ LOW_Guildhall_Swarm_Ranged_HalfOrc"
+//  │   └─ LOW_Guildhall_Swarm_Ranged_HalfOrc"  --- Elliot - The Guild
 
 new entry "HalfOrc_Cleric"
 type "Character"
@@ -2821,7 +2821,7 @@ using "HalfOrc_Cleric"
 // data "SpellCastingAbility" "Intelligence"
 data "SpellCastingAbility" "Wisdom"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Cleric_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
 
 new entry "HalfOrc_Ranger"
 type "Character"
@@ -2829,13 +2829,13 @@ using "HalfOrc_Ranger"
 // data "SpellCastingAbility" "Intelligence"
 data "SpellCastingAbility" "Wisdom"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Ranger_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
 
 new entry "HalfOrc_Rogue"
 type "Character"
 using "HalfOrc_Rogue"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Rogue_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Rogue_Boost;CX_Martial_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
 
 // "_HalfOrc"
 //  ├─ "HalfOrc_Cultist_Bane_BlackGauntlet"
@@ -2845,20 +2845,22 @@ data "Passives" "CX_Rogue_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpport
 new entry "HalfOrc_Cultist_Bane_BlackGauntlet"
 type "Character"
 using "HalfOrc_Cultist_Bane_BlackGauntlet"
-// data "Passives" "AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Paladin_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules;ExtraAttack;Tactical_Discipline"
+// data "Passives" "ExtraAttack;Tactical_Discipline;AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules;ExtraAttack;Tactical_Discipline"
 
+// Bagdog - Fist of Bane, Cult of Bane
 new entry "HalfOrc_Cultist_Bane_Fist"
 type "Character"
 using "HalfOrc_Cultist_Bane_Fist"
-// data "Passives" "AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Fighter_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRule;ExtraAttack;Tactical_Discipline"
+// data "Passives" "ExtraAttack;Tactical_Discipline;AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules;ExtraAttack;Tactical_Discipline"
 
+// Iron Consul Nuff, Iron Consul Chadd, Iron Consul Marten the Hammer, Iron Consul Underbite Yoonce - Cult of Bane
 new entry "HalfOrc_Cultist_Bane_IronConsul"
 type "Character"
 using "HalfOrc_Cultist_Bane_IronConsul"
-// data "Passives" "AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Fighter_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRule;ExtraAttack;Tactical_Discipline"
+// data "Passives" "ExtraAttack;Tactical_Discipline;AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules;ExtraAttack;Tactical_Discipline"
 
 // "_HalfOrc"
 //  ├─ "MOO_AcolyteOfTheAbsolute_HalfOrc"
@@ -2871,17 +2873,19 @@ using "MOO_AcolyteOfTheAbsolute_HalfOrc"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
 
+// Adept Mola - Cult of the Absolute
 new entry "MOO_FanaticOfTheAbsolute_HalfOrc"
 type "Character"
 using "MOO_FanaticOfTheAbsolute_HalfOrc"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;CX_Spells_L4C;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules"
 
+// Zealot Nadi, Zealot Munish - Cult of the Absolute
 new entry "MOO_ZealotOfTheAbsolute_HalfOrc"
 type "Character"
 using "MOO_ZealotOfTheAbsolute_HalfOrc"
 // data "Passives" "AttackOfOpportunity;DarknessRules;FightingStyle_GreatWeaponFighting"
-data "Passives" "CX_Paladin_Boost;AttackOfOpportunity;SavageAttacks;RelentlessEndurance;DarknessRules;FightingStyle_GreatWeaponFighting"
+data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;SavageAttacks;RelentlessEndurance;AttackOfOpportunity;DarknessRules;FightingStyle_GreatWeaponFighting"
 
 // ==================================== Halfling ====================================
 

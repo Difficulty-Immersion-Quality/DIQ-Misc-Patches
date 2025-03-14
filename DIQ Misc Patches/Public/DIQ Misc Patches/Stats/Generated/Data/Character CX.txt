@@ -1190,7 +1190,7 @@ data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;FeyAncestry;AttackOfOpportunit
 //  ├─ "Elf_Rogue"
 //  │   ├─ "END_Zhentarim_Elf"
 //  │   ├─ "LOW_Guildhall_BossTrinoda"
-//  │   ├─ "LOW_Guildhall_Swarm_Melee_Elf"
+//  │   ├─ "LOW_Guildhall_Swarm_Melee_Elf"      --- Carlorina the Wolf - Zhentarim
 //  │   └─ "LOW_Guildhall_Swarm_Ranged_Elf"
 
 new entry "Elf_Rogue"
@@ -2334,17 +2334,40 @@ data "Passives" "CX_Bard_Boost;CX_Martial_Boost;AttackOfOpportunity;Darkvision;D
 
 // ==================================== Half-Elf ====================================
 
-// "_HalfElf"
-//  ├─ "_HalfDrow"
-//  │   ├─ "HalfDrow_Child"
-//  │   └─ "HalfDrow_Commoner"
-//  │       └─ "HalfDrow_Commoner_Cowering"
+// "_Base"
+//  ├─ "_Humanoid"
+//  │   ├─ "_HalfElf"
+//  │   │   ├─ "HalfElf_Child"
+//  │   │   └─ "HalfElf_Commoner"
+//  │   │       └─"HalfElf_Commoner_Cowering"
+//  │   ├─"_HalfDrow"
+//  │   │  ├─ "HalfDrow_Child"
+//  │   │  └─ "HalfDrow_Commoner"
+//  │   │      └─ "HalfDrow_Commoner_Cowering"
+
+new entry "_HalfElf"
+type "Character"
+using "_HalfElf"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
+
+new entry "HalfElf_Commoner_Cowering"
+type "Character"
+using "HalfElf_Commoner_Cowering"
+// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;Darkvision;DarknessRules"
+data "Passives" "FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
+
+new entry "_HalfDrow"
+type "Character"
+using "_HalfDrow"
+// data "Passives" "AttackOfOpportunity;DarknessRules"
+data "Passives" "FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
 new entry "HalfDrow_Commoner_Cowering"
 type "Character"
 using "HalfDrow_Commoner_Cowering"
 // data "Passives" "DarknessRules"
-data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
 // "_HalfElf"
 //  ├─ "FlamingFist_HalfElf"
@@ -2354,35 +2377,41 @@ data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;HumanMilitia;HumanVer
 //  │   ├─ "FlamingFist_HalfElf_Melee_Defender"
 //  │   └─ "FlamingFist_HalfElf_Ranger"
 
+new entry "FlamingFist_HalfElf"
+type "Character"
+using "FlamingFist_HalfElf"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Martial_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
+
 new entry "FlamingFist_HalfElf_Caster"
 type "Character"
 using "FlamingFist_HalfElf_Caster"
-// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L1;CX_Spells_L1C;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L1;CX_Spells_L1C;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
 new entry "FlamingFist_HalfElf_Cleric"
 type "Character"
 using "FlamingFist_HalfElf_Cleric"
-// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
 new entry "FlamingFist_HalfElf_Melee_Attacker"
 type "Character"
 using "FlamingFist_HalfElf_Melee_Attacker"
-// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Fighter_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
 new entry "FlamingFist_HalfElf_Melee_Defender"
 type "Character"
 using "FlamingFist_HalfElf_Melee_Defender"
-// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Fighter_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
 new entry "FlamingFist_HalfElf_Ranger"
 type "Character"
 using "FlamingFist_HalfElf_Ranger"
-// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Ranger_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
 // "_HalfElf"
 //  ├─ "HalfElf_Caster"
@@ -2394,53 +2423,54 @@ data "Passives" "CX_Ranger_Boost;FeyAncestry;HumanMilitia;HumanVersatility;Attac
 //  │   │   └─ "LOW_Guildhall_LadyCroup"
 //  │   ├─ "HalfElf_Druid"
 //  │   │   ├─ "DEN_Druids_HalfElf_Druid"
-//  │   │   └─ "LOW_JaheirasEldestDaughter"
+//  │   │   └─ "LOW_JaheirasEldestDaughter"             --- Rion - Harpers, Jaheira's Family
 //  │   └─ "LOW_Sewers_Dragonborn_Red_Evocation_Wizard"
 
+// Flaming Fist Wizard (Unlike lots of other low inheritence "Caster" entries this one includes a bunch of late game enemies deserving of Wizardhood)
 new entry "HalfElf_Caster"
 type "Character"
 using "_HalfElf"
-// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Magic_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
 new entry "CHA_BanditInterior_HalfElf_Caster"
 type "Character"
 using "CHA_BanditInterior_HalfElf_Caster"
-// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;Darkvision;DarknessRules"
-data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L1;CX_Spells_L1C;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "FeyAncestry;Darkvision;DarknessRules"
+data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L1;CX_Spells_L1C;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
+// Maggran - Circle of the Emerald Grove / Sentry
 new entry "DEN_Druids_HalfElf_Caster"
 type "Character"
 using "DEN_Druids_HalfElf_Caster"
-// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Druid_Boost;CX_Magic_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Druid_Boost;CX_Magic_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
 new entry "HalfElf_Bard"
 type "Character"
 using "HalfElf_Bard"
-// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Bard_Boost;CX_Magic_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Bard_Boost;CX_Magic_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
+// Lady Croup - Nine-Fingers' Bodyguard, The Guild
 new entry "LOW_Guildhall_LadyCroup"
 type "Character"
 using "LOW_Guildhall_LadyCroup"
-// data "Passives" "FastHands;FightingStyle_Archery;AttackOfOpportunity;FeyAncestry;HumanMilitia;HumanVersatility;DarknessRules;Darkvision"
-data "Passives" "CX_Bard_Boost;CX_Magic_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules;FastHands;FightingStyle_Archery"
+// data "Passives" "FastHands;FightingStyle_Archery;AttackOfOpportunity;FeyAncestry;DarknessRules;Darkvision"
+data "Passives" "CX_Bard_Boost;CX_Magic_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules;FastHands;FightingStyle_Archery"
 
 new entry "HalfElf_Druid"
 type "Character"
 using "HalfElf_Druid"
-// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Druid_Boost;CX_Magic_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Druid_Boost;CX_Magic_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
-// Aelis Siryasius
+// Aelis Siryasius (Despite the entry's name, he should be a Sorcerer)
 new entry "LOW_Sewers_Dragonborn_Red_Evocation_Wizard"
 type "Character"
 using "LOW_Sewers_Dragonborn_Red_Evocation_Wizard"
-// data "Passives" "AttackOfOpportunity;FeyAncestry;HumanMilitia;HumanVersatility;DarknessRules;Darkvision;SunlightSensitivity;DraconicAncestry_Red;DraconicResilience;LOW_GreaseWizard_ElementalAffinity;"
-// data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;AttackOfOpportunity;FeyAncestry;HumanMilitia;HumanVersatility;DarknessRules;Darkvision;SunlightSensitivity;DraconicAncestry_Red;DraconicResilience;LOW_GreaseWizard_ElementalAffinity;"
-// Despite the entry's name, he should be a sorc
-data "Passives" "CX_Sorcerer_Boost;CX_Magic_Boost;AttackOfOpportunity;FeyAncestry;HumanMilitia;HumanVersatility;DarknessRules;Darkvision;SunlightSensitivity;DraconicAncestry_Red;DraconicResilience;LOW_GreaseWizard_ElementalAffinity;"
+// data "Passives" "AttackOfOpportunity;FeyAncestry;DarknessRules;Darkvision;SunlightSensitivity;DraconicAncestry_Red;DraconicResilience;LOW_GreaseWizard_ElementalAffinity;"
+data "Passives" "CX_Sorcerer_Boost;CX_Magic_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules;SunlightSensitivity;DraconicAncestry_Red;DraconicResilience;LOW_GreaseWizard_ElementalAffinity"
 
 // "_HalfElf"
 //  ├─ "HalfElf_Melee"
@@ -2450,47 +2480,42 @@ data "Passives" "CX_Sorcerer_Boost;CX_Magic_Boost;AttackOfOpportunity;FeyAncestr
 //  │   ├─ "END_CityWatchMelee_HalfElf"
 //  │   ├─ "GOB_ZhentGuard"
 //  │   ├─ "HalfElf_Barbarian"
-//  │   │   └─ "HAV_Harper_HalfElf_Barbarian"
-//  │   ├─ "HalfElf_Cleric"
-//  │   │   ├─ "HAV_Isobel"
-//  │   │   └─ "LOW_KurwinCoffin_Gravekeeper"
-//  │   │        └─ "WYR_OpenHandTemple_HalfElf_Cleric"
-//  │   ├─ "HalfElf_Fighter_Rogue"
-//  │   │   └─ "WYR_MerchantsHouse_HalfElf_Figher_Rogue"
-//  │   ├─ "LOW_FlorrickGoon_Melee" 
-//  │   ├─ "WYR_Flophouse_HalfElf_Melee" 
+//  │   │   └─ "HAV_Harper_HalfElf_Barbarian"   --- Harper Arthus, Harper Bor - Harpers
 
 new entry "HalfElf_Melee"
 type "Character"
 using "HalfElf_Melee"
-// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Martial_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Martial_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
 new entry "CHA_BanditInterior_HalfElf_Melee"
 type "Character"
 using "CHA_BanditInterior_HalfElf_Melee"
-// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;Darkvision;DarknessRules"
-data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "FeyAncestry;Darkvision;DarknessRules"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
+// Taman - Overgrown Ruin Looters
 new entry "CHA_Bandit_HalfElf_Melee"
 type "Character"
 using "CHA_Bandit_HalfElf_Melee"
-// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;Darkvision;DarknessRules"
-data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "FeyAncestry;Darkvision;DarknessRules"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
+// Barth - Adventurer travelling with Aradin Beno
 new entry "DEN_Adventurer_Melee"
 type "Character"
 using "DEN_Adventurer_Melee"
-// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
+// Watchman
 new entry "END_CityWatchMelee_HalfElf"
 type "Character"
 using "END_CityWatchMelee_HalfElf"
-// data "Passives" "AttackOfOpportunity;FeyAncestry;HumanMilitia;HumanVersatility;DarknessRules;Darkvision;FightingStyle_GreatWeaponFighting;GreatWeaponMaster_BonusAttack;GreatWeaponMaster_BonusDamage"
-data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules;FightingStyle_GreatWeaponFighting;GreatWeaponMaster_BonusAttack;GreatWeaponMaster_BonusDamage"
+// data "Passives" "AttackOfOpportunity;FeyAncestry;DarknessRules;Darkvision;FightingStyle_GreatWeaponFighting;GreatWeaponMaster_BonusAttack;GreatWeaponMaster_BonusDamage"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules;FightingStyle_GreatWeaponFighting;GreatWeaponMaster_BonusAttack;GreatWeaponMaster_BonusDamage"
 
-// Erna, Yerle - Roah Moonglow's guards
+// Erna, Yerle - Roah Moonglow's guards (Changed Progression from NPC_Wizard to NPC_Ranger, as it should have been)
 new entry "GOB_ZhentGuard"
 type "Character"
 using "GOB_ZhentGuard"
@@ -2500,70 +2525,81 @@ data "Intelligence" "10"
 data "Wisdom" "14"
 // data "SpellCastingAbility" "Intelligence"
 data "SpellCastingAbility" "Wisdom"
-// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e" - Changed Progression from NPC_Wizard to NPC_Ranger
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
 data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
-// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
 new entry "HalfElf_Barbarian"
 type "Character"
 using "HalfElf_Barbarian"
-// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Barbarian_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Barbarian_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
+
+// "_HalfElf"
+//  ├─ "HalfElf_Melee"
+//  │   ├─ "HalfElf_Cleric"
+//  │   │   ├─ "HAV_Isobel"
+//  │   │   └─ "LOW_KurwinCoffin_Gravekeeper"               --- Valmorba, Devotee of Kelemvor
+//  │   │        └─ "WYR_OpenHandTemple_HalfElf_Cleric"     --- Brother Donnick, Church of Ilmater
+//  │   ├─ "HalfElf_Fighter_Rogue"
+//  │   │   └─ "WYR_MerchantsHouse_HalfElf_Figher_Rogue"
+//  │   ├─ "LOW_FlorrickGoon_Melee" 
+//  │   ├─ "WYR_Flophouse_HalfElf_Melee" 
 
 new entry "HalfElf_Cleric"
 type "Character"
 using "HalfElf_Cleric"
-// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
-// Isobel Thorm - Do we even wanna give her AoO - does it break Sanctuary?
+// Isobel Thorm - Selûne (Do we even wanna give her AoO - does it break Sanctuary?)
 new entry "HAV_Isobel"
 type "Character"
 using "HAV_Isobel"
-// data "Passives" "PotentSpellcasting;AttackOfOpportunity;FeyAncestry;HumanMilitia;HumanVersatility;DarknessRules;Darkvision"
-data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules;PotentSpellcasting"
+// data "Passives" "PotentSpellcasting;AttackOfOpportunity;FeyAncestry;DarknessRules;Darkvision"
+data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules;PotentSpellcasting"
 
-// Zenovia Dawg - Fighter AND Rogue because she's got that dawg in her
+// Zenovia Dawg - Rivington Rats, The Guild (Fighter AND Rogue because she's got that DAWG in her)
 new entry "WYR_MerchantsHouse_HalfElf_Figher_Rogue"
 type "Character"
 using "WYR_MerchantsHouse_HalfElf_Figher_Rogue"
-// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Fighter_Boost;CX_Rogue_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Fighter_Boost;CX_Rogue_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
-// Pollo the Muscle - an actual goon
+// Pollo the Muscle - Retinue under Florrick
 new entry "LOW_FlorrickGoon_Melee"
 type "Character"
 using "LOW_FlorrickGoon_Melee"
-// data "Passives" "AttackOfOpportunity;FeyAncestry;HumanMilitia;HumanVersatility;DarknessRules;Darkvision;FightingStyle_Dueling;ImprovedCombatSuperiority;Alert"
-data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules;FightingStyle_Dueling;ImprovedCombatSuperiority;Alert"
+// data "Passives" "AttackOfOpportunity;FeyAncestry;DarknessRules;Darkvision;FightingStyle_Dueling;ImprovedCombatSuperiority;Alert"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules;FightingStyle_Dueling;ImprovedCombatSuperiority;Alert"
 
 // "_HalfElf"
 //  ├─ "HalfElf_Monk"
-//  │   └─ "WYR_MessHallBodyguard_02"
+//  │   └─ "WYR_MessHallBodyguard_02"   --- Lord Amber's Bodyguard
 
 new entry "HalfElf_Monk"
 type "Character"
 using "HalfElf_Monk"
-// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Monk_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+// data "Passives" "FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Monk_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
 // "_HalfElf"
 //  ├─ "HalfElf_Ranger"
-//  │   ├─ "HAV_FlamingFist_HalfElf_Ranger"
-//  │   ├─ "LOW_Guildhall_SlickInatra"
-//  │   ├─ "WYR_DanthelonShop_HalfElf_Ranger"
-//  │   └─ "WYR_MessHallBodyguard_04"
+//  │   ├─ "HAV_FlamingFist_HalfElf_Ranger"     --- Fist Aubree, Flaming Fist
+//  │   ├─ "LOW_Guildhall_SlickInatra"          --- Slick Inatra, Zhentarim
+//  │   ├─ "WYR_DanthelonShop_HalfElf_Ranger"   --- Harper Geraldus, Harpers
+//  │   └─ "WYR_MessHallBodyguard_04"           --- Lord Portyr's Bodyguard
 
 new entry "HalfElf_Ranger"
 type "Character"
 using "HalfElf_Ranger"
 // data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
 // "_HalfElf"
-//  ├─ "HalfElf_Rogue"
-//  │   ├─ "END_Zhentarim_HalfElf"
+//  ├─ "HalfElf_Rogue"                          --- Greenfern
+//  │   ├─ "END_Zhentarim_HalfElf"              --- Zhent Half-Elven
 //  │   ├─ "LOW_Guildhall_Swarm_Melee_HalfElf"
 //  │   └─ "LOW_Guildhall_Swarm_Ranged_HalfElf"
 
@@ -2571,18 +2607,7 @@ new entry "HalfElf_Rogue"
 type "Character"
 using "HalfElf_Rogue"
 // data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Rogue_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-
-// "_HalfElf"
-//  ├─ "HalfElf_Child"
-//  ├─ "HalfElf_Commoner"
-//  │   └─ "HalfElf_Commoner_Cowering"
-
-new entry "HalfElf_Commoner_Cowering"
-type "Character"
-using "HalfElf_Commoner_Cowering"
-// data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;Darkvision;DarknessRules"
-data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Rogue_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
 // "_HalfElf"
 //  │   ├─ "HalfElf_Cultist_Bane_IronConsul"
@@ -2593,26 +2618,28 @@ data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;D
 new entry "HalfElf_Cultist_Bane_IronConsul"
 type "Character"
 using "HalfElf_Cultist_Bane_IronConsul"
-// data "Passives" "ExtraAttack;Tactical_Discipline;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules;ExtraAttack;Tactical_Discipline"
+// data "Passives" "ExtraAttack;Tactical_Discipline;FeyAncestry;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules;ExtraAttack;Tactical_Discipline"
 
 new entry "MOO_AcolyteOfTheAbsolute_HalfElf"
 type "Character"
 using "MOO_AcolyteOfTheAbsolute_HalfElf"
 // data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
+// Adept Bel - Cult of the Absolute
 new entry "MOO_FanaticOfTheAbsolute_HalfElf"
 type "Character"
 using "MOO_FanaticOfTheAbsolute_HalfElf"
 // data "Passives" "FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;CX_Spells_L4C;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;CX_Spells_L4C;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules"
 
+// Zealot Iogar - Cult of the Absolute
 new entry "MOO_ZealotOfTheAbsolute_HalfElf"
 type "Character"
 using "MOO_ZealotOfTheAbsolute_HalfElf"
 // data "Passives" "AttackOfOpportunity;FeyAncestry;HumanMilitia;HumanVersatility;DarknessRules;Darkvision;FightingStyle_GreatWeaponFighting"
-data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules;FightingStyle_GreatWeaponFighting"
+data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules;FightingStyle_GreatWeaponFighting"
 
 // ==================================== Half-Orc ====================================
 

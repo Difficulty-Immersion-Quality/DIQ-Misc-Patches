@@ -159,32 +159,6 @@ using "CC_SORCEROUS_WAGER_NINE"
 data "DescriptionParams" "5"
 data "Boosts" "RollBonus(MeleeSpellAttack,5);RollBonus(RangedSpellAttack, 5);SpellSaveDC(5)"
 
-// Ring of Sorcerous Supremacy: Sorcerous Potency can only be triggered once per turn now (previously no limit)
-// Change StatsFunctorContext to OnTurn to ensure the status is reapplied at the start of every turn, and only at the start of the turn
-new entry "CC_SorcerousPotency_Passive"
-type "PassiveData"
-using "CC_SorcerousPotency_Passive"
-// For every &lt;LSTag Type="ActionResource" Tooltip="SorceryPoint"&gt;Sorcery Point&lt;/LSTag&gt; you have unused (up to a maximum of 20 unused Sorcery Points), your spells deals an additional +1 damage. This effect can only occur once per turn.
-data "Description" "h05087e11gc7efg4076gbffbgaa1a0b1f6f17;1"
-data "StatsFunctorContext" "OnCombatStarted;OnTurn"
-
-new entry "CC_SORCEROUS_POTENCY"
-type "StatusData"
-data "StatusType" "BOOST"
-using "CC_SORCEROUS_POTENCY"
-// Your spells deal an additional +1 damage for each &lt;LSTag Type="ActionResource" Tooltip="SorceryPoint"&gt;Sorcery Point&lt;/LSTag&gt; you have unspent. This effect can only occur once per turn.
-data "Description" "h4382e696gbd10g41abgbce4gd7b82079b951;1"
-data "Passives" "CHT_CC_SorcerousPotency_Tech_Passive" 
-
-// Custom technical passive to remove the status after having done damage with a spell
-// Note that this doesn't work with Chaos Bolt from 5e Spells because its implementation is weird, so OnDamage doesn't actually appear to catch Chaos Bolt's damage. Same issue with the Gloves of Sorcerous Might from this mod, which works very similarly. Can be abused but likely no one will ever find out :)
-new entry "CHT_CC_SorcerousPotency_Tech_Passive"
-type "PassiveData"
-data "Properties" "IsHidden"
-data "StatsFunctorContext" "OnDamage"
-data "Conditions" "IsSpell()"
-data "StatsFunctors" "RemoveStatus(SELF,CC_SORCEROUS_POTENCY)"
-
 // Hat of Font Surge: Font Surge now only recovers Sorcery Points equal to half your Sorcerer level, rounded up (previously equal to Sorcerer level)
 new entry "CC_Shout_FontSurge"
 type "SpellData"
@@ -203,73 +177,94 @@ data "Description" "h66f71dabge247g4b6agaaa8gde857ac2cfa8;1"
 data "DescriptionParams" "2"
 data "Boosts" "IF(IsConcentrating):RollBonus(SavingThrow,2,Constitution)"
 
-// Grimoire of the First Sorcerer: slight decrease to Sorcery Point recovery chance of Echo of Forgotten Power
+// Grimoire of the First Sorcerer: decrease to Sorcery Point recovery chance of Echo of Forgotten Power
 new entry "CC_FORGOTTEN_POWER"
 type "StatusData"
 data "StatusType" "BOOST"
 using "CC_FORGOTTEN_POWER"
-data "OnApplyFunctors" "IF(RollDieAgainstDC(DiceType.d100,80)):RestoreResource(SorceryPoint,1,0);IF(RollDieAgainstDC(DiceType.d100,83)):RestoreResource(SorceryPoint,2,0);IF(RollDieAgainstDC(DiceType.d100,87)):RestoreResource(SorceryPoint,3,0);IF(RollDieAgainstDC(DiceType.d100,91)):RestoreResource(SorceryPoint,4,0);IF(RollDieAgainstDC(DiceType.d100,96)):RestoreResource(SorceryPoint,5,0)"
+data "OnApplyFunctors" "IF(RollDieAgainstDC(DiceType.d100,81)):RestoreResource(SorceryPoint,1,0);IF(RollDieAgainstDC(DiceType.d100,86)):RestoreResource(SorceryPoint,2,0);IF(RollDieAgainstDC(DiceType.d100,91)):RestoreResource(SorceryPoint,3,0);IF(RollDieAgainstDC(DiceType.d100,96)):RestoreResource(SorceryPoint,4,0);IF(RollDieAgainstDC(DiceType.d100,98)):RestoreResource(SorceryPoint,5,0)"
 
-// Pouch of Sorcerous Sand: fix Sorcerous Sand not having a per long rest cooldown 
-// The OncePerLongRest in the Properties of CC_SorcerousSand_Passive doesn't actually work for some reason, but keeping it so it shows on the tooltip. Instead, using a custom action resource (with per long rest recharge) and passive to enforce the cooldown
-// This will display "Sorcerous Sand Charge +1" in the tooltip for the amulet, which I unfortunately can't do anything about because Boosts can't be hidden, and all action resources need a DisplayName
-new entry "CC_Sorcerer_Equipment_Pouch_of_Sorcerous_Sand"
-type "Armor"
-using "CC_Sorcerer_Equipment_Pouch_of_Sorcerous_Sand"
-data "PassivesOnEquip" "CC_SorcerousSand_Passive;CHT_CC_SorcerousSand_Technical_Passive"
-data "Boosts" "IF(not HasStatus('CHT_CC_SORCEROUSSAND_TRACKER', context.Source)):ActionResource(CHT_SorcerousSand_Resource,1,0)"
+// ====== Pouch of Sorcerous Sand and Amulet of the Infinite Wellspring: add compatibility for metamagic options from darkcharl's Metamagic Extended ======
+// Custom statuses + passives to track the metamagic being toggled on. Note that the mod's metamagic passives for Empowered and Transmuted already include these statuses
+new entry "Metamagic_Seeking"
+type "PassiveData"
+using "Metamagic_Seeking"
+data "ToggleOnFunctors" "ApplyStatus(CHT_CC_METAMAGIC_SEEKING,100,-1)"
+data "ToggleOffFunctors" "RemoveStatus(CHT_CC_METAMAGIC_SEEKING)"
 
+new entry "CHT_CC_METAMAGIC_SEEKING"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StackId" "CHT_CC_METAMAGIC_SEEKING"
+data "StackPriority" "0"
+data "Passives" "CHT_CC_Meta_Seeking"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusGroups" "SG_RemoveOnRespec"
+
+new entry "CHT_CC_Meta_Seeking"
+type "PassiveData"
+data "Properties" "IsHidden"
+
+new entry "METAMAGIC_EMPOWERED"
+type "StatusData"
+data "StatusType" "BOOST"
+using "METAMAGIC_EMPOWERED"
+data "Passives" "CHT_CC_Meta_Empowered"
+
+new entry "CHT_CC_Meta_Empowered"
+type "PassiveData"
+data "Properties" "IsHidden"
+
+new entry "METAMAGIC_TRANSMUTED_SPELL"
+type "StatusData"
+data "StatusType" "BOOST"
+using "METAMAGIC_TRANSMUTED_SPELL"
+data "Passives" "CHT_CC_Meta_Transmuted"
+
+new entry "CHT_CC_Meta_Transmuted"
+type "PassiveData"
+data "Properties" "IsHidden"
+
+// Making the Freecast status work with the new metamagics
+new entry "CC_SORCERER_FREE_CAST"
+type "StatusData"
+data "StatusType" "BOOST"
+using "CC_SORCERER_FREE_CAST"
+data "Boosts" "IF(HasPassive('CC_Meta_Careful',context.Source) or HasPassive('CC_Meta_Distant',context.Source) or HasPassive('CC_Meta_Extended',context.Source) or HasPassive('CC_Meta_Twinned',context.Source) or HasPassive('CC_Meta_Heightened',context.Source) or HasPassive('CC_Meta_Quickened',context.Source) or HasPassive('CC_Meta_Subtle',context.Source) or HasPassive('CHT_CC_Meta_Seeking',context.Source) or HasPassive('CHT_CC_Meta_Empowered',context.Source) or HasPassive('CHT_CC_Meta_Transmuted',context.Source)):UnlockSpellVariant(not SpellId(' '),ModifyUseCosts(Replace,SorceryPoint,0,0,SorceryPoint))"
+
+// Making the respective item passives work with the new metamagics (compatibility fix for Amulet of the Infinite Wellspring is included in its own section below)
 new entry "CC_SorcerousSand_Passive"
 type "PassiveData"
 using "CC_SorcerousSand_Passive"
-data "EnabledConditions" "HasActionResource('CHT_SorcerousSand_Resource', 1, 0, false, false, context.Source) and HasActionResource('SorceryPoint', 1, 0, false, false, context.Source) and (HasStatus('CC_METAMAGIC_CAREFUL',context.Source) or HasStatus('CC_METAMAGIC_DISTANT',context.Source) or HasStatus('CC_METAMAGIC_EXTENDED',context.Source) or HasStatus('CC_METAMAGIC_HEIGHTENED',context.Source) or HasStatus('CC_METAMAGIC_QUICKENED',context.Source) or HasStatus('CC_METAMAGIC_SUBTLE',context.Source) or HasStatus('CC_METAMAGIC_TWINNED',context.Source))"
-
-new entry "CHT_CC_SorcerousSand_Technical_Passive"
-type "PassiveData"
-data "Properties" "IsHidden"
-data "StatsFunctorContext" "OnCast"
-data "Conditions" "HasStatus('CC_SORCERER_FREE_CAST')"
-data "StatsFunctors" "UseActionResource(SELF,CHT_SorcerousSand_Resource,1,0);ApplyStatus(SELF,CHT_CC_SORCEROUSSAND_TRACKER,100,-1)"
-
-// Custom tracker status to ensure you can't unequip and equip the amulet to get its cooldown action resource back
-new entry "CHT_CC_SORCEROUSSAND_TRACKER"
-type "StatusData"
-data "StatusType" "BOOST"
-data "StackId" "CHT_CC_SORCEROUSSAND_TRACKER"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "EnabledConditions" "HasActionResource('SorceryPoint', 1, 0, false, false, context.Source) and (HasStatus('CC_METAMAGIC_CAREFUL',context.Source) or HasStatus('CC_METAMAGIC_DISTANT',context.Source) or HasStatus('CC_METAMAGIC_EXTENDED',context.Source) or HasStatus('CC_METAMAGIC_HEIGHTENED',context.Source) or HasStatus('CC_METAMAGIC_QUICKENED',context.Source) or HasStatus('CC_METAMAGIC_SUBTLE',context.Source) or HasStatus('CC_METAMAGIC_TWINNED',context.Source) or HasStatus('CHT_CC_METAMAGIC_SEEKING',context.Source) or HasStatus('METAMAGIC_EMPOWERED',context.Source) or HasStatus('METAMAGIC_TRANSMUTED_SPELL',context.Source)) and not HasStatus('CC_SORCERER_FREE_CAST_USED')"
 
 // Amulet of the Infinite Wellspring: fix Endless Well not having a once per turn cooldown and add 1d8 Force self-damage each time you use it
-// Add OncePerTurn to the Proprties of CC_EndlessWell_Passive. As with CC_SorcerousSand_Passive, it doesn't actually work, but keeping it so it shows on the tooltip. Instead, using a custom action resource (with per turn recharge) and passive to deal the self damage and enforce the cooldown
-// This will display "Endless Well Charge +1" in the tooltip for the amulet, which I unfortunately can't do anything about because Boosts can't be hidden, and all action resources need a DisplayName
-new entry "CC_Sorcerer_Equipment_Amulet_of_the_Infinite_Wellspring"
-type "Armor"
-using "CC_Sorcerer_Equipment_Amulet_of_the_Infinite_Wellspring"
-data "PassivesOnEquip" "CC_EndlessWell_Passive;CHT_CC_EndlessWell_Technical_Passive"
-data "Boosts" "IF(not HasStatus('CHT_CC_ENDLESSWELL_TRACKER', context.Source)):ActionResource(CHT_EndlessWell_Resource,1,0)"
-
+// Add OncePerTurn to the Proprties of CC_EndlessWell_Passive. It doesn't actually work, but adding it so it shows on the tooltip
 new entry "CC_EndlessWell_Passive"
 type "PassiveData"
 using "CC_EndlessWell_Passive"
 // The amulet floods your being with raw magical energy, allowing you to draw upon its infinite reserves of &lt;LSTag Type="ActionResource" Tooltip="SorceryPoint"&gt;Sorcery Points&lt;/LSTag&gt;. You can only use this effect once per turn and you take [1] each time you use it. (Metamagic ability needs to be active.)
-data "Description" "h27ad4a5fg8ebeg4b8egb71dg81a7d073b070;1"
+data "Description" "hbb24d954g7812g4cbeg87a6g8e8d8047ecb2;1"
 data "DescriptionParams" "DealDamage(1d8,Force)"
 data "Properties" "Highlighted;ToggledDefaultAddToHotbar;IsToggled;OncePerTurn"
-data "EnabledConditions" "HasActionResource('CHT_EndlessWell_Resource', 1, 0, false, false, context.Source) and HasActionResource('SorceryPoint', 1, 0, false, false, context.Source) and (HasStatus('CC_METAMAGIC_CAREFUL',context.Source) or HasStatus('CC_METAMAGIC_DISTANT',context.Source) or HasStatus('CC_METAMAGIC_EXTENDED',context.Source) or HasStatus('CC_METAMAGIC_HEIGHTENED',context.Source) or HasStatus('CC_METAMAGIC_QUICKENED',context.Source) or HasStatus('CC_METAMAGIC_SUBTLE',context.Source) or HasStatus('CC_METAMAGIC_TWINNED',context.Source))"
-data "ToggleOffFunctors" "RemoveStatus(CC_SORCERER_FREE_CAST)"
+data "EnabledConditions" "HasActionResource('SorceryPoint', 1, 0, false, false, context.Source) and (HasStatus('CC_METAMAGIC_CAREFUL',context.Source) or HasStatus('CC_METAMAGIC_DISTANT',context.Source) or HasStatus('CC_METAMAGIC_EXTENDED',context.Source) or HasStatus('CC_METAMAGIC_HEIGHTENED',context.Source) or HasStatus('CC_METAMAGIC_QUICKENED',context.Source) or HasStatus('CC_METAMAGIC_SUBTLE',context.Source) or HasStatus('CC_METAMAGIC_TWINNED',context.Source) or HasStatus('CHT_CC_METAMAGIC_SEEKING',context.Source) or HasStatus('METAMAGIC_EMPOWERED',context.Source) or HasStatus('METAMAGIC_TRANSMUTED_SPELL',context.Source)) and not HasStatus('CHT_CC_SORCERER_ENDLESSWELL_USED')"
+data "ToggleOnFunctors" "ApplyStatus(CHT_CC_SORCERER_ENDLESSWELL_TRACKER,100,-1);IF(HasStatus('CC_SORCERER_FREE_CAST_TECHNICAL', context.Source)):ApplyStatus(CC_SORCERER_FREE_CAST,100,-1)"
+data "ToggleOffFunctors" "RemoveStatus(CC_SORCERER_FREE_CAST);RemoveStatus(CHT_CC_SORCERER_ENDLESSWELL_TRACKER)"
 
-new entry "CHT_CC_EndlessWell_Technical_Passive"
-type "PassiveData"
-data "Properties" "IsHidden"
-data "StatsFunctorContext" "OnCast"
-data "Conditions" "HasStatus('CC_SORCERER_FREE_CAST')"
-data "StatsFunctors" "DealDamage(SELF,1d8,Force);UseActionResource(SELF,CHT_EndlessWell_Resource,1,0);ApplyStatus(SELF,CHT_CC_ENDLESSWELL_TRACKER,100,1)"
-
-// Custom tracker status to ensure you can't unequip and equip the amulet to get its cooldown action resource back
-new entry "CHT_CC_ENDLESSWELL_TRACKER"
+new entry "CHT_CC_SORCERER_ENDLESSWELL_TRACKER"
 type "StatusData"
 data "StatusType" "BOOST"
-data "StackId" "CHT_CC_ENDLESSWELL_TRACKER"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StackId" "CHT_CC_SORCERER_ENDLESSWELL_TRACKER"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;"
+data "RemoveEvents" "OnSpellCast"
+data "RemoveConditions" "HasStatus('CC_SORCERER_FREE_CAST',context.Source)"
+data "OnRemoveFunctors" "IF(HasStatus('CC_SORCERER_FREE_CAST',context.Source)):ApplyStatus(CHT_CC_SORCERER_ENDLESSWELL_USED,100,1);IF(HasStatus('CC_SORCERER_FREE_CAST',context.Source)):DealDamage(SELF,1d8,Force)"
+
+new entry "CHT_CC_SORCERER_ENDLESSWELL_USED"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StackId" "CHT_CC_SORCERER_ENDLESSWELL_USED"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"
 
 // ===== Hopefully prevent passives from functioning as damage rider sources =====
 new entry "CC_CharismaticForce_Passive"
@@ -506,18 +501,6 @@ data "Description" "had698a50g6587g4092g9456gb23b405f2d78;1"
 data "DescriptionParams" "25"
 data "StatsFunctors" "IF(RollDieAgainstDC(DiceType.d100,76)):ApplyStatus(SELF,OO_RESTORE_OATH,100,0)"
 
-// Holy Avenger's Longsword: change Avenger's Fury to be a single instance of damage to prevent multiple damage riders against Fiends/Undead (previously was two separate passives)
-new entry "OO_Paladin_Equipment_Holy_Avengers_Longsword"
-type "Weapon"
-using "OO_Paladin_Equipment_Holy_Avengers_Longsword"
-data "PassivesOnEquip" "OO_AvengerFury_01_Passive;OO_BastionResolve_Passive"
-
-new entry "OO_AvengerFury_01_Passive"
-type "PassiveData"
-using "OO_AvengerFury_01_Passive"
-data "Conditions" "AttackedWithPassiveSourceWeapon()"
-data "StatsFunctors" "IF(not Tagged('FIEND',context.Target) or not Tagged('UNDEAD',context.Target)):DealDamage(1d8,Radiant,Magical,,0,,true,true);IF(Tagged('FIEND',context.Target) or Tagged('UNDEAD',context.Target)):DealDamage(2d8,Radiant,Magical,,0,,true,true)"
-
 // Holy Avenger's Longsword: decrease saving throw bonus of Bastion of Resolve to +3 (previously +4)
 new entry "OO_BastionResolve_Passive"
 type "PassiveData"
@@ -634,6 +617,11 @@ new entry "OO_EmboldenedSmite_Passive"
 type "PassiveData"
 using "OO_EmboldenedSmite_Passive"
 data "StatsFunctors" "DealDamage(1d4,Radiant,Magical,,0,,true,true)"
+
+new entry "OO_AvengerFury_Passive"
+type "PassiveData"
+using "OO_AvengerFury_Passive"
+data "StatsFunctors" "IF(not Tagged('FIEND',context.Target) and not Tagged('UNDEAD',context.Target)):DealDamage(1d8,Radiant,Magical,,0,,true,true);IF(Tagged('FIEND',context.Target) or Tagged('UNDEAD',context.Target)):DealDamage(2d8,Radiant,Magical,,0,,true,true)"
 
 // ==================================== Pact and Power - Warlock Equipment  ====================================
 
@@ -988,19 +976,6 @@ data "SpellType" "Zone"
 using "Zone_MAG_Monk_BowShot"
 data "SpellFlags" "HasSomaticComponent;IsHarmful;IsDefaultWeaponAction"
 
-// Pearl of the Coral Throne: decrease High Spellcasting spell save DC bonus to +2 (previously +3) to be in line with Amulet of the Devout from vanilla
-// Instead of changing the passive from the mod, just using the passive from vanilla instead
-new entry "MonkEquipmentAct3_Pearl_of_the_Coral_Throne"
-type "Armor"
-using "MonkEquipmentAct3_Pearl_of_the_Coral_Throne"
-data "PassivesOnEquip" "MAG_SpellSaveDC_Enchantment_Passive"
-
-// Steady Striker: increase cost by 2x to 380 gold base price (previously 190 gold base price) 
-new entry "MonkEquipmentAct3_Steady_Striker"
-type "Weapon"
-using "MonkEquipmentAct3_Steady_Striker"
-data "ValueScale" "2"
-
 // Vestment of the Ascended Fist: change Unarmoured Defence passive to only give +1 extra AC (previously +3). Compare the original version of this armour with Vest of Soul Rejuvenation (vanilla endgame Monk armour) and this one was so much better in every way
 // Replaced previous passive with the same passive as Shattered Sun Vest, the other legendary cloth armour in this mod.
 new entry "MonkEquipmentAct3_Vestment_of_the_Ascended_Fist"
@@ -1008,12 +983,6 @@ type "Armor"
 using "MonkEquipmentAct3_Vestment_of_the_Ascended_Fist"
 data "RootTemplate" "1b899406-c01d-4d4f-b948-c32f4be4cddc"
 data "PassivesOnEquip" "UnarmoredDefense_Monk_ShatteredSun;MAG_Monk_StunningStrike_Reaction_Passive"
-
-// Gloves of the Iron Fist: increase cost by 4x to 1200 gold base price (previously 300 gold base price)
-new entry "MonkEquipmentAct3_Gloves_of_the_Iron_Fist"
-type "Armor"
-using "MonkEquipmentAct3_Gloves_of_the_Iron_Fist"
-data "ValueScale" "4"
 
 // ==================================== Veil and Venom - Rogue Equipment ====================================
 

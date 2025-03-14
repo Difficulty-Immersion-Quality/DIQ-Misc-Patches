@@ -3515,7 +3515,7 @@ new entry "LOW_Amelyssan"
 type "Character"
 using "LOW_Amelyssan"
 // data "Passives" "Ethereal;TurnResistance;IncorporealMovement;AttackOfOpportunity;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;Metamagic_Distant_NPC"
-data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;CX_Spells_L5C;CX_Spells_L6C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;SuperiorDarkvision;SunlightSensitivity;Ethereal;TurnResistance;IncorporealMovement;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;Metamagic_Distant_NPC"
+data "Passives" "CX_Cleric_Boostl;CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L5C;CX_Spells_L6C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;SuperiorDarkvision;SunlightSensitivity;Ethereal;TurnResistance;IncorporealMovement;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;Metamagic_Distant_NPC"
 
 // Wizzard
 new entry "LOW_AradinThug_Wizzard"
@@ -4181,12 +4181,14 @@ using "Human_Cultist_Bane_BlackGauntlet"
 // data "Passives" "ExtraAttack;Tactical_Discipline;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;ExtraAttack;Tactical_Discipline"
 
+// Fist of Bane Volgu Drak, Waldemar Prinski, Feloguard Sigurd, Guard Inocente Bramm, Fist of Bane Polandulus, Fist of Bane Gasper Throaks, Guard Baalfe, Fist of Bane Hyrriet, Fist of Bane Zana Hade, Fist of Bane Gudrun - Cult of Bane
 new entry "Human_Cultist_Bane_Fist"
 type "Character"
 using "Human_Cultist_Bane_Fist"
 // data "Passives" "ExtraAttack;Tactical_Discipline;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;ExtraAttack;Tactical_Discipline"
 
+// Feloguard Liadan, Iron Consul Jaxbock, Guard Wulf, Iron Consul Lo, Iron Consul Stalwart, Iron Consul Garmin, Guard Hertvor Dremble, Iron Consul Malik the Cruel - Cult of Bane
 new entry "Human_Cultist_Bane_IronConsul"
 type "Character"
 using "Human_Cultist_Bane_IronConsul"
@@ -4226,7 +4228,7 @@ using "Human_Gondian_Caster"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
-// Sarevok - HONOUR MODE INHERITANCE
+// Sarevok Anchev - Justice of the Murder Tribunal, Cult of Bhaal - HONOUR MODE INHERITANCE
 new entry "LOW_Sarevok"
 type "Character"
 using "LOW_Sarevok"

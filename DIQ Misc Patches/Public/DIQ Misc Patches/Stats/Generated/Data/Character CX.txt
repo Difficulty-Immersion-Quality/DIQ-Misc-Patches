@@ -3182,40 +3182,52 @@ data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;Halfling_Lucky;Halfling_Brave
 //  │   │   ├─ "Hobgoblin_Devastator"
 //  │   │   └─ "LOW_HagSurvivor_Kleid"
 
+new entry "Hobgoblin"
+type "Character"
+using "Hobgoblin"
+// data "Passives" "MartialAdvantage;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Martial_Boost;MartialAdvantage;AttackOfOpportunity;Darkvision;DarknessRules"
+
+new entry "Hobgoblin_Boss"
+type "Character"
+using "Hobgoblin_Boss"
+// data "Passives" "MartialAdvantage;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Barbarian_Boost;CX_Martial_Boost;MartialAdvantage;AttackOfOpportunity;Darkvision;DarknessRules"
+
 // Dror Ragzlin - HONOUR MODE INHERITANCE
 new entry "GOB_Hobgoblin_Boss"
 type "Character"
 using "GOB_Hobgoblin_Boss"
 // data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;MartialAdvantage;UnarmouredDefence_Barbarian;"
 // data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;MartialAdvantage;UnarmouredDefence_Barbarian;LegendaryAction_GOB_Dror;"
-data "Passives" "CX_Barbarian_Boost;CX_Martial_Boost;AttackOfOpportunity;Darkvision;DarknessRules;MartialAdvantage;UnarmouredDefence_Barbarian;LegendaryAction_GOB_Dror"
+data "Passives" "CX_Barbarian_Boost;CX_Martial_Boost;MartialAdvantage;AttackOfOpportunity;Darkvision;DarknessRules;UnarmouredDefence_Barbarian;LegendaryAction_GOB_Dror"
 
-// Blurg
+// Blurg - Society of Brilliance
 new entry "UND_SOB_Hobgoblin"
 type "Character"
 using "UND_SOB_Hobgoblin"
 // data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;MartialAdvantage;ExtraAttack"
-data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;AttackOfOpportunity;Darkvision;DarknessRules;MartialAdvantage;ExtraAttack"
+data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;MartialAdvantage;AttackOfOpportunity;Darkvision;DarknessRules;ExtraAttack"
 
 new entry "Hobgoblin_Captain"
 type "Character"
 using "Hobgoblin_Captain"
 // data "Passives" "AttackOfOpportunity;Darkvision;DarknessRules;MartialAdvantage"
-data "Passives" "CX_Barbarian_Boost;CX_Martial_Boost;AttackOfOpportunity;Darkvision;DarknessRules;MartialAdvantage"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;MartialAdvantage;AttackOfOpportunity;Darkvision;DarknessRules"
 
 // Devastator Lizabett, Devastator Stropes
 new entry "Hobgoblin_Devastator"
 type "Character"
 using "Hobgoblin_Devastator"
 // data "Passives" "MartialAdvantage;ArmyArcana;AttackOfOpportunity;Darkvision;DarknessRules"
-data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;AttackOfOpportunity;Darkvision;DarknessRules;MartialAdvantage;ArmyArcana"
+data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;MartialAdvantage;AttackOfOpportunity;Darkvision;DarknessRules;ArmyArcana"
 
 // Kled (Kleidunn)
 new entry "LOW_HagSurvivor_Kleid"
 type "Character"
 using "LOW_HagSurvivor_Kleid"
 // data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;MartialAdvantage;UnarmouredDefence_Barbarian;"
-data "Passives" "CX_Barbarian_Boost;CX_Martial_Boost;AttackOfOpportunity;Darkvision;DarknessRules;MartialAdvantage;UnarmouredDefence_Barbarian"
+data "Passives" "CX_Barbarian_Boost;CX_Martial_Boost;MartialAdvantage;AttackOfOpportunity;Darkvision;DarknessRules;UnarmouredDefence_Barbarian"
 
 // ==================================== Human ====================================
 

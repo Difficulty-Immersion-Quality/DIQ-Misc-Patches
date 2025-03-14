@@ -135,7 +135,7 @@ data "Passives" "CX_Martial_Boost;AttackOfOpportunity;DarknessRules"
 // "_Base"
 //  ├─ "_Humanoid"
 //  │   ├─ "Werewolf"
-//  │   │   ├─ "LOW_CazadorPalace_Ritual_Werewolf"
+//  │   │   ├─ "LOW_CazadorPalace_Ritual_Werewolf" --- Predator Werewolf
 //  │   │   └─ "Werewolf_Strong"
 //  │   ├─ "_FlamingFist"
 
@@ -1097,7 +1097,7 @@ using "HAV_FlamingFist_Elf_Melee"
 // data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
 
-// Halsin portal defense
+// Shadow-Cursed Flaming Fist (Halsin portal defense)
 new entry "HAV_ShadowCursed_FlamingFist_Elf_Melee"
 type "Character"
 using "HAV_ShadowCursed_FlamingFist_Elf_Melee"
@@ -1153,7 +1153,7 @@ data "Passives" "CX_Monk_Boost;CX_Martial_Boost;FeyAncestry;AttackOfOpportunity;
 //  ├─ "Elf_Ranger"
 //  │   ├─ "END_HarperRanger_Elf"
 //  │   ├─ "HAV_Harper_Elf_Ranger"                  --- Harper Elifer - Harpers
-//  │   ├─ "HAV_ShadowCursed_Harper_Elf_Ranger"     --- Halsin portal defense
+//  │   ├─ "HAV_ShadowCursed_Harper_Elf_Ranger"     --- Shadow-Cursed Harper (Halsin portal defense)
 //  │   ├─ "SCL_Harper_Elf_Ranger"
 //  │   │   └─ "LOW_HarperConfrontation_Ranger_Elf" --- Harper Blaird - Harpers
 //  │   ├─ "WYR_MessHallBodyguard_03"
@@ -1611,32 +1611,35 @@ using "Githyanki_GateMaster"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Magic_Boost;AttackOfOpportunity;DarknessRules"
 
+// Gish Far'aag, Gish Yy'rul, Gish Umr'a'ac, Gish For'reth - Crèche Y'llek / A'jak'nir Jeera - Quartermistress, Crèche Y'llek
 new entry "Githyanki_Gish"
 type "Character"
 using "Githyanki_Gish"
 // data "Passives" "WarMagic_Githyanki;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Martial_Boost;CX_Magic_Boost;CX_Spells_L1;CX_Spells_L2;CX_Spells_L3;AttackOfOpportunity;DarknessRules;WarMagic_Githyanki"
 
-// Kith'rak Therezzyn
+// Kith'rak Therezzyn - Commander of Crèche Y'llek, Crèche Y'llek
 new entry "CRE_Githyanki_Captain"
 type "Character"
 using "CRE_Githyanki_Captain"
 // data "Passives" "WarMagic_Githyanki;Parry_Githyanki;AttackOfOpportunity;DarknessRules;Surprise_Immunity;Parry_Githyanki_EquipTrigger"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules;WarMagic_Githyanki;Parry_Githyanki;Parry_Githyanki_EquipTrigger;Surprise_Immunity"
 
-// Varsh Ko'kuu - Custodian of the Hatchery
+// Varsh Ko'kuu - Custodian of the Hatchery, Crèche Y'llek
 new entry "CRE_Githyanki_Varsh"
 type "Character"
 using "CRE_Githyanki_Varsh"
 // data "Passives" "WarMagic_Githyanki;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;Alert;CX_Spells_L1;CX_Spells_L2;CX_Spells_L3;CX_Spells_L3C;AttackOfOpportunity;DarknessRules;WarMagic_Githyanki"
 
+// Veteran Gish Ghush'ins, Veteran Gish Zhendila - Githyanki (Faction)
 new entry "Githyanki_Gish_Strong"
 type "Character"
 using "Githyanki_Gish_Strong"
 // data "Passives" "WarMagic_Githyanki;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Fighter_Boost;CX_Magic_Boost;CX_Spells_L3;CX_Spells_L4;CX_Spells_L4C;CX_Spells_L5;CX_Spells_L5C;AttackOfOpportunity;DarknessRules;WarMagic_Githyanki"
 
+// Ardent Kur'ashk, Ardent Qu'th, Ardent Jhe'rezath, Ardent Vraalsith, Ardent G'nuril, Ardent Lin'a'an - Crèche Y'llek
 new entry "Githyanki_IntelligenceOfficer"
 type "Character"
 using "Githyanki_IntelligenceOfficer"
@@ -1683,18 +1686,21 @@ using "Githyanki_Gishra_Caster"
 // data "Passives" "PsychicStrikes_Githyanki;Gishra_ArchetypeChange_Githyanki;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Monk_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules;PsychicStrikes_Githyanki;Gishra_ArchetypeChange_Githyanki"
 
+// Ancient Githyanki Warrior, Decapitated Gith
 new entry "Githyanki_Melee"
 type "Character"
 using "Githyanki_Melee"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules"
 
+// Shadow-Cursed Githyanki Warrior, + loads of characters
 new entry "Githyanki_Warrior"
 type "Character"
 using "Githyanki_Warrior"
 // data "Passives" "ExtraAttack;Parry_Githyanki;AttackOfOpportunity;DarknessRules;Parry_Githyanki_EquipTrigger"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules;ExtraAttack;Parry_Githyanki;Parry_Githyanki_EquipTrigger"
 
+// Veteran Warrior Ma'athal, Veteran Warrior Bradi'ith
 new entry "Githyanki_Warrior_Strong"
 type "Character"
 using "Githyanki_Warrior_Strong"
@@ -1716,6 +1722,7 @@ using "PLA_Githyanki_Captain"
 // data "Passives" "ExtraAttack;Parry_Githyanki;AttackOfOpportunity;DarknessRules;Parry_Githyanki_EquipTrigger"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules;WarMagic_Githyanki;Parry_Githyanki;Parry_Githyanki_EquipTrigger;Surprise_Immunity"
 
+// Shadow-Cursed Githyanki Warrior (Halsin portal defense)
 new entry "HAV_ShadowCursed_Warrior_Githyanki_Melee"
 type "Character"
 using "HAV_ShadowCursed_Warrior_Githyanki_Melee"
@@ -1733,18 +1740,26 @@ data "Passives" "CX_Monk_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRule
 //  │   └─ "PLA_Githyanki_Rogue"
 //  └─ "INT_Orpheus"
 
+new entry "Githyanki_Ranger"
+type "Character"
+using "Githyanki_Ranger"
+// data "Passives" "AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules"
+
+// Raider Helag, Raider Un'n, Raider Chy'raagh, Raider G'r'ath, Raider Ra'gur, Raider Jy'ir, Raider Ahu'u'rag, Raider Kyrr'a'ath, Raider Zastri, Raider Add'ath, Raider Zar'an, Raider Chost 
+// A lot of these ranged Githyanki are Battlemaster Fighters with crossbows, not Rangers
 new entry "Githyanki_Raider"
 type "Character"
 using "Githyanki_Raider"
 // data "Passives" "ExtraAttack;CrossbowExpert_PointBlank;CrossbowExpert_Wounding;AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules;ExtraAttack;CrossbowExpert_PointBlank;CrossbowExpert_Wounding"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules;ExtraAttack;CrossbowExpert_PointBlank;CrossbowExpert_Wounding"
 
-// Sa'varsh Kethk
+// Sa'varsh Kethk - Warfare Instructor, Crèche Y'llek
 new entry "CRE_Githyanki_Savarsh"
 type "Character"
 using "CRE_Githyanki_Savarsh"
 // data "Passives" "ExtraAttack;CrossbowExpert_PointBlank;CrossbowExpert_Wounding;AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;Alert;AttackOfOpportunity;DarknessRules;ExtraAttack;CrossbowExpert_PointBlank;CrossbowExpert_Wounding"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;Alert;AttackOfOpportunity;DarknessRules;ExtraAttack;CrossbowExpert_PointBlank;CrossbowExpert_Wounding"
 
 new entry "PLA_Githyanki_Ranger"
 type "Character"
@@ -3589,12 +3604,12 @@ using "Human_Melee"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
-// Halsin portal defense
+// Shadow-Cursed Zealot (Halsin portal defense)
 new entry "HAV_ShadowCursed_Warrior_Human_Melee"
 type "Character"
 using "HAV_ShadowCursed_Warrior_Human_Melee"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules"
 
 // "_Human"
 //  ├─ "Human_Melee"

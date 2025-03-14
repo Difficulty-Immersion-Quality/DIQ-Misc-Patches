@@ -1,0 +1,162 @@
+// =============================== Increase price of healing potion, make them cost an action, and increase rarity of stronger potions by a level ===============================
+
+// Healing Potion: increase price by 3x to 30 gold base price (previously 10 gold base price)
+new entry "OBJ_Potion_Healing"
+type "Object"
+using "OBJ_Potion_Healing"
+data "ValueScale" "3"
+
+// Greater Healing Potion: increase price by 5x to 80 gold base price (previously 16 gold base price)
+new entry "OBJ_Potion_Healing_Greater"
+type "Object"
+using "OBJ_Potion_Healing_Greater"
+data "ValueScale" "5"
+data "Rarity" "Uncommon"
+
+// Superior Healing Potion: increase price by 10x to 250 gold base price (previously 25 gold base price)
+new entry "OBJ_Potion_Healing_Superior"
+type "Object"
+using "OBJ_Potion_Healing_Superior"
+data "ValueScale" "10"
+data "Rarity" "Rare"
+
+// Supreme Healing Potion: increase price by 12x to 540 gold base price (previously 45 gold base price)
+new entry "OBJ_Potion_Healing_Supreme"
+type "Object"
+using "OBJ_Potion_Healing_Supreme"
+data "ValueScale" "12"
+data "Rarity" "VeryRare"
+
+// ============================== Change healing from potions to be heal over time ==============================
+
+new entry "POTION_OF_HEALING"
+type "StatusData"
+data "StatusType" "BOOST"
+using "POTION_OF_HEALING"
+data "OnApplyFunctors" "RegainHitPoints(1d4+1);RemoveStatus(BURNING);ApplyStatus(POTION_OF_HEALING_HOT_TECHNICAL,100,2);ApplyStatus(POTION_OF_HEALING_TRACKER,100,1)"
+
+new entry "POTION_OF_HEALING_GREATER"
+type "StatusData"
+data "StatusType" "BOOST"
+using "POTION_OF_HEALING_GREATER"
+data "OnApplyFunctors" "RegainHitPoints(2d4+2);RemoveStatus(BURNING);ApplyStatus(POTION_OF_HEALING_GREATER_HOT_TECHNICAL,100,2);ApplyStatus(POTION_OF_HEALING_TRACKER,100,1)"
+
+new entry "POTION_OF_HEALING_SUPERIOR"
+type "StatusData"
+data "StatusType" "BOOST"
+using "POTION_OF_HEALING_SUPERIOR"
+data "OnApplyFunctors" "RegainHitPoints(4d4+4);RemoveStatus(BURNING);ApplyStatus(POTION_OF_HEALING_SUPERIOR_HOT_TECHNICAL,100,2);ApplyStatus(POTION_OF_HEALING_TRACKER,100,1)"
+
+new entry "POTION_OF_HEALING_SUPREME"
+type "StatusData"
+data "StatusType" "BOOST"
+using "POTION_OF_HEALING_SUPREME"
+data "OnApplyFunctors" "RegainHitPoints(5d4+10);RemoveStatus(BURNING);ApplyStatus(POTION_OF_HEALING_SUPREME_HOT_TECHNICAL,100,2);ApplyStatus(POTION_OF_HEALING_TRACKER,100,1)"
+
+// ============================== Technical statuses for the HoT ==============================
+// Can't get it working by having the statuses share a StackID and overwriting the previous one when you drink another potion, so keeping this for now since it does work.
+// With this implementation, if you drink a regular healing potion on turn 1, then drink a Greater healing potion on turn 2, you'll see both technical statuses on you, but the delayed for the regular potion you drank on turn 1 at least won't trigger due to the TRACKER status 
+
+new entry "POTION_OF_HEALING_HOT_TECHNICAL"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "h3aad8328ge491g45d5ga1a2g5aba1bd4fc7f;1"
+data "Description" "hcd8603aag65e7g44ceg85a4g3ccc8dbf4261"
+data "DescriptionParams" "RegainHitPoints(1d4);RegainHitPoints(1)"
+data "Icon" "Item_CONS_Potion_Healing_A"
+data "StackId" "POTION_OF_HEALING_HOT_TECHNICAL"
+data "StackPriority" "5"
+data "StatusPropertyFlags" "DisableOverhead"
+data "TickType" "EndTurn"
+data "TickFunctors" "ApplyStatus(POTION_OF_HEALING_HOT,100,0)"
+
+new entry "POTION_OF_HEALING_GREATER_HOT_TECHNICAL"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "h7479d2dagdb43g4b51g87e5gd929229bc260;1"
+data "Description" "hcd8603aag65e7g44ceg85a4g3ccc8dbf4261"
+data "DescriptionParams" "RegainHitPoints(2d4);RegainHitPoints(2)"
+data "Icon" "Item_CONS_Potion_Healing_A_Greater"
+data "StackId" "POTION_OF_HEALING_HOT_TECHNICAL"
+data "StackPriority" "10"
+data "StatusPropertyFlags" "DisableOverhead"
+data "TickType" "EndTurn"
+data "TickFunctors" "ApplyStatus(POTION_OF_HEALING_GREATER_HOT,100,0)"
+
+new entry "POTION_OF_HEALING_SUPERIOR_HOT_TECHNICAL"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "h2f6401fdg3b42g4b0cgbe7eg5093be3e3ce1;1"
+data "Description" "hcd8603aag65e7g44ceg85a4g3ccc8dbf4261"
+data "DescriptionParams" "RegainHitPoints(4d4);RegainHitPoints(4)"
+data "Icon" "Item_CONS_Potion_Healing_A_Greater"
+data "StackId" "POTION_OF_HEALING_HOT_TECHNICAL"
+data "StackPriority" "15"
+data "StatusPropertyFlags" "DisableOverhead"
+data "TickType" "EndTurn"
+data "TickFunctors" "ApplyStatus(POTION_OF_HEALING_SUPERIOR_HOT,100,0)"
+
+new entry "POTION_OF_HEALING_SUPREME_HOT_TECHNICAL"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "h6691b981g72d4g4350g80a4g734176c4d910;1"
+data "Description" "hcd8603aag65e7g44ceg85a4g3ccc8dbf4261"
+data "DescriptionParams" "RegainHitPoints(5d4);RegainHitPoints(10)"
+data "Icon" "Item_CONS_Potion_Healing_A_Greater"
+data "StackId" "POTION_OF_HEALING_HOT_TECHNICAL"
+data "StackPriority" "20"
+data "StatusPropertyFlags" "DisableOverhead"
+data "TickType" "EndTurn"
+data "TickFunctors" "ApplyStatus(POTION_OF_HEALING_SUPREME_HOT,100,0)"
+
+// ============================== Statuses applying the actual delayed heal ==============================
+
+new entry "POTION_OF_HEALING_HOT"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "h703e19dbgb892g41e9g9c98g7f7d347e60b0;1"
+data "StackId" "POTION_OF_HEALING_HOT"
+data "StackType" "Overwrite"
+data "StackPriority" "5"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "OnApplyFunctors" "IF(not HasStatus('POTION_OF_HEALING_TRACKER',context.Source)):RegainHitPoints(1d4+1)"
+
+new entry "POTION_OF_HEALING_GREATER_HOT"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "h1481a349gf6a7g43dfg80acg88b24d785b57;1"
+data "StackId" "POTION_OF_HEALING_GREATER_HOT"
+data "StackType" "Overwrite"
+data "StackPriority" "5"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "OnApplyFunctors" "IF(not HasStatus('POTION_OF_HEALING_TRACKER',context.Source)):RegainHitPoints(2d4+2)"
+
+new entry "POTION_OF_HEALING_SUPERIOR_HOT"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "h5505ad91gc6d9g4a5dgb4dbg9b15e4e34412;1"
+data "StackId" "POTION_OF_HEALING_SUPERIOR_HOT"
+data "StackType" "Overwrite"
+data "StackPriority" "5"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "OnApplyFunctors" "IF(not HasStatus('POTION_OF_HEALING_TRACKER',context.Source)):RegainHitPoints(4d4+4)"
+
+new entry "POTION_OF_HEALING_SUPREME_HOT"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "h58f5f038gc24eg43fdgba56g370d2631ca00;1"
+data "StackId" "POTION_OF_HEALING_SUPREME_HOT"
+data "StackType" "Overwrite"
+data "StackPriority" "5"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "OnApplyFunctors" "IF(not HasStatus('POTION_OF_HEALING_TRACKER',context.Source)):RegainHitPoints(5d4+10)"
+
+// ============================== Tracker status to ensure the delayed heal won't trigger if another healing potion is drank ==============================
+
+new entry "POTION_OF_HEALING_TRACKER"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "h42773753gf2a8g49fbg8ffbgbad2264a3808;1"
+data "StackId" "POTION_OF_HEALING_TRACKER"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "TickType" "StartTurn"

@@ -1,3 +1,17 @@
+// ==================================== Nightsong betrayal reward increase ====================================
+
+// Fun idea (not for here obviously): increase the reward for siding with Lorroakan, because 5k gold to capture a literal daughter of Selune and grant him immortality is an insulting sum
+// new treasuretable "LOW_RamazithsTower_Lorroakan_NightsongReward"
+// new subtable "1,1"
+// object category "LOW_RamazithsTower_Lorroakan_NightsongReward",1,0,0,0,0,0,0,0
+
+// new entry "LOW_RamazithsTower_Lorroakan_NightsongReward"
+// type "Object"
+// using "OBJ_GoldPile"
+// data "ObjectCategory" "LOW_RamazithsTower_Lorroakan_NightsongReward"
+// data "MinAmount" "5000"
+// data "MaxAmount" "5000"
+
 // ==================================== Stop NPCs from Rage spamming ====================================
 // Non-functional, in need of further testing - no status being applied
 
@@ -63,15 +77,6 @@ data "SpellType" "Shout"
 using "Shout_Rage_WildMagic"
 data "SpellProperties" "AI_IGNORE:TriggerRandomCast(1,0,WildMagicBarbarian);ApplyStatus(RAGE,100,10);AI_ONLY:ApplyStatus(AI_HELPER_RAGE,100,10);AI_ONLY:ApplyStatus(GOON_AI_RAGE_BLOCKER,100,9)"
 data "RequirementConditions" "not HasStatus('RAGE') and not HasStatus('CALM_EMOTIONS') and not HasStatus('GOON_AI_RAGE_BLOCKER')"
-
-// ==================================== Give chances of getting your action point back after being picked up from a downed state ====================================
-// Restore Reactions too
-
-// new entry "DOWNED"
-// type "StatusData"
-// data "StatusType" "DOWNED"
-// using "DOWNED"
-// data "OnRemoveFunctors" "ResetCombatTurn();RestoreResource(Movement, 100%, 0);RestoreResource(BonusActionPoint, 100%, 0);RestoreResource(ReactionActionPoint, 100%, 0);IF(SavingThrow(Ability, Dexterity, 20)):RestoreResource(ActionPoint, 100%, 0)"
 
 // ==================================== AOE version of "Target_Prestidigitation_Fire" for lighting room fulls of candles and shit ====================================
 // aint started

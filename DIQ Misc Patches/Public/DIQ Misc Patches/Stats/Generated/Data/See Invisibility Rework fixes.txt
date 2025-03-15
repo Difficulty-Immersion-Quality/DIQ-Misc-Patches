@@ -1,3 +1,41 @@
+// ==================================== Wild Shape: Panther's Prowl - Fix to ability not functioning after level 8, description and function fixed to be usable once per short rest/wild shape ====================================
+// (See) Invisibility Rework by drkekyll perpetuates the bug with the "RemoveConditions" in "INVISIBILITY_PANTHER"
+
+new entry "INVISIBILITY_PANTHER"
+type "StatusData"
+data "StatusType" "INVISIBLE"
+// using "INVISIBILITY"
+using "INVISIBILITY_PANTHER"
+// data "RemoveConditions" "(IsStatusEvent(StatusEvent.OnSpellCast) and not HasSpellFlag(SpellFlags.Invisible)) or (IsStatusEvent(StatusEvent.OnDamage) and TotalDamageDoneGreaterThan(0)) or (not IsStatusEvent(StatusEvent.OnSpellCast) and not IsStatusEvent(StatusEvent.OnDamage)) or not HasStatus('WILDSHAPE_PANTHER_PLAYER')"
+data "RemoveConditions" "(IsStatusEvent(StatusEvent.OnSpellCast) and not HasSpellFlag(SpellFlags.Invisible)) or (IsStatusEvent(StatusEvent.OnDamage) and TotalDamageDoneGreaterThan(0)) or (not IsStatusEvent(StatusEvent.OnSpellCast) and not IsStatusEvent(StatusEvent.OnDamage)) or (not HasStatus('WILDSHAPE_PANTHER_PLAYER') and not HasStatus('WILDSHAPE_PANTHER_PLAYER_8') and not HasStatus('WILDSHAPE_PANTHER_PLAYER_10') and not HasStatus('WILDSHAPE_PANTHER_PLAYER_12'))"
+
+new entry "Shout_Prowl_Panther"
+type "SpellData"
+data "SpellType" "Shout"
+// using "Shout_Invisibility_Myrmidon_Air"
+using "Shout_Prowl_Panther"
+// data "SpellProperties" "AI_IGNORE:ApplyStatus(INVISIBILITY_PANTHER,100,-1);AI_ONLY:ApplyStatus(INVISIBILITY_PANTHER,100,2); ApplyStatus(PROWL,100,-1);ApplyStatus(PROWL_USED,100,-1)"
+data "SpellProperties" "AI_IGNORE:ApplyStatus(INVISIBILITY_PANTHER,100,-1);AI_ONLY:ApplyStatus(INVISIBILITY_PANTHER,100,2);ApplyStatus(PROWL,100,-1)"
+// Usable once per &lt;LSTag Tooltip="ShortRest"&gt;Short Rest&lt;/LSTag&gt; or once per &lt;LSTag Type="Spell" Tooltip="Shout_Wildshape_Panther"&gt;Wild Shape&lt;/LSTag&gt;.
+data "ExtraDescription" "h1cc5d359gf11bg458ag9a27gd46a21b9f9a4;1"
+
+new entry "PROWL"
+type "StatusData"
+data "StatusType" "BOOST"
+using "PROWL"
+// data "RemoveConditions" "SpellId('Target_Bite_Panther') or SpellId('Target_JugularStrike_Panther') or SpellId('Projectile_Pounce_Panther_Summon') or not HasStatus('WILDSHAPE_PANTHER_PLAYER')"
+data "RemoveConditions" "SpellId('Target_Bite_Panther') or SpellId('Target_JugularStrike_Panther') or SpellId('Projectile_Pounce_Panther_Summon') or StatusHasStatusGroup(context.StatusId, 'SG_Polymorph_BeastShape')"
+data "OnApplyFunctors" "ApplyStatus(PROWL_USED,100,-1)"
+
+new entry "PROWL_USED"
+type "StatusData"
+data "StatusType" "BOOST"
+using "PROWL_USED"
+// data "RemoveConditions" "not HasStatus('WILDSHAPE_PANTHER_PLAYER') "
+data "RemoveConditions" "StatusHasStatusGroup(context.StatusId, 'SG_Polymorph_BeastShape')"
+// data "RemoveEvents" "OnStatusApplied;OnStatusRemoved"
+data "RemoveEvents" "OnStatusRemoved"
+
 // ==================================== (See) Invisibility Rework by drkekyll - Prevent invisible entities from having advantage against targets with Blindsight ====================================
 // Thanks to the frequently used inheritence of "INVISIBLE" not many "Boosts" fields warrant overwriting
 // We don't bother with Invisible Weapon, it's not relevant for this fix

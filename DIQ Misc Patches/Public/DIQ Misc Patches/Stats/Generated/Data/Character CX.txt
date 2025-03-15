@@ -4574,7 +4574,7 @@ new entry "TWN_KuoToa_melee"
 type "Character"
 using "TWN_KuoToa_melee"
 // data "Passives" "SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;TWN_KuoToa_Storm"
-data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;TWN_KuoToa_Storm"
+data "Passives" "CX_Barbarian_Boost;CX_Martial_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;TWN_KuoToa_Storm"
 
 // Cursed Kuo-Toa Chief (two of em)
 new entry "TWN_KuoToa_champ"

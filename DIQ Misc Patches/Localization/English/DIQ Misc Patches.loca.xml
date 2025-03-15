@@ -159,5 +159,8 @@ Removed when &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Helped&lt;/LSTag&gt
 	<content contentuid="ha5c30c07gfdb3g4382gb12fg826d0ed7d4d9" version="1">Pugilist</content>
 	<content contentuid="h13650c7fgc43dg4b87gab09gf57d4d59d726" version="1">Fighting is not just your life but your career, with legal boxing matches and shady back alleys offering fame and fortune. Surviving as many rounds as you have confers proficiency in Atheltics and Acrobatics. Reading your opponent and entertaining a crowd has made you proficient in Insight and Performance.</content>
 	<content contentuid="h1c253fe3294c4c3393a9374eee8166ea8cb4" version="1">Beatific Restoration</content>
-	<content contentuid="hcaef727831364bcbac900084aaadecbcb717" version="1">Tap into your gift to replenish an expended &lt;LSTag Tooltip="SpellSlot"&gt;spell slot&lt;/LSTag&gt; of any level.</content>  
+	<content contentuid="hcaef727831364bcbac900084aaadecbcb717" version="1">Tap into your gift to replenish an expended &lt;LSTag Tooltip="SpellSlot"&gt;spell slot&lt;/LSTag&gt; of any level.</content> 
+
+	<!-- Other -->
+	<content contentuid="h1cc5d359gf11bg458ag9a27gd46a21b9f9a4" version="1">Usable once per &lt;LSTag Tooltip="ShortRest"&gt;Short Rest&lt;/LSTag&gt; or once per &lt;LSTag Type="Spell" Tooltip="Shout_Wildshape_Panther"&gt;Wild Shape&lt;/LSTag&gt;.</content>
 </contentList>

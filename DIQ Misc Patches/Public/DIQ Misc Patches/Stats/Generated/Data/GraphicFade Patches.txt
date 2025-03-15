@@ -283,11 +283,13 @@ using "Target_ClericStaff_Heal"
 data "Description" "h8963d80dg07f9g4cd6g9eaag2d551f53f2c2;1"
 data "DescriptionParams" "RegainHitPoints(30)"
 
-// Starlight Circlet: remove Channel Divinity Cost from Celestial Spark (otherwise this item/spell just blows)
+// Starlight Circlet: remove Channel Divinity Cost from Celestial Spark (otherwise this item/spell just blows), and correcting description
 new entry "Shout_CelestialSpark"
 type "SpellData"
 data "SpellType" "Shout"
 using "Shout_CelestialSpark"
+data "Description" "haf57e852g0c4bg46d3gafcage13b1fb3a1cf;1"
+data "DescriptionParams" "DealDamage(Distance(5);2d6+Level,Lightning)"
 data "UseCosts" "ActionPoint:1"
 
 // Gauntlets of Divine Fortune: cap Gift of Divinity free spell usage to be for spells of 4th level or lower (previously no limit)
@@ -304,12 +306,6 @@ data "StatusType" "BOOST"
 using "MAG_DIVINE_FORTUNE_CAST"
 data "Description" "haf00e860g5b00g4c6cg8b35g35db19326e8f;1"
 data "Boosts" "UnlockSpellVariant(CHT_DivineFortuneCheck(),ModifyIconGlow(),ModifyTooltipDescription(),ModifyUseCosts(Replace,SpellSlot,0,-1,SpellSlot),ModifyUseCosts(Replace,ChannelDivinity,0,0,ChannelDivinity),ModifyUseCosts(Replace,SpellSlotsGroup,0,-1,SpellSlotsGroup))"
-
-// Pendant of Divine Duality: increase cost by 1.6x to 200 gold base price (previously 125 gold base price), make Branding Smite not cost a spell slot and also not be concentration (in line with Syrchalis spell rebalance), and increase Cure Wounds heal to 4d6 to be in line with personal healing spell buffs
-new entry "ClericEquipmentAct2_Pendant_of_Divine_Duality"
-type "Armor"
-using "ClericEquipmentAct2_Pendant_of_Divine_Duality"
-data "ValueScale" "1.6"
 
 new entry "Target_Smite_Branding_DivineDuality"
 type "SpellData"
@@ -394,14 +390,6 @@ new entry "DruidEquipmentAct1_Helm_of_the_Wildwood"
 type "Armor"
 using "DruidEquipmentAct1_Helm_of_the_Wildwood"
 data "ValueScale" "1.8"
-
-// Ring of the Stormspeaker: increase cost by 4x to 560 gold base price (previously 140 gold base price)
-// This ring is extremely overloaded if used by a druid caster, but druid casters builds are just decent, not OP, so not directly nerfing the item for now
-new entry "DruidEquipmentAct3_Ring_of_the_Stormspeaker"
-type "Armor"
-using "DruidEquipmentAct3_Ring_of_the_Stormspeaker"
-data "RootTemplate" "d6eef1f0-1541-44cd-94ef-e1204240e984"
-data "ValueScale" "4"
 
 // Oakheart Talisman: change Stoneskin Awakening tooltip to reflect changes made by Syrchalis spell rebalance
 new entry "Target_GG_Two_Stoneskin"

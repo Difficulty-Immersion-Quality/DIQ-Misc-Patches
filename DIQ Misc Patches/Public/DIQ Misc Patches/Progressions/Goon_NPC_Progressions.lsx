@@ -440,6 +440,7 @@
                     <attribute id="Level" type="uint8" value="13"/>
                     <attribute id="Name" type="LSString" value="Warlock"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <!-- TODO: Roulette selections -->
                     <!-- <attribute id="Selectors" type="LSString" value="SelectSpells(e6ccab5e-3b3b-4b34-8fa2-1058dff2b3e6,1,0,MysticArcanum,,None,AlwaysPrepared,UntilRest)"/> -->
                     <attribute id="TableUUID" type="guid" value="51274504-865d-46d1-a3b6-c72e9384904a"/>
                     <attribute id="UUID" type="guid" value="cd04d775-367c-45b3-8b12-358f11db080a"/>
@@ -453,10 +454,11 @@
                 </node>
                 <node id="Progression">
                     <!-- <attribute id="PassivesAdded" type="LSString" value=""/> -->
-                    <attribute id="PassivesAdded" type="LSString" value="Goon_NPC_Roulette_Warlock_Mystic_Arcanum_Level_15"/>
+                    <attribute id="PassivesAdded" type="LSString" value="Goon_NPC_Roulette_Warlock_Mystic_Arcanum_Level_15;Goon_NPC_Roulette_Warlock_Invocations_Level_15"/>
                     <attribute id="Level" type="uint8" value="15"/>
                     <attribute id="Name" type="LSString" value="Warlock"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <!-- TODO: Roulette selections -->
                     <!-- <attribute id="Selectors" type="LSString" value="SelectPassives(ab56f79f-95ec-48e5-bd83-e80ba9afc844,1,WarlockInvocations);SelectSpells(e6ccab5e-3b3b-4b34-8fa2-1058dff2b3e6,1,0,MysticArcanum,,None,AlwaysPrepared,UntilRest)"/> -->
                     <attribute id="TableUUID" type="guid" value="51274504-865d-46d1-a3b6-c72e9384904a"/>
                     <attribute id="UUID" type="guid" value="7a049e48-721b-498a-82d4-eee9cdb1c359"/>
@@ -476,6 +478,7 @@
                     <attribute id="Level" type="uint8" value="17"/>
                     <attribute id="Name" type="LSString" value="Warlock"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <!-- TODO: Roulette selections -->
                     <!-- <attribute id="Selectors" type="LSString" value="SelectSpells(e6ccab5e-3b3b-4b34-8fa2-1058dff2b3e6,1,0,MysticArcanum,,None,AlwaysPrepared,UntilRest)"/> -->
                     <attribute id="TableUUID" type="guid" value="51274504-865d-46d1-a3b6-c72e9384904a"/>
                     <attribute id="UUID" type="guid" value="bfb02079-e9c2-4320-8ec4-3abe865cdf47"/>
@@ -484,6 +487,7 @@
                     <attribute id="Level" type="uint8" value="18"/>
                     <attribute id="Name" type="LSString" value="Warlock"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <!-- TODO: Roulette selections -->
                     <!-- <attribute id="Selectors" type="LSString" value="SelectPassives(ab56f79f-95ec-48e5-bd83-e80ba9afc844,1,WarlockInvocations)"/> -->
                     <attribute id="TableUUID" type="guid" value="51274504-865d-46d1-a3b6-c72e9384904a"/>
                     <attribute id="UUID" type="guid" value="2a9209b1-838c-41e5-92fa-c4c2cb6c89bb"/>
@@ -515,7 +519,7 @@
                 </node>
                 <node id="Progression">
                     <!-- <attribute id="Selectors" type="LSString" value=""/> -->
-                    <attribute id="Selectors" type="LSString" value="AddSpells(964e765d-5881-463e-b1b0-4fc6b8035aa8)"/> <!-- Action Surge -->
+                    <attribute id="Selectors" type="LSString" value="AddSpells(964e765d-5881-463e-b1b0-4fc6b8035aa8)"/> <!-- Shout_ActionSurge -->
                     <attribute id="Level" type="uint8" value="2"/>
                     <attribute id="Name" type="LSString" value="NPC_Fighter"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>

@@ -16,6 +16,11 @@ new entry "Goon_NPC_Roulette_Warlock_Mystic_Arcanum_Level_15"
 type "PassiveData"
 data "Properties" "IsHidden"
 
+// Warlock Invocation selection
+new entry "Goon_NPC_Roulette_Warlock_Invocations_Level_15"
+type "PassiveData"
+data "Properties" "IsHidden"
+
 // 9th level Warlock spell from Mystic Arcanum
 new entry "Goon_NPC_Roulette_Warlock_Mystic_Arcanum_Level_17"
 type "PassiveData"

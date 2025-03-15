@@ -72,7 +72,7 @@ using "Meazel"
 // data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;ShadowTeleport_Meazel"
 data "Passives" "CX_Rogue_Boost;AttackOfOpportunity;DarknessRules;Darkvision;ShadowTeleport_Meazel"
 
-// I don't think anything under _Banite, _FlamingFist, or Guard are used are they?
+// None of these under _Banite are used
 // "_Base"
 //  ├─ "_Humanoid"
 //  │   ├─ "_Banite"
@@ -135,9 +135,9 @@ data "Passives" "CX_Martial_Boost;AttackOfOpportunity;DarknessRules"
 // "_Base"
 //  ├─ "_Humanoid"
 //  │   ├─ "Werewolf"
-//  │   │   ├─ "LOW_CazadorPalace_Ritual_Werewolf" --- Predator Werewolf
-//  │   │   └─ "Werewolf_Strong"
-//  │   ├─ "_FlamingFist"
+//  │   │   ├─ "LOW_CazadorPalace_Ritual_Werewolf"  --- Predator Werewolf
+//  │   │   └─ "Werewolf_Strong"                    --- Unused
+//  │   ├─ "_FlamingFist"                           --- Unused
 
 new entry "_FlamingFist"
 type "Character"
@@ -159,7 +159,7 @@ data "Passives" "CX_Martial_Boost;AttackOfOpportunity;DarknessRules"
 //  │   │   ├─ "COL_Butcher"
 //  │   │   ├─ "DEN_BugbearNinja"
 //  │   │   ├─ "DEN_BugbearRaider"
-//  │   │   ├─ "FOR_Bugbear_Demo"
+//  │   │   ├─ "FOR_Bugbear_Demo"               --- Scrawny Bugbear (sleeping in Blighted Village)
 //  │   │   └─ "MOO_BugbearMerchant"
 
 new entry "Bugbear"
@@ -217,7 +217,7 @@ data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;Brute_Bugbear;AttackOfOpportu
 //  │   │   │   ├─ "DEN_Bard_Backup"                --- Quil Grootslang
 //  │   │   │   └─ "WYR_Circus_Dragonborn_Red_Bard" --- Medrash - Circus of the Last Days
 //  │   │   ├─ "Dragonborn_Cleric"
-//  │   │   │   └─ "LOW_AradinThug_Cleric"
+//  │   │   │   └─ "LOW_AradinThug_Cleric"          --- Prayerboy Zoryxx
 
 // Lyrux Goldthroat - The Guild
 new entry "Dragonborn_Bard"
@@ -237,8 +237,8 @@ data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;AttackOfOpportunity;DarknessRule
 //  │   ├─ "Dragonborn_Barbarian"
 //  │   │   └─ "LOW_HagSurvivor_Dragonborn_Green_Barbarian" --- Inku Neza - Member of the Dead Eyes
 //  │   ├─ "LOW_Abazigal"
-//  │   ├─ "LOW_Dragonborn_Gold_Havkelaag"
-//  │   ├─ "LOW_HagSurvivor_Dragonborn_Silver_Melee"
+//  │   ├─ "LOW_Dragonborn_Gold_Havkelaag"                  --- Unused
+//  │   ├─ "LOW_HagSurvivor_Dragonborn_Silver_Melee"        --- Unused
 //  │   ├─ "WYR_MessHallBodyguard_06"
 //  │   └─ "WYR_Rivington_Armor_Shopkeeper"                 --- Exxvikyap - Gyldro Angleiron's shop assistant
 
@@ -287,7 +287,7 @@ using "WYR_SmugglersCave_Dragonborn_Ranger"
 data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules;DraconicAncestry_Copper;ElementalAffinity_Damage;NaturalExplorer_WastelandWander_Poison;FavoredEnemy_MageBreaker;ColossusSlayer;EscapeTheHorde;SteelWill;MultiattackDefense"
 
 // "_Dragonborn"
-//  └─ "Dragonborn_Rogue"
+//  └─ "Dragonborn_Rogue"       --- Unused
 
 new entry "Dragonborn_Rogue"
 type "Character"
@@ -296,8 +296,8 @@ using "Dragonborn_Rogue"
 data "Passives" "CX_Rogue_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules"
 
 // "_Dragonborn"
-//  ├─ "MOO_FanaticOfTheAbsolute_Dragonborn"
-//  └─ "MOO_ZealotOfTheAbsolute_Dragonborn"
+//  ├─ "MOO_FanaticOfTheAbsolute_Dragonborn"        --- Unused
+//  └─ "MOO_ZealotOfTheAbsolute_Dragonborn"         --- Unused
 
 new entry "MOO_FanaticOfTheAbsolute_Dragonborn"
 type "Character"
@@ -321,7 +321,7 @@ data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessR
 //  │   │   │   ├─ "Dwarf_Commoner_Cowering"
 //  │   │   │   ├─ "Dwarf_Commoner_Crowd"
 //  │   │   │   ├─ "LOW_HouseOfHope_Dwarf_Debtor"
-//  │   │   │   └─ "TUT_Victim_Dwarf"
+//  │   │   │   └─ "TUT_Victim_Dwarf"               --- Unused
 
 new entry "Dwarf_Commoner_Cowering"
 type "Character"
@@ -342,13 +342,13 @@ data "Passives" "Dwarf_DwarvenResilience;AttackOfOpportunity;Darkvision;Darkness
 //  │   │   │   ├─ "Dwarf_Bard"
 //  │   │   │   │   └─ "LOW_HagSurvivor_Dwarf_Bard" --- Hiero Lue - Member of the Dead Eyes, The Guild (double agent)
 //  │   │   │   ├─ "Dwarf_Druid"
-//  │   │   │   │   └─ "DEN_Apprentice"
+//  │   │   │   │   └─ "DEN_Apprentice"                     --- Nettie
 //  │   │   │   ├─ "GOB_Dwarf_Warlock"
 //  │   │   │   │   ├─ "LOW_DevilsFee_Helsik"
 //  │   │   │   │   └─ "LOW_TheLodge_Warlock"
 //  │   │   │   ├─ "LOW_CountingHouse_HeadBanker"
 //  │   │   │   ├─ "LOW_Hope"
-//  │   │   │   ├─ "LOW_HouseOfGrief_Cultist_Caster_Dwarf"
+//  │   │   │   ├─ "LOW_HouseOfGrief_Cultist_Caster_Dwarf"  --- Unused
 //  │   │   │   └─ "LOW_NecromancerStaff"
 
 new entry "Dwarf_Caster"
@@ -442,21 +442,21 @@ data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;Dwarf_DwarvenResilience;Attac
 // "_Dwarf"
 //  ├─ "Dwarf_Melee"
 //  │   ├─ "Dwarf_Cleric"
-//  │   │   ├─ "TWN_RegretfulHunter"
-//  │   │   └─ "WYR_OpenHandTemple_Dwarf_Cleric"
+//  │   │   ├─ "TWN_RegretfulHunter"                --- Unimplemented character?
+//  │   │   └─ "WYR_OpenHandTemple_Dwarf_Cleric"    --- Brother Clements
 //  │   ├─ "END_CityWatchMelee_Dwarf"
-//  │   ├─ "GLO_Baelen"
+//  │   ├─ "GLO_Baelen"                             --- Baelen Bonecloak
 //  │   ├─ "HAG_Victim_Fighter"
 //  │   ├─ "HAV_FlamingFist_Dwarf_Melee"
 //  │   ├─ "HAV_Harper_Dwarf_Melee"
-//  │   ├─ "LOW_Beastmaster"
-//  │   ├─ "LOW_BlushingMermaid_Victim_Dwarf_Melee"
-//  │   ├─ "LOW_Elfsong_Patron_Dwarf_Melee"
+//  │   ├─ "LOW_Beastmaster"                        --- Redhammer the Deviser (submarine guy)
+//  │   ├─ "LOW_BlushingMermaid_Victim_Dwarf_Melee" --- Unused
+//  │   ├─ "LOW_Elfsong_Patron_Dwarf_Melee"         --- Dame Guisarme
 //  │   ├─ "LOW_HouseOfGrief_Cultist_Melee_Dwarf"
 //  │   ├─ "MOO_FlamingFist_Dwarf_Melee"
 //  │   ├─ "TWN_Morgue_ShadowCursed_Dwarf_Melee"
-//  │   ├─ "WYR_Flophouse_Dwarf_Melee"
-//  │   └─ "WYR_SharessCaress_Dwarf_Melee"
+//  │   ├─ "WYR_Flophouse_Dwarf_Melee"              --- Ffion Goldgrind (dead)
+//  │   └─ "WYR_SharessCaress_Dwarf_Melee"          --- Sauceman Chorizo, chef (lmao)
 
 new entry "Dwarf_Melee"
 type "Character"
@@ -470,7 +470,7 @@ using "Dwarf_Cleric"
 // data "Passives" "Dwarf_DwarvenResilience;AttackOfOpportunity;Darkvision;DarknessRules"
 data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;Dwarf_DwarvenResilience;AttackOfOpportunity;Darkvision;DarknessRules"
 
-// Watcher Guardian
+// Watcher Guardian (Gather Your Allies summon)
 new entry "END_CityWatchMelee_Dwarf"
 type "Character"
 using "END_CityWatchMelee_Dwarf"
@@ -750,6 +750,7 @@ data "Intelligence" "11"
 data "Charisma" "18"
 // data "SpellCastingAbility" "Intelligence"
 data "SpellCastingAbility" "Charisma"
+// TODO: Custom NPC Sorcerer progressions
 // data "Passives" "AttackOfOpportunity;DarknessRules;SuperiorDarkvision;Dwarf_DwarvenResilience;Duergar_DuergarResilience;SunlightSensitivity;DraconicResilience;ElementalAffinity_Damage;DraconicAncestry_Silver"
 data "Passives" "CX_Sorcerer_Boost;CX_Magic_Boost;CX_Spells_L1;CX_Spells_L2;CX_Spells_L3;CX_Spells_L2C;Dwarf_DwarvenResilience;Duergar_DuergarResilience;SunlightSensitivity;AttackOfOpportunity;SuperiorDarkvision;DarknessRules;DraconicResilience;ElementalAffinity_Damage;DraconicAncestry_Silver"
 
@@ -1001,6 +1002,13 @@ data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;CX_Magic_Boost;CX_Spells_L4;A
 new entry "WYR_Circus_Klaus"
 type "Character"
 using "WYR_Circus_Klaus"
+// data "Intelligence" "18"
+data "Intelligence" "14"
+// data "Charisma" "14"
+data "Charisma" "18"
+// data "SpellCastingAbility" "Intelligence"
+data "SpellCastingAbility" "Charisma"
+// TODO: Custom NPC Sorcerer progressions
 // data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision;DraconicResilience;DraconicAncestry_Green;Metamagic_Distant_NPC;ElementalAffinity_Resistance_Check;ElementalAffinity_Damage"
 data "Passives" "CX_Sorcerer_Boost;CX_Magic_Boost;FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision;DraconicResilience;DraconicAncestry_Green;Metamagic_Distant_NPC;ElementalAffinity_Resistance_Check;ElementalAffinity_Damage"
 
@@ -1051,12 +1059,12 @@ data "Passives" "CX_Martial_Boost;FeyAncestry;AttackOfOpportunity;DarknessRules;
 //  ├─ "Elf_Melee"
 //  │   ├─ "END_CityWatchMelee_Elf"
 //  │   ├─ "Elf_Cleric"
-//  │   │   ├─ "SHA_ClericOfShar"
+//  │   │   ├─ "SHA_ClericOfShar"                       --- Unused
 //  │   │   └─ "WYR_OpenHandTemple_Elf_Cleric"
 //  │   ├─ "HAV_FlamingFist_Elf_Melee"
 //  │   ├─ "HAV_ShadowCursed_FlamingFist_Elf_Melee"
 //  │   ├─ "LOW_ArabellaPowers_Brigand_Elf_Melee"       --- Livin' Large Timbo (dead)
-//  │   ├─ "LOW_DoormanyGuard"
+//  │   ├─ "LOW_DoormanyGuard"                          --- Unused
 //  │   ├─ "LOW_HouseOfGrief_Cultist_Melee_Elf"
 //  │   ├─ "LOW_HouseOfGrief_Justiciar"
 //  │   ├─ "LOW_ShadowheartFather"
@@ -1071,7 +1079,7 @@ using "Elf_Melee"
 // data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
 data "Passives" "CX_Martial_Boost;FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
 
-// Watchman
+// Watchman (summon from Gather Your Allies)
 new entry "END_CityWatchMelee_Elf"
 type "Character"
 using "END_CityWatchMelee_Elf"
@@ -1189,7 +1197,7 @@ data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;FeyAncestry;AttackOfOpportunit
 // "_Elf"
 //  ├─ "Elf_Rogue"
 //  │   ├─ "END_Zhentarim_Elf"                  --- Zhent Elf (Gather Your Allies summon)
-//  │   ├─ "LOW_Guildhall_BossTrinoda"
+//  │   ├─ "LOW_Guildhall_BossTrinoda"          --- Unused
 //  │   ├─ "LOW_Guildhall_Swarm_Melee_Elf"      --- Carlorina the Wolf - Zhentarim
 //  │   └─ "LOW_Guildhall_Swarm_Ranged_Elf"     --- Follgast - Zhentarim
 
@@ -1203,7 +1211,7 @@ data "Passives" "CX_Rogue_Boost;CX_Martial_Boost;FeyAncestry;AttackOfOpportunity
 //  ├─ "FlamingFist_Elf"
 //  │   ├─ "FlamingFist_Elf_Caster"
 //  │   ├─ "FlamingFist_Elf_Cleric"
-//  │   ├─ "FlamingFist_Elf_Melee_Attacker"
+//  │   ├─ "FlamingFist_Elf_Melee_Attacker"     --- Fist Serrik
 //  │   ├─ "FlamingFist_Elf_Melee_Defender"
 //  │   └─ "FlamingFist_Elf_Ranger"
 
@@ -1281,7 +1289,7 @@ data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;FeyAncestry;AttackOfOpportuni
 //  ├─ "_Elf_ShadarKai"
 //  │   ├─ "Elf_ShadarKai_Ranger"
 //  │   │   └─ "SCL_HeWhoWas"
-//  │   └─ "Elf_ShadarKai_Rogue"
+//  │   └─ "Elf_ShadarKai_Rogue"            
 
 new entry "Elf_ShadarKai_Ranger"
 type "Character"
@@ -1351,7 +1359,7 @@ data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;FeyAncestry;AttackOfOpportuni
 //  ├─ "_Elf_Drow"
 //  │   ├─ "Elf_Drow_Child"
 //  │   ├─ "Elf_Drow_Commoner"
-//  │   │   ├─ "Elf_Drow_Commoner_Cowering"
+//  │   │   ├─ "Elf_Drow_Commoner_Cowering"    
 //  │   │   ├─ "WYR_DapperDrow_Brother"         --- Sorn Orlith
 //  │   │   └─ "WYR_DapperDrow_Sister"          --- Nym Orlith
 
@@ -1374,7 +1382,7 @@ data "Passives" "FeyAncestry;AttackOfOpportunity;DarknessRules;SuperiorDarkvisio
 //  │   ├─ "LOW_Sendai"
 //  │   ├─ "LOW_TheLodge_Scientist"
 //  │   ├─ "UND_HookHorrorHermit"
-//  │   └─ "UND_PetrifiedDrow_Drow_Caster"
+//  │   └─ "UND_PetrifiedDrow_Drow_Caster"      --- Unused
 
 new entry "Elf_Drow_Caster"
 type "Character"
@@ -1407,7 +1415,7 @@ data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;FeyAncestry;AttackOfOpportunity;
 // "_Elf_Drow"
 //  ├─ "Elf_Drow_Melee"
 //  │   ├─ "Elf_Drow_Cleric"
-//  │   │   └─ "WYR_OpenHandTemple_Elf_Drow_Cleric"
+//  │   │   └─ "WYR_OpenHandTemple_Elf_Drow_Cleric"     --- Unused
 //  │   ├─ "HAG_Masked_Fighter"
 //  │   ├─ "UND_Nere"
 //  │   └─ "UND_PetrifiedDrow_Drow_Melee"
@@ -1440,9 +1448,9 @@ data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;CX_Magic_Boost;CX_Spells_L2;C
 
 // "_Elf_Drow"
 //  ├─ "Elf_Drow_Ranger"
-//  │   ├─ "END_Inquisitor_Drow"            -- Inquisitor of the Absolute - Cult of the Absolute
-//  │   ├─ "MOO_Guard_Ranged_Drow"
-//  │   ├─ "UND_PetrifiedDrow_Champion"
+//  │   ├─ "END_Inquisitor_Drow"            --- Inquisitor of the Absolute - Cult of the Absolute
+//  │   ├─ "MOO_Guard_Ranged_Drow"          --- Unused
+//  │   ├─ "UND_PetrifiedDrow_Champion"     --- Unused
 //  │   └─ "UND_PetrifiedDrow_Drow_Ranger"
 
 new entry "Elf_Drow_Ranger"
@@ -1459,7 +1467,7 @@ data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;FeyAncestry;AttackOfOpportunit
 
 // "_Elf_Drow"
 //  ├─ "Elf_Drow_Rogue"
-//  │   ├─ "HAG_Masked_Rogue"
+//  │   ├─ "HAG_Masked_Rogue"   --- Unused
 //  │   └─ "MOO_InfernalVendor" --- Araj Oblodra
 
 new entry "Elf_Drow_Rogue"
@@ -1578,8 +1586,8 @@ data "Passives" "CX_Magic_Boost;AttackOfOpportunity;DarknessRules;LOW_GithProdig
 
 // "_Githyanki"
 //  ├─ "Githyanki_Caster"
-//  │   ├─ "CRE_AstralPlane_GithMage"
-//  │   ├─ "CRE_Githyanki_Ghustil"
+//  │   ├─ "CRE_AstralPlane_GithMage"           --- Unused
+//  │   ├─ "CRE_Githyanki_Ghustil"              --- Ghustil Stornugoss, doctor in the creche
 //  │   ├─ "CRE_Githyanki_Inquisitor"
 //  │   ├─ "Githyanki_GateMaster"
 //  │   ├─ "Githyanki_Gish"
@@ -1587,7 +1595,7 @@ data "Passives" "CX_Magic_Boost;AttackOfOpportunity;DarknessRules;LOW_GithProdig
 //  │   │   ├─ "CRE_Githyanki_Varsh"
 //  │   │   └─ "Githyanki_Gish_Strong"
 //  │   ├─ "Githyanki_IntelligenceOfficer"
-//  │   ├─ "PLA_Githyanki_Caster"
+//  │   ├─ "PLA_Githyanki_Caster"               --- Unused
 //  │   └─ "TWN_Githyanki_Warlock"
 
 new entry "Githyanki_Caster"
@@ -1663,10 +1671,10 @@ data "Passives" "CX_Warlock_Boost;CX_Magic_Boost;AttackOfOpportunity;DarknessRul
 // "_Githyanki"
 //  ├─ "Githyanki_Gishra_Melee"
 //  │   ├─ "Githyanki_Gishra_Caster"
-//  │   └─ "INT_Githyanki_Gishra_Lieutenant"
+//  │   └─ "INT_Githyanki_Gishra_Lieutenant"        -- Prelate Lir'i'c - Chief of Orpheus' Honour Guard, Warriors of the Comet
 //  ├─ "Githyanki_Melee"
-//  │   ├─ "CRE_AstralPlane_GithCaptain"
-//  │   ├─ "CRE_AstralPlane_GithRaider"
+//  │   ├─ "CRE_AstralPlane_GithCaptain"            -- Unused
+//  │   ├─ "CRE_AstralPlane_GithRaider"             -- Unused
 //  │   ├─ "GLO_Voss"
 //  │   ├─ "Githyanki_Warrior"
 //  │   │   ├─ "Githyanki_Warrior_Strong"
@@ -1692,6 +1700,25 @@ type "Character"
 using "Githyanki_Melee"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules"
+
+new entry "CRE_AstralPlane_GithCaptain"
+type "Character"
+using "CRE_AstralPlane_GithCaptain"
+// data "Passives" "ExtraAttack;AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;;AttackOfOpportunity;DarknessRules;ExtraAttack"
+
+new entry "CRE_AstralPlane_GithRaider"
+type "Character"
+using "CRE_AstralPlane_GithRaider"
+// data "Passives" "AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules"
+
+// Kith'rak Voss
+new entry "GLO_Voss"
+type "Character"
+using "GLO_Voss"
+// data "Passives" "AttackOfOpportunity;DarknessRules;PsychicStrikes_Githyanki;Parry_Githyanki_Supreme;Parry_Githyanki_Supreme_EquipTrigger"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules;PsychicStrikes_Githyanki;Parry_Githyanki_Supreme;Parry_Githyanki_Supreme_EquipTrigger"
 
 // Shadow-Cursed Githyanki Warrior, + loads of characters
 new entry "Githyanki_Warrior"
@@ -1736,8 +1763,8 @@ data "Passives" "CX_Monk_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRule
 //  │   │   └─ "Githyanki_Raider_Strong"
 //  │   └─ "PLA_Githyanki_Ranger"
 //  ├─ "Githyanki_Rogue"
-//  │   ├─ "CRE_AstralPlane_GithRogue"
-//  │   └─ "PLA_Githyanki_Rogue"
+//  │   ├─ "CRE_AstralPlane_GithRogue"          -- Unused
+//  │   └─ "PLA_Githyanki_Rogue"                -- Unused
 //  └─ "INT_Orpheus"
 
 // A lot of these ranged Githyanki are Battlemaster Fighters with crossbows, not Rangers
@@ -1786,6 +1813,13 @@ using "PLA_Githyanki_Rogue"
 // data "Passives" "AttackOfOpportunity;DarknessRules;ExtraAttack"
 data "Passives" "CX_Rogue_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules;ExtraAttack"
 
+// Orpheus - The Prince of the Comet
+new entry "INT_Orpheus"
+type "Character"
+using "INT_Orpheus"
+// data "Passives" "AttackOfOpportunity;DarknessRules;Monk_SoundSwitch;Ki;FlurryOfBlowsUnlock;PsychicStrikes_Githyanki"
+data "Passives" "CX_Monk_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules;Monk_SoundSwitch;Ki;FlurryOfBlowsUnlock;PsychicStrikes_Githyanki"
+
 // ==================================== Gnolls ====================================
 
 // "_Base"
@@ -1797,6 +1831,13 @@ data "Passives" "CX_Rogue_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRul
 //  │   │   ├─ "Gnoll_FleshGnawer"
 //  │   │   ├─ "Gnoll_Flind"        --- Flind - Gnoll Warlord
 //  │   │   └─ "Gnoll_Hunter"
+
+// Flind
+new entry "Gnoll_Flind"
+type "Character"
+using "Gnoll_Flind"
+// data "Passives" "ImmuneToDisarm;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Barbarian_Boost;CX_Martial_Boost;AttackOfOpportunity;Darkvision;DarknessRules;ImmuneToDisarm"
 
 // ==================================== Gnomes ====================================
 
@@ -2475,6 +2516,7 @@ data "Passives" "CX_Druid_Boost;CX_Magic_Boost;FeyAncestry;HumanMilitia;AttackOf
 new entry "LOW_Sewers_Dragonborn_Red_Evocation_Wizard"
 type "Character"
 using "LOW_Sewers_Dragonborn_Red_Evocation_Wizard"
+// TODO: Custom NPC Sorcerer progressions
 // data "Passives" "AttackOfOpportunity;FeyAncestry;DarknessRules;Darkvision;SunlightSensitivity;DraconicAncestry_Red;DraconicResilience;LOW_GreaseWizard_ElementalAffinity;"
 data "Passives" "CX_Sorcerer_Boost;CX_Magic_Boost;FeyAncestry;HumanMilitia;AttackOfOpportunity;Darkvision;DarknessRules;SunlightSensitivity;DraconicAncestry_Red;DraconicResilience;LOW_GreaseWizard_ElementalAffinity"
 
@@ -3237,19 +3279,19 @@ data "Passives" "CX_Barbarian_Boost;CX_Martial_Boost;MartialAdvantage;AttackOfOp
 //  │   │   ├─ "Human_Child"
 //  │   │   ├─ "Human_Commoner"
 //  │   │   │   ├─ "END_MindFlayerOutBurstCivilian_02"
-//  │   │   │   ├─ "GLO_Bane"
+//  │   │   │   ├─ "GLO_Bane"                                   --- Not used
 //  │   │   │   ├─ "GLO_Mizora"
 //  │   │   │   ├─ "GLO_Volo"
 //  │   │   │   ├─ "GOB_Commoner_Demo"
 //  │   │   │   ├─ "Human_Commoner_Cowering"
 //  │   │   │   ├─ "Human_Commoner_Crowd"
 //  │   │   │   ├─ "LOW_HouseOfHope_Human_Debtor"
-//  │   │   │   ├─ "LOW_IronThrone_Prisoners_Human"
+//  │   │   │   ├─ "LOW_IronThrone_Prisoners_Human"             --- Santoria, Ceres Olsin, Marlono Rhandle - Church of Gond
 //  │   │   │   ├─ "TUT_Victim_Human"
-//  │   │   │   ├─ "WYR_Circus_Statue"
-//  │   │   │   ├─ "WYR_DillardPortyr"
+//  │   │   │   ├─ "WYR_Circus_Statue"                          --- (Is this the sculpture of the player?)
+//  │   │   │   ├─ "WYR_DillardPortyr"                          --- Duke Dillard Portyr
 //  │   │   │   ├─ "WYR_FigaroSister_Naaber"
-//  │   │   │   └─ "WYR_VampireSpawns_Human"
+//  │   │   │   └─ "WYR_VampireSpawns_Human"                    --- Unused  
 
 new entry "_Human"
 type "Character"
@@ -3257,14 +3299,15 @@ using "_Human"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
-// Mizora - don't know why tf she's under Human
+// Mizora - (Don't know why tf she's under Human)
 new entry "GLO_Mizora"
 type "Character"
 using "GLO_Mizora"
+// TODO: Custom NPC Sorcerer progressions
 // data "Passives" "AttackOfOpportunity;DarknessRules;Metamagic_Quickened;Metamagic_Twinned;Metamagic_Extended;Metamagic_Distant;Metamagic_Heightened;MagicResistance"
 data "Passives" "CX_Sorcerer_Boost;CX_Magic_Boost;FiendishBlessing;AttackOfOpportunity;DarknessRules;Metamagic_Quickened;Metamagic_Twinned;Metamagic_Extended;Metamagic_Distant;Metamagic_Heightened;MagicResistance"
 
-// Volo
+// Volo (Volothamp Geddarm) - Procurer of Associates, Stories, and Curios
 new entry "GLO_Volo"
 type "Character"
 using "GLO_Volo"
@@ -3308,38 +3351,44 @@ data "Passives" "CX_Martial_Boost;CX_Magic_Boost;HumanMilitia;HumanVersatility;A
 //  │   │   └─ "WLD_Gauntlet_Yeva"
 //  │   ├─ "FlamingFist_Human_Melee_Defender"
 //  │   └─ "FlamingFist_Human_Ranger"
-//  │       └─ "LOW_BasiliskGate_Sergeant"
+//  │       └─ "LOW_BasiliskGate_Sergeant"      --- Manip Seyama - Flaming Fist
 
+// Flaming Fist Wizard
 new entry "FlamingFist_Human_Caster"
 type "Character"
 using "FlamingFist_Human_Caster"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L1;CX_Spells_L1C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
+// Flaming Fist Healer
 new entry "FlamingFist_Human_Cleric"
 type "Character"
 using "FlamingFist_Human_Cleric"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
+// Flaming Fist Guisarmier
 new entry "FlamingFist_Human_Melee_Attacker"
 type "Character"
 using "FlamingFist_Human_Melee_Attacker"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
+// Liara Portyr - Commander of the Flaming Fist Headquarters, Flaming Fist
 new entry "LOW_LiaraPortyr"
 type "Character"
 using "LOW_LiaraPortyr"
 // data "Passives" "AttackOfOpportunity;DarknessRules;LOW_LiaraPortyr_Brave"
-data "Passives" "HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;LOW_LiaraPortyr_Brave"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;LOW_LiaraPortyr_Brave"
 
+// Flaming Fist Protector
 new entry "FlamingFist_Human_Melee_Defender"
 type "Character"
 using "FlamingFist_Human_Melee_Defender"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
+// Flaming Fist Archer
 new entry "FlamingFist_Human_Ranger"
 type "Character"
 using "FlamingFist_Human_Ranger"
@@ -3350,71 +3399,25 @@ data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;
 //  ├─ "Human_Caster"
 //  │   ├─ "CHA_BanditInterior_Human_Caster"
 //  │   ├─ "FOR_Human_Cultist_Zariel_Caster"
-//  │   ├─ "FOR_TrueSoul"
+//  │   ├─ "FOR_TrueSoul"                       --- Edowin, Brynna - True Soul of the Absolute, Cult of the Absolute
 //  │   │   └─ "FOR_TrueSoul_Melee"
-//  │   ├─ "GLO_Elminster"
+//  │   ├─ "GLO_Elminster"                  
 //  │   ├─ "HAV_Harper_Human_Caster"
-//  │   ├─ "Human_Bard"
-//  │   │   ├─ "EPI_DivineBard"
-//  │   │   ├─ "GLO_Oskar"
-//  │   │   ├─ "LOW_Masked_Bard"
-//  │   │   ├─ "WYR_Circus_Viola"
-//  │   │   └─ "WYR_SharessCaress_Human_Bard"
-//  │   ├─ "Human_Cultist_Myrkul_MasterOfSouls"
-//  │   │   └─ "MOO_MasterOfSouls"
-//  │   ├─ "Human_Cultist_Myrkul_SkullLasher"
-//  │   ├─ "Human_Cultist_Umberlee_Untaken"
-//  │   │   ├─ "Human_Cultist_Umberlee_DarkBreaker"
-//  │   │   ├─ "Human_Cultist_Umberlee_FloodTide"
-//  │   │   └─ "Human_Cultist_Umberlee_SavageSeawind"
-//  │   ├─ "Human_Druid"
-//  │   │   ├─ "DEN_Druids_Human_Druid"
-//  │   │   ├─ "HAV_Harper_Human_Druid"
-//  │   │   └─ "Human_Druid_Strong"
-//  │   │       └─ "DEN_Rath"
-//  │   ├─ "Human_FFist_Caster"
-//  │   ├─ "LOW_Amelyssan"
-//  │   ├─ "LOW_AradinThug_Wizzard"
-//  │   ├─ "LOW_CazadorsPalace_GuardTower_Human_Caster"
-//  │   ├─ "LOW_FelogyrFireworks_AverySonshal"
-//  │   ├─ "LOW_FlorrickGoon_Caster"
-//  │   ├─ "LOW_Florrick_Fallback"
-//  │   ├─ "LOW_Golbraith"
-//  │   ├─ "LOW_HagSurvivor_Adrielle"
-//  │   ├─ "LOW_HagSurvivor_Human_Caster"
-//  │   ├─ "LOW_Hardvard"
-//  │   ├─ "LOW_HouseOfGrief_Cultist_Caster_Human"
-//  │   ├─ "LOW_Human_FelogyrFireworks_AlchemichalWorker"
-//  │   ├─ "LOW_RamazithsTower_Lorroakan"
-//  │   ├─ "LOW_RamazithsTower_Projection"
-//  │   ├─ "LOW_RamazithsTower_PuzzleGuardian"
-//  │   ├─ "LOW_RamazithsTower_PuzzleGuardian_Punisher"
-//  │   ├─ "LOW_StormshoreTabernacle_Gods"
-//  │   ├─ "LOW_Tolna"
-//  │   ├─ "LOW_Undercellar_Entrance_Human_Caster"
-//  │   ├─ "MOO_TrapRezTarget"
-//  │   ├─ "PLA_Zhent_Recruit_Human_Caster"
-//  │   ├─ "SCE_FlamingFist_Human_Caster"
-//  │   ├─ "SCL_SeluneCleric"
-//  │   ├─ "SHA_Necromancer"
-//  │   ├─ "WYR_Gortash"
-//  │   ├─ "WYR_MessHallBodyguard_09"
-//  │   └─ "WYR_SmugglersCave_Human_Caster"
-//  │       └─ "WYR_SmugglersCave_Human_Caster_2"
 
 new entry "Human_Caster"
 type "Character"
 using "Human_Caster"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Magic_Boost;CX_Spells_L1;CX_Spells_L1C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Magic_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
+// Cefrey - Overgrown Ruin Looters
 new entry "CHA_BanditInterior_Human_Caster"
 type "Character"
 using "CHA_BanditInterior_Human_Caster"
-// data "Passives" "DarknessRules"
+// data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L1;CX_Spells_L1C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
-// Cyrel - one of the Zariel cultists hunting Karlach
+// Cyrel (one of the Zariel cultists hunting Karlach)
 new entry "FOR_Human_Cultist_Zariel_Caster"
 type "Character"
 using "FOR_Human_Cultist_Zariel_Caster"
@@ -3422,25 +3425,35 @@ using "FOR_Human_Cultist_Zariel_Caster"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L1;CX_Spells_L2;CX_Spells_L1C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
-// Andrick - brother of Edowin (guy dying from Owlbear)
+// Andrick - Novice of the Absolute, Cult of the Absolute
 new entry "FOR_TrueSoul_Melee"
 type "Character"
 using "FOR_TrueSoul_Melee"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
-// Elminster - or rather his simulacrum
+// Elminster Aumar - Sage of Shadowdale (Or rather his simulacrum)
 new entry "GLO_Elminster"
 type "Character"
 using "GLO_Elminster"
 // data "Passives" "Alert;EmpoweredEvocation;FocusedConjuration;MagicResistance;SpellSniper_Critical;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L6;CX_Spells_L6C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;Alert;EmpoweredEvocation;FocusedConjuration;MagicResistance;SpellSniper_Critical"
 
+// Harper Mijah - Harpers
 new entry "HAV_Harper_Human_Caster"
 type "Character"
 using "HAV_Harper_Human_Caster"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L1;CX_Spells_L2;CX_Spells_L3;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
+
+// "_Human"
+//  ├─ "Human_Caster"
+//  │   ├─ "Human_Bard"
+//  │   │   ├─ "EPI_DivineBard"
+//  │   │   ├─ "GLO_Oskar"                      --- Oskar Fevras
+//  │   │   ├─ "LOW_Masked_Bard"                --- Mask of Servitude (The Blushing Mermaid)
+//  │   │   ├─ "WYR_Circus_Viola"               --- Viola Silvertongue - Circus of the Last Days
+//  │   │   └─ "WYR_SharessCaress_Human_Bard"   --- Mamzell Amira
 
 new entry "Human_Bard"
 type "Character"
@@ -3448,21 +3461,24 @@ using "Human_Bard"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Bard_Boost;CX_Magic_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
-// Milil - (forgotten) god of song
+// Milil - (minor deity of song)
 new entry "EPI_DivineBard"
 type "Character"
 using "EPI_DivineBard"
 // data "Passives" "AttackOfOpportunity;DarknessRules;ImmutableForm"
 data "Passives" "CX_Bard_Boost;CX_Magic_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;ImmutableForm"
 
-// Oskar - fella ain't an actual combatant
-new entry "GLO_Oskar"
-type "Character"
-using "GLO_Oskar"
-// data "Passives" "AttackOfOpportunity;DarknessRules"
-data "Passives" "HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
+// "_Human"
+//  ├─ "Human_Caster"
+//  │   ├─ "Human_Cultist_Myrkul_MasterOfSouls"
+//  │   │   └─ "MOO_MasterOfSouls"                      --- Mistress of Souls, Willinx Jindlebee, Sarabayle, Duckie Verish - Mistress of Souls, Cult of Myrkul
+//  │   ├─ "Human_Cultist_Myrkul_SkullLasher"
+//  │   ├─ "Human_Cultist_Umberlee_Untaken"
+//  │   │   ├─ "Human_Cultist_Umberlee_DarkBreaker"
+//  │   │   ├─ "Human_Cultist_Umberlee_FloodTide"
+//  │   │   └─ "Human_Cultist_Umberlee_SavageSeawind"
 
-// Kressa Bonedaughter, Susdera, Radija - let's make em Warlocks
+// Kressa Bonedaughter, Susdera, Radija - Mistress of Souls, Cult of Myrkul (Make them Warlocks > Wizards)
 new entry "Human_Cultist_Myrkul_MasterOfSouls"
 type "Character"
 using "Human_Cultist_Myrkul_MasterOfSouls"
@@ -3477,38 +3493,59 @@ data "Progressions" "51274504-865d-46d1-b6a3-2ec784934a90"
 // data "Passives" "ExtraAttack;GraveMagic;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Warlock_Boost;CX_Magic_Boost;CX_Spells_L4;CX_Spells_L2C;CX_Spells_L3C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;ExtraAttack;GraveMagic"
 
-// Maghtew Budj
+// Maghtew Budj - Skull Lasher, Cult of Myrkul
 new entry "Human_Cultist_Myrkul_SkullLasher"
 type "Character"
 using "Human_Cultist_Myrkul_SkullLasher"
 // data "Passives" "ExtraAttack;AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L4;CX_Spells_L3C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;ExtraAttack;"
+data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L4;CX_Spells_L3C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;ExtraAttack"
 
-// Umberlee Untaken - while they could be given CX_Cleric_Boost, they're meant to use water/ice-based spells. I recommend leaving the Cleric boost off (so they don't just cast regular Cleric spells instead of cold damage spells) and instead giving them a curated passive/spell list to fit their theme
+// While the Umberlee cultists could be given CX_Cleric_Boost, they're meant to use water/ice-based spells. I recommend leaving the Cleric boost off (so they don't just cast regular Cleric spells instead of cold damage spells) and instead giving them a curated passive/spell list to fit their theme.
+
+// Umberlee Untaken: Untaken Padulla, Untaken Zastreya, Untaken Fitzy Relma, Untaken Diomira Trellis, Untaken Glone - Church of Umberlee
 new entry "Human_Cultist_Umberlee_Untaken"
 type "Character"
 using "Human_Cultist_Umberlee_Untaken"
-data "SpellCastingAbility" "Wisdom"
 // data "Passives" "ImmuneToWadableWater;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Magic_Boost;AttackOfOpportunity;HumanMilitia;HumanVersatility;DarknessRules;ImmuneToWadableWater"
 
-// Allandra Grey - leader of the Umberlee cultists - also recommend giving curated passive/spell list
+// Flood Tide Allandra Grey - Flood Tide Wavemistress of Umberlee, Church of Umberlee
 new entry "Human_Cultist_Umberlee_FloodTide"
 type "Character"
 using "Human_Cultist_Umberlee_FloodTide"
-data "Passives" "CX_Martial_Boost;CX_Magic_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;DualWielder_BonusAC;DualWielder_PassiveBonuses;ImmuneToWadableWater;MagicResistance"
+data "Passives" "CX_Magic_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;DualWielder_BonusAC;DualWielder_PassiveBonuses;ImmuneToWadableWater;MagicResistance"
 
+// Savage Seawind: Seawind Tinsy Ralpp, Seawind Dulse, Seawind Raheni, Seawind Star Stolitti, Holli Dylford, Seawind Flan Hawser, Seawind Slow-Boat Drubella - Church of Umberlee
 new entry "Human_Cultist_Umberlee_SavageSeawind"
 type "Character"
 using "Human_Cultist_Umberlee_SavageSeawind"
 // data "Passives" "Riposte;SavageAttacker;ImmuneToWadableWater;AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;Riposte;SavageAttacker;ImmuneToWadableWater"
+data "Passives" "CX_Magic_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;Riposte;SavageAttacker;ImmuneToWadableWater"
+
+// "_Human"
+//  ├─ "Human_Caster"
+//  │   ├─ "Human_Druid"
+//  │   │   ├─ "DEN_Druids_Human_Druid"     --- Karrik, Elwyn - Circle of the Emerald Grove
+//  │   │   ├─ "HAV_Harper_Human_Druid"     --- Harper Chenti - Harpers
+//  │   │   └─ "Human_Druid_Strong"
+//  │   │       └─ "DEN_Rath"               --- Rath, one of the sane Druids in the Emerald Grove
 
 new entry "Human_Druid"
 type "Character"
 using "Human_Druid"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Druid_Boost;CX_Magic_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
+
+// "_Human"
+//  ├─ "Human_Caster"
+//  │   ├─ "Human_FFist_Caster"                             --- Unused
+//  │   ├─ "LOW_Amelyssan"
+//  │   ├─ "LOW_AradinThug_Wizzard"
+//  │   ├─ "LOW_CazadorsPalace_GuardTower_Human_Caster"
+//  │   ├─ "LOW_FelogyrFireworks_AverySonshal"
+//  │   ├─ "LOW_FlorrickGoon_Caster"
+//  │   ├─ "LOW_Florrick_Fallback"
+//  │   ├─ "LOW_Golbraith"
 
 // Echo of Amelyssan - Bhaalspawn
 new entry "LOW_Amelyssan"
@@ -3517,33 +3554,35 @@ using "LOW_Amelyssan"
 // data "Passives" "Ethereal;TurnResistance;IncorporealMovement;AttackOfOpportunity;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;Metamagic_Distant_NPC"
 data "Passives" "CX_Cleric_Boostl;CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L5C;CX_Spells_L6C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;SuperiorDarkvision;SunlightSensitivity;Ethereal;TurnResistance;IncorporealMovement;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;Metamagic_Distant_NPC"
 
-// Wizzard
+// Thunderstorm Sue - Aradin's mercenary crew (Wizzard)
 new entry "LOW_AradinThug_Wizzard"
 type "Character"
 using "LOW_AradinThug_Wizzard"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L4;CX_Spells_L4C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
+// Reklan - Szarr Palace
 new entry "LOW_CazadorsPalace_GuardTower_Human_Caster"
 type "Character"
 using "LOW_CazadorsPalace_GuardTower_Human_Caster"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L6;CX_Spells_L6C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
-// Avery Sonshal, Clerk Tamara
+// Avery Sonshal, Clerk Tamara - Cult of Bane
 new entry "LOW_FelogyrFireworks_AverySonshal"
 type "Character"
 using "LOW_FelogyrFireworks_AverySonshal"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L5;CX_Spells_L5C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
+// Wanda Tullermoor - Retinue under Florrick
 new entry "LOW_FlorrickGoon_Caster"
 type "Character"
-using "Human_Caster"
+using "LOW_FlorrickGoon_Caster"
 // data "Passives" "AttackOfOpportunity;DarknessRules;WarCaster_Bonuses;WarCaster_OpportunitySpell"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L5;CX_Spells_L5C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;WarCaster_Bonuses;WarCaster_OpportunitySpell"
 
-// Cordula Eltan - shows up to confront Wyll for breaking his pact if Florrick is dead
+// Cordula Eltan - Flaming Fist (Florrick replacement)
 new entry "LOW_Florrick_Fallback"
 type "Character"
 using "LOW_Florrick_Fallback"
@@ -3557,32 +3596,55 @@ using "LOW_Golbraith"
 // data "Passives" "AttackOfOpportunity;DarknessRules;Tough;WarCaster_Bonuses;WarCaster_OpportunitySpell;SculptSpells"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L6;CX_Spells_L6C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;Tough;WarCaster_Bonuses;WarCaster_OpportunitySpell;SculptSpells"
 
-// Adrielle - cleric member of Hag Survivors Support Group
+// "_Human"
+//  ├─ "Human_Caster"
+//  │   ├─ "LOW_HagSurvivor_Adrielle"
+//  │   ├─ "LOW_HagSurvivor_Human_Caster"
+//  │   ├─ "LOW_Hardvard"                                   --- Harvard Willoughby - comedian at the Elfsong
+//  │   ├─ "LOW_HouseOfGrief_Cultist_Caster_Human"
+//  │   ├─ "LOW_Human_FelogyrFireworks_AlchemichalWorker"
+//  │   ├─ "LOW_RamazithsTower_Lorroakan"
+//  │   ├─ "LOW_RamazithsTower_Projection"                  --- Lorroakan's Projection
+//  │   ├─ "LOW_RamazithsTower_PuzzleGuardian"              --- Lorroakan's Projection
+//  │   ├─ "LOW_RamazithsTower_PuzzleGuardian_Punisher"     --- Lorroakan's Projection
+//  │   ├─ "LOW_StormshoreTabernacle_Gods"
+//  │   ├─ "LOW_Tolna"                                      --- Tolna Tome-Monger - merchant in Sorcerous Sundries
+
+// Adrielle - Cleric of Helm, Anti-Hag Support Group
 new entry "LOW_HagSurvivor_Adrielle"
 type "Character"
 using "LOW_HagSurvivor_Adrielle"
 // data "Passives" "AttackOfOpportunity;DarknessRules;WarPriest;Guided_Strike;WarGodsBlessing"
-data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;AttackOfOpportunity;DarknessRules;WarPriest;Guided_Strike;WarGodsBlessing"
+data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;WarPriest;Guided_Strike;WarGodsBlessing"
 
-// Aideen Ni Chuirc - member of Hag Survivors Support Group
+// Aideen Ni Chuirc - Leader of the Dead Eyes
 new entry "LOW_HagSurvivor_Human_Caster"
 type "Character"
 using "LOW_HagSurvivor_Human_Caster"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L4;CX_Spells_L4C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
+// Sharran Fidelians: Sharran Fidelian Gydd, Sharran Fidelian Hyrald, Sharran Fidelian Uttermask - Church of Shar
 new entry "LOW_HouseOfGrief_Cultist_Caster_Human"
 type "Character"
 using "LOW_HouseOfGrief_Cultist_Caster_Human"
 // data "Passives" "AttackOfOpportunity;DarknessRules;LOW_HouseOfGrief_Cultists_Sight;LOW_HouseOfGrief_Cultists_Melee;"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L3;CX_Spells_L4;CX_Spells_L3C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;LOW_HouseOfGrief_Cultists_Sight;LOW_HouseOfGrief_Cultists_Melee;"
 
-// Chymist Norffe, Limeburn Spaghwood
+// Chymist Norffe, Limeburn Spaghwood - Cult of Bane (Given the spell list they possess, and their spooky attire, they make decent Warlock candidates)
 new entry "LOW_Human_FelogyrFireworks_AlchemichalWorker"
 type "Character"
 using "LOW_Human_FelogyrFireworks_AlchemichalWorker"
+// data "Intelligence" "18"
+data "Intelligence" "12"
+// data "Charisma" "12"
+data "Charisma" "18"
+// data "SpellCastingAbility" "Intelligence"
+data "SpellCastingAbility" "Charisma"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+data "Progressions" "51274504-865d-46d1-b6a3-2ec784934a90"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L3;CX_Spells_L2C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;LOW_HouseOfGrief_Cultists_Sight;LOW_HouseOfGrief_Cultists_Melee;"
+data "Passives" "CX_Warlock_Boost;CX_Magic_Boost;CX_Spells_L3;CX_Spells_L2C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
 // Lorroakan
 new entry "LOW_RamazithsTower_Lorroakan"
@@ -3591,46 +3653,60 @@ using "LOW_RamazithsTower_Lorroakan"
 // data "Passives" "DarknessRules;LOW_RamazithsTower_ElementalSiphon;LOW_RamazithsTower_ElementalRebuke;SculptSpells;PotentCantrip;EmpoweredEvocation"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L5;CX_Spells_L6;CX_Spells_L6C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;LOW_RamazithsTower_ElementalSiphon;LOW_RamazithsTower_ElementalRebuke;SculptSpells;PotentCantrip;EmpoweredEvocation"
 
-// Fun idea (not for here obviously): increase the reward for siding with Lorroakan, because 5k gold to capture a literal daughter of Selune and grant him immortality is an insulting sum
-// new treasuretable "LOW_RamazithsTower_Lorroakan_NightsongReward"
-// new subtable "1,1"
-// object category "LOW_RamazithsTower_Lorroakan_NightsongReward",1,0,0,0,0,0,0,0
-
-// new entry "LOW_RamazithsTower_Lorroakan_NightsongReward"
-// type "Object"
-// using "OBJ_GoldPile"
-// data "ObjectCategory" "LOW_RamazithsTower_Lorroakan_NightsongReward"
-// data "MinAmount" "5000"
-// data "MaxAmount" "5000"
-
-// Statues of the gods in Stormshore Tabernacle - removing inheritance from Human_Caster
+// God shrines in Stormshore Tabernacle - (Removing inheritance from Human_Caster)
 new entry "LOW_StormshoreTabernacle_Gods"
 type "Character"
 using "LOW_StormshoreTabernacle_Gods"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "AttackOfOpportunity;DarknessRules"
 
-// Sparks Musgravel - guards Guildhall entrance
+// Sparks Musgravel - The Guild (Guards the Guildhall entrance in the Lower City)
 new entry "LOW_Undercellar_Entrance_Human_Caster"
 type "Character"
 using "LOW_Undercellar_Entrance_Human_Caster"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L5;CX_Spells_L5C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
-// Salazon - guy guarding entrance to the Zhentarim hideout beneath Waukeen's Rest
+// "_Human"
+//  ├─ "Human_Caster"
+//  │   ├─ "LOW_Undercellar_Entrance_Human_Caster"
+//  │   ├─ "MOO_TrapRezTarget"                              --- Balthazar summon?
+//  │   ├─ "PLA_Zhent_Recruit_Human_Caster"
+//  │   ├─ "SCE_FlamingFist_Human_Caster"
+//  │   ├─ "SCL_SeluneCleric"                               --- Unused
+//  │   ├─ "SHA_Necromancer"
+//  │   ├─ "WYR_Gortash"
+//  │   ├─ "WYR_MessHallBodyguard_09"
+//  │   └─ "WYR_SmugglersCave_Human_Caster"
+//  │       └─ "WYR_SmugglersCave_Human_Caster_2"
+
+// Salazon - Zhentarim (Guy guarding entrance to the Zhentarim hideout beneath Waukeen's Rest)
 new entry "PLA_Zhent_Recruit_Human_Caster"
 type "Character"
 using "PLA_Zhent_Recruit_Human_Caster"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L1;CX_Spells_L2;CX_Spells_L3;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
+// Flaming Fist
 new entry "SCE_FlamingFist_Human_Caster"
 type "Character"
 using "SCE_FlamingFist_Human_Caster"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L2;CX_Spells_L3;CX_Spells_L4;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
-// Balthazar - HONOUR MODE INHERITANCE
+new entry "SCL_SeluneCleric"
+type "Character"
+using "SCL_SeluneCleric"
+// data "Intelligence" "16"
+data "Intelligence" "12"
+// data "Wisdom" "12"
+data "Wisdom" "16"
+// data "Progressions" "44bdbc5e-a003-4d61-87f0-5ced20d3804e"
+data "Progressions" "36c3f8de-3293-4d7b-92bc-ceb3c569244b"
+// data "Passives" "AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L1;CX_Spells_L1C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
+
+// Balthazar - Commander of the Reborn Dead - HONOUR MODE INHERITANCE
 new entry "SHA_Necromancer"
 type "Character"
 using "SHA_Necromancer"
@@ -3638,29 +3714,35 @@ using "SHA_Necromancer"
 // data "Passives" "Alert;GrimHarvest;GraveMagic;TurnResistance;ImmuneToControlUndead;AttackOfOpportunity;DarknessRules;LegendaryAction_SHA_Necromancer_SpectralForm;LegendaryAction_SHA_Necromancer_LandOfTheDead;LegendaryAction_SHA_Necromancer_SpectralForm_Technical"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L4;CX_Spells_L5;CX_Spells_L5C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;Alert;GrimHarvest;GraveMagic;TurnResistance;ImmuneToControlUndead;;LegendaryAction_SHA_Necromancer_SpectralForm;LegendaryAction_SHA_Necromancer_LandOfTheDead;LegendaryAction_SHA_Necromancer_SpectralForm_Technical"
 
-// Gortash
-// Not gonna change his phase 1 stats entry too much either. Current Listo/DIQ CX config gives him the Rogue boost. Fighter may also work instead of Rogue - I also like that variety in Act 3 bosses since Orin already gets Rogue boost
+// Lord Enver Gortash - Archduke Nominee (Not gonna change his phase 1 stats entry too much either.)
 new entry "WYR_Gortash"
 type "Character"
 using "WYR_Gortash"
 // data "Passives" "DarkDevotion;MagicResistance;CrossbowExpert_PointBlank;ImmuneToDisarm;AttackOfOpportunity;DarknessRules;WYR_Gortash_Gortane"
-data "Passives" "CX_Martial_Boost;CX_Magic_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;WYR_Gortash_Gortane;DarkDevotion;MagicResistance;CrossbowExpert_PointBlank;ImmuneToDisarm"
+data "Passives" "CX_Rogue_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;WYR_Gortash_Gortane;DarkDevotion;MagicResistance;CrossbowExpert_PointBlank;ImmuneToDisarm"
 
-// Lord Portyr's bodyguard
+// Lord Portyr's Attendant (This guy is definitely giving Sorcerer vibes)
 new entry "WYR_MessHallBodyguard_09"
 type "Character"
 using "WYR_MessHallBodyguard_09"
+// data "Intelligence" "18"
+data "Intelligence" "10"
+// data "Charisma" "10"
+data "Charisma" "18"
+// data "SpellCastingAbility" "Intelligence"
+data "SpellCastingAbility" "Charisma"
+// TODO: Custom NPC Sorcerer progressions
 // data "Passives" "AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L5;CX_Spells_L5C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Sorcerer_Boost;CX_Magic_Boost;CX_Spells_L5;CX_Spells_L5C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
-// Blunt Skuncher - GOAT name
+// Blunt Skuncher - Stone Lord (GOAT name)
 new entry "WYR_SmugglersCave_Human_Caster"
 type "Character"
 using "WYR_SmugglersCave_Human_Caster"
 // data "Passives" "AttackOfOpportunity;DarknessRules;SculptSpells;PotentCantrip"
 data "Passives" "CX_Wizard_Boost;CX_Spells_L3;CX_Spells_L4;CX_Spells_L4C;CX_Spells_L5;CX_Spells_L5C;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;SculptSpells;PotentCantrip"
 
-// Charming Latham
+// Charming Latham - The Guild
 new entry "WYR_SmugglersCave_Human_Caster_2"
 type "Character"
 using "WYR_SmugglersCave_Human_Caster_2"
@@ -3674,12 +3756,13 @@ data "Passives" "CX_Wizard_Boost;CX_Spells_L3;CX_Spells_L4;CX_Spells_L4C;CX_Spel
 //  │   ├─ "DEN_Adventurer_Leader"
 //  │   ├─ "END_CityWatchMelee_Human"
 //  │   ├─ "FOR_Human_Cultist_Zariel_Paladin"
-//  │   ├─ "HAV_FlamingFist_Human_Mart"
-//  │   ├─ "HAV_FlamingFist_Human_Melee"
+//  │   ├─ "HAV_FlamingFist_Human_Mart"         --- (M)Art Cullagh
+//  │   ├─ "HAV_FlamingFist_Human_Melee"        --- Fist Ulthred - Flaming Fist
 //  │   │   └─ "HAV_Marcus"
 //  │   ├─ "HAV_Harper_Human_Melee"
 //  │   ├─ "HAV_ShadowCursed_Warrior_Human_Melee"
 
+// (Most of these are factions related or Act III and work as Fighter, not just Martial)
 new entry "Human_Melee"
 type "Character"
 using "Human_Melee"
@@ -3692,13 +3775,21 @@ using "CHA_Bandit_Human_Melee"
 // data "Passives" "DarknessRules"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
+// Andorn - Overgrown Ruin Looters
+new entry "CHA_BanditInterior_Human_Melee"
+type "Character"
+using "CHA_BanditInterior_Human_Melee"
+// data "Passives" "DarknessRules"
+data "Passives" "CX_Rogue_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
+
+// Watchman
 new entry "END_CityWatchMelee_Human"
 type "Character"
 using "END_CityWatchMelee_Human"
 // data "Passives" "AttackOfOpportunity;DarknessRules;FightingStyle_GreatWeaponFighting;GreatWeaponMaster_BonusAttack;GreatWeaponMaster_BonusDamage"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;FightingStyle_GreatWeaponFighting;GreatWeaponMaster_BonusAttack;GreatWeaponMaster_BonusDamage"
 
-// Anders - he was given increased Charisma but spellcasting ability wasn't changed
+// Anders - Sword of Tyr (He was given increased Charisma but spellcasting ability wasn't changed
 new entry "FOR_Human_Cultist_Zariel_Paladin"
 type "Character"
 using "FOR_Human_Cultist_Zariel_Paladin"
@@ -3707,16 +3798,17 @@ data "SpellCastingAbility" "Charisma"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
-// Marcus - note that current Listo/DIQ CX config gives him the Barbarian class boost in addition to the Fighter class boost given by Zehtuka
+// Fist Marcus - Agent of the Absolute, Cult of the Absolute
 new entry "HAV_Marcus"
 type "Character"
 using "HAV_Marcus"
 // data "Passives" "GreatWeaponMaster_BonusAttack;DarkDevotion;FeralInstinct;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;GreatWeaponMaster_BonusAttack;DarkDevotion;FeralInstinct"
 
+// Quartermaster Talli - Harpers
 new entry "HAV_Harper_Human_Melee"
 type "Character"
-using "Human_Melee"
+using "HAV_Harper_Human_Melee"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
@@ -3725,22 +3817,22 @@ new entry "HAV_ShadowCursed_Warrior_Human_Melee"
 type "Character"
 using "HAV_ShadowCursed_Warrior_Human_Melee"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
-data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules"
+data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
 // "_Human"
 //  ├─ "Human_Melee"
 //  │   ├─ "Human_Barbarian"
-//  │   │   ├─ "CHA_BanditInterior_Human_Barbarian"
-//  │   │   ├─ "CHA_Bandit_Human_Barbarian"
+//  │   │   ├─ "CHA_BanditInterior_Human_Barbarian"     -- Unused
+//  │   │   ├─ "CHA_Bandit_Human_Barbarian"             
 //  │   │   ├─ "LOW_Chasm_Mangle"
-//  │   │   ├─ "LOW_Elfsong_Patron_Human_Barbarian"
+//  │   │   ├─ "LOW_Elfsong_Patron_Human_Barbarian"     -- Bombasto
 //  │   │   ├─ "LOW_Masked_Barbarian"
-//  │   │   ├─ "PLA_Zhent_Recruit_Human_Barbarian"
+//  │   │   ├─ "PLA_Zhent_Recruit_Human_Barbarian"      -- Vol
 //  │   │   ├─ "WYR_GurHunter_Ulma"
-//  │   │   ├─ "WYR_MerchantsHouse_Human_Barbarian"
-//  │   │   ├─ "WYR_MessHallBodyguard_05"
+//  │   │   ├─ "WYR_MerchantsHouse_Human_Barbarian"     -- Gleeful CLong
+//  │   │   ├─ "WYR_MessHallBodyguard_05"               -- Lord Jannath's Bodyguard
 //  │   │   └─ "WYR_SmugglersCave_Human_Barbarian"
-
+// TODO: REVIEW FROM HERE DOWN
 new entry "Human_Barbarian"
 type "Character"
 using "Human_Barbarian"
@@ -3753,6 +3845,7 @@ using "Human_Barbarian"
 // data "Passives" "DarknessRules"
 data "Passives" "CX_Barbarian_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
+// Haseid
 new entry "CHA_Bandit_Human_Barbarian"
 type "Character"
 using "CHA_Bandit_Human_Barbarian"
@@ -3779,6 +3872,7 @@ using "WYR_GurHunter_Ulma"
 // data "Passives" "DarknessRules;Scar_Sirocco_Gur;Scar_Fury_Gur;Scar_Eclipse_Gur;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Barbarian_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;Scar_Sirocco_Gur;Scar_Fury_Gur;Scar_Eclipse_Gur"
 
+// Shiv Dahlia
 new entry "WYR_SmugglersCave_Human_Barbarian"
 type "Character"
 using "WYR_SmugglersCave_Human_Barbarian"
@@ -3788,15 +3882,15 @@ data "Passives" "CX_Barbarian_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatili
 // "_Human"
 //  ├─ "Human_Melee"
 //  │   ├─ "Human_Cleric"
-//  │   │   ├─ "FOR_Human_Cultist_Zariel_Cleric"
-//  │   │   ├─ "GOB_PainPriest"
-//  │   │   ├─ "HAV_FlamingFist_Human_Cleric"
-//  │   │   ├─ "Human_FFist_Cleric"
-//  │   │   ├─ "LOW_KelemvorPriestess"
+//  │   │   ├─ "FOR_Human_Cultist_Zariel_Cleric"    -- Dead
+//  │   │   ├─ "GOB_PainPriest"                     -- Abdirak, kinky worshipper of Loviatar
+//  │   │   ├─ "HAV_FlamingFist_Human_Cleric"       -- J'ehlar
+//  │   │   ├─ "Human_FFist_Cleric"                 -- Unused
+//  │   │   ├─ "LOW_KelemvorPriestess"              -- Mortarch Gracie Scyre, manages the graveyard in Lower City
 //  │   │   ├─ "LOW_Lora"
 //  │   │   ├─ "WYR_GurHunter_Cleric"
-//  │   │   └─ "WYR_OpenHandTemple_Human_Cleric"
-//  │   │       └─ "WYR_OpenHandTemple_Human_Cleric_Father"
+//  │   │   └─ "WYR_OpenHandTemple_Human_Cleric"    -- Sister Rose the Penitent
+//  │   │       └─ "WYR_OpenHandTemple_Human_Cleric_Father"     -- Unused
 
 new entry "Human_Cleric"
 type "Character"
@@ -3827,32 +3921,32 @@ data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;HumanMilitia;HumanVersatility;At
 //  │   │   │   └─ "LOW_DoorSentry"
 //  │   │   └─ "WYR_GurHunter_Melee_Strong"
 //  │   ├─ "LOW_ArabellaPowers_Brigand_Human_Melee"     --- Ogreboy Colum (dead)
-//  │   ├─ "LOW_BlushingMermaid_Victim_Human_Melee"
+//  │   ├─ "LOW_BlushingMermaid_Victim_Human_Melee"     -- Unused
 //  │   ├─ "LOW_CountingHouse_Melee_Human"
 //  │   │   └─ "LOW_CountingHouse_Captain_Human"
-//  │   ├─ "LOW_GriefGuard_Human_Melee"
-//  │   ├─ "LOW_GuildSmugglers_Guard_03"
+//  │   ├─ "LOW_GriefGuard_Human_Melee"                 -- Unused
+//  │   ├─ "LOW_GuildSmugglers_Guard_03"                -- Jazzy Topps
 //  │   ├─ "LOW_Guildhall_GravediggerKarcen"
 //  │   ├─ "LOW_Guildhall_LadyAgue"
 //  │   ├─ "LOW_Guildhall_LadyQuinsy"
-//  │   ├─ "LOW_HagSurvivor_Human_Melee"
+//  │   ├─ "LOW_HagSurvivor_Human_Melee"                -- Maggie Ni Chuirc
 //  │   ├─ "LOW_HouseOfGrief_Cultist_Melee_Human"
 //  │   ├─ "LOW_Undercellar_Entrance_Human_Melee"
 //  │   ├─ "LOW_VoicelessPenitent"
 //  │   ├─ "LOW_VolosFate_Thugs_Melee_01"
 //  │   ├─ "LOW_VolosFate_Thugs_Melee_02"
 //  │   ├─ "LOW_VolosFate_Thugs_Melee_03"
-//  │   ├─ "MOO_FlamingFist_Human_Melee"
-//  │   ├─ "PLA_Zhent_Recruit_Human_Melee"
-//  │   ├─ "SCL_Harper_Human_Melee"
-//  │   ├─ "SCL_Harper_Human_Melee_Strong"
+//  │   ├─ "MOO_FlamingFist_Human_Melee"                -- Fists Nipawa, Hadenwell
+//  │   ├─ "PLA_Zhent_Recruit_Human_Melee"              -- Unused
+//  │   ├─ "SCL_Harper_Human_Melee"                     -- Shadow-Cursed Harpers in Reithwin Town Square
+//  │   ├─ "SCL_Harper_Human_Melee_Strong"              -- Unused
 //  │   │   ├─ "SCL_Caravan_Ambusher_Lassandra"
 //  │   │   └─ "SCL_Caravan_Ambusher_Skywin"
-//  │   ├─ "TWN_Morgue_ShadowCursed_Human_Melee"
-//  │   ├─ "WYR_Circus_Human_Melee"
+//  │   ├─ "TWN_Morgue_ShadowCursed_Human_Melee"        -- SHadow-Cursed Human
+//  │   ├─ "WYR_Circus_Human_Melee"                     -- Unused
 //  │   ├─ "WYR_GurHunter_Melee_Mirage"
 //  │   │   └─ "WYR_GurHunter_Melee_DarkThirst"
-//  │   └─ "WYR_SharessCaress_Human_Melee"
+//  │   └─ "WYR_SharessCaress_Human_Melee"              -- Hoots Hooligan, bartender at Sharess' Caress
 
 // Lady Esther
 new entry "CRE_LadyEsther"
@@ -3861,6 +3955,7 @@ using "CRE_LadyEsther"
 // data "Passives" "FightingStyle_Dueling;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;FightingStyle_Dueling"
 
+// Sharran Sentries: Imwise, Handly, Baxta
 new entry "LOW_HouseOfGrief_Cultist_Sentry"
 type "Character"
 using "LOW_HouseOfGrief_Cultist_Sentry"
@@ -3880,7 +3975,7 @@ using "WYR_GurHunter_Melee_Strong"
 // data "Passives" "Scar_Fury_Gur;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;Scar_Fury_Gur"
 
-// Change spellcasting ability to Charisma to reflect being a Paladin
+// Counting House Enforcers. Change spellcasting ability to Charisma to reflect being a Paladin
 new entry "LOW_CountingHouse_Melee_Human"
 type "Character"
 using "LOW_CountingHouse_Melee_Human"
@@ -3889,6 +3984,7 @@ data "SpellCastingAbility" "Charisma"
 // data "Passives" "AttackOfOpportunity;DarknessRules;Charger"
 data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;Charger"
 
+// Cashguard Captain Faril
 new entry "LOW_CountingHouse_Captain_Human"
 type "Character"
 using "LOW_CountingHouse_Captain_Human"
@@ -3916,6 +4012,7 @@ using "LOW_Guildhall_LadyQuinsy"
 // data "Passives" "GreatWeaponMaster_BonusAttack;FightingStyle_Protection;LOW_Guildhall_SneakyRiposte;FastHands;SavageAttacker;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;GreatWeaponMaster_BonusAttack;FightingStyle_Protection;LOW_Guildhall_SneakyRiposte;FastHands;SavageAttacker"
 
+// Sharran Novices: Monteith, Tylda
 new entry "LOW_HouseOfGrief_Cultist_Melee_Human"
 type "Character"
 using "LOW_HouseOfGrief_Cultist_Melee_Human"
@@ -3931,25 +4028,28 @@ data "SpellCastingAbility" "Charisma"
 // data "Passives" "AttackOfOpportunity;DarknessRules;FightingStyle_Dueling"
 data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;FightingStyle_Dueling"
 
+// Ruffian Ormo
 new entry "LOW_VolosFate_Thugs_Melee_01"
 type "Character"
 using "LOW_VolosFate_Thugs_Melee_01"
 // data "Passives" "Riposte;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;Riposte"
 
+// Antinia the Goon
 new entry "LOW_VolosFate_Thugs_Melee_02"
 type "Character"
 using "LOW_VolosFate_Thugs_Melee_02"
 // data "Passives" "FightingStyle_TwoWeaponFighting;DualWielder_PassiveBonuses;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;FightingStyle_TwoWeaponFighting;DualWielder_PassiveBonuses"
 
+// Imprudence
 new entry "LOW_VolosFate_Thugs_Melee_03"
 type "Character"
 using "LOW_VolosFate_Thugs_Melee_03"
 // data "Passives" "Overwhelm;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;Overwhelm"
 
-// Skywin - this stat block is completely fucked in vanilla lol. Elf Ranger with Human Fighter stats. Using stats for HAV_Harper_Elf_Ranger as partial reference for her
+// Skywin - (This stat block is completely fucked in vanilla lol. Elf Ranger with Human Fighter stats. Using stats for HAV_Harper_Elf_Ranger as partial reference for her
 new entry "SCL_Caravan_Ambusher_Skywin"
 type "Character"
 using "SCL_Caravan_Ambusher_Skywin"
@@ -3970,12 +4070,14 @@ data "ArmorType" "Leather"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;FeyAncestry;AttackOfOpportunity;DarknessRules;Darkvision"
 
+// Gur Hunter Warrior (Gather Your Allies summon)
 new entry "WYR_GurHunter_Melee_Mirage"
 type "Character"
 using "WYR_GurHunter_Melee_Mirage"
 // data "Passives" "Scar_Mirage_Gur;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;Scar_Mirage_Gur"
 
+// Gur Hunter Warrior (Gather Your Allies summon)
 new entry "WYR_GurHunter_Melee_DarkThirst"
 type "Character"
 using "WYR_GurHunter_Melee_DarkThirst"
@@ -3984,9 +4086,9 @@ data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility
 
 // "_Human"
 //  ├─ "Human_Ranger"
-//  │   ├─ "CHA_Bandit_Human_Ranger"
-//  │   │   └─ "CHA_BanditInterior_Human_Ranger"
-//  │   ├─ "CRA_MindflayerThrall_Ranger_Human"
+//  │   ├─ "CHA_Bandit_Human_Ranger"                
+//  │   │   └─ "CHA_BanditInterior_Human_Ranger"        -- Mari, Barton
+//  │   ├─ "CRA_MindflayerThrall_Ranger_Human"          -- Unused
 //  │   ├─ "DEN_Adventurer_Ranged"
 //  │   ├─ "HAG_GurHunter"
 //  │   ├─ "HAG_Masked_Ranger"
@@ -3994,17 +4096,17 @@ data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility
 //  │   ├─ "HAV_Harper_Human_Ranger"
 //  │   ├─ "Human_FFist_Ranger"
 //  │   ├─ "LOW_AradinThug_Ranger"
-//  │   ├─ "LOW_CountingHouse_Ranged_Human"
-//  │   ├─ "LOW_GriefGuard_Human_Ranger"
-//  │   ├─ "LOW_GuildSmugglers_Guard_02"
+//  │   ├─ "LOW_CountingHouse_Ranged_Human"             -- Counting House Artillerists
+//  │   ├─ "LOW_GriefGuard_Human_Ranger"                -- Unused
+//  │   ├─ "LOW_GuildSmugglers_Guard_02"                -- Lo Blank
 //  │   ├─ "LOW_VolosFate_Thugs_Ranged_01"
-//  │   ├─ "MOO_Harper_Human_Ranger"
-//  │   ├─ "PLA_GnollCave_ZhentRanger_Weak"
-//  │   ├─ "PLA_Zhent_Recruit_Human_Ranger"
-//  │   ├─ "SCL_Harper_Human_Ranger"
-//  │   │   ├─ "LOW_HarperConfrontation_Ranger_Human"
-//  │   │   └─ "SCL_Caravan_Ambusher_Manus"
-//  │   ├─ "WYR_Flophouse_Human_Ranger"
+//  │   ├─ "MOO_Harper_Human_Ranger"                    -- Harper Grenywald
+//  │   ├─ "PLA_GnollCave_ZhentRanger_Weak"             -- Olly (lol imagine getting specifically labelled weak)
+//  │   ├─ "PLA_Zhent_Recruit_Human_Ranger"             -- Most of the Zhents in the hideout under Waukeen's Rest
+//  │   ├─ "SCL_Harper_Human_Ranger"                    -- Harpers Meygan and Yonas; Shadow-Cursed Harper in Reithwin Town Square 
+//  │   │   ├─ "LOW_HarperConfrontation_Ranger_Human"   -- Harper Glist
+//  │   │   └─ "SCL_Caravan_Ambusher_Manus"             -- Harper Manus
+//  │   ├─ "WYR_Flophouse_Human_Ranger"                 -- Adventurer Drim
 //  │   ├─ "WYR_GurHunter_Ranged"
 //  │   └─ "WYR_Posthouse_Human_Ranger"
 
@@ -4014,6 +4116,7 @@ using "Human_Ranger"
 // data "Passives" "AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules"
 
+// Unused
 new entry "CHA_Bandit_Human_Ranger"
 type "Character"
 using "CHA_Bandit_Human_Ranger"
@@ -4035,12 +4138,14 @@ data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;
 // data "Progressions" ""
 data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
 
+// Gandrel
 new entry "HAG_GurHunter"
 type "Character"
 using "HAG_GurHunter"
 // data "Passives" "Scar_Fury_Gur;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;Scar_Fury_Gur"
 
+// Quivers Antinnia
 new entry "LOW_AradinThug_Ranger"
 type "Character"
 using "LOW_AradinThug_Ranger"
@@ -4053,12 +4158,14 @@ using "LOW_CountingHouse_Ranged_Human"
 // data "Passives" "AttackOfOpportunity;DarknessRules;Mobile_PassiveBonuses;Mobile_CounterAttackOfOpportunity;Mobile_DashAcrossDifficultTerrain"
 data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;Mobile_PassiveBonuses;Mobile_CounterAttackOfOpportunity;Mobile_DashAcrossDifficultTerrain"
 
+// Bully Gal Vharranne
 new entry "LOW_VolosFate_Thugs_Ranged_01"
 type "Character"
 using "LOW_VolosFate_Thugs_Ranged_01"
 // data "Passives" "ColossusSlayer;FastMovement;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;ColossusSlayer;FastMovement"
 
+// Dominica Arsets, Oliver Quarlic; also Gur Hunter Sharpshooter (summon from Gather Your Allies)
 new entry "WYR_GurHunter_Ranged"
 type "Character"
 using "WYR_GurHunter_Ranged"
@@ -4070,7 +4177,7 @@ data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;
 //  │   ├─ "Human_Cultist_Bhaal_NightBlade"
 //  │   │   ├─ "Human_Cultist_Bhaal_DeathsHead"
 //  │   │   │   ├─ "GLO_Orin"
-//  │   │   │   ├─ "LOW_Chasm_Strangler"
+//  │   │   │   ├─ "LOW_Chasm_Strangler"                -- Luke the Strangler
 //  │   │   │   ├─ "LOW_Cultist_Bhaal_DeathsHead_Disguise"
 //  │   │   │   ├─ "LOW_MinscHideout_SluiceGuard_Ranger"
 //  │   │   │   └─ "LOW_UnholyAssassin"
@@ -4082,7 +4189,7 @@ data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;
 //  │   ├─ "LOW_Guildhall_NineFingersKeene"
 //  │   ├─ "LOW_Guildhall_Swarm_Melee_Human"
 //  │   ├─ "LOW_Guildhall_Swarm_Ranged_Human"
-//  │   └─ "LOW_QuenoraGrizly"
+//  │   └─ "LOW_QuenoraGrizly"                          -- Captain Grisly (The Blushing Mermaid)
 
 new entry "Human_Rogue"
 type "Character"
@@ -4129,6 +4236,7 @@ using "LOW_UnholyAssassin"
 // data "Passives" "MagicResistance;MurderHungry;AttackOfOpportunity;Darkvision;DarknessRules"
 data "Passives" "CX_Rogue_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;Darkvision;DarknessRules;MagicResistance;MurderHungry"
 
+// Unholy Assassin Mitchia
 new entry "LOW_UnholyAssassin_Rycke"
 type "Character"
 using "LOW_UnholyAssassin_Rycke"
@@ -4219,9 +4327,10 @@ using "MOO_ZealotOfTheAbsolute_Human"
 data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility;AttackOfOpportunity;DarknessRules;FightingStyle_GreatWeaponFighting"
 
 // "_Human"
-//  ├─ "Human_Gondian_Caster"
+//  ├─ "Human_Gondian_Caster"          
 //  ├─ "LOW_Sarevok"
 
+// Gondian unpaid interns in the Steel Watch Foundry
 new entry "Human_Gondian_Caster"
 type "Character"
 using "Human_Gondian_Caster"
@@ -4247,7 +4356,7 @@ data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;HumanMilitia;HumanVersatility
 //  │   │       ├─ "Kobold_Melee"
 //  │   │       │   ├─ "LOW_KoboldGangLeader"
 //  │   │       │   ├─ "LOW_KoboldGang_Melee"
-//  │   │       │   └─ "WYR_Kobold_Popper"
+//  │   │       │   └─ "WYR_Kobold_Popper"              -- Popper the Merchant
 //  │   │       └─ "Kobold_Ranger"
 //  │   │           └─ "LOW_KoboldGang_Ranger"
 
@@ -4303,6 +4412,7 @@ using "Sahuagin_Champion"
 // data "Passives" "BloodFrenzy_Sahuagin;ExtraAttack;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Barbarian_Boost;BloodFrenzy_Sahuagin;AttackOfOpportunity;DarknessRules;ExtraAttack"
 
+// Champion of Mahkloompah (summon from during Confront the Elder Brain; technically not part of Gather Your Allies)
 new entry "END_SahuaginAlly_Champion"
 type "Character"
 using "END_SahuaginAlly_Champion"
@@ -4321,6 +4431,7 @@ using "Sahuagin_Ranged"
 // data "Passives" "BloodFrenzy_Sahuagin;ExtraAttack;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Ranger_Boost;BloodFrenzy_Sahuagin;AttackOfOpportunity;DarknessRules;ExtraAttack"
 
+// Devotee of Mahkloompah (summon from during Confront the Elder Brain; technically not part of Gather Your Allies)
 new entry "END_SahuaginAlly_Ranged"
 type "Character"
 using "END_SahuaginAlly_Ranged"
@@ -4333,18 +4444,73 @@ using "Sahuagin_Warlock"
 // data "Passives" "BloodFrenzy_Sahuagin;ExtraAttack;AttackOfOpportunity;DarknessRules"
 data "Passives" "CX_Warlock_Boost;CX_Magic_Boost;BloodFrenzy_Sahuagin;AttackOfOpportunity;DarknessRules;ExtraAttack"
 
+// "_Base"
+//  ├─ "_Humanoid"
+//  │   ├─ "Kuotoa"
+//  │   │   ├─ "END_KuotoaAlly_Melee"
+//  │   │   ├─ "Kuotoa_Caster"
+//  │   │   ├─ "Kuotoa_Ranger"
+//  │   │   │   └─ "TWN_KuoToa_ranger"
+//  |   │   ├─ "TWN_KuoToa_champ"
+//  │   │   ├─ "TWN_KuoToa_melee"
+
+// Proselyte of Mahkloompah (summon from during Confront the Elder Brain; technically not part of Gather Your Allies)
+new entry "END_KuotoaAlly_Melee"
+type "Character"
+using "END_KuotoaAlly_Melee"
+// data "Passives" "SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;Evasion"
+data "Passives" "CX_Martial_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;Evasion"
+
+// Pooldripp the Zealous
+new entry "Kuotoa_Caster"
+type "Character"
+using "Kuotoa_Caster"
+// data "Passives" "SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules"
+
+// Kuo-Toa Hunter/Skirmisher
+new entry "Kuotoa_Ranger"
+type "Character"
+using "Kuotoa_Ranger"
+// data "Passives" "SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules"
+// Giving NPC_Ranger progression
+// data "Progressions" ""
+data "Progressions" "f0ede459-8b86-48fd-ac11-4432573566a5"
+
+// Cursed Kuo-Toa (archers)
+new entry "TWN_KuoToa_ranger"
+type "Character"
+using "TWN_KuoToa_ranger"
+// data "Passives" "SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;TWN_KuoToa_Storm"
+data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;TWN_KuoToa_Storm"
+
+// Cursed Kuo-Toa (melee)
+new entry "TWN_KuoToa_melee"
+type "Character"
+using "TWN_KuoToa_melee"
+// data "Passives" "SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;TWN_KuoToa_Storm"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;TWN_KuoToa_Storm"
+
+// Cursed Kuo-Toa Chief (two of em)
+new entry "TWN_KuoToa_champ"
+type "Character"
+using "TWN_KuoToa_champ"
+// data "Passives" "SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;TWN_KuoToa_Storm"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;SunlightSensitivity;AttackOfOpportunity;Darkvision;DarknessRules;TWN_KuoToa_Storm"
+
 // ==================================== Tiefling ====================================
 
 // "_Base"
 //  ├─ "_Humanoid"
 //  │   └─ "_Tiefling"
 //  │       ├─ "Tiefling_Child"
-//  │       │   ├─ "DEN_Mirkon"
-//  │       │   └─ "DEN_Thiefling"
+//  │       │   ├─ "DEN_Mirkon"             -- Mirkon (duh)
+//  │       │   └─ "DEN_Thiefling"          -- All the other tiefling kids
 //  │       ├─ "Tiefling_Commoner"
-//  │       │   ├─ "DEN_Stargazer"
+//  │       │   ├─ "DEN_Stargazer"          -- Nadira
 //  │       │   ├─ "LOW_HouseOfHope_Tiefling_Debtor"
-//  │       │   └─ "Tiefling_Commoner_Cowering"
+//  │       │   └─ "Tiefling_Commoner_Cowering"     -- Unused
 
 new entry "Tiefling_Child"
 type "Character"
@@ -4360,13 +4526,13 @@ data "Passives" "Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Da
 
 // "_Tiefling"
 //  ├─ "Tiefling_Caster"
-//  │   ├─ "CHA_Bandit_Tiefling_Caster"
+//  │   ├─ "CHA_Bandit_Tiefling_Caster"         -- Unused
 //  │   ├─ "GLO_Prodigy"
 //  │   ├─ "HAG_Masked_Wizard"
 //  │   ├─ "HAV_Harper_Tiefling_Caster"
 //  │   ├─ "HAV_RolandHologramSpeaker"
 //  │   ├─ "LOW_RolanProjection"
-//  │   ├─ "LOW_ShadowheartFriend"
+//  │   ├─ "LOW_ShadowheartFriend"              -- Nocturne
 //  │   ├─ "SCE_FlamingFist_Tiefling_Caster"
 //  │   └─ "Tiefling_Bard"
 //  │       └─ "DEN_Refugees_Tiefling_Bard"
@@ -4383,6 +4549,7 @@ using "CHA_Bandit_Tiefling_Caster"
 // data "Passives" "Tiefling_HellishResistance;DarknessRules;Darkvision"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L1;CX_Spells_L1C;Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 
+// Rolan
 new entry "GLO_Prodigy"
 type "Character"
 using "GLO_Prodigy"
@@ -4396,6 +4563,7 @@ using "HAG_Masked_Wizard"
 // data "Passives" "AttackOfOpportunity;Tiefling_HellishResistance;DarknessRules;DarknessRules"
 data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;DarknessRules"
 
+// Harper Donner
 new entry "HAV_Harper_Tiefling_Caster"
 type "Character"
 using "HAV_Harper_Tiefling_Caster"
@@ -4427,10 +4595,10 @@ data "Passives" "CX_Bard_Boost;CX_Magic_Boost;Tiefling_HellishResistance;AttackO
 //  │   ├─ "DEN_Trainer"
 //  │   ├─ "END_CityWatchMelee_Tiefling"
 //  │   ├─ "END_Hellrider_Paladin"
-//  │   ├─ "GLO_IrritatedTiefling"
+//  │   ├─ "GLO_IrritatedTiefling"              -- Guex
 //  │   ├─ "LOW_AradinThug_Fighter"
 //  │   ├─ "Tiefling_Cleric"
-//  │   │   └─ "END_Hellrider_Cleric"
+//  │   │   └─ "END_Hellrider_Cleric"           -- Helrider Paladin (summon from Gather Your Allies)
 //  │   └─ "WYR_SmugglersCave_StoneLord_Tiefling"
 
 new entry "Tiefling_Melee"
@@ -4452,6 +4620,7 @@ using "END_CityWatchMelee_Tiefling"
 // data "Passives" "AttackOfOpportunity;Tiefling_HellishResistance;DarknessRules;Darkvision;FightingStyle_GreatWeaponFighting;GreatWeaponMaster_BonusAttack;GreatWeaponMaster_BonusDamage"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision;FightingStyle_GreatWeaponFighting;GreatWeaponMaster_BonusAttack;GreatWeaponMaster_BonusDamage"
 
+// Helrider Paladin (summon from Gather Your Allies)
 new entry "END_Hellrider_Paladin"
 type "Character"
 using "END_Hellrider_Paladin"
@@ -4460,6 +4629,7 @@ data "SpellCastingAbility" "Charisma"
 // data "Passives" "Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 
+// Devilish Qora
 new entry "LOW_AradinThug_Fighter"
 type "Character"
 using "LOW_AradinThug_Fighter"
@@ -4472,6 +4642,7 @@ using "Tiefling_Cleric"
 // data "Passives" "Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 
+// Cairos
 new entry "WYR_SmugglersCave_StoneLord_Tiefling"
 type "Character"
 using "WYR_SmugglersCave_StoneLord_Tiefling"
@@ -4480,15 +4651,15 @@ data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;Tiefling_HellishResistance;At
 
 //  ├─ "Tiefling_Ranger"
 //  │   ├─ "CHA_Bandit_Tiefling_Ranger"
-//  │   │   └─ "CHA_Bandit_Tiefling_Ranger_B"
+//  │   │   └─ "CHA_Bandit_Tiefling_Ranger_B"   -- Nymessa
 //  │   ├─ "DEN_Arka"
 //  │   ├─ "DEN_Refugees_Tiefling_Ranger"
 //  │   ├─ "END_Inquisitor_Tiefling"            --- Inquisitor of the Absolute - Cult of the Absolute
-//  │   ├─ "GLO_ProdigySister"
-//  │   ├─ "HAV_Harper_Tiefling_Ranger"
-//  │   ├─ "MOO_Harper_Tiefling_Ranger"
+//  │   ├─ "GLO_ProdigySister"                  -- Lia
+//  │   ├─ "HAV_Harper_Tiefling_Ranger"         -- Harpers Naysa, Lumn
+//  │   ├─ "MOO_Harper_Tiefling_Ranger"         -- Harper Olys
 //  │   ├─ "MOO_PrisonWarden"
-//  │   └─ "PLA_ChokepointScout"
+//  │   └─ "PLA_ChokepointScout"                -- Ellyka
 
 new entry "Tiefling_Ranger"
 type "Character"
@@ -4496,6 +4667,7 @@ using "Tiefling_Ranger"
 // data "Passives" "Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 
+// Damays
 new entry "CHA_Bandit_Tiefling_Ranger"
 type "Character"
 using "CHA_Bandit_Tiefling_Ranger"
@@ -4539,7 +4711,7 @@ data "Passives" "CX_Rogue_Boost;CX_Martial_Boost;Tiefling_HellishResistance;Atta
 //  │   ├─ "FlamingFist_Tiefling_Caster"
 //  │   ├─ "FlamingFist_Tiefling_Cleric"
 //  │   ├─ "FlamingFist_Tiefling_Melee_Attacker"
-//  │   ├─ "FlamingFist_Tiefling_Melee_Defender"
+//  │   ├─ "FlamingFist_Tiefling_Melee_Defender"        -- Fist Larys, the only entry here that's actually used
 //  │   └─ "FlamingFist_Tiefling_Ranger"
 
 new entry "FlamingFist_Tiefling_Caster"
@@ -4572,6 +4744,7 @@ using "FlamingFist_Tiefling_Ranger"
 // data "Passives" "Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 
+// None of these are used
 // "_Tiefling"
 //  ├─ "MOO_AcolyteOfTheAbsolute_Dragonborn"
 //  ├─ "MOO_FanaticOfTheAbsolute_Tiefling"
@@ -4652,6 +4825,88 @@ type "Character"
 using "GLO_Oathbreaker_Paladin"
 // data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;ExtraAttack;TurnResistance;FightingStyle_GreatWeaponFighting;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;"
 data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules;Darkvision;ExtraAttack;TurnResistance;FightingStyle_GreatWeaponFighting;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
+
+// These don't show up properly in the inheritance tree for me - they're there, but just all show separately under the Character section instead of their actual inheritance under _Undead. These are mapped by hand so may be missing an entry.
+// _Base
+//  └─ _Undead
+//     ├─ DarkJusticiar_Melee                           -- Unused
+//     │   ├─ DarkJusticiar_Melee_Summon            
+//     │   ├─ SHA_InitialJusticiar                      -- Idk who this is
+//     │   ├─ DarkJusticiar_Boss
+//     │   ├─ DarkJusticiar_Caster 
+//     │   │   ├─ LOW_HouseOfGrief_Cultist_Caster  
+//     │   │   ├─ SHA_LastJusticiar_Lyrthindor 
+//     │   │   ├─ DarkJusticiar_Ranger 
+//     │   │   │   └─ TWN_DarkJusticiar_Intelligence  
+//     │   ├─ TWN_DarkJusticiar_Charisma  
+//     │   ├─ TWN_DarkJusticiar_Wisdom    
+
+new entry "DarkJusticiar_Melee"
+type "Character"
+using "DarkJusticiar_Melee"
+// data "Passives" "ExtraAttack;LivingShadow;SunlightSensitivity;SHA_VisionOfShar;AttackOfOpportunity;Darkvision;DarknessRules;Darkvision"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;AttackOfOpportunity;Darkvision;DarknessRules;Darkvision;ExtraAttack;LivingShadow;SunlightSensitivity;SHA_VisionOfShar"
+
+// Justiciar Crusader Nightmist - actually an Elf
+new entry "DarkJusticiar_Boss"
+type "Character"
+using "DarkJusticiar_Boss"
+data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;FeyAncestry;AttackOfOpportunity;Darkvision;DarknessRules;ExtraAttack;SHA_DarkVengeance;SHA_VisionOfShar;LivingShadow;SunlightSensitivity"
+
+// Undead Dark Justiciars (e.g. Silent Library)
+new entry "DarkJusticiar_Caster"
+type "Character"
+using "DarkJusticiar_Caster"
+// data "Passives" "AttackOfOpportunity;Darkvision;DarknessRules;LOW_HouseOfGrief_Cultists_Sight;"
+data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L3;CX_Spells_L4;AttackOfOpportunity;Darkvision;DarknessRules;LOW_HouseOfGrief_Cultists_Sight;"
+
+// Mirie; Sharran Fidelians in House of Grief (Human AND Elf); summons for Gather Your Allies
+// Gonna omit racial passives for now as this entry is used for multiple races
+new entry "LOW_HouseOfGrief_Cultist_Caster"
+type "Character"
+using "LOW_HouseOfGrief_Cultist_Caster"
+// data "Passives" "AttackOfOpportunity;Darkvision;DarknessRules;LOW_HouseOfGrief_Cultists_Sight;"
+data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L4;AttackOfOpportunity;Darkvision;DarknessRules;LOW_HouseOfGrief_Cultists_Sight;"
+
+// Lyrthindor, the rat guy
+// Doesn't really have a set class but gonna put him down as a martial-focused Cleric, kinda like War Cleric (he uses Wisdom after all)
+new entry "SHA_LastJusticiar_Lyrthindor"
+type "Character"
+using "SHA_LastJusticiar_Lyrthindor"
+// data "Passives" "SHA_VisionOfShar;SHA_Lyrthindor_UnlockExtraSpellSlots;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;CX_Martial_Boost;AttackOfOpportunity;Darkvision;DarknessRules;SHA_VisionOfShar;SHA_Lyrthindor_UnlockExtraSpellSlots;"
+
+new entry "DarkJusticiar_Ranger"
+type "Character"
+using "DarkJusticiar_Ranger"
+// No progression, so directly giving spell slots to use Ranger spells
+// data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1"
+data "ActionResources" "ActionPoint:1;BonusActionPoint:1;Movement:9;ReactionActionPoint:1;SpellSlot:1:1:4;SpellSlot:2:2:3;SpellSlot:3:3:2"
+// data "SpellCastingAbility" "Intelligence"
+data "SpellCastingAbility" "Wisdom"
+// data "Passives" "ExtraAttack;LivingShadow;SunlightSensitivity;SHA_VisionOfShar;ShadowStealth;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;AttackOfOpportunity;Darkvision;DarknessRules;ExtraAttack;LivingShadow;SunlightSensitivity;SHA_VisionOfShar;ShadowStealth"
+
+// Intelligent Sentinel (secret shrine to Shar underneath Reithwin town square)
+new entry "TWN_DarkJusticiar_Intelligence"
+type "Character"
+using "TWN_DarkJusticiar_Intelligence"
+// data "Passives" "TWN_PlaquePuzzle_Intelligence;SunlightSensitivity;SHA_VisionOfShar;LivingShadow;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L4;AttackOfOpportunity;Darkvision;DarknessRules;TWN_PlaquePuzzle_Intelligence;SunlightSensitivity;SHA_VisionOfShar;LivingShadow;"
+
+// Charisma Sentinel (secret shrine to Shar underneath Reithwin town square)
+new entry "TWN_DarkJusticiar_Charisma"
+type "Character"
+using "TWN_DarkJusticiar_Charisma"
+// data "Passives" "TWN_PlaquePuzzle_Charisma;SunlightSensitivity;SHA_VisionOfShar;LivingShadow;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;AttackOfOpportunity;Darkvision;DarknessRules;TWN_PlaquePuzzle_Charisma;SunlightSensitivity;SHA_VisionOfShar;LivingShadow;"
+
+// Wise Sentinel (secret shrine to Shar underneath Reithwin town square)
+new entry "TWN_DarkJusticiar_Wisdom"
+type "Character"
+using "TWN_DarkJusticiar_Wisdom"
+// data "Passives" "TWN_PlaquePuzzle_Wisdom;SunlightSensitivity;SHA_VisionOfShar;LivingShadow;AttackOfOpportunity;Darkvision;DarknessRules"
+data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;AttackOfOpportunity;Darkvision;DarknessRules;TWN_PlaquePuzzle_Wisdom;SunlightSensitivity;SHA_VisionOfShar;LivingShadow;"
 
 // Skeletons are the most relevant Undead category for CX class boosts
 // _Base

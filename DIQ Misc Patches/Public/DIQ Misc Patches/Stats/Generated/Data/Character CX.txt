@@ -4630,7 +4630,7 @@ data "Passives" "Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Da
 //  │   ├─ "HAV_Harper_Tiefling_Caster"
 //  │   ├─ "HAV_RolandHologramSpeaker"
 //  │   ├─ "LOW_RolanProjection"
-//  │   ├─ "LOW_ShadowheartFriend"              -- Nocturne
+//  │   ├─ "LOW_ShadowheartFriend"              -- Nocturne (Rennald) - Church of Shar
 //  │   ├─ "SCE_FlamingFist_Tiefling_Caster"
 //  │   └─ "Tiefling_Bard"
 //  │       └─ "DEN_Refugees_Tiefling_Bard"
@@ -4675,8 +4675,7 @@ data "Vitality" "72"
 // data "Passives" "Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 data "Passives" "CX_Wizard_Boost;CX_Magic_Boost;CX_Spells_L2;CX_Spells_L3;CX_Spells_L4;Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 
-// Alfira
-// Does this mess with the Alfira Joins The Party mod?
+// Alfira (Does this mess with the Alfira Joins The Party mod? - Probably not, player progressions > NPC progressions pretty sure)
 new entry "DEN_Refugees_Tiefling_Bard"
 type "Character"
 using "DEN_Refugees_Tiefling_Bard"
@@ -4696,7 +4695,7 @@ data "Passives" "CX_Bard_Boost;CX_Magic_Boost;Tiefling_HellishResistance;AttackO
 //  │   ├─ "GLO_IrritatedTiefling"                  -- Guex
 //  │   ├─ "LOW_AradinThug_Fighter"
 //  │   ├─ "Tiefling_Cleric"
-//  │   │   └─ "END_Hellrider_Cleric"               -- Helrider Paladin (summon from Gather Your Allies)
+//  │   │   └─ "END_Hellrider_Cleric"               -- Hellrider Cleric (Gather Your Allies summon)
 //  │   └─ "WYR_SmugglersCave_StoneLord_Tiefling"
 
 new entry "Tiefling_Melee"
@@ -4705,20 +4704,21 @@ using "Tiefling_Melee"
 // data "Passives" "Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 
-// Zevlor
+// Zevlor - Tiefling Refugees
 new entry "DEN_TieflingLeader"
 type "Character"
 using "DEN_TieflingLeader"
 // data "Passives" "AttackOfOpportunity;DarknessRules;Tiefling_HellishResistance;FightingStyle_Defense;Tough"
 data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision;FightingStyle_Defense;Tough"
 
+// Watcher Guardian
 new entry "END_CityWatchMelee_Tiefling"
 type "Character"
 using "END_CityWatchMelee_Tiefling"
 // data "Passives" "AttackOfOpportunity;Tiefling_HellishResistance;DarknessRules;Darkvision;FightingStyle_GreatWeaponFighting;GreatWeaponMaster_BonusAttack;GreatWeaponMaster_BonusDamage"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision;FightingStyle_GreatWeaponFighting;GreatWeaponMaster_BonusAttack;GreatWeaponMaster_BonusDamage"
 
-// Helrider Paladin (summon from Gather Your Allies)
+// Helrider Paladin (Gather Your Allies summon)
 new entry "END_Hellrider_Paladin"
 type "Character"
 using "END_Hellrider_Paladin"
@@ -4727,7 +4727,7 @@ data "SpellCastingAbility" "Charisma"
 // data "Passives" "Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 
-// Devilish Qora
+// Devilish Qora - Aradin's mercenary crew
 new entry "LOW_AradinThug_Fighter"
 type "Character"
 using "LOW_AradinThug_Fighter"
@@ -4747,17 +4747,18 @@ using "WYR_SmugglersCave_StoneLord_Tiefling"
 // data "Passives" "Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision;Parry;Riposte;Indomitable"
 data "Passives" "CX_Fighter_Boost;CX_Martial_Boost;Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision;Parry;Riposte;Indomitable"
 
+// "_Tiefling"
 //  ├─ "Tiefling_Ranger"
 //  │   ├─ "CHA_Bandit_Tiefling_Ranger"
-//  │   │   └─ "CHA_Bandit_Tiefling_Ranger_B"   -- Nymessa
-//  │   ├─ "DEN_Arka"
-//  │   ├─ "DEN_Refugees_Tiefling_Ranger"
+//  │   │   └─ "CHA_Bandit_Tiefling_Ranger_B"   --- Nymessa - Tiefling Refugees
+//  │   ├─ "DEN_Arka"                           --- Arka - Tiefling Refugees
+//  │   ├─ "DEN_Refugees_Tiefling_Ranger"       --- Cerys, Rikka, Elegis, Lakrissa, Zorru, Kaldani - Tiefling Refugees
 //  │   ├─ "END_Inquisitor_Tiefling"            --- Inquisitor of the Absolute - Cult of the Absolute
-//  │   ├─ "GLO_ProdigySister"                  -- Lia
-//  │   ├─ "HAV_Harper_Tiefling_Ranger"         -- Harpers Naysa, Lumn
-//  │   ├─ "MOO_Harper_Tiefling_Ranger"         -- Harper Olys
+//  │   ├─ "GLO_ProdigySister"                  --- Lia - Tiefling Refugees
+//  │   ├─ "HAV_Harper_Tiefling_Ranger"         --- Harper Naysa, Harper Lumn - Harpers
+//  │   ├─ "MOO_Harper_Tiefling_Ranger"         --- Harper Olys - Harpers
 //  │   ├─ "MOO_PrisonWarden"
-//  │   └─ "PLA_ChokepointScout"                -- Ellyka
+//  │   └─ "PLA_ChokepointScout"                --- Ellyka
 
 new entry "Tiefling_Ranger"
 type "Character"
@@ -4772,7 +4773,7 @@ using "CHA_Bandit_Tiefling_Ranger"
 // data "Passives" "DarknessRules;Tiefling_HellishResistance"
 data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision"
 
-// The Warden
+// The Warden - Cult of the Absolute
 new entry "MOO_PrisonWarden"
 type "Character"
 using "MOO_PrisonWarden"
@@ -4781,7 +4782,7 @@ data "Passives" "CX_Ranger_Boost;CX_Martial_Boost;Tiefling_HellishResistance;Att
 
 // "_Tiefling"
 //  └─ "Tiefling_Rogue"
-//      ├─ "END_Zhentarim_Tiefling"
+//      ├─ "END_Zhentarim_Tiefling"                 --- "Zhentmodeus" (Gather Your Allies summon)
 //      └─ "Tiefling_Cultist_Bhaal_NightBlade"
 //          ├─ "Tiefling_Cultist_Bhaal_DeathsHead"
 //          └─ "Tiefling_Cultist_Bhaal_Reaper"
@@ -4875,87 +4876,26 @@ using "MOO_ZealotOfTheAbsolute_Tiefling"
 data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;Tiefling_HellishResistance;AttackOfOpportunity;DarknessRules;Darkvision;FightingStyle_GreatWeaponFighting"
 
 // ==================================== Undead ====================================
+// TODO: Quality control with formatting is not as tight from here on down
 
-// Most of these wouldn't be relevant for CX class boosts
-// _Base
-//  └─ _Undead
-//     ├─ "ApostleOfMyrkul"
-//     ├─ Brewer
-//     ├─ CrawlingClaw
-//     ├─ FloatingHead
-//     │   └─ TWN_TollCollector_Visage
-//     ├─ GLO_Jergal
-//     ├─ GLO_Oathbreaker_Paladin
-//     ├─ Ghost
-//     │   ├─ LOW_Houndmaster
-//     │   ├─ LOW_OskarsBeloved_Mummy
-//     │   ├─ LOW_OskarsBeloved_Nurse
-//     │   │   ├─ LOW_OskarsBeloved_Nurse_NOXP
-//     │   │   └─ LOW_Raphael_SoulSummon
-//     │   ├─ LOW_OskarsBeloved_Poltergeist
-//     │   └─ LOW_OskarsBeloved_Spirit
-//     ├─ "Ghoul"
-//     │   ├─ "AnimateDead_Ghoul"
-//     │   │   └─ "WakeTheDead_Ghoul"
-//     │   ├─ "Ghast"
-//     │   │   └─ "LOW_CazadorPalace_Ritual_Ghast_Greater"
-//     │   ├─ "Ghoul_Flying"
-//     │   │   └─ "AnimateDead_Ghoul_Flying"
-//     │   ├─ "LOW_Thay_Summon_Ghoul"
-//     │   ├─ "SHA_Ghoul_Medic"
-//     │   └─ "WYR_Circus_Sniffer"
-//     ├─ MOO_AssaultPrisonSkeleton
-//     ├─ Mummy
-//     │   ├─ LOW_FatherCarrion
-//     │   └─ Mummy_CreateUndead
-//     ├─ Shadow
-//     │   ├─ LOW_Sewer_HeadlessGhost
-//     │   ├─ SCL_Oliver
-//     │   ├─ SHA_Manifestation_Fear
-//     │   ├─ SHA_Manifestation_Shame
-//     │   ├─ SHA_ShadowfellShadow
-//     │   ├─ SHA_TortureTrial_Shadow
-//     │   ├─ Shadow_Lakeside
-//     │   ├─ Shadow_Summon
-//     │   ├─ TWN_Oliver_MischievousShadow
-//     │   ├─ WYR_PaintingShadow
-//     │   └─ Wraith
-//     │       ├─ SCL_Oliver_Dad
-//     │       │   └─ SCL_Oliver_Dad_NoShadowblend
-//     │       ├─ SCL_Oliver_Mom
-//     │       │   └─ SCL_Oliver_Mom_NoShadowblend
-//     │       └─ Wraith_Lakeside
-//     ├─ Spectre
-//     │   └─ LOW_Spectre
-//     ├─ Surgeon
-//     ├─ Surgeon_Nurse
-//     │   └─ Surgeon_Nurse_Summon
-//     ├─ TollCollector
-//     ├─ Vampire
-//     │   ├─ GLO_Cazador
-//     │   ├─ Vampire_Spawn
-//     └─ _Undead_Gustav
-
-new entry "GLO_Oathbreaker_Paladin"
-type "Character"
-using "GLO_Oathbreaker_Paladin"
-// data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;ExtraAttack;TurnResistance;FightingStyle_GreatWeaponFighting;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;"
-data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules;Darkvision;ExtraAttack;TurnResistance;FightingStyle_GreatWeaponFighting;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
-
-// "_Undead"
-//  ├─ "DarkJusticiar_Melee"
-//  │   ├─ "DarkJusticiar_Boss"
-//  │   ├─ "DarkJusticiar_Caster"
-//  │   │   ├─ "LOW_HouseOfGrief_Cultist_Caster"
-//  │   │   └─ "SHA_LastJusticiar_Lyrthindor"
-//  │   ├─ "DarkJusticiar_Melee_Summon"
-//  │   ├─ "DarkJusticiar_Ranger"
-//  │   │   ├─ "DarkJusticiar_Ranger_Summon"
-//  │   │   └─ "TWN_DarkJusticiar_Intelligence"
-//  │   ├─ "LOW_HouseOfGrief_Cultist_Melee"
-//  │   ├─ "SHA_InitialJusticiar"
-//  │   ├─ "TWN_DarkJusticiar_Charisma"
-//  │   └─ "TWN_DarkJusticiar_Wisdom"
+// "_Base"
+//  └─ "_Undead"
+//      ├─ "ApostleOfMyrkul"
+//      ├─ "Brewer"
+//      ├─ "CrawlingClaw"
+//      ├─ "DarkJusticiar_Melee"
+//      │   ├─ "DarkJusticiar_Boss"
+//      │   ├─ "DarkJusticiar_Caster"
+//      │   │   ├─ "LOW_HouseOfGrief_Cultist_Caster"
+//      │   │   └─ "SHA_LastJusticiar_Lyrthindor"
+//      │   ├─ "DarkJusticiar_Melee_Summon"
+//      │   ├─ "DarkJusticiar_Ranger"
+//      │   │   ├─ "DarkJusticiar_Ranger_Summon"
+//      │   │   └─ "TWN_DarkJusticiar_Intelligence"
+//      │   ├─ "LOW_HouseOfGrief_Cultist_Melee"
+//      │   ├─ "SHA_InitialJusticiar"
+//      │   ├─ "TWN_DarkJusticiar_Charisma"
+//      │   └─ "TWN_DarkJusticiar_Wisdom"
 
 new entry "DarkJusticiar_Melee"
 type "Character"
@@ -5025,6 +4965,123 @@ using "TWN_DarkJusticiar_Wisdom"
 // data "Passives" "TWN_PlaquePuzzle_Wisdom;SunlightSensitivity;SHA_VisionOfShar;LivingShadow;AttackOfOpportunity;Darkvision;DarknessRules"
 data "Passives" "CX_Cleric_Boost;CX_Magic_Boost;AttackOfOpportunity;Darkvision;DarknessRules;TWN_PlaquePuzzle_Wisdom;SunlightSensitivity;SHA_VisionOfShar;LivingShadow;"
 
+// "_Undead"
+//  ├─ "FloatingHead"
+//  │   └─ "TWN_TollCollector_Visage"
+//  ├─ "GLO_Jergal"
+//  ├─ "GLO_Oathbreaker_Paladin"
+//  ├─ "Ghost"
+//  │   ├─ "LOW_Houndmaster"
+//  │   ├─ "LOW_OskarsBeloved_Mummy"
+//  │   ├─ "LOW_OskarsBeloved_Nurse"
+//  │   │   ├─ "LOW_OskarsBeloved_Nurse_NOXP"
+//  │   │   └─ "LOW_Raphael_SoulSummon"
+//  │   ├─ "LOW_OskarsBeloved_Poltergeist"
+//  │   └─ "LOW_OskarsBeloved_Spirit"
+//  ├─ "Ghoul"
+//  │   ├─ "AnimateDead_Ghoul"
+//  │   │   └─ "WakeTheDead_Ghoul"
+//  │   ├─ "Ghast"
+//  │   │   └─ "LOW_CazadorPalace_Ritual_Ghast_Greater"
+//  │   ├─ "Ghoul_Flying"
+//  │   │   └─ "AnimateDead_Ghoul_Flying"
+//  │   ├─ "LOW_Thay_Summon_Ghoul"
+//  │   ├─ "SHA_Ghoul_Medic"
+//  │   └─ "WYR_Circus_Sniffer"
+//  ├─ "MOO_AssaultPrisonSkeleton"
+//  ├─ "Mummy"
+//  │   ├─ "LOW_FatherCarrion"
+//  │   └─ "Mummy_CreateUndead"
+//  ├─ "Shadow"
+//  │   ├─ "LOW_Sewer_HeadlessGhost"
+//  │   ├─ "SCL_Oliver"
+//  │   ├─ "SHA_Manifestation_Fear"
+//  │   ├─ "SHA_Manifestation_Shame"
+//  │   ├─ "SHA_ShadowfellShadow"
+//  │   ├─ "SHA_TortureTrial_Shadow"
+//  │   ├─ "Shadow_Lakeside"
+//  │   ├─ "Shadow_Summon"
+//  │   ├─ "TWN_Oliver_MischievousShadow"
+//  │   ├─ "WYR_PaintingShadow"
+//  │   └─ "Wraith"
+//  │       ├─ "SCL_Oliver_Dad"
+//  │       │   └─ "SCL_Oliver_Dad_NoShadowblend"
+//  │       ├─ "SCL_Oliver_Mom"
+//  │       │   └─ "SCL_Oliver_Mom_NoShadowblend"
+//  │       └─ "Wraith_Lakeside"
+//  ├─ "Skeleton"
+//  │   ├─ "FOR_Thay_Skeleton_Melee"
+//  │   ├─ "LOW_CazadorPalace_Kennel_Skeleton"
+//  │   ├─ "LOW_HouseOfHope_Skeleton_Debtor"
+//  │   ├─ "SHA_Skeleton_Melee"
+//  │   ├─ "Skeleton_Blood"
+//  │   ├─ "Skeleton_Caster"
+//  │   │   ├─ "CHA_Skeleton_Caster"
+//  │   │   ├─ "LOW_CazadorPalace_Ritual_Skeleton"
+//  │   │   ├─ "LOW_DamnedKnight_Caster"
+//  │   │   ├─ "SHA_Skeleton_Caster"
+//  │   │   ├─ "WYR_Circus_Skeletons"
+//  │   │   └─ "WYR_Wyrmsway_Skeleton_Mage"
+//  │   ├─ "Skeleton_Giant"
+//  │   │   ├─ "LOW_KidNecromancer_GiantSkeleton"
+//  │   │   ├─ "SHA_Skeleton_Giant"
+//  │   │   └─ "Skeleton_Giant_Cultist_Myrkul_DeathShepherd"
+//  │   ├─ "Skeleton_Hound"
+//  │   ├─ "Skeleton_Necromite"
+//  │   │   └─ "Skeleton_Necromite_NoXP"
+//  │   ├─ "Skeleton_Ranger"
+//  │   │   ├─ "AnimateDead_Skeleton"
+//  │   │   ├─ "FOR_Thay_Skeleton_Ranger"
+//  │   │   ├─ "SHA_Skeleton_Ranger"
+//  │   │   ├─ "Skeleton_Tadpoled_Ranger"
+//  │   │   ├─ "UND_Skeleton_Ranged"
+//  │   │   └─ "WYR_Wyrmsway_Skeleton_Ranged"
+//  │   ├─ "Skeleton_Strong"
+//  │   │   ├─ "CHA_Skeleton_Strong"
+//  │   │   ├─ "LOW_DamnedKnight_Melee"
+//  │   │   └─ "LOW_DeathKnight"
+//  │   │       └─ "LOW_DeathKnight_Weak"
+//  │   ├─ "Skeleton_Tadpoled_Melee"
+//  │   ├─ "UND_Skeleton_Melee"
+//  │   └─ "WYR_Wyrmsway_Skeleton_Melee"
+//  │       └─ "WYR_Wyrmsway_Skeleton_Hero"
+//  ├─ "Spectre"
+//  │   └─ "LOW_Spectre"
+//  ├─ "Surgeon"
+//  ├─ "Surgeon_Nurse"
+//  │   └─ "Surgeon_Nurse_Summon"
+//  ├─ "TollCollector"
+//  ├─ "Vampire"
+//  │   ├─ "GLO_Cazador"
+//  │   └─ "Vampire_Spawn"
+//  ├─ "Zombie"
+//  │   ├─ "AnimateDead_Zombie"
+//  │   ├─ "AnimateDead_Zombie__Horde"
+//  │   ├─ "LOW_CazadorPalace_Ritual_Zombie"
+//  │   ├─ "LOW_OskarsBeloved_PaintingZombie_0XP"
+//  │   ├─ "LOW_Thay_Summon_Zombie"
+//  │   ├─ "LOW_ZombieBeggars_Lumbar"
+//  │   ├─ "LOW_ZombieBeggars_Morbus"
+//  │   ├─ "LOW_ZombieBeggars_Sacrum"
+//  │   ├─ "LOW_ZombieBeggars_Thrumbo"
+//  │   ├─ "MOO_TrapZombie"
+//  │   ├─ "TWN_Brewer_ForgottenPatron"
+//  │   ├─ "WYR_SentientAmulet_Zombie"
+//  │   │   ├─ "WYR_SentientAmulet_Zombie_Flinster"
+//  │   │   ├─ "WYR_SentientAmulet_Zombie_Shirra"
+//  │   │   └─ "WYR_SentientAmulet_Zombie_Suttida"
+//  │   ├─ "Zombie_FungalInfestation"
+//  │   └─ "Zombie_Greater"
+//  │       ├─ "LOW_CazadorPalace_Ritual_Zombie_Greater"
+//  │       └─ "LOW_Thay_Summon_Zombie_Greater"
+//  └─ "_Undead_Gustav"
+
+new entry "GLO_Oathbreaker_Paladin"
+type "Character"
+using "GLO_Oathbreaker_Paladin"
+// data "Passives" "AttackOfOpportunity;DarknessRules;Darkvision;ExtraAttack;TurnResistance;FightingStyle_GreatWeaponFighting;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;"
+data "Passives" "CX_Paladin_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules;Darkvision;ExtraAttack;TurnResistance;FightingStyle_GreatWeaponFighting;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
+
 // Skeletons are the most relevant Undead category for CX class boosts
 // "_Undead"
 //  ├─ "Skeleton"
@@ -5054,13 +5111,20 @@ using "SHA_Skeleton_Melee"
 // data "PathInfluence" "BloodElectrified,100;BloodFrozen,30;Lava,700;Fire,40;HolyFire,40;Hellfire,100;PoisonCloud,40;WyvernPoison,40;DrowPoisonCloud,40;PurpleWormPoison,40;SerpentVenom,40;InvisibleGithAcid,70;CloudkillCloud,40;MaliceCloud,70;CrawlerMucusCloud,70;WaterElectrified,100;WaterFrozen,30;Grease,30;Web,30;Vines,40;SporeBlackCloud,100;WaterCloudElectrified,40;SporeGreenCloud,40;Acid,30;CausticBrine,40;DarknessCloud,30;FogCloud,30;Mud,30;Oil,30;Poison,30;SpikeGrowth,40;SporePinkCloud,40;StinkingCloud,40"
 data "PathInfluence" "BloodElectrified,100;BloodFrozen,30;Lava,700;Fire,40;HolyFire,40;Hellfire,100;PoisonCloud,40;WyvernPoison,40;DrowPoisonCloud,40;PurpleWormPoison,40;SerpentVenom,40;InvisibleGithAcid,70;CloudkillCloud,40;Cloudkill6Cloud,40;MaliceCloud,70;CrawlerMucusCloud,70;WaterElectrified,100;WaterFrozen,30;Grease,30;Web,30;Vines,40;SporeBlackCloud,100;WaterCloudElectrified,40;SporeGreenCloud,40;Acid,30;CausticBrine,40;DarknessCloud,30;FogCloud,30;Mud,30;Oil,30;Poison,30;SpikeGrowth,40;SporePinkCloud,40;StinkingCloud,40"
 
+new entry "Skeleton_Giant"
+type "Character"
+using "Skeleton_Giant"
+// data "Passives" "ExtraAttack;BlockVerbalSpellcasting;AttackOfOpportunity;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;SkeletonDeath_Check"
+data "Passives" "CX_Barbarian_Boost;CX_Martial_Boost;ExtraAttack;BlockVerbalSpellcasting;AttackOfOpportunity;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check;SkeletonDeath_Check"
+
+// Apostate Destroyer
 new entry "SHA_Skeleton_Giant"
 type "Character"
 using "SHA_Skeleton_Giant"
 // data "PathInfluence" "BloodElectrified,100;BloodFrozen,30;Lava,700;Fire,40;HolyFire,40;Hellfire,100;PoisonCloud,40;WyvernPoison,40;DrowPoisonCloud,40;PurpleWormPoison,40;SerpentVenom,40;InvisibleGithAcid,70;CloudkillCloud,40;MaliceCloud,70;CrawlerMucusCloud,70;WaterElectrified,100;WaterFrozen,30;Grease,30;Web,30;Vines,40;SporeBlackCloud,100;WaterCloudElectrified,40;SporeGreenCloud,40;Acid,30;CausticBrine,40;DarknessCloud,30;FogCloud,30;Mud,30;Oil,30;Poison,30;SpikeGrowth,40;SporePinkCloud,40;StinkingCloud,40"
 data "PathInfluence" "BloodElectrified,100;BloodFrozen,30;Lava,700;Fire,40;HolyFire,40;Hellfire,100;PoisonCloud,40;WyvernPoison,40;DrowPoisonCloud,40;PurpleWormPoison,40;SerpentVenom,40;InvisibleGithAcid,70;CloudkillCloud,40;Cloudkill6Cloud,40;MaliceCloud,70;CrawlerMucusCloud,70;WaterElectrified,100;WaterFrozen,30;Grease,30;Web,30;Vines,40;SporeBlackCloud,100;WaterCloudElectrified,40;SporeGreenCloud,40;Acid,30;CausticBrine,40;DarknessCloud,30;FogCloud,30;Mud,30;Oil,30;Poison,30;SpikeGrowth,40;SporePinkCloud,40;StinkingCloud,40"
 // data "Passives" "AttackOfOpportunity;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
-
+data "Passives" "CX_Barbarian_Boost;CX_Martial_Boost;AttackOfOpportunity;DarknessRules;DispelEvilAndGood_Charm_Check;DispelEvilAndGood_Frightened_Check;DispelEvilAndGood_Possessed_Check"
 
 // Garret Dortmell - Nina Dortmell's dead (resurrectable) brother / Death Shephards
 new entry "Skeleton_Giant_Cultist_Myrkul_DeathShepherd"

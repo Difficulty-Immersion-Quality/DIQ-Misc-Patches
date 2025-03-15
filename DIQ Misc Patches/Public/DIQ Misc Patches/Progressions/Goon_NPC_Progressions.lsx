@@ -21,29 +21,33 @@
                     <attribute id="Boosts" type="LSString" value="ActionResource(KiPoint,1,0)"/>
                     <attribute id="Level" type="uint8" value="2"/>
                     <attribute id="Name" type="LSString" value="NPC_Monk"/>
-                    <attribute id="PassivesAdded" type="LSString" value="UnarmoredMovement_1"/>
+                    <!-- <attribute id="PassivesAdded" type="LSString" value="UnarmoredMovement_1"/> -->
+                    <attribute id="PassivesAdded" type="LSString" value="UnarmoredMovement_1;DedicatedWeapon"/>
                     <!-- <attribute id="Selectors" type="LSString" value=""/> -->
-                    <attribute id="Selectors" type="LSString" value="AddSpells(2715246d-3375-4766-9a3e-5961efd56748)"/> <!-- Patient Defence, Step of the Wind: Dash, Step of the Wind: Disengage -->
+                    <attribute id="Selectors" type="LSString" value="AddSpells(2715246d-3375-4766-9a3e-5961efd56748)"/> <!-- Shout_PatientDefense, Shout_Disengage_StepOfTheWind, Shout_Dash_StepOfTheWind -->
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="TableUUID" type="guid" value="878630d0-136a-4dc9-aa2a-a0a123d3a107"/>
                     <attribute id="UUID" type="guid" value="80f2f343-fc7a-4346-924b-b119e3354da5"/>
                 </node>
                 <node id="Progression">
+                    <!-- TODO: Roulette a subclass, then unlock its features when appropriate -->
                     <!-- <attribute id="Boosts" type="LSString" value="ActionResource(KiPoint,1,0)"/> -->
                     <attribute id="Boosts" type="LSString" value="ActionResource(KiPoint,1,0);ActionResource(DeflectMissiles_Charge,1,0)"/>
                     <attribute id="Level" type="uint8" value="3"/>
                     <attribute id="Name" type="LSString" value="NPC_Monk"/>
-                    <attribute id="PassivesAdded" type="LSString" value="DeflectMissiles"/>
+                    <!-- <attribute id="PassivesAdded" type="LSString" value="DeflectMissiles"/> -->
+                    <attribute id="PassivesAdded" type="LSString" value="DeflectMissiles;KiFueledAttack"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="TableUUID" type="guid" value="878630d0-136a-4dc9-aa2a-a0a123d3a107"/>
                     <attribute id="UUID" type="guid" value="45cf151d-5ed6-4b87-835b-6de2cec7601a"/>
                 </node>
                 <node id="Progression">
-<!-- TODO: Choose a Feat -->
+                    <!-- TODO: Roulette an appropriate feat? -->
                     <attribute id="Boosts" type="LSString" value="ActionResource(KiPoint,1,0)"/>
                     <attribute id="Level" type="uint8" value="4"/>
                     <attribute id="Name" type="LSString" value="NPC_Monk"/>
-                    <attribute id="PassivesAdded" type="LSString" value="SlowFall"/>
+                    <!-- <attribute id="PassivesAdded" type="LSString" value="SlowFall"/> -->
+                    <attribute id="PassivesAdded" type="LSString" value="SlowFall;QuickenedHealing"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="TableUUID" type="guid" value="878630d0-136a-4dc9-aa2a-a0a123d3a107"/>
                     <attribute id="UUID" type="guid" value="0fdc31ae-ae92-4788-95a4-de8b05839b5e"/>
@@ -52,10 +56,11 @@
                     <attribute id="Boosts" type="LSString" value="ActionResource(KiPoint,1,0)"/>
                     <attribute id="Level" type="uint8" value="5"/>
                     <attribute id="Name" type="LSString" value="NPC_Monk"/>
-                    <attribute id="PassivesAdded" type="LSString" value="ExtraAttack"/>
+                    <!-- <attribute id="PassivesAdded" type="LSString" value="ExtraAttack"/> -->
+                    <attribute id="PassivesAdded" type="LSString" value="ExtraAttack;FocusedAim"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <!-- <attribute id="Selectors" type="LSString" value=""/> -->
-                    <attribute id="Selectors" type="LSString" value="AddSpells(3ba6090a-a8be-4938-82ef-40eba0083441)"/> <!-- Stunning Strike (Melee), Stunning Strike (Unarmed) -->
+                    <attribute id="Selectors" type="LSString" value="AddSpells(3ba6090a-a8be-4938-82ef-40eba0083441)"/> <!-- Target_StunningStrike, Target_StunningStrike_Unarmed -->
                     <attribute id="TableUUID" type="guid" value="878630d0-136a-4dc9-aa2a-a0a123d3a107"/>
                     <attribute id="UUID" type="guid" value="ea9647bf-4d05-4dba-aae9-8591b964e02a"/>
                 </node>
@@ -79,7 +84,7 @@
                     <attribute id="UUID" type="guid" value="fb7990f2-5f43-4ed6-a9db-35c5a65603ad"/>
                 </node>
                 <node id="Progression">
-<!-- TODO: Choose a Feat -->
+                    <!-- TODO: Roulette an appropriate feat? -->
                     <attribute id="Boosts" type="LSString" value="ActionResource(KiPoint,1,0)"/>
                     <attribute id="Level" type="uint8" value="8"/>
                     <attribute id="Name" type="LSString" value="NPC_Monk"/>
@@ -115,7 +120,7 @@
                     <attribute id="UUID" type="guid" value="79f4fdb0-fa03-4828-8e62-345f66b96c9e"/>
                 </node>
                 <node id="Progression">
-<!-- TODO: Choose a Feat -->
+                    <!-- TODO: Roulette an appropriate feat? -->
                     <attribute id="Boosts" type="LSString" value="ActionResource(KiPoint,1,0)"/>
                     <attribute id="Level" type="uint8" value="12"/>
                     <attribute id="Name" type="LSString" value="NPC_Monk"/>
@@ -198,7 +203,7 @@
                     <attribute id="UUID" type="guid" value="865e08aa-f9de-40c8-9add-dec6bee8efd8"/>
                 </node>
                 <!-- WIZARD -->
-<!-- TODO: Wizard progression is literally just spell slots, which is perfect for basic NPCs with CX_Magic_Boost. We create a custom Wizard progression for more respectable NPCS. -->
+        <!-- TODO: Wizard progression is literally just spell slots, which is perfect for basic NPCs with CX_Magic_Boost. We create a custom Wizard progression for more respectable NPCS. -->
                 <node id="Progression">
                     <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,2,1);ProficiencyBonus(SavingThrow,Intelligence);ProficiencyBonus(SavingThrow,Wisdom)"/>
                     <attribute id="Level" type="uint8" value="1"/>
@@ -224,7 +229,7 @@
                     <attribute id="UUID" type="guid" value="8ab7fa9c-6ef0-47e5-92ca-e44a4e4282ce"/>
                 </node>
                 <node id="Progression">
-<!-- TODO: Choose a Feat -->
+                    <!-- TODO: Roulette an appropriate feat? -->
                     <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,2);"/>
                     <attribute id="Level" type="uint8" value="4"/>
                     <attribute id="Name" type="LSString" value="NPC_Wizard"/>
@@ -257,7 +262,7 @@
                     <attribute id="UUID" type="guid" value="75f2793c-c17b-4b73-a151-3e749491d391"/>
                 </node>
                 <node id="Progression">
-<!-- TODO: Choose a Feat -->
+                    <!-- TODO: Roulette an appropriate feat? -->
                     <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,4);"/>
                     <attribute id="Level" type="uint8" value="8"/>
                     <attribute id="Name" type="LSString" value="NPC_Wizard"/>
@@ -290,7 +295,7 @@
                     <attribute id="UUID" type="guid" value="95ea2ab3-165b-4b37-9c60-23a2a4243607"/>
                 </node>
                 <node id="Progression">
-<!-- TODO: Choose a Feat -->
+                    <!-- TODO: Roulette an appropriate feat? -->
                     <attribute id="Level" type="uint8" value="12"/>
                     <attribute id="Name" type="LSString" value="NPC_Wizard"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
@@ -298,10 +303,12 @@
                     <attribute id="UUID" type="guid" value="ed4ccf97-4367-45da-a439-3516a968573b"/>
                 </node>
                 <!-- WARLOCK -->
-<!-- TODO: Split Warlock progressions up by subclasses -->
                 <node id="Progression">
+                    <!-- TODO: Roulette a subclass, then unlock its features when appropriate -->
                     <!-- <attribute id="Boosts" type="LSString" value="ActionResource(WarlockSpellSlot,1,1);ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);"/> -->
                     <attribute id="Boosts" type="LSString" value="ActionResource(WarlockSpellSlot,1,1);ProficiencyBonus(SavingThrow,Wisdom);ProficiencyBonus(SavingThrow,Charisma);Proficiency(LightArmor);Proficiency(SimpleWeapons);ProficiencyBonus(Skill,Arcana);ProficiencyBonus(Skill,Religion)"/>
+                    <!-- <attribute id="PassivesAdded" type="LSString" value=""/> -->
+                    <attribute id="PassivesAdded" type="LSString" value="Goon_Warlock_NPC_Progressions"/>
                     <attribute id="Level" type="uint8" value="1"/>
                     <attribute id="Name" type="LSString" value="NPC_Warlock"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
@@ -321,7 +328,7 @@
                     <attribute id="UUID" type="guid" value="8b06e96b-fb4e-4018-8bf1-c5bac4295522"/>
                 </node>
                 <node id="Progression">
-<!-- TODO: Make a custom Bind Pact Weapon that's a free action, and not permanent for NPCs -->
+                    <!-- TODO: Make a custom Bind Pact Weapon that's a free action, and not permanent for NPCs -->
                     <attribute id="Boosts" type="LSString" value="ActionResource(WarlockSpellSlot,2,2);ActionResourceOverride(WarlockSpellSlot,0,1);"/>
                     <attribute id="Level" type="uint8" value="3"/>
                     <attribute id="Name" type="LSString" value="NPC_Warlock"/>
@@ -330,7 +337,7 @@
                     <attribute id="UUID" type="guid" value="e16a65f9-d908-46b9-93cd-9e281774d37d"/>
                 </node>
                 <node id="Progression">
-<!-- TODO: Choose a Feat -->
+                    <!-- TODO: Roulette an appropriate feat? -->
                     <attribute id="Level" type="uint8" value="4"/>
                     <attribute id="Name" type="LSString" value="NPC_Warlock"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
@@ -338,7 +345,8 @@
                     <attribute id="UUID" type="guid" value="276aa0a1-02a2-42b5-a16c-689136beed99"/>
                 </node>
                 <node id="Progression">
-<!-- TODO: Put the proper Deepened Pact in instead of normal ExtraAttack -->
+                    <!-- TODO: Put the proper Deepened Pact in instead of normal ExtraAttack -->
+                    <!-- TODO: Swap the below to subclass roulette -->
                     <attribute id="Boosts" type="LSString" value="ActionResource(WarlockSpellSlot,2,3);ActionResourceOverride(WarlockSpellSlot,0,2);"/>
                     <!-- <attribute id="PassivesAdded" type="LSString" value=""/> -->
                     <attribute id="PassivesAdded" type="LSString" value="RepellingBlast;ExtraAttack"/>
@@ -362,6 +370,7 @@
                 </node>
                 <node id="Progression">
                     <attribute id="Boosts" type="LSString" value="ActionResource(WarlockSpellSlot,2,4);ActionResourceOverride(WarlockSpellSlot,0,3);"/>
+                    <!-- TODO: Swap the below to subclass roulette -->
                     <!-- <attribute id="PassivesAdded" type="LSString" value=""/> -->
                     <attribute id="PassivesAdded" type="LSString" value="BookOfAncientSecrets"/>
                     <!-- You can inscribe magical rituals in your Book of Shadows. Gain Ray of Sickness, Chromatic Orb, and Silence spells. You can cast them once per Long Rest and they don't expend spell slots -->
@@ -372,7 +381,7 @@
                     <attribute id="UUID" type="guid" value="55b39876-8772-4ed5-9ec0-da86aa98f7f1"/>
                 </node>
                 <node id="Progression">
-<!-- TODO: Choose a Feat -->
+                    <!-- TODO: Roulette an appropriate feat? -->
                     <attribute id="Level" type="uint8" value="8"/>
                     <attribute id="Name" type="LSString" value="NPC_Warlock"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
@@ -392,6 +401,7 @@
                     <attribute id="UUID" type="guid" value="0dcc7ab7-3ade-46c5-acad-b93a0f952d87"/>
                 </node>
                 <node id="Progression">
+                    <!-- TODO: Swap the below to subclass roulette -->
                     <!-- <attribute id="PassivesAdded" type="LSString" value=""/> -->
                     <attribute id="PassivesAdded" type="LSString" value="FiendishResilience"/>
                     <!-- Choose a damage type and become Resistant to it. You can pick a new damage type each Short Rest. (Recharge: Short rest.) -->
@@ -402,7 +412,8 @@
                     <attribute id="UUID" type="guid" value="0760d80f-4418-4682-ab47-fd62d1fe288f"/>
                 </node>
                 <node id="Progression">
-<!-- TODO: Mystic Arcanum: Have to create custom NPC version with fixed spell-->
+                    <!-- <attribute id="PassivesAdded" type="LSString" value=""/> -->
+                    <attribute id="PassivesAdded" type="LSString" value="Goon_NPC_Roulette_Warlock_Mystic_Arcanum_Level_11"/>
                     <attribute id="Boosts" type="LSString" value="ActionResource(WarlockSpellSlot,1,5);"/>
                     <attribute id="Level" type="uint8" value="11"/>
                     <attribute id="Name" type="LSString" value="NPC_Warlock"/>
@@ -411,7 +422,8 @@
                     <attribute id="UUID" type="guid" value="a19c7927-f259-49c7-85ca-39fd76484777"/>
                 </node>
                 <node id="Progression">
-<!-- TODO: Choose a Feat -->
+                    <!-- TODO: Roulette an appropriate feat? -->
+                    <!-- TODO: Swap the below to subclass roulette -->
                     <!-- <attribute id="PassivesAdded" type="LSString" value=""/> -->
                     <attribute id="PassivesAdded" type="LSString" value="Lifedrinker"/>
                     <!-- Attacks made with your Pact Weapon deal additional necrotic damage equal to your Charisma modifier. -->
@@ -420,6 +432,77 @@
                     <attribute id="ProgressionType" type="uint8" value="0"/>
                     <attribute id="TableUUID" type="guid" value="51274504-865d-46d1-a3b6-c72e9384904a"/>
                     <attribute id="UUID" type="guid" value="549c964f-f305-4ea7-bbd7-aedf1525dc8f"/>
+                </node>
+                <!-- WARLOCK: EXPANSION 13-20 -->
+                <node id="Progression">
+                    <!-- <attribute id="PassivesAdded" type="LSString" value=""/> -->
+                    <attribute id="PassivesAdded" type="LSString" value="Goon_NPC_Roulette_Warlock_Mystic_Arcanum_Level_13"/>
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="Warlock"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <!-- <attribute id="Selectors" type="LSString" value="SelectSpells(e6ccab5e-3b3b-4b34-8fa2-1058dff2b3e6,1,0,MysticArcanum,,None,AlwaysPrepared,UntilRest)"/> -->
+                    <attribute id="TableUUID" type="guid" value="51274504-865d-46d1-a3b6-c72e9384904a"/>
+                    <attribute id="UUID" type="guid" value="cd04d775-367c-45b3-8b12-358f11db080a"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="Warlock"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="51274504-865d-46d1-a3b6-c72e9384904a"/>
+                    <attribute id="UUID" type="guid" value="00ce0b5b-14d0-4afd-ad22-c23e47ac76ba"/>
+                </node>
+                <node id="Progression">
+                    <!-- <attribute id="PassivesAdded" type="LSString" value=""/> -->
+                    <attribute id="PassivesAdded" type="LSString" value="Goon_NPC_Roulette_Warlock_Mystic_Arcanum_Level_15"/>
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="Warlock"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <!-- <attribute id="Selectors" type="LSString" value="SelectPassives(ab56f79f-95ec-48e5-bd83-e80ba9afc844,1,WarlockInvocations);SelectSpells(e6ccab5e-3b3b-4b34-8fa2-1058dff2b3e6,1,0,MysticArcanum,,None,AlwaysPrepared,UntilRest)"/> -->
+                    <attribute id="TableUUID" type="guid" value="51274504-865d-46d1-a3b6-c72e9384904a"/>
+                    <attribute id="UUID" type="guid" value="7a049e48-721b-498a-82d4-eee9cdb1c359"/>
+                </node>
+                <node id="Progression">
+                    <!-- <attribute id="AllowImprovement" type="bool" value="true"/> -->
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="Warlock"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="51274504-865d-46d1-a3b6-c72e9384904a"/>
+                    <attribute id="UUID" type="guid" value="9314bfc9-dc2e-448a-9610-cdab6012f83d"/>
+                </node>
+                <node id="Progression">
+                    <!-- <attribute id="PassivesAdded" type="LSString" value=""/> -->
+                    <attribute id="PassivesAdded" type="LSString" value="Goon_NPC_Roulette_Warlock_Mystic_Arcanum_Level_17"/>
+                    <attribute id="Boosts" type="LSString" value="ActionResource(WarlockSpellSlot,1,5)"/>
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="Warlock"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <!-- <attribute id="Selectors" type="LSString" value="SelectSpells(e6ccab5e-3b3b-4b34-8fa2-1058dff2b3e6,1,0,MysticArcanum,,None,AlwaysPrepared,UntilRest)"/> -->
+                    <attribute id="TableUUID" type="guid" value="51274504-865d-46d1-a3b6-c72e9384904a"/>
+                    <attribute id="UUID" type="guid" value="bfb02079-e9c2-4320-8ec4-3abe865cdf47"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="Warlock"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <!-- <attribute id="Selectors" type="LSString" value="SelectPassives(ab56f79f-95ec-48e5-bd83-e80ba9afc844,1,WarlockInvocations)"/> -->
+                    <attribute id="TableUUID" type="guid" value="51274504-865d-46d1-a3b6-c72e9384904a"/>
+                    <attribute id="UUID" type="guid" value="2a9209b1-838c-41e5-92fa-c4c2cb6c89bb"/>
+                </node>
+                <node id="Progression">
+                    <!-- <attribute id="AllowImprovement" type="bool" value="true"/> -->
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="Warlock"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="51274504-865d-46d1-a3b6-c72e9384904a"/>
+                    <attribute id="UUID" type="guid" value="6c99bae8-a6a7-4a81-92e4-2d6f7e77a142"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="Warlock"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EldritchMaster"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="51274504-865d-46d1-a3b6-c72e9384904a"/>
+                    <attribute id="UUID" type="guid" value="a27bdd70-eac9-4bc8-894f-df2b69a111e0"/>
                 </node>
                 <!-- FIGHTER -->
                 <node id="Progression">
@@ -447,7 +530,7 @@
                     <attribute id="UUID" type="guid" value="b22c77d4-8d9a-4849-9027-03ddb2ca0685"/>
                 </node>
                 <node id="Progression">
-<!-- TODO: Choose a Feat -->
+                    <!-- TODO: Roulette an appropriate feat? -->
                     <attribute id="Level" type="uint8" value="4"/>
                     <attribute id="Name" type="LSString" value="NPC_Fighter"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
@@ -463,7 +546,7 @@
                     <attribute id="UUID" type="guid" value="59f63529-f78d-4e36-b65c-dbb06c81ce1a"/>
                 </node>
                 <node id="Progression">
-<!-- TODO: Choose a Feat -->
+                    <!-- TODO: Roulette an appropriate feat? -->
                     <attribute id="Level" type="uint8" value="6"/>
                     <attribute id="Name" type="LSString" value="NPC_Fighter"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
@@ -478,7 +561,7 @@
                     <attribute id="UUID" type="guid" value="a6d24127-ff64-47e5-aeea-26cdfef6470a"/>
                 </node>
                 <node id="Progression">
-<!-- TODO: Choose a Feat -->
+                    <!-- TODO: Roulette an appropriate feat? -->
                     <attribute id="Level" type="uint8" value="8"/>
                     <attribute id="Name" type="LSString" value="NPC_Fighter"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>
@@ -531,7 +614,7 @@
                     <attribute id="UUID" type="guid" value="c6c838b3-66f4-4e53-ab1d-01df3f628c53"/>
                 </node>
                 <node id="Progression">
-<!-- TODO: Choose a Feat -->
+                    <!-- TODO: Roulette an appropriate feat? -->
                     <attribute id="Level" type="uint8" value="12"/>
                     <attribute id="Name" type="LSString" value="NPC_Fighter"/>
                     <attribute id="ProgressionType" type="uint8" value="0"/>

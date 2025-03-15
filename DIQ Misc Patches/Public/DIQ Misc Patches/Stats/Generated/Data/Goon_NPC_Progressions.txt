@@ -1,3 +1,26 @@
+// ==================================== Roulette passives ====================================
+// TODO: MAKE THE NPCS SPIN BABY SPIN
+
+// 6th level Warlock spell from Mystic Arcanum
+new entry "Goon_NPC_Roulette_Warlock_Mystic_Arcanum_Level_11"
+type "PassiveData"
+data "Properties" "IsHidden"
+
+// 7th level Warlock spell from Mystic Arcanum
+new entry "Goon_NPC_Roulette_Warlock_Mystic_Arcanum_Level_13"
+type "PassiveData"
+data "Properties" "IsHidden"
+
+// 8th level Warlock spell from Mystic Arcanum
+new entry "Goon_NPC_Roulette_Warlock_Mystic_Arcanum_Level_15"
+type "PassiveData"
+data "Properties" "IsHidden"
+
+// 9th level Warlock spell from Mystic Arcanum
+new entry "Goon_NPC_Roulette_Warlock_Mystic_Arcanum_Level_17"
+type "PassiveData"
+data "Properties" "IsHidden"
+
 // ==================================== Template ====================================
 
 new entry "Goon_NPC_Progressions_Template"
@@ -68,3 +91,15 @@ type "PassiveData"
 using "Goon_NPC_Progressions_Template"
 // Sorcerer Progressions
 data "DisplayName" "h9987ac52g08b3g40e0gac8eg056b928b8d4b;1"
+
+new entry "Goon_Warlock_NPC_Progressions"
+type "PassiveData"
+using "Goon_NPC_Progressions_Template"
+// Warlock Progressions
+data "DisplayName" "h286630c6gcd5bg4f56g84edg9ede6b7fc8cb;1"
+
+new entry "Goon_Wizard_NPC_Progressions"
+type "PassiveData"
+using "Goon_NPC_Progressions_Template"
+// Wizard Progressions
+data "DisplayName" "hda3c8533gc225g4f6cgb65fg22e6f4ea9deb;1"

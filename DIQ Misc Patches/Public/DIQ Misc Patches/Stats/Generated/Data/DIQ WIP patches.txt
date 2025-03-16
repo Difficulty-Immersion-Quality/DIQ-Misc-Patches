@@ -1,3 +1,13 @@
+// ==================================== Give chances of getting your action point back after being picked up from a downed state ====================================
+// Restore Reactions too
+
+new entry "DOWNED"
+type "StatusData"
+data "StatusType" "DOWNED"
+using "DOWNED"
+// data "OnRemoveFunctors" "ResetCombatTurn();RestoreResource(Movement, 100%, 0);RestoreResource(BonusActionPoint, 100%, 0);"
+data "OnRemoveFunctors" "ResetCombatTurn();RestoreResource(Movement, 100%, 0);RestoreResource(BonusActionPoint, 1, 0);RestoreResource(ReactionActionPoint, 1, 0);IF(SavingThrow(Ability.Constitution, 15)):RestoreResource(ActionPoint, 1, 0)"
+
 // ==================================== Nightsong betrayal reward increase ====================================
 
 // Fun idea (not for here obviously): increase the reward for siding with Lorroakan, because 5k gold to capture a literal daughter of Selune and grant him immortality is an insulting sum

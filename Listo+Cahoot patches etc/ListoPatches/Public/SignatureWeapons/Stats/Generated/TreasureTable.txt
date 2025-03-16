@@ -1,0 +1,44 @@
+new treasuretable "CRE_Axemaster_Buried_Chest"
+CanMerge 1
+new subtable "1,1"
+object category "I_MAG_WPN_DancingFlame",1,0,0,0,0,0,0,0
+
+new treasuretable "LOW_DevilsFee_HelsikChest_Treasure"
+CanMerge 1
+new subtable "1,1"
+object category "I_MAG_Shar_Mace",1,0,0,0,0,0,0,0
+
+new treasuretable "FOR_Spiders_SpiderQueen"
+CanMerge 1
+new subtable "1,1"
+object category "I_WPN_Morningstar_Lloth",1,0,0,0,0,0,0,0
+
+new treasuretable "CRE_Expeditioner_Magic_Trade"
+CanMerge 1
+new subtable "1,1"
+object category "I_WPN_Bearstaff",1,0,0,0,0,0,0,0
+
+new treasuretable "CHA_Exterior_Bandit_Leader"
+CanMerge 1
+new subtable "1,1"
+object category "I_MAG_WPN_DaringBlade",1,0,0,0,0,0,0,0
+
+new treasuretable "CRE_GremishkaNest"
+CanMerge 1
+new subtable "1,1"
+object category "I_MAG_MystralWand",1,0,0,0,0,0,0,0
+
+new treasuretable "COL_Barracks_MistressOfSouls"
+CanMerge 1
+new subtable "1,1"
+object category "I_Durge_Dagger",1,0,0,0,0,0,0,0
+
+new treasuretable "GOB_Quartermaster"
+CanMerge 1
+new subtable "1,1"
+object category "I_MAG_Crit_Dagger",1,0,0,0,0,0,0,0
+
+new treasuretable "CRE_GithQuartermistress_Trade"
+CanMerge 1
+new subtable "1,1"
+object category "I_MAG_Gith_Sword",1,0,0,0,0,0,0,0

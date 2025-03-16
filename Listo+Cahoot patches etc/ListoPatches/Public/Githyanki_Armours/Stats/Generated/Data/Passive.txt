@@ -1,0 +1,34 @@
+new entry "NAT_MagicalPlate_2_Passive"
+type "PassiveData"
+data "DisplayName" "hd9b423dagb5f4g4b0fg9fa2g8cf041d56c81"
+data "Description" "h62f3d8bcgc726g4957g888egfc049ca79f0d"
+data "DescriptionParams" ""
+data "Boosts" "DamageReduction(All, Flat, 2)"
+
+new entry "NAT_Githyanki_Enchantment"
+type "PassiveData"
+data "DisplayName" "h85e4f400g09b0g4657gbab2g71d4cbcf72ce"
+data "Description" "h13edfaa3gb1f7g4864g8910gd409475ec9b7"
+data "Boosts" "IF(Tagged('GITHYANKI',context.Source)):SpellSaveDC(2);IF(Tagged('GITHYANKI',context.Source)):RollBonus(MeleeSpellAttack, 2);IF(Tagged('GITHYANKI',context.Source)):RollBonus(RangedSpellAttack,2);IF(not Tagged('GITHYANKI',context.Source)):SpellSaveDC(1);IF(not Tagged('GITHYANKI',context.Source)):RollBonus(MeleeSpellAttack, 1);IF(not Tagged('GITHYANKI',context.Source)):RollBonus(RangedSpellAttack,1)"
+
+new entry "NAT_Githyanki_Initiative"
+type "PassiveData"
+data "DisplayName" "hd021c3c3gb976g4b32g9cf3g422846979377"
+data "Description" "h7a09464cg552cg4d20gaebcgc462ef3a6f57"
+data "Boosts" "Initiative(2)"
+
+new entry "NAT_GithStrikes"
+type "PassiveData"
+data "DisplayName" "h4687e777g4cf6g4740g90d9ge79170b2583d"
+data "Description" "hf2c217b0g1539g44efgb052g8e20fa077dd0"
+data "DescriptionParams" "DealDamage(1d4,Psychic)"
+data "Boosts" "CharacterWeaponDamage(1d4, Psychic)"
+data "Icon" "GenericIcon_DamageType_Psychic"
+
+
+
+new entry "NAT_GishPsychicResistance"
+type "PassiveData"
+data "DisplayName" "hc84f04d9ge70dg4388g8ca9g51fa33671add"
+data "Description" "h8c3d4165gcb30g470eg8b58g1e8c44948d33"
+data "Boosts" "Resistance(Psychic, Resistant)"

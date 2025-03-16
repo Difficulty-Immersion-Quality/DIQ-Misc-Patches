@@ -1,0 +1,392 @@
+new treasuretable "DEN_Entrance_Trade"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Toxic_WarPick",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Toxic_Battleaxe",1,0,0,0,0,0,0,0
+
+new treasuretable "MOO_InfernalTrader_Trade"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Cauterising_Shortbow",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Cauterising_Shortsword",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Cauterising_Spear",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Cauterising_Trident",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Cauterising_Warhammer",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Cauterising_WarPick",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Doom_Longbow",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Doom_Longsword",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Doom_Maul",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Doom_Morningstar",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Doom_Pike",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Doom_Scimitar",1,0,0,0,0,0,0,0
+
+new treasuretable "FED_MRT_Balthazar_SecretRm_Chest"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Cauterising_Sickle",1,0,0,0,0,0,0,0
+
+new treasuretable "FED_ByOliverShed_WdnChest"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Toxic_HandCrossbow",1,0,0,0,0,0,0,0
+
+new treasuretable "FED_ArkleiaOloril"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Sentinel_1_Warhammer",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Sentinel_1_WarPick",1,0,0,0,0,0,0,0
+
+new treasuretable "WYR_Ironhand_Merchant"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Sentinel_1_Pike",1,0,0,0,0,0,0,0
+
+new treasuretable "FED_CursedKuoChiefCursed"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Javelin",1,0,0,0,0,0,0,0
+
+new treasuretable "LOW_BlushingMermaid_Barkeep"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Battleaxe",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Club",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Dagger",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Glaive",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Greataxe",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Greatclub",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Greatsword",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Halberd",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Handaxe",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_HandCrossbow",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_HeavyCrossbow",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_LightCrossbow",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_LightHammer",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Longsword",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Mace",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Maul",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Morningstar",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Pike",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Quarterstaff",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Rapier",1,0,0,0,0,0,0,0
+
+new treasuretable "LOW_SteepsTrader_Weapons"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Sentinel_1_Spear",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Sentinel_1_Trident",1,0,0,0,0,0,0,0
+
+new treasuretable "CRE_Expeditioner_Trade"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_MonsterHunter_Sickle",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_MonsterHunter_Spear",1,0,0,0,0,0,0,0
+
+new treasuretable "SHA_MerregonTrader"
+new subtable "1,1"
+object category "I_CL_WPN_MAG_HillGiant_Morningstar",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Doom_Shortbow",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Chilled_Greatsword",1,0,0,0,0,0,0,0
+
+new treasuretable "DEN_Weaponsmith_Trade"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Chilled_Battleaxe",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Charged_Warhammer",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Cauterising_Rapier",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Cauterising_Scimitar",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Caustic_Longbow",1,0,0,0,0,0,0,0
+
+new treasuretable "WYR_Danthelon_Trader"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Caustic_Greataxe",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Caustic_Halberd",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Cauterising_Halberd",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Cauterising_Handaxe",1,0,0,0,0,0,0,0
+
+new treasuretable "FOR_BlacksmithsCellar_FineWeapon"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Warhammer",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_MonsterHunter_Dagger",1,0,0,0,0,0,0,0
+
+new treasuretable "UND_KC_Mimic_BardReward"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Sentinel_1_Greataxe",1,0,0,0,0,0,0,0
+
+new treasuretable "LOW_FireworksHouse_Trader"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Cauterising_Quarterstaff",1,0,0,0,0,0,0,0
+
+new treasuretable "CRA_HarperTreasureBox"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Toxic_Dagger",1,0,0,0,0,0,0,0
+
+new treasuretable "DEN_BardChest"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_MonsterHunter_Shortsword",1,0,0,0,0,0,0,0
+
+new treasuretable "DEN_Ethel"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Toxic_Shortsword",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Toxic_Sickle",1,0,0,0,0,0,0,0
+
+new treasuretable "FED_Lyrthindor"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Sentinel_1_Sickle",1,0,0,0,0,0,0,0
+
+new treasuretable "FOR_DeathOfATrueSoul_SeluneStash"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_HillGiant_Club",1,0,0,0,0,0,0,0
+
+new treasuretable "FOR_Goblin_OverlookChest"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_MonsterHunter_Shortbow",1,0,0,0,0,0,0,0
+
+new treasuretable "FED_Waterfall_Chest"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Scimitar",1,0,0,0,0,0,0,0
+
+new treasuretable "FED_MatriarchSpider"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Toxic_HeavyCrossbow",1,0,0,0,0,0,0,0
+
+new treasuretable "FED_SpiderHermit_Chest"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Chilled_Maul",1,0,0,0,0,0,0,0
+
+new treasuretable "GOB_Festivities_Trader"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Toxic_Shortbow",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Doom_Sickle",1,0,0,0,0,0,0,0
+
+new treasuretable "FED_Derryth_B"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Sentinel_1_Rapier",1,0,0,0,0,0,0,0
+
+new treasuretable "GOB_Quartermaster"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Cauterising_Battleaxe",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Caustic_Shortsword",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Caustic_Sickle",1,0,0,0,0,0,0,0
+
+new treasuretable "FED_KressaBone"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Charged_Morningstar",1,0,0,0,0,0,0,0
+
+new treasuretable "FED_MRT_Linsella"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Doom_LightCrossbow",1,0,0,0,0,0,0,0
+
+new treasuretable "FED_Brem_Common"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Chilled_Longbow",1,0,0,0,0,0,0,0
+
+new treasuretable "UND_KC_ThrinnChest"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Caustic_HandCrossbow",1,0,0,0,0,0,0,0
+
+new treasuretable "UND_KuoToa_MushroomChest"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Charged_Trident",1,0,0,0,0,0,0,0
+
+new treasuretable "UND_SocietyOfBrilliance_Hobgoblin"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Sentinel_1_Dagger",1,0,0,0,0,0,0,0
+
+new treasuretable "UND_Tower_SecretCellar_RewardChest"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Sentinel_1_HandCrossbow",1,0,0,0,0,0,0,0
+
+new treasuretable "CRE_Axemaster_Buried_Chest"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Caustic_Handaxe",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Cauterising_Greataxe",1,0,0,0,0,0,0,0
+
+new treasuretable "CRE_GithQuartermistress_Trade"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_MonsterHunter_LightCrossbow",1,0,0,0,0,0,0,0
+
+new treasuretable "HAV_HarperQuarterMaster"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Spear",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Moist_Trident",1,0,0,0,0,0,0,0
+
+new treasuretable "LOW_CazadorPalace_DeadGirlChest_Treasure"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_MonsterHunter_Longbow",1,0,0,0,0,0,0,0
+
+new treasuretable "LOW_DeathKnight_Elite_Treasure"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_ARM_REQ_DarkUrge_Bhaal_Ring",1,0,0,0,0,0,0,0
+
+new treasuretable "LOW_DeathKnight_Weak_Treasure_1"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_ARM_REQ_DarkUrge_Bhaal_Amulet",1,0,0,0,0,0,0,0
+
+new treasuretable "FED_Filro"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Doom_Mace",1,0,0,0,0,0,0,0
+
+new treasuretable "LOW_SorcerousSundries_Trade_Magic"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Caustic_Javelin",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Caustic_Mace",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Cauterising_Glaive",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Cauterising_HeavyCrossbow",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Cauterising_LightCrossbow",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Charged_Club",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Charged_Flail",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Charged_Greatclub",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Charged_Shortbow",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Chilled_Javelin",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Chilled_LightCrossbow",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Chilled_Sickle",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Doom_Battleaxe",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Doom_Dagger",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_HillGiant_Maul",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_HillGiant_Warhammer",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_HillGiant_WarPick",1,0,0,0,0,0,0,0
+
+new treasuretable "FED_ShadowMastiffAlpha"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_HillGiant_Greataxe",1,0,0,0,0,0,0,0
+
+new treasuretable "FED_HeWhoWas"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Doom_Sickle",1,0,0,0,0,0,0,0
+
+new treasuretable "MOO_BugBearVendor_PrivateStash"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_HillGiant_Dagger",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_CL_WPN_MAG_HillGiant_Greatclub",1,0,0,0,0,0,0,0
+
+new treasuretable "SCL_CursedKuoToa_Champion"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Chilled_Trident",1,0,0,0,0,0,0,0
+
+new treasuretable "SHA_HiddenRoom_Magic_Chest"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_HillGiant_Mace",1,0,0,0,0,0,0,0
+
+new treasuretable "TWN_ZealousAssistant1_Treasure"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Caustic_Flail",1,0,0,0,0,0,0,0
+
+new treasuretable "TWN_ZealousAssistant2_Treasure"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Doom_Club",1,0,0,0,0,0,0,0
+
+new treasuretable "TWN_ZealousAssistant3_Treasure"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Chilled_Pike",1,0,0,0,0,0,0,0
+
+new treasuretable "TWN_ZealousAssistant4_Treasure"
+CanMerge 1
+new subtable "1,1"
+object category "I_CL_WPN_MAG_Charged_Shortsword",1,0,0,0,0,0,0,0

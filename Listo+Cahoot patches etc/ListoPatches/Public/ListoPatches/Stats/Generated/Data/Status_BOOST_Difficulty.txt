@@ -1,0 +1,7 @@
+new entry "HEALTHBOOST_HARDCORE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "DIFFICULTY"
+data "StackId" "HEALTHBOOST_HARDCORE"
+data "Boosts" "IncreaseMaxHP(35%);RollBonus(Attack,2);SpellSaveDC(2);RollBonus(SkillCheck,2,Acrobatics);RollBonus(SkillCheck,2,Athletics)"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead"

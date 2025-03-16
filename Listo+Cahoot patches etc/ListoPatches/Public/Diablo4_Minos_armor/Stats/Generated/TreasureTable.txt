@@ -1,0 +1,14 @@
+new treasuretable "CRE_Expeditioner_Trade"
+CanMerge 1
+new subtable "1,1"
+object category "I_ARM_Minotaur_ARMOR",1,0,0,0,0,0,0,0
+CanMerge 1
+new subtable "1,1"
+object category "I_ARM_Minotaur_BOOTS",1,0,0,0,0,0,0,0
+CanMerge 1
+new subtable "1,1"
+object category "I_ARM_Minotaur_GLOVES",1,0,0,0,0,0,0,0
+CanMerge 1
+new subtable "1,1"
+object category "I_ARM_Minotaur_HELMET",1,0,0,0,0,0,0,0
+

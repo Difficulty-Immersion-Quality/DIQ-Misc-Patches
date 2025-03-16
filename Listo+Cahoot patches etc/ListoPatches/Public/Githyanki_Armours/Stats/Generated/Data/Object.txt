@@ -1,0 +1,7 @@
+new entry "NAT_Imperial_Shipment"
+type "Object"
+using "_Container"
+data "RootTemplate" "2bebd42a-ef65-4ec2-898b-9f933aea1e16"
+data "ValueOverride" "250"
+data "Weight" "0.1"
+data "Rarity" "VeryRare"

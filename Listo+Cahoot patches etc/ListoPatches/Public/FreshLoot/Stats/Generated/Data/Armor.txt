@@ -1,0 +1,702 @@
+new entry "ARM_Robe_Selunite"
+type "Armor"
+using "ARM_Leather_Body"
+data "RootTemplate" "204de787-46de-4d39-8fe0-2e080bf44a61"
+data "ArmorClass" "12"
+
+
+
+
+new entry "MOD_Puke_Bucket"
+type "Armor"
+using "_Head_Magic_Metal"
+data "RootTemplate" "cda2a3d3-c756-4ff9-9813-b9a66d3a1bc1"
+data "ItemGroup" ""
+data "Boosts" ""
+data "ArmorType" "None"
+data "Rarity" "Uncommon"
+data "PassivesOnEquip" "Poop_Smelly;MOD_PukeBucket_Drunk;MOD_PukeBucket_Vomit_Unlock"
+data "StatusOnEquip" "MOD_Puke_Bucket_DISPLAY"
+data "Unique" "1"
+data "Proficiency Group" ""
+
+new entry "MOD_SaltyShield"
+type "Armor"
+using "ARM_Shield"
+data "Rarity" "Uncommon"
+data "RootTemplate" "b8623eb2-8024-48b2-b485-a204dc822c90"
+data "PassivesOnEquip" "MOD_Pirate2_DrunkPerformance"
+data "ArmorClass" "1"
+data "Unique" "1"
+
+
+
+new entry "MOD_CorellonsWrath_Splint"
+type "Armor"
+using "_Body"
+data "RootTemplate" "66e5ff90-5afb-47f2-bebd-bb17610f5f99"
+data "ArmorClass" "19"
+data "ValueUUID" "240eb257-ef20-4877-89bd-6956b4b7c41a"
+data "ValueLevel" "9"
+data "Rarity" "VeryRare"
+data "Weight" "10"
+data "Boosts" "Disadvantage(Skill,Stealth);IF(HasStatus('MOD_KatanaWeapon_Equipped', context.Source)):UnlockSpell(MOD_KatanaArmor_Target_CompelledDuel);IF(Tagged('ELF',context.Source) or Tagged('HALFELF',context.Source)):Proficiency(HeavyArmor)"
+data "ArmorType" "Splint"
+data "MinAmount" "1"
+data "MaxAmount" "1"
+data "Priority" "1"
+data "MinLevel" "1"
+data "PassivesOnEquip" "MOD_Armor_Proficiency_DISPLAY;MOD_Armor_KatanaBoost_DISPLAY;ARM_SuperiorPlate_1_Passive;ARM_BodyAid_1_Passive"
+data "StatusOnEquip" "MOD_KatanaArmor_Equipped"
+data "Proficiency Group" "HeavyArmor"
+data "Unique" "1"
+
+
+
+new entry "ARM_Toy_Shield"
+type "Armor"
+using "ARM_Shield"
+data "RootTemplate" "e13facc6-aced-4b48-b239-b0e76448013f"
+data "ArmorClass" "1"
+data "ValueOverride" "3"
+data "Weight" "0.5"
+data "Boosts" ""
+data "StatusOnEquip" "MOD_TOY_SHIELD_EQUIPPED"
+data "Proficiency Group" ""
+
+new entry "MOD_ARM_Toy_Boots_Daisy"
+type "Armor"
+using "_Foot"
+data "RootTemplate" "b4148fc4-5017-4f98-8d5c-f1004d6df6c7"
+data "ValueLevel" "4"
+data "Weight" "0"
+data "Boosts" ""
+data "ArmorType" "Plate"
+data "MinAmount" "1"
+data "MaxAmount" "1"
+data "Priority" "1"
+data "MinLevel" "1"
+data "Proficiency Group" ""
+
+new entry "MOD_ARM_Toy_Gloves_Daisy"
+type "Armor"
+using "_Hand"
+data "RootTemplate" "20fb2128-162a-4369-bfbe-e43724b474f0"
+data "ValueLevel" "5"
+data "Weight" "0"
+data "Boosts" ""
+data "MinAmount" "1"
+data "MaxAmount" "1"
+data "Priority" "1"
+data "MinLevel" "1"
+data "Proficiency Group" ""
+
+new entry "MOD_ARM_Toy_Shield_Guardian"
+type "Armor"
+using "ARM_Shield"
+data "RootTemplate" "d3212496-2092-4d05-9249-bbc40cc58d41"
+data "ArmorClass" "1"
+data "ValueOverride" "3"
+data "Weight" "0"
+data "Boosts" ""
+data "StatusOnEquip" ""
+data "Proficiency Group" ""
+
+new entry "MOD_ARM_Toy_Plate_Body"
+type "Armor"
+using "_Body"
+data "RootTemplate" "9ce921d4-fd52-42e3-b54b-225ea95f133a"
+data "ArmorClass" "10"
+data "ValueLevel" "10"
+data "Weight" "0"
+data "Boosts" ""
+data "ArmorType" "Plate"
+data "MinAmount" "1"
+data "MaxAmount" "1"
+data "Priority" "1"
+data "MinLevel" "1"
+data "Proficiency Group" ""
+
+new entry "MOD_ARM_Toy_Radiant_Helmet"
+type "Armor"
+using "_Head"
+data "RootTemplate" "324c56f9-3217-41b8-8036-cc3bdcd5d983"
+data "ValueLevel" "5"
+data "Weight" "0"
+data "Boosts" ""
+data "ArmorType" "Plate"
+data "MinAmount" "1"
+data "MaxAmount" "1"
+data "Priority" "1"
+data "MinLevel" "1"
+data "Proficiency Group" ""
+
+
+
+
+new entry "ARM_Goblin_Shield_C"
+type "Armor"
+using "ARM_Shield"
+data "RootTemplate" "e0d5a057-328a-467d-b8fb-1bfd298d59e7"
+data "ArmorClass" "1"
+data "ValueOverride" "4"
+data "PassivesOnEquip" "MOD_Spiked_Shield_BonusBashAttack"
+data "Weight" "5.4"
+data "StatusOnEquip" ""
+
+new entry "ARM_Shield_FlamingFist"
+type "Armor"
+using "ARM_Shield"
+data "RootTemplate" "ab10f66f-6e93-43f5-9384-82565f14124a"
+data "Boosts" "UnlockSpell(MOD_FlamingShield_Ignite)"
+data "PassivesOnEquip" ""
+
+new entry "MAG_FlamingFist_Flaming_Shield"
+type "Armor"
+using "_Shield_Magic"
+data "RootTemplate" "8c7caa2a-7c11-4f0b-86a8-b8808057101b"
+data "ValueUUID" "a229f048-70b0-4b0c-88cb-29b5c6bdb2d0"
+data "Rarity" "Rare"
+data "Boosts" "Resistance(Fire, Resistant);UnlockSpell(Shout_MAG_FlamingFist_BlazingRetaliation);UnlockSpell(MOD_FlamingShield_Ignite)"
+data "PassivesOnEquip" "MAG_ShieldRiposte_Passive"
+data "MinAmount" "1"
+data "MaxAmount" "1"
+data "Priority" "1"
+data "Unique" "1"
+data "MinLevel" "1"
+
+
+
+
+new entry "MOD_WaterShaper_Gloves"
+type "Armor"
+using "ARM_Gloves_Leather"
+data "RootTemplate" "e8495e34-1c27-4d16-aa67-b0d65efc21e7"
+data "ValueUUID" "a229f048-70b0-4b0c-88cb-29b5c6bdb2d0"
+data "Rarity" "Rare"
+data "Boosts" "UnlockSpell(MOD_Target_WaterWhip_Cantrip)"
+data "PassivesOnEquip" "MOD_WaterShaper_Gloves_Passive;MOD_WaterShaper_QuickenedWhip_DISPLAY;MOD_WaterShaping_Combat;MOD_WaterShaping_Combat_Remover"
+data "StatusOnEquip" "MOD_WaterShaper_EQUIPPED"
+data "Unique" "1"
+
+
+
+
+new entry "ARM_MerregonMask"
+type "Armor"
+using "_Head"
+data "RootTemplate" "b2409a86-dc0d-4193-9985-4f11419c64be"
+data "ValueLevel" "6"
+data "Boosts" "UnlockSpell(MOD_MerregonMask_Teleport);UnlockSpell(MOD_MerregonMask_DevilSight)"
+data "StatusOnEquip" "UNI_MERREGONMASK_EFFECT_TECHNICAL;MOD_MerregonMask_EQUIPPED"
+
+
+
+
+new entry "MOD_KuoToa_Shield_UNIQUE"
+type "Armor"
+using "ARM_Shield"
+data "RootTemplate" "c288b37f-7800-434c-a3d2-f54c612a92a2"
+data "ValueOverride" "6"
+data "Rarity" "Rare"
+data "ArmorClass" "2"
+data "PassivesOnEquip" "MOD_KuoToaShield_DifficultTerrain;MAG_ShieldRiposte_Passive;MOD_KuoToaShield_LightningRes"
+data "StatusOnEquip" "MOD_KuoToaShield_EQUIPPED"
+
+new entry "ARM_KuoToa_Shield_A"
+type "Armor"
+using "ARM_Shield"
+data "RootTemplate" "2099af4a-caa2-4e06-9b6d-fa6e9754bd09"
+data "ValueOverride" "6"
+data "ArmorClass" "2"
+
+
+
+
+new entry "MAG_MeleeDebuff_AttackDebuff1_OnDamage_ScaleMail"
+type "Armor"
+using "ARM_ScaleMail_Body_2"
+data "RootTemplate" "5427c806-5565-421f-a00f-a8282a9f504f"
+data "ItemGroup" ""
+data "ValueUUID" "adfdafe5-f4da-4c64-a1e6-a33d626437d2"
+data "Rarity" "VeryRare"
+data "Boosts" "IF(not HasPassive('MediumArmorMaster', context.Source)):Disadvantage(Skill,Stealth);CriticalHit(AttackTarget,Success,Never)"
+data "PassivesOnEquip" "ARM_MagicalPlate_1_Passive;MAG_MeleeDebuff_AttackDebuff1_OnDamaged_Passive;MOD_AdamantineClad_Armors"
+data "StatusOnEquip" "MOD_AdamantineArmor_EQUIPPED"
+
+new entry "MAG_MeleeDebuff_AttackDebuff1_OnDamage_Shield"
+type "Armor"
+using "_Shield_Magic"
+data "RootTemplate" "96907713-b560-4daf-ab32-3c1aec3f3890"
+data "ItemGroup" ""
+data "ValueUUID" "a229f048-70b0-4b0c-88cb-29b5c6bdb2d0"
+data "Rarity" "Rare"
+data "Boosts" "CriticalHit(AttackTarget,Success,Never)"
+data "PassivesOnEquip" "MAG_MeleeDebuff_AttackDebuff1_OnDamage_Shield_Passive;MOD_AdamantineClad_Shield;MAG_ShieldRiposte_Passive"
+data "StatusOnEquip" "MOD_AdamantineShield_EQUIPPED"
+
+new entry "MAG_MeleeDebuff_AttackDebuff2_OnDamage_SplintMail"
+type "Armor"
+using "ARM_Splint_Body_1"
+data "RootTemplate" "ea3cf349-19ab-4104-9253-8e182bdbf538"
+data "ItemGroup" ""
+data "ValueUUID" "adfdafe5-f4da-4c64-a1e6-a33d626437d2"
+data "Rarity" "VeryRare"
+data "Boosts" "Disadvantage(Skill,Stealth);CriticalHit(AttackTarget,Success,Never)"
+data "PassivesOnEquip" "ARM_MagicalPlate_2_Passive;MAG_MeleeDebuff_AttackDebuff2_OnDamaged_Passive;MOD_AdamantineClad_Armors"
+data "StatusOnEquip" "MOD_AdamantineArmor_EQUIPPED"
+data "MinLevel" "1"
+
+new entry "MAG_MeleeDebuff_AttackDebuff1_OnDamage_Helmet"
+type "Armor"
+using "_Head_Magic_Metal"
+data "RootTemplate" "6b1c4d55-e0d1-4b58-a26d-57d807bca488"
+data "ItemGroup" ""
+data "ValueUUID" "c5ad02e9-b4d4-4df1-a9cd-02b80d017eaa"
+data "Rarity" "VeryRare"
+data "Boosts" "CriticalHit(AttackTarget,Success,Never);Resistance(Fire, Resistant);UnlockSpell(Target_MAG_HuntersMark_Grymskull)"
+data "PassivesOnEquip" "MOD_AdamantineClad_Helmet;MOD_AdamantineFULL_Helmet;MOD_AdamantineFULL_SPELLSAVES"
+data "Unique" "1"
+data "Proficiency Group" "HeavyArmor"
+data "StatusOnEquip" "MOD_AdamantineHelmet_EQUIPPED"
+
+
+
+
+new entry "MAG_ChargedLightning_AbilityCheckBoost_Gloves"
+type "Armor"
+using "_Hand_Magic_Metal"
+data "RootTemplate" "a0bbe602-ffc1-45f1-9a09-de7d11575465"
+data "ItemGroup" ""
+data "Rarity" "Rare"
+data "Boosts" ""
+data "PassivesOnEquip" "MAG_ChargedLightning_Charge_OnUnarmedDamage_Passive;MAG_ChargedLightning_UnarmedAttackAdvantage_Passive;MOD_ChargedLightning_unlockShockingGrasp"
+data "Unique" "1"
+
+
+
+
+new entry "MAG_PHB_ElvenChain_Armor"
+type "Armor"
+using "ARM_ChainShirt_Body_1"
+data "RootTemplate" "391bccb7-8199-41e3-9aa3-261def2ebf26"
+data "ArmorClass" "15"
+data "ValueLevel" "3"
+data "ValueUUID" "240eb257-ef20-4877-89bd-6956b4b7c41a"
+data "ArmorType" "StuddedLeather"
+data "Rarity" "Rare"
+data "Weight" "6"
+data "PassivesOnEquip" "MAG_PHB_ElvenChain_Armor_Passive;MAG_PHB_ElvenChain_AddedEffect_Armor_Passive;MAG_FlexibleArmor_Defense_Passive"
+data "Ability Modifier Cap" "3"
+data "Proficiency Group" ""
+data "Unique" "1"
+
+new entry "GOB_DrowCommander_Leather_Armor"
+type "Armor"
+using "ARM_ChainShirt_Body_1"
+data "RootTemplate" "c0c0534c-b7fc-4d0b-a335-b8f4c548852d"
+data "ValueUUID" "240eb257-ef20-4877-89bd-6956b4b7c41a"
+data "ItemGroup" ""
+data "ValueLevel" "6"
+data "ValueScale" "1.1"
+data "Rarity" "Rare"
+data "Weight" "6"
+data "Boosts" "Advantage(SavingThrow, Constitution)"
+data "PassivesOnEquip" "ARM_Stealthy_1_Passive"
+data "Ability Modifier Cap" "3"
+data "Unique" "1"
+
+new entry "GOB_DrowCommander_Leather_Gloves"
+type "Armor"
+using "ARM_Gloves_Leather"
+data "RootTemplate" "69e57d02-44a2-4e39-8b2a-502413761219"
+data "ItemGroup" ""
+data "Unique" "1"
+
+
+
+
+new entry "MOD_Lesser_Infernal_BOOTS"
+type "Armor"
+using "ARM_Boots_Metal"
+data "RootTemplate" "2b69a73f-0d1b-4514-bdae-5565a8045e26"
+data "ValueUUID" "a229f048-70b0-4b0c-88cb-29b5c6bdb2d0"
+data "Rarity" "Rare"
+data "Boosts" "RollBonus(SavingThrow, 1, Dexterity)"
+data "PassivesOnEquip" "MAG_MagicalDurability_Passive"
+data "Unique" "1"
+
+new entry "MAG_Lesser_Infernal_Plate_Armor"
+type "Armor"
+using "ARM_ScaleMail_Body_2"
+data "RootTemplate" "d76dd47b-e1bf-4e30-b366-6069d9eb9e22"
+data "ValueUUID" "adfdafe5-f4da-4c64-a1e6-a33d626437d2"
+data "Rarity" "VeryRare"
+data "Boosts" "Resistance(Fire, Resistant)"
+data "PassivesOnEquip" "MAG_Lesser_Infernal_Plate_Armor_FireDamage_Passive;ARM_SuperiorMaterial_1_Passive"
+data "Ability Modifier Cap" "2"
+data "Unique" "1"
+
+new entry "MAG_DevilsBlackmith_ScaleMail"
+type "Armor"
+using "ARM_ScaleMail_Body_2"
+data "RootTemplate" "5ff8df3a-6924-4eb4-9d1a-9e87bd644bf7"
+data "ValueUUID" "240eb257-ef20-4877-89bd-6956b4b7c41a"
+data "Boosts" "Resistance(Fire, Resistant)"
+data "PassivesOnEquip" "MAG_ExoticMaterial_MediumArmor_Passive;ARM_Ambusher_1_Passive"
+data "StatusOnEquip" "MAG_EXOTIC_MATERIAL_ARMOR_TECHNICAL"
+data "Unique" "1"
+data "Ability Modifier Cap" ""
+
+
+
+
+new entry "MOD_Selunite_Isobel_Robe_ForSale"
+type "Armor"
+using "ARM_Robe_Body_1"
+data "RootTemplate" "b10fe8db-86cf-412f-b728-570a9963481a"
+data "ValueUUID" "adfdafe5-f4da-4c64-a1e6-a33d626437d2"
+data "ValueLevel" "7"
+data "Rarity" "VeryRare"
+data "Boosts" "Advantage(SavingThrow, Constitution);UnlockSpell(Shout_MAG_ProduceFlame);UnlockSpell(Shout_MAG_Selunite_MageArmor);RollBonus(SavingThrow, 1)"
+data "PassivesOnEquip" "MAG_Selunite_LunarProtection_Passive"
+data "StatusOnEquip" "MAG_SELUNITE_ARMOR_MAGE_ARMOR_TECHNICAL"
+data "Unique" "1"
+
+
+
+
+new entry "MAG_Harpers_ArmorOfShadows"
+type "Armor"
+using "ARM_StuddedLeather_Body_Drow"
+data "RootTemplate" "2077fe9a-991d-4763-9b1a-fff843efd705"
+data "ValueUUID" "240eb257-ef20-4877-89bd-6956b4b7c41a"
+data "ValueLevel" "2"
+data "Rarity" "Rare"
+data "ArmorClass" "13"
+data "Boosts" "Skill(Stealth, 1)"
+data "PassivesOnEquip" "MAG_Harpers_ArmorOfShadows_Passive"
+data "StatusOnEquip" ""
+data "Unique" "1"
+
+new entry "MOD_ArmorOfShadows_Gloves_Leather"
+type "Armor"
+using "_Hand"
+data "RootTemplate" "8e210db9-0d38-403e-8b53-16ca7c45f958"
+data "ValueUUID" "240eb257-ef20-4877-89bd-6956b4b7c41a"
+data "ValueLevel" "1"
+data "Rarity" "Rare"
+data "Boosts" ""
+data "PassivesOnEquip" "MAG_Harpers_ArmorOfShadows_Gloves_Passive"
+data "Unique" "1"
+
+
+
+new entry "ARM_BootsOfSpeed"
+type "Armor"
+using "_Foot_Magic"
+data "RootTemplate" "8b22d15a-85bb-4c8d-90cf-a773fc451eac"
+data "ValueUUID" "a229f048-70b0-4b0c-88cb-29b5c6bdb2d0"
+data "Rarity" "Rare"
+data "Boosts" "UnlockSpell(Shout_BootsOfSpeed)"
+data "PassivesOnEquip" "MOD_BootsOfSpeed_LittleFeetBigSteps"
+
+
+
+
+new entry "MOD_MAG_Monk_Clothing"
+type "Armor"
+using "ARM_Robe_Body"
+data "RootTemplate" "ec8973c6-061e-4d13-8085-7ebdcdb791e8"
+data "ValueUUID" "be545ee9-311c-4ab8-ab14-fefcc552cace"
+data "ValueLevel" "2"
+data "Boosts" "RollBonus(SavingThrow, 1, Wisdom);Skill(Acrobatics, 1);Skill(Perception, 1);Skill(Insight, 1)"
+data "Rarity" "Uncommon"
+data "PassivesOnEquip" ""
+data "Unique" "1"
+
+
+
+
+new entry "MAG_Druid_Magic_Hide_Armor"
+type "Armor"
+using "ARM_Leather_Body_1"
+data "RootTemplate" "9cf8e8a9-16ee-4186-88b7-bdfcaa734e61"
+data "ValueUUID" "be545ee9-311c-4ab8-ab14-fefcc552cace"
+data "ValueLevel" "2"
+data "Rarity" "Uncommon"
+data "Boosts" "RollBonus(SavingThrow, 1, Dexterity);Skill(Athletics, 1);Skill(Nature, 1);Skill(Survival, 1)"
+data "PassivesOnEquip" ""
+data "Unique" "1"
+
+
+
+
+new entry "MOD_MAG_Padded_Armour"
+type "Armor"
+using "ARM_Padded_Body"
+data "RootTemplate" "d98c3c2f-3d0c-450f-bfc5-d23fdceab0be"
+data "ArmorClass" "12"
+data "ValueUUID" "be545ee9-311c-4ab8-ab14-fefcc552cace"
+data "ValueLevel" "2"
+data "Rarity" "Uncommon"
+data "Boosts" "RollBonus(SavingThrow, 1, Constitution);Skill(SleightOfHand, 2);Skill(Persuasion, 1)"
+data "PassivesOnEquip" ""
+data "Unique" "1"
+
+
+
+new entry "MAG_Healer_DisengageOnHeal_ChainShirt"
+type "Armor"
+using "ARM_Leather_Body_2"
+data "RootTemplate" "e6e74ef9-1916-4c6b-a7bb-98fc83e71b62"
+data "ItemGroup" ""
+data "ValueUUID" "be545ee9-311c-4ab8-ab14-fefcc552cace"
+data "ValueLevel" "3"
+data "Rarity" "Uncommon"
+data "PassivesOnEquip" "MAG_Healer_DisengageOnHeal_Passive;ARM_Balance_1_Passive"
+data "Unique" "1"
+
+
+
+
+new entry "FOR_OwlbearCubs_Armor"
+type "Armor"
+using "ARM_StuddedLeather_Body_1"
+data "RootTemplate" "9ab8b5fa-ba00-44d4-8c4a-50acd5fa62e3"
+data "ItemGroup" ""
+data "ValueUUID" "be545ee9-311c-4ab8-ab14-fefcc552cace"
+data "Rarity" "Uncommon"
+data "Boosts" ""
+data "PassivesOnEquip" "FOR_OwlbearCubs_Armor_Passive"
+data "Unique" "1"
+
+
+
+
+new entry "MAG_Druid_Late_Hide_Armor_1"
+type "Armor"
+using "ARM_Padded_Body_2"
+data "RootTemplate" "a1d321be-ff4c-423a-bc50-bcad85a3a83a"
+data "ValueUUID" "240eb257-ef20-4877-89bd-6956b4b7c41a"
+data "ValueLevel" "3"
+data "Rarity" "Rare"
+data "Boosts" "Advantage(SavingThrow, Constitution);UnlockSpell(MOD_Target_LittleHaste)"
+data "PassivesOnEquip" ""
+data "StatusOnEquip" ""
+data "Unique" "1"
+
+
+
+
+new entry "MAG_Paladin_RestoreChannelDivinity_Armor"
+type "Armor"
+using "ARM_ChainMail_Body_2"
+data "RootTemplate" "c4af39d8-628d-4791-9dc4-4446ee31e160"
+data "ValueUUID" "240eb257-ef20-4877-89bd-6956b4b7c41a"
+data "ValueLevel" "9"
+data "Rarity" "Rare"
+data "Boosts" "Disadvantage(Skill,Stealth);UnlockSpell(Shout_MAG_Restore_ChannelDivinity)"
+data "Unique" "1"
+
+
+
+
+new entry "MAG_ZOC_ForceConduit_ChainMail"
+type "Armor"
+using "ARM_Plate_Body_1"
+data "RootTemplate" "b2530a6b-1235-4f5f-b61c-d174a980bc0b"
+data "ArmorClass" "17"
+data "ValueUUID" "240eb257-ef20-4877-89bd-6956b4b7c41a"
+data "ValueLevel" "6"
+data "Rarity" "Rare"
+data "PassivesOnEquip" "MOD_ZOC_ForceConduit_Armor_DISPLAY;MOD_ZOC_ForceConduit_Absorption_Toggle;MOD_ZOC_ForceConduit_Reverberation_Toggle"
+data "StatusOnEquip" ""
+data "Unique" "1"
+
+new entry "MOD_ZOC_ForceConduit_Helmet"
+type "Armor"
+using "_Head_Magic_Metal"
+data "RootTemplate" "343fb5f2-49c4-45db-9da2-2863745484ec"
+data "ValueUUID" "a229f048-70b0-4b0c-88cb-29b5c6bdb2d0"
+data "Rarity" "Rare"
+data "Boosts" "RollBonus(SavingThrow, 1, Constitution)"
+data "PassivesOnEquip" "MOD_ZOC_ForceConduit_Absorption_helmet;MOD_ZOC_ForceConduitHelmet_RampartAura_Passive"
+data "StatusOnEquip" "MAG_FORCE_CONDUIT_Helmet_EQUIPPED"
+data "Unique" "1"
+
+new entry "MOD_ZOC_ForceConduit_Gloves"
+type "Armor"
+using "_Hand_Magic_Metal"
+data "RootTemplate" "bb9f7ad4-4f1a-49c5-b7a5-94579cd42f9e"
+data "ValueUUID" "a229f048-70b0-4b0c-88cb-29b5c6bdb2d0"
+data "Rarity" "Rare"
+data "Boosts" ""
+data "PassivesOnEquip" "MOD_ZOC_ForceConduit_Gloves_ForceAttack"
+data "MinAmount" "1"
+data "MaxAmount" "1"
+data "Priority" "1"
+data "Unique" "1"
+
+new entry "MAG_ZOC_ForceConduitWhileSurounded_Boots"
+type "Armor"
+using "_Foot_Magic_Metal"
+data "RootTemplate" "cde75746-e209-433b-838c-300e3c7d8306"
+data "Rarity" "Uncommon"
+data "Boosts" "Skill(Athletics,1);UnlockSpell(Shout_MAG_ZOC_ImmovableShout)"
+data "PassivesOnEquip" "MOD_ZOC_ForceConduit_Absorption_Boots"
+data "Unique" "1"
+
+
+
+
+new entry "MAG_EndGame_StuddedLeather_Armor"
+type "Armor"
+using "ARM_StuddedLeather_Body_2"
+data "RootTemplate" "8472235c-8ced-4db3-825f-322eace0f34d"
+data "ValueUUID" "adfdafe5-f4da-4c64-a1e6-a33d626437d2"
+data "Rarity" "VeryRare"
+data "Boosts" "Advantage(Skill, Stealth);UnlockSpell(Shout_MAG_Shield_LeatherArmor)"
+data "PassivesOnEquip" "ARM_Ambusher_2_Passive;MAG_Interrupt_MAG_Shield_LeatherArmor_Resource_Passive;ARM_SuperiorPadding_1_Passive"
+data "Unique" "1"
+
+new entry "MOD_MAG_FaeriesBlessing"
+type "Armor"
+using "ARM_StuddedLeather_Body"
+data "RootTemplate" "ed134121-a71e-4fde-a6bc-2ec54d269dad"
+data "ArmorClass" "14"
+data "ValueUUID" "adfdafe5-f4da-4c64-a1e6-a33d626437d2"
+data "ValueLevel" "3"
+data "Rarity" "Rare"
+data "Boosts" "UnlockSpell(MOD_Target_FaerieFire_Armour)"
+data "PassivesOnEquip" "ARM_SuperiorPadding_1_Passive;ARM_Ambusher_1_Passive"
+data "Unique" "1"
+
+
+
+new entry "UND_Justiciar_Helmet_Magic"
+type "Armor"
+using "_Head_Magic_Metal"
+data "RootTemplate" "27f1c6cd-c716-440d-ba7c-795c431ce5a3"
+data "ItemGroup" ""
+data "Rarity" "Uncommon"
+data "PassivesOnEquip" ""
+data "Unique" "1"
+
+new entry "MOD_UND_BrokenShar_Helmet_Magic"
+type "Armor"
+using "_Head_Magic_Metal"
+data "RootTemplate" "ec9d4bd6-343d-4f75-ac71-af2447a82661"
+data "ItemGroup" ""
+data "Rarity" "Uncommon"
+data "PassivesOnEquip" "UND_Justiciar_Helmet_Magic_Passive"
+data "Unique" "1"
+
+
+
+
+new entry "MAG_Radiant_Radiating_Helmet"
+type "Armor"
+using "_Head_Magic_Metal"
+data "RootTemplate" "5b3c40c5-b0c0-44b5-9b75-e642069fd2cc"
+data "Rarity" "Rare"
+data "PassivesOnEquip" "MAG_Radiant_Radiating_Helmet_Passive"
+data "Unique" "1"
+
+
+
+
+new entry "UND_Justiciar_Mask_Magic"
+type "Armor"
+using "_Head_Magic"
+data "RootTemplate" "58968403-4dd6-4611-a7a2-a293ae7cf0b0"
+data "ItemGroup" ""
+data "Rarity" "Rare"
+data "Boosts" "Skill(Intimidation,1);Skill(Persuasion,1)"
+data "PassivesOnEquip" "MOD_ArcaneAttack_Passive"
+data "Unique" "1"
+
+
+
+
+new entry "MAG_Harpers_ShieldsOfShadows"
+type "Armor"
+using "_Shield_Magic"
+data "RootTemplate" "1977f0ae-4269-4024-bb3b-a4cca54fafe0"
+data "Rarity" "Uncommon"
+data "Boosts" "Skill(Stealth, 1)"
+data "PassivesOnEquip" "MAG_LowHP_TemporaryHP_Passive"
+data "MinAmount" "1"
+data "MaxAmount" "1"
+data "Priority" "1"
+data "Unique" "1"
+data "MinLevel" "1"
+
+new entry "MAG_LowHP_TemporaryHP_Shield"
+type "Armor"
+using "_Shield_Magic"
+data "RootTemplate" "3374ad91-ddcf-430a-bddd-f48e8699ade9"
+data "ItemGroup" ""
+data "ArmorClass" "1"
+data "Rarity" "Rare"
+data "PassivesOnEquip" "MOD_ScalingWeapons_DESCRIPTION_ONLY;MOD_Octagon_Shield_Stage1_DISPLAY;MOD_Octagon_Shield_BonusBashAttack;MOD_Octagon_Shield_Bash_Push;MOD_Octagon_Shield_AC_Boost;MOD_Octagon_Shield_Light_DISPLAY"
+data "Weight" "1.7"
+data "Unique" "1"
+
+new entry "MOD_Octagon_Shield"
+type "Armor"
+using "ARM_Shield"
+data "RootTemplate" "747387ac-0dc7-47ab-8c69-75269ffc4dbc"
+data "ArmorClass" "1"
+data "Rarity" "Rare"
+data "ValueLevel" "3"
+data "PassivesOnEquip" "MOD_ScalingWeapons_DESCRIPTION_ONLY;MOD_Octagon_Shield_Stage1_DISPLAY;MOD_Octagon_Shield_BonusBashAttack;MOD_Octagon_Shield_Bash_Push;MOD_Octagon_Shield_AC_Boost;MOD_Octagon_Shield_Light_DISPLAY"
+data "Weight" "1.7"
+data "Unique" "1"
+
+
+
+new entry "UNI_RobeOfSummer"
+type "Armor"
+using "_Armor_Magic_Robe"
+data "RootTemplate" "ffed890a-69fe-4798-8c71-1bd3b72369bc"
+data "Rarity" "Rare"
+data "Boosts" "Resistance(Cold, Resistant);Resistance(Fire, Resistant);UnlockSpell(MOD_Target_FlamingSphere_3_ROBE)"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

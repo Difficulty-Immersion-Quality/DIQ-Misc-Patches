@@ -1,0 +1,212 @@
+new treasuretable "ARA_Cloak_Crate_T"
+CanMerge 1
+new subtable "1,1"
+object category "I__ARA_Cloak_Common_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Common_2",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Common_3",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Common_4",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Common_5",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Uncommon_Barbarian_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Uncommon_Bard_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Uncommon_Cleric_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Uncommon_Druid_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Uncommon_Fighter_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Uncommon_Monk_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Uncommon_Paladin_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Uncommon_Ranger_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Uncommon_Rogue_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Uncommon_Sorcerer_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Uncommon_Warlock_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Uncommon_Wizard_1",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Rare_Reeling",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Rare_Lightning",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Rare_Protection",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Rare_Rainbow",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Rare_Parry",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Rare_Lightwork",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_VeryRare_Symbiote",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_VeryRare_ManyEyes",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_VeryRare_NullMagicMantle",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_VeryRare_Eldritch",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_VeryRare_BonusAction",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Legendary_Bonespike",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Legendary_Helldusk",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Legendary_Justiciar",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Legendary_Bhaalist",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I__ARA_Cloak_Legendary_PaleWidow",1,0,0,0,0,0,0,0
+
+new treasuretable "ARA_Cloak_Common"
+CanMerge 1
+new subtable "5,1"
+object category "I_ARA_Cloak_Common_1",1,0,0,0,0,0,0,0
+object category "I_ARA_Cloak_Common_2",1,0,0,0,0,0,0,0
+object category "I_ARA_Cloak_Common_3",1,0,0,0,0,0,0,0
+object category "I_ARA_Cloak_Common_4",1,0,0,0,0,0,0,0
+object category "I_ARA_Cloak_Common_5",1,0,0,0,0,0,0,0
+
+new treasuretable "ARA_Cloak_Uncommon"
+CanMerge 1
+new subtable "12,1"
+object category "I_ARA_Cloak_Uncommon_Barbarian_1",1,0,0,0,0,0,0,0
+object category "I_ARA_Cloak_Uncommon_Bard_1",1,0,0,0,0,0,0,0
+object category "I_ARA_Cloak_Uncommon_Cleric_1",1,0,0,0,0,0,0,0
+object category "I_ARA_Cloak_Uncommon_Druid_1",1,0,0,0,0,0,0,0
+object category "I_ARA_Cloak_Uncommon_Fighter_1",1,0,0,0,0,0,0,0
+object category "I_ARA_Cloak_Uncommon_Monk_1",1,0,0,0,0,0,0,0
+object category "I_ARA_Cloak_Uncommon_Paladin_1",1,0,0,0,0,0,0,0
+object category "I_ARA_Cloak_Uncommon_Ranger_1",1,0,0,0,0,0,0,0
+object category "I_ARA_Cloak_Uncommon_Rogue_1",1,0,0,0,0,0,0,0
+object category "I_ARA_Cloak_Uncommon_Sorcerer_1",1,0,0,0,0,0,0,0
+object category "I_ARA_Cloak_Uncommon_Warlock_1",1,0,0,0,0,0,0,0
+object category "I_ARA_Cloak_Uncommon_Wizard_1",1,0,0,0,0,0,0,0
+
+new treasuretable "WYR_Circus_KoboldMerchant"
+CanMerge 1
+new subtable "1,1"
+object category "I_ARA_Cloak_Rare_Rainbow",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_ARA_Cloak_Legendary_Justiciar",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_ARA_Cloak_Rare_Reeling",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_ARA_Cloak_Rare_Lightning",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_ARA_Cloak_VeryRare_ManyEyes",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_ARA_Cloak_Rare_Protection",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_ARA_Cloak_Rare_Parry",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_ARA_Cloak_VeryRare_NullMagicMantle",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_ARA_Cloak_Legendary_PaleWidow",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_ARA_Cloak_VeryRare_Eldritch",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_ARA_Cloak_Rare_Lightwork",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_ARA_Cloak_VeryRare_Symbiote",1,0,0,0,0,0,0,0
+
+new treasuretable "DEN_Weaponsmith_Trade"
+CanMerge 1
+new subtable "1,1"
+object category "T_ARA_Cloak_Common",1,0,0,0,0,0,0,0
+
+new treasuretable "HAV_HarperQuarterMaster"
+CanMerge 1
+new subtable "1,1"
+object category "T_ARA_Cloak_Uncommon",1,0,0,0,0,0,0,0
+
+new treasuretable "LOW_SteepsTrader_Armor"
+CanMerge 1
+new subtable "1,1"
+object category "T_ARA_Cloak_Uncommon",1,0,0,0,0,0,0,0
+
+new treasuretable "WYR_OrinsImpersonation_Smith"
+CanMerge 1
+new subtable "1,1"
+object category "I_ARA_Cloak_Legendary_Bonespike",1,0,0,0,0,0,0,0
+
+new treasuretable "LOW_DevilsFee_Diabolist_Trade"
+CanMerge 1
+new subtable "2,1"
+object category "I_ARA_Cloak_Legendary_Helldusk",1,0,0,0,0,0,0,0
+
+new treasuretable "MOO_BugBearvendor_Trade"
+CanMerge 1
+new subtable "1,1"
+object category "I_ARA_Cloak_VeryRare_NullMagicMantle",1,0,0,0,0,0,0,0
+
+new treasuretable "CRE_GithQuartermistress_Trade"
+CanMerge 1
+new subtable "1,1"
+object category "I_ALYN_Cloak_Protection",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_ARA_Cloak_Rare_Parry",1,0,0,0,0,0,0,0
+
+new treasuretable "LOW_VoicelessPenitent"
+CanMerge 1
+new subtable "1,1"
+object category "I_ARA_Cloak_Legendary_Bhaalist",1,0,0,0,0,0,0,0
+
+new treasuretable "TWN_Brewer_Treasure"
+CanMerge 1
+new subtable "1,1"
+object category "I_ARA_Cloak_VeryRare_BonusAction",1,0,0,0,0,0,0,0
+
+new treasuretable "SHA_LastJusticiar_Treasure"
+CanMerge 1
+new subtable "1,1"
+object category "I_ARA_Cloak_Legendary_Justiciar",1,0,0,0,0,0,0,0
+
+new treasuretable "UND_KC_AdamantineGolem"
+CanMerge 1
+new subtable "1,1"
+object category "I_ARA_Cloak_Rare_Reeling",1,0,0,0,0,0,0,0
+
+new treasuretable "HAG_WoodWoad_Chest"
+CanMerge 1
+new subtable "1,1"
+object category "I_ARA_Cloak_Rare_Lightning",1,0,0,0,0,0,0,0
+
+new treasuretable "MOO_MimicReward"
+CanMerge 1
+new subtable "1,1"
+object category "I_ARA_Cloak_VeryRare_ManyEyes",1,0,0,0,0,0,0,0
+
+new treasuretable "SCL_TollHouseExplorationChest"
+CanMerge 1
+new subtable "1,1"
+object category "I_ARA_Cloak_Rare_Rainbow",1,0,0,0,0,0,0,0
+
+new treasuretable "FOR_Spiders_SpiderQueen"
+CanMerge 1
+new subtable "1,1"
+object category "I_ARA_Cloak_Legendary_PaleWidow",1,0,0,0,0,0,0,0
+
+new treasuretable "SCL_ServantOfTheRaven_Reward"
+CanMerge 1
+new subtable "1,1"
+object category "I_ARA_Cloak_VeryRare_Eldritch",1,0,0,0,0,0,0,0
+
+new treasuretable "SCL_DarkShamblingMound"
+CanMerge 1
+new subtable "1,1"
+object category "I_ARA_Cloak_VeryRare_Symbiote",1,0,0,0,0,0,0,0
+
+new treasuretable "CRE_Expeditioner_Trade"
+CanMerge 1
+new subtable "1,1"
+object category "I_ARA_Cloak_Rare_Lightwork",1,0,0,0,0,0,0,0

@@ -1,0 +1,24 @@
+new treasuretable "LOW_SorcerousSundries_SecretRoom3_Treasure"
+CanMerge 1
+new subtable "1,1"
+object category "I_Endgame_caster_Robe",1,0,0,0,0,0,0,0
+
+new treasuretable "LOW_SorcerousSundries_MystraVault_Weapon_Treasure"
+CanMerge 1
+new subtable "1,1"
+object category "I_Endgame_caster_headwear",1,0,0,0,0,0,0,0
+
+new treasuretable "LOW_SteepsTrader_Armor"
+CanMerge 1
+new subtable "1,1"
+object category "I_Endgame_caster_Boots",1,0,0,0,0,0,0,0
+
+new treasuretable "LOW_SorcerousSundries_Trade_Magic"
+CanMerge 1
+new subtable "1,1"
+object category "I_Endgame_caster_Gloves",1,0,0,0,0,0,0,0
+
+new treasuretable "LOW_StormshoreTabernacle_Guardian"
+CanMerge 1
+new subtable "1,1"
+object category "I_Endgame_caster_Cloak",1,0,0,0,0,0,0,0

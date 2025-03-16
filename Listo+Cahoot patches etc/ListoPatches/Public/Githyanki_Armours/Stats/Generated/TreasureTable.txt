@@ -1,0 +1,34 @@
+new treasuretable "CRE_GithQuartermistress_Trade"
+CanMerge 1
+new subtable "-1"
+object category "I_NAT_Voss_Boots",1,0,0,0,0,0,0,0
+
+new treasuretable "NAT_Chrai_Wwargaz_Loot"
+new subtable "-1"
+object category "I_NAT_Wwargaz_Armour",1,0,0,0,0,0,0,0
+new subtable "-1"
+object category "I_NAT_Wwargaz_Circlet",1,0,0,0,0,0,0,0
+
+new treasuretable "NAT_Kithrak_Therezzyn_Loot"
+new subtable "-1"
+object category "I_NAT_Therezzyn_Armour",1,0,0,0,0,0,0,0
+new subtable "-1"
+object category "I_NAT_Therezzyn_Gauntlets",1,0,0,0,0,0,0,0
+new subtable "-1"
+object category "I_NAT_Therezzyn_Circlet",1,0,0,0,0,0,0,0
+
+new treasuretable "NAT_Chrai_Harrak_Loot"
+new subtable "-1"
+object category "I_NAT_Voss_Armour",1,0,0,0,0,0,0,0
+new subtable "-1"
+object category "I_NAT_Chrai_Gauntlets",1,0,0,0,0,0,0,0
+new subtable "-1"
+object category "I_NAT_Chrai_Boots",1,0,0,0,0,0,0,0
+new subtable "-1"
+object category "I_NAT_Chrai_Circlet",1,0,0,0,0,0,0,0
+
+new treasuretable "NAT_Chrai_Tskaan_Loot"
+new subtable "-1"
+object category "I_NAT_Chrai_Armour",1,0,0,0,0,0,0,0
+new subtable "-1"
+object category "I_NAT_Voss_Gauntlets",1,0,0,0,0,0,0,0

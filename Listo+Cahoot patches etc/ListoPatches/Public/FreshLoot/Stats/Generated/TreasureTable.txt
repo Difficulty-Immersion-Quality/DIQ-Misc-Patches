@@ -1,0 +1,110 @@
+//ACT 1 ////////////////
+
+// Bandit ruin
+new treasuretable "CHA_Exterior_Bandit_Leader"
+CanMerge 1
+new subtable "1,1"
+object category "I_WPN_MOD_Broken_Heirloom_New_ID",1,0,0,0,0,0,0,0
+
+//Aaron
+
+new treasuretable "DEN_Entrance_Trade"
+CanMerge 1
+new subtable "1,1"
+object category "I_MOD_MAG_Monk_Clothing",1,0,0,0,0,0,0,0
+
+//blighted village central chest
+
+new treasuretable "FOR_VillageFightReward"
+CanMerge 1
+new subtable "1,1"
+object category "I_WPN_Cleaver_MOMsAxe",1,0,0,0,0,0,0,0
+
+//Goblin Camp GRAT THE TRADER
+
+new treasuretable "GOB_Festivities_Trader"
+CanMerge 1
+new subtable "1,1"
+object category "I_MOD_SaltyShield",1,0,0,0,0,0,0,0
+
+//Roah Moonglow
+
+new treasuretable "GOB_Quartermaster"
+CanMerge 1
+new subtable "1,1"
+object category "I_MOD_MAG_Padded_Armour",1,0,0,0,0,0,0,0
+
+
+//Zhentarim TRADER
+
+new treasuretable "PLA_ZhentarimTrader_Extra"
+CanMerge 1
+new subtable "1,1"
+object category "I_MOD_WaterShaper_Gloves",1,0,0,0,0,0,0,0
+
+//Underdark Merchant 2
+
+new treasuretable "UND_KC_Trader_Utility"
+CanMerge 1
+new subtable "1,1"
+object category "I_MOD_WhippingCane_UNIQUE",1,0,0,0,0,0,0,0
+
+//Underdark Merchant 1
+
+new treasuretable "UND_KC_Trader_Weapons"
+CanMerge 1
+new subtable "1,1"
+object category "I_MOD_MAG_Pirate2_Dagger",1,0,0,0,0,0,0,0
+
+
+//ACT 2 ///////////////////
+
+//Damon
+
+new treasuretable "HAV_Weaponsmith_Trade"
+CanMerge 1
+new subtable "1,1"
+object category "I_MAG_ZOC_ForceConduitWhileSurounded_Boots",1,0,0,0,0,0,0,0
+
+
+//QuarterMaster
+
+new treasuretable "HAV_HarperQuarterMaster_Magic_Trade"
+CanMerge 1
+new subtable "1,1"
+object category "I_MOD_ArmorOfShadows_Gloves_Leather",1,0,0,0,0,0,0,0
+
+//Araj Oblodra   
+
+new treasuretable "MOO_InfernalTrader_Trade"
+CanMerge 1
+new subtable "1,1"
+object category "I_MOD_ICEPICK_Dagger",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MOD_ZOC_ForceConduit_Helmet",1,0,0,0,0,0,0,0
+
+//Mason guild chest
+
+new treasuretable "SCL_MasonGuild_Chest"
+CanMerge 1
+new subtable "1,1"
+object category "I_MOD_ZOC_ForceConduit_Gloves",1,0,0,0,0,0,0,0
+
+//ACT 3 ////////////////////////
+
+//DRAGONBORN 
+
+new treasuretable "WYR_OrinsImpersonation_Smith"
+CanMerge 1
+new subtable "1,1"
+object category "I_MOD_MAG_FaeriesBlessing",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MOD_CorellonsWrath_Splint",1,0,0,0,0,0,0,0
+
+//Sorcerous Sundries
+
+new treasuretable "LOW_SorcerousSundries_Trade_Magic"
+CanMerge 1
+new subtable "1,1"
+object category "I_MOD_Selunite_Isobel_Robe_ForSale",1,0,0,0,0,0,0,0
+

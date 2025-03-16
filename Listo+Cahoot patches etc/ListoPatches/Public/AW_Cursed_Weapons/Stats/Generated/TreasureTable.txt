@@ -1,0 +1,51 @@
+new treasuretable "LOW_Legendary_Raphael_Treasure"
+CanMerge 1
+new subtable "1,1"
+object category "I_AWCW_Greatsword_1",1,0,0,0,0,0,0,0
+
+new treasuretable "ORI_Wyll_Infernal_Robe"
+CanMerge 1
+new subtable "1,1"
+object category "I_AWCW_Dagger_1",1,0,0,0,0,0,0,0
+
+new treasuretable "PLA_Tollhouse_Secret_Chest"
+CanMerge 1
+new subtable "1,1"
+object category "I_AWCW_Shortsword_1",1,0,0,0,0,0,0,0
+
+new treasuretable "UND_DuergarBlacksmith_Chest"
+CanMerge 1
+new subtable "1,1"
+object category "I_AWCW_Longsword_2",1,0,0,0,0,0,0,0
+
+new treasuretable "UND_KC_LavaElemental"
+CanMerge 1
+new subtable "1,1"
+object category "I_AWCW_Greataxe_1",1,0,0,0,0,0,0,0
+
+new treasuretable "SHA_EntranceAltar_RitualBackpack"
+CanMerge 1
+new subtable "1,1"
+object category "I_AWCW_Shortsword_2",1,0,0,0,0,0,0,0
+
+new treasuretable "ORI_Wyll_Infernal_Rapier"
+CanMerge 1
+new subtable "1,1"
+object category "I_AWCW_Longsword_1",1,0,0,0,0,0,0,0
+
+new treasuretable "LOW_Legendary_HoH_Treasure"
+CanMerge 1
+new subtable "1,1"
+object category "I_AWCW_Staff_1",1,0,0,0,0,0,0,0
+
+new treasuretable "LOW_Legendary_Incubus_Treasure"
+CanMerge 1
+new subtable "1,1"
+object category "I_AWCW_Rapier_A",1,0,0,0,0,0,0,0
+
+
+
+
+
+
+

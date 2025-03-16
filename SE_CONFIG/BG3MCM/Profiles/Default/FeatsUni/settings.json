@@ -1,0 +1,99 @@
+{
+	"AdvancedSettingsTab" : 
+	{
+		"CustomClass10Section" : 
+		{
+			"customClass10FeatFrequency" : 4,
+			"customClass10alwaysGrantFeatAtLevel" : 1,
+			"customClassName10" : "none"
+		},
+		"CustomClass1Section" : 
+		{
+			"customClass1FeatFrequency" : 3,
+			"customClass1alwaysGrantFeatAtLevel" : 11,
+			"customClassName1" : "Mesmerist"
+		},
+		"CustomClass2Section" : 
+		{
+			"customClass2FeatFrequency" : 4,
+			"customClass2alwaysGrantFeatAtLevel" : 1,
+			"customClassName2" : "none"
+		},
+		"CustomClass3Section" : 
+		{
+			"customClass3FeatFrequency" : 4,
+			"customClass3alwaysGrantFeatAtLevel" : 1,
+			"customClassName3" : "none"
+		},
+		"CustomClass4Section" : 
+		{
+			"customClass4FeatFrequency" : 4,
+			"customClass4alwaysGrantFeatAtLevel" : 1,
+			"customClassName4" : "none"
+		},
+		"CustomClass5Section" : 
+		{
+			"customClass5FeatFrequency" : 4,
+			"customClass5alwaysGrantFeatAtLevel" : 1,
+			"customClassName5" : "none"
+		},
+		"CustomClass6Section" : 
+		{
+			"customClass6FeatFrequency" : 4,
+			"customClass6alwaysGrantFeatAtLevel" : 1,
+			"customClassName6" : "none"
+		},
+		"CustomClass7Section" : 
+		{
+			"customClass7FeatFrequency" : 4,
+			"customClass7alwaysGrantFeatAtLevel" : 1,
+			"customClassName7" : "none"
+		},
+		"CustomClass8Section" : 
+		{
+			"customClass8FeatFrequency" : 4,
+			"customClass8alwaysGrantFeatAtLevel" : 1,
+			"customClassName8" : "none"
+		},
+		"CustomClass9Section" : 
+		{
+			"customClass9FeatFrequency" : 4,
+			"customClass9alwaysGrantFeatAtLevel" : 1,
+			"customClassName9" : "none"
+		},
+		"CustomClassesSettingsSection" : 
+		{
+			"enableAdvancedSettings" : true
+		}
+	},
+	"ClassSpecificFeatsTab" : 
+	{
+		"ClassSpecificFeatsSection" : 
+		{
+			"customClassFeat" : "None",
+			"customClassFeatLevel" : 1,
+			"fighterfeat" : 7,
+			"roguefeat" : 11
+		}
+	},
+	"GeneralSettingsTab" : 
+	{
+		"EnableModSection" : 
+		{
+			"enableMod" : true
+		},
+		"FeatFrequencySection" : 
+		{
+			"featFrequency" : 3
+		},
+		"GeneralLevelSpecificFeatsSection" : 
+		{
+			"DEPRECIATEDalwaysGrantFeatAtLevels" : "The always grant feat feat at specific level part has been moved, it should be below this when you have loaded or started a new save. It won't show up in the main menu.",
+			"multiclassFeatAtLevel1" : false
+		},
+		"WarningSection" : 
+		{
+			"warningMessage" : "NOTE: Every setting in here only applies on game start. After changing anything, must RESTART game to take effect."
+		}
+	}
+}

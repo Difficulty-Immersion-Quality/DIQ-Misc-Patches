@@ -1,0 +1,7 @@
+{
+	"DEBUG" : 
+	{
+		"level" : 0
+	},
+	"onConfigReloaded" : []
+}

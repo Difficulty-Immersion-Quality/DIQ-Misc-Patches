@@ -1,0 +1,35 @@
+{
+	"ceremorph_companions" : 
+	{
+		"enable_companions" : 
+		{
+			"toggle_companion_infection" : true
+		},
+		"gameover_companions" : 
+		{
+			"gameover_companions_options" : "Transformation"
+		}
+	},
+	"ceremorphosis_settings" : 
+	{
+		"ceremorph_severity" : 
+		{
+			"ceremorph_disease_penalty" : 1
+		},
+		"day_limit" : 
+		{
+			"limit_day_amount" : 7
+		},
+		"punish_tadpoles" : 
+		{
+			"ceremorph_punishment_severity" : 1
+		},
+		"suppress_symptoms" : 
+		{
+			"cures_enable" : true,
+			"suppression_amount" : "Partial Up",
+			"suppression_enable" : true,
+			"suppression_length" : "Until Long Rest"
+		}
+	}
+}

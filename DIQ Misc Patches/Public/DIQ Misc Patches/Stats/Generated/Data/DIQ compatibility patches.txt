@@ -28,7 +28,7 @@ data "ValueUUID" "81764c3c-c7a9-49a7-b145-d31ffd5aebe1"
 data "Damage" "1d8"
 data "Rarity" "VeryRare"
 data "Boosts" ""
-data "PassivesOnEquip" "Viconia_Mace_Passive"
+data "PassivesOnEquip" "Viconia_Mace_Passive;MAG_Infernal_Weapon_Passive"
 data "Unique" "1"
 data "Weapon Properties" "Melee;Dippable;Magical"
 

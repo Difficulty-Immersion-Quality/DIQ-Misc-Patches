@@ -1,0 +1,18 @@
+// Dawnburst Strike: change to single target (no AoE) and increase save DC of blindness to ManeuverDC+4 (previously ManeuverDC+2) and fix Blindness DC in the description (previously said a fixed DC 13, when it's based on ManeuverDC)
+// Can't seem to fix this not targeting non-enemies so just changing it to single target
+new entry "Target_MAG_WeaponAction_FlashingDawn"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_MAG_WeaponAction_FlashingDawn"
+// Deal additional Radiant damage equal to your &lt;LSTag Tooltip="ProficiencyBonus"&gt;Proficiency Bonus&lt;/LSTag&gt;. On a hit, light erupts on the target, forcing it to make a Constitution &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or be &lt;LSTag Type="Status" Tooltip="BLINDED"&gt;Blinded&lt;/LSTag&gt; for 3 turns.
+data "Description" "h5a6970b0g1f2dg4060g9e88g4ecc1899c571;2"
+data "DescriptionParams" ""
+data "AreaRadius" ""
+data "SpellSuccess" "DealDamage(MainMeleeWeapon, MainMeleeWeaponDamageType);DealDamage(ProficiencyBonus, Radiant);IF(not SavingThrow(Ability.Constitution, ManeuverSaveDC()+4)):ApplyStatus(BLINDED, 100, 3);ExecuteWeaponFunctors(MainHand)"
+
+// Crusader's Mantle: disable combat log
+new entry "CRUSADERS_MANTLE_AURA"
+type "StatusData"
+data "StatusType" "BOOST"
+using "CRUSADERS_MANTLE_AURA"
+data "StatusPropertyFlags" "DisableCombatlog"

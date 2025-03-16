@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+  <version major="4" minor="0" revision="9" build="328" />
+  <region id="ActionResourceDefinitions">
+    <node id="root">
+      <children>
+        <node id="ActionResourceDefinition">
+            <attribute id="DisplayName" type="TranslatedString" handle="h566cecc0gb2e5g44feg8547gea89f8da89fb" version="1" />
+            <attribute id="IsHidden" type="bool" value="True" />
+            <attribute id="Name" type="FixedString" value="CHT_SorcerousSand_Resource" />
+            <attribute id="ReplenishType" type="FixedString" value="Rest" />
+            <attribute id="UUID" type="guid" value="9d2654f8-a070-4d63-8794-639417733c56" />
+        </node>
+        <node id="ActionResourceDefinition">
+            <attribute id="DisplayName" type="TranslatedString" handle="h55bdaf6fg9256g4e1ega0f7ga1810a3c2e59" version="1" />
+            <attribute id="IsHidden" type="bool" value="True" />
+            <attribute id="Name" type="FixedString" value="CHT_EndlessWell_Resource" />
+            <attribute id="ReplenishType" type="FixedString" value="Turn" />
+            <attribute id="UUID" type="guid" value="6c33eb6d-0adf-4c65-8d25-e60c679f3e6b" />
+        </node>
+      </children>
+    </node>
+  </region>
+</save>

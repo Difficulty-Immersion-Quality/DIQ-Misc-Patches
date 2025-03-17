@@ -137,9 +137,6 @@ Removed when &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Helped&lt;/LSTag&gt
 	<content contentuid="h7920b39bg75f5g44ecga83dg40a756099eea" version="1">While Boots of the Marsh Strider are equipped your &lt;LSTag Type="Spell" Tooltip="Projectile_Jump"&gt;Jump&lt;/LSTag&gt;; distance is increased by [1], and your &lt;LSTag Tooltip="MovementSpeed"&gt;Movement Speed&lt;/LSTag&gt; is increased by [2].</content>
     <content contentuid="haf57e852g0c4bg46d3gafcage13b1fb3a1cf" version="1">Unleash a spark of celestial lightning in a [1] radius around you. Each creature in the area must make a &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or take [2]. On a save, targets still take half damage.</content>
 
-	<!-- Mindsteal Link -->
-	<content contentuid="h9bad13c1g6a92g46acgbcdag237575ea748b" version="1">Leeching the psychic energy of those around him.&lt;br&gt;&lt;br&gt;Receives a +[1] bonus to &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; and deals an additional [2] per creature he's connected to.</content>
-
 	<!-- JWL Histories & Occupations -->
 	<content contentuid="h0745980bgefdfg4465g8fffg80a575ae040a" version="1">Archivist</content>
 	<content contentuid="h3cabc88cgcc45g4811g96b6g6f202d38efa0" version="1">You've spent countless days in the preferred seclusion of libraries and archives, poring over the tomes within. You are particularly adept at reading, parsing, and copying someone else's work - and pay half price to copy Enchantment, Divination, and Conjuration spell scrolls. You also proficient in the Arcana and History skills.</content>
@@ -174,6 +171,9 @@ Removed when &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Helped&lt;/LSTag&gt
 	<content contentuid="h5505ad91gc6d9g4a5dgb4dbg9b15e4e34412" version="1">POTION_OF_HEALING_SUPERIOR_HOT</content>
 	<content contentuid="h58f5f038gc24eg43fdgba56g370d2631ca00" version="1">POTION_OF_HEALING_SUPREME_HOT</content>
 	<content contentuid="h42773753gf2a8g49fbg8ffbgbad2264a3808" version="1">POTION_OF_HEALING_TRACKER</content>
+
+	<!-- UA/2014 War Caster - Just using 2014 -->
+	<content contentuid="h6cee28687ca14f85a43334b0112a50d7ae73" version="1">War Caster</content>
 
 	<!-- Other -->
 	<content contentuid="h1cc5d359gf11bg458ag9a27gd46a21b9f9a4" version="1">Usable once per &lt;LSTag Tooltip="ShortRest"&gt;Short Rest&lt;/LSTag&gt; or once per &lt;LSTag Type="Spell" Tooltip="Shout_Wildshape_Panther"&gt;Wild Shape&lt;/LSTag&gt;.</content>

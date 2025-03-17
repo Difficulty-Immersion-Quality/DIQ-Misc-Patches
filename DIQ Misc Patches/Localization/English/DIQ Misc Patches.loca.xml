@@ -162,6 +162,19 @@ Removed when &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Helped&lt;/LSTag&gt
 	<content contentuid="h1c253fe3294c4c3393a9374eee8166ea8cb4" version="1">Beatific Restoration</content>
 	<content contentuid="hcaef727831364bcbac900084aaadecbcb717" version="1">Tap into your gift to replenish an expended &lt;LSTag Tooltip="SpellSlot"&gt;spell slot&lt;/LSTag&gt; of any level.</content> 
 
+	<!-- Potion of Healing Delayed Heal -->
+	<content contentuid="h243d6f2eg13efg4a21g8a69gfb3298ed5362" version="1">You immediately regain [1] plus [2] and remove &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt;. At the end of your next turn, if you do not drink another healing potion, you regain another [1] plus [2].</content>
+	<content contentuid="h3aad8328ge491g45d5ga1a2g5aba1bd4fc7f" version="1">Potion of Healing: Delayed Heal</content>
+	<content contentuid="h7479d2dagdb43g4b51g87e5gd929229bc260" version="1">Potion of Greater Healing: Delayed Heal</content>
+	<content contentuid="h2f6401fdg3b42g4b0cgbe7eg5093be3e3ce1" version="1">Potion of Superior Healing: Delayed Heal</content>
+	<content contentuid="h6691b981g72d4g4350g80a4g734176c4d910" version="1">Potion of Supreme Healing: Delayed Heal</content>
+	<content contentuid="hcd8603aag65e7g44ceg85a4g3ccc8dbf4261" version="1">You will regain [1] plus [2] at the end of your next turn. You will not receive this healing if you drink another healing potion before then.</content>
+	<content contentuid="h703e19dbgb892g41e9g9c98g7f7d347e60b0" version="1">POTION_OF_HEALING_HOT</content>
+	<content contentuid="h1481a349gf6a7g43dfg80acg88b24d785b57" version="1">POTION_OF_HEALING_GREATER_HOT</content>
+	<content contentuid="h5505ad91gc6d9g4a5dgb4dbg9b15e4e34412" version="1">POTION_OF_HEALING_SUPERIOR_HOT</content>
+	<content contentuid="h58f5f038gc24eg43fdgba56g370d2631ca00" version="1">POTION_OF_HEALING_SUPREME_HOT</content>
+	<content contentuid="h42773753gf2a8g49fbg8ffbgbad2264a3808" version="1">POTION_OF_HEALING_TRACKER</content>
+
 	<!-- Other -->
 	<content contentuid="h1cc5d359gf11bg458ag9a27gd46a21b9f9a4" version="1">Usable once per &lt;LSTag Tooltip="ShortRest"&gt;Short Rest&lt;/LSTag&gt; or once per &lt;LSTag Type="Spell" Tooltip="Shout_Wildshape_Panther"&gt;Wild Shape&lt;/LSTag&gt;.</content>
 </contentList>

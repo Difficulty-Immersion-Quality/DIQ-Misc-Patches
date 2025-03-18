@@ -577,6 +577,7 @@ type "StatusData"
 data "StatusType" "BOOST"
 using "OO_JUDGEMENT_BLOW"
 // Your next &lt;LSTag Tooltip="MeleeWeaponAttack"&gt;melee weapon attack&lt;/LSTag&gt; will deal an extra [1]. If the target fails a Constitution &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt;, they will also be &lt;LSTag Type="Status" Tooltip="STUNNED"&gt;Stunned&lt;/LSTag&gt; for 1 turn.
+data "Description" "h3732ac76g59ffg4bf0gb0e3gb69f06c6c072;1"
 data "DescriptionParams" "DealDamage(1d10, Radiant)"
 
 new entry "OO_JUDGEMENT_ROLL"

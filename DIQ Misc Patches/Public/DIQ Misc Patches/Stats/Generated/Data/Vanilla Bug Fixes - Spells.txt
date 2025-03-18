@@ -1,3 +1,11 @@
+// ========================== Crusader's Mantle: Disable Combat log for status application, preventing spam ==========================
+
+new entry "CRUSADERS_MANTLE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "CRUSADERS_MANTLE"
+data "StatusPropertyFlags" "DisableCombatlog"
+
 // ==================================== Counterspell - Synergy with Abjuration Wizard's "Arcane Ward" based on the spell slot level used / Uses spellcasting modifier instead of Intelligence ====================================
 
 new entry "Interrupt_Counterspell_4"

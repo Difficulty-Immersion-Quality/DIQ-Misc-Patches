@@ -108,12 +108,11 @@ type "StatusData"
 data "StatusType" "BOOST"
 data "Description" "hebf30622gb60dg447bgb6b1g1cb43d09bcaa"
 
-new entry "HEAVY_BLEEDING"
-using "HEAVY_BLEEDING"
-type "StatusData"
-data "StatusType" "BOOST"
-data "Description" "h8a339dc7ge729g4e88g956dgde5307a03759"
-data "Boosts" "Disadvantage(SavingThrow, Constitution);Resistance(Poison, Vulnerable);Resistance(Acid, Vulnerable)"
+// Moved to Bleeding OVerhaul.txt
+// new entry "HEAVY_BLEEDING"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// using "HEAVY_BLEEDING"
 
 new entry "REND"
 using "REND"

@@ -31,3 +31,7 @@ function CHT_HasHelpableCondition()
     result = HasAnyStatus({'SG_Helpable_Condition','DOWNED','HAG_DOWNED','SCL_DOWNED','SG_Prone','SG_Restrained','PRONE','SLEEPING','SLEEP','ENSNARING_STRIKE','WEB','BURNING','HYPNOTIC_PATTERN','COL_NIGHTSONG_SOULCAGE','FeywildsKiss_DOWNED'}, {}, {})
     return ConditionResult(result.Result, {ConditionError("HasNotHelpableCondition")})
 end
+
+function CHT_IsBanishSpell()
+	return SpellID('Target_Banishment') | IsSpellChildOrVariantFromContext('Target_Banishment') | SpellID('Shout_WildMagic_Banish') | SpellID('Shout_WildMagic_Banished') | SpellID('OO_Shout_BanishUnholy') | SpellID('Target_DispelEvilAndGood_Dismissal')
+end

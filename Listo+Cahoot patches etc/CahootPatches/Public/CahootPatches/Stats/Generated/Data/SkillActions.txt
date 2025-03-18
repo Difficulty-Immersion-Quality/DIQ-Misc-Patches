@@ -133,10 +133,10 @@ data "Spelltype" "Target"
 using "Target_First_Aid"
 // Make a DC 15 Medicine &lt;LSTag Tooltip="AbilityCheck"&gt;Check&lt;/LSTag&gt; on an ally. The ally recovers &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; on a success, and half as many hit points on a failed &lt;LSTag Tooltip="AbilityCheck"&gt;Check&lt;/LSTag&gt;. Usable only if you have Medicine &lt;LSTag Tooltip="Proficiency"&gt;proficiency&lt;/LSTag&gt;.
 data "Description" "h75e55557gd606g4a80g89b4g884b9ed2ad08;1"
-data "DescriptionParams" "RegainHitPoints(LevelMapValue(D6Cantrip));RegainHitPoints(WisdomModifier)"
-data "SpellSuccess" "RegainHitPoints(LevelMapValue(D6Cantrip)+WisdomModifier)"
-data "SpellFail" "RegainHitPoints((LevelMapValue(D6Cantrip)+WisdomModifier)/2)"
-data "TooltipDamageList" "RegainHitPoints(LevelMapValue(D6Cantrip)+WisdomModifier)"
+data "DescriptionParams" "RegainHitPoints(LevelMapValue(D6Cantrip));RegainHitPoints(ProficiencyBonus)"
+data "SpellSuccess" "RegainHitPoints(LevelMapValue(D6Cantrip)+ProficiencyBonus)"
+data "SpellFail" "RegainHitPoints((LevelMapValue(D6Cantrip)+ProficiencyBonus)/2)"
+data "TooltipDamageList" "RegainHitPoints(LevelMapValue(D6Cantrip)+ProficiencyBonus)"
 data "Cooldown" "OncePerRest"
 
 // Perception (Seek): no change to spell itself, but putting the full code here instead of the inheritance from the original mod causes it to work with Goon's containers addon for some reason?
@@ -217,3 +217,47 @@ using "Target_Taunt"
 data "Description" "h14be31b7gcfdag44c9g8d85gd88b613697ba;1"
 data "Cooldown" "OncePerShortRest"
 data "RequirementConditions" "HasProficiencyBonus(Ability.Charisma,Skill.Performance,context.Source)"
+
+// ==================================== NPC versions ====================================
+
+new entry "Target_Shove_Trip_NPC"
+type "Spelldata"
+data "Spelltype" "Target"
+using "Target_Shove_Trip"
+data "RequirementConditions" ""
+
+new entry "Target_Feint_NPC"
+type "Spelldata"
+data "Spelltype" "Target"
+using "Target_Feint"
+data "RequirementConditions" ""
+
+new entry "Target_Predict_NPC"
+type "Spelldata"
+data "Spelltype" "Target"
+using "Target_Predict"
+data "RequirementConditions" ""
+
+new entry "Target_First_Aid_NPC"
+type "Spelldata"
+data "Spelltype" "Target"
+using "Target_First_Aid"
+data "RequirementConditions" ""
+
+new entry "Target_Find_Weak_Spot_Survival_NPC"
+type "Spelldata"
+data "Spelltype" "Target"
+using "Target_Find_Weak_Spot_Survival"
+data "RequirementConditions" ""
+
+new entry "Target_Deceive_NPC"
+type "Spelldata"
+data "Spelltype" "Target"
+using "Target_Deceive"
+data "RequirementConditions" ""
+
+new entry "Target_Intimidate_NPC"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_Intimidate"
+data "RequirementConditions" ""

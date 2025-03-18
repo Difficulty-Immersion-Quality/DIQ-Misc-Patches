@@ -83,6 +83,20 @@ using "Projectile_CRE_GithyankiInquisitor_Mindsteal_Link"
 // data "ExtraDescription" "h14557decg611eg448egae09g551d6fbe04a5;3"
 data "ExtraDescriptionParams" "1;DealDamage(1,Psychic);1"
 
+// ==================================== Ketheric: reduce AC slightly in human form; increase Apostle of Myrkul form's Strength ====================================
+
+new entry "SCL_Ketheric"
+type "Character"
+using "SCL_Ketheric"
+// data "Armor" "10"
+data "Armor" "9"
+
+new entry "ApostleOfMyrkul"
+type "Character"
+using "ApostleOfMyrkul"
+// data "Strength" "23"
+data "Strength" "26"
+
 // ==================================== Dame Aylin: remove automatic self-revive ====================================
 
 new entry "SHA_NightsongResurrection"

@@ -104,12 +104,13 @@ using "SpiritualWeapon_Greataxe"
 data "ActionResources" "BonusActionPoint:1;Movement:9"
 
 // ==================================== Carry capacity changes ====================================
+// Commented out, gonna leave it vanilla and see if other systems can actually make it interesting
 
-key "EncumberedMultiplier","35"
+// key "EncumberedMultiplier","35"
 
-key "HeavilyEncumberedMultiplier","45"
+// key "HeavilyEncumberedMultiplier","45"
 
-key "CarryLimitMultiplier","50"
+// key "CarryLimitMultiplier","50"
 
 // ==================================== Block pickpocketing for Volo and Withers ====================================
 

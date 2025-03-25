@@ -23,6 +23,19 @@ function CHT_IsSpellLevelEqualToOrLessThan(value)
     end
 end
 
+function CHT_DivineFortuneCheck()
+    return (CHT_IsSpellLevelEqualToOrLessThan(4) & HasUseCosts('SpellSlot')) | HasUseCosts('ChannelDivinity')
+end
+
+function CHT_HasHelpableCondition()
+    result = HasAnyStatus({'SG_Helpable_Condition','DOWNED','HAG_DOWNED','SCL_DOWNED','SG_Prone','SG_Restrained','PRONE','SLEEPING','SLEEP','ENSNARING_STRIKE','WEB','BURNING','HYPNOTIC_PATTERN','COL_NIGHTSONG_SOULCAGE','FeywildsKiss_DOWNED'}, {}, {})
+    return ConditionResult(result.Result, {ConditionError("HasNotHelpableCondition")})
+end
+
+function CHT_IsBanishSpell()
+	return SpellID('Target_Banishment') | IsSpellChildOrVariantFromContext('Target_Banishment') | SpellID('Shout_WildMagic_Banish') | SpellID('Shout_WildMagic_Banished') | SpellID('OO_Shout_BanishUnholy') | SpellID('Target_DispelEvilAndGood_Dismissal')
+end
+
 --Blocks SpellFail statuses from trigging OnStatusApply effects
 function StatusDoesNotInvokeOnStatusApply()
     return StatusId('PERFORM_POSITIVE_DOS2_1')
@@ -120,13 +133,4 @@ end
 --Adds item spell variants to Metamagic exclusion list
 function MetamagicExclusionSpells()
     return SpellId('Target_MistyStep') | SpellId('Target_WildMagic_Teleport') | SpellId('Target_SpeakWithDead') | SpellId('Target_SpeakWithDead_FreeRecast') | SpellId('Target_SpeakWithDead_Amulet_CHA') | SpellId('Target_Light') | SpellId('Projectile_ChainLightning') | SpellId('Projectile_MAG_Legendary_Chromatic_ChainLightning') | SpellId('Target_UNI_MistyStep_DrowCommander_Amulet') | SpellId('Target_WYR_Circus_TeleportBoots_MistyStep') | SpellId('Target_UNI_MistyStep_Nightwalkers') | SpellId('Target_UND_Light_Tower_Ring')
-end
-
-function CHT_DivineFortuneCheck()
-    return (CHT_IsSpellLevelEqualToOrLessThan(4) & HasUseCosts('SpellSlot')) | HasUseCosts('ChannelDivinity')
-end
-
-function CHT_HasHelpableCondition()
-    result = HasAnyStatus({'SG_Helpable_Condition','DOWNED','HAG_DOWNED','SCL_DOWNED','SG_Prone','SG_Restrained','PRONE','SLEEPING','SLEEP','ENSNARING_STRIKE','WEB','BURNING','HYPNOTIC_PATTERN','COL_NIGHTSONG_SOULCAGE','FeywildsKiss_DOWNED'}, {}, {})
-    return ConditionResult(result.Result, {ConditionError("HasNotHelpableCondition")})
 end

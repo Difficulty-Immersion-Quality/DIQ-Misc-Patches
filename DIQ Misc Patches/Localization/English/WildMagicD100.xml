@@ -2,32 +2,32 @@
 <contentList> 
     <!-- 1-10 -->
 	<content contentuid="h66c6f6b1g518cg41edgb1eeg881f940a2852" version="1">Wild Magic: See Invisibility!</content>
-	<content contentuid="h43cf36feg43f8g4d06g92c8g1d79db0e6a8f" version="1">For the next 10 rounds you gain the effects of &lt;LSTag Type="Spell" Tooltip="Shout_SeeInvisibility"&gt;See Invisibility&lt;/LSTag&gt;.</content>
+	<content contentuid="h43cf36feg43f8g4d06g92c8g1d79db0e6a8f" version="1">You gain &lt;LSTag Type="Spell" Tooltip="Shout_SeeInvisibility"&gt;See Invisibility&lt;/LSTag&gt;.</content>
 
 	<!-- <content contentuid="haa60422ag3390g4063ga55ag98a377fc8745" version="1">Wild Magic: FIREBALL!</content> -->
 	<content contentuid="hfee6f9bfg15a7g4db3ga28fge2d249835146" version="1">You cast &lt;LSTag Type="Spell" Tooltip="Projectile_Fireball"&gt;Fireball&lt;/LSTag&gt; centered on yourself.</content>
 
 	<content contentuid="had542f35g91acg46b9ga71ag5e34763e2a94" version="1">Wild Magic: Forceful!</content>
-	<content contentuid="hbd92e037g06bdg435bg985cgbf5102bfb584" version="1">For 3 rounds your spells deal an additionl [1] per spell level.</content>
-	<content contentuid="he0ffaa20gd49bg45cdgb3e3gcd7ec22c5c1d" version="1">Your weapon attacks deal an additional [1].</content>
+	<content contentuid="hbd92e037g06bdg435bg985cgbf5102bfb584" version="1">Your spells deal an additionl [1] per spell level.</content>
+	<content contentuid="h6be6d972g551eg4a57ga049g7f4dd0c9e6c7" version="1">Your weapon attacks deal an additional [1].</content>
 
 	<!-- <content contentuid="h3772a1b3g6790g4e2bg8c0fgab7e2b2a2d3e" version="1">Wild Magic: CHEESE!</content> -->
-	<content contentuid="hec40970bgd59eg4925g98f0g1f95e02dedde" version="1">You are &lt;LSTag Type="Status" Tooltip="POLYMORPH_CHEESE"&gt;Polymorphed&lt;/LSTag&gt; into cheese. You revert to your original form after 10 rounds, or when you're reduced to 0 &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt;.</content>
+	<content contentuid="hec40970bgd59eg4925g98f0g1f95e02dedde" version="1">You are &lt;LSTag Type="Status" Tooltip="POLYMORPH_CHEESE"&gt;Polymorphed&lt;/LSTag&gt; into cheese.</content>
 
 	<!-- <content contentuid="h876c31e9g7ae8g4cc8g86b0g4c4e46ae9a3f" version="1">Wild Magic: Confused!</content> -->
 	<content contentuid="hc6614b75ge4c9g4de7g96a4g3caf83546dff" version="1">Afflicted with &lt;LSTag Type="Status" Tooltip="CONFUSION"&gt;Confusion&lt;/LSTag&gt;. You are hostile to everyone, wander around aimlessly, and occasionally skip turns in your stupor.</content>
 
 	<content contentuid="h0db0c343g94fag4c66gafb2g673f6a146454" version="1">Wild Magic: Dependable Healing!</content>
-	<content contentuid="h82a9735bgc36ag47f5g9041g2fb78cd4ddfe" version="1">For the next 10 rounds you regain [1] at the start of your turn.</content>
+	<content contentuid="h82a9735bgc36ag47f5g9041g2fb78cd4ddfe" version="1">You regain [1] at the start of each of your turns.</content>
 
 	<!-- <content contentuid="he1742bddg42a5g49e3g96c0g18ab13b948db" version="1">Wild Magic: Incapacitated!</content> -->
-	<content contentuid="he2198ab3g189fg417ag88cag40589a6b514e" version="1">You are &lt;LSTag Type="Status" Tooltip="INCAPACITATED"&gt;Incapacitated&lt;/LSTag&gt; until your next turn.</content>
+	<content contentuid="he2198ab3g189fg417ag88cag40589a6b514e" version="1">You are &lt;LSTag Type="Status" Tooltip="INCAPACITATED"&gt;Incapacitated&lt;/LSTag&gt;.</content>
 
 	<content contentuid="h7e96e5cfg1300g4a07g8507geccc6887716c" version="1">Wild Magic: Greased!</content>
 	<content contentuid="h871c2279g9255g4942g8139gb3680d414a2f" version="1">You cast &lt;LSTag Type="Spell" Tooltip="Target_Grease"&gt;Grease&lt;/LSTag&gt; centered on yourself.</content>
 
 	<content contentuid="hdb33295eg2c06g4bc5ga19egf1ef1bc1383a" version="1">Wild Magic: Bad Saving Rolls!</content>
-	<content contentuid="he560020cgb4c2g465cgb772ge7dc13506bd2" version="1">All other creatures in a [1] radius of you have &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on all &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; for the next 3 turns.</content>
+	<content contentuid="he0c7d3f2gea1dg42baga051g32cb514f247b" version="1">All other creatures in a [1] radius of you have &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on all &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;.</content>
 	<content contentuid="ha623363fgd8a3g4a7dga3dfg0aefc217095e" version="1">Suffers &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on all &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;.</content>
 
 	<content contentuid="he0481298geb01g4625g8328ge4050b85c006" version="1">Wild Magic: Faerie Fire!</content>
@@ -38,13 +38,13 @@
 	<!-- <content contentuid="h7e7787d3g92e6g4dc8g8d00g951d1d752611" version="1">You spawned a hostile Spectator!</content> -->
 
 	<content contentuid="heabefac0ge320g4a21g80c4gf666b4303198" version="1">Wild Magic: Mind Sanctuary!</content>
-	<content contentuid="hcd4ed877gbaadg4c74ga13ag30c4b6d3fcaa" version="1">You summon a &lt;LSTag Type="Status" Tooltip="TAD_MIND_SANCTUARY_AURA"&gt;Mind Sanctuary Bubble&lt;/LSTag&gt; centered on yourself and can use &lt;LSTag Type="ActionResource" Tooltip="ActionPoint"&gt;Actions&lt;/LSTag&gt; and &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Actions&lt;/LSTag&gt; interchangeably. This effect lasts for 3 rounds.</content>
+	<content contentuid="hcd4ed877gbaadg4c74ga13ag30c4b6d3fcaa" version="1">You summon a &lt;LSTag Type="Status" Tooltip="TAD_MIND_SANCTUARY_AURA"&gt;Mind Sanctuary Bubble&lt;/LSTag&gt; centered on yourself and can use &lt;LSTag Type="ActionResource" Tooltip="ActionPoint"&gt;Actions&lt;/LSTag&gt; and &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Actions&lt;/LSTag&gt; interchangeably.</content>
 
-	<content contentuid="h5c58d200g24f2g4bc9gb212gd5be82c62271" version="1">Wild Magic: Curse of Truth!</content>
-	<content contentuid="h1cfed470gbeb1g4242g8fb6gd666ed013245" version="1">You are compelled to always tell the truth. You have &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on deception &lt;LSTag Tooltip="SkillCheck"&gt;Skill Checks&lt;/LSTag&gt;.</content>
+	<content contentuid="hfd7cedd3g9619g4912g83fbg38840535f3a3" version="1">Wild Magic: Curse of Truth!</content>
+	<content contentuid="h73c7ad16gf8ecg4a61gbf41g7eba98daef8d" version="1">You are compelled to always tell the truth. You have &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="Deception"&gt;Deception&lt;/LSTag&gt; &lt;LSTag Tooltip="SkillCheck"&gt;Skill Checks&lt;/LSTag&gt;.</content>
 
-	<content contentuid="hd993f316g74d9g4111g8f22g620b729d16e5" version="1">Wild Magic: BANISHED!</content>
-	<content contentuid="h2cd863aagd55cg4f98g88e2ge04fcb83a2f8" version="1">You are banished to another plane of existence for 2 turns.</content>
+	<!-- <content contentuid="hd993f316g74d9g4111g8f22g620b729d16e5" version="1">Wild Magic: BANISHED!</content> -->
+	<content contentuid="h52c57a87gb39eg41f4g9e47gdda36e1e42af" version="1">You are &lt;LSTag Type="Status" Tooltip="BANISHED"&gt;Banish&lt;/LSTag&gt; to another plane of existence.</content>
 
 	<content contentuid="h3aaf2b53g7795g4fa1g9111gfe0a0f63d035" version="1">Wild Magic: Maximum Damage!</content>
 	<content contentuid="hddbb66efg97deg41e4g8819gc09f2fc0c89d" version="1">The next spell that hits does maximum damage.</content>

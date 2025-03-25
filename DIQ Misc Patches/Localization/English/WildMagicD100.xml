@@ -8,42 +8,47 @@
 	<content contentuid="hfee6f9bfg15a7g4db3ga28fge2d249835146" version="1">You cast &lt;LSTag Type="Spell" Tooltip="Projectile_Fireball"&gt;Fireball&lt;/LSTag&gt; centered on yourself.</content>
 
 	<content contentuid="had542f35g91acg46b9ga71ag5e34763e2a94" version="1">Wild Magic: Forceful!</content>
-	<content contentuid="hbd92e037g06bdg435bg985cgbf5102bfb584" version="1">When you cast a spell of first level or higher, add 1d4 force damage to the damage roll. For a spell of first level or higher, add a additional 1d4. This effect lasts for 3 turns.</content>
+	<content contentuid="hbd92e037g06bdg435bg985cgbf5102bfb584" version="1">For 3 rounds your spells deal an additionl [1] per spell level.</content>
 	<content contentuid="he0ffaa20gd49bg45cdgb3e3gcd7ec22c5c1d" version="1">Your weapon attacks deal an additional [1].</content>
 
-	<content contentuid="h3772a1b3g6790g4e2bg8c0fgab7e2b2a2d3e" version="1">Wild Magic: CHEESE!</content>
-	<content contentuid="h6046091dgd3d3g4752gb892gb1dbf7872720" version="1">You are &lt;LSTag Type="Status" Tooltip="POLYMORPH_CHEESE"&gt;Polymorphed&lt;/LSTag&gt; into cheese. You revert to your original form after 10 rounds, or when you're reduced to 0 &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt;.</content>
+	<!-- <content contentuid="h3772a1b3g6790g4e2bg8c0fgab7e2b2a2d3e" version="1">Wild Magic: CHEESE!</content> -->
+	<content contentuid="hec40970bgd59eg4925g98f0g1f95e02dedde" version="1">You are &lt;LSTag Type="Status" Tooltip="POLYMORPH_CHEESE"&gt;Polymorphed&lt;/LSTag&gt; into cheese. You revert to your original form after 10 rounds, or when you're reduced to 0 &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt;.</content>
 
 	<!-- <content contentuid="h876c31e9g7ae8g4cc8g86b0g4c4e46ae9a3f" version="1">Wild Magic: Confused!</content> -->
-	<content contentuid="hd1132142g6bceg41e3g9bc6g06b02345a8d3" version="1">Afflicted with confusion. You are hostile to everyone, wander around aimlessly, and occasionally skip your turn. A successful Wisdom &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; removes this condition.</content>
+	<content contentuid="hc6614b75ge4c9g4de7g96a4g3caf83546dff" version="1">Afflicted with &lt;LSTag Type="Status" Tooltip="CONFUSION"&gt;Confusion&lt;/LSTag&gt;. You are hostile to everyone, wander around aimlessly, and occasionally skip turns in your stupor.</content>
 
-	<content contentuid="h9a9a1fe3gd042g4711gb628g624b5ea75b15" version="1">Wild Magic: Dependable Healing!</content>
-	<content contentuid="hd20da198g8867g4098g9d01gb619dcd6e099" version="1">For the next 10 rounds you regain [1] at the start of your turn.</content>
+	<content contentuid="h0db0c343g94fag4c66gafb2g673f6a146454" version="1">Wild Magic: Dependable Healing!</content>
+	<content contentuid="h82a9735bgc36ag47f5g9041g2fb78cd4ddfe" version="1">For the next 10 rounds you regain [1] at the start of your turn.</content>
 
 	<!-- <content contentuid="he1742bddg42a5g49e3g96c0g18ab13b948db" version="1">Wild Magic: Incapacitated!</content> -->
 	<content contentuid="he2198ab3g189fg417ag88cag40589a6b514e" version="1">You are &lt;LSTag Type="Status" Tooltip="INCAPACITATED"&gt;Incapacitated&lt;/LSTag&gt; until your next turn.</content>
 
-	<content contentuid="hc8b6c61dg8407g44fbgb305g1e8fadb580af" version="1">Wild Magic: Greased</content>
-	<content contentuid="h869e940ag37f9g4cc7g9eebg073cf5b91fa7" version="1">You cast Grease, centered on yourself.</content>
+	<content contentuid="h7e96e5cfg1300g4a07g8507geccc6887716c" version="1">Wild Magic: Greased!</content>
+	<content contentuid="h871c2279g9255g4942g8139gb3680d414a2f" version="1">You cast &lt;LSTag Type="Spell" Tooltip="Target_Grease"&gt;Grease&lt;/LSTag&gt; centered on yourself.</content>
 
-	<content contentuid="h76393369g02b2g4952g8f71g642ec8f417b2" version="1">Wild Magic: Bad Saving Rolls!</content>
-	<content contentuid="ha87ba250gf6bdg4037gb9f8g43440c304f7f" version="1">All other creatures in a [1] radius of you have &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on all &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; for the next 3 turns.</content>
-	<content contentuid="h000dc1f6g519bg443ag8669g4f45067467e0" version="1">You have &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on all &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;.</content>
+	<content contentuid="hdb33295eg2c06g4bc5ga19egf1ef1bc1383a" version="1">Wild Magic: Bad Saving Rolls!</content>
+	<content contentuid="he560020cgb4c2g465cgb772ge7dc13506bd2" version="1">All other creatures in a [1] radius of you have &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on all &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; for the next 3 turns.</content>
+	<content contentuid="ha623363fgd8a3g4a7dga3dfg0aefc217095e" version="1">Suffers &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on all &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;.</content>
 
-	<!-- <content contentuid="h7292f61bg7ac3g4b67g8c51g0c1b3fe6966a" version="1">Wild Magic: Faerie Fire</content> -->
-	<content contentuid="h68551d16g7d6fg4fd3gba88g52e0d268b233" version="1">Cast &lt;LSTag Type="Status" Tooltip="FAERIE_FIRE"&gt;Faerie Fire&lt;/LSTag&gt; centered on yourself.</content>
+	<content contentuid="he0481298geb01g4625g8328ge4050b85c006" version="1">Wild Magic: Faerie Fire!</content>
+	<content contentuid="h0cfb43d8g3b0dg4f25g9818gea9fadbf6549" version="1">Cast &lt;LSTag Type="Spell" Tooltip="Target_FaerieFire"&gt;Faerie Fire&lt;/LSTag&gt; centered on yourself.</content>
 
 	<!-- 11-20 -->
-	<content contentuid="h180b683bg5b91g4c4fg9451gd283e64fdb2c" version="1">Wild Magic: SUMMON SPECTATOR!</content>
-	<content contentuid="h7e7787d3g92e6g4dc8g8d00g951d1d752611" version="1">You spawned a hostile Spectator!</content>
-	<content contentuid="h0ad08809gdcc2g4033g9402g1786f4038db2" version="1">Wild Magic: Mind Sanctuary</content>
-	<content contentuid="h4e77953fgd925g4246g8bfcg464f5ba925d5" version="1">You summon a Mind Sanctuary bubble centered on yourself and can use actions and bonus actions interchangeably. This effect lasts for 3 turns.</content>
-	<content contentuid="h5c58d200g24f2g4bc9gb212gd5be82c62271" version="1">Wild Magic: Curse of Truth</content>
+	<!-- <content contentuid="h180b683bg5b91g4c4fg9451gd283e64fdb2c" version="1">Wild Magic: SUMMON SPECTATOR!</content> -->
+	<!-- <content contentuid="h7e7787d3g92e6g4dc8g8d00g951d1d752611" version="1">You spawned a hostile Spectator!</content> -->
+
+	<content contentuid="heabefac0ge320g4a21g80c4gf666b4303198" version="1">Wild Magic: Mind Sanctuary!</content>
+	<content contentuid="hcd4ed877gbaadg4c74ga13ag30c4b6d3fcaa" version="1">You summon a &lt;LSTag Type="Status" Tooltip="TAD_MIND_SANCTUARY_AURA"&gt;Mind Sanctuary Bubble&lt;/LSTag&gt; centered on yourself and can use &lt;LSTag Type="ActionResource" Tooltip="ActionPoint"&gt;Actions&lt;/LSTag&gt; and &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Actions&lt;/LSTag&gt; interchangeably. This effect lasts for 3 rounds.</content>
+
+	<content contentuid="h5c58d200g24f2g4bc9gb212gd5be82c62271" version="1">Wild Magic: Curse of Truth!</content>
 	<content contentuid="h1cfed470gbeb1g4242g8fb6gd666ed013245" version="1">You are compelled to always tell the truth. You have &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on deception &lt;LSTag Tooltip="SkillCheck"&gt;Skill Checks&lt;/LSTag&gt;.</content>
+
 	<content contentuid="hd993f316g74d9g4111g8f22g620b729d16e5" version="1">Wild Magic: BANISHED!</content>
 	<content contentuid="h2cd863aagd55cg4f98g88e2ge04fcb83a2f8" version="1">You are banished to another plane of existence for 2 turns.</content>
-	<content contentuid="h3aaf2b53g7795g4fa1g9111gfe0a0f63d035" version="1">Wild Magic: Maximum Damage</content>
+
+	<content contentuid="h3aaf2b53g7795g4fa1g9111gfe0a0f63d035" version="1">Wild Magic: Maximum Damage!</content>
 	<content contentuid="hddbb66efg97deg41e4g8819gc09f2fc0c89d" version="1">The next spell that hits does maximum damage.</content>
+
 	<content contentuid="h5b4e767ag6647g4829ga608g8387c5ccca0d" version="1">Wild Magic: Static Shock</content>
 	<content contentuid="h97d9c295ge4cbg4fd4gbfdeg0298d2435981" version="1">You become charged with a massive amount of static electricity. When a creature hits you with a melee attack, you deal 1d6 lightning damage to them.</content>
 	<content contentuid="h0b736525g983ag4b79gb67bg891505c5b0fd" version="1">Wild Magic: Healed</content>
@@ -140,19 +145,22 @@
 	<content contentuid="hcd5a18e9gb2feg4330g83beg7691d269eb6f" version="1">For one minute, all creatures in a 30 foot radius are vulnerable to Lightning.</content>
 	<content contentuid="h22213c6fgf5a8g44b4g9efbge1b7b819fc65" version="1">Wild Magic: Necrotic Vulnerability</content>
 	<content contentuid="ha58a789bg3b1ag4b37g9c43gb4acbbdb504d" version="1">For one minute, all creatures in a 30 foot radius are vulnerable to Necrotic Damage.</content>
-	<content contentuid="h87c3d412g16b5g487eg8f67ge3c019a177c1" version="1">Wild Magic: Explosive Spells</content>
+	<content contentuid="h68bbedeag0334g4a69gbd99g6399c87d7bce" version="1">Wild Magic: Explosive Spells!</content>
 	<content contentuid="hcd33ecffg5824g440eg9b73g3a62a25d7adf" version="1">When you cast a spell of 1st level or higher, you deal 1d6 fire damage in a 10 foot radius around the target. Targets that succeed a dexterity &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; take half damage. For a spell of first level or higher, add a additional 1d6.</content>
 	<content contentuid="h05c827fdge983g40c4g984ag49cc53afe4af" version="1">Wild Magic: Petrified!</content>
 	<content contentuid="h680c08e8g78edg4357gbeeeg833658ee96ff" version="1">You are Petrified for 3 turns.</content>
+
 	<content contentuid="hd7e7bb11g794bg45c1gb5f7gf91c80935413" version="1">Wild Magic: Full Heal</content>
 	<content contentuid="h33e3e563gd277g449dg9bd7g7f75fa3091e9" version="1">The next time you are healed, you regain full health.</content>
 	<content contentuid="h62904523g6971g40abg9925g26118ab4ba26" version="1">Wild Magic: Burning Greed</content>
 	<content contentuid="h232637f8g7969g4461gb6d2g54207b367ab4" version="1">For every 500 gold you have in your inventory, you take 1d6 fire damage.</content>
+
+	<content contentuid="h7a2308ffgb1dcg4854gb801g1c400bad4c76" version="1">Wild Magic: Summon Percy!</content>
 	<content contentuid="h3925993fg85d1g4331g90a4g461979556c4f" version="1">Percy the Pacifist</content>
-	<content contentuid="h5477e1bcg2beeg4392g9d82g24bccc2c1977" version="1">Wild Magic: Summon Percy</content>
 	<content contentuid="h49ff3e9eg797ag4aaeg9926gffbcb868fec8" version="1">You summon Percy, the Pacifist Kobold. Percy will help you, but will not attack. Percy knows the spells Sanctuary, Heroism, Healing Word and Resistance.</content>
 	<content contentuid="hd30a5878gf201g4d41gbb2dg3fe7f02a7bc2" version="1">Curse of Pacifism</content>
 	<content contentuid="h26e32719gc0bcg4b3dgaaadg215feeca0781" version="1">If this creature attacks another creature, they explode in a 20 foot radius and take 8d4+36 Force Damage. Creatures that succeed a dexterity &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; take half damage.</content>
+
 	<content contentuid="heb9035b3g9259g431eg9f7cg7da539507ad2" version="1">Wild Magic: Mass Fear</content>
 	<content contentuid="hc3ae5ae5gaabcg4e81gae2egb24c2fb0769e" version="1">All creatures in a 30 foot radius that fail a Wisdom &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; become fearful of you and drop their weapons.</content>
 	<content contentuid="h5fdf28c7g7ff9g47f1g996cg35738bcf78b1" version="1">Wild Magic: CRAAAAAAB!</content>

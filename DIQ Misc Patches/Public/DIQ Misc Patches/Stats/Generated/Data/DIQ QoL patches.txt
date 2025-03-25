@@ -103,14 +103,21 @@ type "Character"
 using "SpiritualWeapon_Greataxe"
 data "ActionResources" "BonusActionPoint:1;Movement:9"
 
-// ==================================== Carry capacity changes ====================================
-// Commented out, gonna leave it vanilla and see if other systems can actually make it interesting
+// ==================================== Carry capacity and gold weight changes ====================================
+// Commented out, gonna leave it vanilla and see if other systems can actually make it interesting. But getting rid of gold weight is a pretty decent little qol in a world where carry cap matters
 
 // key "EncumberedMultiplier","35"
 
 // key "HeavilyEncumberedMultiplier","45"
 
 // key "CarryLimitMultiplier","50"
+
+new entry "_Gold"
+type "Object"
+// using "_BaseItem"
+using "_Gold"
+// data "Weight" "0.001"
+data "Weight" "0"
 
 // ==================================== Block pickpocketing for Volo and Withers ====================================
 

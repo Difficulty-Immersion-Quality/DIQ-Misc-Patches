@@ -9,7 +9,7 @@
 
 	<content contentuid="hab6f9152gb0b1g4ecbgb55egfebba7fceadf" version="1">Wild Magic: Forceful</content>
 	<content contentuid="hbd92e037g06bdg435bg985cgbf5102bfb584" version="1">Your spells deal an additionl [1] per spell level.</content>
-	<content contentuid="h6be6d972g551eg4a57ga049g7f4dd0c9e6c7" version="1">Your weapon attacks deal an additional [1].</content>
+	<content contentuid="h6be6d972g551eg4a57ga049g7f4dd0c9e6c7" version="1">Your weapon &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt; deal an additional [1].</content>
 
 	<content contentuid="h45a67863g5884g41fcg862eg52398836e9d9" version="1">Wild Magic: Cheese</content>
 	<content contentuid="hec40970bgd59eg4925g98f0g1f95e02dedde" version="1">You are &lt;LSTag Type="Status" Tooltip="POLYMORPH_CHEESE"&gt;Polymorphed&lt;/LSTag&gt; into cheese.</content>
@@ -50,19 +50,19 @@
 	<content contentuid="h5dd2285cg4349g4e91g84c2gf163feb73f70" version="1">The next spell that hits does maximum damage.</content>
 
 	<content contentuid="h5b4e767ag6647g4829ga608g8387c5ccca0d" version="1">Wild Magic: Static Shock</content>
-	<content contentuid="h97d9c295ge4cbg4fd4gbfdeg0298d2435981" version="1">You become charged with a massive amount of static electricity. When a creature hits you with a melee attack, you deal 1d6 lightning damage to them.</content>
+	<content contentuid="h97d9c295ge4cbg4fd4gbfdeg0298d2435981" version="1">You become charged with a massive amount of static electricity. When a creature hits you with a melee &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt;, you deal [1] to them.</content>
 
 	<content contentuid="h0b736525g983ag4b79gb67bg891505c5b0fd" version="1">Wild Magic: Healed</content>
-	<content contentuid="hc9b75761gded7g4bfdg9ac0g511bd4bee937" version="1">You regain 2d10 hitpoints.</content>
+	<content contentuid="h1797a59bgf7b6g4390ga8e2g169a02598d7e" version="1">You regain [1].</content>
 
 	<content contentuid="h8ceddebcg1127g4aacgb3f8ge3a469b362b8" version="1">Wild Magic: Charmed</content>
-	<content contentuid="hcb992cf1gecceg4910gad47g9ecc635c8d95" version="1">For one minute, any creature that hits you will be charmed for 2 turns.</content>
+	<content contentuid="hc7a35536g30d0g4419gbcb9g97adeff90ddd" version="1">You &lt;LSTag Type="Status" Tooltip="CHARMED"&gt;Charm&lt;/LSTag&gt; any creature that hits you with an &lt;LSTag Tooltip="AttackRoll"&gt;attack&lt;/LSTag&gt;.</content>
 
 	<content contentuid="hf6ecb730g2459g420fg9d6cg9e3702710ee8" version="1">Wild Magic: Push Back</content>
-	<content contentuid="hbbe8b0d4g11c4g4d29gbbdag7fe20c0d0d7a" version="1">For one minute, any creature that hits you with a melee attack is pushed back 10 foot.</content>
+	<content contentuid="haffb8549g78f2g49e0g915cg6065153a9e53" version="1">Any creature that hits you with a melee &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt; is pushed back by [1].</content>
 
 	<content contentuid="h13b69f5eg6b07g426bgb644g82ab0cfe5b47" version="1">Wild Magic: Hearty</content>
-	<content contentuid="h4c704994g94bbg4b03g8562gae8d03f35ecc" version="1">You have advantage on all &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; and &lt;LSTag Tooltip="AbilityCheck"&gt;Ability Checks&lt;/LSTag&gt;. This condition is removed after a &lt;LSTag Tooltip="LongRest"&gt;Long Rest&lt;/LSTag&gt;.</content>
+	<content contentuid="hfe910756gd4ebg4223gafc0g581b131e28de" version="1">You have advantage on all &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; and &lt;LSTag Tooltip="AbilityCheck"&gt;Ability Checks&lt;/LSTag&gt;.</content>
 
 	<!-- 21-30 -->
 	<content contentuid="hce5107adgc347g4887g80eag96e893dad0bc" version="1">Wild Magic: Mass Blink</content>
@@ -72,7 +72,7 @@
 	<content contentuid="h5135c313g3d35g44feg9dd7g2ad2c7100a19" version="1">All non-hostile creatures have the spell Friends cast on them. This spell lasts for 10 minutes.</content>
 
 	<content contentuid="hff27b4e9g8443g4ba3gb329g4ef6e4a3f4ff" version="1">Wild Magic: Headache</content>
-	<content contentuid="he0abb2f8g85f1g413cg9f2cg04bff64ea62d" version="1">A distracting headache is making it difficult to think clearly. Your &lt;LSTag Tooltip="Intelligence"&gt;Intelligence&lt;/LSTag&gt; is reduced by 2. This condition is removed after a &lt;LSTag Tooltip="LongRest"&gt;Long Rest&lt;/LSTag&gt;.</content>
+	<content contentuid="he0abb2f8g85f1g413cg9f2cg04bff64ea62d" version="1">You have a distracting headache is making it difficult to think clearly. Your &lt;LSTag Tooltip="Intelligence"&gt;Intelligence&lt;/LSTag&gt; is reduced by 2.</content>
 
 	<content contentuid="hed17e543gae20g4002gb0cag3a43490be0eb" version="1">Wild Magic: Refreshed Spells</content>
 	<content contentuid="h2c8fb7e6g5e3ag42ecg8c72gd34ca4d22360" version="1">You regain all of your expended Level 1 spell slots.</content>
@@ -121,17 +121,17 @@
 	<content contentuid="h05662085gcb91g4819g978egec7547e71065" version="1">All creatures in a 30 foot radius gain the ability to fly.</content>
 
 	<content contentuid="h0b7e918fg2085g49f8ga10bg3e920186f8df" version="1">Wild Magic: Invisibility</content>
-	<content contentuid="h0f0a4881gc2b4g4adbg85d7ge53653b049f2" version="1">You cast Invisibility on yourself. Invisibility ends early if you attack, cast another spell, interact with an object, take an action or bonus action, or are damaged.</content>
+	<content contentuid="h0f0a4881gc2b4g4adbg85d7ge53653b049f2" version="1">You cast Invisibility on yourself.</content>
 
 	<content contentuid="h9a70aea9g94eag41aeg9ccfg8176b30a718e" version="1">Wild Magic: Revivify</content>
 	<content contentuid="h227019eegbc97g47b0gb658gc08c1b2f88e2" version="1">You are able to use &lt;LSTag Type="Spell" Tooltip="Teleportation_Revivify"&gt;Revivify&lt;/LSTag&gt; until your next &lt;LSTag Tooltip="LongRest"&gt;Long Rest&lt;/LSTag&gt;.</content>
 
 	<!-- 41-50 -->
 	<content contentuid="hf4025504g7a26g4c39gb0ffg466cf417e190" version="1">Wild Magic: Enlarged</content>
-	<content contentuid="h8c753680gd540g4f50g82b8g10a0fcd88777" version="1">All creatures become &lt;LSTag Type="Status" Tooltip="ENLARGE"&gt;Enlarged&lt;/LSTag&gt;. They gain &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; &lt;LSTag Tooltip="AbilityCheck"&gt;Ability Checks&lt;/LSTag&gt; and &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;, their weapon attacks deal 1d4 more damage.</content>
+	<content contentuid="h8c753680gd540g4f50g82b8g10a0fcd88777" version="1">All creatures become &lt;LSTag Type="Status" Tooltip="ENLARGE"&gt;Enlarged&lt;/LSTag&gt;. They gain &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; &lt;LSTag Tooltip="AbilityCheck"&gt;Ability Checks&lt;/LSTag&gt; and &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;, their weapon &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt; deal 1d4 more damage.</content>
 
 	<content contentuid="hdd046781ge0a0g4748gb1ebg01790b3a9014" version="1">Wild Magic: Reduced</content>
-	<content contentuid="ha04010f6g2b8bg4283g9e74gbf2413bcca46" version="1">All creatures in a [1] become &lt;LSTag Type="Status" Tooltip="REDUCE"&gt;Reduced&lt;/LSTag&gt;. They suffer &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; &lt;LSTag Tooltip="AbilityCheck"&gt;Ability Checks&lt;/LSTag&gt; and &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;, their weapon attacks deal 1d4 less damage.</content>
+	<content contentuid="ha04010f6g2b8bg4283g9e74gbf2413bcca46" version="1">All creatures in a [1] become &lt;LSTag Type="Status" Tooltip="REDUCE"&gt;Reduced&lt;/LSTag&gt;. They suffer &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; &lt;LSTag Tooltip="AbilityCheck"&gt;Ability Checks&lt;/LSTag&gt; and &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;, their weapon &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt; deal 1d4 less damage.</content>
 
 	<content contentuid="hc22ea02bg569ag4107g9804g6cdc415df479" version="1">Wild Magic: Piercing Vulnerability</content>
 	<content contentuid="h0493b45cg81b8g4cb4g8f0eg75eab21831af" version="1">All creatures (including yourself) in a 30 foot radius are vulnerable to piercing damage.</content>
@@ -162,7 +162,7 @@
 
 	<!-- 51-60 -->
 	<content contentuid="heac65eb1g6c26g4dccg929bgab36f66b5342" version="1">Wild Magic: Critical Hits</content>
-	<content contentuid="h143abd74gb6d8g4da4g8e8eg1738fc211525" version="1">For the next 3 turns, all of your attack rolls are critical.</content>
+	<content contentuid="h143abd74gb6d8g4da4g8e8eg1738fc211525" version="1">For the next 3 turns, all of your &lt;LSTag Tooltip="AttackRoll"&gt;attack rolls&lt;/LSTag&gt; are critical hits.</content>
 
 	<content contentuid="hce512b66gfc3ag4564ga1f9gfd6addde2c50" version="1">Wild Magic: Mind Readers</content>
 	<content contentuid="h0ab4270dge7aag420egb377ge5f968180bb8" version="1">You are able to read minds and gain access to the spell Detect Thoughts. Others are able to read your mind as well. You have &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on all &lt;LSTag Tooltip="Charisma"&gt;Charisma&lt;/LSTag&gt; based &lt;LSTag Tooltip="SkillCheck"&gt;Skill Checks&lt;/LSTag&gt;. This condition is removed after a &lt;LSTag Tooltip="LongRest"&gt;Long Rest&lt;/LSTag&gt;.</content>
@@ -196,9 +196,9 @@
 
 	<content contentuid="h5477e1bcg2beeg4392g9d82g24bccc2c1977" version="1">Wild Magic: Summon Percy</content>
 	<content contentuid="h3925993fg85d1g4331g90a4g461979556c4f" version="1">Percy the Pacifist</content>
-	<content contentuid="h49ff3e9eg797ag4aaeg9926gffbcb868fec8" version="1">You have summoned Percy, the Pacifist Kobold. Percy will help you, but will not attack. Percy knows the spells Sanctuary, Heroism, Healing Word and Resistance.</content>
+	<content contentuid="h49ff3e9eg797ag4aaeg9926gffbcb868fec8" version="1">You have summoned Percy, the Pacifist Kobold. Percy will help you, but will not &lt;LSTag Tooltip="AttackRoll"&gt;attack&lt;/LSTag&gt;. Percy knows the spells Sanctuary, Heroism, Healing Word and Resistance.</content>
 	<content contentuid="hd30a5878gf201g4d41gbb2dg3fe7f02a7bc2" version="1">Curse of Pacifism</content>
-	<content contentuid="h26e32719gc0bcg4b3dgaaadg215feeca0781" version="1">If this creature attacks another creature, they explode in a 20 foot radius and take 8d4+36 Force Damage. Creatures that succeed a dexterity &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; take half damage.</content>
+	<content contentuid="h26e32719gc0bcg4b3dgaaadg215feeca0781" version="1">If this creature &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt; another creature, they explode in a 20 foot radius and take 8d4+36 Force Damage. Creatures that succeed a dexterity &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; take half damage.</content>
 
 	<content contentuid="heb9035b3g9259g431eg9f7cg7da539507ad2" version="1">Wild Magic: Mass Fear</content>
 	<content contentuid="hc3ae5ae5gaabcg4e81gae2egb24c2fb0769e" version="1">All creatures in a 30 foot radius that fail a Wisdom &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; become fearful of you and drop their weapons.</content>
@@ -257,39 +257,39 @@
 	<content contentuid="h71f62c2agedb0g45b9g9016g6d39d9c1de49" version="1">Your &lt;LSTag Tooltip="Charisma"&gt;Charisma&lt;/LSTag&gt; has been increased by 5, up to a maximum of 20.</content>
 
 	<content contentuid="h01c8113cg17dbg46bagade3g8e1307581743" version="1">Wild Magic: Mass Disarm</content>
-	<content contentuid="h246e388fg3190g43feg8a3cg3ab3964fa54a" version="1">All other creatures within [1] of you are &lt;LSTag Type="Status" Tooltip="DISARMED"&gt;Disarmed&lt;/LSTag&gt;.</content>
+	<content contentuid="h246e388fg3190g43feg8a3cg3ab3964fa54a" version="1">All other creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; are &lt;LSTag Type="Status" Tooltip="DISARMED"&gt;Disarmed&lt;/LSTag&gt;.</content>
 
 	<content contentuid="h47edfa3agbecdg47bfga79dg52f8f8b40092" version="1">Wild Magic: Mass Charm</content>
-	<content contentuid="h8083e6dag0a33g4489ga893g53e1e34eb26d" version="1">All enemies within [1] of you must succeed a &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or become &lt;LSTag Type="Status" Tooltip="CHARMED"&gt;Charmed&lt;/LSTag&gt;.</content>
+	<content contentuid="h8083e6dag0a33g4489ga893g53e1e34eb26d" version="1">All enemies within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; must succeed a &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or become &lt;LSTag Type="Status" Tooltip="CHARMED"&gt;Charmed&lt;/LSTag&gt;.</content>
 
 	<!-- 71-80 -->
 	<content contentuid="hfcef7684g5eceg4bcag9caeg5d91f4a176ec" version="1">Wild Magic: A Helpful Hand</content>
-	<content contentuid="hdd6bd479ga761g480eg8bf9g2942ed29bc41" version="1">All allies within [1] of you are &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Helped&lt;/LSTag&gt;.</content>
+	<content contentuid="hdd6bd479ga761g480eg8bf9g2942ed29bc41" version="1">All allies within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; are &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Helped&lt;/LSTag&gt;.</content>
 
 	<content contentuid="hbe2ddba7ge3e1g489bga00fg9bb965c0af7d" version="1">Wild Magic: Freedom of Movement</content>
-	<content contentuid="h8d7fe1c0g6da3g40fag9516g65bb94c79c31" version="1">All creatures within [1] of you gain &lt;LSTag Type="Status" Tooltip="FREEDOM_OF_MOVEMENT"&gt;Freedom of Movement&lt;/LSTag&gt;.</content>
+	<content contentuid="h8d7fe1c0g6da3g40fag9516g65bb94c79c31" version="1">All creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; gain &lt;LSTag Type="Status" Tooltip="FREEDOM_OF_MOVEMENT"&gt;Freedom of Movement&lt;/LSTag&gt;.</content>
 
 	<content contentuid="h8de7f753ga4b0g4da6g9af1gea2ff5fc6a90" version="1">Wild Magic: Unstable Blood</content>
 	<content contentuid="h45b340edg24e2g4fc6ga706g72bee37cc9b2" version="1">Your blood is highly flammable and will explode when it comes in contact with fire.</content>
 
 	<content contentuid="hdc8444afg5ec2g4f0dgb4c1g4389245f53e3" version="1">Wild Magic: Irresistible Dance</content>
-	<content contentuid="hd8925edeg7742g452dgb597geb3f1d2ec397" version="1">All enemies within [1] of you are afflicted with &lt;LSTag Type="Status" Tooltip="IRRESISTIBLE_DANCE"&gt;Otto's Irresistible Dance&lt;/LSTag&gt;.</content>
+	<content contentuid="hd8925edeg7742g452dgb597geb3f1d2ec397" version="1">All enemies within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; are afflicted with &lt;LSTag Type="Status" Tooltip="IRRESISTIBLE_DANCE"&gt;Otto's Irresistible Dance&lt;/LSTag&gt;.</content>
 
 	<content contentuid="h11f5444eg26eag4b86g8747g29131b649f43" version="1">Wild Magic: Summmon Friendly Spectator</content>
 	<content contentuid="he89806d6g4989g410aga3acg24416a795b38" version="1">You have summoned a friendly spectator.</content>
 
 	<content contentuid="h2f4ef2bag3111g47c2gacceg786eba823e96" version="1">Wild Magic: Temporary Genius</content>
-	<content contentuid="h1204b74ag60f9g4bf2g93b2g678b73def751" version="1">You have temporarily increased your &lt;LSTag Tooltip="Intelligence"&gt;Intelligence&lt;/LSTag&gt; by 4. Following a &lt;LSTag Tooltip="ShortRest"&gt;Short Rest&lt;/LSTag&gt;, this benefit ends and your &lt;LSTag Tooltip="Intelligence"&gt;Intelligence&lt;/LSTag&gt; is instead reduced by 2. Either condition is removed following a &lt;LSTag Tooltip="LongRest"&gt;Long Rest&lt;/LSTag&gt;.</content>
+	<content contentuid="he979806cg2dc7g4406g8f61g1bfa01553dee" version="1">Your &lt;LSTag Tooltip="Intelligence"&gt;Intelligence&lt;/LSTag&gt; is temporarily increased by 4. Following a &lt;LSTag Tooltip="ShortRest"&gt;Short Rest&lt;/LSTag&gt;, this benefit ends and your &lt;LSTag Tooltip="Intelligence"&gt;Intelligence&lt;/LSTag&gt; is instead reduced by 2. Either condition is removed following a &lt;LSTag Tooltip="LongRest"&gt;Long Rest&lt;/LSTag&gt;.</content>
 
-	<content contentuid="he5ff3032g9865g4beag80daga34ea31003ef" version="1">Wild Magic: Armour Up</content>
-	<content contentuid="hdfb7dc65g7d05g4758ga05cgbb9d80b032f8" version="1">Gain 15 &lt;LSTag Tooltip="TemporaryHitPoints"&gt;temporary hit points&lt;/LSTag&gt;.</content>
+	<content contentuid="h53c8ae4ag590ag4fa1g88abgade168d5efc5" version="1">Wild Magic: Armour Up</content>
+	<content contentuid="hc84ae175gfe37g435cgb617g39bfd2874b56" version="1">You gain 15 &lt;LSTag Tooltip="TemporaryHitPoints"&gt;temporary hit points&lt;/LSTag&gt;.</content>
 
-	<content contentuid="h9ffe782bg8cb3g46ddga572g46fce6860115" version="1">Wild Magic: Heroes' Feast</content>
-	<content contentuid="hb3c9b438gbaeag436bg974agb891a62d439c" version="1">You cast the spell Heroes Feast.</content>
+	<content contentuid="hf790325agab38g41bag90a2g418195d6977a" version="1">Wild Magic: Heroes' Feast</content>
+	<content contentuid="hf1f35c79gfff6g437dgbd7bga2cc47a5bebe" version="1">You cast &lt;LSTag Type="Spell" Tooltip="Shout_HeroesFeast"&gt;Heroes' Feast&lt;/LSTag&gt; centered on yourself.</content>
 
-	<content contentuid="h4f53ef0agf0bdg44e2ga34fgab03f455b631" version="1">Wild Magic: Mass Wild Magic Surge</content>
-	<content contentuid="h215f8695g2b0dg4078gab84g018edf361e47" version="1">At the start of their next turn, all creatures (including yourself) trigger a random Wild Magic Surge.</content>
+	<content contentuid="hb272c7dcg4273g4207ga29cg708701b60597" version="1">Wild Magic: Mass Wild Magic Surge</content>
+	<content contentuid="h67a978c3g19bbg4cd4gaa57g209ba6ebdfc0" version="1">All creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; trigger a &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; at the beginning of their next turn.</content>
 
 	<content contentuid="hea82684bg9595g4b2fgbccagbd45ada7c601" version="1">Wild Magic: Mass Polymorph</content>
-	<content contentuid="hd76df7e9g78ceg4d25g88c2ge9ebd0ed3097" version="1">All enemies within [1] of you must succeed a &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; &lt;LSTag Type="Status" Tooltip="POLYMORPH_SHEEP"&gt;Polymorphed&lt;/LSTag&gt; into sheep.</content>
+	<content contentuid="hd76df7e9g78ceg4d25g88c2ge9ebd0ed3097" version="1">All enemies within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; must succeed a &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; &lt;LSTag Type="Status" Tooltip="POLYMORPH_SHEEP"&gt;Polymorphed&lt;/LSTag&gt; into sheep.</content>
 </contentList>

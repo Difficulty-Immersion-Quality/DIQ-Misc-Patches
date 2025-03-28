@@ -708,7 +708,7 @@ data "Cost" "ReactionActionPoint:1"
 data "InterruptDefaultValue" "Ask;Enabled"
 data "EnableContext" "OnStatusApplied"
 
-// BUG: ==================================== 16: Wild Magic: Maximum Damage! ====================================
+// ==================================== 16: Wild Magic: Static Shock ====================================
 
 new entry "Shout_WildMagic_StaticShock"
 type "SpellData"
@@ -716,16 +716,28 @@ data "SpellType" "Shout"
 using "Shout__WildMagic"
 data "SpellProperties" "ApplyStatus(WILD_MAGIC_UNLOCK_STATIC_SHOCK,100,10)"
 data "TargetConditions" "Self()"
-data "DisplayName" "h5b4e767ag6647g4829ga608g8387c5ccca0d"
-data "Description" "h97d9c295ge4cbg4fd4gbfdeg0298d2435981"
+// Wild Magic: Static Shock
+data "DisplayName" "h5b4e767ag6647g4829ga608g8387c5ccca0d;1"
+// You become charged with a massive amount of static electricity. When a creature hits you with a melee attack, you deal 1d6 lightning damage to them.
+// data "Description" "h97d9c295ge4cbg4fd4gbfdeg0298d2435981"
+// You become charged with a massive amount of static electricity. When a creature hits you with a melee attack, you deal [1] to them.
+data "Description" "h6b8cccdbg823eg4edega9f4gc79870717dd0;1"
+// data "DescriptionParams" ""
+data "DescriptionParams" "DealDamage(1d6,Lightning)"
 data "Icon" "statIcon_WildMagicD100_StaticShock"
 data "TooltipStatusApply" "ApplyStatus(WILD_MAGIC_UNLOCK_STATIC_SHOCK,100,10)"
 
 new entry "WILD_MAGIC_UNLOCK_STATIC_SHOCK"
 type "StatusData"
 data "StatusType" "BOOST"
-data "DisplayName" "h5b4e767ag6647g4829ga608g8387c5ccca0d"
-data "Description" "h97d9c295ge4cbg4fd4gbfdeg0298d2435981"
+// Wild Magic: Static Shock
+data "DisplayName" "h5b4e767ag6647g4829ga608g8387c5ccca0d;1"
+// You become charged with a massive amount of static electricity. When a creature hits you with a melee attack, you deal 1d6 lightning damage to them.
+// data "Description" "h97d9c295ge4cbg4fd4gbfdeg0298d2435981"
+// You become charged with a massive amount of static electricity. When a creature hits you with a melee attack, you deal [1] to them.
+data "Description" "h6b8cccdbg823eg4edega9f4gc79870717dd0;1"
+// data "DescriptionParams" ""
+data "DescriptionParams" "DealDamage(1d6,Lightning)"
 data "Icon" "statIcon_WildMagicD100_StaticShock"
 data "Passives" "WildMagic_StaticShock"
 
@@ -747,8 +759,14 @@ data "SpellType" "Shout"
 using "Shout__WildMagic"
 data "SpellProperties" "ApplyStatus(WILD_MAGIC_Heal2d10,100,)"
 data "TargetConditions" "Self()"
-data "DisplayName" "h0b736525g983ag4b79gb67bg891505c5b0fd"
-data "Description" "hc9b75761gded7g4bfdg9ac0g511bd4bee937"
+// Wild Magic: Healed
+data "DisplayName" "h0b736525g983ag4b79gb67bg891505c5b0fd;1"
+// You regain 2d10 hitpoints.
+// data "Description" "hc9b75761gded7g4bfdg9ac0g511bd4bee937"
+// You regain [1].
+data "Description" "h1797a59bgf7b6g4390ga8e2g169a02598d7e;1"
+// data "DescriptionParams" ""
+data "DescriptionParams" "RegainHitPoints(2d10)"
 data "Icon" "statIcon_WildMagicD100_Heal2d10"
 data "TooltipStatusApply" "ApplyStatus(WILD_MAGIC_Heal2d10,100,)"
 
@@ -769,16 +787,24 @@ data "SpellType" "Shout"
 using "Shout__WildMagic"
 data "SpellProperties" "ApplyStatus(WILD_MAGIC_UNLOCK_CHARMED,100,10)"
 data "TargetConditions" "Self()"
-data "DisplayName" "h8ceddebcg1127g4aacgb3f8ge3a469b362b8"
-data "Description" "hcb992cf1gecceg4910gad47g9ecc635c8d95"
+// Wild Magic: Charmed
+data "DisplayName" "h8ceddebcg1127g4aacgb3f8ge3a469b362b8;1"
+// For the next minute, any creature that hits you will charm you that lasts for 2 turns.
+// data "Description" "hcb992cf1gecceg4910gad47g9ecc635c8d95"
+// You &lt;LSTag Type="Status" Tooltip="CHARMED"&gt;Charm&lt;/LSTag&gt; any creature that hits you with an &lt;LSTag Tooltip="AttackRoll"&gt;attack&lt;/LSTag&gt;.
+data "Description" "hc7a35536g30d0g4419gbcb9g97adeff90ddd;1"
 data "Icon" "statIcon_WildMagicD100_Charmed"
 data "TooltipStatusApply" "ApplyStatus(WILD_MAGIC_UNLOCK_CHARMED,100,10)"
 
 new entry "WILD_MAGIC_UNLOCK_CHARMED"
 type "StatusData"
 data "StatusType" "BOOST"
-data "DisplayName" "h8ceddebcg1127g4aacgb3f8ge3a469b362b8"
-data "Description" "hcb992cf1gecceg4910gad47g9ecc635c8d95"
+// Wild Magic: Charmed
+data "DisplayName" "h8ceddebcg1127g4aacgb3f8ge3a469b362b8;1"
+// For the next minute, any creature that hits you will charm you that lasts for 2 turns.
+// data "Description" "hcb992cf1gecceg4910gad47g9ecc635c8d95"
+// You &lt;LSTag Type="Status" Tooltip="CHARMED"&gt;Charm&lt;/LSTag&gt; any creature that hits you with an &lt;LSTag Tooltip="AttackRoll"&gt;attack&lt;/LSTag&gt;.
+data "Description" "hc7a35536g30d0g4419gbcb9g97adeff90ddd;1"
 data "Icon" "statIcon_WildMagicD100_Charmed"
 data "Passives" "WildMagic_Charmed"
 
@@ -800,16 +826,28 @@ data "SpellType" "Shout"
 using "Shout__WildMagic"
 data "SpellProperties" "ApplyStatus(WILD_MAGIC_UNLOCK_PUSHBACK,100,10)"
 data "TargetConditions" "Self()"
-data "DisplayName" "hf6ecb730g2459g420fg9d6cg9e3702710ee8"
-data "Description" "hbbe8b0d4g11c4g4d29gbbdag7fe20c0d0d7a"
+// Wild Magic: Push Back 
+data "DisplayName" "hf6ecb730g2459g420fg9d6cg9e3702710ee8;1"
+// For the next minute, any creature that hits you with a melee attack is pushed back 10ft.
+// data "Description" "hbbe8b0d4g11c4g4d29gbbdag7fe20c0d0d7a"
+// Any creature that hits you with a melee &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt; is pushed back by [1].
+data "Description" "haffb8549g78f2g49e0g915cg6065153a9e53;1"
+// data "DescriptionParams" ""
+data "DescriptionParams" "Distance(3)"
 data "Icon" "statIcon_WildMagicD100_PushBack"
 data "TooltipStatusApply" "ApplyStatus(WILD_MAGIC_UNLOCK_PUSHBACK,100,10)"
 
 new entry "WILD_MAGIC_UNLOCK_PUSHBACK"
 type "StatusData"
 data "StatusType" "BOOST"
-data "DisplayName" "hf6ecb730g2459g420fg9d6cg9e3702710ee8"
-data "Description" "hbbe8b0d4g11c4g4d29gbbdag7fe20c0d0d7a"
+// Wild Magic: Push Back 
+data "DisplayName" "hf6ecb730g2459g420fg9d6cg9e3702710ee8;1"
+// For the next minute, any creature that hits you with a melee attack is pushed back 10ft.
+// data "Description" "hbbe8b0d4g11c4g4d29gbbdag7fe20c0d0d7a"
+// Any creature that hits you with a melee &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt; is pushed back by [1].
+data "Description" "haffb8549g78f2g49e0g915cg6065153a9e53;1"
+// data "DescriptionParams" ""
+data "DescriptionParams" "Distance(3)"
 data "Icon" "statIcon_WildMagicD100_PushBack"
 data "Passives" "WildMagic_PushBack"
 
@@ -831,16 +869,24 @@ data "SpellType" "Shout"
 using "Shout__WildMagic"
 data "SpellProperties" "ApplyStatus(WILD_MAGIC_ADVAN_CON_SAVING_THROW,100,-1)"
 data "TargetConditions" "Self()"
-data "DisplayName" "h13b69f5eg6b07g426bgb644g82ab0cfe5b47"
-data "Description" "h4c704994g94bbg4b03g8562gae8d03f35ecc"
+// Wild Magic: Hearty
+data "DisplayName" "h13b69f5eg6b07g426bgb644g82ab0cfe5b47;1"
+// Until you long rest, you have advantage on all Constitution saving throws and ability checks.
+// data "Description" "h4c704994g94bbg4b03g8562gae8d03f35ecc"
+// You have advantage on all &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; and &lt;LSTag Tooltip="AbilityCheck"&gt;Ability Checks&lt;/LSTag&gt;.
+data "Description" "hfe910756gd4ebg4223gafc0g581b131e28de;1"
 data "Icon" "statIcon_WildMagicD100_Hearty"
 data "TooltipStatusApply" "ApplyStatus(WILD_MAGIC_ADVAN_CON_SAVING_THROW,100,-1)"
 
 new entry "WILD_MAGIC_ADVAN_CON_SAVING_THROW"
 type "StatusData"
 data "StatusType" "BOOST"
-data "DisplayName" "h13b69f5eg6b07g426bgb644g82ab0cfe5b47"
-data "Description" "h4c704994g94bbg4b03g8562gae8d03f35ecc"
+// Wild Magic: Hearty
+data "DisplayName" "h13b69f5eg6b07g426bgb644g82ab0cfe5b47;1"
+// Until you long rest, you have advantage on all Constitution saving throws and ability checks.
+// data "Description" "h4c704994g94bbg4b03g8562gae8d03f35ecc"
+// You have advantage on all &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; and &lt;LSTag Tooltip="AbilityCheck"&gt;Ability Checks&lt;/LSTag&gt;.
+data "Description" "hfe910756gd4ebg4223gafc0g581b131e28de;1"
 data "Icon" "statIcon_WildMagicD100_Hearty"
 data "Boosts" "Advantage(SavingThrow,Constitution);Advantage(Ability,Constitution)"
 
@@ -2729,7 +2775,7 @@ data "TargetConditions" "(Character() or Enemy()) and not Self()"
 data "DisplayName" "h01c8113cg17dbg46bagade3g8e1307581743;1"
 // All creatures in a 30ft radius, not including yourself, drop their equipped weapons.
 // data "Description" "h8db57b44g68b2g4662g8412g33bc3f4596e4"
-// All other creatures within [1] of you are &lt;LSTag Type="Status" Tooltip="DISARMED"&gt;Disarmed&lt;/LSTag&gt;.
+// All other creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; are &lt;LSTag Type="Status" Tooltip="DISARMED"&gt;Disarmed&lt;/LSTag&gt;.
 data "Description" "h246e388fg3190g43feg8a3cg3ab3964fa54a;1"
 // data "DescriptionParams" ""
 data "DescriptionParams" "Distance(9)"
@@ -2796,7 +2842,7 @@ data "TargetConditions" "Character() and not Self() and (not Enemy() or Player()
 data "DisplayName" "hfcef7684g5eceg4bcag9caeg5d91f4a176ec;1"
 // All allies in a 60ft radius that are currently in the downed state, are picked back up as if by the Help action.
 // data "Description" "h29c3d530gbec7g4970g8299g8d38b80183d7"
-// All allies within [1] of you are &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Helped&lt;/LSTag&gt;.
+// All allies within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; are &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Helped&lt;/LSTag&gt;.
 data "Description" "hdd6bd479ga761g480eg8bf9g2942ed29bc41;1"
 // data "DescriptionParams" ""
 data "DescriptionParams" "Distance(18)"
@@ -2826,7 +2872,7 @@ data "TargetConditions" "Character() or Enemy() or Self()"
 data "DisplayName" "hbe2ddba7ge3e1g489bga00fg9bb965c0af7d"
 // All creatures in a 30ft radius, including yourself, are under the Freedom of Movement condition for 1 minute.
 // data "Description" "he76f60c1ga743g4305g9ff8gf31edc021f21"
-// All creatures within [1] of you gain &lt;LSTag Type="Status" Tooltip="FREEDOM_OF_MOVEMENT"&gt;Freedom of Movement&lt;/LSTag&gt;.
+// All creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; gain &lt;LSTag Type="Status" Tooltip="FREEDOM_OF_MOVEMENT"&gt;Freedom of Movement&lt;/LSTag&gt;.
 data "Description" "h8d7fe1c0g6da3g40fag9516g65bb94c79c31;1"
 // data "DescriptionParams" ""
 data "DescriptionParams" "Distance(9)"
@@ -2893,7 +2939,7 @@ data "TargetConditions" "Enemy()"
 data "DisplayName" "hdc8444afg5ec2g4f0dgb4c1g4389245f53e3;1"
 // All hostile enemies in a 30ft radius have the sudden urge to dance and play music. Dancing creatures can't move or take a action. Removed on a successful Wisdom Saving Throw or after 1 minute.
 // data "Description" "h49077960g29f6g43bfg928cgaac4afc17949"
-// All enemies within [1] of you are afflicted with &lt;LSTag Type="Status" Tooltip="IRRESISTIBLE_DANCE"&gt;Otto's Irresistible Dance&lt;/LSTag&gt;.
+// All enemies within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; are afflicted with &lt;LSTag Type="Status" Tooltip="IRRESISTIBLE_DANCE"&gt;Otto's Irresistible Dance&lt;/LSTag&gt;.
 data "Description" "hd8925edeg7742g452dgb597geb3f1d2ec397;1"
 // data "DescriptionParams" ""
 data "DescriptionParams" "Distance(9)"
@@ -2906,7 +2952,7 @@ data "StatusType" "BOOST"
 data "DisplayName" "hdc8444afg5ec2g4f0dgb4c1g4389245f53e3;1"
 // All hostile enemies in a 30ft radius have the sudden urge to dance and play music. Dancing creatures can't move or take a action. Removed on a successful Wisdom Saving Throw or after 1 minute.
 // data "Description" "h49077960g29f6g43bfg928cgaac4afc17949"
-// All enemies within [1] of you are afflicted with &lt;LSTag Type="Status" Tooltip="IRRESISTIBLE_DANCE"&gt;Otto's Irresistible Dance&lt;/LSTag&gt;.
+// All enemies within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; are afflicted with &lt;LSTag Type="Status" Tooltip="IRRESISTIBLE_DANCE"&gt;Otto's Irresistible Dance&lt;/LSTag&gt;.
 data "Description" "hd8925edeg7742g452dgb597geb3f1d2ec397;1"
 // data "DescriptionParams" ""
 data "DescriptionParams" "Distance(9)"
@@ -2949,10 +2995,15 @@ new entry "Shout_WildMagic_SmarterButDumber"
 type "SpellData"
 data "SpellType" "Shout"
 using "Shout__WildMagic"
-data "SpellProperties" "ApplyStatus(WILD_MAGIC_Smarter,100,-1);ApplyStatus(WILD_MAGIC_Dumber,100,-1)"
+// data "SpellProperties" "ApplyStatus(WILD_MAGIC_Smarter,100,-1);ApplyStatus(WILD_MAGIC_Dumber,100,-1)"
+data "SpellProperties" "ApplyStatus(WILD_MAGIC_Smarter,100,-1)"
 data "TargetConditions" "Self()"
-data "DisplayName" "h2f4ef2bag3111g47c2gacceg786eba823e96"
-data "Description" "h1204b74ag60f9g4bf2g93b2g678b73def751"
+// Wild Magic: Temporary Genius
+data "DisplayName" "h2f4ef2bag3111g47c2gacceg786eba823e96;1"
+// You have temporarily gotten smarter! With some slight side effects. Gain +4 Intelligence until you short rest. Lose -2 Intelligence until you long rest.
+// data "Description" "h1204b74ag60f9g4bf2g93b2g678b73def751"
+// Your &lt;LSTag Tooltip="Intelligence"&gt;Intelligence&lt;/LSTag&gt; is temporarily increased by 4. Following a &lt;LSTag Tooltip="ShortRest"&gt;Short Rest&lt;/LSTag&gt;, this benefit ends and your &lt;LSTag Tooltip="Intelligence"&gt;Intelligence&lt;/LSTag&gt; is instead reduced by 2. Either condition is removed following a &lt;LSTag Tooltip="LongRest"&gt;Long Rest&lt;/LSTag&gt;.
+data "Description" "he979806cg2dc7g4406g8f61g1bfa01553dee;1"
 data "Icon" "statIcon_WildMagicD100_SmarterButDumber"
 
 new entry "WILD_MAGIC_Smarter"
@@ -2963,7 +3014,8 @@ data "Description" "h1204b74ag60f9g4bf2g93b2g678b73def751"
 data "Icon" "statIcon_WildMagicD100_SmarterButDumber"
 data "Passives" "WildMagic_IntelligenceBuffAndDebuff"
 data "Boosts" "Ability(Intelligence,4)"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+data "StatusPropertyFlags" ""
 
 new entry "WildMagic_IntelligenceBuffAndDebuff"
 type "PassiveData"
@@ -2971,7 +3023,8 @@ data "DisplayName" ""
 data "DescriptionParams" ""
 data "Properties" "IsHidden"
 data "StatsFunctorContext" "OnShortRest"
-data "StatsFunctors" "RemoveStatus(WILD_MAGIC_Smarter)"
+// data "StatsFunctors" "RemoveStatus(WILD_MAGIC_Smarter)"
+data "StatsFunctors" "ApplyStatus(WILD_MAGIC_Dumber,100,-1);RemoveStatus(WILD_MAGIC_Smarter)"
 
 new entry "WILD_MAGIC_Dumber"
 type "StatusData"
@@ -2981,7 +3034,7 @@ data "Description" "h1204b74ag60f9g4bf2g93b2g678b73def751"
 data "Icon" "statIcon_WildMagicD100_SmarterButDumber"
 data "Boosts" "Ability(Intelligence,-2)"
 
-// ==================================== 77: Wild Magic: Armour Up (Previously wrong English "Wild Magic: Armor Up") ====================================
+// ==================================== 77: Wild Magic: Armour Up (Previously used objectively incorrect English: "Wild Magic: Armor Up") ====================================
 
 new entry "Shout_WildMagic_ArmorUp"
 type "SpellData"
@@ -2989,15 +3042,27 @@ data "SpellType" "Shout"
 using "Shout__WildMagic"
 data "SpellProperties" "ApplyStatus(WILD_MAGIC_ArmorUp,100,)"
 data "TargetConditions" "Self()"
-data "DisplayName" "he5ff3032g9865g4beag80daga34ea31003ef"
-data "Description" "hdfb7dc65g7d05g4758ga05cgbb9d80b032f8"
+// Wild Magic: Armor Up
+// data "DisplayName" "he5ff3032g9865g4beag80daga34ea31003ef"
+// Wild Magic: Armour Up
+data "DisplayName" "h53c8ae4ag590ag4fa1g88abgade168d5efc5;1"
+// Gain 15 temporary hit points.
+// data "Description" "hdfb7dc65g7d05g4758ga05cgbb9d80b032f8"
+// You gain 15 &lt;LSTag Tooltip="TemporaryHitPoints"&gt;temporary hit points&lt;/LSTag&gt;.
+data "Description" "hc84ae175gfe37g435cgb617g39bfd2874b56;1"
 data "Icon" "statIcon_WildMagicD100_ArmorUp"
 
 new entry "WILD_MAGIC_ArmorUp"
 type "StatusData"
 data "StatusType" "BOOST"
-data "DisplayName" "he5ff3032g9865g4beag80daga34ea31003ef"
-data "Description" "hdfb7dc65g7d05g4758ga05cgbb9d80b032f8"
+// Wild Magic: Armor Up
+// data "DisplayName" "he5ff3032g9865g4beag80daga34ea31003ef"
+// Wild Magic: Armour Up
+data "DisplayName" "h53c8ae4ag590ag4fa1g88abgade168d5efc5;1"
+// Gain 15 temporary hit points.
+// data "Description" "hdfb7dc65g7d05g4758ga05cgbb9d80b032f8"
+// You gain 15 &lt;LSTag Tooltip="TemporaryHitPoints"&gt;temporary hit points&lt;/LSTag&gt;.
+data "Description" "hc84ae175gfe37g435cgb617g39bfd2874b56;1"
 data "Icon" "statIcon_WildMagicD100_ArmorUp"
 data "Boosts" "TemporaryHP(15)"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
@@ -3012,8 +3077,16 @@ data "SpellProperties" "ApplyStatus(HEROES_FEAST,100,-1);GROUND:Summon(3d8889c6-
 data "AreaRadius" "18"
 data "TargetConditions" "Self() or Ally()"
 data "Icon" "statIcon_WildMagicD100_HeroesFeast"
-data "DisplayName" "h9ffe782bg8cb3g46ddga572g46fce6860115"
-data "Description" "hb3c9b438gbaeag436bg974agb891a62d439c"
+// Wild Magic: Heroes Feast
+// data "DisplayName" "h9ffe782bg8cb3g46ddga572g46fce6860115"
+// Wild Magic: Heroes' Feast
+data "DisplayName" "hf790325agab38g41bag90a2g418195d6977a;1"
+// You cast the spell Heroes Feast centered on yourself in a 60ft radius.
+// data "Description" "hb3c9b438gbaeag436bg974agb891a62d439c"
+// You cast &lt;LSTag Type="Spell" Tooltip="Shout_HeroesFeast"&gt;Heroes' Feast&lt;/LSTag&gt; centered on yourself.
+data "Description" "hf1f35c79gfff6g437dgbd7bga2cc47a5bebe;1"
+// data "DescriptionParams" ""
+data "DescriptionParams" "Distance(18)"
 data "TooltipStatusApply" "ApplyStatus(HEROES_FEAST,100,-1)"
 data "CastSound" "Spell_Cast_Heal_HeroesFeast_L6to8"
 data "SpellAnimation" "414bbf02-2918-4f01-83fb-1ddc7a588d88,,;,,;7abe77ed-9c77-4eac-872c-5b8caed070b6,,;cb171bda-f065-4520-b470-e447f678ba1f,,;0c5dcc83-fa78-41da-b6a5-440b5ea30936,,;,,;bea988a0-2ec5-40d8-a67e-ffbd7454bc53,,;,,;,,"
@@ -3033,15 +3106,31 @@ using "Shout__WildMagic"
 data "AreaRadius" "30"
 data "SpellProperties" "ApplyStatus(WILD_MAGIC_MASS_SURGE,100,1)"
 data "TargetConditions" "Character() or Enemy() or Self()"
-data "DisplayName" "h4f53ef0agf0bdg44e2ga34fgab03f455b631"
-data "Description" "h215f8695g2b0dg4078gab84g018edf361e47"
+// Wild Magic: Wild Magic For All!
+// data "DisplayName" "h4f53ef0agf0bdg44e2ga34fgab03f455b631"
+// Wild Magic: Mass Wild Magic Surge
+data "DisplayName" "hb272c7dcg4273g4207ga29cg708701b60597;1"
+// All creatures, including yourself, trigger a random Wild Magic Surge at the start of their next turn.
+// data "Description" "h215f8695g2b0dg4078gab84g018edf361e47"
+// All creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; trigger a &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; at the beginning of their next turn.
+data "Description" "h67a978c3g19bbg4cd4gaa57g209ba6ebdfc0;1"
+// data "DescriptionParams" ""
+data "DescriptionParams" "Distance(30)"
 data "Icon" "statIcon_WildMagicD100_MassSurge"
 
 new entry "WILD_MAGIC_MASS_SURGE"
 type "StatusData"
 data "StatusType" "BOOST"
-data "DisplayName" "h4f53ef0agf0bdg44e2ga34fgab03f455b631"
-data "Description" "h215f8695g2b0dg4078gab84g018edf361e47"
+// Wild Magic: Wild Magic For All!
+// data "DisplayName" "h4f53ef0agf0bdg44e2ga34fgab03f455b631"
+// Wild Magic: Mass Wild Magic Surge
+data "DisplayName" "hb272c7dcg4273g4207ga29cg708701b60597;1"
+// All creatures, including yourself, trigger a random Wild Magic Surge at the start of their next turn.
+// data "Description" "h215f8695g2b0dg4078gab84g018edf361e47"
+// All creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; trigger a &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; at the beginning of their next turn.
+data "Description" "h67a978c3g19bbg4cd4gaa57g209ba6ebdfc0;1"
+// data "DescriptionParams" ""
+data "DescriptionParams" "Distance(30)"
 data "Icon" "statIcon_WildMagicD100_MassSurge"
 data "Passives" "WildMagic_MassSurge"
 
@@ -3069,7 +3158,7 @@ data "TargetConditions" "Enemy()"
 data "DisplayName" "hea82684bg9595g4b2fgbccagbd45ada7c601;1"
 // All hostile enemies are polymorphed into sheep in a 60ft radius.
 // data "Description" "h4d60c904gdd55g48d7gbd78g947dbeb691d2"
-// All enemies within [1] of you must succeed a &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; &lt;LSTag Type="Status" Tooltip="POLYMORPH_SHEEP"&gt;Polymorphed&lt;/LSTag&gt; into sheep.
+// All enemies within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; must succeed a &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; &lt;LSTag Type="Status" Tooltip="POLYMORPH_SHEEP"&gt;Polymorphed&lt;/LSTag&gt; into sheep.
 data "Description" "hd76df7e9g78ceg4d25g88c2ge9ebd0ed3097;1"
 // data "DescriptionParams" ""
 data "DescriptionParams" "Distance(18)"
@@ -3091,11 +3180,11 @@ data "TargetEffect" "0f5002c7-3571-4dbc-a7e8-9a8c1e43d91e"
 
 // ==================================== LEFTOVERS?! ====================================
 
-// new entry "WILD_MAGIC_ADDITIONAL_ACTION"
-// type "StatusData"
-// data "StatusType" "BOOST"
-// data "DisplayName" ""
-// data "Description" ""
-// data "Icon" ""
-// data "Boosts" "ActionResource(ActionPoint,1,0)"
-// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+new entry "WILD_MAGIC_ADDITIONAL_ACTION"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" ""
+data "Description" ""
+data "Icon" ""
+data "Boosts" "ActionResource(ActionPoint,1,0)"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"

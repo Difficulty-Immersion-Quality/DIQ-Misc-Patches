@@ -66,53 +66,53 @@
 
 	<!-- 21-30 -->
 	<content contentuid="hce5107adgc347g4887g80eag96e893dad0bc" version="1">Wild Magic: Mass Blink</content>
-	<content contentuid="hea33d07ag88d3g47dcgabcag4f7caf339f7b" version="1">For one minute, all allies (including yourself) in a 30 foot radius fall under the Blink condition.</content>
+	<content contentuid="hc39525ccgef38g4e1eg8d92ged0936bc0395" version="1">Yourself and all allies within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; may be &lt;LSTag Type="Status" Tooltip="BLINK"&gt;Blinked&lt;/LSTag&gt; out of existence at the end of their turns.</content>
 
 	<content contentuid="h325abc74gb8d8g447ag9ddagab5694f20b03" version="1">Wild Magic: Mass Friends</content>
-	<content contentuid="h5135c313g3d35g44feg9dd7g2ad2c7100a19" version="1">All non-hostile creatures have the spell Friends cast on them. This spell lasts for 10 minutes.</content>
+	<content contentuid="h11773007g2342g4793g85aag1879cf96c0b0" version="1">All non-hostile creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; are afflicted with &lt;LSTag Type="Status" Tooltip="FRIENDS"&gt;Friends&lt;/LSTag&gt;.</content>
 
 	<content contentuid="hff27b4e9g8443g4ba3gb329g4ef6e4a3f4ff" version="1">Wild Magic: Headache</content>
-	<content contentuid="he0abb2f8g85f1g413cg9f2cg04bff64ea62d" version="1">You have a distracting headache is making it difficult to think clearly. Your &lt;LSTag Tooltip="Intelligence"&gt;Intelligence&lt;/LSTag&gt; is reduced by 2.</content>
+	<content contentuid="hfb12d7c7g1000g4b21g83d7g0e43d4fd0149" version="1">You have a distracting headache is making it difficult to think clearly. Your &lt;LSTag Tooltip="Intelligence"&gt;Intelligence&lt;/LSTag&gt; is reduced by 2.</content>
 
 	<content contentuid="hed17e543gae20g4002gb0cag3a43490be0eb" version="1">Wild Magic: Refreshed Spells</content>
-	<content contentuid="h2c8fb7e6g5e3ag42ecg8c72gd34ca4d22360" version="1">You regain all of your expended Level 1 spell slots.</content>
+	<content contentuid="hb78ef753g3d45g4edcg8585g5af08b31a378" version="1">You regain all of your expended Level 1 &lt;LSTag Tooltip="SpellSlot"&gt;Spell Slots&lt;/LSTag&gt;.</content>
 
-	<content contentuid="hed6b79fagccfcg40ebgb0c0gc35f8f557036" version="1">Wild Magic: Glow Up</content>
-	<content contentuid="hd592c195gb5bag4318ga644g44cdf94f4082" version="1">Your body starts to glow and emits a light that eliminates nearby darkness.</content>
+	<content contentuid="h51e114ddg4e30g41f5ga857g75bfec472e53" version="1">Wild Magic: Glow Up</content>
+	<content contentuid="h0187dd11g8182g4776ga83cg96c7d9b73628" version="1">Your body starts to glow and emits a light that eliminates darkness within [1].</content>
 
 	<content contentuid="h26b423dfg3230g4348g862bge209d1143b93" version="1">Wild Surge: Lightning Storm</content>
-	<content contentuid="hfbdf6b6ag6cc3g4b2cg8c33ged5d5cdd0aa5" version="1">Lightning strikes! All creatures (except yourself) in a 15 foot radius take 2d10 lightning damage. Creatures that succeed a dexterity &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; take half damage.</content>
+	<content contentuid="hc6d59e6bgadfeg480cgaad2gd7a8bd5312f5" version="1">All other creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; take [2]. Creatures that succeed a &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; take halved damage.</content>
 
 	<content contentuid="h8e0a69beg9407g4d92g93b9gc9cb1abfa3a1" version="1">Wild Magic: Boo!</content>
-	<content contentuid="he785d177ga961g4d45g81e3g2f46d90b3265" version="1">You are Frightened for 2 turns.</content>
+	<content contentuid="h12a9bd7egac31g4df1gae14g7e71286d35b6" version="1">You are &lt;LSTag Type="Status" Tooltip="FRIGHTENED"&gt;Frightened&lt;/LSTag&gt;.</content>
 
 	<content contentuid="hea1057a7g2187g478fg8c1bg0a778e311b16" version="1">Wild Magic: Mass Invisibility</content>
-	<content contentuid="hc9c22c96g22e1g42f6g8332g82d07dc28fca" version="1">Every creature in a 30 foot radius becomes invisible.</content>
+	<content contentuid="h2498b59bg4dceg4272gbc81ga85809665a80" version="1">All creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; become &lt;LSTag Type="Status" Tooltip="INVISIBLE"&gt;Invisible&lt;/LSTag&gt;.</content>
 
 	<content contentuid="h0770341fgf3b5g474agb79eg50437cff5d9d" version="1">Wild Magic: Stone Skin</content>
-	<content contentuid="he9fe17feg7c70g43b0g8053gad3c48e11027" version="1">For one minute, you are resistant to all physical damage.</content>
+	<content contentuid="h7d83c01fg2447g4555ga1efg6f57da5820e0" version="1">You are &lt;LSTag Tooltip="Resistant"&gt;Resistant&lt;/LSTag&gt; against Bludgeoning, Piercing, and Slashing damage.</content>
 
 	<content contentuid="h18b28b83g364bg432cg8195g8e1c56897aeb" version="1">Wild Magic: Mass Poison</content>
-	<content contentuid="hbd75a48ag1c25g466fg9844g737489aece00" version="1">All creature (except yourself) in a 60 foot radius must succeed on a &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or becomed Poisoned for 2 turns.</content>
+	<content contentuid="h5b515f01gfcabg4435gbf92g9ba34dc127f0" version="1">All other creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; must succeed on a &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or becomed &lt;LSTag Type="Status" Tooltip="POISONED"&gt;Poisoned&lt;/LSTag&gt;.</content>
 
 	<!-- 31-40 -->
 	<content contentuid="h635be352g248eg4e05g918dg4dab3ecdc9cc" version="1">Wild Magic: Blinding Glow</content>
-	<content contentuid="h33d9ffdagd1feg4156gbf00g14484a94490e" version="1">You glow brightly in a 30 foot radius. Any enemy that is within 10 foot will be blinded. Blinded creatures must roll a &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; to remove this condition.</content>
+	<content contentuid="hb4962c31gc86cg4f5bgb81bgbfa278dbe79e" version="1">You glow brightly in a [1]. Enemies within [2] of you become &lt;LSTag Type="Status" Tooltip="WILD_MAGIC_ATTEMPT_BLINDNESS"&gt;Blinded&lt;/LSTag&gt;. When this &lt;LSTag Type="Status" Tooltip="WILD_MAGIC_ATTEMPT_BLINDNESS"&gt;Blindness&lt;/LSTag&gt; is removed from a creature they become &lt;LSTag Tooltip="Immune"&gt;Immune&lt;/LSTag&gt; to it.</content>
 
 	<content contentuid="h3423d012g6e4fg4ed9gb6dbg5e02ba5034c6" version="1">Wild Magic: Polymorphed</content>
-	<content contentuid="hcdd3fc38g843bg4affg85ceg6793ea6e91aa" version="1">You become a sheep for 5 turns.</content>
+	<content contentuid="h4a8ce8b2g8460g4961gbdcfgbc95c2fd4e1d" version="1">You are &lt;LSTag Type="Status" Tooltip="POLYMORPH_SHEEP"&gt;Polymorphed&lt;/LSTag&gt; into a sheep.</content>
 
 	<content contentuid="h9a042a37g709fg443agb6eagc0fa75392c69" version="1">Wild Magic: Summon Owlbear</content>
-	<content contentuid="h1e49c099g333ag4704g882cg24d5a9b5918c" version="1">You have summoned a hostile Owlbear.</content>
+	<content contentuid="h8cce29f5gdc6dg4918g971eg6f010553f4b6" version="1">You have summoned a hostile Owlbear.</content>
 
 	<content contentuid="hf594e45fg62cfg41a8g9df8g68f3cb7c0580" version="1">Wild Magic: Minor Illusion</content>
-	<content contentuid="hd62978c0ga62eg4077ga8fcgd5cc704a3ade" version="1">You have summoned a minor illusion that lasts for one minute</content>
+	<content contentuid="hb50106d7g389eg48deg9b1cgb5314e452abe" version="1">You have summoned a &lt;LSTag Type="Status" Tooltip="MINOR_ILLUSION"&gt;Minor Illusion&lt;/LSTag&gt;.</content>
 
 	<content contentuid="hc627715bg375cg490agb9abgd0d94e7c77f8" version="1">Wild Action: Unkillable Enemies</content>
-	<content contentuid="h4f90de5fg5775g440cga64fg1cc40cfc0f40" version="1">All hostile enemies in a 60 foot radius gain the Death Ward condition. On a lethal hit, they survive with 1 hitpoint remaining.</content>
+	<content contentuid="hdb4dd227g6b3fg41f3g99e0g45eca7b0ad9b" version="1">All hostile creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; gain &lt;LSTag Type="Status" Tooltip="DEATH_WARD"&gt;Death Ward&lt;/LSTag&gt;.</content>
 
 	<content contentuid="hf5ec5361g2829g415bgaab1g2d3c105c3f86" version="1">Wild Magic: Mass Drain Life</content>
-	<content contentuid="h30ce7caegdf92g43a2gabb9gcc7e4cf72894" version="1">All creatures (except yourself) take 1d10 necrotic damage, or take half as much damage with a successful &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt;. You regain half of all damage dealt.</content>
+	<content contentuid="h77d19393gb111g4c67ga486g62a5df143f11" version="1">All other creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; take [2], or half as much damage with a successful &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt;. You regain [3] equal to half the total damage dealt.</content>
 
 	<content contentuid="h9d39b446gf757g4d8egbcc2g59cfcebda92e" version="1">Wild Magic: Mirror Image</content>
 	<content contentuid="ha8251faagaf08g4d22g9984g10d8d08d9abe" version="1">You cast Mirror Image on yourself.</content>
@@ -183,7 +183,7 @@
 	<content contentuid="ha58a789bg3b1ag4b37g9c43gb4acbbdb504d" version="1">For one minute, all creatures in a 30 foot radius are vulnerable to Necrotic Damage.</content>
 
 	<content contentuid="h87c3d412g16b5g487eg8f67ge3c019a177c1" version="1">Wild Magic: Explosive Spells</content>
-	<content contentuid="hcd33ecffg5824g440eg9b73g3a62a25d7adf" version="1">When you cast a spell of 1st level or higher, you deal 1d6 fire damage in a 10 foot radius around the target. Targets that succeed a dexterity &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; take half damage. For a spell of first level or higher, add a additional 1d6.</content>
+	<content contentuid="hcd33ecffg5824g440eg9b73g3a62a25d7adf" version="1">When you cast a spell of 1st level or higher, you deal 1d6 fire damage in a 10 foot radius around the target. Targets that succeed a &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; take half damage. For a spell of first level or higher, add a additional 1d6.</content>
 
 	<content contentuid="hb57f7fbcgf63cg4c77g9e92g678c39ca4622" version="1">Wild Magic: Petrified</content>
 	<content contentuid="he7e26a73gb285g44b0gb08dg9fadda3bc518" version="1">You are &lt;LSTag Type="Status" Tooltip="PETRIFIED"&gt;Petrified&lt;/LSTag&gt;.</content>
@@ -198,7 +198,7 @@
 	<content contentuid="h3925993fg85d1g4331g90a4g461979556c4f" version="1">Percy the Pacifist</content>
 	<content contentuid="h49ff3e9eg797ag4aaeg9926gffbcb868fec8" version="1">You have summoned Percy, the Pacifist Kobold. Percy will help you, but will not &lt;LSTag Tooltip="AttackRoll"&gt;attack&lt;/LSTag&gt;. Percy knows the spells Sanctuary, Heroism, Healing Word and Resistance.</content>
 	<content contentuid="hd30a5878gf201g4d41gbb2dg3fe7f02a7bc2" version="1">Curse of Pacifism</content>
-	<content contentuid="h26e32719gc0bcg4b3dgaaadg215feeca0781" version="1">If this creature &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt; another creature, they explode in a 20 foot radius and take 8d4+36 Force Damage. Creatures that succeed a dexterity &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; take half damage.</content>
+	<content contentuid="h26e32719gc0bcg4b3dgaaadg215feeca0781" version="1">If this creature &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt; another creature, they explode in a 20 foot radius and take 8d4+36 Force Damage. Creatures that succeed a &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; take half damage.</content>
 
 	<content contentuid="heb9035b3g9259g431eg9f7cg7da539507ad2" version="1">Wild Magic: Mass Fear</content>
 	<content contentuid="hc3ae5ae5gaabcg4e81gae2egb24c2fb0769e" version="1">All creatures in a 30 foot radius that fail a Wisdom &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; become fearful of you and drop their weapons.</content>

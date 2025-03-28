@@ -115,116 +115,116 @@
 	<content contentuid="h77d19393gb111g4c67ga486g62a5df143f11" version="1">All other creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; take [2], or half as much damage with a successful &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt;. You regain [3] equal to half the total damage dealt.</content>
 
 	<content contentuid="h9d39b446gf757g4d8egbcc2g59cfcebda92e" version="1">Wild Magic: Mirror Image</content>
-	<content contentuid="ha8251faagaf08g4d22g9984g10d8d08d9abe" version="1">You cast Mirror Image on yourself.</content>
+	<content contentuid="h07eadc08g6497g4e1fg8f9ag7bc079623e02" version="1">You cast &lt;LSTag Type="Spell" Tooltip="Shout_MirrorImage"&gt;Mirror Image&lt;/LSTag&gt; on yourself.</content>
 
 	<content contentuid="h410dadfcg75b8g4c87g8b7ag33ac5b200344" version="1">Wild Magic: Mass Flight</content>
-	<content contentuid="h05662085gcb91g4819g978egec7547e71065" version="1">All creatures in a 30 foot radius gain the ability to fly.</content>
+	<content contentuid="h160ee1b6g3f59g4c4dg99bbg2fd6d641b5d3" version="1">All creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; gain &lt;LSTag Type="Status" Tooltip="FLY"&gt;Flight&lt;/LSTag&gt;.</content>
 
 	<content contentuid="h0b7e918fg2085g49f8ga10bg3e920186f8df" version="1">Wild Magic: Invisibility</content>
-	<content contentuid="h0f0a4881gc2b4g4adbg85d7ge53653b049f2" version="1">You cast Invisibility on yourself.</content>
+	<content contentuid="h18e0d27ag1a76g45e1gb7eeg63a028a4c043" version="1">You become &lt;LSTag Type="Status" Tooltip="INVISIBLE"&gt;Invisible&lt;/LSTag&gt;.</content>
 
 	<content contentuid="h9a70aea9g94eag41aeg9ccfg8176b30a718e" version="1">Wild Magic: Revivify</content>
-	<content contentuid="h227019eegbc97g47b0gb658gc08c1b2f88e2" version="1">You are able to use &lt;LSTag Type="Spell" Tooltip="Teleportation_Revivify"&gt;Revivify&lt;/LSTag&gt; until your next &lt;LSTag Tooltip="LongRest"&gt;Long Rest&lt;/LSTag&gt;.</content>
+	<content contentuid="h9f4ef2b8gcbcag42d7gbe7bg593d974bdcf9" version="1">You are able to cast &lt;LSTag Type="Spell" Tooltip="Teleportation_Revivify"&gt;Revivify&lt;/LSTag&gt; until your next &lt;LSTag Tooltip="LongRest"&gt;Long Rest&lt;/LSTag&gt;.</content>
 
 	<!-- 41-50 -->
-	<content contentuid="hf4025504g7a26g4c39gb0ffg466cf417e190" version="1">Wild Magic: Enlarged</content>
-	<content contentuid="h8c753680gd540g4f50g82b8g10a0fcd88777" version="1">All creatures become &lt;LSTag Type="Status" Tooltip="ENLARGE"&gt;Enlarged&lt;/LSTag&gt;. They gain &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; &lt;LSTag Tooltip="AbilityCheck"&gt;Ability Checks&lt;/LSTag&gt; and &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;, their weapon &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt; deal 1d4 more damage.</content>
+	<content contentuid="ha0892563g39deg4279g932ag096b41826470" version="1">Wild Magic: Big!</content>
+	<content contentuid="he0bc6e2eg8727g4710g8956g3876752ef1db" version="1">All creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; become &lt;LSTag Type="Status" Tooltip="ENLARGE"&gt;Enlarged&lt;/LSTag&gt;. They gain &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; &lt;LSTag Tooltip="AbilityCheck"&gt;Ability Checks&lt;/LSTag&gt; and &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;, their weapon &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt; deal an additional 1d4 damage.</content>
 
-	<content contentuid="hdd046781ge0a0g4748gb1ebg01790b3a9014" version="1">Wild Magic: Reduced</content>
-	<content contentuid="ha04010f6g2b8bg4283g9e74gbf2413bcca46" version="1">All creatures in a [1] become &lt;LSTag Type="Status" Tooltip="REDUCE"&gt;Reduced&lt;/LSTag&gt;. They suffer &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; &lt;LSTag Tooltip="AbilityCheck"&gt;Ability Checks&lt;/LSTag&gt; and &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;, their weapon &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt; deal 1d4 less damage.</content>
+	<content contentuid="hdd477f8dg6cc0g4e73g94a6g0340f455bb0a" version="1">Wild Magic: Small!</content>
+	<content contentuid="h9dd7f600g3ae2g4fe9ga90bga30d3830c6cd" version="1">All creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; become &lt;LSTag Type="Status" Tooltip="REDUCE"&gt;Reduced&lt;/LSTag&gt;. They suffer &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; &lt;LSTag Tooltip="AbilityCheck"&gt;Ability Checks&lt;/LSTag&gt; and &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;, their weapon &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt; deal 1d4 less damage.</content>
 
 	<content contentuid="hc22ea02bg569ag4107g9804g6cdc415df479" version="1">Wild Magic: Piercing Vulnerability</content>
-	<content contentuid="h0493b45cg81b8g4cb4g8f0eg75eab21831af" version="1">All creatures (including yourself) in a 30 foot radius are vulnerable to piercing damage.</content>
+	<content contentuid="h75a611fdg5ef8g433fgb73bg43332b9e3112" version="1">All creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; become &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to [2].</content>
 
-	<content contentuid="h4173de9fg48e3g4be2gbf18gdcff80130af5" version="1">Wild Magic: Curse of the Clown</content>
-	<content contentuid="h6f15d734gf14fg4705gb80dg2be3ec46c2f5" version="1">You are cursed to become a clown. Your &lt;LSTag Tooltip="Charisma"&gt;Charisma&lt;/LSTag&gt; is increased by 1, up to a maximum 20, and you have immunity to Tasha's Hideous Laughter.</content>
+	<content contentuid="hb4ff2fc9g46e9g4fbdg997fg90eb4193eb8a" version="1">Wild Magic: Curse of the Clown</content>
+	<content contentuid="h0911cfa9g7506g42ceg87e0g06e2ec7660b4" version="1">You are cursed to become a clown. Your &lt;LSTag Tooltip="Charisma"&gt;Charisma&lt;/LSTag&gt; is increased by 1, up to a maximum 20, and you have &lt;LSTag Tooltip="Immune"&gt;Immunity&lt;/LSTag&gt; to &lt;LSTag Type="Spell" Tooltip="Target_HideousLaughter"&gt;Tasha's Hideous Laughter&lt;/LSTag&gt;.</content>
 
 	<content contentuid="hf32dd49ag3bf9g41eeg9612g12514d163a86" version="1">Wild Magic: Extra Action</content>
-	<content contentuid="ha09a82bbg2111g4022gaf2eg63a116174534" version="1">You gain another action for the duration of combat.</content>
+	<content contentuid="h1f700930g2b0cg4a75g8d29gdf9aead96876" version="1">You gain another &lt;LSTag Type="ActionResource" Tooltip="ActionPoint"&gt;Action&lt;/LSTag&gt; until the end of combat.</content>
 
 	<content contentuid="h1a0447aegc9c0g4021g9076gdea00309b55b" version="1">Wild Magic: Restore Sorcery Points</content>
-	<content contentuid="hfb9f1811gedc2g4687gb3a8gb3a1b896e164" version="1">You regain all expended Sorcery Points.</content>
+	<content contentuid="h008b2949g986eg4e61gba40g26e248355c85" version="1">You regain all expended &lt;LSTag Type="ActionResource" Tooltip="SorceryPoint"&gt;Sorcery Points&lt;/LSTag&gt;.</content>
 
 	<content contentuid="h92643d3dgf616g4e31g98fbg18382232049b" version="1">Wild Magic: Restore Rage Charges</content>
-	<content contentuid="h1d4c4de9gf7b4g40e6g91a9ga5ce37931846" version="1">You regain all expended Rage Charges.</content>
+	<content contentuid="h7f320e74g9287g4c76g9124gf7f6a705f6b9" version="1">You regain all expended &lt;LSTag Type="ActionResource" Tooltip="RagePoint"&gt;Rage Charges&lt;/LSTag&gt;.</content>
 
 	<content contentuid="h079da063gefc0g4f96g8587g108d54bf0776" version="1">Wild Magic: Mass Haste</content>
-	<content contentuid="hb27d159cg73a8g46b3gbc4dg98319450de11" version="1">You cast Haste on all creatures (except yourself) in a 30 foot radius.</content>
+	<content contentuid="hade10367gf959g4078g8172g5a461d02a2bd" version="1">All other creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; are &lt;LSTag Type="Status" Tooltip="HASTE"&gt;Hastened&lt;/LSTag&gt;.</content>
 
 	<content contentuid="h75fd44a4g3e85g49d2g8874gaf1f23101379" version="1">Wild Magic: Lock</content>
-	<content contentuid="h2bb4f6a5g0d54g4541g9776gbd07c8e2821b" version="1">You temporarily lock all doors and chests nearby in a 100 foot radius.</content>
+	<content contentuid="h52a884b7g32dcg49f2g8432gd89187ba5c5f" version="1">All doors and chests within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; are temporarily locked.</content>
 
 	<content contentuid="h4ce09e72gaae4g4038gbfe2ga5d91b4a8d3e" version="1">Wild Magic: Unlock</content>
-	<content contentuid="hc3d350e5gb485g4f30ga08ag44a6f71bf691" version="1">You unlock all nonmagical locks in a 100 foot radius.</content>
+	<content contentuid="hf2f1fb3ega394g47beg86c2g1326a75fc26b" version="1">All mundane locks within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; are unlocked.</content>
 
 	<content contentuid="h4859c7d0g71b5g4354gacfbgb4b59782595a" version="1">Wild Magic: Summon Menagerie</content>
-	<content contentuid="h56291947g6bc6g4f52gb671g27bdadfc067c" version="1">You have summoned a menagerie of familiars.</content>
+	<content contentuid="h2b5db7acg8a47g4a28g9d35gabbe1ef50f59" version="1">You have summoned a menagerie of familiars.</content>
 
 	<!-- 51-60 -->
 	<content contentuid="heac65eb1g6c26g4dccg929bgab36f66b5342" version="1">Wild Magic: Critical Hits</content>
-	<content contentuid="h143abd74gb6d8g4da4g8e8eg1738fc211525" version="1">For the next 3 turns, all of your &lt;LSTag Tooltip="AttackRoll"&gt;attack rolls&lt;/LSTag&gt; are critical hits.</content>
+	<content contentuid="h5bd8c8d1g7d30g4774g86d1g29fd401f7bd5" version="1">All of your &lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt; are &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hits&lt;/LSTag&gt;.</content>
 
 	<content contentuid="hce512b66gfc3ag4564ga1f9gfd6addde2c50" version="1">Wild Magic: Mind Readers</content>
-	<content contentuid="h0ab4270dge7aag420egb377ge5f968180bb8" version="1">You are able to read minds and gain access to the spell Detect Thoughts. Others are able to read your mind as well. You have &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on all &lt;LSTag Tooltip="Charisma"&gt;Charisma&lt;/LSTag&gt; based &lt;LSTag Tooltip="SkillCheck"&gt;Skill Checks&lt;/LSTag&gt;. This condition is removed after a &lt;LSTag Tooltip="LongRest"&gt;Long Rest&lt;/LSTag&gt;.</content>
+	<content contentuid="h567c2c2cg31d1g4a49ga846g87a045d551db" version="1">You can cast &lt;LSTag Type="Spell" Tooltip="Shout_DetectThoughts"&gt;Detect Thoughts&lt;/LSTag&gt;, but others can read your thoughts too. You have &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="Intimidation"&gt;Intimidation&lt;/LSTag&gt;, &lt;LSTag Tooltip="Deception"&gt;Deception&lt;/LSTag&gt;, &lt;LSTag Tooltip="Persuasion"&gt;Persuasion&lt;/LSTag&gt;, and &lt;LSTag Tooltip="Performance"&gt;Performance&lt;/LSTag&gt; &lt;LSTag Tooltip="SkillCheck"&gt;Skill Checks&lt;/LSTag&gt;.</content>
 
 	<content contentuid="h54c063dcg4a11g422ag9ceegd35910dd1468" version="1">Wild Magic: Random Vulnerability</content>
-	<content contentuid="h61dbe862g0270g4cbdgb81dg5ff6879866c8" version="1">At the start of your next turn, all creatures in a 30 foot radius will become vulnerable to a random damage type. This condition will last.</content>
+	<content contentuid="h718eb587g231dg4b6bg819egbb6d13701598" version="1">At the start of your next turn, all creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; will become &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to a random damage type.</content>
 	<content contentuid="hd8badec2ga2c1g4ff5gaa25g9593017daef2" version="1">Wild Magic: Acid Vulnerability</content>
-	<content contentuid="h234e177bg4b84g43f3g97d5ga0651080933e" version="1">For one minute, all creatures in a 30 foot radius are vulnerable to Acid.</content>
+	<content contentuid="h7fe7649dga548g4fa0g878eg3a7b3ff8bb22" version="1">All creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; are &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Acid damage.</content>
 	<content contentuid="h3c7018bbg2a30g49d2gbfabgd8b402e43e59" version="1">Wild Magic: Cold Vulnerability</content>
-	<content contentuid="hd11bd5b6g9e59g4674gb204g4f03e050062a" version="1">For one minute, all creatures in a 30 foot radius are vulnerable to Cold.</content>
+	<content contentuid="hf046d72cgc67eg4882gaefbg7ec72673ed49" version="1">All creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; are &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Cold damage.</content>
 	<content contentuid="h47902995gb0a3g43a7g9072gba43bbc3f926" version="1">Wild Magic: Fire Vulnerability</content>
-	<content contentuid="h7d055b73g2565g405eg9fd2g53cfcf6a0767" version="1">For one minute, all creatures in a 30 foot radius are vulnerable to Fire.</content>
+	<content contentuid="h4f58c1e3g189cg429ag9b10ge75a4143edb0" version="1">All creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; are &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Fire damage.</content>
 	<content contentuid="h4102e7efgc7a1g4e4ag92d1gbbe928d97e5b" version="1">Wild Magic: Force Vulnerability</content>
-	<content contentuid="hdfe33188g6a57g4eb6gb60fg85ea18fb6e30" version="1">For one minute, all creatures in a 30 foot radius are vulnerable to Force.</content>
+	<content contentuid="h3e70d68ag5911g44b9gbd21g9ead6e58f66b" version="1">All creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; are &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Force damage.</content>
 	<content contentuid="hc824d8f5g492eg445eg8086g1b9bd365574c" version="1">Wild Magic: Lightning Vulnerability</content>
-	<content contentuid="hcd5a18e9gb2feg4330g83beg7691d269eb6f" version="1">For one minute, all creatures in a 30 foot radius are vulnerable to Lightning.</content>
+	<content contentuid="h95dec61dg4009g48ccga6dbgd045827ad10d" version="1">All creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; are &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Lightning damage.</content>
 	<content contentuid="h22213c6fgf5a8g44b4g9efbge1b7b819fc65" version="1">Wild Magic: Necrotic Vulnerability</content>
-	<content contentuid="ha58a789bg3b1ag4b37g9c43gb4acbbdb504d" version="1">For one minute, all creatures in a 30 foot radius are vulnerable to Necrotic Damage.</content>
+	<content contentuid="he85d8544g8ffbg40e7gaf3fg4b258fd7245f" version="1">All creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; are &lt;LSTag Tooltip="Vulnerable"&gt;Vulnerable&lt;/LSTag&gt; to Necrotic Damage.</content>
 
 	<content contentuid="h87c3d412g16b5g487eg8f67ge3c019a177c1" version="1">Wild Magic: Explosive Spells</content>
-	<content contentuid="hcd33ecffg5824g440eg9b73g3a62a25d7adf" version="1">When you cast a spell of 1st level or higher, you deal 1d6 fire damage in a 10 foot radius around the target. Targets that succeed a &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; take half damage. For a spell of first level or higher, add a additional 1d6.</content>
+	<content contentuid="hd8555b6ag3d7cg4412g8925g8e05ffad6196" version="1">Your &lt;LSTag Tooltip="AttackRoll"&gt;Spell Attacks&lt;/LSTag&gt; deal an additional [1] per spell level in a [2] radius of the target. Creatures that succeed a  &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; take halved damage.</content>
 
 	<content contentuid="hb57f7fbcgf63cg4c77g9e92g678c39ca4622" version="1">Wild Magic: Petrified</content>
 	<content contentuid="he7e26a73gb285g44b0gb08dg9fadda3bc518" version="1">You are &lt;LSTag Type="Status" Tooltip="PETRIFIED"&gt;Petrified&lt;/LSTag&gt;.</content>
 
 	<content contentuid="hd7e7bb11g794bg45c1gb5f7gf91c80935413" version="1">Wild Magic: Full Heal</content>
-	<content contentuid="h33e3e563gd277g449dg9bd7g7f75fa3091e9" version="1">The next time you are healed, you regain full health.</content>
+	<content contentuid="h12a91f65g3c0dg4156ga6b3g9d75589b634f" version="1">The next time you are healed, you regain all of your missing &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt;.</content>
 
 	<content contentuid="h62904523g6971g40abg9925g26118ab4ba26" version="1">Wild Magic: Burning Greed</content>
-	<content contentuid="h232637f8g7969g4461gb6d2g54207b367ab4" version="1">For every 500 gold you have in your inventory, you take 1d6 fire damage.</content>
+	<content contentuid="h69b2882dgaaf9g421aga089g1367cee693fb" version="1">For every 500 gold you have in your inventory you take [1].</content>
 
 	<content contentuid="h5477e1bcg2beeg4392g9d82g24bccc2c1977" version="1">Wild Magic: Summon Percy</content>
 	<content contentuid="h3925993fg85d1g4331g90a4g461979556c4f" version="1">Percy the Pacifist</content>
-	<content contentuid="h49ff3e9eg797ag4aaeg9926gffbcb868fec8" version="1">You have summoned Percy, the Pacifist Kobold. Percy will help you, but will not &lt;LSTag Tooltip="AttackRoll"&gt;attack&lt;/LSTag&gt;. Percy knows the spells Sanctuary, Heroism, Healing Word and Resistance.</content>
+	<content contentuid="h8768ee22g80e5g43fbg9019gd35163dfac1c" version="1">You have summoned Percy, the Pacifist Kobold. Percy can cast the &lt;LSTag Type="Spell" Tooltip="Target_Sanctuary"&gt;Sanctuary&lt;/LSTag&gt;, &lt;LSTag Type="Spell" Tooltip="Target_Heroism"&gt;Heroism&lt;/LSTag&gt;, &lt;LSTag Type="Spell" Tooltip="Target_HealingWord"&gt;Healing Word&lt;/LSTag&gt; and &lt;LSTag Type="Spell" Tooltip="Target_Resistance"&gt;Resistance&lt;/LSTag&gt; spells.</content>
 	<content contentuid="hd30a5878gf201g4d41gbb2dg3fe7f02a7bc2" version="1">Curse of Pacifism</content>
-	<content contentuid="h26e32719gc0bcg4b3dgaaadg215feeca0781" version="1">If this creature &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt; another creature, they explode in a 20 foot radius and take 8d4+36 Force Damage. Creatures that succeed a &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; take half damage.</content>
+	<content contentuid="hb4ceb8b7gc324g44aag999fge182b8175df7" version="1">If this creature lands an &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt;, they explode in a [1] radius, dealing [2] to all entities in the blast. Creatures that succeed a &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; take halved damage.</content>
 
 	<content contentuid="heb9035b3g9259g431eg9f7cg7da539507ad2" version="1">Wild Magic: Mass Fear</content>
-	<content contentuid="hc3ae5ae5gaabcg4e81gae2egb24c2fb0769e" version="1">All creatures in a 30 foot radius that fail a Wisdom &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; become fearful of you and drop their weapons.</content>
+	<content contentuid="h4d0abd72gc828g4f26gb569g64fd1c097b1d" version="1">All creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; must succeed a &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or become &lt;LSTag Type="Status" Tooltip="FEARED"&gt;Fearful&lt;/LSTag&gt; and &lt;LSTag Type="Status" Tooltip="DISARM"&gt;Disarmed&lt;/LSTag&gt;.</content>
 
 	<content contentuid="h0d1b5ee0gd41fg49f9gb92cg340e6b885b24" version="1">Wild Magic: Crabs</content>
-	<content contentuid="hb46a9d43gbca6g4a60gbf7cg7d938268a522" version="1">You have summoned six hostile crabs.</content>
+	<content contentuid="he9c6965egb929g4562g9015g6e081d481e17" version="1">You have summoned six hostile crabs.</content>
 
 	<!-- 61-70 -->
 	<content contentuid="hb9d8d168ge4bcg404bg973fgda138e203c65" version="1">Wild Magic: Summon Bob</content>
-	<content contentuid="hdaa1adcag2440g48dfg9690g7e33f7be3629" version="1">You have summoned Bob the Friendly Zombie</content>
+	<content contentuid="hd44656aag5076g45c8g904fgd89ccb1eb83c" version="1">You have summoned Bob the Friendly Zombie.</content>
 	<content contentuid="h91db38b3g615cg4ca2g8b66gbadb8f63d04f" version="1">Bob the Friendly Zombie</content>
 
 	<content contentuid="h3dd6c250g7282g4c75g82f2g6adb440b07f6" version="1">Wild Magic: Curse of Vampirism</content>
-	<content contentuid="h4b259ecegc5e6g4197gae35g6115b3a624c5" version="1">You are cursed with Vampirism! You gain access to Bite, Claws, and Charm Person. Your &lt;LSTag Tooltip="Charisma"&gt;Charisma&lt;/LSTag&gt; increases by 1, up to a maximum of 20.</content>
+	<content contentuid="h8310548bg3650g44dagb261g94793ab5583b" version="1">You are cursed with Vampirism! You gain access to &lt;LSTag Type="Spell" Tooltip="Target_Bite_Vampire"&gt;Bite&lt;/LSTag&gt;, &lt;LSTag Type="Spell" Tooltip="Target_Claws_Vampire"&gt;Claws&lt;/LSTag&gt; and &lt;LSTag Type="Spell" Tooltip="Target_CharmPerson_Vampire"&gt;Charm Person&lt;/LSTag&gt;. Your &lt;LSTag Tooltip="Charisma"&gt;Charisma&lt;/LSTag&gt; increases by 1, up to a maximum of 20.</content>
 
 	<content contentuid="h16e178deg5e7fg482aga850g9e22bb8d0cf4" version="1">Wild Magic: Gaseous Form</content>
-	<content contentuid="hdb0a5f58gf5fdg49c7ga6a0g834909d91b42" version="1">You transform into a cloud of mist for 3 turns.</content>
+	<content contentuid="h294d05e8ga5bbg41ddg8bbbg55faa7c20195" version="1">You are transformed into a &lt;LSTag Type="Status" Tooltip="GASEOUS_FORM"&gt;Gaseous Form&lt;/LSTag&gt;.</content>
 
 	<content contentuid="h96542399g5b23g4ed4gbf14g2a7fef69d0d4" version="1">Wild Magic: Rain</content>
-	<content contentuid="hf14032dbgab3dg4b5aga1adg11759c6aee7f" version="1">A rainstorm starts above you; Anything underneath the storm becomes wet.</content>
+	<content contentuid="h631e86b8g5d2eg4556gb76bg621e5b8533fc" version="1">A rainstorm starts above you, anything underneath the storm becomes wet.</content>
 
 	<content contentuid="hee189839g345bg4e0ag8988g0bf877c88bd5" version="1">Wild Magic: Burning Immunity</content>
-	<content contentuid="h078599cegdc3eg41ddg9655gc045b4a6134b" version="1">You become immune to fire. You are also on fire. You can not put out this fire.</content>
+	<content contentuid="h8b21b8c2g2385g464bga1ecg999b5c0f93a0" version="1">You become &lt;LSTag Tooltip="Immune"&gt;Immune&lt;/LSTag&gt; to fire; You are also on fire, and it cannot be put out.</content>
 
 	<content contentuid="h90f6790dg4954g495cg825agba7697f84350" version="1">Wild Magic: Storm Sorcerer</content>
-	<content contentuid="h6510128eg6981g4acdga703g0e474b9f2426" version="1">You temporarily gain the powers of a Storm Sorcerer. You have access to the spells Thunderwave, Create or Destroy Water, Gust of Wind, Sleet Storm, and Call Lightning, and gain the passive Heart of the Storm. This condition is removed after 1 minute.</content>
+	<content contentuid="hc50ae157gf813g4d19g86c3g7ffa4788da64" version="1">You temporarily gain the powers of a Storm Sorcerer. You gain &lt;LSTag Type="Passive" Tooltip="HeartOfTheStorm"&gt;Heart of the Storm&lt;/LSTag&gt;, and have access to the &lt;LSTag Type="Spell" Tooltip="Zone_Thunderwave"&gt;Thunderwave&lt;/LSTag&gt;, &lt;LSTag Type="Spell" Tooltip="Target_CreateDestroyWater"&gt;Create or Destroy Water&lt;/LSTag&gt;, &lt;LSTag Type="Spell" Tooltip="Zone_GustOfWind"&gt;Gust of Wind&lt;/LSTag&gt;, &lt;LSTag Type="Spell" Tooltip="Target_SleetStorm"&gt;Sleet Storm&lt;/LSTag&gt;, and &lt;LSTag Type="Spell" Tooltip="Target_CallLightning"&gt;Call Lightning&lt;/LSTag&gt; spells.</content>
 
 	<content contentuid="h303f9042g94bdg4352gafd8g8f3beb76fcc0" version="1">Wild Magic: Random Ability Decrease</content>
 	<content contentuid="h27ef7259ge8f4g4e43gb542g1e4e126c52af" version="1">At the start of your next turn, one of your &lt;LSTag Tooltip="Abilities"&gt;Abilities&lt;/LSTag&gt; will temporarily be reduced by 5.</content>

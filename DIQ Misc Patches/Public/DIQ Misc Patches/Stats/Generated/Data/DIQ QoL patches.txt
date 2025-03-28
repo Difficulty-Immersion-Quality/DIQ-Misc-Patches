@@ -55,12 +55,12 @@ data "SpellSuccess" "ApplyStatus(SELF, OFF_BALANCED,100,1)"
 
 // ==================================== Ensnaring Strike missing from Damage Combos ====================================
 
-new entry "ENSNARING_STRIKE"
-type "StatusData"
-data "StatusType" "BOOST"
-using "ENSNARING_STRIKE"
-data "Description" "ha6582f71g1442g4acagbbebg726e31d01acd"
-data "Boosts" "Advantage(AttackTarget);Disadvantage(AttackRoll);ActionResourceBlock(Movement);Disadvantage(SavingThrow,Dexterity);Attribute(Grounded);Resistance(Fire, Vulnerable)"
+// new entry "ENSNARING_STRIKE"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// using "ENSNARING_STRIKE"
+// data "Description" "ha6582f71g1442g4acagbbebg726e31d01acd"
+// data "Boosts" "Advantage(AttackTarget);Disadvantage(AttackRoll);ActionResourceBlock(Movement);Disadvantage(SavingThrow,Dexterity);Attribute(Grounded);Resistance(Fire, Vulnerable)"
 
 // ==================================== Animate Dead Plus Plus & Automated Summons - Make all the toggles pop up together for consistency and less people asking how to get their Automate Summons back "I only have Undead Automation" etc. ====================================
 

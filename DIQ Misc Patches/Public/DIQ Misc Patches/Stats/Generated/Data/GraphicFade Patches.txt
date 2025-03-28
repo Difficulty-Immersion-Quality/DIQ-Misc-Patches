@@ -243,8 +243,8 @@ data "EnabledConditions" "HasActionResource('SorceryPoint', 1, 0, false, false, 
 new entry "CC_EndlessWell_Passive"
 type "PassiveData"
 using "CC_EndlessWell_Passive"
-// The amulet floods your being with raw magical energy, allowing you to draw upon its infinite reserves of &lt;LSTag Type="ActionResource" Tooltip="SorceryPoint"&gt;Sorcery Points&lt;/LSTag&gt;. You can only use this effect once per turn and you take [1] each time you use it. (Metamagic ability needs to be active.)
-data "Description" "hbb24d954g7812g4cbeg87a6g8e8d8047ecb2;1"
+// While your Metamagic ability is active, the amulet floods your being with raw magical energy, allowing you to draw upon its infinite reserves of &lt;LSTag Type="ActionResource" Tooltip="SorceryPoint"&gt;Sorcery Points&lt;/LSTag&gt;. You can only use this effect once per turn and you take [1] each time you use it.
+data "Description" "h591efe33gb1f1g42f4gbafcg8f2377d5eaf3;1"
 data "DescriptionParams" "DealDamage(1d8,Force)"
 data "Properties" "Highlighted;ToggledDefaultAddToHotbar;IsToggled;OncePerTurn"
 data "EnabledConditions" "HasActionResource('SorceryPoint', 1, 0, false, false, context.Source) and (HasStatus('CC_METAMAGIC_CAREFUL',context.Source) or HasStatus('CC_METAMAGIC_DISTANT',context.Source) or HasStatus('CC_METAMAGIC_EXTENDED',context.Source) or HasStatus('CC_METAMAGIC_HEIGHTENED',context.Source) or HasStatus('CC_METAMAGIC_QUICKENED',context.Source) or HasStatus('CC_METAMAGIC_SUBTLE',context.Source) or HasStatus('CC_METAMAGIC_TWINNED',context.Source) or HasStatus('CHT_CC_METAMAGIC_SEEKING',context.Source) or HasStatus('METAMAGIC_EMPOWERED',context.Source) or HasStatus('METAMAGIC_TRANSMUTED_SPELL',context.Source)) and not HasStatus('CHT_CC_SORCERER_ENDLESSWELL_USED')"
@@ -1028,6 +1028,50 @@ using "VV_OpeningGambit_Passive"
 // At the start of combat, you gain &lt;LSTag Type="Status" Tooltip="VV_OPEN_GAMBIT"&gt;Calculated Risk&lt;/LSTag&gt; for [1] turns.
 data "Description" "hffe99ba8g6b4eg408fga06fg6cc6e0b1e140;1"
 data "DescriptionParams" "3"
+
+// Ring of the Assassin's Mark: rebalance Mark for Death and fix the status always being applied even if the target succeeds their saving throw
+// Nerfs: only gives advantage to caster (previously all attackers), critical hits against marked target deal an additional 2d8 damage (previously instantly killed)
+// Buffs: short rest cooldown (previously long rest), saving throw DC changed to ManoeuverDC+1 (previously flat 17), can be cast against all enemies (previously couldn't target basically any bosses in Honour Mode)
+new entry "VV_AssassinMark"
+type "SpellData"
+data "SpellType" "Target"
+using "VV_AssassinMark"
+// data "Cooldown" "OncePerRestPerItem"
+data "Cooldown" "OncePerShortRestPerItem"
+// data "TargetConditions" "Character() and not Self() and not Tagged('BLOCK_BOSS_DISTURBANCES') and not Tagged('LOW_HOUSEOFHOPE_IDENTIFY_RAPHAEL') and not Tagged('ACT3_WYR_GORTASH') and not Tagged('ACT3_LOW_VICONIA') and not Tagged('ACT3_LOW_CAZADOR') and not Tagged('LOW_RAMAZITHSTOWER_MISTYSTEP_HELPER') and not HasStatus('LEGENDARYACTION_STATUS')"
+data "TargetConditions" "Character() and Enemy() and not Self()"
+// data "SpellProperties" "ApplyStatus(VV_ASSASSINS_MARK, 100, 10)"
+data "SpellProperties" ""
+data "SpellSuccess" "ApplyStatus(VV_ASSASSINS_MARK, 100, 10)"
+data "SpellFail" "ApplyStatus(SAVED_AGAINST_HOSTILE_SPELL, 100, 0)"
+data "SpellRoll" "not SavingThrow(Ability.Constitution,17)"
+data "SpellRoll" "not SavingThrow(Ability.Constitution,ManeuverSaveDC()+1)"
+// Touch a creature within [1] and force them to make a Constitution &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt;. On a failed save, the &lt;LSTag Type="Status" Tooltip="VV_ASSASSINS_MARK"&gt;Mark of Death&lt;/LSTag&gt; is applied on them for 10 turns. Your attacks have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; against the marked creature and your &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hits&lt;/LSTag&gt; against the marked creature deal an additional [2] damage.
+data "Description" "h90480a70ge388g4634g99c0g3bd030201c35;1"
+// data "DescriptionParams" "Distance(1.5)"
+data "DescriptionParams" "Distance(1.5);1d8"
+
+new entry "VV_ASSASSINS_MARK"
+type "StatusData"
+data "StatusType" "BOOST"
+using "VV_ASSASSINS_MARK"
+// This creature has been marked for death. The caster who applied this mark's attacks against it have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; and their &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hits&lt;/LSTag&gt; against the marked target deal an additional [1] damage.
+data "Description" "h68b16d5bg49f1g4eeagb311ga57fe566450d;1"
+data "DescriptionParams" "1d8"
+// data "Boosts" "Advantage(AttackTarget)"
+data "Boosts" "SourceAdvantageOnAttack()"
+
+// Keep in mind that the 1d8 will become a 2d8 due to it only triggering on critical hits
+new entry "VV_AssassinsMark_Passive"
+type "PassiveData"
+using "VV_AssassinsMark_Passive"
+// data "StatsFunctorContext" "OnDamage"
+data "StatsFunctorContext" ""
+// data "Conditions" "IsCritical() and HasStatus('VV_ASSASSINS_MARK')"
+data "Conditions" ""
+// data "StatsFunctors" "Kill()"
+data "StatsFunctors" ""
+data "Boosts" "IF(HasStatus('VV_ASSASSINS_MARK', context.Target, context.Source) and IsCritical() and not IsCriticalMiss()):DamageBonus(1d8)"
 
 // ===== Hopefully prevent passives from functioning as damage rider sources =====
 new entry "VV_WhisperWind_Passive"

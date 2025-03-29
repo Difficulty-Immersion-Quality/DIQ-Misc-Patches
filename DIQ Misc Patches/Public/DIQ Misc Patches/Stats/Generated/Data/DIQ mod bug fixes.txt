@@ -233,7 +233,6 @@ data "PassivesOnEquip" "CSS_HelmArmor_Pass_DivineVigilance;CSS_HelmArmor_Pass_We
 new entry "CSS_HelmArmor_Pass_Weavebane"
 type "PassiveData"
 using "CSS_HelmArmor_Pass_Weavebane"
-data "Boosts" "IF(IsMeleeAttack() and IsConcentrating(context.Target)):CharacterWeaponDamage(1d6,Force);IF(IsSpell()):RollBonus(SavingThrow, Advantage)"
 data "Description" "h26e9271ag521dg49begb54eg511971cdde17"
 
 // Chest armour: fixes Faithguard +2 AC remaining on target even if they no longer have Shield of Faith

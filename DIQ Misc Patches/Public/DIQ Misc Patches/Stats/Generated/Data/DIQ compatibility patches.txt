@@ -38,7 +38,9 @@ using "MAG_TheBulwark_Shield"
 data "RootTemplate" "4f313dde-14bb-43a2-abdd-07b2eb38b33a"
 data "ValueUUID" "f46eb019-edd0-4216-99df-9dae89a83ce7"
 data "Rarity" "Legendary"
+// data "Boosts" "UnlockSpell(Shout_MAG_TheBulwark_ReflectiveShell);UnlockSpell(Target_MAG_WardingBond)"
 data "Boosts" "AbilityOverrideMinimum(Strength, 18);UnlockSpell(Shout_MAG_TheBulwark_ReflectiveShell_Overhaul);UnlockSpell(Target_MAG_WardingBond)"
+// data "PassivesOnEquip" "MAG_Legendary_ShieldRiposte_Passive;MAG_Legendary_Spellguard_Passive"
 data "PassivesOnEquip" "EqLib_Shield_Passive;MAG_Legendary_ShieldRiposte_Passive;MAG_Legendary_Spellguard_Passive"
 data "MinAmount" "1"
 data "MaxAmount" "1"
@@ -49,8 +51,8 @@ data "MinLevel" "1"
 // ==================================== Make Flail of Ages Enhanced work with Disarming Attack from Arsenal Overhaul ====================================
 
 new entry "MAG_BG_OfAges_Flail"
-using "MAG_BG_OfAges_Flail"
 type "Weapon"
+using "MAG_BG_OfAges_Flail"
 data "BoostsOnEquipMainHand" "UnlockSpell(Target_ConcussiveSmash);UnlockSpell(Target_HinderingSmash);UnlockSpell(Shout_LHB_ElementalAge);UnlockSpell(Target_DisarmingAttack_Flail)"
 
 // ==================================== Fix conflcit between Expansion and Barbarian QOL? ====================================

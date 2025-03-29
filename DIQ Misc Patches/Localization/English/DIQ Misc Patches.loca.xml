@@ -221,4 +221,6 @@ Removed when &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Helped&lt;/LSTag&gt
 	<!-- "NPC_DamageReduction_3" --> <content contentuid="h09255dfdg6a3eg46d6g9cb2gfe90e9219972" version="1">All incoming damage is reduced by [1].</content>
 
 	<!-- Target_Sunburst --> <content contentuid="h47af5db9g9ba8g4a63g8e1ag84d5a7040e3f" version="1">Allies make this &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; with &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; and Undead make it with &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt;. </content>
+
+	<!-- "WET" --> <content contentuid="h00f17427g30c0g46acga349gcd6b4747f406" version="1">Prevented from &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt; and &lt;LSTag Tooltip="Resistant"&gt;Resistant&lt;/LSTag&gt; to Fire damage. Lightning and Cold &lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt; have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; against you.</content>
 </contentList>

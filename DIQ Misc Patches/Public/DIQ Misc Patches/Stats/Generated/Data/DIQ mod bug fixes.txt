@@ -157,13 +157,14 @@ data "PrepareEffect" "556fd141-698d-4c08-9322-ad155821260a"
 data "CastEffect" "2e44371c-a637-4cab-a120-3088b3d83369"
 data "TargetEffect" "ee8a1393-0d28-4c37-a2ec-a2ee77561ed4"
 
-// ========================= Cahoot's Lathander's Armory fixes ================================== 
+// ========================= Lathander's Armory fixes ================================== 
 
 // Fixes the Lathander's Crest trinket, having it heal properly
 
 // Add technical status to armour to track the wearer
 new entry "CSS_LATHANDER_CREST_TRINKET"
 type "Armor"
+// using "_Amulet_Magic"
 using "CSS_LATHANDER_CREST_TRINKET"
 data "StatusOnEquip" "LATHANDER_SURGEOFLIGHT_TECHNICAL"
 
@@ -171,7 +172,9 @@ data "StatusOnEquip" "LATHANDER_SURGEOFLIGHT_TECHNICAL"
 new entry "CSS_Lathander_Pass_SurgeOfLight"
 type "PassiveData"
 using "CSS_Lathander_Pass_SurgeOfLight"
-data "Conditions" "HasStatus('LATHANDER_SURGEOFLIGHT_TECHNICAL', context.Target)"
+// data "Conditions" "HasStatus('LATHANDER_SURGEOFLIGHT_TECHNICAL', context.Target)"
+data "Conditions" "(Character() and not Self()) or AreaRadiusGreaterThan(1)"
+// data "StatsFunctors" "IF(not HasStatus('MAG_HEAL_SELF_ONCE_TECHNICAL', context.Source)):RegainHitPoints(SELF,3);ApplyStatus(SELF, MAG_HEAL_SELF_ONCE_TECHNICAL, 100, 0)"
 data "StatsFunctors" "IF(not HasStatus('MAG_HEAL_SELF_ONCE_TECHNICAL', context.Source)):RegainHitPoints(3);ApplyStatus(SELF, MAG_HEAL_SELF_ONCE_TECHNICAL, 100, 0)"
 
 // New technical status
@@ -192,56 +195,63 @@ data "PassivesOnEquip" "MAG_ShieldRiposte_Passive;CSS_Lathander_Pass_BalduHeal;M
 // ILLUMINATED SHIT SHOULD WORK NOW
 new entry "CSS_Lathander_Pass_IlluminateAC" 
 type "PassiveData"
+// using "ARM_Shield_1"
 using "CSS_Lathander_Pass_IlluminateAC" 
 data "BoostContext" "OnObscurityChanged;OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
 data "BoostConditions" "HasObscuredState(ObscuredState.Clear,context.Source)"
+// data "Boosts" "Advantage(SavingThrow, Dexterity);SpellSaveDC(1)"
 data "Boosts" "AC(1)"
 
 new entry "CSS_Lathander_Pass_IlluminateConc" 
 type "PassiveData"
 using "CSS_Lathander_Pass_IlluminateConc" 
+// data "StatsFunctorContext" "OnObscurityChanged;OnCreate"
+data "StatsFunctorContext" ""
 data "BoostContext" "OnObscurityChanged;OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
+// data "BoostConditions" "IF(HasObscuredState(ObscuredState.Clear, context.Source))"
 data "BoostConditions" "HasObscuredState(ObscuredState.Clear,context.Source)"
-data "Boosts" "Advantage(Concentration)"
 
 new entry "CSS_Lathander_Pass_IlluminateConc2" 
 type "PassiveData"
-using "CSS_Lathander_Pass_IlluminateConc2" 
+using "CSS_Lathander_Pass_IlluminateConc2"
+// data "StatsFunctorContext" "OnObscurityChanged;OnCreate"
+data "StatsFunctorContext" ""
 data "BoostContext" "OnObscurityChanged;OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
+// data "BoostConditions" "IF(not HasObscuredState(ObscuredState.Clear, context.Source))"
 data "BoostConditions" "not HasObscuredState(ObscuredState.Clear,context.Source)"
-data "Boosts" "Resistance(Piercing, Vulnerable);Resistance(Slashing, Vulnerable)"
 
 // There's no saving throw
 // (Tagged('UNDEAD', context.Target) needs to be context.Target
 // ApplyStatus(TURNED, 100, 3) needs to have SWAP as the first parameter as otherwise it turns yourself lmao
 new entry "CSS_Lathy_Pass_HolyRebuked"
 type "PassiveData"
-data "Properties" "IsHidden"
-data "StatsFunctorContext" "OnAttacked"
+using "CSS_Lathy_Pass_HolyRebuked"
 data "Conditions" "IsMeleeAttack() and HasDamageEffectFlag(DamageFlags.Hit) and (Tagged('UNDEAD', context.Target))"
+// data "StatsFunctors" "ApplyStatus(TURNED, 100, 3)"
 data "StatsFunctors" "ApplyStatus(SWAP,TURNED, 100, 3)"
 
-// ==================================== Cahoot's Helm's Armory fixes ====================================
+// ==================================== Helm's Armory fixes ====================================
 
 // Longsword: fixes force damage against concentrating targets and adds advantage to saving throws against spells
 new entry "CSS_HelmStatue_Longsword"
 type "Weapon"
+// using "WPN_Longsword_2"
 using "CSS_HelmStatue_Longsword"
+// data "Boosts" "Initiative(3);Advantage(Skill,Perception);WeaponDamage(1d6,Radiant)"
 data "Boosts" "Initiative(3);Advantage(Skill,Perception)"
-data "PassivesOnEquip" "CSS_HelmArmor_Pass_DivineVigilance;CSS_HelmArmor_Pass_Weavebane"
 
 new entry "CSS_HelmArmor_Pass_Weavebane"
 type "PassiveData"
 using "CSS_HelmArmor_Pass_Weavebane"
+// data "Description" "hee585df0g25c1g412dg84d4gfbdc30b31a36;1"
 data "Description" "h26e9271ag521dg49begb54eg511971cdde17"
 
 // Chest armour: fixes Faithguard +2 AC remaining on target even if they no longer have Shield of Faith
 new entry "CSS_HelmArmory_Pass_Faithguard"
 type "PassiveData"
 using "CSS_HelmArmory_Pass_Faithguard"
-data "StatsFunctorContext" "OnStatusApplied"
-data "Conditions" "StatusId('SHIELD_OF_FAITH')"
 data "StatsFunctors" "ApplyStatus(HELMARMORY_FAITHGUARD,100,-1)"
+// data "Description" "h05537877g5021g472dgbb5aga7e3c95f2f5a;1"
 data "Description" "h5259232cg94bcg4f1fg86cag49bd2775aea0"
 
 // New status
@@ -263,9 +273,11 @@ data "RemoveEvents" "OnStatusRemoved"
 new entry "CSS_HelmArmory_Pass_ShieldHeal"
 type "PassiveData"
 using "CSS_HelmArmory_Pass_ShieldHeal"
+// data "Description" "h321e8eddg3384g4f8cg9088g1e21f99936ec"
 data "Description" "h02da00cdgac67g45f4g8516g806b0ee900b7"
 
 new entry "CSS_HelmArmor_Pass_DivineVigilance"
 type "PassiveData"
 using "CSS_HelmArmor_Pass_DivineVigilance"
+// data "Description" "hd83228eagef0ag4a52gb1e1g7f9b3d4256fb;1"
 data "Description" "ha910c197g7b7ag443dga5cagace2a219dde8"

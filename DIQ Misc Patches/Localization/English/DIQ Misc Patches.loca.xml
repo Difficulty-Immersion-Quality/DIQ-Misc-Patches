@@ -11,6 +11,15 @@
 	<!-- "" --> <content contentuid="ha81b4b97g243dg4619g8233ge722d4b06126" version="1">You summoned a temporary Basket Full of Equipment to your inventory. It and all its contents will disappear soon.</content>
 	<!-- "" --> <content contentuid="h76164e62g39b2g4eafg9f7egead0e51d1bb6" version="1">Toggles your veil's visuals on and off, if you have one selected from the mirror or character creation.</content>
 
+	<!-- "Injuries/JWL Discordant Instruments patch" --> 
+	<!-- "" --> <content contentuid="ha50abb3cg00deg41d0g8acegc12258b60088" version="1">Triage Kit</content>
+	<!-- "" --> <content contentuid="h529bf12eg518dg4e7fg9f46gf91c7e3b2863" version="1">A collection of tools used for treating wounds in the field. Not as robust as an Injury Kit, lacking salves, tinctures and other important remedies, but a reliable collection of implements that stand the test of time nonetheless.</content>
+	<!-- "" --> <content contentuid="h81cf0405gc28bg44a1gbc24ga5e9530d6a45" version="1">Tend Injuries</content>
+	<!-- "" --> <content contentuid="h4dd1352eg57c8g47ffg8aeeg51d8b61a4601" version="1">Tend to a creatures wounds, healing them. The target must wait before they can be tended to again.
+&lt;br&gt;This kit enables you to treat &lt;LSTag Type="Status" Tooltip="GOON_INFORMATION_STATUS_INJURIES"&gt;Injuries&lt;/LSTag&gt;, based on a &lt;LSTag Tooltip="Medicine"&gt;Medicine&lt;/LSTag&gt; &lt;LSTag Tooltip="AbilityCheck"&gt;Check&lt;/LSTag&gt;. The kit is not consumed on an unsuccessful attempt, though it can only be used once per day on any individual creature.</content>
+	<!-- "" --> <content contentuid="h59b8c631g38b3g4c18g9b5dgd2d03da4470b" version="1">Recovering from Medical Attention</content>
+	<!-- "" --> <content contentuid="hccfafbccg8777g4df1gbb5fgf6deb3db2b15" version="1">The Triage Kit has been used on you today, your body must rest and recover before it can be used again.</content>
+
 	<!-- Elven Weaponry Paladin -->
 	<!-- "" --> <content contentuid="h8dcb3690g0420g435bg88aeg0eb4ed7f34cc" version="1">The wearer can use &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Help&lt;/LSTag&gt; as a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt;.</content>
 	<!-- "" --> <content contentuid="h027cfe16g350dg43c8gac97g46a6628b0384" version="1">The wearer can use &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Help&lt;/LSTag&gt; as a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt; and they and their allies within [1] gain &lt;LSTag Type="Status" Tooltip="EW_BA_STATUS_BLESS"&gt;Bless&lt;/LSTag&gt;. This can stack with other sources of &lt;LSTag Type="Status" Tooltip="BLESS"&gt;Bless&lt;/LSTag&gt;.</content>

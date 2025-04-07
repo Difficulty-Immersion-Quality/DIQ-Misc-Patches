@@ -11,6 +11,10 @@
 	<!-- "" --> <content contentuid="ha81b4b97g243dg4619g8233ge722d4b06126" version="1">You summoned a temporary Basket Full of Equipment to your inventory. It and all its contents will disappear soon.</content>
 	<!-- "" --> <content contentuid="h76164e62g39b2g4eafg9f7egead0e51d1bb6" version="1">Toggles your veil's visuals on and off, if you have one selected from the mirror or character creation.</content>
 
+	<!-- Changing Bloodless for friendlies --> 
+	<!-- GOON_ASTARION_WEAK_FRIENDLY --> <content contentuid="h03ca14d9g0ca8g41d7g8bcfg6ea42fd5705f" version="1">Blood Donor</content>
+	<!-- GOON_ASTARION_WEAK_FRIENDLY --> <content contentuid="h9b7c1291g114dg4269gba95g59b4193d84b4" version="1">You feel a bit woozy, though you'd feel a lot worse were the feeding involuntary.</content>
+	
 	<!-- "Injuries/JWL Discordant Instruments patch" --> 
 	<!-- "" --> <content contentuid="ha50abb3cg00deg41d0g8acegc12258b60088" version="1">Triage Kit</content>
 	<!-- "" --> <content contentuid="h529bf12eg518dg4e7fg9f46gf91c7e3b2863" version="1">A collection of tools used for treating wounds in the field. Not as robust as an Injury Kit, lacking salves, tinctures and other important remedies, but a reliable collection of implements that stand the test of time nonetheless.</content>

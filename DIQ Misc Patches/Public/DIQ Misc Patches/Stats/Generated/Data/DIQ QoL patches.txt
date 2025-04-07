@@ -1,3 +1,49 @@
+new entry "ASTARION_WEAK"
+type "StatusData"
+data "StatusType" "BOOST"
+using "ASTARION_WEAK"
+// data "StatusEffect" "a0f74dff-7074-45aa-a4d2-a131d7f328f5"
+data "StatusEffect" ""
+data "OnApplyFunctors" "IF(Ally()):ApplyStatus(GOON_ASTARION_WEAK_FRIENDLY,100,-1)"
+
+new entry "GOON_ASTARION_WEAK_FRIENDLY"
+type "StatusData"
+data "StatusType" "BOOST"
+using "ASTARION_WEAK"
+// Blood Donor
+data "DisplayName" "h03ca14d9g0ca8g41d7g8bcfg6ea42fd5705f;1"
+// You feel a bit woozy, though you'd feel a lot worse were the feeding involuntary.
+data "Description" "h9b7c1291g114dg4269gba95g59b4193d84b4;1"
+// data "Boosts" "RollBonus(SavingThrow,0-1);RollBonus(Attack,0-1);RollBonus(SkillCheck,0-1)"
+data "Boosts" ""
+// data "OnApplyFunctors" "ApplyStatus(GOON_ASTARION_WEAK_FRIENDLY,100,-1)"
+data "OnApplyFunctors" "ApplyStatus(GOON_ASTARION_WEAK_FRIENDLY_FX,100,1)"
+// data "SoundLoop" "Misc_Status_Bloodeless_MO"
+data "SoundLoop" ""
+// data "SoundStop" "Misc_Status_Bloodeless_MO_Stop"
+data "SoundStop" ""
+// data "StatusEffect" "a0f74dff-7074-45aa-a4d2-a131d7f328f5"
+data "StatusEffect" ""
+data "StackId" "ASTARION_WEAK"
+data "StackPriority" "2"
+
+new entry "GOON_ASTARION_WEAK_FRIENDLY_FX"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator;DisableCombatlog"
+data "StatusEffect" "a0f74dff-7074-45aa-a4d2-a131d7f328f5"
+data "SoundLoop" "Misc_Status_Bloodeless_MO"
+data "SoundStop" "Misc_Status_Bloodeless_MO_Stop"
+
+// ==================================== Remove the movement speed penalty for short races, same as players already had from another mod ====================================
+
+new entry "Gnome_Speed"
+type "PassiveData"
+using "Gnome_Speed"
+data "Properties" "IsHidden"
+// data "Boosts" "ActionResource(Movement, -1.5, 0)"
+data "Boosts" ""
+
 // ==================================== Wifi Potions - Add "data "DefaultBoosts" "Tag(NOSORT)"" for exclusion from Simple Sorting Containers ====================================
 
 new entry "FallenStar_Wifi_Healing_Potion_Small"

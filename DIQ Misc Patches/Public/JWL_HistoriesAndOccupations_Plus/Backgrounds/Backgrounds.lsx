@@ -59,6 +59,17 @@
                         </node>
                     </children>
                 </node>
+                <!-- <node id="Background">
+                    <attribute id="Description" type="TranslatedString" handle="h5051e746g9573g43a5gbe19gaebdc2549883" version="1"/>
+                    <attribute id="DisplayName" type="TranslatedString" handle="hd987d82cg943bg40d6gbc2cg5ccff18302c7" version="1"/>
+                    <attribute id="Passives" type="LSString" value="Background_AstralDrifter"/>
+                    <attribute id="UUID" type="guid" value="421d3420-2606-4c42-bdfb-4f66270ecd6e"/>
+                    <children>
+                        <node id="Tags">
+                            <attribute id="Object" type="guid" value="b5401283-b37a-44b2-8de1-78cb3dfcfd40"/>
+                        </node>
+                    </children>
+                </node> -->
                 <node id="Background">
                     <attribute id="Description" type="TranslatedString" handle="hcb05605fg67c0g418dgaef2g37e1b244d57c" version="1"/>
                     <attribute id="DisplayName" type="TranslatedString" handle="h696ecd83g64a8g4418gaae5g4765e837bd6b" version="1"/>

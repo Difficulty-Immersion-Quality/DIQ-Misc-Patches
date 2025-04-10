@@ -1,4 +1,5 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<!-- Really Shadowheart (1.5.3.6) by iamy0urdad + Dark Urge Tweeaks by HyperspaceTowel - compatibility patch -->
+<?xml version="1.0" encoding="utf-8"?>
 <save>
 	<version major="4" minor="6" revision="0" build="300" lslib_meta="v1,bswap_guids,lsf_keys_adjacency" />
 	<region id="dialog">
@@ -117,6 +118,151 @@
 				</node>
 				<node id="nodes">
 					<children>
+<!-- MOD: Dark Urge Tweeaks -->
+						<node id="node" key="UUID">
+							<attribute id="constructor" type="FixedString" value="TagCinematic" />
+							<attribute id="UUID" type="FixedString" value="f5519a3c-c0ac-4222-be5f-82b58c1df5e9" />
+							<attribute id="speaker" type="int32" value="-1" />
+							<children>
+								<node id="children">
+									<children>
+										<node id="child">
+											<attribute id="UUID" type="FixedString" value="cc211e39-4620-4434-daa4-93edbb486ee9" />
+										</node>
+									</children>
+								</node>
+								<node id="GameData">
+									<children>
+										<node id="AiPersonalities" key="AiPersonality" />
+										<node id="MusicInstrumentSounds" />
+										<node id="OriginSound" />
+									</children>
+								</node>
+								<node id="Tags" />
+								<node id="setflags" />
+								<node id="checkflags" />
+							</children>
+						</node>
+						<node id="node" key="UUID">
+							<attribute id="constructor" type="FixedString" value="TagCinematic" />
+							<attribute id="UUID" type="FixedString" value="4f7a2b29-127e-4424-a022-fdacc3bafe06" />
+							<attribute id="speaker" type="int32" value="-1" />
+							<children>
+								<node id="children">
+									<children>
+										<node id="child">
+											<attribute id="UUID" type="FixedString" value="cc211e39-4620-4434-daa4-93edbb486ee9" />
+										</node>
+									</children>
+								</node>
+								<node id="GameData">
+									<children>
+										<node id="AiPersonalities" key="AiPersonality" />
+										<node id="MusicInstrumentSounds" />
+										<node id="OriginSound" />
+									</children>
+								</node>
+								<node id="Tags" />
+								<node id="setflags" />
+								<node id="checkflags">
+									<children>
+										<node id="flaggroup" key="type">
+											<attribute id="type" type="FixedString" value="Tag" />
+											<children>
+												<node id="flag" key="UUID">
+													<attribute id="UUID" type="FixedString" value="50e7beca-4e90-43cd-b7c5-c235e236077f" />
+													<attribute id="value" type="bool" value="True" />
+													<attribute id="paramval" type="int32" value="1" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="node" key="UUID">
+							<attribute id="constructor" type="FixedString" value="TagCinematic" />
+							<attribute id="UUID" type="FixedString" value="206a09b6-9bc3-4b53-97b9-7f8624e64711" />
+							<attribute id="speaker" type="int32" value="-1" />
+							<children>
+								<node id="children">
+									<children>
+										<node id="child">
+											<attribute id="UUID" type="FixedString" value="cc211e39-4620-4434-daa4-93edbb486ee9" />
+										</node>
+									</children>
+								</node>
+								<node id="GameData">
+									<children>
+										<node id="AiPersonalities" key="AiPersonality" />
+										<node id="MusicInstrumentSounds" />
+										<node id="OriginSound" />
+									</children>
+								</node>
+								<node id="Tags" />
+								<node id="setflags" />
+								<node id="checkflags">
+									<children>
+										<node id="flaggroup" key="type">
+											<attribute id="type" type="FixedString" value="Tag" />
+											<children>
+												<node id="flag" key="UUID">
+													<attribute id="UUID" type="FixedString" value="02e5e9ed-b6b2-4524-99cd-cb2bc84c754a" />
+													<attribute id="value" type="bool" value="True" />
+													<attribute id="paramval" type="int32" value="1" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="editorData">
+									<children>
+										<node id="data" key="key">
+											<attribute id="key" type="FixedString" value="CinematicNodeContext" />
+											<attribute id="val" type="LSString" value="|Smooches|" />
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="node" key="UUID">
+							<attribute id="constructor" type="FixedString" value="TagCinematic" />
+							<attribute id="UUID" type="FixedString" value="11d311f4-4296-4a1f-8283-cc9627469e93" />
+							<attribute id="speaker" type="int32" value="-1" />
+							<children>
+								<node id="children">
+									<children>
+										<node id="child">
+											<attribute id="UUID" type="FixedString" value="cc211e39-4620-4434-daa4-93edbb486ee9" />
+										</node>
+									</children>
+								</node>
+								<node id="GameData">
+									<children>
+										<node id="AiPersonalities" key="AiPersonality" />
+										<node id="MusicInstrumentSounds" />
+										<node id="OriginSound" />
+									</children>
+								</node>
+								<node id="Tags" />
+								<node id="setflags" />
+								<node id="checkflags">
+									<children>
+										<node id="flaggroup" key="type">
+											<attribute id="type" type="FixedString" value="Tag" />
+											<children>
+												<node id="flag" key="UUID">
+													<attribute id="UUID" type="FixedString" value="d3116e58-c55a-4853-a700-bee996207397" />
+													<attribute id="value" type="bool" value="True" />
+													<attribute id="paramval" type="int32" value="1" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+<!-- MOD: Dark Urge Tweeaks -->
 						<node id="node" key="UUID">
 							<attribute id="constructor" type="FixedString" value="TagQuestion" />
 							<attribute id="UUID" type="FixedString" value="008ef8b4-ea8b-01a8-9a42-c026ed4dbdab" />
@@ -1856,12 +2002,19 @@
 								<node id="checkflags">
 									<children>
 										<node id="flaggroup" key="type">
-											<attribute id="type" type="FixedString" value="Object" />
+<!-- MOD: Dark Urge Tweeaks -->
+											<!-- <attribute id="type" type="FixedString" value="Object" />
 											<children>
 												<node id="flag" key="UUID">
 													<attribute id="UUID" type="FixedString" value="9aa4feab-3697-4ad9-853d-b8ff6aabb845" />
 													<attribute id="value" type="bool" value="True" />
-													<attribute id="paramval" type="int32" value="0" />
+													<attribute id="paramval" type="int32" value="0" /> -->
+											<attribute id="type" type="FixedString" value="Global" />
+											<children>
+												<node id="flag" key="UUID">
+													<attribute id="UUID" type="FixedString" value="6e4b66e9-0f72-5171-04ba-441108b45b0e" />
+													<attribute id="value" type="bool" value="True" />
+<!-- MOD: Dark Urge Tweeaks -->
 												</node>
 											</children>
 										</node>
@@ -21689,7 +21842,10 @@
 								<node id="children">
 									<children>
 										<node id="child">
-											<attribute id="UUID" type="FixedString" value="a989f2d9-6e29-b5c6-942d-7b49d70cf900" />
+<!-- MOD: Really Shadowheart -->
+											<!-- <attribute id="UUID" type="FixedString" value="a989f2d9-6e29-b5c6-942d-7b49d70cf900" /> -->
+											<attribute id="UUID" type="FixedString" value="e408a5bb-3e15-43eb-9555-ce26b1e1da00" />
+<!-- MOD: Really Shadowheart -->
 										</node>
 									</children>
 								</node>
@@ -26249,6 +26405,78 @@
 								</node>
 							</children>
 						</node>
+<!-- MOD: Dark Urge Tweeaks -->
+						<node id="node" key="UUID">
+							<attribute id="constructor" type="FixedString" value="TagGreeting" />
+							<attribute id="UUID" type="FixedString" value="fbb3739c-d55d-4b2b-adf0-113dd1fb64eb" />
+							<attribute id="GroupIndex" type="int32" value="0" />
+							<attribute id="Root" type="bool" value="True" />
+							<attribute id="ShowOnce" type="bool" value="True" />
+							<attribute id="speaker" type="int32" value="0" />
+							<children>
+								<node id="children">
+									<children>
+										<node id="child">
+											<attribute id="UUID" type="FixedString" value="4f7a2b29-127e-4424-a022-fdacc3bafe06" />
+										</node>
+										<node id="child">
+											<attribute id="UUID" type="FixedString" value="206a09b6-9bc3-4b53-97b9-7f8624e64711" />
+										</node>
+										<node id="child">
+											<attribute id="UUID" type="FixedString" value="11d311f4-4296-4a1f-8283-cc9627469e93" />
+										</node>
+										<node id="child">
+											<attribute id="UUID" type="FixedString" value="f5519a3c-c0ac-4222-be5f-82b58c1df5e9" />
+										</node>
+									</children>
+								</node>
+								<node id="GameData">
+									<children>
+										<node id="AiPersonalities" key="AiPersonality">
+											<children>
+												<node id="AiPersonality">
+													<attribute id="AiPersonality" type="FixedString" value="" />
+												</node>
+											</children>
+										</node>
+										<node id="MusicInstrumentSounds" />
+										<node id="OriginSound" />
+									</children>
+								</node>
+								<node id="Tags" />
+								<node id="setflags" />
+								<node id="checkflags">
+									<children>
+										<node id="flaggroup" key="type">
+											<attribute id="type" type="FixedString" value="Object" />
+											<children>
+												<node id="flag" key="UUID">
+													<attribute id="UUID" type="FixedString" value="885a6052-a198-4e01-b153-72e3867e4faa" />
+													<attribute id="value" type="bool" value="True" />
+													<attribute id="paramval" type="int32" value="0" />
+												</node>
+												<node id="flag" key="UUID">
+													<attribute id="UUID" type="FixedString" value="d9ff60fa-0af9-45d7-99b4-bd7c3f80ed12" />
+													<attribute id="value" type="bool" value="True" />
+													<attribute id="paramval" type="int32" value="1" />
+												</node>
+											</children>
+										</node>
+										<node id="flaggroup" key="type">
+											<attribute id="type" type="FixedString" value="Tag" />
+											<children>
+												<node id="flag" key="UUID">
+													<attribute id="UUID" type="FixedString" value="cd611d7d-b67d-42b4-a75c-a0c6091ef8a2" />
+													<attribute id="value" type="bool" value="True" />
+													<attribute id="paramval" type="int32" value="1" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+<!-- MOD: Dark Urge Tweeaks -->
 						<node id="node" key="UUID">
 							<attribute id="constructor" type="FixedString" value="TagGreeting" />
 							<attribute id="UUID" type="FixedString" value="cc211e39-4620-4434-daa4-93edbb486ee9" />
@@ -29340,7 +29568,10 @@
 								<node id="children">
 									<children>
 										<node id="child">
+<!-- MOD: Really Shadowheart -->
 											<attribute id="UUID" type="FixedString" value="a989f2d9-6e29-b5c6-942d-7b49d70cf900" />
+											<attribute id="UUID" type="FixedString" value="e408a5bb-3e15-43eb-9555-ce26b1e1da00" />
+<!-- MOD: Really Shadowheart -->
 										</node>
 									</children>
 								</node>
@@ -29508,7 +29739,10 @@
 								<node id="children">
 									<children>
 										<node id="child">
+<!-- MOD: Really Shadowheart -->
 											<attribute id="UUID" type="FixedString" value="a989f2d9-6e29-b5c6-942d-7b49d70cf900" />
+											<attribute id="UUID" type="FixedString" value="e408a5bb-3e15-43eb-9555-ce26b1e1da00" />
+<!-- MOD: Really Shadowheart -->
 										</node>
 									</children>
 								</node>
@@ -31743,7 +31977,10 @@
 								<node id="children">
 									<children>
 										<node id="child">
+<!-- MOD: Really Shadowheart -->
 											<attribute id="UUID" type="FixedString" value="a989f2d9-6e29-b5c6-942d-7b49d70cf900" />
+											<attribute id="UUID" type="FixedString" value="e408a5bb-3e15-43eb-9555-ce26b1e1da00" />
+<!-- MOD: Really Shadowheart -->
 										</node>
 									</children>
 								</node>
@@ -33556,6 +33793,184 @@
 								</node>
 							</children>
 						</node>
+<!-- MOD: Really Shadowheart -->
+						<node id="node" key="UUID">
+							<attribute id="constructor" type="FixedString" value="TagAnswer" />
+							<attribute id="UUID" type="FixedString" value="e408a5bb-3e15-43eb-9555-ce26b1e1da00" />
+							<attribute id="speaker" type="int32" value="0" />
+							<children>
+								<node id="children">
+									<children>
+										<node id="child">
+											<attribute id="UUID" type="FixedString" value="a9f85537-9373-4050-84ee-84796900591a" />
+										</node>
+										<node id="child">
+											<attribute id="UUID" type="FixedString" value="ba5784f3-207e-4fe4-8220-8948989356de" />
+										</node>
+									</children>
+								</node>
+								<node id="GameData">
+									<children>
+										<node id="AiPersonalities" key="AiPersonality" />
+										<node id="MusicInstrumentSounds" />
+										<node id="OriginSound" />
+									</children>
+								</node>
+								<node id="Tags" />
+								<node id="setflags">
+									<children>
+										<node id="flaggroup" key="type">
+											<attribute id="type" type="FixedString" value="Object" />
+											<children>
+												<node id="flag" key="UUID">
+													<attribute id="UUID" type="FixedString" value="76339e33-bb45-4f1b-9d43-58773590175c" />
+													<attribute id="value" type="bool" value="True" />
+													<attribute id="paramval" type="int32" value="0" />
+												</node>
+											</children>
+										</node>
+										<node id="flaggroup" key="type">
+											<attribute id="type" type="FixedString" value="Quest" />
+											<children>
+												<node id="flag" key="UUID">
+													<attribute id="UUID" type="FixedString" value="b89b7e8a-3def-4777-aa93-87f1af1b1453" />
+													<attribute id="value" type="bool" value="True" />
+													<attribute id="paramval" type="int32" value="1" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="checkflags" />
+								<node id="TaggedTexts">
+									<children>
+										<node id="TaggedText">
+											<attribute id="HasTagRule" type="bool" value="True" />
+											<children>
+												<node id="TagTexts">
+													<children>
+														<node id="TagText">
+															<attribute id="TagText" type="TranslatedString" handle="hbd6440e1g5ba9g48eag854eg45cf84eb1697" version="2" />
+															<attribute id="LineId" type="guid" value="7280e90a-008b-4fea-aa1d-804c8018980a" />
+															<attribute id="stub" type="bool" value="True" />
+														</node>
+													</children>
+												</node>
+												<node id="RuleGroup">
+													<attribute id="TagCombineOp" type="uint8" value="0" />
+													<children>
+														<node id="Rules" />
+													</children>
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="node" key="UUID">
+							<attribute id="constructor" type="FixedString" value="TagAnswer" />
+							<attribute id="UUID" type="FixedString" value="a9f85537-9373-4050-84ee-84796900591a" />
+							<attribute id="speaker" type="int32" value="0" />
+							<attribute id="endnode" type="bool" value="True" />
+							<children>
+								<node id="children" />
+								<node id="GameData">
+									<children>
+										<node id="AiPersonalities" key="AiPersonality" />
+										<node id="MusicInstrumentSounds" />
+										<node id="OriginSound" />
+									</children>
+								</node>
+								<node id="Tags" />
+								<node id="setflags" />
+								<node id="checkflags">
+									<children>
+										<node id="flaggroup" key="type">
+											<attribute id="type" type="FixedString" value="Object" />
+											<children>
+												<node id="flag" key="UUID">
+													<attribute id="UUID" type="FixedString" value="f24c3f3e-7287-4908-84bf-ba314921f5ee" />
+													<attribute id="value" type="bool" value="True" />
+													<attribute id="paramval" type="int32" value="0" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="TaggedTexts">
+									<children>
+										<node id="TaggedText">
+											<attribute id="HasTagRule" type="bool" value="True" />
+											<children>
+												<node id="TagTexts">
+													<children>
+														<node id="TagText">
+															<attribute id="TagText" type="TranslatedString" handle="h9452b111ged7bg46a8g8893g08943e114e92" version="1" />
+															<attribute id="LineId" type="guid" value="64f30047-c6cc-4217-86fc-4dede700f55c" />
+															<attribute id="stub" type="bool" value="True" />
+														</node>
+													</children>
+												</node>
+												<node id="RuleGroup">
+													<attribute id="TagCombineOp" type="uint8" value="0" />
+													<children>
+														<node id="Rules" />
+													</children>
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="node" key="UUID">
+							<attribute id="constructor" type="FixedString" value="TagAnswer" />
+							<attribute id="UUID" type="FixedString" value="ba5784f3-207e-4fe4-8220-8948989356de" />
+							<attribute id="speaker" type="int32" value="0" />
+							<attribute id="endnode" type="bool" value="True" />
+							<children>
+								<node id="children" />
+								<node id="GameData">
+									<children>
+										<node id="AiPersonalities" key="AiPersonality" />
+										<node id="MusicInstrumentSounds" />
+										<node id="OriginSound" />
+									</children>
+								</node>
+								<node id="Tags" />
+								<node id="setflags" />
+								<node id="checkflags" />
+								<node id="TaggedTexts">
+									<children>
+										<node id="TaggedText">
+											<attribute id="HasTagRule" type="bool" value="True" />
+											<children>
+												<node id="TagTexts">
+													<children>
+														<node id="TagText">
+															<attribute id="TagText" type="TranslatedString" handle="hcac4ab0ag2a1fg4a7cga7d7gdadda38445de" version="2" />
+															<attribute id="LineId" type="guid" value="a42e2967-a789-4d88-8a23-e98203a1b758" />
+															<attribute id="stub" type="bool" value="True" />
+														</node>
+													</children>
+												</node>
+												<node id="RuleGroup">
+													<attribute id="TagCombineOp" type="uint8" value="0" />
+													<children>
+														<node id="Rules" />
+													</children>
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="RootNodes">
+							<attribute id="RootNodes" type="FixedString" value="d265f2a7-2f4d-b0ef-4351-5a10aa9ff300" />
+						</node>
+<!-- MOD: Really Shadowheart -->
 						<node id="RootNodes">
 							<attribute id="RootNodes" type="FixedString" value="4cd2b822-c862-ccba-1d50-acc1968a84a7" />
 						</node>
@@ -33820,9 +34235,11 @@
 						<node id="RootNodes">
 							<attribute id="RootNodes" type="FixedString" value="f8c4533c-15f9-30cf-d849-ad955655e8d7" />
 						</node>
-						<node id="RootNodes">
+<!-- MOD: Really Shadowheart -->
+						<!-- <node id="RootNodes">
 							<attribute id="RootNodes" type="FixedString" value="d265f2a7-2f4d-b0ef-4351-5a10aa9ff300" />
-						</node>
+						</node> -->
+<!-- MOD: Really Shadowheart -->
 						<node id="RootNodes">
 							<attribute id="RootNodes" type="FixedString" value="b4136c8b-6e42-1cd7-7200-49311c959585" />
 						</node>
@@ -33856,6 +34273,11 @@
 						<node id="RootNodes">
 							<attribute id="RootNodes" type="FixedString" value="f21ce1ae-3c72-57e6-6436-526607eeac87" />
 						</node>
+<!-- MOD: Dark Urge Tweeaks -->
+						<node id="RootNodes">
+							<attribute id="RootNodes" type="FixedString" value="fbb3739c-d55d-4b2b-adf0-113dd1fb64eb" />
+						</node>
+<!-- MOD: Dark Urge Tweeaks -->
 						<node id="RootNodes">
 							<attribute id="RootNodes" type="FixedString" value="cc211e39-4620-4434-daa4-93edbb486ee9" />
 						</node>

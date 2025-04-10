@@ -1,6 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<!-- Really Shadowheart (1.5.3.6) by iamy0urdad + Halsin - Additional Responses (Halsin - Tell Me About Yourself - Additional Player Responses) (1.2.1) by Kicking Writer -->
+<!-- There's more edits from Really Shadowheart here than I can be assed to comment in -->
+<?xml version="1.0" encoding="utf-8"?>
 <save>
+<!-- Mod: Really Shadowheart -->
+	<!-- <version major="4" minor="6" revision="0" build="700" lslib_meta="v1,bswap_guids,lsf_keys_adjacency" /> -->
 	<version major="4" minor="6" revision="0" build="1" lslib_meta="v1,bswap_guids" />
+<!-- Mod: Really Shadowheart -->
 	<region id="dialog">
 		<node id="dialog">
 			<attribute id="category" type="LSString" value="Generic NPC Dialog" />
@@ -9,43 +14,73 @@
 			<children>
 				<node id="DefaultAddressedSpeakers">
 					<children>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="Object">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="MapKey" type="int32" value="2" />
 							<attribute id="MapValue" type="int32" value="-1" />
 						</node>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="Object">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="MapKey" type="int32" value="3" />
 							<attribute id="MapValue" type="int32" value="-1" />
 						</node>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="Object">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="MapKey" type="int32" value="4" />
 							<attribute id="MapValue" type="int32" value="-1" />
 						</node>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="Object">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="MapKey" type="int32" value="5" />
 							<attribute id="MapValue" type="int32" value="-1" />
 						</node>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="Object">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="MapKey" type="int32" value="6" />
 							<attribute id="MapValue" type="int32" value="-1" />
 						</node>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="Object">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="MapKey" type="int32" value="7" />
 							<attribute id="MapValue" type="int32" value="-1" />
 						</node>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="Object">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="MapKey" type="int32" value="8" />
 							<attribute id="MapValue" type="int32" value="-1" />
 						</node>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="Object">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="MapKey" type="int32" value="9" />
 							<attribute id="MapValue" type="int32" value="-1" />
 						</node>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="Object">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="MapKey" type="int32" value="10" />
 							<attribute id="MapValue" type="int32" value="-1" />
 						</node>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="Object">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="MapKey" type="int32" value="11" />
 							<attribute id="MapValue" type="int32" value="-1" />
 						</node>
@@ -53,71 +88,107 @@
 				</node>
 				<node id="speakerlist">
 					<children>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="speaker">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="index" type="FixedString" value="0" />
 							<attribute id="list" type="LSString" value="7628bc0e-52b8-42a7-856a-13a6fd413323" />
 							<attribute id="SpeakerMappingId" type="guid" value="26b59002-38c0-2867-3511-20d1d8184db6" />
 						</node>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="speaker">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="index" type="FixedString" value="1" />
 							<attribute id="list" type="LSString" value="e0d1ff71-04a8-4340-ae64-9684d846eb83" />
 							<attribute id="SpeakerMappingId" type="guid" value="d09df5a0-557c-fe01-1281-b28df602d692" />
 						</node>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="speaker">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="index" type="FixedString" value="2" />
 							<attribute id="list" type="LSString" value="58a69333-40bf-8358-1d17-fff240d7fb12" />
 							<attribute id="SpeakerMappingId" type="guid" value="faf7f859-0dd2-48fa-bb2f-aeb5b39a30d5" />
 							<attribute id="IsPeanutSpeaker" type="bool" value="True" />
 						</node>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="speaker">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="index" type="FixedString" value="3" />
 							<attribute id="list" type="LSString" value="3ed74f06-3c60-42dc-83f6-f034cb47c679" />
 							<attribute id="SpeakerMappingId" type="guid" value="f6bedfc8-b733-4d1f-b409-be82e4e20df3" />
 							<attribute id="IsPeanutSpeaker" type="bool" value="True" />
 						</node>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="speaker">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="index" type="FixedString" value="4" />
 							<attribute id="list" type="LSString" value="c7c13742-bacd-460a-8f65-f864fe41f255" />
 							<attribute id="SpeakerMappingId" type="guid" value="659ed39a-21ea-48dc-847a-620efd82ce9f" />
 							<attribute id="IsPeanutSpeaker" type="bool" value="True" />
 						</node>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="speaker">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="index" type="FixedString" value="5" />
 							<attribute id="list" type="LSString" value="c774d764-4a17-48dc-b470-32ace9ce447d" />
 							<attribute id="SpeakerMappingId" type="guid" value="735e85f7-1a61-4a59-89f4-0a70c0cbf8e6" />
 							<attribute id="IsPeanutSpeaker" type="bool" value="True" />
 						</node>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="speaker">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="index" type="FixedString" value="6" />
 							<attribute id="list" type="LSString" value="ad9af97d-75da-406a-ae13-7071c563f604" />
 							<attribute id="SpeakerMappingId" type="guid" value="f217da32-f641-4c30-b621-e7d5a805340d" />
 							<attribute id="IsPeanutSpeaker" type="bool" value="True" />
 						</node>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="speaker">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="index" type="FixedString" value="7" />
 							<attribute id="list" type="LSString" value="2c76687d-93a2-477b-8b18-8a14b549304c" />
 							<attribute id="SpeakerMappingId" type="guid" value="b1ff0d93-d7e4-4b77-955a-c6e0ab87d02c" />
 							<attribute id="IsPeanutSpeaker" type="bool" value="True" />
 						</node>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="speaker">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="index" type="FixedString" value="8" />
 							<attribute id="list" type="LSString" value="91b6b200-7d00-4d62-8dc9-99e8339dfa1a" />
 							<attribute id="SpeakerMappingId" type="guid" value="4e000c3f-4169-429b-8905-002f98d87e80" />
 							<attribute id="IsPeanutSpeaker" type="bool" value="True" />
 						</node>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="speaker">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="index" type="FixedString" value="9" />
 							<attribute id="list" type="LSString" value="0de603c5-42e2-4811-9dad-f652de080eba" />
 							<attribute id="SpeakerMappingId" type="guid" value="9c4c915d-e616-4927-9155-855f4fe8a6fa" />
 							<attribute id="IsPeanutSpeaker" type="bool" value="True" />
 						</node>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="speaker">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="index" type="FixedString" value="10" />
 							<attribute id="list" type="LSString" value="25721313-0c15-4935-8176-9f134385451b" />
 							<attribute id="SpeakerMappingId" type="guid" value="0ca45175-bdad-4b85-8037-db0953a0dce5" />
 							<attribute id="IsPeanutSpeaker" type="bool" value="True" />
 						</node>
+						<!-- Mod: Really Shadowheart -->
+						<!-- <node id="Object" key="MapKey"> -->
 						<node id="speaker">
+						<!-- Mod: Really Shadowheart -->
 							<attribute id="index" type="FixedString" value="11" />
 							<attribute id="list" type="LSString" value="7628bc0e-52b8-42a7-856a-13a6fd413323" />
 							<attribute id="SpeakerMappingId" type="guid" value="21ffda91-b298-4bba-ab11-4f7bb812122e" />
@@ -17526,6 +17597,7 @@
 								</node>
 							</children>
 						</node>
+<!-- MOD: Halsin - Additional Responses (Halsin - Tell Me About Yourself - Additional Player Responses) -->
 						<node id="node">
 							<attribute id="constructor" type="FixedString" value="TagQuestion" />
 							<attribute id="UUID" type="FixedString" value="e4634953-db17-48a8-bb3f-75a4932f5098" />
@@ -17657,6 +17729,7 @@
 							</children>
 						</node>
 						<node id="node">
+<!-- MOD: Halsin - Additional Responses (Halsin - Tell Me About Yourself - Additional Player Responses) -->
 							<attribute id="constructor" type="FixedString" value="TagQuestion" />
 							<attribute id="UUID" type="FixedString" value="a606215a-010a-03cf-dc3a-0a51a810dc84" />
 							<attribute id="ShowOnce" type="bool" value="True" />

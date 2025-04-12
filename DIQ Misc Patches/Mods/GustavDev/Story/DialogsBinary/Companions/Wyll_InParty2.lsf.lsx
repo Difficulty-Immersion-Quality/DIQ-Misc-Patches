@@ -837,7 +837,7 @@
 								<node id="checkflags">
 									<children>
 										<node id="flaggroup" key="type">
-<!-- MOD: Really Shadowheart -->
+<!-- MOD: Really Shadowheart start -->
 											<!-- <attribute id="type" type="FixedString" value="Global" /> -->
 											<attribute id="type" type="FixedString" value="Object" />
 											<children>
@@ -846,7 +846,7 @@
 													<attribute id="UUID" type="FixedString" value="fccac36f-92a5-ad84-9e45-fed71d386452" />
 													<attribute id="value" type="bool" value="True" />
 													<attribute id="paramval" type="int32" value="0" />
-<!-- MOD: Really Shadowheart -->
+<!-- MOD: Really Shadowheart end -->
 												</node>
 											</children>
 										</node>
@@ -920,10 +920,10 @@
 												<node id="flag" key="UUID">
 													<attribute id="UUID" type="FixedString" value="98ca7185-0f2d-4420-be81-2b7c5e109e91" />
 													<attribute id="value" type="bool" value="False" />
-<!-- MOD: Really Shadowheart -->
+<!-- MOD: Really Shadowheart start -->
 													<!-- <attribute id="paramval" type="int32" value="1" /> -->
 													<attribute id="paramval" type="int32" value="0" />
-<!-- MOD: Really Shadowheart -->
+<!-- MOD: Really Shadowheart end -->
 												</node>
 												<node id="flag" key="UUID">
 													<attribute id="UUID" type="FixedString" value="91cfff92-fb1e-caf5-9d5c-9c5971b96d04" />
@@ -6946,11 +6946,11 @@
 										<node id="child">
 											<attribute id="UUID" type="FixedString" value="fa9c2abf-7557-a46d-145e-0d198bac4605" />
 										</node>
-<!-- MOD: Dark Urge Tweeaks -->
+<!-- MOD: Dark Urge Tweeaks start -->
 										<node id="child">
 											<attribute id="UUID" type="FixedString" value="dcdd8fd2-8e94-4a3a-b57e-a75077e38087" />
 										</node>
-<!-- MOD: Dark Urge Tweeaks -->
+<!-- MOD: Dark Urge Tweeaks end -->
 										<node id="child">
 											<attribute id="UUID" type="FixedString" value="b3087076-82ab-a1c2-3d9e-2fffb78dd384" />
 										</node>
@@ -7021,7 +7021,7 @@
 									</children>
 								</node>
 								<node id="checkflags" />
-<!-- MOD: Really Shadowheart -->
+<!-- MOD: Really Shadowheart start -->
 									<children>
 										<node id="flaggroup" key="type">
 											<attribute id="type" type="FixedString" value="Global" />
@@ -7044,7 +7044,7 @@
 										</node>
 									</children>
 								</node>
-<!-- MOD: Really Shadowheart -->
+<!-- MOD: Really Shadowheart end -->
 								<node id="TaggedTexts">
 									<children>
 										<node id="TaggedText">
@@ -8992,11 +8992,11 @@
 							<children>
 								<node id="children">
 									<children>
-<!-- MOD: Really Shadowheart -->
+<!-- MOD: Really Shadowheart start -->
 										<node id="child">
 											<attribute id="UUID" type="FixedString" value="e95a035a-e9e4-4684-a620-bf51e2a2e674" />
 										</node>
-<!-- MOD: Really Shadowheart -->
+<!-- MOD: Really Shadowheart end -->
 										<node id="child">
 											<attribute id="UUID" type="FixedString" value="49c125c8-aefd-d18a-d6cb-307b4968b803" />
 										</node>
@@ -14259,7 +14259,7 @@
 								<node id="checkflags" />
 							</children>
 						</node>
-<!-- MOD: Dark Urge Tweeaks -->
+<!-- MOD: Dark Urge Tweeaks start -->
 						<node id="node" key="UUID">
 							<attribute id="constructor" type="FixedString" value="Alias" />
 							<attribute id="UUID" type="FixedString" value="c3b16489-7c89-46cd-bd16-f45877ff002e" />
@@ -14323,7 +14323,7 @@
 								</node>
 							</children>
 						</node>
-<!-- MOD: Dark Urge Tweeaks -->
+<!-- MOD: Dark Urge Tweeaks end -->
 						<node id="node" key="UUID">
 							<attribute id="constructor" type="FixedString" value="TagGreeting" />
 							<attribute id="UUID" type="FixedString" value="aaee1f12-3ae0-e770-d4a9-46662038aa61" />
@@ -14346,7 +14346,7 @@
 								</node>
 								<node id="Tags" />
 								<node id="setflags" />
-<!-- Really Shadowheart removes this whole flag, not doing that for the sake of Dark Urge Tweaks -->
+<!-- Comment: Really Shadowheart removes this whole flag, not doing that for the sake of Dark Urge Tweaks -->
 								<node id="checkflags">
 									<children>
 										<node id="flaggroup" key="type">
@@ -14354,10 +14354,10 @@
 											<children>
 												<node id="flag" key="UUID">
 													<attribute id="UUID" type="FixedString" value="4c39c64b-8373-6f5f-2dac-990196d3c6dc" />
-<!-- MOD: Dark Urge Tweeaks -->
+<!-- MOD: Dark Urge Tweeaks start -->
 													<!-- <attribute id="value" type="bool" value="True" /> -->
 													<attribute id="value" type="bool" value="False" />
-<!-- MOD: Dark Urge Tweeaks -->
+<!-- MOD: Dark Urge Tweeaks end -->
 													<attribute id="paramval" type="int32" value="0" />
 												</node>
 											</children>
@@ -15276,13 +15276,13 @@
 											<attribute id="type" type="FixedString" value="Object" />
 											<children>
 												<node id="flag" key="UUID">
-<!-- MOD: Really Shadowheart -->
+<!-- MOD: Really Shadowheart start -->
 													<!-- <attribute id="UUID" type="FixedString" value="d4fd622a-dc87-40ce-7d8f-eab9f2a76fa0" /> -->
 													<attribute id="UUID" type="FixedString" value="cb50595f-b514-26a8-0c90-fbb21185b22e" />
 													<attribute id="value" type="bool" value="True" />
 													<!-- <attribute id="paramval" type="int32" value="1" /> -->
 													<attribute id="paramval" type="int32" value="0" />
-<!-- MOD: Really Shadowheart -->
+<!-- MOD: Really Shadowheart end -->
 												</node>
 											</children>
 										</node>
@@ -15874,12 +15874,12 @@
 											<attribute id="type" type="FixedString" value="Object" />
 											<children>
 												<node id="flag" key="UUID">
-<!-- Really Shadowheart has a lesser dissaproval UUID here: <attribute id="UUID" type="FixedString" value="4c39c64b-8373-6f5f-2dac-990196d3c6dc" /> -->
+<!-- Comment: Really Shadowheart has a lesser dissaproval UUID here: <attribute id="UUID" type="FixedString" value="4c39c64b-8373-6f5f-2dac-990196d3c6dc" /> -->
 													<attribute id="UUID" type="FixedString" value="8048280b-6d47-7a41-ca35-4acd441219fb" />
-<!-- MOD: Dark Urge Tweeaks -->
+<!-- MOD: Dark Urge Tweeaks start -->
 													<!-- <attribute id="value" type="bool" value="True" /> -->
 													<attribute id="value" type="bool" value="False" />
-<!-- MOD: Dark Urge Tweeaks -->
+<!-- MOD: Dark Urge Tweeaks end -->
 													<attribute id="paramval" type="int32" value="0" />
 												</node>
 											</children>
@@ -20931,7 +20931,7 @@
 								</node>
 							</children>
 						</node>
-<!-- MOD: Dark Urge Tweeaks -->
+<!-- MOD: Dark Urge Tweeaks start -->
 						<node id="node" key="UUID">
 							<attribute id="constructor" type="FixedString" value="TagQuestion" />
 							<attribute id="UUID" type="FixedString" value="fa9c2abf-7557-a46d-145e-0d198bac4605" />
@@ -21150,7 +21150,7 @@
 								</node>
 							</children>
 						</node>
-<!-- MOD: Dark Urge Tweeaks -->
+<!-- MOD: Dark Urge Tweeaks end -->
 						<node id="node" key="UUID">
 							<attribute id="constructor" type="FixedString" value="TagQuestion" />
 							<attribute id="UUID" type="FixedString" value="fa9c2abf-7557-a46d-145e-0d198bac4605" />
@@ -21286,7 +21286,7 @@
 								<node id="checkflags">
 									<children>
 										<node id="flaggroup" key="type">
-<!-- MOD: Really Shadowheart -->
+<!-- MOD: Really Shadowheart start -->
 											<!-- <attribute id="type" type="FixedString" value="Global" /> -->
 											<attribute id="type" type="FixedString" value="Object" />
 											<children>
@@ -21295,7 +21295,7 @@
 													<attribute id="UUID" type="FixedString" value="bf670cb3-8110-e901-ed45-bb0b0f15b761" />
 													<attribute id="value" type="bool" value="True" />
 													<attribute id="paramval" type="int32" value="0" />
-<!-- MOD: Really Shadowheart -->
+<!-- MOD: Really Shadowheart end -->
 												</node>
 											</children>
 										</node>
@@ -21631,7 +21631,7 @@
 								</node>
 							</children>
 						</node>
-<!-- MOD: Really Shadowheart -->
+<!-- MOD: Really Shadowheart start -->
 						<node id="node" key="UUID">
 							<attribute id="constructor" type="FixedString" value="TagAnswer" />
 							<attribute id="UUID" type="FixedString" value="e95a035a-e9e4-4684-a620-bf51e2a2e674" />
@@ -21678,7 +21678,7 @@
 								<node id="TaggedTexts" />
 							</children>
 						</node>
-<!-- MOD: Really Shadowheart -->
+<!-- MOD: Really Shadowheart end -->
 						<node id="RootNodes">
 							<attribute id="RootNodes" type="FixedString" value="d0faaf68-42b2-641d-1a36-e2562205928a" />
 						</node>
@@ -21796,13 +21796,13 @@
 						<node id="RootNodes">
 							<attribute id="RootNodes" type="FixedString" value="3ccbfc79-8833-0664-df9b-48d2fc207631" />
 						</node>
-<!-- MOD: Dark Urge Tweeaks -->
+<!-- MOD: Dark Urge Tweeaks start-->
 						<node id="RootNodes">
 							<attribute id="RootNodes" type="FixedString" value="c3b16489-7c89-46cd-bd16-f45877ff002e" />
 						</node>
-<!-- MOD: Dark Urge Tweeaks -->
+<!-- MOD: Dark Urge Tweeaks end -->
 						<node id="RootNodes">
-<!-- MOD: Really Shadowheart -->
+<!-- MOD: Really Shadowheart start -->
 <!-- Does the order of these nodes really matter? -->
 							<!-- <attribute id="RootNodes" type="FixedString" value="aaee1f12-3ae0-e770-d4a9-46662038aa61" />
 						</node>
@@ -21836,7 +21836,7 @@
 						</node>
 						<node id="RootNodes">
 							<attribute id="RootNodes" type="FixedString" value="aaee1f12-3ae0-e770-d4a9-46662038aa61" />
-<!-- MOD: Really Shadowheart -->
+<!-- MOD: Really Shadowheart end -->
 						</node>
 						<node id="RootNodes">
 							<attribute id="RootNodes" type="FixedString" value="3470efb3-cff9-432d-dc87-8a837e7efca9" />

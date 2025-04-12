@@ -3227,6 +3227,21 @@
 								<node id="Tags" />
 								<node id="setflags" />
 								<node id="checkflags" />
+<!-- MOD: Something start -->
+									<!-- <children>
+										<node id="flaggroup" key="type">
+											<attribute id="type" type="FixedString" value="Tag" />
+											<children>
+												<node id="flag" key="UUID">
+													<attribute id="UUID" type="FixedString" value="ffd08582-7396-4cac-bcd4-8f9cd0fd8ef3" />
+													<attribute id="value" type="bool" value="True" />
+													<attribute id="paramval" type="int32" value="1" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node> -->
+<!-- MOD: Something end -->
 								<node id="TaggedTexts">
 									<children>
 										<node id="TaggedText">
@@ -6724,6 +6739,8 @@
 								</node>
 							</children>
 						</node>
+<!-- MOD: Something start -->
+						<!-- <node id="node" key="UUID"> -->
 						<node id="node">
 							<attribute id="constructor" type="FixedString" value="TagQuestion" />
 							<attribute id="UUID" type="FixedString" value="13d9f5bf-7979-41d8-88cc-908816dbde61" />
@@ -6810,6 +6827,7 @@
 							</children>
 						</node>
 						<node id="node">
+<!-- MOD: Something end -->
 							<attribute id="constructor" type="FixedString" value="TagQuestion" />
 							<attribute id="UUID" type="FixedString" value="4056dd02-f7fc-9a5c-f8fd-953afbd87b83" />
 							<attribute id="ShowOnce" type="bool" value="True" />
@@ -13196,6 +13214,21 @@
 								<node id="Tags" />
 								<node id="setflags" />
 								<node id="checkflags" />
+<!-- MOD: Something start -->
+									<!-- <children>
+										<node id="flaggroup" key="type">
+											<attribute id="type" type="FixedString" value="Tag" />
+											<children>
+												<node id="flag" key="UUID">
+													<attribute id="UUID" type="FixedString" value="b5682d1d-c395-489c-9675-1f9b0c328ea5" />
+													<attribute id="value" type="bool" value="True" />
+													<attribute id="paramval" type="int32" value="1" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node> -->
+<!-- MOD: Something end -->
 								<node id="TaggedTexts">
 									<children>
 										<node id="TaggedText">
@@ -17597,7 +17630,7 @@
 								</node>
 							</children>
 						</node>
-<!-- MOD: Halsin - Additional Responses (Halsin - Tell Me About Yourself - Additional Player Responses) -->
+<!-- MOD: Halsin - Additional Responses (Halsin - Tell Me About Yourself - Additional Player Responses) start -->
 						<node id="node">
 							<attribute id="constructor" type="FixedString" value="TagQuestion" />
 							<attribute id="UUID" type="FixedString" value="e4634953-db17-48a8-bb3f-75a4932f5098" />
@@ -17729,7 +17762,7 @@
 							</children>
 						</node>
 						<node id="node">
-<!-- MOD: Halsin - Additional Responses (Halsin - Tell Me About Yourself - Additional Player Responses) -->
+<!-- MOD: Halsin - Additional Responses (Halsin - Tell Me About Yourself - Additional Player Responses) end -->
 							<attribute id="constructor" type="FixedString" value="TagQuestion" />
 							<attribute id="UUID" type="FixedString" value="a606215a-010a-03cf-dc3a-0a51a810dc84" />
 							<attribute id="ShowOnce" type="bool" value="True" />
@@ -19701,6 +19734,7 @@
 								</node>
 							</children>
 						</node>
+<!-- MOD: Something start -->
 						<node id="node">
 							<attribute id="constructor" type="FixedString" value="TagQuestion" />
 							<attribute id="UUID" type="FixedString" value="b5541a96-d49c-4939-b573-378cb367b207" />
@@ -19767,6 +19801,7 @@
 							</children>
 						</node>
 						<node id="node">
+<!-- MOD: Something end -->
 							<attribute id="constructor" type="FixedString" value="TagAnswer" />
 							<attribute id="UUID" type="FixedString" value="bac7daa7-3801-3458-2673-fa0d0fcc9293" />
 							<attribute id="speaker" type="int32" value="0" />
@@ -20503,6 +20538,19 @@
 											<attribute id="type" type="FixedString" value="Object" />
 											<children>
 												<node id="flag">
+<!-- MOD: something -->
+												<!-- <node id="flag" key="UUID">
+													<attribute id="UUID" type="FixedString" value="7b53fe60-bb16-48a9-ae5c-9bce1dfac1a9" />
+													<attribute id="value" type="bool" value="False" />
+													<attribute id="paramval" type="int32" value="1" />
+												</node>
+												<node id="flag" key="UUID">
+													<attribute id="UUID" type="FixedString" value="6af0be74-d032-4a20-876a-11bab5f86db2" />
+													<attribute id="value" type="bool" value="False" />
+													<attribute id="paramval" type="int32" value="1" />
+												</node>
+												<node id="flag" key="UUID"> -->
+<!-- MOD: something -->
 													<attribute id="UUID" type="FixedString" value="e6423eae-d8f1-a668-cd1a-29ec76e9d37d" />
 													<attribute id="value" type="bool" value="True" />
 													<attribute id="paramval" type="int32" value="1" />
@@ -24525,6 +24573,12 @@
 											<attribute id="type" type="FixedString" value="Global" />
 											<children>
 												<node id="flag">
+<!-- MOD: something -->
+													<!-- <attribute id="UUID" type="FixedString" value="d2cfe28b-a9d2-4e54-8e54-77f3f35a122d" />
+													<attribute id="value" type="bool" value="True" />
+												</node>
+												<node id="flag" key="UUID"> -->
+<!-- MOD: something -->
 													<attribute id="UUID" type="FixedString" value="6e4b66e9-0f72-5171-04ba-441108b45b0e" />
 													<attribute id="value" type="bool" value="True" />
 												</node>

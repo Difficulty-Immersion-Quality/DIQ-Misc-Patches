@@ -1,5 +1,5 @@
-﻿<!-- Really Shadowheart (1.5.3.6) by iamy0urdad + Dark Urge Tweeaks by HyperspaceTowel - compatibility patch -->
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Really Shadowheart (1.5.3.6) by iamy0urdad + Dark Urge Tweeaks by HyperspaceTowel - compatibility patch -->
 <save>
 	<version major="4" minor="6" revision="0" build="500" lslib_meta="v1,bswap_guids,lsf_keys_adjacency" />
 	<region id="dialog">
@@ -1093,8 +1093,9 @@
 								</node>
 								<node id="Tags" />
 								<node id="setflags" />
-								<node id="checkflags">
 <!-- MOD: Really Shadowheart start -->
+								<!-- <node id="checkflags"> -->
+								<node id="checkflags" />
 									<!-- <children>
 										<node id="flaggroup" key="type">
 											<attribute id="type" type="FixedString" value="Global" />
@@ -10244,8 +10245,9 @@
 										</node>
 									</children>
 								</node>
-								<node id="checkflags">
 <!-- MOD:Really Shadowheart start -->
+								<!-- <node id="checkflags"> -->
+								<node id="checkflags" />
 									<!-- <children>
 										<node id="flaggroup" key="type">
 											<attribute id="type" type="FixedString" value="Local" />

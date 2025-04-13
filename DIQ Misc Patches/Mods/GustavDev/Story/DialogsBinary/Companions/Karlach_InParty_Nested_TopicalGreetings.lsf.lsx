@@ -1,5 +1,5 @@
-﻿<!-- Really Shadowheart (1.5.3.6) by iamy0urdad + Dark Urge Tweeaks by HyperspaceTowel - compatibility patch -->
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Really Shadowheart (1.5.3.6) by iamy0urdad + Dark Urge Tweeaks by HyperspaceTowel - compatibility patch -->
 <save>
 	<version major="4" minor="6" revision="0" build="300" lslib_meta="v1,bswap_guids,lsf_keys_adjacency" />
 	<region id="dialog">
@@ -29569,7 +29569,7 @@
 									<children>
 										<node id="child">
 <!-- MOD: Really Shadowheart -->
-											<attribute id="UUID" type="FixedString" value="a989f2d9-6e29-b5c6-942d-7b49d70cf900" />
+											<!-- <attribute id="UUID" type="FixedString" value="a989f2d9-6e29-b5c6-942d-7b49d70cf900" /> -->
 											<attribute id="UUID" type="FixedString" value="e408a5bb-3e15-43eb-9555-ce26b1e1da00" />
 <!-- MOD: Really Shadowheart -->
 										</node>
@@ -29740,7 +29740,7 @@
 									<children>
 										<node id="child">
 <!-- MOD: Really Shadowheart -->
-											<attribute id="UUID" type="FixedString" value="a989f2d9-6e29-b5c6-942d-7b49d70cf900" />
+											<!-- <attribute id="UUID" type="FixedString" value="a989f2d9-6e29-b5c6-942d-7b49d70cf900" /> -->
 											<attribute id="UUID" type="FixedString" value="e408a5bb-3e15-43eb-9555-ce26b1e1da00" />
 <!-- MOD: Really Shadowheart -->
 										</node>
@@ -31978,7 +31978,7 @@
 									<children>
 										<node id="child">
 <!-- MOD: Really Shadowheart -->
-											<attribute id="UUID" type="FixedString" value="a989f2d9-6e29-b5c6-942d-7b49d70cf900" />
+											<!-- <attribute id="UUID" type="FixedString" value="a989f2d9-6e29-b5c6-942d-7b49d70cf900" /> -->
 											<attribute id="UUID" type="FixedString" value="e408a5bb-3e15-43eb-9555-ce26b1e1da00" />
 <!-- MOD: Really Shadowheart -->
 										</node>

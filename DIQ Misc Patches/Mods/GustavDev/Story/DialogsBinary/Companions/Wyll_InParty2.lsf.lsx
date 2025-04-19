@@ -14347,24 +14347,27 @@
 								</node>
 								<node id="Tags" />
 								<node id="setflags" />
-<!-- Comment: Really Shadowheart removes this whole flag, not doing that for the sake of Dark Urge Tweaks -->
-								<node id="checkflags">
-									<children>
+<!-- Comment: Really Shadowheart removes this whole flag, not doing so for the sake of Dark Urge Tweaks appears to fuck shit up, making Wyll mute -->
+<!-- MOD: Really Shadowheart start -->
+								<node id="checkflags" />
+								<!-- <node id="checkflags"> -->
+<!-- MOD: Really Shadowheart end -->
+									<!-- <children>
 										<node id="flaggroup" key="type">
 											<attribute id="type" type="FixedString" value="Object" />
 											<children>
 												<node id="flag" key="UUID">
-													<attribute id="UUID" type="FixedString" value="4c39c64b-8373-6f5f-2dac-990196d3c6dc" />
+													<attribute id="UUID" type="FixedString" value="4c39c64b-8373-6f5f-2dac-990196d3c6dc" /> -->
 <!-- MOD: Dark Urge Tweeaks start -->
 													<!-- <attribute id="value" type="bool" value="True" /> -->
-													<attribute id="value" type="bool" value="False" />
+													<!-- <attribute id="value" type="bool" value="False" /> -->
 <!-- MOD: Dark Urge Tweeaks end -->
-													<attribute id="paramval" type="int32" value="0" />
+													<!-- <attribute id="paramval" type="int32" value="0" />
 												</node>
 											</children>
 										</node>
 									</children>
-								</node>
+								</node> -->
 								<node id="TaggedTexts">
 									<children>
 										<node id="TaggedText">

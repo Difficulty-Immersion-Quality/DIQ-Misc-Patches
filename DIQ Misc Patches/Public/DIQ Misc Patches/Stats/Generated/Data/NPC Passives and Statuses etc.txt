@@ -70,17 +70,3 @@ data "SpellType" "Projectile"
 using "Projectile_CRE_GithyankiInquisitor_Mindsteal_Link"
 // data "ExtraDescriptionParams" "1;DealDamage(1d4,Psychic);2"
 data "ExtraDescriptionParams" "1;DealDamage(1,Psychic);1"
-
-// ==================================== Dame Aylin: remove automatic self-revive ====================================
-
-new entry "SHA_NightsongResurrection"
-type "PassiveData"
-using "SHA_NightsongResurrection"
-// Blessed with the favour of a goddess, Nightsong cannot be permanently killed. When unconscious, she becomes automatically stabilized.
-data "Description" "hd40147c7e41241b983f2671beb16dc231efa;1"
-
-new entry "GLO_NIGHTSONGRESURRECTION_DOWNED"
-type "StatusData"
-data "StatusType" "DOWNED"
-using "GLO_NIGHTSONGRESURRECTION_DOWNED"
-data "TickFunctors" ""

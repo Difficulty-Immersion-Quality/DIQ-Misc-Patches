@@ -23,21 +23,22 @@ using "MAG_Fire_AlwaysDippedInFire_Greatsword"
 data "DefaultBoosts" "WeaponProperty(Magical)"
 
 // ==================================== Shadow Blade - Attacks against obscured targets now have Advantage / IntrinsicSummonerProficiency added ====================================
+// All included in Goon's Spell Overhaul
 
-new entry "SHADOW_BLADE"
-type "StatusData"
-data "StatusType" "EFFECT"
-using "SHADOW_BLADE"
-// data "Boosts" "Attribute(InventoryBound)"
-data "Boosts" "Attribute(InventoryBound);IntrinsicSummonerProficiency()"
+// new entry "SHADOW_BLADE"
+// type "StatusData"
+// data "StatusType" "EFFECT"
+// using "SHADOW_BLADE"
+// // data "Boosts" "Attribute(InventoryBound)"
+// data "Boosts" "Attribute(InventoryBound);IntrinsicSummonerProficiency()"
 
-new entry "ShadowBlade_Passive"
-type "PassiveData"
-using "ShadowBlade_Passive"
+// new entry "ShadowBlade_Passive"
+// type "PassiveData"
+// using "ShadowBlade_Passive"
+// // data "BoostContext" "OnAttack"
 // data "BoostContext" "OnAttack"
-data "BoostContext" "OnAttack"
-// data "Boosts" "IF(AttackedWithPassiveSourceWeapon() and not HasObscuredState(ObscuredState.Clear)):Advantage(AttackRoll)"
-data "Boosts" "IF(IsMeleeWeaponAttack() and not HasObscuredState(ObscuredState.Clear)):Advantage(AttackRoll)"
+// // data "Boosts" "IF(AttackedWithPassiveSourceWeapon() and not HasObscuredState(ObscuredState.Clear)):Advantage(AttackRoll)"
+// data "Boosts" "IF(IsMeleeWeaponAttack() and not HasObscuredState(ObscuredState.Clear)):Advantage(AttackRoll)"
 
 // ==================================== Hellfire Greataxe - Hellflame Cleave, and the Hellfire surface now ignore fire resistance ====================================
 

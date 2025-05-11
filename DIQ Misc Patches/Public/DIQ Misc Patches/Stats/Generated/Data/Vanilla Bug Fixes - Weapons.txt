@@ -1,3 +1,12 @@
+// ==================================== Staff of Interruption - Uses the appropriate level of Counterspell ====================================
+
+new entry "Interrupt_MAG_Counterspell"
+type "InterruptData"
+// using "Interrupt_Counterspell"
+using "Interrupt_MAG_Counterspell"
+// data "Roll" "TryCounterspellHigherLevel(3)"
+data "Roll" "TryCounterspellHigherLevel(5)"
+
 // ==================================== Gold Wyrmling Staff, Flame Blade and Everburn Blade - These weapons with fire VFX are hidden in cutscenes, for some reason, I would prefer to see my cool fire sword ====================================
 
 new entry "MAG_Fire_FireDamage_Quarterstaff"

@@ -141,14 +141,6 @@ data "StatusType" "BOOST"
 using "DARK_POSSESSION"
 data "SplatterSweatAmount" "1"
 
-// ==================================== Make Spiritual Weapon summons not slow as shit ====================================
-// All other summons inherit from Greataxe
-
-new entry "SpiritualWeapon_Greataxe"
-type "Character"
-using "SpiritualWeapon_Greataxe"
-data "ActionResources" "BonusActionPoint:1;Movement:9"
-
 // ==================================== Carry capacity and gold weight changes ====================================
 // Commented out, gonna leave it vanilla and see if other systems can actually make it interesting. But getting rid of gold weight is a pretty decent little qol in a world where carry cap matters
 
@@ -180,6 +172,7 @@ using "GLO_Jergal"
 data "DefaultBoosts" "ProficiencyBonus(SavingThrow, Wisdom);BlockRegainHP(Living;Construct);Tag(BLOCK_PICKPOCKET)"
 
 // ==================================== Allow sneak attack outside of combat (without hiding) for Rogue Extra's Swashbuckler subclass, remove movement block from Steady Aim and replace it with more forgiving mechanics and description ====================================
+// TODO: Remove for Patch #8
 
 new entry "RAKISHAUDACITY"
 using "RAKISHAUDACITY"

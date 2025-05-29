@@ -1,5 +1,6 @@
 // ==================================== Wild Shape: Panther's Prowl - Fix to ability not functioning after level 8, description and function fixed to be usable once per short rest/wild shape ====================================
 // (See) Invisibility Rework by drkekyll perpetuates the bug with the "RemoveConditions" in "INVISIBILITY_PANTHER"
+// TODO: Update for Patch #8 
 
 new entry "INVISIBILITY_PANTHER"
 type "StatusData"

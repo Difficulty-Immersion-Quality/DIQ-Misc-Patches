@@ -183,7 +183,7 @@ data "Passives" ""
 data "StackId" "HAG_WELL_BAD"
 data "StackPriority" "20"
 
-// ==================================== Swap "Gargantuan" for and integer value in Veenab's library ====================================
+// ==================================== Veenab's library - Swap "Gargantuan" for an integer value ====================================
 
 new entry "VBT_ENLARGE"
 type "StatusData"
@@ -209,6 +209,7 @@ type "PassiveData"
 data "Description" "h027cfe16g350dg43c8gac97g46a6628b0384;1"
 
 // ==================================== Ancient Armoury Nerfs ====================================
+// TODO: Remove for Patch #8
 
 // Void-Touched Circlet
 new entry "MAG_Armour_H_83_bonus"

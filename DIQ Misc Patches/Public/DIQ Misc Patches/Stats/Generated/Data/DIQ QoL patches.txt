@@ -92,6 +92,7 @@ data "Description" "hfe823e2cgda3eg474eg81b9gbcb416d33d1e"
 data "DescriptionParams" "Distance(3);4"
 
 // ==================================== Mobility Overhaul - Reduce duration of the Off Balanced condition from jumping ====================================
+// TODO: Remove when I do my own mobility overhaul.
 
 new entry "MO_Jump_Off_Balanced_Self"
 type "SpellData"

@@ -1,4 +1,5 @@
 // ==================================== Magical Ambush and other sneaking bugs not triggering statuses ====================================
+// TODO: Verify the importance of these
 
 // Magical Ambush from Arcane Trickster Subclass
 new entry "MAGICAL_AMBUSH"
@@ -31,68 +32,3 @@ data "RemoveConditions" "not HasStatus('SNEAKING_CLEAR') and not HasStatus('SNEA
 // data "RemoveEvents" "OnObscurityChanged;OnStatusApplied;OnStatusRemoved"
 data "RemoveEvents" "OnStatusApplied;OnStatusRemoved"
 data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
-
-// ==================================== Slashing Flourish (Melee) - Tooltip Bonus now references BardicInspiration ====================================
-
-new entry "Zone_BladeFlourish_Slashing"
-type "SpellData"
-data "SpellType" "Zone"
-// using "Zone_Cleave"
-using "Zone_BladeFlourish_Slashing"
-// data "TooltipDamageList" "DealDamage(MainMeleeWeapon+1d6, MainWeaponDamageType)"
-data "TooltipDamageList" "DealDamage(MainMeleeWeapon + LevelMapValue(BardicInspiration), MainMeleeWeaponDamageType)"
-
-// ==================================== Slashing Flourish (Ranged) - Fix to target selection allowing the same target to be picked twice ====================================
-// Is this really a bug fix, and not just a rebalance?
-
-// new entry "Projectile_BladeFlourish_Slashing"
-// type "SpellData"
-// data "SpellType" "Projectile"
-// // using "Projectile_MainHandAttack"
-// using "Projectile_BladeFlourish_Slashing"
-// // data "SpellFlags" "HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful"
-// data "SpellFlags" "HasHighGroundRangeExtension;RangeIgnoreVerticalThreshold;IsHarmful;IgnorePreviouslyPickedEntities"
-
-// ==================================== Heart of the Storm - Now functions with cantrips ====================================
-
-new entry "Interrupt_HeartOfTheStorm_Lightning"
-type "InterruptData"
-using "Interrupt_HeartOfTheStorm_Lightning"
-// data "Conditions" "Self(context.Source, context.Observer) and IsSpell() and SpellDamageTypeIs(DamageType.Lightning) and not AnyEntityIsItem()"
-data "Conditions" "Self(context.Source, context.Observer) and IsSpell() and SpellDamageTypeIs(DamageType.Lightning) and not AnyEntityIsItem() and not IsCantrip()"
-
-new entry "Interrupt_HeartOfTheStorm_Thunder"
-type "InterruptData"
-using "Interrupt_HeartOfTheStorm_Thunder"
-// data "Conditions" "Self(context.Source, context.Observer) and IsSpell() and SpellDamageTypeIs(DamageType.Thunder) and not AnyEntityIsItem()"
-data "Conditions" "Self(context.Source, context.Observer) and IsSpell() and SpellDamageTypeIs(DamageType.Thunder) and not AnyEntityIsItem() and not IsCantrip()"
-
-// ==================================== Fist of Four Thunders - Now correctly triggers Martial Arts: Bonus Unarmed Strike ====================================
-
-new entry "Zone_Thunderwave_Monk"
-type "SpellData"
-data "SpellType" "Zone"
-// using "Zone_Thunderwave"
-using "Zone_Thunderwave_Monk"
-data "SpellProperties" "ApplyStatus(SELF,MARTIAL_ARTS_BONUS_UNARMED_STRIKE,100,1)"
-
-// ==================================== Prophecy: Delivering Alms - Non-existant passive referenced is now existing and functional ====================================
-
-new entry "Divination_Ally_Downed"
-type "PassiveData"
-using "Divination_Damage_Fire"
-data "Icon" "GenericIcon_Intent_Utility"
-data "StatsFunctorContext" "OnCast"
-data "Conditions" "SpellId('Target_Help') and Ally(context.Target)"
-data "StatsFunctors" "ApplyStatus(SELF,PORTENT,100,1);RemoveStatus(SELF,DIVINATION_ALLY_HELP)"
-
-// ==================================== Primal Stampede - Damage type is now unarmed instead of a fixed 1d4 ====================================
-
-new entry "Rush_Primal_Stampede"
-type "SpellData"
-data "SpellType" "Rush"
-using "Rush_Primal_Stampede"
-// data "SpellSuccess" "DealDamage(1d4+StrengthModifier,Bludgeoning);TARGET:IF(not SavingThrow(Ability.Strength,10+GetModifier(context.Source.Strength))):ApplyStatus(PRONE,100,2)"
-data "SpellSuccess" "DealDamage(UnarmedDamage,Bludgeoning);TARGET:IF(not SavingThrow(Ability.Strength,10+GetModifier(context.Source.Strength))):ApplyStatus(PRONE,100,2)"
-// data "TooltipDamageList" "DealDamage(1d4+StrengthModifier, Bludgeoning)"
-data "TooltipDamageList" "DealDamage(UnarmedDamage,Bludgeoning)"

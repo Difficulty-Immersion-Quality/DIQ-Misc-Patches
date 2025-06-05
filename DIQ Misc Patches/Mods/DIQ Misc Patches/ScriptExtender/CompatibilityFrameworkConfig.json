@@ -2,6 +2,17 @@
   "FileVersion": 1,
   "Progressions": [
     {
+      "Comment":"Fix Circle of the Moon not getting its second Wildshape charge.",
+			"UUID": "4c9fed0c-c9a7-49c8-a634-6582f2d99ecb",
+      "Strings": [
+        {
+          "Action": "Insert",
+          "Type": "Boosts",
+          "Strings": ["ActionResource(WildShape,1,0)"]
+        }
+      ]
+    },
+    {
       "Comment":"Circle of Dreams Mod",
 			"UUID": "0b4e8bfe-237d-4ec2-9246-7d8db88da6d5",
       "Strings": [
@@ -95,6 +106,18 @@
       "Comment":"Circle of the Shepherd - Havsglimt",
       "UUID": "6b86a8bc-4d07-40e9-96e1-60d4fc38c6f1",
       "Strings": [
+        {
+          "Action": "Remove",
+          "Type": "Boosts",
+					"modGuid": "9f5832ae-2cf3-49c5-9c9a-69d91d05a778",
+          "Strings": ["ActionResource(WildShape,2,0)"]
+        },
+        {
+          "Action": "Insert",
+          "Type": "Boosts",
+					"modGuid": "9f5832ae-2cf3-49c5-9c9a-69d91d05a778",
+          "Strings": ["ActionResource(WildShape,1,0)"]
+        },
         {
           "Action": "Insert",
           "Type": "PassivesAdded",

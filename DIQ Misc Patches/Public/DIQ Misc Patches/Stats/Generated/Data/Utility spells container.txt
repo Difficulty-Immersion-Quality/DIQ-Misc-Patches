@@ -219,6 +219,12 @@ data "PrepareEffect" "f2e02f51-70c2-482b-bcac-2dac285fda14"
 data "CastEffect" "e7d9a675-3a62-4eb5-9d90-f41884b1f524"
 data "AIFlags" "CanNotUse"
 
+new entry "TAKE_OFF_VEIL_STATUS"
+type "StatusData"
+data "StatusType" "BOOST"
+using "TAKE_OFF_VEIL_STATUS"
+data "StatusPropertyFlags" "DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+
 // ==================================== Create a new basket summoning spell for Basket Full of Equipment, add to Utility Spells container ====================================
 
 // new entry "DIQ_Target_AMX_Summon_Basket"

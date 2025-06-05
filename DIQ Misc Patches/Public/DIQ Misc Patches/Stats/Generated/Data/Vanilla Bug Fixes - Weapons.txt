@@ -1,7 +1,0 @@
-// ==================================== Hellfire Greataxe - Hellflame Cleave, and the Hellfire surface now ignore fire resistance ====================================
-
-
-
-
-
-

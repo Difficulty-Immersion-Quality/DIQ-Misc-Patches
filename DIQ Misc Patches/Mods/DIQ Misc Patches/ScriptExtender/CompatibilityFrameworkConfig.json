@@ -96,18 +96,6 @@
       "UUID": "6b86a8bc-4d07-40e9-96e1-60d4fc38c6f1",
       "Strings": [
         {
-          "Action": "Remove",
-          "Type": "Boosts",
-					"modGuid": "9f5832ae-2cf3-49c5-9c9a-69d91d05a778",
-          "Strings": ["ActionResource(WildShape,2,0)"]
-        },
-        {
-          "Action": "Insert",
-          "Type": "Boosts",
-					"modGuid": "9f5832ae-2cf3-49c5-9c9a-69d91d05a778",
-          "Strings": ["ActionResource(WildShape,1,0)"]
-        },
-        {
           "Action": "Insert",
           "Type": "PassivesAdded",
 					"modGuid": "9f5832ae-2cf3-49c5-9c9a-69d91d05a778",

@@ -1,4 +1,4 @@
-new treasuretable "LOW_SorcerousSundries_TolnaTomeMonger"
+new treasuretable "LOW_SteepsTrader_BooksAndScrolls"
 CanMerge 1
 new subtable "1,1"
 object category "I_DeGreaser_Rolans_Stolen_Spellbook",1,0,0,0,0,0,0,0

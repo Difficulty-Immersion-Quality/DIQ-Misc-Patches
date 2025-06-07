@@ -247,7 +247,7 @@ local function OnSessionLoaded()
         --}
     }
     local json = Ext.Json.Stringify(itemArray)
-    _P(json)
+    -- _P(json)
     local itemsToAdd = Ext.Json.Parse(json)
 
     function OnLevelLoaded()

@@ -32,7 +32,7 @@ end
 for _,ev in ipairs{"Equipped","Unequipped"} do
   Ext.Osiris.RegisterListener(ev,2,"after",function(_,c)
     if Osi.GetVarInteger(c,V.ACTIVE)==0 then ClearVars(c)
-    -- else log(ev.." during throw → skip") end
+    end -- else log(ev.." during throw → skip") 
   end)
 end
 

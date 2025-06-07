@@ -73,7 +73,9 @@ function StatusDoesNotInvokeOnStatusApply()
     | StatusId('ARCANE_ECHOMALEFACTION_ONCE')
 end
 
+-- ==================================== Custom function for getting the highest ability score ====================================
 --JuuM_GetHighestAbility({'Intelligence','Wisdom','Charisma'})
+
 function GetHighestAbility(abilities,entity)
     local entity = entity or context.Source
     local highestValue = 0
@@ -88,7 +90,8 @@ function GetHighestAbility(abilities,entity)
     return highestAbility
 end
 
--- Counterspell fix
+-- ==================================== Make Counterspell use the spellcasting modifier instead of defaulting to Intelligence ====================================
+
 function TryCounterspellHigherLevel(level)
     local spellPowerLevel = SpellPowerLevelEqualOrLessThan(level)
     if not spellPowerLevel.Result then
@@ -100,7 +103,8 @@ function TryCounterspellHigherLevel(level)
     return ConditionResult(true,{},{},1.0)
 end
 
--- Recast spell DC fix
+-- ==================================== Recast fixes ====================================
+
 function RecastSpellDC(abilities, fallbackDC, entity)
     local entity = entity or context.Source
     local spellDC = fallbackDC or 10 -- Global default so that we don't return 0
@@ -115,7 +119,6 @@ function RecastSpellDC(abilities, fallbackDC, entity)
     return spellDC
 end
 
--- Recast Telekinesis
 function RecastTelekinesisCheck()
     local result = Dead() | Item() | Ally()
     if not result.Result then
@@ -124,6 +127,8 @@ function RecastTelekinesisCheck()
     end
     return result
 end
+
+-- ==================================== Metamagic fixes ====================================
 
 --Twinned Spell projectile fix
 function TwinnedProjectileSpellCheck()

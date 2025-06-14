@@ -1,3 +1,5 @@
+// ==================================== Make Astarion munching friendlies not debuff ====================================
+
 new entry "ASTARION_WEAK"
 type "StatusData"
 data "StatusType" "BOOST"

@@ -4,6 +4,7 @@
     <region id="Progressions">
         <node id="root">
             <children>
+                <!-- Arcane Trickster bug fixes. -->
                 <node id="Progression">
                     <!-- <attribute id="MergedInto" type="guid" value=""/> -->
                     <attribute id="MergedInto" type="guid" value="b499258c-2823-42f1-b8ca-0a5ee8455e11"/>
@@ -26,14 +27,28 @@
                     <attribute id="UUID" type="guid" value="84e8d218-21c0-4588-b792-8c2c17efc439"/>
                 </node>
                 <node id="Progression">
+                    <!-- <attribute id="MergedInto" type="guid" value=""/> -->
+                    <attribute id="MergedInto" type="guid" value="53ecef19-2f1c-4d4b-81e9-11a72ad3e0ac"/>
                     <!-- <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,2)"/> -->
                     <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,2,1)" />
                     <attribute id="Level" type="uint8" value="10"/>
                     <attribute id="Name" type="LSString" value="ArcaneTrickster"/>
                     <attribute id="ProgressionType" type="uint8" value="1"/>
-	                <attribute id="Selectors" type="LSString" value="SelectSpells(f9fd64f1-f417-4544-94a9-51d8876d68df,1,0,ArcaneTricksterIlluEnch);SelectSpells(3cae2e56-9871-4cef-bba6-96845ea765fa,1,0) " />
+	                <!-- <attribute id="Selectors" type="LSString" value="SelectSpells(f9fd64f1-f417-4544-94a9-51d8876d68df,1,0,ArcaneTricksterIlluEnch);SelectSpells(3cae2e56-9871-4cef-bba6-96845ea765fa,1,0) " /> -->
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(f9fd64f1-f417-4544-94a9-51d8876d68df,1,1,ArcaneTricksterIlluEnch);SelectSpells(3cae2e56-9871-4cef-bba6-96845ea765fa,1,0)" />
                     <attribute id="TableUUID" type="guid" value="7205dbe2-5eef-4cd6-ad7f-45b3dc254f78"/>
-                    <attribute id="UUID" type="guid" value="53ecef19-2f1c-4d4b-81e9-11a72ad3e0ac"/>
+                    <attribute id="UUID" type="guid" value="36e4f2dc-8084-4ee8-b202-605dc9adb1cc"/>
+                </node>
+                <node id="Progression">
+                    <!-- <attribute id="MergedInto" type="guid" value=""/> -->
+                    <attribute id="MergedInto" type="guid" value="fa2eeb09-09e7-405e-88e7-14655e736e6b"/>
+                    <attribute id="Level" type="uint8" value="11" />
+                    <attribute id="Name" type="LSString" value="ArcaneTrickster" />
+                    <attribute id="ProgressionType" type="uint8" value="1" />
+                    <!-- <attribute id="Selectors" type="LSString" value="SelectSpells(f9fd64f1-f417-4544-94a9-51d8876d68df,1,0,ArcaneTricksterIlluEnch)" /> -->
+                    <attribute id="Selectors" type="LSString" value="SelectSpells(f9fd64f1-f417-4544-94a9-51d8876d68df,1,1,ArcaneTricksterIlluEnch)" />
+                    <attribute id="TableUUID" type="guid" value="7205dbe2-5eef-4cd6-ad7f-45b3dc254f78" />
+                    <attribute id="UUID" type="guid" value="057b19e9-1520-4d8c-89cc-9dd6354cec68" />
                 </node>
             </children>
         </node>

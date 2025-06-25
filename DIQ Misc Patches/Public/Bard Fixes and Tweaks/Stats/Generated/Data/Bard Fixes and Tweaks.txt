@@ -1,5 +1,15 @@
 // ==================================== Increasing compatibility through proper self inheritence entries  ====================================
 
+// ==================================== Slashing Flourish (Melee) - Fix to tooltip damage not correctly stating Bardic Inspiration bonus (Credit to zero3042 - Bard Fixes and Tweaks) ====================================
+
+new entry "Zone_BladeFlourish_Slashing"
+type "SpellData"
+data "SpellType" "Zone"
+// using "Zone_Cleave"
+using "Zone_BladeFlourish_Slashing"
+// data "TooltipDamageList" "DealDamage(MainMeleeWeapon+1d6, MainWeaponDamageType)"
+data "TooltipDamageList" "DealDamage(MainMeleeWeapon + LevelMapValue(BardicInspiration), MainMeleeWeaponDamageType)"
+
 // ==================================== Slashing Flourish (Ranged) - Fix to target selection allowing the same target to be picked twice (Credit to Rydiak - Item and Spell Bug Fixes - Mod.io) ====================================
 
 new entry "Projectile_BladeFlourish_Slashing"

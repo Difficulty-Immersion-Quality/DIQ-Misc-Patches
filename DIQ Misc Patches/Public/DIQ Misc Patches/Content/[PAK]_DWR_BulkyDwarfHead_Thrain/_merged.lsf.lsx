@@ -4,6 +4,7 @@
 	<region id="MaterialBank">
 		<node id="MaterialBank">
 			<children>
+				<!-- UTAV Patch: Bulky Dwarf Heads by  - andmetta -->	
 				<node id="Resource">
 					<attribute id="ID" type="FixedString" value="80c51893-f73d-45cb-8bfe-e371e3e5db0b" />
 					<attribute id="DiffusionProfileUUID" type="FixedString" value="3428c9e0-de61-cc06-2476-4c56b84d473d" />

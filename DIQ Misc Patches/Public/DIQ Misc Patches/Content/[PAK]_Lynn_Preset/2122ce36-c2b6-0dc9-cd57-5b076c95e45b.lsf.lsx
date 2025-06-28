@@ -4,6 +4,7 @@
 	<region id="MaterialBank">
 		<node id="MaterialBank">
 			<children>
+				<!-- UTAV Patch: Lynn Preset by MiYaTHs -->
 				<node id="Resource">
 					<attribute id="ID" type="FixedString" value="2122ce36-c2b6-0dc9-cd57-5b076c95e45b" />
 					<attribute id="Name" type="LSString" value="Lynn_TIF" />

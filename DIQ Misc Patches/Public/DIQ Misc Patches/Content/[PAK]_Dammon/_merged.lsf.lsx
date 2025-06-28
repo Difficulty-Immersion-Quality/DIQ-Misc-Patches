@@ -4,6 +4,7 @@
 	<region id="SkeletonBank">
 		<node id="SkeletonBank">
 			<children>
+				<!-- UTAV Patch: Unique Appearance for Unique NPCs by Lethez -->
 				<node id="Resource">
 					<attribute id="ClothColliderResourceID" type="FixedString" value="" />
 					<attribute id="DynamicPhysicsResourceID" type="FixedString" value="00000000-0000-0000-0000-000000000000" />

@@ -6895,7 +6895,7 @@
 									<children>
 										<node id="child">
 											<!-- Astarion Kisses Revamped start -->
-											<attribute id="UUID" type="FixedString" value="454a8bc3-f743-4040-b34e-4c0e8c707b07" />
+											<!-- <attribute id="UUID" type="FixedString" value="454a8bc3-f743-4040-b34e-4c0e8c707b07" /> -->
 											<attribute id="UUID" type="FixedString" value="c012fbec-7f13-4ea8-8944-ce4e982dc4d4" />
 											<!-- Astarion Kisses Revamped end -->
 										</node>

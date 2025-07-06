@@ -26,12 +26,6 @@ data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndi
 
 // ==================================== Patching in additional vanilla entries "Target_PsionicPull" found in "Fix Hex inheritence for multiple vanilla pull actions.txt" ====================================
 
-new entry "Target_MAG_RetrievingShot"
-type "SpellData"
-data "SpellType" "Target"
-using "Target_MAG_RetrievingShot"
-data "SpellSuccess" "Force(-9, OriginToTarget, Neutral);DealDamage(MainRangedWeapon/2, MainRangedWeaponDamageType)"
-
 new entry "Target_SteelWatcher_Biped_RetrievingShot"
 type "SpellData"
 data "SpellType" "Target"

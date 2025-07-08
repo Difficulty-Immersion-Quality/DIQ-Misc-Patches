@@ -4,9 +4,7 @@
 	<region id="dialog">
 		<node id="dialog">
 			<attribute id="category" type="LSString" value="Generic NPC Dialog" />
-			<!-- New UUID -->
-			<!-- <attribute id="UUID" type="FixedString" value="960f4fdb-12dd-85df-7236-c4bae9c444fc" /> -->
-			<attribute id="UUID" type="FixedString" value="50d732f1-2eaa-4693-92b8-44e46925655e" />
+			<attribute id="UUID" type="FixedString" value="960f4fdb-12dd-85df-7236-c4bae9c444fc" />
 			<attribute id="TimelineId" type="FixedString" value="ec184c40-75b0-f633-a583-2a0f2c68267d" />
 			<children>
 				<node id="DefaultAddressedSpeakers">
@@ -33961,7 +33959,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="hbd6440e1g5ba9g48eag854eg45cf84eb1697" version="2" />
-															<attribute id="LineId" type="guid" value="84b0586e-e876-4c0d-84a6-a7df16c53b79" />
+															<attribute id="LineId" type="guid" value="8d6e1094-2f59-4f0c-8f81-7a72912e978a" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -34017,7 +34015,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h9452b111ged7bg46a8g8893g08943e114e92" version="1" />
-															<attribute id="LineId" type="guid" value="42a8cacd-2226-4e45-9505-022b00126967" />
+															<attribute id="LineId" type="guid" value="66242785-4cc3-4ee6-97d8-7861d5114baf" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -34060,7 +34058,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="hcac4ab0ag2a1fg4a7cga7d7gdadda38445de" version="2" />
-															<attribute id="LineId" type="guid" value="8a105b6e-1fd6-4614-a9f8-f64a7bf4be51" />
+															<attribute id="LineId" type="guid" value="34ea04f0-d537-4958-bb81-f06f35d3e516" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>

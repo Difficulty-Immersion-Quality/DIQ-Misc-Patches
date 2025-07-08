@@ -4,9 +4,7 @@
 	<region id="dialog">
 		<node id="dialog">
 			<attribute id="category" type="LSString" value="Companion Dialog" />
-			<!-- New UUID -->
-			<!-- <attribute id="UUID" type="FixedString" value="cc1ff951-8962-76e3-8c0d-d087ac6da959" /> -->
-			<attribute id="UUID" type="FixedString" value="67ce9045-5826-47d7-bdb5-1b9691eea421" />
+			<attribute id="UUID" type="FixedString" value="cc1ff951-8962-76e3-8c0d-d087ac6da959" />
 			<attribute id="TimelineId" type="FixedString" value="ac42db64-ebfd-73b3-55f2-f1c100605020" />
 			<children>
 				<node id="DefaultAddressedSpeakers">

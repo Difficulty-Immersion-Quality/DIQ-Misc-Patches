@@ -3,9 +3,7 @@
 	<version major="4" minor="7" revision="0" build="1" lslib_meta="v1,bswap_guids" />
 	<region id="TLScene">
 		<node id="TLScene">
-			<!-- New UUID -->
-			<!-- <attribute id="Identifier" type="guid" value="f88c3b61-9cf7-c28e-d625-587d1ec22492" /> -->
-			<attribute id="Identifier" type="guid" value="5c93f1bb-62d8-4d79-94e9-edf4ab44b0e7" />
+			<attribute id="Identifier" type="guid" value="f88c3b61-9cf7-c28e-d625-587d1ec22492" />
 			<attribute id="SceneBounds" type="fvec3" value="0.6646327 0 1.2411034" />
 			<children>
 				<node id="LightingSetups">

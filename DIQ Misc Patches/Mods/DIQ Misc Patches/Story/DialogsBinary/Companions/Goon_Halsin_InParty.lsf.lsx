@@ -4,9 +4,7 @@
 	<region id="dialog">
 		<node id="dialog">
 			<attribute id="category" type="LSString" value="Generic NPC Dialog" />
-			<!-- New UUID -->
-			<!-- <attribute id="UUID" type="FixedString" value="fa0860b9-b389-80fb-ca80-74fbc7cb4ee0" /> -->
-			<attribute id="UUID" type="FixedString" value="c4ce61a1-cc82-4a58-9451-14d25374c811" />
+			<attribute id="UUID" type="FixedString" value="fa0860b9-b389-80fb-ca80-74fbc7cb4ee0" />
 			<attribute id="TimelineId" type="FixedString" value="778b61a9-1633-6736-16a8-21803a749cde" />
 			<children>
 				<node id="DefaultAddressedSpeakers">
@@ -26074,7 +26072,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h413c5838g87f0g471fg9f42g73318f346691" version="3" />
-															<attribute id="LineId" type="guid" value="701a9378-1ac8-4366-ae77-c0c7db33c62c" />
+															<attribute id="LineId" type="guid" value="e6e76757-1655-4183-955f-a3a700ce91d1" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -26117,7 +26115,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h4fa038f1g1c61g498dga282g32e1d2551fe0" version="2" />
-															<attribute id="LineId" type="guid" value="517fd24d-ccc2-4271-ad9c-f327dfa74759" />
+															<attribute id="LineId" type="guid" value="656032c3-633e-4624-b20f-ee21a3a1175c" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -26178,7 +26176,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h42d1b00bg51a3g4375gb34dge423a6fe72e8" version="1" />
-															<attribute id="LineId" type="guid" value="7d62bf16-294a-4e98-b431-ddf81a08f174" />
+															<attribute id="LineId" type="guid" value="22433a6f-da01-4c1c-9724-edc821004130" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -26226,7 +26224,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h1bb64a91ge87dg45deg812bgdb4253c71a14" version="2" />
-															<attribute id="LineId" type="guid" value="42218158-0a6b-4d0e-9e7b-9e0e58635ffb" />
+															<attribute id="LineId" type="guid" value="f8e2c39d-87a4-49c7-8941-d4009b8974b4" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -26283,7 +26281,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h207c7ccfg73dcg48abg8bd4gbb15ea2e50bb" version="2" />
-															<attribute id="LineId" type="guid" value="91c530ed-f5ef-4639-b1ef-897f4ee55286" />
+															<attribute id="LineId" type="guid" value="72fd3f1f-b03c-4106-a897-94798242d265" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -26331,7 +26329,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h77c85f76g5407g4987g96adg074ece30828f" version="1" />
-															<attribute id="LineId" type="guid" value="4effabb1-376b-447d-80d2-0344dd4ff770" />
+															<attribute id="LineId" type="guid" value="70874197-1960-4286-a8e2-bc9ba6d99b0b" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -26380,7 +26378,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="hf932554dg421bg4db0gaab0g1b6dad0e484b" version="1" />
-															<attribute id="LineId" type="guid" value="d7f32730-9c05-4b70-ad7f-28e4f3675718" />
+															<attribute id="LineId" type="guid" value="d89c1d59-2bfa-4a8e-9950-942a656601df" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -26442,7 +26440,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h33fbed16g06d2g47a3gaf9fg55c01a59603c" version="1" />
-															<attribute id="LineId" type="guid" value="623270fd-b645-4581-ba76-cce7659212e7" />
+															<attribute id="LineId" type="guid" value="51b5a597-3c85-49df-aab3-8c729dfc50d5" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -26491,7 +26489,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="hc612d4dfgad1fg4cfdga323g2c4d22b0c2fa" version="2" />
-															<attribute id="LineId" type="guid" value="f93e8ba5-2c0c-4363-863e-5da2d1e20e81" />
+															<attribute id="LineId" type="guid" value="c6298294-3cbf-4c2c-8565-b2e3dfda49e7" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -26560,7 +26558,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="ha06ce793g2c90g4073gaa0dg676340b475ec" version="1" />
-															<attribute id="LineId" type="guid" value="7d624be0-f85a-4526-a65d-dc72ad108450" />
+															<attribute id="LineId" type="guid" value="d55498e1-2138-4707-be5f-b3428fb79078" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -26616,7 +26614,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h0dea29bcg18beg44f0gab9fg307666dfb31b" version="1" />
-															<attribute id="LineId" type="guid" value="bd853ccc-ac33-4454-9d4f-276566ab1ff9" />
+															<attribute id="LineId" type="guid" value="eb7e854e-7d5c-4354-844c-54cfe99f00d5" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -26677,7 +26675,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="hcbf16cc6g7498g4634ga715g28176e903980" version="3" />
-															<attribute id="LineId" type="guid" value="5682f5b7-2c79-4ac7-baa3-2385593ffc65" />
+															<attribute id="LineId" type="guid" value="a927132b-9360-464f-a6cd-99c780be6546" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -26720,7 +26718,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h72ae54e3gc3fag4c6dga34cgc5982c58f90c" version="2" />
-															<attribute id="LineId" type="guid" value="12de04b8-65df-4de1-b7e7-2fdb7e68fca8" />
+															<attribute id="LineId" type="guid" value="e258ef75-09dd-4963-9505-17342f933382" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -27142,7 +27140,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h56f32cd2g389dg407cg98b4g002620edc107" version="1" />
-															<attribute id="LineId" type="guid" value="c1b38eed-550c-4039-b517-239cf0d8bec7" />
+															<attribute id="LineId" type="guid" value="df65dc83-6089-44b3-8644-c011a89bb020" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -27236,7 +27234,7 @@
 						</node>
 						<node id="node" key="UUID">
 							<attribute id="constructor" type="FixedString" value="RollResult" />
-							<attribute id="UUID" type="FixedString" value="f27eb832-d6e6-44b0-991e-befa7c6da26f" />
+							<attribute id="UUID" type="FixedString" value="20f5b655-b890-48cb-993f-c650fdaadbf3" />
 							<attribute id="Success" type="bool" value="True" />
 							<children>
 								<node id="children">
@@ -27253,7 +27251,7 @@
 						</node>
 						<node id="node" key="UUID">
 							<attribute id="constructor" type="FixedString" value="RollResult" />
-							<attribute id="UUID" type="FixedString" value="7cf19bd2-edec-4210-a1a1-34f5051c91d5" />
+							<attribute id="UUID" type="FixedString" value="89b3a46d-2bf2-4bc6-bb27-cdef2c3b9573" />
 							<attribute id="Success" type="bool" value="False" />
 							<children>
 								<node id="children">
@@ -27284,10 +27282,10 @@
 								<node id="children">
 									<children>
 										<node id="child">
-											<attribute id="UUID" type="FixedString" value="f27eb832-d6e6-44b0-991e-befa7c6da26f" />
+											<attribute id="UUID" type="FixedString" value="20f5b655-b890-48cb-993f-c650fdaadbf3" />
 										</node>
 										<node id="child">
-											<attribute id="UUID" type="FixedString" value="7cf19bd2-edec-4210-a1a1-34f5051c91d5" />
+											<attribute id="UUID" type="FixedString" value="89b3a46d-2bf2-4bc6-bb27-cdef2c3b9573" />
 										</node>
 									</children>
 								</node>
@@ -27310,7 +27308,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="hf55f117bgd9a9g45bbgb3abg70ba0ffed6ed" version="1" />
-															<attribute id="LineId" type="guid" value="3b45d125-e950-45c1-843b-2a7c760bb9d8" />
+															<attribute id="LineId" type="guid" value="6f2335f9-75fa-4749-9eb3-307644c16770" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -27329,7 +27327,7 @@
 						</node>
 						<node id="node" key="UUID">
 							<attribute id="constructor" type="FixedString" value="RollResult" />
-							<attribute id="UUID" type="FixedString" value="2668f204-23c1-4cdb-abb6-bda91f9c65d7" />
+							<attribute id="UUID" type="FixedString" value="4850f8dd-80f3-4fe6-ad33-8b7d1260afdc" />
 							<attribute id="Success" type="bool" value="True" />
 							<children>
 								<node id="children">
@@ -27346,7 +27344,7 @@
 						</node>
 						<node id="node" key="UUID">
 							<attribute id="constructor" type="FixedString" value="RollResult" />
-							<attribute id="UUID" type="FixedString" value="bf8ca59d-0bf9-4a7a-a7d8-8e4faed584f1" />
+							<attribute id="UUID" type="FixedString" value="e63a2c77-89d3-4c11-8822-55c6a323f2d5" />
 							<attribute id="Success" type="bool" value="False" />
 							<children>
 								<node id="children">
@@ -27377,10 +27375,10 @@
 								<node id="children">
 									<children>
 										<node id="child">
-											<attribute id="UUID" type="FixedString" value="2668f204-23c1-4cdb-abb6-bda91f9c65d7" />
+											<attribute id="UUID" type="FixedString" value="4850f8dd-80f3-4fe6-ad33-8b7d1260afdc" />
 										</node>
 										<node id="child">
-											<attribute id="UUID" type="FixedString" value="bf8ca59d-0bf9-4a7a-a7d8-8e4faed584f1" />
+											<attribute id="UUID" type="FixedString" value="e63a2c77-89d3-4c11-8822-55c6a323f2d5" />
 										</node>
 									</children>
 								</node>
@@ -27403,7 +27401,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h56547ff0g9decg4039gb404g2dd49d28fe57" version="1" />
-															<attribute id="LineId" type="guid" value="9c31525c-f3dd-470a-92db-b9d1fb5815c3" />
+															<attribute id="LineId" type="guid" value="ef15d60c-1360-4144-a492-4d0551b4888f" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -27422,7 +27420,7 @@
 						</node>
 						<node id="node" key="UUID">
 							<attribute id="constructor" type="FixedString" value="RollResult" />
-							<attribute id="UUID" type="FixedString" value="d7ea8e8d-e68c-4a79-a5cd-e0c0b5314e17" />
+							<attribute id="UUID" type="FixedString" value="e5c2a980-7f60-4e97-a3a4-c58696ba9a5e" />
 							<attribute id="Success" type="bool" value="True" />
 							<children>
 								<node id="children">
@@ -27439,7 +27437,7 @@
 						</node>
 						<node id="node" key="UUID">
 							<attribute id="constructor" type="FixedString" value="RollResult" />
-							<attribute id="UUID" type="FixedString" value="4936f8e6-ed8e-484d-9ed8-a5578b1eebc1" />
+							<attribute id="UUID" type="FixedString" value="7dff9e96-65f8-4054-a21e-36d792b38f77" />
 							<attribute id="Success" type="bool" value="False" />
 							<children>
 								<node id="children">
@@ -27470,10 +27468,10 @@
 								<node id="children">
 									<children>
 										<node id="child">
-											<attribute id="UUID" type="FixedString" value="d7ea8e8d-e68c-4a79-a5cd-e0c0b5314e17" />
+											<attribute id="UUID" type="FixedString" value="e5c2a980-7f60-4e97-a3a4-c58696ba9a5e" />
 										</node>
 										<node id="child">
-											<attribute id="UUID" type="FixedString" value="4936f8e6-ed8e-484d-9ed8-a5578b1eebc1" />
+											<attribute id="UUID" type="FixedString" value="7dff9e96-65f8-4054-a21e-36d792b38f77" />
 										</node>
 									</children>
 								</node>
@@ -27496,7 +27494,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h70cb2f3eg7015g4e6cgadd5gca8da9ec43df" version="1" />
-															<attribute id="LineId" type="guid" value="47553449-73f5-4298-bac9-1d676c95e29e" />
+															<attribute id="LineId" type="guid" value="bf1cc612-ad7e-402d-b63c-5b5901c81596" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -27544,7 +27542,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h5bed744cgf88fg416ega31dg27853909f664" version="1" />
-															<attribute id="LineId" type="guid" value="ed3e0311-c5a0-4d19-9c8d-70a24ae84821" />
+															<attribute id="LineId" type="guid" value="1bff50ee-8c6d-4980-9b45-a7a0a3d05a9d" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -27592,7 +27590,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h0d6265a0gfce2g48c8gb6f2g9905ba2d35ee" version="1" />
-															<attribute id="LineId" type="guid" value="58a10e99-d742-428d-a971-bf5dff0686e1" />
+															<attribute id="LineId" type="guid" value="26396580-64c7-4e07-88e5-7c06a14f77cc" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -27722,7 +27720,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="ha249048dg6626g4111gb9f5g65be1071395a" version="1" />
-															<attribute id="LineId" type="guid" value="5a9bffc5-42cc-4f40-84eb-372c0a2d1da2" />
+															<attribute id="LineId" type="guid" value="a953d76e-2933-42cc-9906-256618f2e7ee" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -27770,7 +27768,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="hadbb156ag8ecag45d6g93b0gdc9e2a5e124c" version="1" />
-															<attribute id="LineId" type="guid" value="6daa57a7-1c98-4735-8060-b1b19487eb34" />
+															<attribute id="LineId" type="guid" value="17497d4e-9b96-4697-bfd4-704a3b19aef2" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -27821,7 +27819,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="hd61ea635g70b7g4dbega2cbg8579d2119875" version="1" />
-															<attribute id="LineId" type="guid" value="b74cf0e1-fb80-4af6-bb90-0821cf76a9d2" />
+															<attribute id="LineId" type="guid" value="039f53ce-7b4f-4093-babd-7a5614580a22" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -27872,7 +27870,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="hb039e2cdgda49g40bfg9419g2784b93a1f4c" version="1" />
-															<attribute id="LineId" type="guid" value="3c155dbe-c22f-4273-a433-f35fd927d6e3" />
+															<attribute id="LineId" type="guid" value="d6b160b7-b588-44ff-9895-b6573f56c45c" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -27923,7 +27921,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h8d2960f1gbbd7g41e1g8972gfa991f70516f" version="1" />
-															<attribute id="LineId" type="guid" value="b1be7fe5-06a1-4130-a9ea-9d6e961fcd07" />
+															<attribute id="LineId" type="guid" value="7557749b-e02f-4aaf-8dc0-089b3ebeaf50" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -28150,7 +28148,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="hb6f8b00fg8bd2g4a0dg973bg58b5fe96021a" version="1" />
-															<attribute id="LineId" type="guid" value="74a889bb-b088-4d47-8106-f4ec04811d6a" />
+															<attribute id="LineId" type="guid" value="2f1fe0e3-8127-4e22-8c76-686aed04053a" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -28198,7 +28196,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h63d7fa35g92c7g494cg9c10g6ad1182f85ec" version="1" />
-															<attribute id="LineId" type="guid" value="bc4dbc2e-4f2f-4af6-b426-c246ab61cad0" />
+															<attribute id="LineId" type="guid" value="4f4d3246-59a2-4e36-91b4-fedb80ee217f" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -28246,7 +28244,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h77628de1g5524g4f70g9fd4gff8298ee2ffe" version="1" />
-															<attribute id="LineId" type="guid" value="88bcd4fc-bf28-43e2-b9da-9cde3768594b" />
+															<attribute id="LineId" type="guid" value="6edb964c-79cf-4db8-aff5-439fa5cda82b" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -28294,7 +28292,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h6ed7349dg97fbg4478g8232g573bfc8815d1" version="2" />
-															<attribute id="LineId" type="guid" value="f19d98ea-5596-47a2-b141-9709cccd8114" />
+															<attribute id="LineId" type="guid" value="6f6a4c68-d8a9-409b-abc4-08643f0853d3" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -28360,7 +28358,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="he2d5483ag3ed8g4a4eg853bg34a563fa1f63" version="2" />
-															<attribute id="LineId" type="guid" value="c883e385-4e41-445c-9e39-28f24dd7872c" />
+															<attribute id="LineId" type="guid" value="29885caf-4e96-4e89-9101-09f5fd018a4f" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -28416,7 +28414,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h7d3baca3g988cg43bfg9d0ag3b0f38a96310" version="1" />
-															<attribute id="LineId" type="guid" value="5dc0246d-95ce-4e50-b4d4-be0e2a7a71d6" />
+															<attribute id="LineId" type="guid" value="73919713-1b57-4d94-9e17-3591de8280cb" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>

@@ -4,9 +4,7 @@
 	<region id="dialog">
 		<node id="dialog">
 			<attribute id="category" type="LSString" value="Generic NPC Dialog" />
-			<!-- New UUID -->
-			<!-- <attribute id="UUID" type="FixedString" value="e7d5bbbd-b72c-5ec7-6a74-35d428e9235f" /> -->
-			<attribute id="UUID" type="FixedString" value="83b6edc8-e31a-4955-b8b6-dc08588af347" />
+			<attribute id="UUID" type="FixedString" value="e7d5bbbd-b72c-5ec7-6a74-35d428e9235f" />
 			<attribute id="TimelineId" type="FixedString" value="6b8a7b90-5d77-66d9-8468-29def1a9189a" />
 			<children>
 				<node id="DefaultAddressedSpeakers">
@@ -24698,7 +24696,7 @@
 															<attribute id="TagText" type="TranslatedString" handle="h0de77744g1415g431eg9674g19df53015d8e" version="2" />
 															<!-- Really Shadowheart start -->
 															<!-- <attribute id="LineId" type="guid" value="83b21d40-29dd-4a3f-98a5-5912a92bd05b" /> -->
-															<attribute id="LineId" type="guid" value="a76ea142-5eb0-411d-b67b-cea76e105509" />
+															<attribute id="LineId" type="guid" value="dce51642-b812-46ee-aa0e-f56f99e8febd" />
 															<!-- Really Shadowheart end -->
 															<attribute id="stub" type="bool" value="True" />
 														</node>
@@ -24749,7 +24747,7 @@
 															<attribute id="TagText" type="TranslatedString" handle="he7c6545fg9a55g4eceg87c8g4ba09145c7c0" version="1" />
 															<!-- Really Shadowheart start -->
 															<!-- <attribute id="LineId" type="guid" value="48d01294-d7dd-4c5d-92a6-3423ac8b3635" /> -->
-															<attribute id="LineId" type="guid" value="305580b1-5764-48f3-a6a1-e15bd67f19d9" />
+															<attribute id="LineId" type="guid" value="17f2f0de-62ad-45df-a083-3b099551df1c" />
 															<!-- Really Shadowheart end -->
 															<attribute id="stub" type="bool" value="True" />
 														</node>
@@ -24800,7 +24798,7 @@
 															<attribute id="TagText" type="TranslatedString" handle="hd19cb35ag369eg426bga41fg3c3a0e809259" version="1" />
 															<!-- Really Shadowheart start -->
 															<!-- <attribute id="LineId" type="guid" value="790afea7-0ec6-4129-9930-2ff7f5c57426" /> -->
-															<attribute id="LineId" type="guid" value="237545e2-2006-47f4-b445-becdadd88774" />
+															<attribute id="LineId" type="guid" value="728694cd-1d1a-4b85-a827-bca154a87894" />
 															<!-- Really Shadowheart end -->
 															<attribute id="stub" type="bool" value="True" />
 														</node>
@@ -24843,11 +24841,13 @@
 													<attribute id="value" type="bool" value="True" />
 													<attribute id="paramval" type="int32" value="0" />
 												</node>
-												<node id="flag" key="UUID">
+												<!-- Really Shadowheart start -->
+												<!-- <node id="flag" key="UUID">
 													<attribute id="UUID" type="FixedString" value="1b4b377c-10c2-45eb-a475-6b4944995fbf" />
 													<attribute id="value" type="bool" value="True" />
 													<attribute id="paramval" type="int32" value="1" />
-												</node>
+												</node> -->
+												<!-- Really Shadowheart end -->
 											</children>
 										</node>
 									</children>
@@ -24864,7 +24864,7 @@
 															<attribute id="TagText" type="TranslatedString" handle="h03dba394g1b9cg4fa6ga0a0g8147ccea08b3" version="1" />
 															<!-- Really Shadowheart start -->
 															<!-- <attribute id="LineId" type="guid" value="5966cef6-4587-4c4c-af83-9f11eb5aa00d" /> -->
-															<attribute id="LineId" type="guid" value="9470f815-1b66-4131-8b87-56287c8bf9d7" />
+															<attribute id="LineId" type="guid" value="959cb248-d98b-4d27-b4c6-aa7059a0be4b" />
 															<!-- Really Shadowheart end -->
 															<attribute id="stub" type="bool" value="True" />
 														</node>

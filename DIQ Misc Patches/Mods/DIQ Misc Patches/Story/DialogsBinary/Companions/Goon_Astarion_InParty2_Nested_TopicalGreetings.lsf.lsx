@@ -4,9 +4,7 @@
 	<region id="dialog">
 		<node id="dialog">
 			<attribute id="category" type="LSString" value="Generic NPC Dialog" />
-			<!-- New UUID -->
-			<!-- <attribute id="UUID" type="FixedString" value="ce974801-7501-fec7-b7e8-035ead25472e" /> -->
-			<attribute id="UUID" type="FixedString" value="201c4580-b166-4e37-9c22-6fdedcc43f10" />
+			<attribute id="UUID" type="FixedString" value="ce974801-7501-fec7-b7e8-035ead25472e" />
 			<attribute id="TimelineId" type="FixedString" value="db03a2f3-25b7-647a-01b0-11b80fd6f6ee" />
 			<attribute id="DefaultSpeakerIndex" type="int32" value="1" />
 			<children>
@@ -32181,7 +32179,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h56773390g041cg48eag9b75g7f2ee54486be" version="2" />
-															<attribute id="LineId" type="guid" value="1c5c59ea-33f5-46d5-ba3a-ff132c0c6a50" />
+															<attribute id="LineId" type="guid" value="9c7e055e-00bf-4363-9cae-cabaf03cc5ea" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>
@@ -32247,7 +32245,7 @@
 													<children>
 														<node id="TagText">
 															<attribute id="TagText" type="TranslatedString" handle="h574856degf40dg4309g9e78g91462c127473" version="1" />
-															<attribute id="LineId" type="guid" value="62bf1a1f-0fd7-4ff4-b02d-c697a4885af5" />
+															<attribute id="LineId" type="guid" value="a3a9b756-79b7-4ce2-91ab-b1c42398e3ee" />
 															<attribute id="stub" type="bool" value="True" />
 														</node>
 													</children>

@@ -44,12 +44,12 @@ type "PassiveData"
 using "PsyRiderPassive1"
 // The wearer deals an additional 1d4 cold damage when dealing psychic damage.
 // data "Description" "h06057d84g97a9g9546g1585g5dcd52408f54;1"
-// The wearer deals an additional [1] when dealing [2] with &lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt;.
+// The wearer deals an additional [1] when dealing[2] with &lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt;.
 data "Description" "h0c187050gaa77g4ce9g8549g9f1f20b437bd;1"
+// data "DescriptionParams" ""
+data "DescriptionParams" "DealDamage(1d4, Cold);DealDamage(,Psychic)"
 // data "Boosts" "IF(HasDamageDoneForType(DamageType.Psychic)):DamageBonus(1d6, Cold)"
 data "Boosts" "IF(IsAttack() and HasDamageDoneForType(DamageType.Psychic)):DamageBonus(1d4, Cold)"
-// data "DescriptionParams" ""
-data "DescriptionParams" "DealDamage(1d4, Poison);DealDamage(,Psychic)"
 
 // Scholastic Assault
 new entry "PsyRiderPassive1b"
@@ -57,7 +57,7 @@ type "PassiveData"
 using "PsyRiderPassive1b"
 // When you deal psychic damage to an enemy, they may gain &lt;LSTag Type="Status" Tooltip="MAG_PSYCHIC_MENTAL_FATIGUE"&gt;Mental Fatigue&lt;/LSTag&gt; for 3 turns.
 // data "Description" "h760b6bffg847ag7cc3g1774gcdfe57c6ac57;4"
-// When you deal psychic damage to an enemy with an &lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt;, they must succed a &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; &lt;LSTag Type="Status" Tooltip="MAG_PSYCHIC_MENTAL_FATIGUE"&gt;Mental Fatigue&lt;/LSTag&gt;.
+// When you deal[1] to an enemy with an &lt;LSTag Tooltip="AttackRoll"&gt;Attack&lt;/LSTag&gt;, they must succed a &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or become &lt;LSTag Type="Status" Tooltip="MAG_PSYCHIC_MENTAL_FATIGUE"&gt;Mentally Fatigued&lt;/LSTag&gt; for 3 turns.
 data "Description" "h22442963ge147g4874gb0c8gc2fb3393f96b;1"
 // data "DescriptionParams" ""
 data "DescriptionParams" "DealDamage(,Psychic)"
@@ -70,8 +70,8 @@ type "PassiveData"
 using "PsyRiderPassive2"
 // The wearer deals an additional 1d4 poison damage when dealing psychic damage.
 // data "Description" "haec0b11eg1828g7835gf48bg779698a31a73;1"
-// The wearer deals an additional [1] when dealing [2] with &lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt;.
-data "Description" "h6ef7c9ecg66b6g40dfga408g82481445ca73;1"
+// The wearer deals an additional [1] when dealing[2] with &lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt;.
+data "Description" "h0c187050gaa77g4ce9g8549g9f1f20b437bd;1"
 // data "DescriptionParams" ""
 data "DescriptionParams" "DealDamage(1d4, Poison);DealDamage(,Psychic)"
 // data "Boosts" "IF(HasDamageDoneForType(DamageType.Psychic)):DamageBonus(1d4, Poison)"
@@ -83,7 +83,7 @@ type "PassiveData"
 using "PsyRiderPassive2b"
 // When you deal psychic damage to an enemy, they may gain &lt;LSTag Type="Status" Tooltip="MAG_PSYCHIC_MENTAL_FATIGUE"&gt;Poisoned&lt;/LSTag&gt; for 2 turns.
 // data "Description" "hcac96ea0g0345g68ffg413eg984a74c0b3aa;3"
-// When you deal [1] to an enemy with an &lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt;, they must succed a &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or become &lt;LSTag Type="Status" Tooltip="POISONED"&gt;Poisoned&lt;/LSTag&gt;.
+// When you deal[1] to an enemy with an &lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt;, they must succed a &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or become &lt;LSTag Type="Status" Tooltip="POISONED"&gt;Poisoned&lt;/LSTag&gt; for 2 turns.
 data "Description" "h805f7870g29c2g478dga6afgf66da2c04da3;1"
 // data "DescriptionParams" ""
 data "DescriptionParams" "DealDamage(,Psychic)"

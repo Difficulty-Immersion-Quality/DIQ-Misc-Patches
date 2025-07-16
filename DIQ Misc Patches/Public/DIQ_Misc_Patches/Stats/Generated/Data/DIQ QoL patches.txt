@@ -37,15 +37,6 @@ data "StatusEffect" "a0f74dff-7074-45aa-a4d2-a131d7f328f5"
 data "SoundLoop" "Misc_Status_Bloodeless_MO"
 data "SoundStop" "Misc_Status_Bloodeless_MO_Stop"
 
-// ==================================== Remove the movement speed penalty for short races, same as players already had from another mod ====================================
-
-new entry "Gnome_Speed"
-type "PassiveData"
-using "Gnome_Speed"
-data "Properties" "IsHidden"
-// data "Boosts" "ActionResource(Movement, -1.5, 0)"
-data "Boosts" ""
-
 // ==================================== Wifi Potions - Add "data "DefaultBoosts" "Tag(NOSORT)"" for exclusion from Simple Sorting Containers ====================================
 
 new entry "FallenStar_Wifi_Healing_Potion_Small"

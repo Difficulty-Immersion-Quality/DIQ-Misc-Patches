@@ -133,6 +133,11 @@
 	<content contentuid="hc06b2ac8g385fg4cb6gbd01g09fdd3a76351" version="1">Gained [1] &lt;LSTag Tooltip="TemporaryHitPoints"&gt;temporary hit points&lt;/LSTag&gt;</content>		
 	<content contentuid="hadd1d9a8gdeb7g4fa6g820eg2a482306bd34" version="1">You utter a final incantation, channeling the destructive energies of Netheril through your very being. The ancient runes upon the staff ignite with a flash as you unleash a devastating wave of force energy, obliterating yourself and dealing [1] to all creatures within a [2] radius. At character level 12, this damage increases to [3].</content>
 
+	<!-- Cloaks of Faerun -->
+	<content contentuid="he1f00503g0dccg4a2eg9e31ga572de2a975a" version="1">Whenever the wearer succeeds on a &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; against a spell, they regain [1]. This effect can only occur once per turn.</content>
+	<content contentuid="hc2a1827agb2ecg4892g9b89g3ccffe8dc776" version="1">Whenever you deal Fire damage to an enemy, you gain [1] turns of &lt;LSTag Type="Status" Tooltip="MAG_FIRE_HEAT"&gt;Heat&lt;/LSTag&gt;.</content>
+	<content contentuid="h03436fd0gc4a9g4122g8b67g7546fcd668fe" version="1">When you heal a creature, it gains the effect of &lt;LSTag Type="Status" Tooltip="SANCTUARY"&gt;Sanctuary&lt;/LSTag&gt; for 1 turn.</content>
+
 	<!-- UA War Caster: Just using 2014 -->
 	<!-- FeatDescription: "WarCaster" --> <content contentuid="h6cee28687ca14f85a43334b0112a50d7ae73" version="1">War Caster</content>
 

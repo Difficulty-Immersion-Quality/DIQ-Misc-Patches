@@ -4,6 +4,7 @@
     <region id="Progressions">
         <node id="root">
             <children>
+                <!-- TODO: Move this into the rogue overhaul, but do it with CF because CF cooler. -->
                 <!-- Arcane Trickster bug fixes. -->
                 <node id="Progression">
                     <!-- <attribute id="MergedInto" type="guid" value=""/> -->

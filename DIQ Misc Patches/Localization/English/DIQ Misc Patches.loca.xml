@@ -3,7 +3,7 @@
 	<!-- Utility spells etc. -->
 	<!-- "" --> <content contentuid="h6186a929ge943g4ba9g98f1g972f22701086" version="1">Utility Spells</content>
 	<!-- "" --> <content contentuid="hed650636g1cc7g4e9agae18g33bd8f98af98" version="1">A little toolbox for custom non-combat spells and abilities.</content>
-	<!-- "" --> <content contentuid="h34ffc6a9g39d9g486dgb927gf1797844ef51" version="1">WARNING: Inform yourself of the bugs related to this on the Appearance Edit Enhanced mod page!</content>
+	<!-- "" --> <content contentuid="h34ffc6a9g39d9g486dgb927gf1797844ef51" version="1">&lt;LSTag Type="Image" Info="TutorialRedWarning"/&gt;WARNING: Inform yourself of the bugs related to this on the Appearance Edit Enhanced mod page!</content>
 	<!-- "" --> <content contentuid="h5bf0d594gdfc7g4555gbdfbgb0cceef34f14" version="1">Conjure Basket Full of Equipment</content>
 	<!-- "" --> <content contentuid="ha3b19175gac84g4809gbb84g759bab16c236" version="1">Conjure a Basket Full of Equipment into your inventory.</content>
 	<!-- "" --> <content contentuid="h78d72228g7f39g47f9g95f6g84d748886d3c" version="1">This spell conjures a Ghost Basket into your inventory that will disappear after 10 turns. Take your desired items out of the Ghost Basket before that. Everything left in the Ghost Basket will disappear forever.</content>

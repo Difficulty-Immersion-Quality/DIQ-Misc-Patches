@@ -1,3 +1,5 @@
+// TODO: Update for Patch #8
+
 new entry "Shout_Open_Creation"
 type "SpellData"
 data "SpellType" "Shout"

@@ -11,36 +11,6 @@ type "PassiveData"
 using "CL_Passive_OneDnD_MartialArts_DextrousAttacks"
 data "BoostConditions" "(IsDexterityGreaterThanStrength() and not Tagged('BOULDER', context.Source) and not Tagged('VESSEL', context.Source) and not HasStatus('ASTRALSELF_EMPOWERED_WISDOM', context.Source) and not (HasStatus('SHILLELAGH', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Wisdom >= context.Source.Dexterity)) or (HasStatus('PACT_BLADE', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)) or (HasStatus('HEXBLADE_BLADE', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)))"
 
-// ==================================== Aza's Viconia Weapon and Shield & VEO compatibility patch ====================================
-
-new entry "MAG_Viconia_Mace"
-type "Weapon"
-using "MAG_Viconia_Mace"
-data "RootTemplate" "c31d6b30-2377-4e3c-a602-d5d527defc11"
-data "ValueUUID" "81764c3c-c7a9-49a7-b145-d31ffd5aebe1"
-data "Damage" "1d8"
-data "Rarity" "VeryRare"
-data "Boosts" ""
-data "PassivesOnEquip" "Viconia_Mace_Passive;MAG_Infernal_Weapon_Passive"
-data "Unique" "1"
-data "Weapon Properties" "Melee;Dippable;Magical"
-
-new entry "MAG_TheBulwark_Shield"
-type "Armor"
-using "MAG_TheBulwark_Shield"
-data "RootTemplate" "4f313dde-14bb-43a2-abdd-07b2eb38b33a"
-data "ValueUUID" "f46eb019-edd0-4216-99df-9dae89a83ce7"
-data "Rarity" "Legendary"
-// data "Boosts" "UnlockSpell(Shout_MAG_TheBulwark_ReflectiveShell);UnlockSpell(Target_MAG_WardingBond)"
-data "Boosts" "AbilityOverrideMinimum(Strength, 18);UnlockSpell(Shout_MAG_TheBulwark_ReflectiveShell_Overhaul);UnlockSpell(Target_MAG_WardingBond)"
-// data "PassivesOnEquip" "MAG_Legendary_ShieldRiposte_Passive;MAG_Legendary_Spellguard_Passive"
-data "PassivesOnEquip" "EqLib_Shield_Passive;MAG_Legendary_ShieldRiposte_Passive;MAG_Legendary_Spellguard_Passive"
-data "MinAmount" "1"
-data "MaxAmount" "1"
-data "Priority" "1"
-data "Unique" "1"
-data "MinLevel" "1"
-
 // ==================================== Compatibility patch for Expansion and True Darkness - 5e RAW ====================================
 
 new entry "BLINDED"
@@ -56,32 +26,3 @@ type "SpellData"
 data "SpellType" "Target"
 using "TARGET_INVOKE_DARKNESS"
 data "Description" "hf645e523dabe4f4582d14d37e5300b4a3522"
-
-// ==================================== Fix conflict between Druid Quality of Life and Vanilla Equipment Overhaul, and in the process disable shapeshift toggle ====================================
-// Note: I should do a proper merge of this shit for the best of both worlds instead of this band-aid.
-
-new entry "MAG_Warlock_Quickened_Gloves"
-type "Armor"
-using "MAG_Warlock_Quickened_Gloves"
-data "RootTemplate" "4b1b3dcd-dcbc-4a93-a848-f16510d76d82"
-data "PassivesOnEquip" "MAG_Warlock_Quickened_Cantrips_Passive_Overhaul"
-data "StatusOnEquip" "MAG_WARLOCK_QUICKENED_CANTRIPS_TECHNICAL_OVERHAUL"
-
-new entry "MAG_Zhentarim_Demonspirit_Gloves"
-type "Armor"
-using "MAG_Zhentarim_Demonspirit_Gloves"
-data "RootTemplate" "7ef359b6-79af-4414-99bc-f93bc5eeed77"
-data "PassivesOnEquip" "MAG_Zhentarim_Demonspirit_Gloves_Passive_Overhaul"
-data "StatusOnEquip" "MAG_ZHENTARIM_DEMONSPIRIT_AURA_OVERHAUL_TECHNICAL"
-
-new entry "MAG_CQCaster_CloseRangedSpellMastery_Gloves"
-type "Armor"
-using "MAG_CQCaster_CloseRangedSpellMastery_Gloves"
-data "RootTemplate" "c9f03464-488c-4f3f-aa2f-6d4c8e48a106"
-
-new entry "MAG_Warlock_Twinned_Gloves"
-type "Armor"
-using "MAG_Warlock_Twinned_Gloves"
-data "RootTemplate" "fc4fd633-bc45-4ff4-90e6-2e454f7ceaa0"
-data "PassivesOnEquip" "MAG_Extended_Target_Cantrip_Passive_Overhaul"
-data "StatusOnEquip" "MAG_EXTENDED_TARGET_CANTRIPS_TECHNICAL_OVERHAUL"

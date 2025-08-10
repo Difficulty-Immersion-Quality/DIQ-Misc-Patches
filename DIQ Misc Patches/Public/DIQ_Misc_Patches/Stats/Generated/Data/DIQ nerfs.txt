@@ -127,6 +127,7 @@ data "Boosts" "IF(Character() and Tagged('CAMBION')):WeaponDamage(4d8, Fire)"
 
 // ==================================== Trying to make 5E Spells' Mind Whip not empty AI brains on to the floor when it has to pick between moving or attacking ====================================
 // Needs testing for QA
+// TODO: Integrate with my spell overhaul, redo entries.
 
 new entry "Target_TashasMindWhip"
 type "SpellData"
@@ -225,51 +226,3 @@ using "EW_BA_BlessedHand_Passive_II"
 type "PassiveData"
 // data "Description" "h465a8adfgcfb3g4fecgac27gaff9aaf74118;1"
 data "Description" "h027cfe16g350dg43c8gac97g46a6628b0384;1"
-
-// ==================================== Ancient Armoury Nerfs ====================================
-// TODO: Remove for Patch #8
-
-// Void-Touched Circlet
-new entry "MAG_Armour_H_83_bonus"
-type "PassiveData"
-using "MAG_Armour_H_83_bonus"
-data "DescriptionParams" "10"
-data "Boosts" "BlockRegainHP();StatusImmunity(MAG_TEMPORARY_HP);RollBonus(RangedSpellAttack,10);RollBonus(MeleeSpellAttack,10)"
-
-// Dreamstalker Helm
-new entry "MAG_Armour_H_98_bonus"
-type "PassiveData"
-using "MAG_Armour_H_98_bonus"
-// You gain [1] after a &lt;LSTag Tooltip="LongRest"&gt;Long Rest&lt;/LSTag&gt;. Until the &lt;LSTag Tooltip="TemporaryHitPoints"&gt;temporary hit points&lt;/LSTag&gt; expire you also have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt;, &lt;LSTag Tooltip="Intelligence"&gt;Intelligence&lt;/LSTag&gt;, &lt;LSTag Tooltip="Charisma"&gt;Charisma&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; and magic can't put you to Sleep.
-data "Description" "h976141c7g3022g44f1gaca7gb4991ad12dbf"
-data "DescriptionParams" "GainTemporaryHitPoints(level*5)"
-data "Properties" "Highlighted"
-data "StatsFunctorContext" "OnLongRest"
-data "StatsFunctors" "ApplyStatus(SELF, MAG_TEMPORARY_HP_100, 100, -1);ApplyStatus(SELF, MAG_Armour_H_98_bonus_Dummy_Status, 100, -1)"
-
-new entry "MAG_TEMPORARY_HP_100"
-type "StatusData"
-data "StatusType" "BOOST"
-using "MAG_TEMPORARY_HP_100"
-// Dream Shield
-data "DisplayName" "h73716c06g2341g4c6fg9669g5ae30f4a0dc2"
-// Kept from death's door by a brief magical boost. Gained [1] &lt;LSTag Tooltip="TemporaryHitPoints"&gt;temporary hit points&lt;/LSTag&gt;, &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt;, &lt;LSTag Tooltip="Intelligence"&gt;Intelligence&lt;/LSTag&gt;, &lt;LSTag Tooltip="Charisma"&gt;Charisma&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; and magic can't put you to Sleep.
-data "Description" "h9fb312bcgf537g41f2g90e8g76735e4ffe39"
-using "MAG_TEMPORARY_HP_100"
-data "DescriptionParams" "(level*5)"
-data "Boosts" "TemporaryHP(level*5);Advantage(SavingThrow, Wisdom);Advantage(SavingThrow, Intelligence);Advantage(SavingThrow, Charisma);StatusImmunity(SLEEP)"
-data "RemoveConditions" "not HasTemporaryHP() and not HasStatus('MAG_Armour_H_98_bonus_Dummy_Status')"
-data "RemoveEvents" "OnDamage;OnEquip;OnUnequip"
-
-new entry "MAG_Armour_H_98_bonus_Dummy_Status"
-type "StatusData"
-data "StatusType" "BOOST"
-data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
-
-// Gloves of the Elven Gift
-new entry "MAG_Armour_G_74_bonus"
-type "PassiveData"
-using "MAG_Armour_G_74_bonus"
-data "DescriptionParams" "75;1"
-data "Properties" "Highlighted;OncePerTurn"
-data "StatsFunctorContext" "OnAttack"

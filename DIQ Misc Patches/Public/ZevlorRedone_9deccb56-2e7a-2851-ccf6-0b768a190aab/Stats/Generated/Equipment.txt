@@ -1,0 +1,9 @@
+// new equipment "Zevlor Equipment Set"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Greatsword_Pact"
+// add equipmentgroup
+// add equipment entry "WPN_HeavyCrossbow_1"
+// add equipmentgroup
+// add equipment entry "AARDI_ARM_Loyalty_Threads_Charming"
+

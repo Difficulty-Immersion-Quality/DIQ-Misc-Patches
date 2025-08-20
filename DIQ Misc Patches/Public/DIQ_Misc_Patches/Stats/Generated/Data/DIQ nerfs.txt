@@ -1,3 +1,45 @@
+// ==================================== Celestial Fury ====================================
+// Changes: Removed the fly spell.
+// Changes: The Shocking Blow passive now applies 1d20 Lightning damage instead of 2d8+4, and instead of applying on critical hits rolls against a DC of 20 with a 5% chance.
+// TODO: Throwing support.
+
+new entry "WPN_HUM_Katana_CelestialFury"
+type "Weapon"
+// using "WPN_Katana"
+using "WPN_HUM_Katana_CelestialFury"
+// data "RootTemplate" "df8ccb4d-21e6-45bb-a318-e48b239676da"
+// data "ValueUUID" "d24c441f-7ebe-4229-8522-cf34c257ff20"
+// data "ValueScale" "9.3"
+// data "Rarity" "Legendary"
+// data "DefaultBoosts" "WeaponEnchantment(3);WeaponProperty(Magical)"
+// data "Boosts" "UnlockSpell(Zone_CelestialFury_LightningStrike);UnlockSpell(Target_CelestialFury_Blindness);UnlockSpell(Shout_ClesetialFury_Fly);"
+data "Boosts" "UnlockSpell(Zone_CelestialFury_LightningStrike);UnlockSpell(Target_CelestialFury_Blindness)"
+// data "BoostsOnEquipMainHand" "UnlockSpell(Target_OpeningAttack);UnlockSpell(Target_Slash_New);UnlockSpell(Rush_SpringAttack);"
+// data "PassivesOnEquip" "CelestialFury_Stun_Passive;CelestialFury_Shock_Passive;CelestialFury_Jolts_Passive;CelestialFury_Glowing;CelestialFury_LightningWet_Resitance;"
+// data "Unique" "1"
+// data "Weapon Properties" "Versatile;Melee;Dippable;Magical"
+// data "Proficiency Group" "Longswords;MartialWeapons"
+
+new entry "CelestialFury_Shock_Passive"
+type "PassiveData"
+using "CelestialFury_Shock_Passive"
+// Shocking Blow
+// data "DisplayName" "haae9d0b2gd1f9g76dage666g9241926f1e50;1"
+// When the wielder lands a &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hit&lt;/LSTag&gt; with this weapon, it crackles with lightning shocking the target for an additional [1].
+// data "Description" "h1899baccg389eg3516g561fg35b9936f029b;10"
+// Attacks with this weapon have a small chance of wreathing the blade in electricity, dealing [1].
+data "Description" "h4610246egd7fdg4e48gbd04ge999b518d89e;1"
+// data "DescriptionParams" "DealDamage(4d8+4, Lightning)"
+data "DescriptionParams" "DealDamage(1d20, Lightning)"
+// data "ExtraDescription" "h200ca1f5ge7c3gce00gbd5bg3bccec5ed871;4"
+// data "ExtraDescriptionParams" "4"
+// data "Properties" "DisplayBoostInTooltip"
+// data "StatsFunctorContext" "OnDamage"
+// data "Conditions" "AttackedWithPassiveSourceWeapon() and IsCritical()"
+data "Conditions" "AttackedWithPassiveSourceWeapon() and RollDieAgainstDC(DiceType.d20,20)"
+// data "StatsFunctors" "IF(not HasStatus('MAG_CHARGED_LIGHTNING', context.Source)):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_LIGHTNING_DAMAGE_ONCE_TECHNICAL,100, 0);IF(Character()):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_GENERATE_CHARGE_FX, 100, 0);IF(Character() and not IsDischargingLightning(context.Source)):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING,100, 4);ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_DURATION_TECHNICAL, 100, 1);DealDamage(2d8+4,Lightning,Magical)"
+data "StatsFunctors" "IF(not HasStatus('MAG_CHARGED_LIGHTNING', context.Source)):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_LIGHTNING_DAMAGE_ONCE_TECHNICAL,100, 0);IF(Character()):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_GENERATE_CHARGE_FX, 100, 0);IF(Character() and not IsDischargingLightning(context.Source)):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING,100, 4);ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_DURATION_TECHNICAL, 100, 1);DealDamage(1d20,Lightning,Magical)"
+
 // ==================================== Allow Dodge, Get Ready and Hurry Up to be used while Immobilized but not while out of combat ====================================
 
 new entry "Shout_Hurry"

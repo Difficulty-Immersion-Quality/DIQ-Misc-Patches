@@ -152,7 +152,9 @@
 	<!-- "PsyRiderPassive2b" --> <content contentuid="h805f7870g29c2g478dga6afgf66da2c04da3" version="1">When you deal[1] to an enemy with an &lt;LSTag Tooltip="AttackRoll"&gt;Attack&lt;/LSTag&gt;, they must succed a &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or become &lt;LSTag Type="Status" Tooltip="MAG_PSYCHIC_MENTAL_FATIGUE"&gt;Mentally Fatigued&lt;/LSTag&gt; for 3 turns.</content>
 
 	<!-- "CL_Passive_OneDnD_MartialArts" --> <content contentuid="hd5119617gbaf4g4168g8d35g9bc3ed6b0d98" version="1">Attacks with &lt;LSTag Tooltip="MonkWeapon"&gt;Monk Weapons&lt;/LSTag&gt; and unarmed attacks deal [1], unless their normal damage is higher and scale with your &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; instead of your &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; if your Dexterity is higher. In addition, you can make &lt;LSTag Type="Spell" Tooltip="CL_Target_OneDnD_MartialArts_UnarmedStrike_BonusAction"&gt;Unarmed Strikes&lt;/LSTag&gt; as a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;bonus action&lt;/LSTag&gt;.</content>
-	<!-- "" --> <content contentuid="" version="1"></content>
+
+	<!-- "CelestialFury_Shock_Passive" --> <content contentuid="h4610246egd7fdg4e48gbd04ge999b518d89e" version="1">Attacks with this weapon have a small chance of wreathing the blade in electricity, dealing [1].</content>
+
 	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>

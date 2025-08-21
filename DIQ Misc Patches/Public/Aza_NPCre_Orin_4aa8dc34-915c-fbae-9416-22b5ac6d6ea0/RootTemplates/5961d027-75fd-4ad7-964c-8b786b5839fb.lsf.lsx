@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="8" revision="0" build="400" lslib_meta="v1,bswap_guids,lsf_keys_adjacency" />
+	<region id="Templates">
+		<node id="Templates">
+			<children>
+				<node id="GameObjects">
+					<!-- <attribute id="MapKey" type="FixedString" value="5961d027-75fd-4ad7-964c-8b786b5839fb" />
+					<attribute id="Name" type="LSString" value="MAG_TheCrimson_Shortsword" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="ParentTemplateId" type="FixedString" value="5908898d-5d9e-40de-ab07-3f8fb5f0174c" />
+					<attribute id="VisualTemplate" type="FixedString" value="3d7ffe66-7905-2028-a5bf-55058cc689a1" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="19275164-40ba-a42e-6ad9-6e894defa0e4" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h62dcdcc5g1085g4ac6ga86fg4589de831c96" version="3" />
+					<attribute id="Icon" type="FixedString" value="Item_MAG_TheCrimson_Shortsword" />
+					<attribute id="Stats" type="FixedString" value="MAG_TheCrimson_Shortsword" />
+					<attribute id="Description" type="TranslatedString" handle="h8ccaff71gf114g4729g995dgceb86deef6ae" version="2" />
+					<children>
+						<node id="Tags">
+							<children>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="983087c8-c9d3-4a87-bc69-65f9329666c8" />
+								</node>
+							</children>
+						</node>
+						<node id="Bounds">
+							<children>
+								<node id="Bound">
+									<attribute id="Type" type="uint8" value="0" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Min" type="fvec3" value="-0.065438576 -0.01378284 -0.65139556" />
+									<attribute id="Max" type="fvec3" value="0.06520624 0.036525387 0.2214657" />
+									<attribute id="Radius" type="float" value="0.212115" />
+									<attribute id="Height" type="float" value="0.163168" />
+								</node>
+								<node id="Bound">
+									<attribute id="Type" type="uint8" value="1" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Min" type="fvec3" value="-0.065438576 -0.01378284 -0.65139556" />
+									<attribute id="Max" type="fvec3" value="0.06520624 0.036525387 0.2214657" />
+									<attribute id="Radius" type="float" value="0.42423" />
+									<attribute id="Height" type="float" value="0.163168" />
+								</node>
+								<node id="Bound">
+									<attribute id="Type" type="uint8" value="2" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Min" type="fvec3" value="-0.065438576 -0.01378284 -0.65139556" />
+									<attribute id="Max" type="fvec3" value="0.06520624 0.036525387 0.2214657" />
+									<attribute id="Radius" type="float" value="0.42423" />
+									<attribute id="Height" type="float" value="0.163168" />
+								</node>
+							</children>
+						</node>
+						<node id="StatusList">
+							<children>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="MAG_THE_CRIMSON_VICIOUS" />
+								</node>
+								<node id="Status">
+									<attribute id="Object" type="FixedString" value="MAG_NECROTIC_NECROTIC_WEAPON_RED_Aza" />
+								</node>
+							</children>
+						</node>
+					</children> -->
+				</node>
+			</children>
+		</node>
+	</region>
+</save>

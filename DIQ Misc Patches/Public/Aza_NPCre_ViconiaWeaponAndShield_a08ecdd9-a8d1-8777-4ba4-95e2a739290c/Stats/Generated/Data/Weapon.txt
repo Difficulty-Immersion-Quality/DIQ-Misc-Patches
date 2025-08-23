@@ -1,0 +1,10 @@
+// new entry "MAG_Viconia_Mace"
+// type "Weapon"
+// using "WPN_Mace_2"
+// data "RootTemplate" "c31d6b30-2377-4e3c-a602-d5d527defc11"
+// data "ValueUUID" "81764c3c-c7a9-49a7-b145-d31ffd5aebe1"
+// data "Rarity" "VeryRare"
+// data "PassivesOnEquip" "Viconia_Mace_Passive"
+// data "Unique" "1"
+// data "Weapon Properties" "Melee;Dippable;Magical"
+

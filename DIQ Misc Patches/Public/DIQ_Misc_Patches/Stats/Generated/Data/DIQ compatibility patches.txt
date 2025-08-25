@@ -12,12 +12,39 @@ using "CL_Passive_OneDnD_MartialArts_DextrousAttacks"
 data "BoostConditions" "(IsDexterityGreaterThanStrength() and not Tagged('BOULDER', context.Source) and not Tagged('VESSEL', context.Source) and not HasStatus('ASTRALSELF_EMPOWERED_WISDOM', context.Source) and not (HasStatus('SHILLELAGH', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Wisdom >= context.Source.Dexterity)) or (HasStatus('PACT_BLADE', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)) or (HasStatus('HEXBLADE_BLADE', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)))"
 
 // ==================================== Compatibility patch for Expansion and True Darkness - 5e RAW ====================================
+// I don't really understand why Expansion is checking context.Source for things with the Advantage(AttackTarget).
 
 new entry "BLINDED"
 type "StatusData"
 data "StatusType" "BOOST"
 using "BLINDED"
-data "Boosts" "IF(not (TD_BlindFighting() or (HasPassive('Blindsense',context.Source) and not (HasPassive('Deafness',context.Source) or HasStatus('SG_Deafened',context.Source))))):Disadvantage(AttackRoll);IF(not (TD_BlindFighting(context.Target) or (HasPassive('Blindsense',context.Source) and not (HasPassive('Deafness',context.Source) or HasStatus('SG_Deafened',context.Source))))):Advantage(AttackTarget)"
+data "Boosts" "IF(not TD_BlindFighting() or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))):Disadvantage(AttackRoll);IF(not TD_BlindFighting(context.Target) or (HasPassive('Blindsense',context.Target) and not HasStatus('SG_Deafened',context.Target))):Advantage(AttackTarget)"
+
+// ==================================== Expansion
+
+// new entry "BLINDED"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// using "BLINDED"
+// data "DescriptionParams" "Distance(1.5)"
+// data "Boosts" "IF(not (HasPassive('FightingStyle_BlindFighting',context.Source) or (HasPassive('Blindsense',context.Source) and not (HasPassive('Deafness',context.Source) or HasStatus('SG_Deafened',context.Source)))) or DistanceToTargetGreaterThan(3)):Disadvantage(AttackRoll); IF(not (HasPassive('FightingStyle_BlindFighting',context.Target) or (HasPassive('Blindsense',context.Source) and not (HasPassive('Deafness',context.Source) or HasStatus('SG_Deafened',context.Source)))) or DistanceToTargetGreaterThan(3)):Advantage(AttackTarget); SightRangeMaximum(2)"
+
+// ==================================== True Darkness RAW
+
+// new entry "BLINDED"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// using "BLINDED"
+// A blinded creature can't see and automatically fails any &lt;LSTag Tooltip="AbilityCheck"&gt;ability check&lt;/LSTag&gt; that requires sight.&lt;br&gt;&lt;Br&gt;&lt;LSTag Tooltip="AttackRoll"&gt;Attack rolls&lt;/LSTag&gt; against the creature have ad&lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt;vantage, and the creature's attack rolls have &lt;LSTag Tooltip="Disadvantage"&gt;disadvantage&lt;/LSTag&gt;.
+// data "Description" "h5c55526f9fa245028ae5fd714d69378d1aca;1"
+// Support for mods that introduce FightingStyle_BlindFighting to work correctly at 10ft distance
+// data "Boosts" "IF(not TD_BlindFighting()):Disadvantage(AttackRoll); IF(not TD_BlindFighting(context.Target)):Advantage(AttackTarget)"
+
+// function TD_BlindFighting(entity)
+//     entity = entity or context.Source
+//     return IsImmuneToStatus('SG_Blinded', entity)
+//     | (HasPassive('FightingStyle_BlindFighting', entity) & ~DistanceToGreaterThan(context.SourcePosition, context.TargetPosition, 3))
+// end
 
 // ==================================== Blackguard's Darkness tooltip to reflect that of True Darkness - 5e RAW ====================================
 

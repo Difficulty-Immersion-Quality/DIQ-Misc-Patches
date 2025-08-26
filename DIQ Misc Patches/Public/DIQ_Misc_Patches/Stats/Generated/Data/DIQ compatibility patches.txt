@@ -13,12 +13,31 @@ data "BoostConditions" "(IsDexterityGreaterThanStrength() and not Tagged('BOULDE
 
 // ==================================== Compatibility patch for Expansion and True Darkness - 5e RAW ====================================
 // I don't really understand why Expansion is checking context.Source for things with the Advantage(AttackTarget).
+// TODO: Create functions for this stuff in library.
+// TODO: Decrease attack roll per 1m for each meter beyond 3. Ranged attacks are too good with TD.
 
 new entry "BLINDED"
 type "StatusData"
 data "StatusType" "BOOST"
 using "BLINDED"
-data "Boosts" "IF(not TD_BlindFighting() or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))):Disadvantage(AttackRoll);IF(not TD_BlindFighting(context.Target) or (HasPassive('Blindsense',context.Target) and not HasStatus('SG_Deafened',context.Target))):Advantage(AttackTarget)"
+// Blinded
+// data "DisplayName" "h61169861gae88g4aadgb0degc3c1cc0e0885;1"
+// Has &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;. Range of attacks and spells reduced to [1]. &lt;br&gt;&lt;br&gt;Attack Rolls against Blinded creatures have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt;.
+// data "Description" "h80779d74g9d58g47ebga2a9g171250a92ad6;4"
+// data "DescriptionParams" "Distance(3)"
+// data "Icon" "Status_Blinded"
+// data "StillAnimationType" "Blinded"
+// data "StillAnimationPriority" "Blinded"
+// data "SoundVocalStart" "WEAK"
+// data "SoundLoop" "Spell_Status_Blinded_MO"
+// data "SoundStop" "Spell_Status_Blinded_MO_Stop"
+// data "StackId" "BLINDED"
+// data "Boosts" "Disadvantage(AttackRoll); Advantage(AttackTarget); SightRangeMaximum(3)"
+data "Boosts" "IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('FightingStyle_BlindFighting',context.Source) and not DistanceToGreaterThan(context.SourcePosition, context.TargetPosition, 3))) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))):Disadvantage(AttackRoll);IF(not (IsImmuneToStatus('SG_Blinded',context.Target) or (HasPassive('FightingStyle_BlindFighting',context.Target) and not DistanceToGreaterThan(context.SourcePosition, context.TargetPosition, 3))) or (HasPassive('Blindsense',context.Target) and not HasStatus('SG_Deafened',context.Target))):Advantage(AttackTarget)"
+// data "StatusPropertyFlags" "InitiateCombat;Blind"
+// data "StatusGroups" "SG_Blinded;SG_Condition"
+// data "ApplyEffect" "39044361-a2df-4730-90ca-ce37ddcbc482"
+// data "StatusEffect" "5c53ef4c-bd94-4567-94c1-8b1a8cefa7e3"
 
 // ==================================== Expansion
 

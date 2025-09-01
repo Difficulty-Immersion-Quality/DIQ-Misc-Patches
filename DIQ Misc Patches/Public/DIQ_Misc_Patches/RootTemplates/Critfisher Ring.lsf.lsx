@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="7" revision="1" build="3" lslib_meta="v1,bswap_guids,lsf_keys_adjacency" />
+	<region id="Templates">
+		<node id="Templates">
+			<children>
+				<!-- Template refers to non-existant entry, causes problems for REL and probably other stuff. -->
+				<node id="GameObjects">
+					<attribute id="MapKey" type="FixedString" value="6be8633d-a1ca-4ede-96cc-c52066d705cc" />
+					<attribute id="Name" type="LSString" value="ARM_CritfisherRing" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="ParentTemplateId" type="FixedString" value="37990e69-4de5-4c3c-b720-878fb4b0ffbd" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h56aec03fg1415gf6ebg49b0gddb7c9ff9eaf" version="4" />
+					<attribute id="CanShineThrough" type="bool" value="True" />
+					<attribute id="Icon" type="FixedString" value="Item_MAG_PHB_OfFreeAction_Ring" />
+					<!-- <attribute id="Stats" type="FixedString" value="MAG_CritfisherRing" /> -->
+					<attribute id="Stats" type="FixedString" value="ARM_CritfisherRing" />
+					<attribute id="Description" type="TranslatedString" handle="h9935f3a1gf3afg0016g3564g549bbfc55880" version="4" />
+					<children>
+						<node id="Tags">
+							<children>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="983087c8-c9d3-4a87-bc69-65f9329666c8" />
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+			</children>
+		</node>
+	</region>
+</save>

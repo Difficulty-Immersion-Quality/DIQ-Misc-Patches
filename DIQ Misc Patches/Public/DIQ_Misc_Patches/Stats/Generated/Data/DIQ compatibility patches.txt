@@ -1,5 +1,6 @@
 // ==================================== Highly contested Monk entry compatibility patching - OneDeezNnutsDMartialArts/Druid QoL/Vessel/WayOfTheBoulder/Hexblade ====================================
 // TODO: Update loca for this to specify all the functionality.
+// TODO: Functions to condense... functionality.
 
 new entry "MartialArts_DextrousUnarmedAttacks"
 type "PassiveData"
@@ -10,6 +11,23 @@ new entry "CL_Passive_OneDnD_MartialArts_DextrousAttacks"
 type "PassiveData"
 using "CL_Passive_OneDnD_MartialArts_DextrousAttacks"
 data "BoostConditions" "(IsDexterityGreaterThanStrength() and not Tagged('BOULDER', context.Source) and not Tagged('VESSEL', context.Source) and not HasStatus('ASTRALSELF_EMPOWERED_WISDOM', context.Source) and not (HasStatus('SHILLELAGH', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Wisdom >= context.Source.Dexterity)) or (HasStatus('PACT_BLADE', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)) or (HasStatus('HEXBLADE_BLADE', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)))"
+
+// new entry "CL_Passive_OneDnD_MartialArts_DextrousAttacks"
+// type "PassiveData"
+// using "CL_Passive_OneDnD_MartialArts_DextrousAttacks"
+// data "BoostConditions" "
+// (IsDexterityGreaterThanStrength()
+//  and not (Tagged('BOULDER', context.Source) or Tagged('VESSEL', context.Source) or HasStatus('ASTRALSELF_EMPOWERED_WISDOM', context.Source)) 
+//  and not (HasStatus('SHILLELAGH', GetActiveWeapon()) and ConditionResult(context.Source.Wisdom >= context.Source.Dexterity)) or 
+
+//  (HasAnyStatus({'PACT_BLADE','HEXBLADE_BIND','FLAME_BLADE_MEPHISTOPHELES'},{},{},GetActiveWeapon()) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity))
+
+// MAG_MELEE_CASTER_BOON
+
+// new entry "MartialArts_DextrousUnarmedAttacks"
+// type "PassiveData"
+// using "MartialArts_DextrousUnarmedAttacks"
+// data "BoostConditions" "IsDexterityGreaterThanStrength() and not HasAnyStatus({'PACT_BLADE','HEXBLADE_BIND','FLAME_BLADE_MEPHISTOPHELES'},{},{},GetActiveWeapon());"
 
 // ==================================== Compatibility patch for Expansion and True Darkness - 5e RAW ====================================
 // I don't really understand why Expansion is checking context.Source for things with the Advantage(AttackTarget).

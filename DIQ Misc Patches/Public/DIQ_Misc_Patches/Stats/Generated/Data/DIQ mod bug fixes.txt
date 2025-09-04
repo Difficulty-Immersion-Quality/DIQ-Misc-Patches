@@ -1,3 +1,37 @@
+// ==================================== Witch - A BG3 Homebrew ====================================
+// Bug Fix: Item spells in base spell container
+
+new entry "Target_Witch_Item_Sleep"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_Sleep_6"
+using "Target_Witch_Item_Sleep"
+// data "Cooldown" "OncePerShortRest"
+// data "TargetConditions" "not HasHPMoreThan(64) and not HasStatus('SG_Unconscious') and not Dead() and Character() and not Ally() and not (not Player(context.Source) and IsCrowdControlled(context.Target)) and not IsImmuneToStatus('SLEEP')"
+// data "PreviewCursor" "Cast"
+// data "UseCosts" "ActionPoint:1"
+data "RootSpellID" ""
+
+new entry "Target_Witch_Item_Shatter"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_Shatter_3"
+using "Target_Witch_Item_Shatter"
+// data "Cooldown" "OncePerCombat"
+// data "PreviewCursor" "Cast"
+// data "UseCosts" "ActionPoint:1"
+data "RootSpellID" ""
+
+new entry "Target_Witch_Item_Banishment"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_Banishment_5"
+using "Target_Witch_Item_Banishment"
+// data "Cooldown" "OncePerRestPerItem"
+// data "PreviewCursor" "Cast"
+// data "UseCosts" "ActionPoint:1"
+data "RootSpellID" ""
+
 // ==================================== OneDnD Monk Martial Arts ====================================
 // Bug Fix: Tooltip link fix for "CL_Target_OneDnD_MartialArts_UnarmedStrike_BonusAction"
 

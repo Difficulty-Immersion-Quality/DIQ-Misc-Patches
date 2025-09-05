@@ -1,0 +1,104 @@
+// ==================================== Compatibility patch for Expansion and True Darkness - 5e RAW ====================================
+// I don't really understand why Expansion is checking context.Source for things with the Advantage(AttackTarget).
+// TODO: Goon_CanIgnoreBlindness_Melee() Goon_CanIgnoreBlindness_Ranged() functions
+
+new entry "BLINDED"
+type "StatusData"
+data "StatusType" "BOOST"
+using "BLINDED"
+// Blinded
+// data "DisplayName" "h61169861gae88g4aadgb0degc3c1cc0e0885;1"
+// Has &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;. Range of attacks and spells reduced to [1]. &lt;br&gt;&lt;br&gt;Attack Rolls against Blinded creatures have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt;.
+// data "Description" "h80779d74g9d58g47ebga2a9g171250a92ad6;4"
+// A blinded creature can't see and automatically fails any &lt;LSTag Tooltip="AbilityCheck"&gt;ability check&lt;/LSTag&gt; that requires sight.&lt;br&gt;&lt;Br&gt;&lt;LSTag Tooltip="AttackRoll"&gt;Attack rolls&lt;/LSTag&gt; against the creature have ad&lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt;vantage, and the creature's attack rolls have &lt;LSTag Tooltip="Disadvantage"&gt;disadvantage&lt;/LSTag&gt;.
+// data "Description" "h5c55526f9fa245028ae5fd714d69378d1aca;1"
+// A blinded creature can't see and automatically fails any &lt;LSTag Tooltip="AbilityCheck"&gt;ability check&lt;/LSTag&gt; that requires sight.&lt;br&gt;&lt;br&gt;&lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; against the creature have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt;, and the creature's attack rolls have &lt;LSTag Tooltip="Disadvantage"&gt;disadvantage&lt;/LSTag&gt;. Additionally, the creature's attacks incur a -1 penalty if the distance is beyond [1], and a further -1 penalty for each [2] beyond that.
+data "Description" "h3f73842fga672g4098g8355g761983e226be;1"
+// data "DescriptionParams" "Distance(3)"
+// data "DescriptionParams" "Distance(1.5)"
+data "DescriptionParams" "Distance(3);Distance(2)"
+// data "Icon" "Status_Blinded"
+// data "StillAnimationType" "Blinded"
+// data "StillAnimationPriority" "Blinded"
+// data "SoundVocalStart" "WEAK"
+// data "SoundLoop" "Spell_Status_Blinded_MO"
+// data "SoundStop" "Spell_Status_Blinded_MO_Stop"
+// data "StackId" "BLINDED"
+// data "Boosts" "Disadvantage(AttackRoll); Advantage(AttackTarget); SightRangeMaximum(3)"
+// data "Boosts" "IF(not TD_BlindFighting()):Disadvantage(AttackRoll); IF(not TD_BlindFighting(context.Target)):Advantage(AttackTarget)"
+data "Boosts" "IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('FightingStyle_BlindFighting',context.Source) and not DistanceToGreaterThan(context.SourcePosition, context.TargetPosition, 3))) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))):Disadvantage(AttackRoll);IF(not (IsImmuneToStatus('SG_Blinded',context.Target) or (HasPassive('FightingStyle_BlindFighting',context.Target) and not DistanceToGreaterThan(context.SourcePosition, context.TargetPosition, 3))) or (HasPassive('Blindsense',context.Target) and not HasStatus('SG_Deafened',context.Target))):Advantage(AttackTarget);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(3) and not DistanceToTargetGreaterOrEqual(5))):RollBonus(Attack,-1);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(5) and not DistanceToTargetGreaterOrEqual(7))):RollBonus(Attack,-2);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(7) and not DistanceToTargetGreaterOrEqual(9))):RollBonus(Attack,-3);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(9) and not DistanceToTargetGreaterOrEqual(11))):RollBonus(Attack,-4);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(11) and not DistanceToTargetGreaterOrEqual(13))):RollBonus(Attack,-5);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(11) and not DistanceToTargetGreaterOrEqual(13))):RollBonus(Attack,-6);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(13) and not DistanceToTargetGreaterOrEqual(15))):RollBonus(Attack,-7);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(17) and not DistanceToTargetGreaterOrEqual(19))):RollBonus(Attack,-8);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(19) and not DistanceToTargetGreaterOrEqual(21))):RollBonus(Attack,-9);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(21) and not DistanceToTargetGreaterOrEqual(23))):RollBonus(Attack,-10)"
+// data "StatusPropertyFlags" "InitiateCombat;Blind"
+// data "StatusGroups" "SG_Blinded;SG_Condition"
+// data "ApplyEffect" "39044361-a2df-4730-90ca-ce37ddcbc482"
+// data "StatusEffect" "5c53ef4c-bd94-4567-94c1-8b1a8cefa7e3"
+
+// ==================================== Expansion
+
+// new entry "BLINDED"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// using "BLINDED"
+// data "DescriptionParams" "Distance(1.5)"
+// data "Boosts" "IF(not (HasPassive('FightingStyle_BlindFighting',context.Source) or (HasPassive('Blindsense',context.Source) and not (HasPassive('Deafness',context.Source) or HasStatus('SG_Deafened',context.Source)))) or DistanceToTargetGreaterThan(3)):Disadvantage(AttackRoll); IF(not (HasPassive('FightingStyle_BlindFighting',context.Target) or (HasPassive('Blindsense',context.Source) and not (HasPassive('Deafness',context.Source) or HasStatus('SG_Deafened',context.Source)))) or DistanceToTargetGreaterThan(3)):Advantage(AttackTarget); SightRangeMaximum(2)"
+
+// ==================================== True Darkness RAW
+
+// new entry "BLINDED"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// using "BLINDED"
+// A blinded creature can't see and automatically fails any &lt;LSTag Tooltip="AbilityCheck"&gt;ability check&lt;/LSTag&gt; that requires sight.&lt;br&gt;&lt;Br&gt;&lt;LSTag Tooltip="AttackRoll"&gt;Attack rolls&lt;/LSTag&gt; against the creature have ad&lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt;vantage, and the creature's attack rolls have &lt;LSTag Tooltip="Disadvantage"&gt;disadvantage&lt;/LSTag&gt;.
+// data "Description" "h5c55526f9fa245028ae5fd714d69378d1aca;1"
+// Support for mods that introduce FightingStyle_BlindFighting to work correctly at 10ft distance
+// data "Boosts" "IF(not TD_BlindFighting()):Disadvantage(AttackRoll); IF(not TD_BlindFighting(context.Target)):Advantage(AttackTarget)"
+
+// function TD_BlindFighting(entity)
+//     entity = entity or context.Source
+//     return IsImmuneToStatus('SG_Blinded', entity)
+//     | (HasPassive('FightingStyle_BlindFighting', entity) & ~DistanceToGreaterThan(context.SourcePosition, context.TargetPosition, 3))
+// end
+
+// ==================================== Heavily Obscured ====================================
+
+// Status indicating that a character is heavily obscured
+new entry "HEAVILY_OBSCURED_STATUS"
+type "StatusData"
+data "StatusType" "BOOST"
+using "HEAVILY_OBSCURED_STATUS"
+// data "StackId" "HEAVILY_OBSCURED_STATUS"
+// Heavily Obscured
+// data "DisplayName" "hb520ddae838b4ef985c3b8da4274c6e95g73;1"
+// A heavily obscured creature is hidden from sight within a thick cloud or opaque fog. &lt;LSTag Tooltip="AttackRoll"&gt;Attack rolls&lt;/LSTag&gt; against the creature have &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt;.&lt;br&gt;&lt;Br&gt;The creature is effectively &lt;LSTag Type="Status" Tooltip="BLINDED"&gt;Blinded&lt;/LSTag&gt; while heavily obscured.
+// data "Description" "h2643f9dbb1664974ac555c5f0fedf0ee091b;1"
+// data "Icon" "Action_WildMagic_GasCloud"
+// Forcing disadvantage because the target is unseen
+// data "Boosts" "IF(not TD_BlindFighting()):Disadvantage(AttackTarget); IF(not TD_BlindFighting(context.Target)):Advantage(AttackRoll)"
+data "Boosts" "IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('FightingStyle_BlindFighting',context.Source) and not DistanceToGreaterThan(context.SourcePosition, context.TargetPosition, 3))) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))):Disadvantage(AttackRoll);IF(not (IsImmuneToStatus('SG_Blinded',context.Target) or (HasPassive('FightingStyle_BlindFighting',context.Target) and not DistanceToGreaterThan(context.SourcePosition, context.TargetPosition, 3))) or (HasPassive('Blindsense',context.Target) and not HasStatus('SG_Deafened',context.Target))):Advantage(AttackTarget);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(3) and not DistanceToTargetGreaterOrEqual(5))):RollBonus(Attack,-1);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(5) and not DistanceToTargetGreaterOrEqual(7))):RollBonus(Attack,-2);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(7) and not DistanceToTargetGreaterOrEqual(9))):RollBonus(Attack,-3);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(9) and not DistanceToTargetGreaterOrEqual(11))):RollBonus(Attack,-4);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(11) and not DistanceToTargetGreaterOrEqual(13))):RollBonus(Attack,-5);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(11) and not DistanceToTargetGreaterOrEqual(13))):RollBonus(Attack,-6);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(13) and not DistanceToTargetGreaterOrEqual(15))):RollBonus(Attack,-7);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(17) and not DistanceToTargetGreaterOrEqual(19))):RollBonus(Attack,-8);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(19) and not DistanceToTargetGreaterOrEqual(21))):RollBonus(Attack,-9);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(21) and not DistanceToTargetGreaterOrEqual(23))):RollBonus(Attack,-10)"
+// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog"
+
+
+// ==================================== Enveloped in Darkness ====================================
+
+// Status indicating that a character is inside Darkness cloud
+new entry "DARKNESS_STATUS"
+type "StatusData"
+data "StatusType" "BOOST"
+using "DARKNESS_STATUS"
+// data "StackId" "DARKNESS_STATUS"
+// Enveloped in Darkness
+// data "DisplayName" "h17293b9bgd533g66d2g97f0gd94ccf2d66fa;1"
+// A creature inside magical darkness is heavily obscured, and &lt;LSTag Tooltip="AttackRoll"&gt;attack rolls&lt;/LSTag&gt; against the the creature have &lt;LSTag Tooltip="Disadvantage"&gt;disadvantage&lt;/LSTag&gt;.&lt;br&gt;&lt;Br&gt;The creature is &lt;LSTag Type="Status" Tooltip="BLINDED"&gt;Blinded&lt;/LSTag&gt; and cannot perceive anything that relies on sight, unless it possesses an ability to see through magical darkness.
+// data "Description" "hbc2ecd5egd9a9g4fa8g8486g91bd783691c6;1"
+// data "Icon" "Spell_Evocation_Darkness"
+// data "Boosts" "IF(not TD_SeeDarkness()):Disadvantage(AttackTarget); IF(not TD_SeeDarkness(context.Target)):Advantage(AttackRoll)"
+data "Boosts" "IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('FightingStyle_BlindFighting',context.Source) and not DistanceToGreaterThan(context.SourcePosition, context.TargetPosition, 3))) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))):Disadvantage(AttackRoll);IF(not (IsImmuneToStatus('SG_Blinded',context.Target) or (HasPassive('FightingStyle_BlindFighting',context.Target) and not DistanceToGreaterThan(context.SourcePosition, context.TargetPosition, 3))) or (HasPassive('Blindsense',context.Target) and not HasStatus('SG_Deafened',context.Target))):Advantage(AttackTarget);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(3) and not DistanceToTargetGreaterOrEqual(5))):RollBonus(Attack,-1);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(5) and not DistanceToTargetGreaterOrEqual(7))):RollBonus(Attack,-2);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(7) and not DistanceToTargetGreaterOrEqual(9))):RollBonus(Attack,-3);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(9) and not DistanceToTargetGreaterOrEqual(11))):RollBonus(Attack,-4);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(11) and not DistanceToTargetGreaterOrEqual(13))):RollBonus(Attack,-5);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(11) and not DistanceToTargetGreaterOrEqual(13))):RollBonus(Attack,-6);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(13) and not DistanceToTargetGreaterOrEqual(15))):RollBonus(Attack,-7);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(17) and not DistanceToTargetGreaterOrEqual(19))):RollBonus(Attack,-8);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(19) and not DistanceToTargetGreaterOrEqual(21))):RollBonus(Attack,-9);IF(not (IsImmuneToStatus('SG_Blinded',context.Source) or (HasPassive('Blindsense',context.Source) and not HasStatus('SG_Deafened',context.Source))) and (DistanceToTargetGreaterOrEqual(21) and not DistanceToTargetGreaterOrEqual(23))):RollBonus(Attack,-10)"
+// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog"
+
+// ==================================== Blackguard's Darkness tooltip to reflect that of True Darkness - 5e RAW ====================================
+// TODO: Redo
+
+new entry "TARGET_INVOKE_DARKNESS"
+type "SpellData"
+data "SpellType" "Target"
+using "TARGET_INVOKE_DARKNESS"
+data "Description" "hf645e523dabe4f4582d14d37e5300b4a3522"

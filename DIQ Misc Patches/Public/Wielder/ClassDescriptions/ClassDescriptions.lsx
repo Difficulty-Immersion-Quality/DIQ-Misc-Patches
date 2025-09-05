@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+  <version major="4" minor="0" revision="9" build="328" />
+  <region id="ClassDescriptions">
+    <node id="root">
+      <children>
+        <node id="ClassDescription"> 
+            <attribute id="BaseHp" type="int32" value="10" /> 
+            <attribute id="CanLearnSpells" type="bool" value="false" />
+            <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8" />
+            <attribute id="ClassEquipment" type="FixedString" value="EQP_CC_Wielder" />
+            <attribute id="Description" type="TranslatedString" handle="h4abda195g946cg4391g8577g7d32474ed0f0" version="1" /> 
+            <attribute id="DisplayName" type="TranslatedString" handle="h5abda195g946cg4391g8577g7d32474ed0f0" version="1" />
+            <attribute id="HasGod" type="bool" value="true" />
+            <attribute id="HpPerLevel" type="int32" value="6" />
+            <attribute id="LearningStrategy" type="uint8" value="1" />
+            <attribute id="MustPrepareSpells" type="bool" value="false" /> 
+            <attribute id="Name" type="FixedString" value="Wielder" /> 
+            <attribute id="PrimaryAbility" type="uint8" value="1" />
+            <attribute id="ProgressionTableUUID" type="guid" value="84b874a3-9504-431c-a93f-721f5a6d35ff" />
+            <attribute id="SoundClassType" type="FixedString" value="Fighter" />
+            <attribute id="SpellCastingAbility" type="uint8" value="1" />
+            <attribute id="UUID" type="guid" value="dd462900-fead-4f8c-84be-d4df411b393f" />
+            <children>
+                <node id="Tags">
+                    <attribute id="Object" type="guid" value="1671b4bf-4f47-4bb7-9cb9-80bb1f6009d5" /> 
+                </node>
+                <node id="Tags">
+                    <attribute id="Object" type="guid" value="1ae7017c-4884-4a43-bc4a-742fa0d201c0" /> 
+                </node>
+            </children>
+        </node>
+        <node id="ClassDescription">
+            <attribute id="CanLearnSpells" type="bool" value="false" />
+            <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8" />
+            <attribute id="Description" type="TranslatedString" handle="h8abda195g946cg4391g8577g7d32474ed0f0" version="1" />
+            <attribute id="DisplayName" type="TranslatedString" handle="h9abda195g946cg4391g8577g7d32474ed0f0" version="1" />
+            <attribute id="LearningStrategy" type="uint8" value="1" />
+            <attribute id="MustPrepareSpells" type="bool" value="false" />
+            <attribute id="Name" type="FixedString" value="Excalibur" />
+            <attribute id="ParentGuid" type="guid" value="dd462900-fead-4f8c-84be-d4df411b393f" /> 
+            <attribute id="PrimaryAbility" type="uint8" value="1" />
+            <attribute id="ProgressionTableUUID" type="guid" value="4d4cd061-cb18-4843-be08-7ec73e3e3cc8" /> 
+            <attribute id="SoundClassType" type="FixedString" value="Fighter" />
+            <attribute id="SpellCastingAbility" type="uint8" value="1" />
+            <attribute id="UUID" type="guid" value="5cb1ddb1-e450-42db-b9ec-bfd600f1819b" /> 
+        </node>
+        <node id="ClassDescription">
+            <attribute id="CanLearnSpells" type="bool" value="false" />
+            <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8" />
+            <attribute id="Description" type="TranslatedString" handle="h05b7e478ga280g49d6ga3edgab83106f4020" version="1" />
+            <attribute id="DisplayName" type="TranslatedString" handle="h04b7e478ga280g49d6ga3edgab83106f4020" version="1" />
+            <attribute id="LearningStrategy" type="uint8" value="1" />
+            <attribute id="MustPrepareSpells" type="bool" value="false" />
+            <attribute id="Name" type="FixedString" value="Perun" />
+            <attribute id="ParentGuid" type="guid" value="dd462900-fead-4f8c-84be-d4df411b393f" /> 
+            <attribute id="PrimaryAbility" type="uint8" value="1" />
+            <attribute id="ProgressionTableUUID" type="guid" value="7555ed27-3e1d-4bf1-8121-29eed0ba9f6a" /> 
+            <attribute id="SoundClassType" type="FixedString" value="Fighter" />
+            <attribute id="SpellCastingAbility" type="uint8" value="1" />
+            <attribute id="UUID" type="guid" value="5c06eb37-a330-4b17-ab4b-2dbb23e47720" /> 
+        </node>
+        <!-- <node id="ClassDescription">
+            <attribute id="CanLearnSpells" type="bool" value="false" />
+            <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8" />
+            <attribute id="Description" type="TranslatedString" handle="h39b7e478ga280g49d6ga3edgab83106f4020" version="1" />
+            <attribute id="DisplayName" type="TranslatedString" handle="h38b7e478ga280g49d6ga3edgab83106f4020" version="1" />
+            <attribute id="LearningStrategy" type="uint8" value="1" />
+            <attribute id="MustPrepareSpells" type="bool" value="false" />
+            <attribute id="Name" type="FixedString" value="Ru Yi" />
+            <attribute id="ParentGuid" type="guid" value="dd462900-fead-4f8c-84be-d4df411b393f" /> 
+            <attribute id="PrimaryAbility" type="uint8" value="1" />
+            <attribute id="ProgressionTableUUID" type="guid" value="5f166d5b-638b-4954-9a98-bf3db2135e91" /> 
+            <attribute id="SoundClassType" type="FixedString" value="Wizard" />
+            <attribute id="SpellCastingAbility" type="uint8" value="1" />
+            <attribute id="UUID" type="guid" value="7103291c-0ae9-41bf-93fe-668283550be6" /> 
+        </node> -->
+        <node id="ClassDescription">
+            <attribute id="CanLearnSpells" type="bool" value="false" />
+            <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8" />
+            <attribute id="Description" type="TranslatedString" handle="h3755792dgf3bag4fe3g84c2g40abc65e45c2" version="1" />
+            <attribute id="DisplayName" type="TranslatedString" handle="h3745792dgf3bag4fe3g84c2g40abc65e45c2" version="1" />
+            <attribute id="LearningStrategy" type="uint8" value="1" />
+            <attribute id="MustPrepareSpells" type="bool" value="false" />
+            <attribute id="Name" type="FixedString" value="Nekhakha" />
+            <attribute id="ParentGuid" type="guid" value="dd462900-fead-4f8c-84be-d4df411b393f" /> 
+            <attribute id="PrimaryAbility" type="uint8" value="1" />
+            <attribute id="ProgressionTableUUID" type="guid" value="df62563b-bf85-4511-977e-290461063590" /> 
+            <attribute id="SoundClassType" type="FixedString" value="Paladin" />
+            <attribute id="SpellCastingAbility" type="uint8" value="1" />
+            <attribute id="UUID" type="guid" value="d1a5393a-6864-46f6-8c00-ed7464a97f29" /> 
+        </node>
+        <!-- <node id="ClassDescription">
+            <attribute id="CanLearnSpells" type="bool" value="false" />
+            <attribute id="CharacterCreationPose" type="guid" value="0f07ec6e-4ef0-434e-9a51-1353260ccff8" />
+            <attribute id="Description" type="TranslatedString" handle="h3755792dgf3bag4fe3g84c2g40abc65e45c2" version="1" />
+            <attribute id="DisplayName" type="TranslatedString" handle="h3745792dgf3bag4fe3g84c2g40abc65e45c2" version="1" />
+            <attribute id="LearningStrategy" type="uint8" value="1" />
+            <attribute id="MustPrepareSpells" type="bool" value="false" />
+            <attribute id="Name" type="FixedString" value="Vel" />
+            <attribute id="ParentGuid" type="guid" value="dd462900-fead-4f8c-84be-d4df411b393f" /> 
+            <attribute id="PrimaryAbility" type="uint8" value="1" />
+            <attribute id="ProgressionTableUUID" type="guid" value="f80825d6-a5e4-4771-aa2f-f1bc90c94135" /> 
+            <attribute id="SoundClassType" type="FixedString" value="Cleric" />
+            <attribute id="SpellCastingAbility" type="uint8" value="1" />
+            <attribute id="UUID" type="guid" value="0a3fb34a-ae1b-4efe-b660-097bdf0a5999" /> 
+        </node> -->
+      </children>
+    </node>
+  </region>
+</save>

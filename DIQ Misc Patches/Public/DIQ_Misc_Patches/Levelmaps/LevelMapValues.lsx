@@ -5,6 +5,7 @@
 		<node id="root">
 			<children>
 				<!-- TODO: I don't think I need this -->
+				<!-- Edit: I do need this - Graphic Fade patches -->
 				<node id="LevelMapSeries">
 					<attribute id="FallbackValue" type="LSString" value="1d8"/>
 					<attribute id="Level1" type="LSString" value="1d8"/>

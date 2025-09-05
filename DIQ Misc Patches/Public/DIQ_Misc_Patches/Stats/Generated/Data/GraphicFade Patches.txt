@@ -23,6 +23,52 @@ using "BB_Projectile_Cerberus_NecroticBolt"
 // data "SpellSuccess" "DealDamage(1d10, Necrotic,Magical);IF(HasHPLessThan(50) and not HasHPLessThan(1)):DealDamage(1d10, Necrotic,Magical);IF(not IsKillingBlow()):RegainHitPoints(SELF,(DamageDone)/2);IF(IsKillingBlow()):RegainHitPoints(SELF,(DamageDone))"
 data "SpellSuccess" "DealDamage(1d10, Necrotic,Magical);IF(HasHPPercentageLessThan(50) and not HasHPLessThan(1)):DealDamage(1d10, Necrotic,Magical);IF(not IsKillingBlow()):RegainHitPoints(SELF,(DamageDone)/2);IF(IsKillingBlow()):RegainHitPoints(SELF,(DamageDone))"
 
+// Vinewoven Shortbow: 
+// Bug Fix: Tooltip should display proper damage with functionality in tact.
+// Changes: Treant's Grasp uses ManeuverSaveDC instead of a fixed DC of 12.
+// Changes: Added a new passive, to thematically display the functionality of the extra condtional damage.
+new entry "RangerEquipmentAIO_Vinewoven_Shortbow"
+type "Weapon"
+// using "WPN_Shortbow_1"
+using "RangerEquipmentAIO_Vinewoven_Shortbow"
+// data "RootTemplate" "f6e5e9a5-7841-4645-a8bb-5d6a961eb12d"
+// data "Rarity" "Rare"
+// data "Damage Type" "Piercing"
+// data "DefaultBoosts" "WeaponEnchantment(1)"
+data "DefaultBoosts" "WeaponEnchantment(1);IF(IsRangedWeaponAttack()):WeaponDamage(max(1,DexterityModifier)/2)"
+// data "Boosts" ""
+// data "PassivesOnEquip" "BB_Vinewoven_Passive"
+data "PassivesOnEquip" "BB_Vinewoven_Passive;Goon_BB_Vinewoven_Damage_Passive"
+// data "Weight" "0.9"
+// data "ValueUUID" "9b6a4ab2-323b-4030-89ab-030252bb6214"
+// data "ComboCategory" "d2"
+// data "ValueScale" "1"
+// data "ValueRounding" "1"
+// data "ValueLevel" "3"
+// data "Unique" "1"
+
+new entry "BB_Vinewoven_Passive"
+type "PassiveData"
+using "BB_Vinewoven_Passive"
+// Treant's Grasp
+// data "DisplayName" "he05cbb7fge340g4a3cg944fgc40ef70069e7;1"
+// The living wood of the bow reaches out with its own will, guiding your aim and possibly &lt;LSTag Type="Status" Tooltip="ENSNARED"&gt;Ensnaring&lt;/LSTag&gt; those struck by its arrows. This weapon also deals additional damage equal to half your Dexterity &lt;LSTag Tooltip="AbilityModifier"&gt;Modifier&lt;/LSTag&gt;.
+// data "Description" "he05cbb7fge340g4a3cg944fgc40ef70069e8;1"
+// The living wood of the bow reaches out with its own will, guiding your aim and possibly &lt;LSTag Type="Status" Tooltip="ENSNARED"&gt;Ensnaring&lt;/LSTag&gt; those struck by its arrows.
+data "Description" "hc8f41164g3c43g4c0fga181gea776245b317;1"
+// data "StatsFunctorContext" "OnDamage"
+// data "Conditions" "AttackedWithPassiveSourceWeapon() and IsRangedWeaponAttack()"
+// data "StatsFunctors" "IF(not SavingThrow(Ability.Dexterity, 12)):ApplyStatus(ENSNARED,100,1)"
+data "StatsFunctors" "IF(not SavingThrow(Ability.Dexterity,ManeuverSaveDC())):ApplyStatus(ENSNARED,100,1)"
+// data "Boosts" "IF(IsRangedWeaponAttack()):DamageBonus(max(1,DexterityModifier)/2)"
+data "Boosts" ""
+
+new entry "Goon_BB_Vinewoven_Damage_Passive"
+type "PassiveData"
+// Comfortable Grip
+data "DisplayName" "hf382fc66gb266g4a14g99efgdf6e830bf845;1"
+// This weapon deals additional damage equal to half your Dexterity &lt;LSTag Tooltip="AbilityModifier"&gt;Modifier&lt;/LSTag&gt;.
+data "Description" "h80b5489bga092g4de7ga178g40cfbe9b8ddc;1"
 
 // ==================================== Chaos and Control - Sorcerer Equipment ====================================
 
@@ -744,6 +790,24 @@ data "StatsFunctorContext" ""
 data "Conditions" ""
 // data "Boosts" ""
 data "Boosts" "IF(IsWeaponAttack()):DamageBonus(StrengthModifier/2)"
+
+// The Wrathful Maul
+// Wrathful Ascent: Fixed description.
+new entry "RR_Wrathful_Ascent_Passive"
+type "PassiveData"
+using "RR_Wrathful_Ascent_Passive"
+// Wrathful Ascent
+// data "DisplayName" "h8d32f6b2g3ee5g45c1gacb7gebb38311b013;1"
+// While &lt;LSTag Type="Status" Tooltip="RAGE"&gt;Raging&lt;/LSTag&gt;, and you deal damage with this weapon, You gain [1] turn of &lt;LSTag Type="Status" Tooltip="MAG_VIOLENCE"&gt;Wrath&lt;/LSTag&gt;.
+// data "Description" "h8d32f6b2g3ee5g45c1gacb7gebb38311b014;1"
+// While &lt;LSTag Type="Status" Tooltip="RAGE"&gt;Raging&lt;/LSTag&gt;, when you damage a hostile creature you gain [1] turn of &lt;LSTag Type="Status" Tooltip="MAG_VIOLENCE"&gt;Wrath&lt;/LSTag&gt;.
+data "Description" "h0d93cd45g89a2g4c1cgbdf5gbc87c4c4b893;1"
+// data "DescriptionParams" "1"
+// data "Icon" "Action_MagicItem_BludgeonTheWeak"
+// data "Properties" "OncePerTurn"
+// data "StatsFunctorContext" "OnDamage"
+// data "Conditions" "Enemy() and RRHasRageActive()"
+// data "StatsFunctors" "ApplyStatus(SELF,MAG_VIOLENCE,100, 1);ApplyStatus(SELF,MAG_VIOLENCE_DURATION_TECHNICAL, 100, 1)"
 
 // ==================================== Song and Steel - Bard Equipment ====================================
 

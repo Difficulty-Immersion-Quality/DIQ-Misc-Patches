@@ -1,94 +1,44 @@
-// =========================== Nerf to Critfisher Ring ===========================
+// ==================================== Celestial Fury ====================================
+// Changes: Removed the fly spell.
+// Changes: The Shocking Blow passive now applies 1d20 Lightning damage instead of 2d8+4, and instead of applying on critical hits rolls against a DC of 20 with a 5% chance.
+// TODO: Throwing support.
 
-// Decrease rarity to Very Rare
-new entry "ARM_CritfisherRing"
-type "Armor"
-using "ARM_CritfisherRing"
+new entry "WPN_HUM_Katana_CelestialFury"
+type "Weapon"
+// using "WPN_Katana"
+using "WPN_HUM_Katana_CelestialFury"
+// data "RootTemplate" "df8ccb4d-21e6-45bb-a318-e48b239676da"
+// data "ValueUUID" "d24c441f-7ebe-4229-8522-cf34c257ff20"
+// data "ValueScale" "9.3"
 // data "Rarity" "Legendary"
-data "Rarity" "VeryRare"
+// data "DefaultBoosts" "WeaponEnchantment(3);WeaponProperty(Magical)"
+// data "Boosts" "UnlockSpell(Zone_CelestialFury_LightningStrike);UnlockSpell(Target_CelestialFury_Blindness);UnlockSpell(Shout_ClesetialFury_Fly);"
+data "Boosts" "UnlockSpell(Zone_CelestialFury_LightningStrike);UnlockSpell(Target_CelestialFury_Blindness)"
+// data "BoostsOnEquipMainHand" "UnlockSpell(Target_OpeningAttack);UnlockSpell(Target_Slash_New);UnlockSpell(Rush_SpringAttack);"
+// data "PassivesOnEquip" "CelestialFury_Stun_Passive;CelestialFury_Shock_Passive;CelestialFury_Jolts_Passive;CelestialFury_Glowing;CelestialFury_LightningWet_Resitance;"
+// data "Unique" "1"
+// data "Weapon Properties" "Versatile;Melee;Dippable;Magical"
+// data "Proficiency Group" "Longswords;MartialWeapons"
 
-// Decrease crit threshold reduction to 2
-new entry "MAG_Critfisher_Passive"
+new entry "CelestialFury_Shock_Passive"
 type "PassiveData"
-using "MAG_Critfisher_Passive"
-// data "DescriptionParams" "3"
-data "DescriptionParams" "2"
-// data "Boosts" "ReduceCriticalAttackThreshold(3)"
-data "Boosts" "ReduceCriticalAttackThreshold(2)"
-
-// ==================================== Soul Knife Equipment nerfs and fixes ====================================
-
-new entry "MAG_PsyRide1"
-type "Armor"
-// using "_Ring_Magic"
-using "MAG_PsyRide1"
-data "IsUnique" "1"
-
-new entry "MAG_PsyRide2"
-type "Armor"
-// using "_Ring_Magic"
-using "MAG_PsyRide2"
-data "IsUnique" "1"
-
-new entry "MAG_PsyRiderGloves"
-type "Armor"
-// using "_Hand_Magic"
-using "MAG_PsyRiderGloves"
-// data "PassivesOnEquip" "PsyRiderGloves_Advantage;FastHands"
-data "PassivesOnEquip" "PsyRiderGloves_Advantage"
-data "IsUnique" "1"
-
-// Words That Remain
-new entry "PsyRiderPassive1"
-type "PassiveData"
-using "PsyRiderPassive1"
-// The wearer deals an additional 1d4 cold damage when dealing psychic damage.
-// data "Description" "h06057d84g97a9g9546g1585g5dcd52408f54;1"
-// The wearer deals an additional [1] when dealing[2] with &lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt;.
-data "Description" "h0c187050gaa77g4ce9g8549g9f1f20b437bd;1"
-// data "DescriptionParams" ""
-data "DescriptionParams" "DealDamage(1d4, Cold);DealDamage(,Psychic)"
-// data "Boosts" "IF(HasDamageDoneForType(DamageType.Psychic)):DamageBonus(1d6, Cold)"
-data "Boosts" "IF(IsAttack() and HasDamageDoneForType(DamageType.Psychic)):DamageBonus(1d4, Cold)"
-
-// Scholastic Assault
-new entry "PsyRiderPassive1b"
-type "PassiveData"
-using "PsyRiderPassive1b"
-// When you deal psychic damage to an enemy, they may gain &lt;LSTag Type="Status" Tooltip="MAG_PSYCHIC_MENTAL_FATIGUE"&gt;Mental Fatigue&lt;/LSTag&gt; for 3 turns.
-// data "Description" "h760b6bffg847ag7cc3g1774gcdfe57c6ac57;4"
-// When you deal[1] to an enemy with an &lt;LSTag Tooltip="AttackRoll"&gt;Attack&lt;/LSTag&gt;, they must succed a &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or become &lt;LSTag Type="Status" Tooltip="MAG_PSYCHIC_MENTAL_FATIGUE"&gt;Mentally Fatigued&lt;/LSTag&gt; for 3 turns.
-data "Description" "h22442963ge147g4874gb0c8gc2fb3393f96b;1"
-// data "DescriptionParams" ""
-data "DescriptionParams" "DealDamage(,Psychic)"
-// data "Conditions" "not Item() and not Self() and not IsMiss() and HasDamageDoneForType(DamageType.Psychic)"
-data "Conditions" "not Item() and IsAttack() and HasDamageEffectFlag(DamageFlags.Hit) and HasDamageDoneForType(DamageType.Psychic)"
-
-// Venomous Whispers
-new entry "PsyRiderPassive2"
-type "PassiveData"
-using "PsyRiderPassive2"
-// The wearer deals an additional 1d4 poison damage when dealing psychic damage.
-// data "Description" "haec0b11eg1828g7835gf48bg779698a31a73;1"
-// The wearer deals an additional [1] when dealing[2] with &lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt;.
-data "Description" "h0c187050gaa77g4ce9g8549g9f1f20b437bd;1"
-// data "DescriptionParams" ""
-data "DescriptionParams" "DealDamage(1d4, Poison);DealDamage(,Psychic)"
-// data "Boosts" "IF(HasDamageDoneForType(DamageType.Psychic)):DamageBonus(1d4, Poison)"
-data "Boosts" "IF(IsAttack() and HasDamageDoneForType(DamageType.Psychic)):DamageBonus(1d4, Poison)"
-
-// Creeping Dread
-new entry "PsyRiderPassive2b"
-type "PassiveData"
-using "PsyRiderPassive2b"
-// When you deal psychic damage to an enemy, they may gain &lt;LSTag Type="Status" Tooltip="MAG_PSYCHIC_MENTAL_FATIGUE"&gt;Poisoned&lt;/LSTag&gt; for 2 turns.
-// data "Description" "hcac96ea0g0345g68ffg413eg984a74c0b3aa;3"
-// When you deal[1] to an enemy with an &lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt;, they must succed a &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or become &lt;LSTag Type="Status" Tooltip="POISONED"&gt;Poisoned&lt;/LSTag&gt; for 2 turns.
-data "Description" "h805f7870g29c2g478dga6afgf66da2c04da3;1"
-// data "DescriptionParams" ""
-data "DescriptionParams" "DealDamage(,Psychic)"
-// data "Conditions" "not Item() and not Self() and not IsMiss() and HasDamageDoneForType(DamageType.Psychic)"
-data "Conditions" "not Item() and IsAttack() and HasDamageEffectFlag(DamageFlags.Hit) and HasDamageDoneForType(DamageType.Psychic)"
+using "CelestialFury_Shock_Passive"
+// Shocking Blow
+// data "DisplayName" "haae9d0b2gd1f9g76dage666g9241926f1e50;1"
+// When the wielder lands a &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hit&lt;/LSTag&gt; with this weapon, it crackles with lightning shocking the target for an additional [1].
+// data "Description" "h1899baccg389eg3516g561fg35b9936f029b;10"
+// Attacks with this weapon have a small chance of wreathing the blade in electricity, dealing [1].
+data "Description" "h4610246egd7fdg4e48gbd04ge999b518d89e;1"
+// data "DescriptionParams" "DealDamage(4d8+4, Lightning)"
+data "DescriptionParams" "DealDamage(1d20, Lightning)"
+// data "ExtraDescription" "h200ca1f5ge7c3gce00gbd5bg3bccec5ed871;4"
+// data "ExtraDescriptionParams" "4"
+// data "Properties" "DisplayBoostInTooltip"
+// data "StatsFunctorContext" "OnDamage"
+// data "Conditions" "AttackedWithPassiveSourceWeapon() and IsCritical()"
+data "Conditions" "AttackedWithPassiveSourceWeapon() and RollDieAgainstDC(DiceType.d20,20)"
+// data "StatsFunctors" "IF(not HasStatus('MAG_CHARGED_LIGHTNING', context.Source)):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_LIGHTNING_DAMAGE_ONCE_TECHNICAL,100, 0);IF(Character()):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_GENERATE_CHARGE_FX, 100, 0);IF(Character() and not IsDischargingLightning(context.Source)):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING,100, 4);ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_DURATION_TECHNICAL, 100, 1);DealDamage(2d8+4,Lightning,Magical)"
+data "StatsFunctors" "IF(not HasStatus('MAG_CHARGED_LIGHTNING', context.Source)):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_LIGHTNING_DAMAGE_ONCE_TECHNICAL,100, 0);IF(Character()):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_GENERATE_CHARGE_FX, 100, 0);IF(Character() and not IsDischargingLightning(context.Source)):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING,100, 4);ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_DURATION_TECHNICAL, 100, 1);DealDamage(1d20,Lightning,Magical)"
 
 // ==================================== Allow Dodge, Get Ready and Hurry Up to be used while Immobilized but not while out of combat ====================================
 

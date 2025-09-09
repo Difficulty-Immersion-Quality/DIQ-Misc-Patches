@@ -1,6 +1,7 @@
 // ==================================== Wyll ====================================
 // TODO: More interesting things for the other companions, like Minsc raging derp
 // TODO: Guess this kickstarts that mod project
+// TODO: Grant the actual passive in the future.
 
 new entry "BladeOfFrontiers"
 type "PassiveData"
@@ -15,16 +16,21 @@ data "DescriptionParams" "Distance(12)"
 // data "Icon" "Action_PactOfTheBlade_Rapier"
 data "Properties" "Highlighted"
 // data "Boosts" "Proficiency(Rapiers)"
-data "StatsFunctorContext" "OnEquip;OnCreate;OnStatusApplied"
-data "StatsFunctors" "IF(HasPassive('DevilsSight')):ApplyStatus(GOON_WYLL_ORIGIN_INFERNAL_SIGHT_UNLOCK,100,-1)"
+data "Boosts" "Proficiency(Rapiers);DarkvisionRangeMin(12);IF(HasPassive('DevilsSight',context.Source)):ActiveCharacterLight(e278f6a0-26d7-49be-b11a-9b84bc313c3c);IF(HasPassive('DevilsSight',context.Source)):StatusImmunity(SG_Blinded)"
 
-new entry "GOON_WYLL_ORIGIN_INFERNAL_SIGHT_UNLOCK"
-type "StatusData"
-data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;DisableOverhead;ApplyToDead;IgnoreResting"
-data "RemoveEvents" "OnStatusApplied;OnStatusRemoved"
-data "RemoveConditions" "not HasPassive('DevilsSight')"
-data "StatusGroups" "SG_RemoveOnRespec"
-data "Passives" "MAG_Infernal_Metal_Helmet_InfernalSight_Passive"
+// data "Boosts" "Proficiency(Rapiers);DarkvisionRangeMin(12)"
+// data "StatsFunctorContext" "OnEquip;OnCreate;OnStatusApplied;OnActionResourcesChanged"
+// data "StatsFunctors" "IF(HasPassive('DevilsSight')):ApplyStatus(GOON_WYLL_ORIGIN_INFERNAL_SIGHT_UNLOCK,100,-1)"
+
+// new entry "GOON_WYLL_ORIGIN_INFERNAL_SIGHT_UNLOCK"
+// type "StatusData"
+// data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;DisableOverhead;ApplyToDead;IgnoreResting"
+// data "RemoveEvents" "OnStatusApplied;OnStatusRemoved"
+// data "RemoveConditions" "not HasPassive('DevilsSight')"
+// data "StatusGroups" "SG_RemoveOnRespec"
+// data "Passives" "MAG_Infernal_Metal_Helmet_InfernalSight_Passive"
+
+// ==================================== Other vanilla
 
 new entry "MAG_Infernal_Metal_Helmet_InfernalSight_Passive"
 type "PassiveData"

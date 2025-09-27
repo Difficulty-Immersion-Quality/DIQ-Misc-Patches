@@ -160,9 +160,12 @@
 	<!-- "CelestialFury_Shock_Passive" --> <content contentuid="h4610246egd7fdg4e48gbd04ge999b518d89e" version="1">Attacks with this weapon have a small chance of wreathing the blade in electricity, dealing [1].</content>
 
 	<!-- "BladeOfFrontiers" --> <content contentuid="h7a8e39feg8516g4f74g8ba9g13d9771aaedf" version="1">The champion of the Sword Coast, renowned for his heroic deeds and unusual stone eye.&lt;br&gt;&lt;br&gt;Wyll can see in magical and ordinary darkness up to a range of [1]. If he has the &lt;LSTag Type="Passive" Tooltip="DevilsSight"&gt;Devil's Sight&lt;/LSTag&gt; invocation, he gains &lt;LSTag Type="Passive" Tooltip="MAG_Infernal_Metal_Helmet_InfernalSight_Passive"&gt;Infernal Sight&lt;/LSTag&gt;.</content>
-	<!-- "" --> <content contentuid="" version="1"></content>
-	<!-- "" --> <content contentuid="" version="1"></content>
-	<!-- "" --> <content contentuid="" version="1"></content>
 
 	<!-- "BLINDED" --> <content contentuid="h3f73842fga672g4098g8355g761983e226be" version="1">A blinded creature can't see and automatically fails any &lt;LSTag Tooltip="AbilityCheck"&gt;ability check&lt;/LSTag&gt; that requires sight.&lt;br&gt;&lt;br&gt;&lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; against the creature have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt;, and the creature's attack rolls have &lt;LSTag Tooltip="Disadvantage"&gt;disadvantage&lt;/LSTag&gt;. Additionally, the creature's attacks incur a -1 penalty if the distance is beyond [1], and a further -1 penalty for every [2] beyond that.</content>
+
+	<!-- "MAG_ImprovedGoonerCritical" --> <content contentuid="he36bc98eg1d83g411dg97fcgf75cca30852d" version="1">The number you need to &lt;LSTag Tooltip="AttackRoll"&gt;roll&lt;/LSTag&gt; a &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hit&lt;/LSTag&gt; while attacking is reduced by [1]. This effect can stack.</content>
+
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
+	<!-- "" --> <content contentuid="" version="1"></content>
 </contentList>

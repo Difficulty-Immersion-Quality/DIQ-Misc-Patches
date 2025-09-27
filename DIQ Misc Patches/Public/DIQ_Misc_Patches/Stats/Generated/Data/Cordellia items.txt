@@ -29,9 +29,30 @@ data "Boosts" "StatusImmunity(SG_DifficultTerrain);StatusImmunity(SG_Paralyzed);
 
 new entry "ARM_CritfisherRing"
 type "Armor"
+// using "_Ring_Magic"
 using "ARM_CritfisherRing"
+// data "RootTemplate" "6be8633d-a1ca-4ede-96cc-c52066d705cc"
+data "RootTemplate" "1c46bf69-7916-4171-b50c-0bb5650148a4"
+// data "ValueOverride" "1755"
+data "ValueOverride" ""
+data "ValueUUID" "4b9657a0-5a00-442a-b76e-535715cbaa86"
 // data "Rarity" "Legendary"
 data "Rarity" "VeryRare"
+// data "PassivesOnEquip" "MAG_Critfisher_Passive"
+data "PassivesOnEquip" "MAG_ImprovedGoonerCritical"
+data "Unique" "1"
+
+new entry "MAG_Critfisherring"
+type "Armor"
+// using "_Ring_Magic"
+using "MAG_Critfisherring"
+// data "RootTemplate" "1c46bf69-7916-4171-b50c-0bb5650148a4"
+// data "ValueUUID" "4b9657a0-5a00-442a-b76e-535715cbaa86"
+// data "Rarity" "Legendary"
+data "Rarity" "VeryRare"
+// data "PassivesOnEquip" "MAG_ImprovedGoonerCritical;"
+data "PassivesOnEquip" "MAG_ImprovedGoonerCritical"
+// data "Unique" "1"
 
 new entry "MAG_Critfisher_Passive"
 type "PassiveData"
@@ -39,6 +60,21 @@ using "MAG_Critfisher_Passive"
 // data "DescriptionParams" "3"
 data "DescriptionParams" "2"
 // data "Boosts" "ReduceCriticalAttackThreshold(3)"
+data "Boosts" "ReduceCriticalAttackThreshold(2)"
+
+new entry "MAG_ImprovedGoonerCritical"
+type "PassiveData"
+using "MAG_ImprovedGoonerCritical"
+// Major Critical Acuity
+// data "DisplayName" "h9a50029ag76dbgcaa7g031eg44d95decac50;1"
+// The number you need to &lt;LSTag Tooltip="AttackRoll"&gt;roll&lt;/LSTag&gt; a &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hit&lt;/LSTag&gt; while attacking is reduced by 3. This effect can stack.
+// data "Description" "hcb495aadg3f8fg63a7g8b52g970e6edf4e0f;1"
+// The number you need to &lt;LSTag Tooltip="AttackRoll"&gt;roll&lt;/LSTag&gt; a &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hit&lt;/LSTag&gt; while attacking is reduced by [1]. This effect can stack.
+data "Description" "he36bc98eg1d83g411dg97fcgf75cca30852d;1"
+data "DescriptionParams" "2"
+// data "Icon" "PassiveFeature_ImprovedCritical"
+// data "Properties" "Highlighted"
+// data "Boosts" "ReduceCriticalAttackThreshold(3);"
 data "Boosts" "ReduceCriticalAttackThreshold(2)"
 
 // ==================================== Soul Knife ====================================

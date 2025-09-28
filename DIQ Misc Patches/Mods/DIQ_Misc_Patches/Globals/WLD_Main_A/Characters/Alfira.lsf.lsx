@@ -1,172 +1,182 @@
-﻿<node id="GameObjects">
-	<attribute id="AnubisConfigName" type="FixedString" value="DEN_Bard" />
-	<attribute id="CharacterVisualResourceID" type="FixedString" value="1ab11041-a5b8-7f62-ced5-a6bc1179c0e3" />
-	<attribute id="DisplayName" type="TranslatedString" handle="ha56e1454g5433g4c27ga904g78df82805018" version="1" />
-	<attribute id="Equipment" type="FixedString" value="EQP_Unarmed_Lute" />
-	<attribute id="Faction" type="guid" value="082ce2e1-e636-4a56-817c-af798bdc59d8" />
-	<attribute id="Flag" type="uint8" value="1" />
-	<attribute id="GeneratePortrait" type="LSString" value="Icon_Tiefling_Female" />
-	<attribute id="Icon" type="FixedString" value="1ab11041-a5b8-7f62-ced5-a6bc1179c0e3-EQP_Unarmed_Lute_(Icon_Tiefling_Female)" />
-	<attribute id="IsGlobal" type="bool" value="True" />
-	<attribute id="IsLootable" type="bool" value="True" />
-	<attribute id="LevelName" type="FixedString" value="WLD_Main_A" />
-	<attribute id="MapKey" type="FixedString" value="4a405fba-3000-4c63-97e5-a8001ebb883c" />
-	<attribute id="Name" type="LSString" value="S_DEN_Bard" />
-	<attribute id="SoftBodyCollisionTemplate" type="FixedString" value="e96eed75-850b-4497-b077-a8f62f731bf3" />
-	<attribute id="Stats" type="FixedString" value="DEN_Refugees_Tiefling_Bard" />
-	<attribute id="TemplateName" type="FixedString" value="9103fce3-6423-4f8a-af04-83ac1af2a1d7" />
-	<attribute id="Type" type="FixedString" value="character" />
-	<attribute id="_OriginalFileVersion_" type="int64" value="145100352641826817" />
-	<children>
-		<node id="FootStepInfos">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="0" revision="9" build="0" lslib_meta="v1,bswap_guids,lsf_adjacency" />
+	<region id="Templates">
+		<node id="Templates">
 			<children>
-				<node id="FootStepInfo">
-					<attribute id="FootBoneName" type="FixedString" value="Dummy_L_Foot_01" />
-					<attribute id="FootHearingEffectName" type="LSString" value="" />
-					<attribute id="FootPrintEffectName" type="LSString" value="" />
-					<attribute id="FootSlideEffectName" type="LSString" value="" />
-					<attribute id="FootSmearEffectName" type="LSString" value="" />
-					<attribute id="FootSoundEventName" type="FixedString" value="Movement_Footstep" />
-					<attribute id="Name" type="LSString" value="Footstep_L" />
-				</node>
-				<node id="FootStepInfo">
-					<attribute id="FootBoneName" type="FixedString" value="Dummy_R_Foot_01" />
-					<attribute id="FootHearingEffectName" type="LSString" value="" />
-					<attribute id="FootPrintEffectName" type="LSString" value="" />
-					<attribute id="FootSlideEffectName" type="LSString" value="" />
-					<attribute id="FootSmearEffectName" type="LSString" value="" />
-					<attribute id="FootSoundEventName" type="FixedString" value="Movement_Footstep" />
-					<attribute id="Name" type="LSString" value="Footstep_R" />
-				</node>
-			</children>
-		</node>
-		<node id="ItemList">
-			<children>
-				<node id="Item">
-					<attribute id="AIFlags" type="uint16" value="0" />
-					<attribute id="Amount" type="int32" value="1" />
-					<attribute id="CanBePickpocketed" type="bool" value="True" />
-					<attribute id="FallbackStartRound" type="int32" value="-1" />
-					<attribute id="IsDroppedOnDeath" type="bool" value="True" />
-					<attribute id="IsTradable" type="uint8" value="0" />
-					<attribute id="ItemName" type="LSString" value="S_DEN_BardMandolin" />
-					<attribute id="LevelName" type="LSString" value="WLD_Main_A" />
-					<attribute id="MinimumImpact" type="int32" value="0" />
-					<attribute id="OnlyCastOnSelf" type="bool" value="False" />
-					<attribute id="ScoreModifier" type="float" value="1" />
-					<attribute id="StartRound" type="int32" value="0" />
-					<attribute id="TemplateID" type="FixedString" value="13f3991e-01d3-498f-ad71-a55900c39516" />
-					<attribute id="Type" type="uint8" value="2" />
-					<attribute id="UUID" type="FixedString" value="45a48cf7-baed-4d48-aaf4-1399948314e6" />
+				<node id="GameObjects">
+					<attribute id="AnubisConfigName" type="FixedString" value="DEN_Bard" />
+					<attribute id="CharacterVisualResourceID" type="FixedString" value="1ab11041-a5b8-7f62-ced5-a6bc1179c0e3" />
+					<attribute id="DisplayName" type="TranslatedString" handle="ha56e1454g5433g4c27ga904g78df82805018" version="1" />
+					<attribute id="Equipment" type="FixedString" value="EQP_Unarmed_Lute" />
+					<attribute id="Faction" type="guid" value="082ce2e1-e636-4a56-817c-af798bdc59d8" />
+					<attribute id="Flag" type="uint8" value="1" />
+					<attribute id="GeneratePortrait" type="LSString" value="Icon_Tiefling_Female" />
+					<attribute id="Icon" type="FixedString" value="1ab11041-a5b8-7f62-ced5-a6bc1179c0e3-EQP_Unarmed_Lute_(Icon_Tiefling_Female)" />
+					<attribute id="IsGlobal" type="bool" value="True" />
+					<attribute id="IsLootable" type="bool" value="True" />
+					<attribute id="LevelName" type="FixedString" value="WLD_Main_A" />
+					<attribute id="MapKey" type="FixedString" value="4a405fba-3000-4c63-97e5-a8001ebb883c" />
+					<attribute id="Name" type="LSString" value="S_DEN_Bard" />
+					<attribute id="SoftBodyCollisionTemplate" type="FixedString" value="e96eed75-850b-4497-b077-a8f62f731bf3" />
+					<attribute id="Stats" type="FixedString" value="DEN_Refugees_Tiefling_Bard" />
+					<attribute id="TemplateName" type="FixedString" value="9103fce3-6423-4f8a-af04-83ac1af2a1d7" />
+					<attribute id="Type" type="FixedString" value="character" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="145100352641826817" />
 					<children>
-						<node id="SourceConditions">
-							<attribute id="MaximumHealthPercentage" type="int32" value="100" />
-							<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+						<node id="FootStepInfos">
 							<children>
-								<node id="Tags" />
+								<node id="FootStepInfo">
+									<attribute id="FootBoneName" type="FixedString" value="Dummy_L_Foot_01" />
+									<attribute id="FootHearingEffectName" type="LSString" value="" />
+									<attribute id="FootPrintEffectName" type="LSString" value="" />
+									<attribute id="FootSlideEffectName" type="LSString" value="" />
+									<attribute id="FootSmearEffectName" type="LSString" value="" />
+									<attribute id="FootSoundEventName" type="FixedString" value="Movement_Footstep" />
+									<attribute id="Name" type="LSString" value="Footstep_L" />
+								</node>
+								<node id="FootStepInfo">
+									<attribute id="FootBoneName" type="FixedString" value="Dummy_R_Foot_01" />
+									<attribute id="FootHearingEffectName" type="LSString" value="" />
+									<attribute id="FootPrintEffectName" type="LSString" value="" />
+									<attribute id="FootSlideEffectName" type="LSString" value="" />
+									<attribute id="FootSmearEffectName" type="LSString" value="" />
+									<attribute id="FootSoundEventName" type="FixedString" value="Movement_Footstep" />
+									<attribute id="Name" type="LSString" value="Footstep_R" />
+								</node>
 							</children>
 						</node>
-						<node id="TargetConditions">
-							<attribute id="MaximumHealthPercentage" type="int32" value="100" />
-							<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+						<node id="ItemList">
 							<children>
-								<node id="Tags" />
+								<node id="Item">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="Amount" type="int32" value="1" />
+									<attribute id="CanBePickpocketed" type="bool" value="True" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="IsDroppedOnDeath" type="bool" value="True" />
+									<attribute id="IsTradable" type="uint8" value="0" />
+									<attribute id="ItemName" type="LSString" value="S_DEN_BardMandolin" />
+									<attribute id="LevelName" type="LSString" value="WLD_Main_A" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<attribute id="TemplateID" type="FixedString" value="13f3991e-01d3-498f-ad71-a55900c39516" />
+									<attribute id="Type" type="uint8" value="2" />
+									<attribute id="UUID" type="FixedString" value="45a48cf7-baed-4d48-aaf4-1399948314e6" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+								<node id="Item">
+									<attribute id="AIFlags" type="uint16" value="0" />
+									<attribute id="Amount" type="int32" value="1" />
+									<attribute id="CanBePickpocketed" type="bool" value="True" />
+									<attribute id="FallbackStartRound" type="int32" value="-1" />
+									<attribute id="IsDroppedOnDeath" type="bool" value="True" />
+									<attribute id="IsTradable" type="uint8" value="0" />
+									<attribute id="ItemName" type="LSString" value="S_SCE_AlfiraLute" />
+									<attribute id="LevelName" type="LSString" value="SCL_Main_A" />
+									<attribute id="MinimumImpact" type="int32" value="0" />
+									<attribute id="OnlyCastOnSelf" type="bool" value="False" />
+									<attribute id="ScoreModifier" type="float" value="1" />
+									<attribute id="StartRound" type="int32" value="0" />
+									<attribute id="TemplateID" type="FixedString" value="8f98a7e7-c773-4b58-9127-5cf79b9206e9" />
+									<attribute id="Type" type="uint8" value="2" />
+									<attribute id="UUID" type="FixedString" value="45f45b43-be58-41d7-84eb-7b485b3a239f" />
+									<children>
+										<node id="SourceConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+										<node id="TargetConditions">
+											<attribute id="MaximumHealthPercentage" type="int32" value="100" />
+											<attribute id="MinimumHealthPercentage" type="int32" value="0" />
+											<children>
+												<node id="Tags" />
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="WLD_Main_A" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="46bf2460-7de1-6bba-140d-dd1238dbe671" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="cfbcf0de-a416-4650-9a15-4a847e822020" />
+												</node>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="44f87107-fb69-da0d-1b3b-ddb3ae2650a0" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="LocomotionParams" />
+						<node id="SpeakerGroupList">
+							<children>
+								<node id="SpeakerGroup">
+									<attribute id="Object" type="guid" value="10bb5f97-71ea-adce-216b-ae7aba1ff32d" />
+								</node>
+							</children>
+						</node>
+						<node id="Tags">
+							<children>
+								<node id="Tag">
+									<attribute id="Object" type="guid" value="d93434bd-6b71-4789-b128-ee24156057cc" />
+								</node>
+							</children>
+						</node>
+						<node id="TradeTreasures">
+							<children>
+								<node id="TreasureItem">
+									<attribute id="Object" type="FixedString" value="DEN_Refugee" />
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="283.10193 21.718311 494.39285" />
+							<attribute id="RotationQuat" type="fvec4" value="0 0.63518196 0 0.77236253" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+						<node id="Treasures">
+							<children>
+								<node id="TreasureItem">
+									<!-- She should now drop the Potent Robe on death -->
+									<!-- <attribute id="Object" type="FixedString" value="Empty" /> -->
+									<attribute id="Object" type="FixedString" value="HAV_SavingPrisoners_AlfirasReward" />
+								</node>
 							</children>
 						</node>
 					</children>
 				</node>
-				<node id="Item">
-					<attribute id="AIFlags" type="uint16" value="0" />
-					<attribute id="Amount" type="int32" value="1" />
-					<attribute id="CanBePickpocketed" type="bool" value="True" />
-					<attribute id="FallbackStartRound" type="int32" value="-1" />
-					<attribute id="IsDroppedOnDeath" type="bool" value="True" />
-					<attribute id="IsTradable" type="uint8" value="0" />
-					<attribute id="ItemName" type="LSString" value="S_SCE_AlfiraLute" />
-					<attribute id="LevelName" type="LSString" value="SCL_Main_A" />
-					<attribute id="MinimumImpact" type="int32" value="0" />
-					<attribute id="OnlyCastOnSelf" type="bool" value="False" />
-					<attribute id="ScoreModifier" type="float" value="1" />
-					<attribute id="StartRound" type="int32" value="0" />
-					<attribute id="TemplateID" type="FixedString" value="8f98a7e7-c773-4b58-9127-5cf79b9206e9" />
-					<attribute id="Type" type="uint8" value="2" />
-					<attribute id="UUID" type="FixedString" value="45f45b43-be58-41d7-84eb-7b485b3a239f" />
-					<children>
-						<node id="SourceConditions">
-							<attribute id="MaximumHealthPercentage" type="int32" value="100" />
-							<attribute id="MinimumHealthPercentage" type="int32" value="0" />
-							<children>
-								<node id="Tags" />
-							</children>
-						</node>
-						<node id="TargetConditions">
-							<attribute id="MaximumHealthPercentage" type="int32" value="100" />
-							<attribute id="MinimumHealthPercentage" type="int32" value="0" />
-							<children>
-								<node id="Tags" />
-							</children>
-						</node>
-					</children>
-				</node>
 			</children>
 		</node>
-		<node id="LayerList">
-			<children>
-				<node id="Layers">
-					<children>
-						<node id="Object">
-							<attribute id="MapKey" type="FixedString" value="WLD_Main_A" />
-							<children>
-								<node id="Layer">
-									<attribute id="Object" type="guid" value="46bf2460-7de1-6bba-140d-dd1238dbe671" />
-								</node>
-								<node id="Layer">
-									<attribute id="Object" type="guid" value="cfbcf0de-a416-4650-9a15-4a847e822020" />
-								</node>
-								<node id="Layer">
-									<attribute id="Object" type="guid" value="44f87107-fb69-da0d-1b3b-ddb3ae2650a0" />
-								</node>
-							</children>
-						</node>
-					</children>
-				</node>
-			</children>
-		</node>
-		<node id="LocomotionParams" />
-		<node id="SpeakerGroupList">
-			<children>
-				<node id="SpeakerGroup">
-					<attribute id="Object" type="guid" value="10bb5f97-71ea-adce-216b-ae7aba1ff32d" />
-				</node>
-			</children>
-		</node>
-		<node id="Tags">
-			<children>
-				<node id="Tag">
-					<attribute id="Object" type="guid" value="d93434bd-6b71-4789-b128-ee24156057cc" />
-				</node>
-			</children>
-		</node>
-		<node id="TradeTreasures">
-			<children>
-				<node id="TreasureItem">
-					<attribute id="Object" type="FixedString" value="DEN_Refugee" />
-				</node>
-			</children>
-		</node>
-		<node id="Transform">
-			<attribute id="Position" type="fvec3" value="283.10193 21.718311 494.39285" />
-			<attribute id="RotationQuat" type="fvec4" value="0 0.63518196 0 0.77236253" />
-			<attribute id="Scale" type="float" value="1" />
-		</node>
-		<node id="Treasures">
-			<children>
-				<node id="TreasureItem">
-					<!-- She should now drop the Potent Robe on death -->
-					<!-- <attribute id="Object" type="FixedString" value="Empty" /> -->
-					<attribute id="Object" type="FixedString" value="HAV_SavingPrisoners_AlfirasReward" />
-				</node>
-			</children>
-		</node>
-	</children>
-</node>
+	</region>
+</save>

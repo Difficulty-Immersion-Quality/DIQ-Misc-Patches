@@ -1,3 +1,20 @@
+// ==================================== There's a boogs in my coating ====================================
+
+new entry "POISON_PURPLE_WORM_DIPPED"
+type "StatusData"
+data "StatusType" "BOOST"
+// using "DIPPED_POISON"
+using "POISON_PURPLE_WORM_DIPPED"
+// Purple Worm Toxin
+// data "DisplayName" "hf0e169e4gc347g4b18g9903g1ed294d009f6;2"
+// Deals an additional [1].<br><br>On a successful DC 19 Constitution Saving Throw, target still takes half damage.
+// data "Description" "h9c5b5c74g9f28g4e29gbbbbgbec13ce0adc3;2"
+// data "DescriptionParams" "DealDamage(1D10,Poison)"
+data "DescriptionParams" "DealDamage(1d10,Poison)"
+// data "Icon" "Item_CONS_Poison_Purple_Worm"
+// data "Boosts" "WeaponDamage(6d6,Poison)"
+data "Boosts" "DealDamage(1d10,Poison)"
+
 // ==================================== Free use coatings ====================================
 
 // new entry "OBJ_WyvernPoison"

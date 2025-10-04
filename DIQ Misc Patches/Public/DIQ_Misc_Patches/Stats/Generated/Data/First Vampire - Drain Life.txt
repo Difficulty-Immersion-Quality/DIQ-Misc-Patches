@@ -1,4 +1,5 @@
 // ==================================== First Vampire Warlock - Drain Life ====================================
+// TODO: Fix container stuff
 
 new entry "DrainLife"
 type "PassiveData"
@@ -87,7 +88,7 @@ using "Target_DrainLife_Base"
 // data "SpellSuccess" "DealDamage(1d6+Cause.CharismaModifier,Necrotic,Magical);IF(ClassLevelHigherOrEqualThan(10,'Warlock')):ApplyStatus(DRAINED_OF_LIFE,100,1)"
 // data "RequirementConditions" "HasStatus('DRAIN_LIFE_TECHNICAL_1') or HasStatus('DRAIN_LIFE_TECHNICAL_2') or HasStatus('DRAIN_LIFE_TECHNICAL_3') or HasStatus('DRAIN_LIFE_TECHNICAL_4') or HasStatus('DRAIN_LIFE_TECHNICAL_5')"
 // data "TargetConditions" "not Self() and not Dead()"
-data "TargetConditions" "not Self() and not Dead() and not Item() and not Tagged('CONSTRUCT')"
+data "TargetConditions" "not Self() and not Dead() and not Item() and not Tagged('CONSTRUCT') and Character()"
 // data "Icon" "Icon_DrainLife"
 // Drain Life
 // data "DisplayName" "hab039ac2ge8c1g434cga778gb6a8266c07a9;1"
@@ -331,7 +332,7 @@ using "Target_DrainLife_EternalNight"
 // data "SpellRoll" "Attack(AttackType.MeleeSpellAttack)"
 // data "SpellSuccess" "DealDamage(1d6+Cause.CharismaModifier,Necrotic,Magical);DealDamage(2d8,Necrotic,Magical);RegainHitPoints(SELF,DamageDone);ApplyStatus(DRAINED_OF_LIFE,100,1)"
 // data "TargetConditions" "not Self() and not Dead()"
-data "TargetConditions" "not Self() and not Dead() and not Item() and not Tagged('CONSTRUCT')"
+data "TargetConditions" "not Self() and not Dead() and not Item() and not Tagged('CONSTRUCT') and Character()"
 // data "Icon" "Icon_DrainLifeSpellSlot"
 // Eternal Night: Drain Life
 // data "DisplayName" "h1aa4c599g8f9fg460agafa0g9b45d485e7a1;1"

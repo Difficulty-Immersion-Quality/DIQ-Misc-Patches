@@ -1,3 +1,22 @@
+-- ==================================== Great Weapon Master - All In ====================================
+-- Changes: Added support for theoretical 1 hand wielding of 2 hand weapons, while also patching over Heavy Weapons RAW by MaxStrengthWizard.
+-- return IsProficientWith(entity, weapon) & (isHeavy & isMelee) & (isTwoHanded | isVersatile) & (~isOffhandMelee & ~isOffhandAmmunition & ~hasShield)
+
+function GreatWeaponMaster(entity)
+    local entity = entity or context.Source
+    local weapon = context.AttackWeapon
+
+    local isHeavy = HasWeaponProperty(WeaponProperties.Heavy, weapon)
+    local isTwoHanded = HasWeaponProperty(WeaponProperties.Twohanded, weapon)
+    local isMelee = HasWeaponProperty(WeaponProperties.Melee, weapon)
+    local isVersatile = HasWeaponProperty(WeaponProperties.Versatile, weapon)
+    local isOffhandMelee = WieldingWeapon('Melee', true, false, entity)
+    local isOffhandAmmunition = WieldingWeapon('Ammunition', true, false, entity)
+    local hasShield = HasShieldEquipped(entity)
+
+    return IsProficientWith(entity, weapon) & isMelee & (isTwoHanded | isVersatile) & (~isOffhandMelee & ~isOffhandAmmunition & ~hasShield)
+end
+
 -- ==================================== Metamagic fixes ====================================
 
 -- Bug Fix: No longer functions for melee range spells.

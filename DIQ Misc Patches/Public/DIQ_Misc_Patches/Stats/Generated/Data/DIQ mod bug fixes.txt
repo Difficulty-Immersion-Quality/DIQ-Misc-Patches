@@ -46,11 +46,50 @@ data "Description" "h24a45b2cgd16fg4189g85c1gde831fc0aa62;1"
 // ==================================== Speak with Dead Reworks and Tweaks - Remove "IgnoreResting" ====================================
 // Amulet of Lost Voices etc. will give the buff permanently, we don't want that really. Self-casting the buff after a rest is enough QoL and in line with other buff spells.
 
+// AD++
+// Speak with Dead recast using AD++ corpse khn instead of Dead(). Left basic untouched because Speak with Dead Rework & Tweaks mod edits it.
+// new entry "SPEAK_WITH_DEAD_RECAST"
+// type "StatusData"
+// using "SPEAK_WITH_DEAD_RECAST"
+// data "AuraStatuses" "TARGET:IF(Tagged('HASSWDDIALOG') and Dead() and not Tagged('BEAST') and not Tagged('UNDEAD') and not Tagged('CORPSE_SPOKEN') and not Tagged('BLOCK_SPEAK_WITH_DEAD') and not Player()):ApplyStatus(SPEAK_WITH_DEAD_INTERESTING)"
+
+// Recast
+// new entry "Target_SpeakWithDead"
+// type "SpellData"
+// using "Target_SpeakWithDead"
+// data "SpellType" "Shout"
+// data "SpellProperties" "ApplyStatus(SPEAK_WITH_DEAD_RECAST,100,-1)"
+// data "TargetConditions" "Self() and not HasStatus('SPEAK_WITH_DEAD_RECAST')"
+
+// new entry "Target_SpeakWithDead_FreeRecast"
+// type "SpellData"
+// using "Target_SpeakWithDead_FreeRecast"
+// data "SpellType" "Target"
+// data "TargetConditions" "not Tagged('CORPSE_SPOKEN') and not Tagged('BLOCK_SPEAK_WITH_DEAD') and ((Dead() and not Tagged('BEAST') and not Tagged('UNDEAD') and not Player()) or Tagged('ALLOW_SPEAK_WITH_DEAD')) and not HasStatus('SILENCED')"
+
 new entry "SPEAK_WITH_DEAD_RECAST"
 type "StatusData"
 using "SPEAK_WITH_DEAD_RECAST"
 // data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;DisableOverhead;IgnoreResting;ApplyToDead"
 data "StatusPropertyFlags" "DisableCombatlog;DisablePortraitIndicator;DisableOverhead;ApplyToDead"
+
+// ==================================== Raven Queen Patron 
+// Removed the mod so not much point bothering to patch it
+
+// new entry "Target_RavenQueenChronicle"
+// type "SpellData"
+// data "SpellType" "Target"
+// using "Target_SpeakWithDead"
+// data "Level" "0"
+// data "SpellSchool" "None"
+// data "SpellProperties" "TARGET:ApplyStatus(SPEAK_WITH_DEAD,100,0); ApplyStatus(SELF,RAVEN_QUEEN_CHRONICLE_STATUS,100,-1)"
+// data "TargetConditions" "Dead() and not Tagged('BEAST') and not Tagged('UNDEAD') and not Tagged('BLOCK_SPEAK_WITH_DEAD')"
+// data "DisplayName" "h5206ac10g18a8g1d9fgda36g1e248427a660;1"
+// data "Description" "hd4d11c8egc325gc30eg8180gaa4f24cb13a6;1"
+// data "ExtraDescription" "h93e887fagdca8g9ffbgd65ag1468bcdcbdfb;1"
+// data "UseCosts" "ActionPoint:1"
+// data "SpellStyleGroup" "Class"
+// data "SpellFlags" "HasVerbalComponent;HasSomaticComponent"
 
 // ==================================== JWL Discordant Instruments ====================================
 // Bug Fix: Trinket spells will no longer show in the base spell containers when upcasting.

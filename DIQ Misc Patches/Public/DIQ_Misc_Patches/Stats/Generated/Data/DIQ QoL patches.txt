@@ -84,6 +84,29 @@ data "DisplayName" "hdb671db5gc473g4c5cgbc20gb33849e43a36"
 data "Description" "hfe823e2cgda3eg474eg81b9gbcb416d33d1e"
 data "DescriptionParams" "Distance(3);4"
 
+// ==================================== Heavy Weapons RAW - 5R 2024 ====================================
+// Disadvantage is only for the type of weapon attack, not all attack rolls
+
+new entry "HeavyWeaponMelee"
+type "PassiveData"
+using "HeavyWeaponMelee"
+// data "DisplayName" "h626ee2ceg9ca7g4a79g8032g222ce1e6a785;1"
+// data "Description" "hfc7f04aa215c4dcc9112276aba248c88ge89;1"
+// data "Icon" "statIcons_HeavilyEncumbered"
+// data "Properties" "IsHidden"
+// data "BoostContext" "OnEquip;OnTurn;OnCreate"
+// data "BoostConditions" "ConditionResult(context.Source.Strength < 13)"
+// data "Boosts" "Disadvantage(AttackRoll)"
+data "Boosts" "IF(IsMeleeWeaponAttack()):Disadvantage(AttackRoll)"
+
+new entry "HeavyWeaponRanged"
+type "PassiveData"
+// using "HeavyWeaponMelee"
+using "HeavyWeaponRanged"
+// data "BoostConditions" "ConditionResult(context.Source.Dexterity < 13)"
+// data "Boosts" "Disadvantage(AttackRoll)"
+data "Boosts" "IF(IsRangedWeaponAttack()):Disadvantage(AttackRoll)"
+
 // ==================================== Mobility Overhaul - Reduce duration of the Off Balanced condition from jumping ====================================
 // TODO: Remove when I do my own mobility overhaul.
 

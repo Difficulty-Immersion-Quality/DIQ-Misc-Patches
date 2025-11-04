@@ -25,7 +25,8 @@ data "StatusType" "BOOST"
 using "DRAIN_LIFE_TECHNICAL_1"
 // When you attack or cast a spell, you can cast &lt;LSTag Type="Spell" Tooltip="Target_DrainLife_Base"&gt;Drain Life&lt;/LSTag&gt; until the end of your turn.
 data "Description" "hf29194a6g5f46g4ae6g96d9gec912337bc90;1"
-data "Boosts" "UnlockSpellVariant(SpellId('Target_DrainLife_Base'), ModifyIconGlow())"data "RemoveConditions" "SpellId('Target_DrainLife_Base') or SpellId('Target_DrainLife_1') or SpellId('Target_DrainLife_2') or SpellId('Target_DrainLife_3') or SpellId('Target_DrainLife_4') or SpellId('Target_DrainLife_5') or SpellId('Target_DrainLife_6') or SpellId('Target_DrainLife_7') or SpellId('Target_DrainLife_8') or SpellId('Target_DrainLife_9') or SpellId('Target_DrainLife_EternalNight') or SpellId('Target_DrainLife_EternalNight_1') or SpellId('Target_DrainLife_EternalNight_2') or SpellId('Target_DrainLife_EternalNight_3') or SpellId('Target_DrainLife_EternalNight_4') or SpellId('Target_DrainLife_EternalNight_5') or SpellId('Target_DrainLife_EternalNight_6') or SpellId('Target_DrainLife_EternalNight_7') or SpellId('Target_DrainLife_EternalNight_8') or SpellId('Target_DrainLife_EternalNight_9')"
+data "Boosts" "UnlockSpellVariant(SpellId('Target_DrainLife_Base'), ModifyIconGlow())"
+data "RemoveConditions" "SpellId('Target_DrainLife_Base') or SpellId('Target_DrainLife_1') or SpellId('Target_DrainLife_2') or SpellId('Target_DrainLife_3') or SpellId('Target_DrainLife_4') or SpellId('Target_DrainLife_5') or SpellId('Target_DrainLife_6') or SpellId('Target_DrainLife_7') or SpellId('Target_DrainLife_8') or SpellId('Target_DrainLife_9') or SpellId('Target_DrainLife_EternalNight') or SpellId('Target_DrainLife_EternalNight_1') or SpellId('Target_DrainLife_EternalNight_2') or SpellId('Target_DrainLife_EternalNight_3') or SpellId('Target_DrainLife_EternalNight_4') or SpellId('Target_DrainLife_EternalNight_5') or SpellId('Target_DrainLife_EternalNight_6') or SpellId('Target_DrainLife_EternalNight_7') or SpellId('Target_DrainLife_EternalNight_8') or SpellId('Target_DrainLife_EternalNight_9')"
 
 // new entry "DRAIN_LIFE_TECHNICAL_1"
 // type "StatusData"
@@ -333,8 +334,6 @@ data "RemoveConditions" "SpellId('Target_DrainLife_Base') or SpellId('Target_Dra
 // using "DRAIN_LIFE_TECHNICAL_1"
 // data "StackId" "DRAIN_LIFE_TECHNICAL_ETERNAL_NIGHT"
 // data "Boosts" "UnlockSpell(Target_DrainLife_EternalNight);UnlockSpell(Target_DrainLife_5)"
-// TODO
-// data "Boosts" "UnlockSpell(Target_DrainLife_EternalNight)"
 // data "RemoveEvents" "OnSpellCast"
 // data "RemoveConditions" "SpellId('Target_DrainLife_Base') or SpellId('Target_DrainLife_1') or SpellId('Target_DrainLife_2') or SpellId('Target_DrainLife_3') or SpellId('Target_DrainLife_4') or SpellId('Target_DrainLife_5') or SpellId('Target_DrainLife_EternalNight')"
 // data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"

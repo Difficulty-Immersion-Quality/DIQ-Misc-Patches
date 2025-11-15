@@ -3,20 +3,21 @@
 // TODO: Guess this kickstarts that mod project
 // TODO: Grant the actual passive in the future.
 
-new entry "BladeOfFrontiers"
-type "PassiveData"
-using "BladeOfFrontiers"
-// The Blade of Frontiers
-// data "DisplayName" "h7fa55579g9844g4302g89e0ga6279822397b;2"
-// The champion of the Sword Coast, renowned for his heroic deeds and unusual stone eye.
-// data "Description" "h9d04c01fg20c7g4326gb254gc1acae5d44b3;1"
-// The champion of the Sword Coast, renowned for his heroic deeds and unusual stone eye.&lt;br&gt;&lt;br&gt;Wyll can see in magical and ordinary darkness up to a range of [1]. If he has the &lt;LSTag Type="Passive" Tooltip="DevilsSight"&gt;Devil's Sight&lt;/LSTag&gt; invocation, he gains &lt;LSTag Type="Passive" Tooltip="MAG_Infernal_Metal_Helmet_InfernalSight_Passive"&gt;Infernal Sight&lt;/LSTag&gt;.
-data "Description" "h7a8e39feg8516g4f74g8ba9g13d9771aaedf;1"
-data "DescriptionParams" "Distance(12)"
-// data "Icon" "Action_PactOfTheBlade_Rapier"
-data "Properties" "Highlighted"
-// data "Boosts" "Proficiency(Rapiers)"
-data "Boosts" "Proficiency(Rapiers);DarkvisionRangeMin(12);IF(HasPassive('DevilsSight',context.Source)):ActiveCharacterLight(e278f6a0-26d7-49be-b11a-9b84bc313c3c);IF(HasPassive('DevilsSight',context.Source)):StatusImmunity(SG_Blinded)"
+// TODO: Unfuck this from crashing the game?!?!?!?!!? LMAO
+// new entry "BladeOfFrontiers"
+// type "PassiveData"
+// using "BladeOfFrontiers"
+// // The Blade of Frontiers
+// // data "DisplayName" "h7fa55579g9844g4302g89e0ga6279822397b;2"
+// // The champion of the Sword Coast, renowned for his heroic deeds and unusual stone eye.
+// // data "Description" "h9d04c01fg20c7g4326gb254gc1acae5d44b3;1"
+// // The champion of the Sword Coast, renowned for his heroic deeds and unusual stone eye.&lt;br&gt;&lt;br&gt;Wyll can see in magical and ordinary darkness up to a range of [1]. If he has the &lt;LSTag Type="Passive" Tooltip="DevilsSight"&gt;Devil's Sight&lt;/LSTag&gt; invocation, he gains &lt;LSTag Type="Passive" Tooltip="MAG_Infernal_Metal_Helmet_InfernalSight_Passive"&gt;Infernal Sight&lt;/LSTag&gt;.
+// data "Description" "h7a8e39feg8516g4f74g8ba9g13d9771aaedf;1"
+// data "DescriptionParams" "Distance(12)"
+// // data "Icon" "Action_PactOfTheBlade_Rapier"
+// data "Properties" "Highlighted"
+// // data "Boosts" "Proficiency(Rapiers)"
+// data "Boosts" "Proficiency(Rapiers);DarkvisionRangeMin(12);IF(HasPassive('DevilsSight',context.Source)):ActiveCharacterLight(e278f6a0-26d7-49be-b11a-9b84bc313c3c);IF(HasPassive('DevilsSight',context.Source)):StatusImmunity(SG_Blinded)"
 
 // data "Boosts" "Proficiency(Rapiers);DarkvisionRangeMin(12)"
 // data "StatsFunctorContext" "OnEquip;OnCreate;OnStatusApplied;OnActionResourcesChanged"

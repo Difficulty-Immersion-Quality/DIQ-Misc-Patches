@@ -8,20 +8,77 @@ Ext.Osiris.RegisterListener("GameBookInterfaceClosed", 2, "after", function(item
     MarkBookAsRead(item)
 end)
 
---Update rarity to green for all books in ModVars
-function UpdateRarityForAllReadBooks()
-    if GetMCM("UPDATE_RARITY") == false then return end
-    local rarity = GetMCM("RARITY")
-    BasicDebug("UpdateRarityForAllReadBooks()")
-    for k, entity in pairs(Ext.Entity.GetAllEntitiesWithComponent("ServerItem")) do
+-- GOON EDITS START
+-- Add global coroutine tracker
+local rarityUpdateCoroutine = nil
+
+-- Coroutine worker function
+local function updateRarityForAllReadBooksCoroutine()
+    if not mcmCache.updateRarity then return end
+    
+    local rarity = mcmCache.rarity
+    local entities = Ext.Entity.GetAllEntitiesWithComponent("ServerItem")
+    local processedCount = 0
+    
+    for i, entity in ipairs(entities) do
         if entity.Uuid and entity.Uuid.EntityUuid then
-            local bookID = Osi.GetBookID(entity.Uuid.EntityUuid)
-            if bookID and MyVars.readBooks[bookID] then
-                UpdateItemRarity(entity, rarity)
+            local bookId = Osi.GetBookID(entity.Uuid.EntityUuid)
+            if bookId and myVars.readBooks[bookId] then
+                updateItemRarity(entity, rarity)
+                processedCount = processedCount + 1
+            end
+        end
+        
+        -- Yield every 50 items to prevent stutters
+        if i % CONFIG.maxProcessPerFrame == 0 then
+            coroutine.yield()
+        end
+    end
+    
+    BasicPrint(string.format("Updated rarity for %d books via coroutine", processedCount))
+end
+
+--Update rarity to green for all books in ModVars
+-- function UpdateRarityForAllReadBooks()
+--     if GetMCM("UPDATE_RARITY") == false then return end
+--     local rarity = GetMCM("RARITY")
+--     BasicDebug("UpdateRarityForAllReadBooks()")
+--     for k, entity in pairs(Ext.Entity.GetAllEntitiesWithComponent("ServerItem")) do
+--         if entity.Uuid and entity.Uuid.EntityUuid then
+--             local bookID = Osi.GetBookID(entity.Uuid.EntityUuid)
+--             if bookID and MyVars.readBooks[bookID] then
+--                 UpdateItemRarity(entity, rarity)
+--             end
+--         end
+--     end
+-- end
+
+-- Main function with proper coroutine management
+local function updateRarityForAllReadBooks()
+    -- Prevent multiple concurrent operations
+    if rarityUpdateCoroutine and coroutine.status(rarityUpdateCoroutine) ~= "dead" then
+        basicDebug("Rarity update already in progress, skipping")
+        return
+    end
+    
+    rarityUpdateCoroutine = coroutine.create(updateRarityForAllReadBooksCoroutine)
+    
+    local function resumeCoroutine()
+        if rarityUpdateCoroutine and coroutine.status(rarityUpdateCoroutine) ~= "dead" then
+            local success, result = coroutine.resume(rarityUpdateCoroutine)
+            if success and coroutine.status(rarityUpdateCoroutine) ~= "dead" then
+                -- Use proper delay instead of 0ms
+                Ext.Timer.WaitFor(100, resumeCoroutine)
+            elseif not success then
+                basicDebug("Rarity update coroutine error: " .. tostring(result))
+                rarityUpdateCoroutine = nil
             end
         end
     end
+    
+    resumeCoroutine()
 end
+-- GOON EDITS END
 
 --Updata rarity to green for an item entity
 function UpdateItemRarity(entity, rarity)

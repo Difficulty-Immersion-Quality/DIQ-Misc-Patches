@@ -109,23 +109,6 @@ using "NON_LETHAL"
 data "OnApplyFunctors" "IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES')):ApplyStatus(SAILORCAT_ADPP_PASSIVES,100,-1);IF(Player() and Tagged('PLAYABLE') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES_AUX')):ApplyStatus(SAILORCAT_ADPP_PASSIVES_AUX,100,-1);IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_AUTOMATED_SUMMONS_PASSIVES')):ApplyStatus(SAILORCAT_AUTOMATED_SUMMONS_PASSIVES,100,-1)"
 data "OnRemoveFunctors" "IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES')):ApplyStatus(SAILORCAT_ADPP_PASSIVES,100,-1);IF(Player() and Tagged('PLAYABLE') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES_AUX')):ApplyStatus(SAILORCAT_ADPP_PASSIVES_AUX,100,-1);IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_AUTOMATED_SUMMONS_PASSIVES')):ApplyStatus(SAILORCAT_AUTOMATED_SUMMONS_PASSIVES,100,-1)"
 
-// ==================================== Dark Urge Rebirth - Add missing DescriptionParams, increase Save DC, and add some sweat and blood splatter for flavour. ====================================
-
-new entry "DARK_ENDURANCE_DOWNED"
-type "StatusData"
-data "StatusType" "DOWNED"
-using "DARK_ENDURANCE_DOWNED"
-data "Description" "h6c370b06g022bg4c7bg959cgfbd1c26cbb3b"
-data "DescriptionParams" "RegainHitPoints(3d4)"
-data "OnApplyFunctors" "RemoveStatus(DARK_ENDURANCE);RegainHitPoints(3d4);IF(not SavingThrow(Ability.Wisdom,15)):ApplyStatus(DARK_POSSESSION,100,2)"
-data "SplatterBloodAmount" "1.0"
-
-new entry "DARK_POSSESSION"
-type "StatusData"
-data "StatusType" "BOOST"
-using "DARK_POSSESSION"
-data "SplatterSweatAmount" "1"
-
 // ==================================== Carry capacity and gold weight changes ====================================
 // Commented out, gonna leave it vanilla and see if other systems can actually make it interesting. But getting rid of gold weight is a pretty decent little qol in a world where carry cap matters
 

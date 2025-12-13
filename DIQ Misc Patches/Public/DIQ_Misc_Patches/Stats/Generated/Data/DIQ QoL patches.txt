@@ -74,15 +74,36 @@ data "Boosts" ""
 // "DefaultBoosts" "Tag(NOSORT)" - Simple Sorting Bags
 data "DefaultBoosts" ""
 
-// ==================================== HeavyArmorMoveSpeed_SE - Add tooltip visibility for player clarity ====================================
+// ==================================== Heavy Armour Impedes Movement RAW (HeavyArmorMoveSpeed_SE) - Add tooltip visibility for player clarity ====================================
 
 new entry "IsWearingHeavyArmor_13"
 type "PassiveData"
 using "IsWearingHeavyArmor_13"
-data "Properties" "Highlighted"
-data "DisplayName" "hdb671db5gc473g4c5cgbc20gb33849e43a36"
-data "Description" "hfe823e2cgda3eg474eg81b9gbcb416d33d1e"
+// Heavy Armor
+// data "DisplayName" "he9e959cd7dc04281b9d00d5e545e2875dbcb"
+// Heavy Mail Armour
+data "DisplayName" "hdb671db5gc473g4c5cgbc20gb33849e43a36;1"
+// Reduces movement speed by 3m if your Strength is 13 or lower.
+// data "Description" "hfc7f04aa215c4dcc9112276aba248c88ge89"
+// The entity's &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; is reduced by [1] if its &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; is lower than 13 while wearing heavy splint, ring mail or chain mail armour.
+data "Description" "hfe823e2cgda3eg474eg81b9gbcb416d33d1e;1"
 data "DescriptionParams" "Distance(3);4"
+// data "Icon" "statIcons_Encumbered"
+// data "BoostContext" "OnEquip;OnTurn;OnCreate"
+// data "BoostConditions" "ConditionResult(context.Source.Strength < 13) and not Tagged('DWARF', context.Source)"
+// data "Boosts" "ActionResource(Movement,-3,0)"
+// data "Properties" "IsHidden"
+data "Properties" "Highlighted"
+
+new entry "IsWearingHeavyArmor_15"
+type "PassiveData"
+// using "IsWearingHeavyArmor_13"
+using "IsWearingHeavyArmor_15"
+// Heavy Plate Armour
+data "DisplayName" "hfefc557cg6c20g4684gb61fg915f64656ce4;1"
+// The entity's &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; is reduced by [1] if its &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; is lower than 13 while wearing heavy plate armour.
+data "Description" "hbc32d0feg08fag45d4gbddage0e5dc53e56d;1"
+// data "BoostConditions" "ConditionResult(context.Source.Strength < 15) and not Tagged('DWARF', context.Source)"
 
 // ==================================== Mobility Overhaul - Reduce duration of the Off Balanced condition from jumping ====================================
 // TODO: Remove when I do my own mobility overhaul.

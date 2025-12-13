@@ -19,9 +19,11 @@
 	<!-- "" --> <content contentuid="h8dcb3690g0420g435bg88aeg0eb4ed7f34cc" version="1">The wearer can use &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Help&lt;/LSTag&gt; as a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt;.</content>
 	<!-- "" --> <content contentuid="h027cfe16g350dg43c8gac97g46a6628b0384" version="1">The wearer can use &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Help&lt;/LSTag&gt; as a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt; and they and their allies within [1] gain &lt;LSTag Type="Status" Tooltip="EW_BA_STATUS_BLESS"&gt;Bless&lt;/LSTag&gt;. This can stack with other sources of &lt;LSTag Type="Status" Tooltip="BLESS"&gt;Bless&lt;/LSTag&gt;.</content>
 
-	<!-- Heavy Armour Impedes Movement RAW -->
-	<!-- "" --> <content contentuid="hdb671db5gc473g4c5cgbc20gb33849e43a36" version="1">Heavy Armour Movement Speed Penalty</content>
-	<!-- "" --> <content contentuid="hfe823e2cgda3eg474eg81b9gbcb416d33d1e" version="1">Reduces &lt;LSTag Tooltip="MovementSpeed"&gt;Movement Speed&lt;/LSTag&gt; by [1] if your &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; is 13 or lower while wearing Heavy Splint, Ring Mail or Chain Mail Armour and 15 or lower while wearing Heavy Plate Armour.</content>
+	<!-- Heavy Armour Impedes Movement RAW (HeavyArmorMoveSpeed_SE) -->
+	<!-- "IsWearingHeavyArmor_13" --> <content contentuid="hdb671db5gc473g4c5cgbc20gb33849e43a36" version="1">Heavy Mail Armour</content>
+	<!-- "IsWearingHeavyArmor_13" --> <content contentuid="hfe823e2cgda3eg474eg81b9gbcb416d33d1e" version="1">The entity's &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; is reduced by [1] if its &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; is lower than 13 while wearing heavy splint, ring mail or chain mail armour.</content>
+	<!-- "IsWearingHeavyArmor_15" --> <content contentuid="hfefc557cg6c20g4684gb61fg915f64656ce4" version="1">Heavy Plate Armour</content>
+	<!-- "IsWearingHeavyArmor_15" --> <content contentuid="hbc32d0feg08fag45d4gbddage0e5dc53e56d" version="1">The entity's &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt; is reduced by [1] if its &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; is lower than 13 while wearing heavy plate armour.</content>
 
 	<!-- Steady Aim rework for Rogues -->
 	<!-- "" --> <content contentuid="h50ffdbf5ga58cg4e8bg9c47g9a2e50dffeda" version="1">You have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on your next &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; on the current turn, the &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; is lost upon &lt;LSTag Tooltip="MovementSpeed"&gt;moving&lt;/LSTag&gt;.</content>

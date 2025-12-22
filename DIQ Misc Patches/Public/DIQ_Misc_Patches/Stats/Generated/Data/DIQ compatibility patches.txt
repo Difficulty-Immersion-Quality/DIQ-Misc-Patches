@@ -1,30 +1,31 @@
 // ==================================== Highly contested Monk entry compatibility patching - OneDeezNnutsDMartialArts/Druid QoL/Vessel/WayOfTheBoulder/Hexblade ====================================
 // TODO: Update loca for this to specify all the functionality.
-// TODO: Functions to condense... functionality.
+// TODO: Functions to condense... functionality. Refer to Goon's Library KHN.
 
 new entry "MartialArts_DextrousUnarmedAttacks"
 type "PassiveData"
 using "MartialArts_DextrousUnarmedAttacks"
-data "BoostConditions" "(IsDexterityGreaterThanStrength() and not Tagged('BOULDER', context.Source) and not Tagged('VESSEL', context.Source) and not HasStatus('ASTRALSELF_EMPOWERED_WISDOM', context.Source) and not (HasStatus('SHILLELAGH', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Wisdom >= context.Source.Dexterity)) or (HasStatus('PACT_BLADE', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)) or (HasStatus('HEXBLADE_BLADE', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)))"
+// Martial Arts: Dextrous Attacks
+// data "DisplayName" "hd8a574dage906g4af9g92f1g1c532d7e9d70;2"
+// Attacks with &lt;LSTag Tooltip="MonkWeapon"&gt;Monk Weapons&lt;/LSTag&gt; and unarmed attacks scale with your &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; instead of your &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; if your Dexterity is higher.
+// data "Description" "h36aee87bgef1eg4ac9g882ag30aa1b4c2205;4"
+// data "Icon" "PassiveFeature_MartialArts_DextrousUnarmedAttacks"
+// data "Properties" "Highlighted"
+// data "BoostContext" "OnStatusApply;OnStatusRemove;OnEquip;OnShortRest;OnCreate;OnLongRest;OnInventoryChanged"
+// data "BoostConditions" "IsDexterityGreaterThanStrength()"
+data "BoostConditions" "(IsDexterityGreaterThanStrength() and not Tagged('BOULDER', context.Source) and not Tagged('VESSEL', context.Source) and not HasStatus('ASTRALSELF_EMPOWERED_WISDOM', context.Source) and not (HasStatus('SHILLELAGH', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Wisdom >= context.Source.Dexterity)) or (HasStatus('PACT_BLADE', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)) or (HasStatus('HEXBLADE_BIND', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)))"
+// data "Boosts" "MonkWeaponAttackOverride()"
 
 new entry "CL_Passive_OneDnD_MartialArts_DextrousAttacks"
 type "PassiveData"
 using "CL_Passive_OneDnD_MartialArts_DextrousAttacks"
-data "BoostConditions" "(IsDexterityGreaterThanStrength() and not Tagged('BOULDER', context.Source) and not Tagged('VESSEL', context.Source) and not HasStatus('ASTRALSELF_EMPOWERED_WISDOM', context.Source) and not (HasStatus('SHILLELAGH', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Wisdom >= context.Source.Dexterity)) or (HasStatus('PACT_BLADE', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)) or (HasStatus('HEXBLADE_BLADE', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)))"
-
-// new entry "CL_Passive_OneDnD_MartialArts_DextrousAttacks"
-// type "PassiveData"
-// using "CL_Passive_OneDnD_MartialArts_DextrousAttacks"
-// data "BoostConditions" "
-// (IsDexterityGreaterThanStrength()
-//  and not (Tagged('BOULDER', context.Source) or Tagged('VESSEL', context.Source) or HasStatus('ASTRALSELF_EMPOWERED_WISDOM', context.Source)) 
-//  and not (HasStatus('SHILLELAGH', GetActiveWeapon()) and ConditionResult(context.Source.Wisdom >= context.Source.Dexterity)) or 
-
-//  (HasAnyStatus({'PACT_BLADE','HEXBLADE_BIND','FLAME_BLADE_MEPHISTOPHELES'},{},{},GetActiveWeapon()) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity))
-
-// MAG_MELEE_CASTER_BOON
-
-// new entry "MartialArts_DextrousUnarmedAttacks"
-// type "PassiveData"
-// using "MartialArts_DextrousUnarmedAttacks"
-// data "BoostConditions" "IsDexterityGreaterThanStrength() and not HasAnyStatus({'PACT_BLADE','HEXBLADE_BIND','FLAME_BLADE_MEPHISTOPHELES'},{},{},GetActiveWeapon());"
+// Martial Arts: Dextrous Attacks
+// data "DisplayName" "h7b5cd44149e84c59b9647aa521207f2bc2ff;1"
+// Attacks with &lt;LSTag Tooltip="MonkWeapon"&gt;Monk Weapons&lt;/LSTag&gt; and unarmed attacks scale with your &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; instead of your &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; if your Dexterity is higher.
+// data "Description" "h125c54ac83574a7a9e9c9602de353dda6a19;1"
+// data "Icon" "PassiveFeature_MartialArts_DextrousUnarmedAttacks"
+// data "Properties" "IsHidden"
+// data "BoostContext" "OnStatusApply;OnStatusRemove;OnEquip;OnShortRest;OnCreate;OnLongRest;OnInventoryChanged"
+// data "BoostConditions" "IsDexterityGreaterThanStrength()"
+data "BoostConditions" "(IsDexterityGreaterThanStrength() and not Tagged('BOULDER', context.Source) and not Tagged('VESSEL', context.Source) and not HasStatus('ASTRALSELF_EMPOWERED_WISDOM', context.Source) and not (HasStatus('SHILLELAGH', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Wisdom >= context.Source.Dexterity)) or (HasStatus('PACT_BLADE', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)) or (HasStatus('HEXBLADE_BIND', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)))"
+// data "Boosts" "MonkWeaponAttackOverride()"

@@ -1,0 +1,21 @@
+treasure itemtypes "Common","Uncommon","Rare","Epic","Legendary","Divine","Unique"
+
+new treasuretable "LOOT_FrostyBoiPack"
+CanMerge 1
+new subtable "1,1"
+object category "I_MAG_Frostyboi_Hat",1,0,0,0,0,0,0,0
+new subtable "1,1"
+object category "I_MAG_FrostyBoiStaff",1,0,0,0,0,0,0,0
+
+new treasuretable "TUT_Chest_Potions"
+CanMerge 1
+new subtable "1,1"
+object category "I_LOOT_FrostyBoiPack",1,0,0,0,0,0,0,0
+
+new treasuretable "WYR_Circus_KoboldMerchant"
+CanMerge 1
+new subtable "1,1"
+object category "I_MAG_Frostyboi_Hat",1,0,0,0,0,0,0,0
+new subtable "1,1"
+// object category "MAG_FrostyBoiStaff",1,0,0,0,0,0,0,0
+object category "I_MAG_FrostyBoiStaff",1,0,0,0,0,0,0,0

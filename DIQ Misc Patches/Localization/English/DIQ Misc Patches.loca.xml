@@ -11,6 +11,11 @@
 	<!-- "" --> <content contentuid="ha81b4b97g243dg4619g8233ge722d4b06126" version="1">You summoned a temporary Basket Full of Equipment to your inventory. It and all its contents will disappear soon.</content>
 	<!-- "" --> <content contentuid="h76164e62g39b2g4eafg9f7egead0e51d1bb6" version="1">Toggles your veil's visuals on and off, if you have one selected from the mirror or character creation.</content>
 
+	<!-- Simple Sorting Containers -->
+	<!-- SimpleSortingBagsTrinket --> <content contentuid="h81cbaba8g1040g426bgbc47g206590306b98" version="1">Trinket Trunk</content>
+	<!-- SimpleSortingBagsTrinket --> <content contentuid="hbb070b60gd8b9g45f5gb185g43680cb70db3" version="1">An ornate trunk housing a variety of peculiar items, from tools to religious artifacts.</content>
+	<!-- "SimpleSortingBagsAccessory" --> <content contentuid="hb1577500g5df5g4b9cg8dd5g6a3a56fa1fcb" version="1">Accessory Lockbox</content>
+
 	<!-- Changing Bloodless for friendlies --> 
 	<!-- GOON_ASTARION_WEAK_FRIENDLY --> <content contentuid="h03ca14d9g0ca8g41d7g8bcfg6ea42fd5705f" version="1">Blood Donor</content>
 	<!-- GOON_ASTARION_WEAK_FRIENDLY --> <content contentuid="h9b7c1291g114dg4269gba95g59b4193d84b4" version="1">You feel a bit woozy, though you'd feel a lot worse were the feeding involuntary.</content>

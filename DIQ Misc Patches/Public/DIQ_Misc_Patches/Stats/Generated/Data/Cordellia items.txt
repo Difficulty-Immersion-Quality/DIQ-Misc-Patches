@@ -79,78 +79,116 @@ data "Boosts" "ReduceCriticalAttackThreshold(2)"
 
 // ==================================== Soul Knife ====================================
 // Equipment nerfs and fixes
+// DealDamage instead of DamageBonus, once per attack
+
+new entry "MAG_PsyRiderPack"
+type "Object"
+// using "_Container"
+using "MAG_PsyRiderPack"
+// data "RootTemplate" "f3e3f376-911f-4fb7-87a9-f9819a0368c3"
+// data "Rarity" "VeryRare"
+// data "Weight" "1"
+data "ValueOverride" "1"
 
 new entry "MAG_PsyRide1"
 type "Armor"
 // using "_Ring_Magic"
 using "MAG_PsyRide1"
+// data "RootTemplate" "1f360869-e34d-4824-ae9e-c16d587fb7cf"
+// data "ValueOverride" "411"
+// data "Rarity" "Rare"
+// data "PassivesOnEquip" "PsyRiderPassive1;PsyRiderPassive1b"
 data "IsUnique" "1"
 
 new entry "MAG_PsyRide2"
 type "Armor"
 // using "_Ring_Magic"
 using "MAG_PsyRide2"
+// data "RootTemplate" "d17d3164-160f-4082-9dcb-14696df6f5cb"
+// data "ValueOverride" "411"
+// data "Rarity" "Rare"
+// data "PassivesOnEquip" "PsyRiderPassive2;PsyRiderPassive2b"
 data "IsUnique" "1"
 
 new entry "MAG_PsyRiderGloves"
 type "Armor"
 // using "_Hand_Magic"
 using "MAG_PsyRiderGloves"
+// data "RootTemplate" "e161bafb-4926-40ce-b51b-790f668135af"
+// data "ValueUUID" "c5ad02e9-b4d4-4df1-a9cd-02b80d017eaa"
+// data "ValueOverride" "450"
+// data "Rarity" "VeryRare"
 // data "PassivesOnEquip" "PsyRiderGloves_Advantage;FastHands"
 data "PassivesOnEquip" "PsyRiderGloves_Advantage"
 data "IsUnique" "1"
+// data "MinAmount" "1"
+// data "MaxAmount" "1"
+// data "Priority" "1"
+// data "MinLevel" "1"
 
-// Words That Remain
 new entry "PsyRiderPassive1"
 type "PassiveData"
 using "PsyRiderPassive1"
-// The wearer deals an additional 1d4 cold damage when dealing psychic damage.
+// Words That Remain
+// data "DisplayName" "h1bc7e8deg4eceg5497geb08g831a918f4427;1"
+// The wearer deals an additional 1d6 cold damage when dealing psychic damage.
 // data "Description" "h06057d84g97a9g9546g1585g5dcd52408f54;1"
 // The wearer deals an additional [1] when dealing[2] with &lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt;.
 data "Description" "h0c187050gaa77g4ce9g8549g9f1f20b437bd;1"
-// data "DescriptionParams" ""
 data "DescriptionParams" "DealDamage(1d4, Cold);DealDamage(,Psychic)"
 // data "Boosts" "IF(HasDamageDoneForType(DamageType.Psychic)):DamageBonus(1d6, Cold)"
 data "Boosts" "IF(IsAttack() and HasDamageDoneForType(DamageType.Psychic)):DamageBonus(1d4, Cold)"
 
-// Scholastic Assault
 new entry "PsyRiderPassive1b"
 type "PassiveData"
 using "PsyRiderPassive1b"
+// Scholastic Assault
+// data "DisplayName" "hee43229cgba6ag829dg8476g0a8bdde8350f;1"
 // When you deal psychic damage to an enemy, they may gain &lt;LSTag Type="Status" Tooltip="MAG_PSYCHIC_MENTAL_FATIGUE"&gt;Mental Fatigue&lt;/LSTag&gt; for 3 turns.
 // data "Description" "h760b6bffg847ag7cc3g1774gcdfe57c6ac57;4"
 // When you deal[1] to an enemy with an &lt;LSTag Tooltip="AttackRoll"&gt;Attack&lt;/LSTag&gt;, they must succed a &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or become &lt;LSTag Type="Status" Tooltip="MAG_PSYCHIC_MENTAL_FATIGUE"&gt;Mentally Fatigued&lt;/LSTag&gt; for 3 turns.
 data "Description" "h22442963ge147g4874gb0c8gc2fb3393f96b;1"
-// data "DescriptionParams" ""
 data "DescriptionParams" "DealDamage(,Psychic)"
+// data "StatsFunctorContext" "OnDamage"
 // data "Conditions" "not Item() and not Self() and not IsMiss() and HasDamageDoneForType(DamageType.Psychic)"
-data "Conditions" "not Item() and IsAttack() and HasDamageEffectFlag(DamageFlags.Hit) and HasDamageDoneForType(DamageType.Psychic)"
+data "Conditions" "not Item() and not Self() and IsAttack() and HasDamageEffectFlag(DamageFlags.Hit) and HasDamageDoneForType(DamageType.Psychic)"
+// data "StatsFunctors" "IF(not SavingThrow(Ability.Constitution, 14)):ApplyStatus(MAG_PSYCHIC_MENTAL_FATIGUE, 100, 3);ApplyStatus(MAG_PSYCHIC_MENTAL_FATIGUE_DURATION_TECHNICAL, 100, 1)"
 
-// Venomous Whispers
 new entry "PsyRiderPassive2"
 type "PassiveData"
 using "PsyRiderPassive2"
+// Venomous Whispers
+// data "DisplayName" "h65c0c0dcg62f9ga6a3g3dfeg3cf87f798eb5;1"
 // The wearer deals an additional 1d4 poison damage when dealing psychic damage.
 // data "Description" "haec0b11eg1828g7835gf48bg779698a31a73;1"
 // The wearer deals an additional [1] when dealing[2] with &lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt;.
 data "Description" "h0c187050gaa77g4ce9g8549g9f1f20b437bd;1"
-// data "DescriptionParams" ""
 data "DescriptionParams" "DealDamage(1d4, Poison);DealDamage(,Psychic)"
 // data "Boosts" "IF(HasDamageDoneForType(DamageType.Psychic)):DamageBonus(1d4, Poison)"
 data "Boosts" "IF(IsAttack() and HasDamageDoneForType(DamageType.Psychic)):DamageBonus(1d4, Poison)"
 
-// Creeping Dread
 new entry "PsyRiderPassive2b"
 type "PassiveData"
 using "PsyRiderPassive2b"
+// Creeping Dread
+// data "DisplayName" "hcc433aafg5aecg9ddbg9bbagbe1b1a92e9f3;1"
 // When you deal psychic damage to an enemy, they may gain &lt;LSTag Type="Status" Tooltip="MAG_PSYCHIC_MENTAL_FATIGUE"&gt;Poisoned&lt;/LSTag&gt; for 2 turns.
 // data "Description" "hcac96ea0g0345g68ffg413eg984a74c0b3aa;3"
 // When you deal[1] to an enemy with an &lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt;, they must succed a &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; or become &lt;LSTag Type="Status" Tooltip="POISONED"&gt;Poisoned&lt;/LSTag&gt; for 2 turns.
 data "Description" "h805f7870g29c2g478dga6afgf66da2c04da3;1"
-// data "DescriptionParams" ""
 data "DescriptionParams" "DealDamage(,Psychic)"
+// data "StatsFunctorContext" "OnDamage"
 // data "Conditions" "not Item() and not Self() and not IsMiss() and HasDamageDoneForType(DamageType.Psychic)"
 data "Conditions" "not Item() and IsAttack() and HasDamageEffectFlag(DamageFlags.Hit) and HasDamageDoneForType(DamageType.Psychic)"
+// data "StatsFunctors" "IF(not SavingThrow(Ability.Constitution, 14)):ApplyStatus(POISONED, 100, 2)"
+
+// new entry "PsyRiderGloves_Advantage"
+// type "PassiveData"
+// Mental Guidance
+// data "DisplayName" "h7ea0808bg75d1g429cg59ceg2020bf68583c;1"
+// You have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; against &lt;LSTag Type="Status" Tooltip="MAG_PSYCHIC_MENTAL_FATIGUE"&gt;Mentally Fatigued&lt;/LSTag&gt; creatures.
+// data "Description" "haf6c84d0ge497g7874ged09g67b2f4e569be;3"
+// data "Boosts" "IF(HasStatus('MAG_PSYCHIC_MENTAL_FATIGUE', context.Target)):Advantage(AttackRoll)"
 
 // ==================================== Frostbound Legendaries ====================================
 // TODO: This shit too powerful frfr

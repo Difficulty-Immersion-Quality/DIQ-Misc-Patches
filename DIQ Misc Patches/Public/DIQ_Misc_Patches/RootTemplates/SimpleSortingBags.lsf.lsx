@@ -10,6 +10,7 @@
 					<attribute id="Name" type="LSString" value="SimpleSortingBagsTrinket" />
 					<attribute id="LevelName" type="FixedString" value="" />
 					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="Scale" type="float" value="0.75" />
 					<attribute id="ParentTemplateId" type="FixedString" value="51446e33-fea9-4166-9b7e-74b8e3fc9809" />
 					<!-- Trinket Trunk -->
 					<attribute id="DisplayName" type="TranslatedString" handle="h81cbaba8g1040g426bgbc47g206590306b98" version="1" />
@@ -30,9 +31,9 @@
 					<attribute id="LevelName" type="FixedString" value="" />
 					<attribute id="Type" type="FixedString" value="item" />
 					<attribute id="Scale" type="float" value="2" />
-					<!-- <attribute id="VisualTemplate" type="FixedString" value="ff2391f2-8310-cba9-6814-88fe001e8e73" /> -->
-					<attribute id="VisualTemplate" type="FixedString" value="a24a2ca2-a213-424c-833d-47c79934c0ce" />
-					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" />
+					<attribute id="VisualTemplate" type="FixedString" value="ff2391f2-8310-cba9-6814-88fe001e8e73" />
+					<!-- <attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" /> -->
+					<attribute id="ParentTemplateId" type="FixedString" value="0ae83daa-1096-4b38-9b8c-fc610a9306aa" />
 					<!-- Adept Sorting Pack -->
 					<attribute id="DisplayName" type="TranslatedString" handle="hf9139f1dgdba7g4a7agb039ga6675be077e7" version="1" />
 					<!-- Modular and self-sorting containers for cultured individuals. -->
@@ -41,6 +42,7 @@
 					<attribute id="Stats" type="FixedString" value="SimpleSortingBagsMaster" />
 					<!-- <attribute id="Tooltip" type="uint8" value="1" /> -->
 					<attribute id="Tooltip" type="uint8" value="2" />
+					<!-- <attribute id="maxStackAmount" type="int32" value="1" /> -->
 					<children>
 						<node id="InventoryList">
 							<children>
@@ -219,8 +221,11 @@
 					<attribute id="Name" type="LSString" value="SimpleSortingBagsElixir" />
 					<attribute id="LevelName" type="FixedString" value="" />
 					<attribute id="Type" type="FixedString" value="item" />
+					<!-- <attribute id="Scale" type="float" value="" /> -->
+					<attribute id="Scale" type="float" value="2" />
 					<attribute id="VisualTemplate" type="FixedString" value="739e70c4-5faa-941d-75ae-10687d678adb" />
-					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" /> <!-- Unchanged parent template -->
+					<!-- <attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" /> -->
+					<attribute id="ParentTemplateId" type="FixedString" value="854da6d0-ecfd-450d-82b4-cdff387c4349" />
 					<!-- Fortified Elixir Case -->
 					<attribute id="DisplayName" type="TranslatedString" handle="had7f63e7g0d46g4cfcg98b3gac5ad96fa5f8" version="1" />
 					<!-- Protective steel case slotted for a wide variety of elixirs. -->
@@ -233,7 +238,44 @@
 					<!-- <attribute id="ContainerContentFilterCondition" type="LSString" value="Tagged('ALCH_SOLUTION_ELIXIR') and not Tagged('NOSORT')" /> -->
 					<attribute id="ContainerContentFilterCondition" type="LSString" value="Tagged('ALCH_SOLUTION_ELIXIR') and not Tagged('NOSORT') and not Tagged('AUTOWARES')" />
 					<children>
-						<node id="InventoryList" />
+						<!-- adjusted bounds to match visuals start -->
+						<node id="Bounds">
+							<children>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.591562" />
+									<attribute id="Max" type="fvec3" value="0.10607669 0.34738314 0.10438718" />
+									<attribute id="Min" type="fvec3" value="-0.10269827 -0.00041016936 -0.10438757" />
+									<attribute id="Radius" type="float" value="0.113354" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="0" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.591562" />
+									<attribute id="Max" type="fvec3" value="0.10607669 0.34738314 0.10438718" />
+									<attribute id="Min" type="fvec3" value="-0.10269827 -0.00041016936 -0.10438757" />
+									<attribute id="Radius" type="float" value="0.226708" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="1" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="0.591562" />
+									<attribute id="Max" type="fvec3" value="0.10607669 0.34738314 0.10438718" />
+									<attribute id="Min" type="fvec3" value="-0.10269827 -0.00041016936 -0.10438757" />
+									<attribute id="Radius" type="float" value="0.226708" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="2" />
+								</node>
+							</children>
+						</node>
+						<!-- adjusted bounds to match visuals end -->
+						<!-- <node id="InventoryList" /> -->
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<attribute id="Object" type="FixedString" value="Empty" />
+								</node>
+							</children>
+						</node>
 					</children>
 				</node>
 				<node id="GameObjects">
@@ -286,7 +328,8 @@
 					<attribute id="Name" type="LSString" value="SimpleSortingBagsPotion" />
 					<attribute id="LevelName" type="FixedString" value="" />
 					<attribute id="Type" type="FixedString" value="item" />
-					<attribute id="Scale" type="float" value="0.5" />
+					<!-- <attribute id="Scale" type="float" value="0.5" /> -->
+					<attribute id="Scale" type="float" value="0.65" />
 					<attribute id="VisualTemplate" type="FixedString" value="eb182992-6215-2dc5-a6eb-e8002d8ce15f" />
 					<!-- <attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" /> -->
 					<attribute id="ParentTemplateId" type="FixedString" value="854da6d0-ecfd-450d-82b4-cdff387c4349" />

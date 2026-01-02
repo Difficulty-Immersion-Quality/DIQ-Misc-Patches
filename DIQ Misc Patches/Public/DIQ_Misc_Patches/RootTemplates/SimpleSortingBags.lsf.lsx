@@ -15,7 +15,6 @@
 					<attribute id="DisplayName" type="TranslatedString" handle="h81cbaba8g1040g426bgbc47g206590306b98" version="1" />
 					<!-- An ornate trunk housing a variety of peculiar items, from tools to religious artifacts. -->
 					<attribute id="Description" type="TranslatedString" handle="hbb070b60gd8b9g45f5gb185g43680cb70db3" version="1" />
-					<attribute id="Icon" type="FixedString" value="Item_CONT_GEN_Chest_Jewel_D" />
 					<attribute id="Stats" type="FixedString" value="SimpleSortingBagsTrinket" />
 					<attribute id="Tooltip" type="uint8" value="2" />
 					<attribute id="ContainerAutoAddOnPickup" type="bool" value="True" />
@@ -31,7 +30,8 @@
 					<attribute id="LevelName" type="FixedString" value="" />
 					<attribute id="Type" type="FixedString" value="item" />
 					<attribute id="Scale" type="float" value="2" />
-					<attribute id="VisualTemplate" type="FixedString" value="ff2391f2-8310-cba9-6814-88fe001e8e73" />
+					<!-- <attribute id="VisualTemplate" type="FixedString" value="ff2391f2-8310-cba9-6814-88fe001e8e73" /> -->
+					<attribute id="VisualTemplate" type="FixedString" value="a24a2ca2-a213-424c-833d-47c79934c0ce" />
 					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" />
 					<!-- Adept Sorting Pack -->
 					<attribute id="DisplayName" type="TranslatedString" handle="hf9139f1dgdba7g4a7agb039ga6675be077e7" version="1" />
@@ -58,7 +58,7 @@
 					<attribute id="Type" type="FixedString" value="item" />
 					<attribute id="Scale" type="float" value="0.5" />
 					<attribute id="VisualTemplate" type="FixedString" value="925df7fa-8870-6703-d50b-fef41536a00e" />
-					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" />
+					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" /> <!-- Unchanged parent template -->
 					<!-- Scholar's Book Stack -->
 					<attribute id="DisplayName" type="TranslatedString" handle="h2bc16480g4e78g417cgab60g6f9e1033413d" version="1" />
 					<!-- Assorted literature, notes and missives organized peculiarly. -->
@@ -80,7 +80,8 @@
 					<attribute id="LevelName" type="FixedString" value="" />
 					<attribute id="Type" type="FixedString" value="item" />
 					<attribute id="VisualTemplate" type="FixedString" value="28b165fa-fca1-4267-715f-1ee6881b92e0" />
-					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" />
+					<!-- <attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" /> -->
+					<attribute id="ParentTemplateId" type="FixedString" value="0b90bf9d-66fd-4741-be1f-39181efca97a" />
 					<!-- Trunk of Protection -->
 					<attribute id="DisplayName" type="TranslatedString" handle="h73cb837eg7873g48d8g9c06g29282318b7cf" version="1" />
 					<!-- A heavily braced wooden trunk marked for armor storage. -->
@@ -102,7 +103,8 @@
 					<attribute id="LevelName" type="FixedString" value="" />
 					<attribute id="Type" type="FixedString" value="item" />
 					<attribute id="VisualTemplate" type="FixedString" value="6e76802f-6469-87b5-0929-f2e2298a9ae5" />
-					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" />
+					<!-- <attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" /> -->
+					<attribute id="ParentTemplateId" type="FixedString" value="3bc66ca0-4fd3-4c8a-8f88-f3b8d5f65d80" />
 					<!-- Vanity Wardrobe -->
 					<attribute id="DisplayName" type="TranslatedString" handle="hb3ce8d6dg6c11g46a1g83a8g560bdf7cd029" version="1" />
 					<!-- A well-worn wardrobe for the well-dressed and well-organized. -->
@@ -124,7 +126,7 @@
 					<attribute id="LevelName" type="FixedString" value="" />
 					<attribute id="Type" type="FixedString" value="item" />
 					<attribute id="VisualTemplate" type="FixedString" value="66186e43-3b04-728f-3795-bca5f745f535" />
-					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" />
+					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" /> <!-- Unchanged parent template -->
 					<!-- Assassin's Pouch -->
 					<attribute id="DisplayName" type="TranslatedString" handle="h41fc92e2g77cag42b6gb0e1gdc2477d8ef3c" version="1" />
 					<!-- Strapped leather pouch designed for securing weapon coatings. -->
@@ -147,7 +149,8 @@
 					<attribute id="Type" type="FixedString" value="item" />
 					<attribute id="Scale" type="float" value="0.5" />
 					<attribute id="VisualTemplate" type="FixedString" value="7ff094b7-f44f-43c9-a8e3-9bf064376f98" />
-					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" />
+					<!-- <attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" /> -->
+					<attribute id="ParentTemplateId" type="FixedString" value="8e036eac-fc9c-4d16-9265-f71eacc9f3e9" />
 					<!-- Trinket Lockbox -->
 					<!-- <attribute id="DisplayName" type="TranslatedString" handle="h37ce6fb7g12e4g489bg8456g831e93de43fa" version="1" /> -->
 					<!-- Accessory Lockbox -->
@@ -172,7 +175,7 @@
 					<attribute id="Type" type="FixedString" value="item" />
 					<attribute id="Scale" type="float" value="2" />
 					<attribute id="VisualTemplate" type="FixedString" value="859ddc37-e6f5-7895-ea2e-b406b39593e4" />
-					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" />
+					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" /> <!-- Unchanged parent template -->
 					<!-- Boundless Quiver -->
 					<attribute id="DisplayName" type="TranslatedString" handle="h336fa596gdc25g42bfgb542g5dab5d0e1dd5" version="1" />
 					<!-- A deceptively small leather quiver that fits innumerable arrows. -->
@@ -194,7 +197,8 @@
 					<attribute id="LevelName" type="FixedString" value="" />
 					<attribute id="Type" type="FixedString" value="item" />
 					<attribute id="VisualTemplate" type="FixedString" value="97b0a347-f8ce-33fa-e8db-9fc22f090733" />
-					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" />
+					<!-- <attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" /> -->
+					<attribute id="ParentTemplateId" type="FixedString" value="9e7c9903-5690-488d-b648-462fa5cbaafe" />
 					<!-- Trunk of Armament -->
 					<attribute id="DisplayName" type="TranslatedString" handle="he6435c70g6506g4316g86a6g0293832cb28a" version="1" />
 					<!-- A large reinforced wooden trunk marked for weapon storage. -->
@@ -216,7 +220,7 @@
 					<attribute id="LevelName" type="FixedString" value="" />
 					<attribute id="Type" type="FixedString" value="item" />
 					<attribute id="VisualTemplate" type="FixedString" value="739e70c4-5faa-941d-75ae-10687d678adb" />
-					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" />
+					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" /> <!-- Unchanged parent template -->
 					<!-- Fortified Elixir Case -->
 					<attribute id="DisplayName" type="TranslatedString" handle="had7f63e7g0d46g4cfcg98b3gac5ad96fa5f8" version="1" />
 					<!-- Protective steel case slotted for a wide variety of elixirs. -->
@@ -238,7 +242,7 @@
 					<attribute id="LevelName" type="FixedString" value="" />
 					<attribute id="Type" type="FixedString" value="item" />
 					<attribute id="VisualTemplate" type="FixedString" value="e12b0c0a-62eb-0a2e-1df1-2e4c8681fb35" />
-					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" />
+					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" /> <!-- Unchanged parent template -->
 					<!-- Collector's Scroll Tome -->
 					<attribute id="DisplayName" type="TranslatedString" handle="h01d2d9a5gcb11g4a99ga9abg670d538444e0" version="1" />
 					<!-- A clasped tome enchanted with a strong affinity for scrolls. -->
@@ -261,7 +265,7 @@
 					<attribute id="Type" type="FixedString" value="item" />
 					<attribute id="Scale" type="float" value="2" />
 					<attribute id="VisualTemplate" type="FixedString" value="efac1932-6d1d-4505-8287-05ca528cb7ca" />
-					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" />
+					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" /> <!-- Unchanged parent template -->
 					<!-- Bombardier's Satchel -->
 					<attribute id="DisplayName" type="TranslatedString" handle="h4f99e985gaeeeg4cb3g8560g9417db8314fb" version="1" />
 					<!-- Large toughened leather satchel capable of fitting various grenades. -->
@@ -284,7 +288,8 @@
 					<attribute id="Type" type="FixedString" value="item" />
 					<attribute id="Scale" type="float" value="0.5" />
 					<attribute id="VisualTemplate" type="FixedString" value="eb182992-6215-2dc5-a6eb-e8002d8ce15f" />
-					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" />
+					<!-- <attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" /> -->
+					<attribute id="ParentTemplateId" type="FixedString" value="854da6d0-ecfd-450d-82b4-cdff387c4349" />
 					<!-- Fortified Potion Case -->
 					<attribute id="DisplayName" type="TranslatedString" handle="h76fb0c27g7a4ag4b4cg85dfg3064f42a3367" version="1" />
 					<!-- Protective steel case slotted for a wide variety of potions. -->
@@ -306,7 +311,8 @@
 					<attribute id="LevelName" type="FixedString" value="" />
 					<attribute id="Type" type="FixedString" value="item" />
 					<attribute id="VisualTemplate" type="FixedString" value="1a9a0d5c-9778-28b9-a69a-9693042318c9" />
-					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" />
+					<!-- <attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" /> -->
+					<attribute id="ParentTemplateId" type="FixedString" value="6bc9838f-9b0f-4bad-8717-a6f29ccb517e" />
 					<!-- Rugged Dye Rack -->
 					<attribute id="DisplayName" type="TranslatedString" handle="h96fe61a0g9488g441bgb37dgc4908bd680c8" version="1" />
 					<!-- Lightly worn wooden rack tagged for equipment and clothing dyes. -->
@@ -328,7 +334,8 @@
 					<attribute id="LevelName" type="FixedString" value="" />
 					<attribute id="Type" type="FixedString" value="item" />
 					<attribute id="VisualTemplate" type="FixedString" value="78f6ab58-a643-1730-c6a7-3e4e1397b64d" />
-					<attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" />
+					<!-- <attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" /> -->
+					<attribute id="ParentTemplateId" type="FixedString" value="56427fbf-a074-45eb-9e98-81ef6e377a2c" />
 					<!-- Adventure Backpack -->
 					<attribute id="DisplayName" type="TranslatedString" handle="h421c0f14gcfecg4cefgb922ga65dffba73d0" version="1" />
 					<!-- Equipped with many compartments for tools and personal effects. -->

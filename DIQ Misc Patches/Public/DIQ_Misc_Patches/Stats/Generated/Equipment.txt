@@ -1,0 +1,17 @@
+new equipment "Florrick Weapon Set"
+add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "MAG_FlamingFist_StaffOfFire"
+// add equipmentgroup
+// add equipment entry "ARM_StuddedLeather_Body_1"
+add equipmentgroup
+add equipment entry "WPN_Quarterstaff"
+add equipmentgroup
+add equipment entry "ARM_Robe_Body"
+
+// new equipment "EQP_Staff_Robe"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Quarterstaff"
+// add equipmentgroup
+// add equipment entry "ARM_Robe_Body"

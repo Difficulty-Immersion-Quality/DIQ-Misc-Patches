@@ -164,8 +164,7 @@
                     <attribute id="UUID" type="guid" value="6b8b28a3-52cf-41e5-817e-0d3226135a7d"/>
                 </node>
                 <node id="RulesetModifier">
-                    <!-- <attribute id="Default" type="LSString" value="false"/> -->
-                    <attribute id="Default" type="LSString" value="true"/>
+                    <attribute id="Default" type="LSString" value="false"/>
                     <!-- All reactions that can pause the game will do so by default. -->
                     <attribute id="Description" type="TranslatedString" handle="h300eac1fg158cg45e1ga6cdg394f9cdbebbf" version="1"/>
                     <!-- Always Prompt Reactions -->

@@ -15,7 +15,7 @@
 					<attribute id="Stats" type="FixedString" value="MAG_Viconia_Mace" />
 					<attribute id="Type" type="FixedString" value="item" />
 					<!-- Patched Aza's visuals into my Goon's Gear and Throwing Overhaul entry -->
-					<!-- <VisualTemplate>31aa730a-afbe-353c-2e65-dbc8e8379296</VisualTemplate> -->
+					<!-- <attribute id="VisualTemplate" type="FixedString" value="31aa730a-afbe-353c-2e65-dbc8e8379296" /> -->
 					<attribute id="VisualTemplate" type="FixedString" value="e7b4424d-2a87-a54c-2650-204180be1385" />
 					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209032" />
 					<children>

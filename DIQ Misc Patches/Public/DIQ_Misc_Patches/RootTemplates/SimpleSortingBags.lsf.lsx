@@ -106,7 +106,8 @@
 					<attribute id="Type" type="FixedString" value="item" />
 					<attribute id="VisualTemplate" type="FixedString" value="6e76802f-6469-87b5-0929-f2e2298a9ae5" />
 					<!-- <attribute id="ParentTemplateId" type="FixedString" value="3e6aac21-333b-4812-a554-376c2d157ba9" /> -->
-					<attribute id="ParentTemplateId" type="FixedString" value="3bc66ca0-4fd3-4c8a-8f88-f3b8d5f65d80" />
+					<attribute id="ParentTemplateId" type="FixedString" value="0b90bf9d-66fd-4741-be1f-39181efca97a" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="dc78876a-e296-7bd2-4b74-db8fcb4d9fd0" />
 					<!-- Vanity Wardrobe -->
 					<attribute id="DisplayName" type="TranslatedString" handle="hb3ce8d6dg6c11g46a1g83a8g560bdf7cd029" version="1" />
 					<!-- A well-worn wardrobe for the well-dressed and well-organized. -->
@@ -119,7 +120,42 @@
 					<!-- <attribute id="ContainerContentFilterCondition" type="LSString" value="Tagged('VANITY') and not Tagged('NOSORT')" /> -->
 					<attribute id="ContainerContentFilterCondition" type="LSString" value="Tagged('VANITY') and not Tagged('NOSORT') and not Tagged('AUTOWARES')" />
 					<children>
-						<node id="InventoryList" />
+						<node id="Bounds">
+							<children>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="2.40635" />
+									<attribute id="Max" type="fvec3" value="0.7027713 2.5065255 0.47544622" />
+									<attribute id="Min" type="fvec3" value="-0.714306 0 -0.5457766" />
+									<attribute id="Radius" type="float" value="0.77246773" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="1" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="2.40635" />
+									<attribute id="Max" type="fvec3" value="0.7027713 2.5065255 0.47544622" />
+									<attribute id="Min" type="fvec3" value="-0.714306 0 -0.5457766" />
+									<attribute id="Radius" type="float" value="0.77246773" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="2" />
+								</node>
+								<node id="Bound">
+									<attribute id="Height" type="float" value="2.40635" />
+									<attribute id="Max" type="fvec3" value="0.35138565 2.5065255 0.23772311" />
+									<attribute id="Min" type="fvec3" value="-0.357153 0 -0.2728883" />
+									<attribute id="Radius" type="float" value="0.38623387" />
+									<attribute id="Shape" type="uint8" value="1" />
+									<attribute id="Type" type="uint8" value="0" />
+								</node>
+							</children>
+						</node>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<!-- <attribute id="Object" type="FixedString" value="Clothes_Poor_Random_Supply" /> -->
+									<attribute id="Object" type="FixedString" value="" />
+								</node>
+							</children>
+						</node>
 					</children>
 				</node>
 				<node id="GameObjects">

@@ -1,0 +1,355 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="0" revision="9" build="309" lslib_meta="v1,bswap_guids" />
+	<region id="Templates">
+		<node id="Templates">
+			<children>
+			<!-- Fookin' wrong Shadow Blade m89 -->
+				<node id="GameObjects">
+					<attribute id="MapKey" type="FixedString" value="ee36bddb-8790-4820-9dcc-b12eafb81be8" />
+					<attribute id="Name" type="LSString" value="FFT_Rune_ShadowBlade" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="ParentTemplateId" type="FixedString" value="4ffd5c4b-4c56-4f05-a228-a33754bb1806" />
+					<attribute id="VisualTemplate" type="FixedString" value="2a50ed5c-e9e8-2b97-7723-c74b58a0f841" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="317686ab-7144-51ab-1242-e34dd52579cb" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h52f5cd24g7c11g4526gb218g144cb9cfad63" version="2" />
+					<attribute id="Icon" type="FixedString" value="FFT_Icon_Rune_Illusion" />
+					<attribute id="Stats" type="FixedString" value="FFT_Rune_ShadowBlade" />
+					<children>
+						<node id="OnUsePeaceActions">
+							<children>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="12" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="Conditions" type="LSString" value="" />
+											<!-- <attribute id="SkillID" type="FixedString" value="Shout_ShadowBlade" /> -->
+											<attribute id="SkillID" type="FixedString" value="Shout_ShadowBlade_Class" />
+											<attribute id="Consume" type="bool" value="True" />
+											<attribute id="ClassId" type="guid" value="a865965f-501b-46e9-9eaa-7748e8c04d09" />
+										</node>
+									</children>
+								</node>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="33" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="Conditions" type="LSString" value="" />
+											<!-- <attribute id="SpellId" type="FixedString" value="Shout_ShadowBlade" /> -->
+											<attribute id="SpellId" type="FixedString" value="Shout_ShadowBlade_Class" />
+											<attribute id="Consume" type="bool" value="True" />
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="MapKey" type="FixedString" value="74d943b5-aed1-4fdb-b604-43014b0f6c5b" />
+					<attribute id="Name" type="LSString" value="FFT_Rune_ShadowBlade_3" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="ParentTemplateId" type="FixedString" value="4ffd5c4b-4c56-4f05-a228-a33754bb1806" />
+					<attribute id="VisualTemplate" type="FixedString" value="2a50ed5c-e9e8-2b97-7723-c74b58a0f841" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="317686ab-7144-51ab-1242-e34dd52579cb" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h8c58447cgfcdfg4664ga89agf8b0c2b318b0" version="2" />
+					<attribute id="Icon" type="FixedString" value="FFT_Icon_Rune_Illusion" />
+					<attribute id="Stats" type="FixedString" value="FFT_Rune_ShadowBlade_3" />
+					<children>
+						<node id="OnUsePeaceActions">
+							<children>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="12" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="Conditions" type="LSString" value="" />
+											<!-- <attribute id="SkillID" type="FixedString" value="Shout_ShadowBlade_3" /> -->
+											<attribute id="SkillID" type="FixedString" value="Shout_ShadowBlade_Class_3" />
+											<attribute id="Consume" type="bool" value="True" />
+											<attribute id="ClassId" type="guid" value="a865965f-501b-46e9-9eaa-7748e8c04d09" />
+										</node>
+									</children>
+								</node>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="33" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="Conditions" type="LSString" value="" />
+											<!-- <attribute id="SpellId" type="FixedString" value="Shout_ShadowBlade_3" /> -->
+											<attribute id="SpellId" type="FixedString" value="Shout_ShadowBlade_Class_3" />
+											<attribute id="Consume" type="bool" value="True" />
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="MapKey" type="FixedString" value="4acde842-fb49-4f92-b92e-a8d204ba07c8" />
+					<attribute id="Name" type="LSString" value="FFT_Rune_ShadowBlade_4" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="ParentTemplateId" type="FixedString" value="4ffd5c4b-4c56-4f05-a228-a33754bb1806" />
+					<attribute id="VisualTemplate" type="FixedString" value="2a50ed5c-e9e8-2b97-7723-c74b58a0f841" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="317686ab-7144-51ab-1242-e34dd52579cb" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hb5fa669eg736dg40cag8461g34a688a779bd" version="2" />
+					<attribute id="Icon" type="FixedString" value="FFT_Icon_Rune_Illusion" />
+					<attribute id="Stats" type="FixedString" value="FFT_Rune_ShadowBlade_4" />
+					<children>
+						<node id="OnUsePeaceActions">
+							<children>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="12" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="Conditions" type="LSString" value="" />
+											<!-- <attribute id="SkillID" type="FixedString" value="Shout_ShadowBlade_4" /> -->
+											<attribute id="SkillID" type="FixedString" value="Shout_ShadowBlade_Class_4" />
+											<attribute id="Consume" type="bool" value="True" />
+											<attribute id="ClassId" type="guid" value="a865965f-501b-46e9-9eaa-7748e8c04d09" />
+										</node>
+									</children>
+								</node>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="33" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="Conditions" type="LSString" value="" />
+											<!-- <attribute id="SpellId" type="FixedString" value="Shout_ShadowBlade_4" /> -->
+											<attribute id="SpellId" type="FixedString" value="Shout_ShadowBlade_Class_4" />
+											<attribute id="Consume" type="bool" value="True" />
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="MapKey" type="FixedString" value="44c54b49-39e7-40b5-9a36-0d766d556ff1" />
+					<attribute id="Name" type="LSString" value="FFT_Rune_ShadowBlade_5" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="ParentTemplateId" type="FixedString" value="4ffd5c4b-4c56-4f05-a228-a33754bb1806" />
+					<attribute id="VisualTemplate" type="FixedString" value="2a50ed5c-e9e8-2b97-7723-c74b58a0f841" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="317686ab-7144-51ab-1242-e34dd52579cb" />
+					<attribute id="DisplayName" type="TranslatedString" handle="heca8c289gafa0g4ff9g8dcbgf71602ab7581" version="2" />
+					<attribute id="Icon" type="FixedString" value="FFT_Icon_Rune_Illusion" />
+					<attribute id="Stats" type="FixedString" value="FFT_Rune_ShadowBlade_5" />
+					<children>
+						<node id="OnUsePeaceActions">
+							<children>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="12" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="Conditions" type="LSString" value="" />
+											<!-- <attribute id="SkillID" type="FixedString" value="Shout_ShadowBlade_5" /> -->
+											<attribute id="SkillID" type="FixedString" value="Shout_ShadowBlade_Class_5" />
+											<attribute id="Consume" type="bool" value="True" />
+											<attribute id="ClassId" type="guid" value="a865965f-501b-46e9-9eaa-7748e8c04d09" />
+										</node>
+									</children>
+								</node>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="33" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="Conditions" type="LSString" value="" />
+											<!-- <attribute id="SpellId" type="FixedString" value="Shout_ShadowBlade_5" /> -->
+											<attribute id="SpellId" type="FixedString" value="Shout_ShadowBlade_Class_5" />
+											<attribute id="Consume" type="bool" value="True" />
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="MapKey" type="FixedString" value="e45a4efc-b6bb-429e-bd6f-303234fcbc40" />
+					<attribute id="Name" type="LSString" value="FFT_Rune_ShadowBlade_6" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="ParentTemplateId" type="FixedString" value="4ffd5c4b-4c56-4f05-a228-a33754bb1806" />
+					<attribute id="VisualTemplate" type="FixedString" value="2a50ed5c-e9e8-2b97-7723-c74b58a0f841" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="317686ab-7144-51ab-1242-e34dd52579cb" />
+					<attribute id="DisplayName" type="TranslatedString" handle="h6ad9af32g712eg478eg95e0gdb6f89888122" version="2" />
+					<attribute id="Icon" type="FixedString" value="FFT_Icon_Rune_Illusion" />
+					<attribute id="Stats" type="FixedString" value="FFT_Rune_ShadowBlade_6" />
+					<children>
+						<node id="OnUsePeaceActions">
+							<children>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="12" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="Conditions" type="LSString" value="" />
+											<!-- <attribute id="SkillID" type="FixedString" value="Shout_ShadowBlade_6" /> -->
+											<attribute id="SkillID" type="FixedString" value="Shout_ShadowBlade_Class_6" />
+											<attribute id="Consume" type="bool" value="True" />
+											<attribute id="ClassId" type="guid" value="a865965f-501b-46e9-9eaa-7748e8c04d09" />
+										</node>
+									</children>
+								</node>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="33" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="Conditions" type="LSString" value="" />
+											<!-- <attribute id="SpellId" type="FixedString" value="Shout_ShadowBlade_6" /> -->
+											<attribute id="SpellId" type="FixedString" value="Shout_ShadowBlade_Class_6" />
+											<attribute id="Consume" type="bool" value="True" />
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="MapKey" type="FixedString" value="722280c5-eb72-44a7-ae3e-95779a675475" />
+					<attribute id="Name" type="LSString" value="FFT_Rune_ShadowBlade_7" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="ParentTemplateId" type="FixedString" value="4ffd5c4b-4c56-4f05-a228-a33754bb1806" />
+					<attribute id="VisualTemplate" type="FixedString" value="2a50ed5c-e9e8-2b97-7723-c74b58a0f841" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="317686ab-7144-51ab-1242-e34dd52579cb" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hbee1839eg97c8g4929g9d2bg46a789e790c0" version="2" />
+					<attribute id="Icon" type="FixedString" value="FFT_Icon_Rune_Illusion" />
+					<attribute id="Stats" type="FixedString" value="FFT_Rune_ShadowBlade_7" />
+					<children>
+						<node id="OnUsePeaceActions">
+							<children>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="12" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="Conditions" type="LSString" value="" />
+											<!-- <attribute id="SkillID" type="FixedString" value="Shout_ShadowBlade_7" /> -->
+											<attribute id="SkillID" type="FixedString" value="Shout_ShadowBlade_Class_7" />
+											<attribute id="Consume" type="bool" value="True" />
+											<attribute id="ClassId" type="guid" value="a865965f-501b-46e9-9eaa-7748e8c04d09" />
+										</node>
+									</children>
+								</node>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="33" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="Conditions" type="LSString" value="" />
+											<!-- <attribute id="SpellId" type="FixedString" value="Shout_ShadowBlade_7" /> -->
+											<attribute id="SpellId" type="FixedString" value="Shout_ShadowBlade_Class_7" />
+											<attribute id="Consume" type="bool" value="True" />
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="MapKey" type="FixedString" value="286cde92-a7e9-49df-af86-19050ec99c75" />
+					<attribute id="Name" type="LSString" value="FFT_Rune_ShadowBlade_8" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="ParentTemplateId" type="FixedString" value="4ffd5c4b-4c56-4f05-a228-a33754bb1806" />
+					<attribute id="VisualTemplate" type="FixedString" value="2a50ed5c-e9e8-2b97-7723-c74b58a0f841" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="317686ab-7144-51ab-1242-e34dd52579cb" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hf79e8604ge19fg44efg9617g169853fe6327" version="2" />
+					<attribute id="Icon" type="FixedString" value="FFT_Icon_Rune_Illusion" />
+					<attribute id="Stats" type="FixedString" value="FFT_Rune_ShadowBlade_8" />
+					<children>
+						<node id="OnUsePeaceActions">
+							<children>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="12" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="Conditions" type="LSString" value="" />
+											<!-- <attribute id="SkillID" type="FixedString" value="Shout_ShadowBlade_8" /> -->
+											<attribute id="SkillID" type="FixedString" value="Shout_ShadowBlade_Class_8" />
+											<attribute id="Consume" type="bool" value="True" />
+											<attribute id="ClassId" type="guid" value="a865965f-501b-46e9-9eaa-7748e8c04d09" />
+										</node>
+									</children>
+								</node>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="33" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="Conditions" type="LSString" value="" />
+											<!-- <attribute id="SpellId" type="FixedString" value="Shout_ShadowBlade_8" /> -->
+											<attribute id="SpellId" type="FixedString" value="Shout_ShadowBlade_Class_8" />
+											<attribute id="Consume" type="bool" value="True" />
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+				<node id="GameObjects">
+					<attribute id="MapKey" type="FixedString" value="9f974600-53e7-496d-b24b-f2fc97e3026c" />
+					<attribute id="Name" type="LSString" value="FFT_Rune_ShadowBlade_9" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="ParentTemplateId" type="FixedString" value="4ffd5c4b-4c56-4f05-a228-a33754bb1806" />
+					<attribute id="VisualTemplate" type="FixedString" value="2a50ed5c-e9e8-2b97-7723-c74b58a0f841" />
+					<attribute id="PhysicsTemplate" type="FixedString" value="317686ab-7144-51ab-1242-e34dd52579cb" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hdbf4e07cg86feg4eb7g818cg2c83f346e4c1" version="2" />
+					<attribute id="Icon" type="FixedString" value="FFT_Icon_Rune_Illusion" />
+					<attribute id="Stats" type="FixedString" value="FFT_Rune_ShadowBlade_9" />
+					<children>
+						<node id="OnUsePeaceActions">
+							<children>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="12" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="Conditions" type="LSString" value="" />
+											<!-- <attribute id="SkillID" type="FixedString" value="Shout_ShadowBlade_9" /> -->
+											<attribute id="SkillID" type="FixedString" value="Shout_ShadowBlade_Class_9" />
+											<attribute id="Consume" type="bool" value="True" />
+											<attribute id="ClassId" type="guid" value="a865965f-501b-46e9-9eaa-7748e8c04d09" />
+										</node>
+									</children>
+								</node>
+								<node id="Action">
+									<attribute id="ActionType" type="int32" value="33" />
+									<children>
+										<node id="Attributes">
+											<attribute id="Animation" type="FixedString" value="" />
+											<attribute id="Conditions" type="LSString" value="" />
+											<!-- <attribute id="SpellId" type="FixedString" value="Shout_ShadowBlade_9" /> -->
+											<attribute id="SpellId" type="FixedString" value="Shout_ShadowBlade_Class_9" />
+											<attribute id="Consume" type="bool" value="True" />
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+					</children>
+				</node>
+			</children>
+		</node>
+	</region>
+</save>

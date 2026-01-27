@@ -5,12 +5,11 @@
         <node id="root">
             <children>
                 <node id="RulesetModifier">
-                    <!-- <attribute id="Default" type="LSString" value="false"/> -->
-                    <attribute id="Default" type="LSString" value="true"/>
+                    <!-- <attribute id="Default" type="LSString" value="false"/>
                     <attribute id="LoadModule" type="LSString" value="HonourX"/>
                     <attribute id="Name" type="LSString" value="HONOUR_STATS"/>
                     <attribute id="RulesetModifierType" type="uint8" value="4"/>
-                    <attribute id="UUID" type="guid" value="ef0506df-da9f-40e2-903a-1349523c1ae4"/>
+                    <attribute id="UUID" type="guid" value="ef0506df-da9f-40e2-903a-1349523c1ae4"/> -->
                 </node>
             </children>
         </node>

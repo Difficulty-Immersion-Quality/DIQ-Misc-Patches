@@ -292,13 +292,12 @@
                     <attribute id="RulesetModifierType" type="uint8" value="3"/>
                     <attribute id="UUID" type="guid" value="fccef0aa-8e28-4b7b-b661-c33094c5f3f7"/>
                 </node>
-                <node id="RulesetModifier">
-                    <!-- <attribute id="Default" type="LSString" value="false"/> -->
-                    <attribute id="Default" type="LSString" value="true"/>
+                <!-- <node id="RulesetModifier">
+                    <attribute id="Default" type="LSString" value="false"/>
                     <attribute id="LoadModule" type="LSString" value="Honour"/>
                     <attribute id="Name" type="LSString" value="HONOUR_STATS"/>
                     <attribute id="RulesetModifierType" type="uint8" value="4"/>
-                    <attribute id="UUID" type="guid" value="ef0506df-da9f-40e2-903a-1349523c1ae4"/>
+                    <attribute id="UUID" type="guid" value="ef0506df-da9f-40e2-903a-1349523c1ae4"/> -->
                 </node>
             </children>
         </node>

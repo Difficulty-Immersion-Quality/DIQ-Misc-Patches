@@ -43,10 +43,6 @@
 	<!-- "" --> <content contentuid="h61f58e4dg5857g4303g8a98g8ef045af5464" version="7">The entity can't take &lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;Reactions&lt;/LSTag&gt; and can only take either an &lt;LSTag Type="ActionResource" Tooltip="ActionPoint"&gt;Action&lt;/LSTag&gt; or a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt; and loses all &lt;LSTag Tooltip="MovementSpeed"&gt;Movement&lt;/LSTag&gt; when they do so.</content>
 	<!-- "" --> <content contentuid="h35ddfb4bge571g48ebg8ad6gda948d6de5b6" version="1">Psychically lash out at [1] creature(s), possibly preventing them from taking &lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;Reactions&lt;/LSTag&gt; and limiting it to using &lt;LSTag Type="ActionResource" Tooltip="ActionPoint"&gt;Action&lt;/LSTag&gt; or a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt; which also expends all &lt;LSTag Tooltip="MovementSpeed"&gt;Movement&lt;/LSTag&gt;.</content>
 
-	<!-- Better Cambion Summon -->
-    <!-- "Goon_WPN_Halberd_Cambion_Passive" --> <content contentuid="h9e12dfe9g3b00g45dcgb231gb565edf9449b" version="1">Cambion's Cauteriser</content>
-	<!-- "Goon_WPN_Halberd_Cambion_Passive" --> <content contentuid="h0c94e075gf395g4a17gb4fbg75001c0d7a69" version="1">This halberd slashes with burning fury dealing an additional [1], but only for its Devil master.</content>
-
 	<!-- Armory of Lathender, Helm, etc. -->
 	<!-- "" --> <content contentuid="hb5a37cf6g6c9bg4631g84bdgece2ba915ef0" version="1">The righteous blade of Helm, precisely where it belongs; buried through the chest of the wicked and the monstrous.</content>
 	<!-- "" --> <content contentuid="h93ae4f8dgf6b5g471ag9e76gad58ed6d0a67" version="1">During the Time of Troubles, Helm was forced to slay the goddess Mystra as she tried to return home. Something in this sword's unrelenting line speaks to that grief - a duty completed, at any cost.</content>

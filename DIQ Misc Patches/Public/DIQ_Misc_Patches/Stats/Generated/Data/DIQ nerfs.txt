@@ -60,21 +60,6 @@ using "Shout_Dodge"
 data "RequirementConditions" "Combat()"
 data "Requirements" "Combat"
 
-// ==================================== Make the 4d8 Fire damage from Better Cambion Summon only work for Cambions ====================================
-
-new entry "WPN_Halberd_Cambion"
-type "Weapon"
-using "WPN_Halberd_Cambion"
-data "DefaultBoosts" "WeaponProperty(Magical)"
-data "PassivesOnEquip" "Goon_WPN_Halberd_Cambion_Passive"
-
-new entry "Goon_WPN_Halberd_Cambion_Passive"
-type "PassiveData"
-data "DisplayName" "h9e12dfe9g3b00g45dcgb231gb565edf9449b"
-data "Description" "h0c94e075gf395g4a17gb4fbg75001c0d7a69"
-data "DescriptionParams" "DealDamage(4d8, Fire)"
-data "Boosts" "IF(Character() and Tagged('CAMBION')):WeaponDamage(4d8, Fire)"
-
 // ==================================== Trying to make 5E Spells' Mind Whip not empty AI brains on to the floor when it has to pick between moving or attacking ====================================
 // Needs testing for QA
 // TODO: Integrate with my spell overhaul, redo entries.
@@ -119,19 +104,18 @@ using "MIND_WHIP_UNBLOCK"
 data "Boosts" "UnlockSpell(Shout_MindWhip_Unblock_Action);UnlockSpell(Shout_MindWhip_Unblock_BonusAction)"
 data "RemoveConditions" "SpellId('Shout_MindWhip_Unblock_Action') or SpellId('Shout_MindWhip_Unblock_BonusAction')"
 
-// ==================================== Power Hunger - Remove permanent HP buff from Ethel's Well, reverting them to vanilla but keeping the change to remove stacking with temp HP ====================================
+// ==================================== Power Hunger - Remove permanent HP buff from Ethel's Well, reverting them to vanilla ====================================
 
 new entry "HAG_WELL_GOOD"
 type "StatusData"
 data "StatusType" "BOOST"
-using "HAG_WELL_GOOD"
 // Refreshed
 data "DisplayName" "h0b605d85g2b41g4ed0g8da4gcc420026fa11;1"
-// <LSTag Tooltip="HitPoints">Hit point</LSTag> maximum increased by 10 until the next Long Rest.
+// &lt;LSTag Tooltip="HitPoints"&gt;Hit point&lt;/LSTag&gt; maximum increased by 10 until the next Long Rest.
 data "Description" "ha939a997g35c3g4327g9669gbb729b3124a4;1"
 data "Icon" "statIcons_Refreshed"
 data "FormatColor" "Gold"
-data "StackId" "HAG_WELL_GOOD"
+data "StackId" "TEMPORARY_HP"
 data "StackPriority" "10"
 data "Boosts" "IncreaseMaxHP(10)"
 data "StatusPropertyFlags" "IgnoreResting"
@@ -139,7 +123,6 @@ data "StatusPropertyFlags" "IgnoreResting"
 new entry "HAG_WELL_BAD"
 type "StatusData"
 data "StatusType" "BOOST"
-using "HAG_WELL_BAD"
 // Nauseated
 data "DisplayName" "h6a1092d0gad02g465egb335g175c25f2c89d;1"
 // Vulnerable to Psychic and Acid damage until next Long Rest.
@@ -147,10 +130,6 @@ data "Description" "h09c67718g86e2g47abg9b69g8c7bfb650533;1"
 data "Icon" "statIcons_Nauseated"
 data "FormatColor" "PoisonGreen"
 data "Boosts" "Resistance(Psychic, Vulnerable);Resistance(Acid, Vulnerable)"
-data "StatusPropertyFlags" "ApplyToDead"
-data "Passives" ""
-data "StackId" "HAG_WELL_BAD"
-data "StackPriority" "20"
 
 // ==================================== Veenab's library - Swap "Gargantuan" for an integer value ====================================
 

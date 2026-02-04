@@ -41,16 +41,21 @@ data "Conditions" "AttackedWithPassiveSourceWeapon() and RollDieAgainstDC(DiceTy
 data "StatsFunctors" "IF(not HasStatus('MAG_CHARGED_LIGHTNING', context.Source)):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_LIGHTNING_DAMAGE_ONCE_TECHNICAL,100, 0);IF(Character()):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_GENERATE_CHARGE_FX, 100, 0);IF(Character() and not IsDischargingLightning(context.Source)):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING,100, 4);ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_DURATION_TECHNICAL, 100, 1);DealDamage(1d20,Lightning,Magical)"
 
 // ==================================== Allow Dodge, Get Ready and Hurry Up to be used while Immobilized but not while out of combat ====================================
+// Changes: Added once per turn cooldown.
+// TODO: Check against base entries.
+// TODO: Dodging while immobile is dumb.
 
 new entry "Shout_Hurry"
 type "SpellData"
 using "Shout_Hurry"
+data "Cooldown" "OncePerTurn"
 data "RequirementConditions" "Combat()"
 data "Requirements" "Combat"
 
 new entry "GR_Shout_Ready"
 type "SpellData"
 using "GR_Shout_Ready"
+data "Cooldown" "OncePerTurn"
 data "RequirementConditions" "Combat()"
 data "Requirements" "Combat"
 

@@ -57,7 +57,6 @@ using "RangerEquipmentAIO_Vinewoven_Shortbow"
 // data "Rarity" "Rare"
 // data "Damage Type" "Piercing"
 // data "DefaultBoosts" "WeaponEnchantment(1)"
-data "DefaultBoosts" "WeaponEnchantment(1);IF(IsRangedWeaponAttack()):WeaponDamage(max(1,DexterityModifier)/2)"
 // data "Boosts" ""
 // data "PassivesOnEquip" "BB_Vinewoven_Passive"
 data "PassivesOnEquip" "BB_Vinewoven_Passive;Goon_BB_Vinewoven_Damage_Passive"
@@ -77,7 +76,6 @@ using "Tut_RangerEquipmentAIO_Vinewoven_Shortbow"
 // data "Rarity" "Rare"
 // data "Damage Type" "Piercing"
 // data "DefaultBoosts" "WeaponEnchantment(1)"
-data "DefaultBoosts" "WeaponEnchantment(1);IF(IsRangedWeaponAttack()):WeaponDamage(max(1,DexterityModifier)/2)"
 // data "Boosts" ""
 // data "PassivesOnEquip" "BB_Vinewoven_Passive"
 data "PassivesOnEquip" "BB_Vinewoven_Passive;Goon_BB_Vinewoven_Damage_Passive"
@@ -111,6 +109,7 @@ type "PassiveData"
 data "DisplayName" "hf382fc66gb266g4a14g99efgdf6e830bf845;1"
 // This weapon deals additional damage equal to half your Dexterity &lt;LSTag Tooltip="AbilityModifier"&gt;Modifier&lt;/LSTag&gt;.
 data "Description" "h80b5489bga092g4de7ga178g40cfbe9b8ddc;1"
+data "Boosts" "IF(IsRangedWeaponAttack()):DamageBonus(max(1,DexterityModifier)/2)"
 
 // ==================================== Chaos and Control - Sorcerer Equipment ====================================
 
@@ -1181,6 +1180,25 @@ data "DescriptionParams" "50"
 // data "StatsFunctors" "IF(RollDieAgainstDC(DiceType.d100,60)):ApplyStatus(SELF,OO_RESTORE_OATH,100,0)"
 data "StatsFunctors" "IF(RollDieAgainstDC(DiceType.d100,51)):ApplyStatus(SELF,OO_RESTORE_OATH,100,0)"
 
+// ==================================== OO - Shield of Sacred Ire
+// Ire's Reflection: change to only proc interrupt when hit by an enemy
+
+new entry "OO_Interrupt_IreReflection"
+type "InterruptData"
+using "OO_Interrupt_IreReflection"
+// data "DisplayName" "h3732ac76g59ffg4bf0gb0e3gb69f06c6c073;1"
+// data "Description" "h3732ac76g59ffg4bf0gb0e3gb69f06c6c075;1"
+// data "Icon" "Spell_Evocation_SacredFlame"
+// data "InterruptContext" "OnCastHit"
+// data "InterruptContextScope" "Self"
+// data "Container" "YesNoDecision"
+// data "Conditions" "IsAbleToReact(context.Observer) and not DistanceToEntityGreaterThan(18, context.ObserverPosition, context.Target) and not Ally(context.Source,context.Observer) and HasLastAttackTriggered()"
+data "Conditions" "IsAbleToReact(context.Observer) and not DistanceToEntityGreaterThan(18, context.ObserverPosition, context.Target) and Enemy(context.Source,context.Observer) and HasLastAttackTriggered()"
+// data "Properties" "UseSpell(SWAP,OO_Target_IreReflection,true,true,true);"
+// data "Cost" "ReactionActionPoint:1"
+// data "Cooldown" "OncePerTurn"
+// data "InterruptDefaultValue" "Enabled"
+
 // ==================================== Pact and Power - Warlock Equipment  ====================================
 
 // ==================================== PP - Shortbow of the Binding Vow
@@ -1543,6 +1561,21 @@ data "ExtraDescription" "ha25d0fa5g0cedg42bcg9540geab3d36f2899;2"
 data "TooltipDamageList" "DealDamage(1d8, Necrotic)"
 
 // ==================================== Wands and Weave - Wizard Equipment ====================================
+
+// ==================================== WW - Robe of the Arcane Duelist
+// Arcane Momentum: improve tooltip
+new entry "WW_GainArcaneAcuityOnDamage_Passive"
+type "PassiveData"
+using "WW_GainArcaneAcuityOnDamage_Passive"
+// data "DisplayName" "h941a2a1agcc5ag4161gb947g4797cc56ab14;1"
+// You gain &lt;LSTag Type="Status" Tooltip="MAG_GISH_ARCANE_ACUITY"&gt;Arcane Acuity&lt;/LSTag&gt; for [1] turns when you deal damage with a spell or &lt;LSTag Tooltip="Cantrip"&gt;cantrip&lt;/LSTag&gt; that has a range of [2] or less.
+data "Description" "h8cf49e5dg153cg4c5fg818bgaa4f69a9489e;1"
+// data "DescriptionParams" ""
+data "DescriptionParams" "2;Distance(5)"
+// data "StatsFunctorContext" "OnDamage"
+// data "Conditions" "IsSpell() and Enemy() and HasSpellRangeEqualOrLessThan(5, context.Source) and TotalDamageDoneGreaterThan(0)"
+// data "StatsFunctors" "ApplyStatus(SELF, MAG_GISH_ARCANE_ACUITY, 100, 2);ApplyStatus(SELF, MAG_GISH_ARCANE_ACUITY_DURATION_TECHNICAL, 100, 1)"
+
 
 // ==================================== WW - Boots of the Shifting Elements
 // Shifting Elements: can only be triggered in combat as tooltip states and now only has 60% chance to receive the buff (previously 100% chance) + rebalance of some effects

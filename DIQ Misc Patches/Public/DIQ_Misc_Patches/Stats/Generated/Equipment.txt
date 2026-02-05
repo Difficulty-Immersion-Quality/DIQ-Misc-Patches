@@ -1,9 +1,10 @@
+// ==================================== Counsellor Florrick Redux - The Golden Flame ====================================
+// This is literally a unique weapon
+
 new equipment "Florrick Weapon Set"
 add initialweaponset "Melee"
 // add equipmentgroup
 // add equipment entry "MAG_FlamingFist_StaffOfFire"
-// add equipmentgroup
-// add equipment entry "ARM_StuddedLeather_Body_1"
 add equipmentgroup
 add equipment entry "WPN_Quarterstaff"
 add equipmentgroup
@@ -15,3 +16,79 @@ add equipment entry "ARM_Robe_Body"
 // add equipment entry "WPN_Quarterstaff"
 // add equipmentgroup
 // add equipment entry "ARM_Robe_Body"
+
+// ==================================== Kagha Redux - The Viper in the Grass ====================================
+// Fine I guess
+
+// new equipment "DEN_Kagha"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Scimitar"
+// add equipmentgroup
+// add equipment entry "WPN_Dagger"
+// add equipmentgroup
+// add equipment entry "ARM_Leather_Body"
+// add equipmentgroup
+// add equipment entry "MAG_Healer_HealSelfPoisonWeapon_Amulet"
+
+// new equipment "Kagha Revised Set"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Scimitar_1"
+// add equipmentgroup
+// add equipment entry "WPN_Dagger_1"
+// add equipmentgroup
+// add equipment entry "ARM_Leather_Body_Druid"
+// add equipmentgroup
+// add equipment entry "MAG_Healer_HealSelfPoisonWeapon_Amulet"
+
+// ==================================== Mayrina and Brothers Edits ====================================
+// Don't need another magical weapon here
+
+new equipment "Blacksmith Brother "
+add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "FOR_Village_Blacksmith_FineSword"
+add equipmentgroup
+add equipment entry "WPN_Longsword"
+
+// new equipment "Farmer brother"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Pitchfork"
+
+// ==================================== Zevlor Redone - The Exiled Hellrider Commander ====================================
+// Points to a patched item, making him wear clothing
+
+new equipment "DEN_TieflingLeader"
+add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Longsword"
+add equipmentgroup
+add equipment entry "WPN_Greatsword_Pact"
+add equipmentgroup
+add equipment entry "WPN_HeavyCrossbow"
+// add equipmentgroup
+// add equipment entry "ARM_ScaleMail_Body"
+add equipmentgroup
+add equipment entry "ARM_Plate_Body"
+
+new equipment "Zevlor Equipment Set"
+add initialweaponset "Melee"
+add equipmentgroup
+add equipment entry "WPN_Greatsword_Pact"
+// add equipmentgroup
+// add equipment entry "WPN_HeavyCrossbow_1"
+add equipmentgroup
+add equipment entry "WPN_HeavyCrossbow"
+// add equipmentgroup
+// add equipment entry "AARDI_ARM_Loyalty_Threads_Charming"
+add equipmentgroup
+add equipment entry "ARM_Plate_Body"
+
+// ==================================== XXXXXXXXXXXXXXXXXXX ====================================
+
+
+
+// ==================================== XXXXXXXXXXXXXXXXXXX ====================================
+

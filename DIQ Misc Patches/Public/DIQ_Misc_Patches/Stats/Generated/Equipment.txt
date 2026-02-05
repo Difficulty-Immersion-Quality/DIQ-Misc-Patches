@@ -1,14 +1,5 @@
 // ==================================== Counsellor Florrick Redux - The Golden Flame ====================================
-// This is literally a unique weapon
-
-new equipment "Florrick Weapon Set"
-add initialweaponset "Melee"
-// add equipmentgroup
-// add equipment entry "MAG_FlamingFist_StaffOfFire"
-add equipmentgroup
-add equipment entry "WPN_Quarterstaff"
-add equipmentgroup
-add equipment entry "ARM_Robe_Body"
+// This is a unique weapon
 
 // new equipment "EQP_Staff_Robe"
 // add initialweaponset "Melee"
@@ -16,6 +7,15 @@ add equipment entry "ARM_Robe_Body"
 // add equipment entry "WPN_Quarterstaff"
 // add equipmentgroup
 // add equipment entry "ARM_Robe_Body"
+
+new equipment "Florrick Weapon Set"
+add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "MAG_FlamingFist_StaffOfFire"
+add equipmentgroup
+add equipment entry "WPN_Quarterstaff_1"
+add equipmentgroup
+add equipment entry "ARM_Robe_Body"
 
 // ==================================== Kagha Redux - The Viper in the Grass ====================================
 // Fine I guess
@@ -44,6 +44,7 @@ add equipment entry "ARM_Robe_Body"
 
 // ==================================== Mayrina and Brothers Edits ====================================
 // Don't need another magical weapon here
+// TODO: Look at their original equipment if it's even a thing
 
 new equipment "Blacksmith Brother "
 add initialweaponset "Melee"
@@ -86,9 +87,133 @@ add equipment entry "WPN_HeavyCrossbow"
 add equipmentgroup
 add equipment entry "ARM_Plate_Body"
 
-// ==================================== XXXXXXXXXXXXXXXXXXX ====================================
+// ==================================== Korilla and Hope Edits - Animae Cruciatae ====================================
+// Fine I guess
 
+// new equipment "EQP_Staff_Robe"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Quarterstaff"
+// add equipmentgroup
+// add equipment entry "ARM_Robe_Body"
 
+// new equipment "Korilla Equipment"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Quarterstaff_1"
+// add equipmentgroup
+// add equipment entry "ORI_Wyll_Infernal_Robe"
 
-// ==================================== XXXXXXXXXXXXXXXXXXX ====================================
+// ==================================== Commander Voss Redone - Mha stil'na forjun inyeri ====================================
+// He should absolutely not have the proper Silver Sword in these entries
 
+new equipment "EQ_GLO_Voss"
+add initialweaponset "Melee"
+add equipmentgroup
+add equipment entry "MAG_GreaterSilver_Greatsword"
+add equipmentgroup
+add equipment entry "ARM_HalfPlate_Body_Githyanki"
+add equipmentgroup
+add equipment entry "WPN_HeavyCrossbow_Gith"
+
+new equipment "SCL_Voss"
+add initialweaponset "Melee"
+add equipmentgroup
+add equipment entry "MAG_Primeval_Silver_Longsword"
+add equipmentgroup
+add equipment entry "ARM_Leather_Body"
+
+// new equipment "SCL_Voss"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "MAG_GreaterSilver_Greatsword"
+// add equipmentgroup
+// add equipment entry "ARM_Leather_Body"
+
+new equipment "EQ_END_VossLostGreatsword"
+add initialweaponset "Melee"
+add equipmentgroup
+add equipment entry "MAG_Primeval_Silver_Longsword"
+add equipmentgroup
+add equipment entry "ARM_HalfPlate_Body_Githyanki"
+add equipmentgroup
+add equipment entry "WPN_HeavyCrossbow_Gith"
+
+// new equipment "EQ_END_VossLostGreatsword"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "MAG_GreaterSilver_Greatsword"
+// add equipmentgroup
+// add equipment entry "ARM_HalfPlate_Body_Githyanki"
+// add equipmentgroup
+// add equipment entry "WPN_HeavyCrossbow_Gith"
+
+// ==================================== Elminster Aumar Edits - The Old Greybeard ====================================
+// Sure
+
+// new equipment "EQP_Staff_Robe"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Quarterstaff"
+// add equipmentgroup
+// add equipment entry "ARM_Robe_Body"
+
+new equipment "Elminster Set"
+add initialweaponset "Melee"
+add equipmentgroup
+add equipment entry "WPN_Quarterstaff_Druid"
+add equipmentgroup
+add equipment entry "ARM_Robe_Body"
+
+// ==================================== Z'rell Edits - Ketheric's Hammer ====================================
+// The longsword is worse than her magical axe in vanilla. 
+// The AC hit from wearing a robe is fine, she's a warlock proper in DIQ anyway.
+
+new equipment "MOO_Executioner"
+add initialweaponset "Melee"
+add equipmentgroup
+add equipment entry "WPN_Handaxe_1"
+// add equipmentgroup
+// add equipment entry "ARM_StuddedLeather_Body"
+add equipmentgroup
+add equipment entry "MAG_Absolute_Protecter_Shield"
+add equipmentgroup
+add equipment entry "ARM_Robe_CultOfAbsolute"
+
+new equipment "Zrell Equipment"
+add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_DeathKnight_Longsword"
+add equipmentgroup
+add equipment entry "WPN_Handaxe_1"
+add equipmentgroup
+add equipment entry "MAG_Absolute_Protecter_Shield"
+add equipmentgroup
+add equipment entry "ARM_Robe_CultOfAbsolute"
+
+// ==================================== Anders Crew Redone - True Paladins of Tyr ====================================
+// No robes in the regular version
+// Too early to be throwing around too many magic items if it can be helped.
+
+// new equipment "EQP_Dagger_Robe"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Dagger"
+// add equipmentgroup
+// add equipment entry "ARM_Robe_Body"
+
+// new equipment "Cyrel Equipment"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Quarterstaff_1"
+// add equipmentgroup
+// add equipment entry "ORI_Wyll_Infernal_Robe"
+
+new equipment "Cyrel Equipment"
+add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Quarterstaff_1"
+add equipmentgroup
+add equipment entry "WPN_Dagger"
+add equipmentgroup
+add equipment entry "ARM_Robe_Body"

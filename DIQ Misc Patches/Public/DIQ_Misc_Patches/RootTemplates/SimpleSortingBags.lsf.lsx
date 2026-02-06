@@ -4,6 +4,8 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
+				<!-- TODO: Adjust bounds to better match scale -->
+				<!-- TODO: Inherit from templates matching visuals and apply CanBePickedUp -->
 			<!-- Goon's custom JWL Trinket container -->
 				<node id="GameObjects">
 					<attribute id="MapKey" type="FixedString" value="28915a26-75ad-4afb-87b4-1c9439c073bc" />
@@ -401,6 +403,8 @@
 					<!-- <attribute id="Tooltip" type="uint8" value="1" /> -->
 					<attribute id="Tooltip" type="uint8" value="2" />
 					<attribute id="ContainerAutoAddOnPickup" type="bool" value="True" />
+					<!-- <attribute id="CanBePickedUp" type="bool" value="" /> -->
+					<attribute id="CanBePickedUp" type="bool" value="True" />
 					<!-- <attribute id="ContainerContentFilterCondition" type="LSString" value="Tagged('DYE') and not Tagged('NOSORT')" /> -->
 					<attribute id="ContainerContentFilterCondition" type="LSString" value="Tagged('DYE') and not Tagged('NOSORT') and not Tagged('AUTOWARES')" />
 					<children>

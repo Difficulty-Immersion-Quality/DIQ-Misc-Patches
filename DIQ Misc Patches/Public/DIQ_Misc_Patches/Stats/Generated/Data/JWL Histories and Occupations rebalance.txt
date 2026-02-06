@@ -1,3 +1,5 @@
+// TODO: Need something to bring them in line with Luma's mod.
+// Planescape and Spelljammer also need it
 // ==================================== Passives ====================================
 
 // new entry "Background_Alchemist"

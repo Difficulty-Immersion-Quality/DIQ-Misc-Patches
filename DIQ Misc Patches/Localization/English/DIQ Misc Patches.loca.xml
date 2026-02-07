@@ -11,6 +11,12 @@
 	<!-- "" --> <content contentuid="ha81b4b97g243dg4619g8233ge722d4b06126" version="1">You summoned a temporary Basket Full of Equipment to your inventory. It and all its contents will disappear soon.</content>
 	<!-- "" --> <content contentuid="h76164e62g39b2g4eafg9f7egead0e51d1bb6" version="1">Toggles your veil's visuals on and off, if you have one selected from the mirror or character creation.</content>
 
+	<!-- Common actions -->
+	<!-- "Shout_Hurry" --> <content contentuid="h9cc04833g7de3g4706g8bc8ge5a4ab0611ef" version="1">Your actions are not as precise but faster. Gain an extra &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt; this turn.</content>
+	<!-- "BT_ExtraBonusAction_Status" --> <content contentuid="h31db4f3bg81d8g4420gab38g3c63d328a934" version="1">Spent an &lt;LSTag Tooltip="Action"&gt;Action&lt;/LSTag&gt; to gain a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt;.</content>
+	<!-- "GR_Shout_Ready" --> <content contentuid="h2473e55ag14adg4817g8a32g8b84da7b3562" version="1">Focus on your surroundings, improving your ability to react to the environment. Gain &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="Perception"&gt;Perception&lt;/LSTag&gt; Checks and an extra &lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;reaction&lt;/LSTag&gt;.</content>
+	<!-- "GR_ExtraReaction_Status" --> <content contentuid="hb8372c5dgdd33g47abgbda4g9bc4678abf0e" version="1">Has &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="Perception"&gt;Perception&lt;/LSTag&gt; Checks and an extra &lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;Reaction&lt;/LSTag&gt;.</content>
+
 	<!-- Simple Sorting Containers -->
 	<!-- SimpleSortingBagsTrinket --> <content contentuid="h81cbaba8g1040g426bgbc47g206590306b98" version="1">Trinket Trunk</content>
 	<!-- SimpleSortingBagsTrinket --> <content contentuid="hbb070b60gd8b9g45f5gb185g43680cb70db3" version="1">An ornate trunk housing a variety of peculiar items, from tools to religious artifacts.</content>

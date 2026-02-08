@@ -16,6 +16,7 @@
 	<!-- "BT_ExtraBonusAction_Status" --> <content contentuid="h31db4f3bg81d8g4420gab38g3c63d328a934" version="1">Spent an &lt;LSTag Tooltip="Action"&gt;Action&lt;/LSTag&gt; to gain a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt;.</content>
 	<!-- "GR_Shout_Ready" --> <content contentuid="h2473e55ag14adg4817g8a32g8b84da7b3562" version="1">Focus on your surroundings, improving your ability to react to the environment. Gain &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="Perception"&gt;Perception&lt;/LSTag&gt; Checks and an extra &lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;reaction&lt;/LSTag&gt;.</content>
 	<!-- "GR_ExtraReaction_Status" --> <content contentuid="hb8372c5dgdd33g47abgbda4g9bc4678abf0e" version="1">Has &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="Perception"&gt;Perception&lt;/LSTag&gt; Checks and an extra &lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;Reaction&lt;/LSTag&gt;.</content>
+	<!-- "Shout_Surrender" --> <content contentuid="h83726923ge576g44aegacfagd7dcf0507686" version="1">Request Surrender</content>
 
 	<!-- Simple Sorting Containers -->
 	<!-- SimpleSortingBagsTrinket --> <content contentuid="h81cbaba8g1040g426bgbc47g206590306b98" version="1">Trinket Trunk</content>

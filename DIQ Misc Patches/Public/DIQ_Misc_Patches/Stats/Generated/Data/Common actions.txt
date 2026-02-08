@@ -173,6 +173,7 @@ data "RemoveConditions" "HasStatus('SG_Incapacitated') or Immobilized()"
 // data "StatusEffect" "d37fab67-6932-44c4-995e-f051d7027fc5"
 
 // ==================================== I Surrender ====================================
+// Bug Fix: Capitalisation of the spell name.
 // Bug Fix: Removed what look like improper fields.
 // Changes: Added a once per turn cooldown.
 // Changes: Added an action point cost.
@@ -186,6 +187,8 @@ using "Shout_Surrender"
 // data "Icon" "icon_iSurrender"
 // Request surrender
 // data "DisplayName" "hREQUEST_SURRENDER_SPELL_DisplayName;1"
+// Request Surrender
+data "DisplayName" "h83726923ge576g44aegacfagd7dcf0507686;1"
 // Try to surrender current combat and face justice.
 // data "Description" "hREQUEST_SURRENDER_SPELL_Description;1"
 data "Cooldown" "OncePerTurn"

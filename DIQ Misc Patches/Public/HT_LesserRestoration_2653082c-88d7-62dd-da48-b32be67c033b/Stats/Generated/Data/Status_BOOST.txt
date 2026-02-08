@@ -1,0 +1,10 @@
+
+// new entry "WYR_CIRCUS_LOVEDRYAD_BLESSING_EFFECT"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// data "DisplayName" "h58480594g858ag4820g9be2g86854171b990;1"
+// data "Description" "h847edebcg503bg404ag88e6gd5142a3f8e16;1"
+// data "Icon" "Spell_Transmutation_Barkskin"
+// data "Boosts" "AC(1);RollBonus(SavingThrow,1);Resistance(All, Resistant);RedirectDamage(1)"
+// data "StackId" "WYR_CIRCUS_LOVEDRYAD_BLESSING_EFFECT"
+// data "StatusEffect" "eab76c6a-a5a7-445b-8430-bfce0e7bb5ea"

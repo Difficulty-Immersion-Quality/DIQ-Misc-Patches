@@ -1,4 +1,4 @@
-// ==================================== Garbage design inheriting from vanilla entries ====================================
+// ==================================== Bad inheritence ====================================
 
 new entry "Target_EruptingBlades"
 type "SpellData"

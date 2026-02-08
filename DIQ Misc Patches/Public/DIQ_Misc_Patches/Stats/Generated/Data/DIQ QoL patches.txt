@@ -66,7 +66,6 @@ using "FallenStar_Wifi_Healing_Potion_Supreme"
 data "DefaultBoosts" "CriticalHit(AttackTarget,Failure,Never);CriticalHit(AttackTarget,Success,Never);Tag(NOSORT)"
 
 // ==================================== Necromancy of Thay - Remove "Attribute(InventoryBound)" - Also removed "data "DefaultBoosts" "Tag(NOSORT)"" for inclusion with Simple Sorting Containers ====================================
-// TODO: Change description?
 
 new entry "FOR_DANGEROUSBOOK_BOUNDTO"
 type "StatusData"
@@ -77,11 +76,12 @@ using "FOR_DANGEROUSBOOK_BOUNDTO"
 // A powerful eldritch bond connects this relic and its owner.
 // data "Description" "h4edd2d1agdab4g41aaga114g2c9035001938;1"
 // data "Icon" "statIcons_Bound"
+data "StatusPropertyFlags" "DisableOverhead;DisablePortraitIndicator;DisableCombatlog"
 // data "StackId" "FOR_DANGEROUSBOOK_BOUNDTO"
 // data "Boosts" "Attribute(InventoryBound)"
 data "Boosts" ""
 // "DefaultBoosts" "Tag(NOSORT)" (Simple Sorting Bags)
-data "DefaultBoosts" ""
+data "DefaultBoosts" "Tag(PERSONAL)"
 
 // ==================================== Heavy Armour Impedes Movement RAW (HeavyArmorMoveSpeed_SE) - Add tooltip visibility for player clarity ====================================
 

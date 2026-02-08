@@ -164,8 +164,7 @@
                     <attribute id="UUID" type="guid" value="6b8b28a3-52cf-41e5-817e-0d3226135a7d"/>
                 </node>
                 <node id="RulesetModifier">
-                    <!-- <attribute id="Default" type="LSString" value="false"/> -->
-                    <attribute id="Default" type="LSString" value="true"/>
+                    <attribute id="Default" type="LSString" value="false"/>
                     <!-- All reactions that can pause the game will do so by default. -->
                     <attribute id="Description" type="TranslatedString" handle="h300eac1fg158cg45e1ga6cdg394f9cdbebbf" version="1"/>
                     <!-- Always Prompt Reactions -->
@@ -293,14 +292,13 @@
                     <attribute id="RulesetModifierType" type="uint8" value="3"/>
                     <attribute id="UUID" type="guid" value="fccef0aa-8e28-4b7b-b661-c33094c5f3f7"/>
                 </node>
-                <node id="RulesetModifier">
-                    <!-- <attribute id="Default" type="LSString" value="false"/> -->
-                    <attribute id="Default" type="LSString" value="true"/>
+                <!-- <node id="RulesetModifier">
+                    <attribute id="Default" type="LSString" value="false"/>
                     <attribute id="LoadModule" type="LSString" value="Honour"/>
                     <attribute id="Name" type="LSString" value="HONOUR_STATS"/>
                     <attribute id="RulesetModifierType" type="uint8" value="4"/>
                     <attribute id="UUID" type="guid" value="ef0506df-da9f-40e2-903a-1349523c1ae4"/>
-                </node>
+                </node> -->
             </children>
         </node>
     </region>

@@ -54,8 +54,9 @@ function MetamagicExclusionSpells()
 end
 
 -- ==================================== Recast spells ====================================
-
 -- Bug Fix: Added more recast spells to the list
+-- Note: Entirely irrelevant with Expansion's RAW Bladesinger. This function is only called by "Bladesong_Damage".
+
 function IsRecastSpell()
     return SpellId('Target_Moonbeam_Move')
     | SpellId('Target_Moonbeam_Move_3')

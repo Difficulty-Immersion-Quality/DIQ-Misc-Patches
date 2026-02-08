@@ -1,8 +1,0 @@
-// new entry "Viconia_Mace_Passive"
-// type "PassiveData"
-// data "DisplayName" "hed6d022egc67bg0802g412bg4fc930df7582;2"
-// data "Description" "hd7ac8aafgdf08g247dga20cgf3a783953c24;2"
-// data "StatsFunctorContext" "OnDamage"
-// data "Conditions" "AttackedWithPassiveSourceWeapon() and not HasStatus('POISON_DROW_CONDITION', context.Target)"
-// data "StatsFunctors" "ApplyStatus(POISON_DROW_TECHNICAL_APPLIER,100,0)"
-

@@ -33,17 +33,6 @@
 
 // ==================================== Other vanilla
 
-new entry "MAG_Infernal_Metal_Helmet_InfernalSight_Passive"
-type "PassiveData"
-using "MAG_Infernal_Metal_Helmet_InfernalSight_Passive"
-// Infernal Sight
-// data "DisplayName" "h315f3f72g06b8g4792gb65cg8b15643d419f;2"
-// You can see in magical and ordinary darkness up to a range of [1]. You cannot be <LSTag Type="Status" Tooltip="BLINDED">Blinded</LSTag>. 
-// data "Description" "h22b921efgc235g48f3g9c2eg6de0fb35bdf9;2"
-// data "DescriptionParams" "Distance(12)"
-data "Properties" "Highlighted"
-// data "Boosts" "DarkvisionRangeMin(12);ActiveCharacterLight(e278f6a0-26d7-49be-b11a-9b84bc313c3c);StatusImmunity(SG_Blinded)"
-
 // new entry "DevilsSight"
 // type "PassiveData"
 // Devil's Sight

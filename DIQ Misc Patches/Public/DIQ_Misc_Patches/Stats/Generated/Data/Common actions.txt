@@ -171,3 +171,64 @@ using "DODGE"
 data "RemoveConditions" "HasStatus('SG_Incapacitated') or Immobilized()"
 // data "RemoveEvents" "OnStatusApplied"
 // data "StatusEffect" "d37fab67-6932-44c4-995e-f051d7027fc5"
+
+// ==================================== I Surrender ====================================
+// Bug Fix: Removed what look like improper fields.
+// Changes: Added a once per turn cooldown.
+// Changes: Added an action point cost.
+
+new entry "Shout_Surrender"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Surrender"
+// data "SpellProperties" "ApplyStatus(DISENGAGE,100,1)"
+// data "TargetConditions" "Self()"
+// data "Icon" "icon_iSurrender"
+// Request surrender
+// data "DisplayName" "hREQUEST_SURRENDER_SPELL_DisplayName;1"
+// Try to surrender current combat and face justice.
+// data "Description" "hREQUEST_SURRENDER_SPELL_Description;1"
+data "Cooldown" "OncePerTurn"
+// data "PrepareSound" "Generic_GeneralAction_Start"
+// data "PrepareLoopSound" "Generic_GeneralAction_Loop"
+// data "CastSound" "Action_Cast_Disengage"
+// data "TargetSound" "Action_Impact_Disengage"
+// data "PreviewCursor" "Cast"
+// data "CastTextEvent" "Cast"
+// data "UseCosts" ""
+data "UseCosts" "ActionPoint:1"
+// data "SpellAnimation" "5e57443f-284e-47b2-915e-5b6417db269c,,;925779e7-8bf6-4d56-8c4d-42c3bc01c60c,,;50398f4e-dd82-4d6a-ad43-aedd578543d9,,;1c343e00-7e6c-4f53-b588-074a3cdb9c7d,,;5bcdefbb-2194-46c2-ac77-0b2d8472a5f7,,;,,;0b07883a-08b8-43b6-ac18-84dc9e84ff50,,;,,;,,"
+// data "VerbalIntent" "Utility"
+// data "SpellFlags" "IgnoreSilence;Stealth;Invisible;NoCameraMove"
+// data "SpellActionType" "Dash"
+data "SpellActionType" ""
+// data "SpellCategory" "SC_Dash"
+data "SpellCategory" ""
+// data "Requirements" "Combat"
+// data "PrepareEffect" "ae569a16-41db-43ee-94cf-770e101841cd"
+// data "CastEffect" "806a170b-c567-4481-bb56-56871d8aaf5f"
+// data "CinematicArenaFlags" "Ignore"
+// data "SpellSoundMagnitude" "Small"
+// data "Sheathing" "DontChange"
+
+// Permanent status for those who accepted bribes
+// new entry "ACCEPTED_BRIBE"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// Bribe Accepted
+// data "DisplayName" "hACCEPTED_BRIBE_DisplayName;1"
+// This person has previously accepted a bribe from you.
+// data "Description" "hACCEPTED_BRIBE_Description;1"
+// data "Icon" "statIcons_Hindered"
+// data "StackId" "ACCEPTED_BRIBE"
+// data "StatusPropertyFlags" "DisableCombatlog"
+
+// new entry "PURSUIT_PROTOCOL_BLOCKED"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// data "DisplayName" ""
+// data "Description" ""
+// data "Icon" "statIcons_PursuitProtocol"
+// data "Boosts" "StatusImmunity(LOW_STEELWATCH_ENEMYOFABSOLUTE)"
+// data "StackId" "PURSUIT_PROTOCOL_BLOCKED"
+// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"

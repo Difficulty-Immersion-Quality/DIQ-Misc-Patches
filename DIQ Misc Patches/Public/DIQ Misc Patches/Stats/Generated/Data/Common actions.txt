@@ -40,8 +40,9 @@ data "Requirements" "Combat"
 
 new entry "BT_ExtraBonusAction_Status"
 type "StatusData"
+// data "StatusType" ""
+data "StatusType" "BOOST"
 // using "WHOLENESS_OF_BODY"
-using "BT_ExtraBonusAction_Status"
 // Hurry up
 // data "DisplayName" "31afa1f0-e678-4d19-a146-80687216d69c;4"
 data "DisplayName" "31afa1f0-e678-4d19-a146-80687216d69c;4"
@@ -99,8 +100,9 @@ data "Requirements" "Combat"
 
 new entry "GR_ExtraReaction_Status"
 type "StatusData"
+// data "StatusType" ""
+data "StatusType" "BOOST"
 // using "WHOLENESS_OF_BODY"
-using "GR_ExtraReaction_Status"
 // Ready
 data "DisplayName" "de1ad20cf7ea4544a7e5932be775fb8e;4"
 // Has &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on Perception Checks and an extra &lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;Reaction&lt;/LSTag&gt;

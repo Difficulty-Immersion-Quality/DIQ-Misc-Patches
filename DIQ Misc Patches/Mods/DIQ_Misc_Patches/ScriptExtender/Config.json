@@ -1,5 +1,0 @@
-{
-    "RequiredVersion": 2,
-    "ModTable": "DIQ_Misc_Patches",
-    "FeatureFlags": ["Lua"]
-}

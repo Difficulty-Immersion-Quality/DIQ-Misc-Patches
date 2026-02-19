@@ -1,0 +1,137 @@
+// ==================================== Celestial Fury ====================================
+// Changes: Removed the fly spell.
+// Changes: The Shocking Blow passive now applies 1d20 Lightning damage instead of 2d8+4, and instead of applying on critical hits rolls against a DC of 20 with a 5% chance.
+// TODO: Throwing support.
+
+new entry "WPN_HUM_Katana_CelestialFury"
+type "Weapon"
+// using "WPN_Katana"
+using "WPN_HUM_Katana_CelestialFury"
+// data "RootTemplate" "df8ccb4d-21e6-45bb-a318-e48b239676da"
+// data "ValueUUID" "d24c441f-7ebe-4229-8522-cf34c257ff20"
+// data "ValueScale" "9.3"
+// data "Rarity" "Legendary"
+// data "DefaultBoosts" "WeaponEnchantment(3);WeaponProperty(Magical)"
+// data "Boosts" "UnlockSpell(Zone_CelestialFury_LightningStrike);UnlockSpell(Target_CelestialFury_Blindness);UnlockSpell(Shout_ClesetialFury_Fly);"
+data "Boosts" "UnlockSpell(Zone_CelestialFury_LightningStrike);UnlockSpell(Target_CelestialFury_Blindness)"
+// data "BoostsOnEquipMainHand" "UnlockSpell(Target_OpeningAttack);UnlockSpell(Target_Slash_New);UnlockSpell(Rush_SpringAttack);"
+// data "PassivesOnEquip" "CelestialFury_Stun_Passive;CelestialFury_Shock_Passive;CelestialFury_Jolts_Passive;CelestialFury_Glowing;CelestialFury_LightningWet_Resitance;"
+// data "Unique" "1"
+// data "Weapon Properties" "Versatile;Melee;Dippable;Magical"
+// data "Proficiency Group" "Longswords;MartialWeapons"
+
+new entry "CelestialFury_Shock_Passive"
+type "PassiveData"
+using "CelestialFury_Shock_Passive"
+// Shocking Blow
+// data "DisplayName" "haae9d0b2gd1f9g76dage666g9241926f1e50;1"
+// When the wielder lands a &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hit&lt;/LSTag&gt; with this weapon, it crackles with lightning shocking the target for an additional [1].
+// data "Description" "h1899baccg389eg3516g561fg35b9936f029b;10"
+// Attacks with this weapon have a small chance of wreathing the blade in electricity, dealing [1].
+data "Description" "h4610246egd7fdg4e48gbd04ge999b518d89e;1"
+// data "DescriptionParams" "DealDamage(4d8+4, Lightning)"
+data "DescriptionParams" "DealDamage(1d20, Lightning)"
+// data "ExtraDescription" "h200ca1f5ge7c3gce00gbd5bg3bccec5ed871;4"
+// data "ExtraDescriptionParams" "4"
+// data "Properties" "DisplayBoostInTooltip"
+// data "StatsFunctorContext" "OnDamage"
+// data "Conditions" "AttackedWithPassiveSourceWeapon() and IsCritical()"
+data "Conditions" "AttackedWithPassiveSourceWeapon() and RollDieAgainstDC(DiceType.d20,20)"
+// data "StatsFunctors" "IF(not HasStatus('MAG_CHARGED_LIGHTNING', context.Source)):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_LIGHTNING_DAMAGE_ONCE_TECHNICAL,100, 0);IF(Character()):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_GENERATE_CHARGE_FX, 100, 0);IF(Character() and not IsDischargingLightning(context.Source)):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING,100, 4);ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_DURATION_TECHNICAL, 100, 1);DealDamage(2d8+4,Lightning,Magical)"
+data "StatsFunctors" "IF(not HasStatus('MAG_CHARGED_LIGHTNING', context.Source)):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_LIGHTNING_DAMAGE_ONCE_TECHNICAL,100, 0);IF(Character()):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_GENERATE_CHARGE_FX, 100, 0);IF(Character() and not IsDischargingLightning(context.Source)):ApplyStatus(SELF, MAG_CHARGED_LIGHTNING,100, 4);ApplyStatus(SELF, MAG_CHARGED_LIGHTNING_DURATION_TECHNICAL, 100, 1);DealDamage(1d20,Lightning,Magical)"
+
+// ==================================== Trying to make 5E Spells' Mind Whip not empty AI brains on to the floor when it has to pick between moving or attacking ====================================
+// Needs testing for QA
+// TODO: Integrate with my spell overhaul, redo entries.
+
+new entry "Target_TashasMindWhip"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_TashasMindWhip"
+data "Description" "h35ddfb4bge571g48ebg8ad6gda948d6de5b6"
+data "Level" "2"
+data "SpellSchool" "Enchantment"
+data "TargetRadius" "18"
+data "SpellRoll" "not SavingThrow(Ability.Intelligence, SourceSpellDC())"
+data "SpellSuccess" "DealDamage(3d6, Psychic, Magical);AI_IGNORE:IF(Player() or Ally()):ApplyStatus(MIND_WHIP,100,1);AI_IGNORE:IF(not Player() and Enemy()):ApplyStatus(MIND_WHIP_ENEMY,100,1);AI_ONLY:ApplyStatus(STUNNED,100,1)"
+
+new entry "MIND_WHIP"
+type "StatusData"
+using "MIND_WHIP"
+data "Description" "h61f58e4dg5857g4303g8a98g8ef045af5464"
+data "OnApplyFunctors" "ApplyStatus(MIND_WHIP_ACTION_BLOCK,100,1);ApplyStatus(MIND_WHIP_BONUS_ACTION_BLOCK,100,1);ApplyStatus(MIND_WHIP_UNBLOCK,100,1)"
+
+new entry "MIND_WHIP_ACTION_BLOCK"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MIND_WHIP_ACTION_BLOCK"
+data "Boosts" "ActionResourceBlock(ActionPoint);ActionResourceBlock(Movement)"
+data "OnApplyFunctors" "RestoreResource(ActionPoint,100%,0);RestoreResource(Movement,100%,0)"
+data "TickType" "EndTurn"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
+
+new entry "MIND_WHIP_BONUS_ACTION_BLOCK"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MIND_WHIP_BONUS_ACTION_BLOCK"
+data "Boosts" "ActionResourceBlock(BonusActionPoint);ActionResourceBlock(Movement)"
+data "TickType" "EndTurn"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
+
+new entry "MIND_WHIP_UNBLOCK"
+type "StatusData"
+using "MIND_WHIP_UNBLOCK"
+data "Boosts" "UnlockSpell(Shout_MindWhip_Unblock_Action);UnlockSpell(Shout_MindWhip_Unblock_BonusAction)"
+data "RemoveConditions" "SpellId('Shout_MindWhip_Unblock_Action') or SpellId('Shout_MindWhip_Unblock_BonusAction')"
+
+// ==================================== Power Hunger - Remove permanent HP buff from Ethel's Well, reverting them to vanilla ====================================
+
+new entry "HAG_WELL_GOOD"
+type "StatusData"
+data "StatusType" "BOOST"
+// Refreshed
+data "DisplayName" "h0b605d85g2b41g4ed0g8da4gcc420026fa11;1"
+// &lt;LSTag Tooltip="HitPoints"&gt;Hit point&lt;/LSTag&gt; maximum increased by 10 until the next Long Rest.
+data "Description" "ha939a997g35c3g4327g9669gbb729b3124a4;1"
+data "Icon" "statIcons_Refreshed"
+data "FormatColor" "Gold"
+data "StackId" "TEMPORARY_HP"
+data "StackPriority" "10"
+data "Boosts" "IncreaseMaxHP(10)"
+data "StatusPropertyFlags" "IgnoreResting"
+
+new entry "HAG_WELL_BAD"
+type "StatusData"
+data "StatusType" "BOOST"
+// Nauseated
+data "DisplayName" "h6a1092d0gad02g465egb335g175c25f2c89d;1"
+// Vulnerable to Psychic and Acid damage until next Long Rest.
+data "Description" "h09c67718g86e2g47abg9b69g8c7bfb650533;1"
+data "Icon" "statIcons_Nauseated"
+data "FormatColor" "PoisonGreen"
+data "Boosts" "Resistance(Psychic, Vulnerable);Resistance(Acid, Vulnerable)"
+
+// ==================================== Veenab's library - Swap "Gargantuan" for an integer value ====================================
+
+new entry "VBT_ENLARGE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "VBT_ENLARGE"
+// data "Boosts" "ObjectSize(Gargantuan);ScaleMultiplier(1.69);"
+data "Boosts" "ObjectSize(+1);ScaleMultiplier(1.69)"
+
+// ==================================== DIQ Armoury: Elven Weaponry - Paladin - Nerf the free Help action ====================================
+
+new entry "EW_BA_BlessedHand_Passive_I"
+using "EW_BA_BlessedHand_Passive_I"
+type "PassiveData"
+// data "Description" "h9673f37fgabecg4926gabc0gdd3118ce9ae8;1"
+data "Description" "h8dcb3690g0420g435bg88aeg0eb4ed7f34cc;1"
+// data "Boosts" "UnlockSpellVariant(SpellId('Target_Help'),ModifyUseCosts(Replace,ActionPoint,0,-1,ActionPoint))"
+data "Boosts" "UnlockSpellVariant(SpellId('Target_Help'),ModifyUseCosts(Replace,BonusActionPoint,1,0,ActionPoint))"
+
+new entry "EW_BA_BlessedHand_Passive_II"
+using "EW_BA_BlessedHand_Passive_II"
+type "PassiveData"
+// data "Description" "h465a8adfgcfb3g4fecgac27gaff9aaf74118;1"
+data "Description" "h027cfe16g350dg43c8gac97g46a6628b0384;1"

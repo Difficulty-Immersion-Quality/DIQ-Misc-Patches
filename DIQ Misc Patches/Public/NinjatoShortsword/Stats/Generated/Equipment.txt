@@ -1,8 +1,0 @@
-// This mod literally removes her fucking armour lmfao
-
-// new equipment "EQP_LOW_Orin"
-// add initialweaponset "Melee"
-// add equipmentgroup
-// add equipment entry "WPN_Ninjato_Yellow"
-// add equipmentgroup
-// add equipment entry "WPN_Katana_Yellow"

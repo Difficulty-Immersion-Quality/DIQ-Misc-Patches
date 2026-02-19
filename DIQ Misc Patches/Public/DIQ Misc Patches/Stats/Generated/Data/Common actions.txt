@@ -1,0 +1,241 @@
+// ==================================== Brunotavm - Hurry Up - Bonus action QOL ====================================
+// Bug Fix: Condition no longer provides any movement.
+// Bug Fix: Improved descriptions.
+// Changes: Added a once per turn cooldown.
+// Changes: Can now be used while Immobilized.
+
+new entry "Shout_Hurry"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Hurry"
+// data "SpellProperties" "AI_IGNORE:ApplyStatus(BT_ExtraBonusAction_Status, 100, 1);"
+// data "TooltipStatusApply" "ApplyStatus(BT_ExtraBonusAction_Status,100,1)"
+// Hurry up
+// data "DisplayName" "31afa1f0-e678-4d19-a146-80687216d69c;4"
+// Your actions are not as precise but faster. Gain an extra &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;bonus action&lt;/LSTag&gt; this turn
+// data "Description" "8add4461-ab31-4cee-a2a3-611e15c9fea7;4"
+// Your actions are not as precise but faster. Gain an extra &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt; this turn.
+data "Description" "h9cc04833g7de3g4706g8bc8ge5a4ab0611ef;1"
+// data "TargetConditions" "Self()"
+data "Cooldown" "OncePerTurn"
+// data "Icon" "PassiveFeature_Generic_Tactical"
+// data "PrepareSound" "Generic_GeneralAction_Start"
+// data "PrepareLoopSound" "Generic_GeneralAction_Loop"
+// data "CastSound" "Action_Cast_Disengage"
+// data "TargetSound" "Action_Impact_Disengage"
+// data "CastTextEvent" "Cast"
+// data "UseCosts" "ActionPoint:1"
+// data "SpellAnimation" "5e57443f-284e-47b2-915e-5b6417db269c,,;925779e7-8bf6-4d56-8c4d-42c3bc01c60c,,;50398f4e-dd82-4d6a-ad43-aedd578543d9,,;1c343e00-7e6c-4f53-b588-074a3cdb9c7d,,;5bcdefbb-2194-46c2-ac77-0b2d8472a5f7,,;,,;0b07883a-08b8-43b6-ac18-84dc9e84ff50,,;,,;,,"
+// data "VerbalIntent" "Utility"
+// data "SpellFlags" "NoCameraMove"
+// data "SpellActionType" ""
+// data "SpellAnimationIntentType" "Aggressive"
+// data "RequirementConditions" "not Immobilized()"
+data "RequirementConditions" "Combat()"
+data "Requirements" "Combat"
+// data "PrepareEffect" "f56fb8e0-815b-41e0-9071-3c2305c93660"
+// data "CastEffect" "08ecdc25-31ea-4f32-8787-19b97971a9f1"
+// data "CinematicArenaFlags" "Ignore"
+// data "Sheathing" "DontChange"
+
+new entry "BT_ExtraBonusAction_Status"
+type "StatusData"
+// data "StatusType" ""
+data "StatusType" "BOOST"
+// using "WHOLENESS_OF_BODY"
+// Hurry up
+// data "DisplayName" "31afa1f0-e678-4d19-a146-80687216d69c;4"
+data "DisplayName" "31afa1f0-e678-4d19-a146-80687216d69c;4"
+// Adds an extra &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;bonus action&lt;/LSTag&gt; for one turn
+// data "Description" "556c4014-e68e-436e-8be1-ee7987e7c8e4;4"
+// Spent an &lt;LSTag Tooltip="Action"&gt;Action&lt;/LSTag&gt; to gain a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt;.
+data "Description" "h31db4f3bg81d8g4420gab38g3c63d328a934;1"
+// data "Icon" "PassiveFeature_Generic_Tactical"
+data "Icon" "PassiveFeature_Generic_Tactical"
+// data "StackId" "BT_ExtraBonusAction_Status"
+data "StackId" "BT_ExtraBonusAction_Status"
+data "TickType" "StartTurn"
+// data "TickFunctors" ""
+// data "Boosts" "ActionResource(BonusActionPoint,1,0);ActionResource(Movement, 1.5, 0)"
+data "Boosts" "ActionResource(BonusActionPoint,1,0)"
+
+// ==================================== Get Ready ====================================
+// Bug Fix: Improved descriptions.
+// Changes: Can now be used while Immobilized.
+// Changes: Added a once per turn cooldown.
+
+new entry "GR_Shout_Ready"
+type "SpellData"
+data "SpellType" "Shout"
+using "GR_Shout_Ready"
+// data "SpellProperties" "AI_IGNORE:ApplyStatus(GR_ExtraReaction_Status, 100, 1);"
+// data "TooltipStatusApply" "ApplyStatus(GR_ExtraReaction_Status,100,1)"
+// Ready
+// data "DisplayName" "de1ad20cf7ea4544a7e5932be775fb8e;4"
+// Focus on your surroundings, improving your ability to react to the actions of others. Gain &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on Perception Checks and an extra &lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;reaction&lt;/LSTag&gt; for one turn
+// data "Description" "036a1553bbd2430ea889d494d12e4df3;4"
+// Focus on your surroundings, improving your ability to react to the environment. Gain &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="Perception"&gt;Perception&lt;/LSTag&gt; Checks and an extra &lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;reaction&lt;/LSTag&gt;.
+data "Description" "h2473e55ag14adg4817g8a32g8b84da7b3562;1"
+// data "TargetConditions" "Self()"
+data "Cooldown" "OncePerTurn"
+// data "Icon" "PassiveFeature_DangerSense"
+// data "PrepareSound" "Generic_GeneralAction_Start"
+// data "PrepareLoopSound" "Generic_GeneralAction_Loop"
+// data "CastSound" "Action_Cast_Disengage"
+// data "TargetSound" "Action_Impact_Disengage"
+// data "CastTextEvent" "Cast"
+// data "UseCosts" "ActionPoint:1"
+// data "SpellAnimation" "5e57443f-284e-47b2-915e-5b6417db269c,,;925779e7-8bf6-4d56-8c4d-42c3bc01c60c,,;50398f4e-dd82-4d6a-ad43-aedd578543d9,,;1c343e00-7e6c-4f53-b588-074a3cdb9c7d,,;5bcdefbb-2194-46c2-ac77-0b2d8472a5f7,,;,,;0b07883a-08b8-43b6-ac18-84dc9e84ff50,,;,,;,,"
+// data "VerbalIntent" "Utility"
+// data "SpellFlags" "NoCameraMove"
+// data "SpellActionType" ""
+// data "SpellAnimationIntentType" "Aggressive"
+// data "RequirementConditions" "not Immobilized()"
+data "RequirementConditions" "Combat()"
+data "Requirements" "Combat"
+// data "PrepareEffect" "f56fb8e0-815b-41e0-9071-3c2305c93660"
+// data "CastEffect" "08ecdc25-31ea-4f32-8787-19b97971a9f1"
+// data "CinematicArenaFlags" "Ignore"
+// data "Sheathing" "DontChange"
+
+new entry "GR_ExtraReaction_Status"
+type "StatusData"
+// data "StatusType" ""
+data "StatusType" "BOOST"
+// using "WHOLENESS_OF_BODY"
+// Ready
+data "DisplayName" "de1ad20cf7ea4544a7e5932be775fb8e;4"
+// Has &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on Perception Checks and an extra &lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;Reaction&lt;/LSTag&gt;
+// data "Description" "bc0fbc1f629a4e7e9a4b622b3c00277f;4"
+// Has &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="Perception"&gt;Perception&lt;/LSTag&gt; Checks and an extra &lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;Reaction&lt;/LSTag&gt;.
+data "Description" "hb8372c5dgdd33g47abgbda4g9bc4678abf0e;1"
+// data "Icon" "PassiveFeature_DangerSense"
+data "Icon" "PassiveFeature_DangerSense"
+// data "StackId" "GR_ExtraReaction"
+data "StackId" "GR_ExtraReaction"
+data "TickType" "StartTurn"
+// data "TickFunctors" ""
+// data "Boosts" "Advantage(Skill,Perception);ActionResource(ReactionActionPoint,1,0)"
+data "Boosts" "Advantage(Skill,Perception);ActionResource(ReactionActionPoint,1,0)"
+
+// ==================================== 5e Dodge Action ====================================
+// Bug Fix: The condition is removed if the entity becomes Immobilized.
+// Changes: Added a once per turn cooldown.
+// When you take the Dodge action, you focus entirely on avoiding attacks. Until the start of your next turn, any attack roll made against you has disadvantage if you can see the attacker, and you make Dexterity saving throws with advantage. You lose this benefit if you are incapacitated (as explained in the appendix) or if your speed drops to 0. Source: PHB, page 192. Available in the SRD 5.1 and the Basic Rules (2014).
+// TODO: Not quite RAW currently. At least want to be able to check the movement speed itself instead of just looking for SG_Restrained. Is that what checking for Immobilized be?
+// TODO: Expand this patch to other dodges from other mods. Expansion and Purple Dragon Knight or whatever else.
+
+new entry "Shout_Dodge"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Dodge"
+// data "AIFlags" "GrantsResources;UseAsSupportingActionOnly"
+// data "SpellProperties" "ApplyStatus(SELF,DODGE,100,1)"
+// data "TargetConditions" "Self()"
+// data "Icon" "Action_Dodge"
+// Dodge
+// data "DisplayName" "hb33d97d8g99afg097ag71e7ga0c19b38f663;1"
+// &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; against you have &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt;, and you have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on Dexterity &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;.
+// data "Description" "h71e6501ag1a8dga029g0639gb6cf990072c5;3"
+// data "TooltipStatusApply" "ApplyStatus(DODGE,100,1)"
+data "Cooldown" "OncePerTurn"
+// data "PrepareSound" "Generic_GeneralAction_Start"
+// data "PrepareLoopSound" "Generic_GeneralAction_Loop"
+// data "CastSound" "Action_Cast_Dash"
+// data "TargetSound" "Action_Impact_Dash"
+// data "PreviewCursor" "Cast"
+// data "CastTextEvent" "Cast"
+// data "UseCosts" "ActionPoint:1"
+// data "SpellAnimation" "5e57443f-284e-47b2-915e-5b6417db269c,,;925779e7-8bf6-4d56-8c4d-42c3bc01c60c,,;50398f4e-dd82-4d6a-ad43-aedd578543d9,,;1c343e00-7e6c-4f53-b588-074a3cdb9c7d,,;5bcdefbb-2194-46c2-ac77-0b2d8472a5f7,,;,,;5fdb66be-7506-411a-a7ea-c4783288aac8,,;,,;,,"
+// data "VerbalIntent" "Buff"
+// data "SpellFlags" "Stealth;Invisible"
+// data "SpellAnimationIntentType" "Action"
+data "RequirementConditions" "Combat() and not Immobilized()"
+data "Requirements" "Combat"
+// data "PrepareEffect" "ae569a16-41db-43ee-94cf-770e101841cd"
+// data "CastEffect" "806a170b-c567-4481-bb56-56871d8aaf5f"
+// data "CinematicArenaFlags" "Ignore"
+// data "SpellSoundMagnitude" "Small"
+// data "Sheathing" "DontChange"
+
+new entry "DODGE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "DODGE"
+// Dodge
+// data "DisplayName" "ha31a0b1bg2367gc523ga22cg08f4b6c8e1c2;1"
+// &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; against you have &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt;, and you have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on Dexterity &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;.
+// data "Description" "he979202dg4ce7g5692g6bfbga9d58139198c;2"
+// data "Icon" "Action_Dodge"
+// data "SoundLoop" "Spell_Status_Blur_MO"
+// data "SoundStop" "Spell_Status_Blur_MO_Stop"
+// data "StackId" "DODGE"
+// data "Boosts" "Disadvantage(AttackTarget);Advantage(SavingThrow, Dexterity)"
+// data "RemoveConditions" "HasStatus('SG_Incapacitated')"
+data "RemoveConditions" "HasStatus('SG_Incapacitated') or Immobilized()"
+// data "RemoveEvents" "OnStatusApplied"
+// data "StatusEffect" "d37fab67-6932-44c4-995e-f051d7027fc5"
+
+// ==================================== I Surrender ====================================
+// Bug Fix: Capitalisation of the spell name.
+// Bug Fix: Removed what look like improper fields.
+// Changes: Added a once per turn cooldown.
+// Changes: Added an action point cost.
+
+new entry "Shout_Surrender"
+type "SpellData"
+data "SpellType" "Shout"
+using "Shout_Surrender"
+// data "SpellProperties" "ApplyStatus(DISENGAGE,100,1)"
+// data "TargetConditions" "Self()"
+// data "Icon" "icon_iSurrender"
+// Request surrender
+// data "DisplayName" "hREQUEST_SURRENDER_SPELL_DisplayName;1"
+// Request Surrender
+data "DisplayName" "h83726923ge576g44aegacfagd7dcf0507686;1"
+// Try to surrender current combat and face justice.
+// data "Description" "hREQUEST_SURRENDER_SPELL_Description;1"
+data "Cooldown" "OncePerTurn"
+// data "PrepareSound" "Generic_GeneralAction_Start"
+// data "PrepareLoopSound" "Generic_GeneralAction_Loop"
+// data "CastSound" "Action_Cast_Disengage"
+// data "TargetSound" "Action_Impact_Disengage"
+// data "PreviewCursor" "Cast"
+// data "CastTextEvent" "Cast"
+// data "UseCosts" ""
+data "UseCosts" "ActionPoint:1"
+// data "SpellAnimation" "5e57443f-284e-47b2-915e-5b6417db269c,,;925779e7-8bf6-4d56-8c4d-42c3bc01c60c,,;50398f4e-dd82-4d6a-ad43-aedd578543d9,,;1c343e00-7e6c-4f53-b588-074a3cdb9c7d,,;5bcdefbb-2194-46c2-ac77-0b2d8472a5f7,,;,,;0b07883a-08b8-43b6-ac18-84dc9e84ff50,,;,,;,,"
+// data "VerbalIntent" "Utility"
+// data "SpellFlags" "IgnoreSilence;Stealth;Invisible;NoCameraMove"
+// data "SpellActionType" "Dash"
+data "SpellActionType" ""
+// data "SpellCategory" "SC_Dash"
+data "SpellCategory" ""
+// data "Requirements" "Combat"
+// data "PrepareEffect" "ae569a16-41db-43ee-94cf-770e101841cd"
+// data "CastEffect" "806a170b-c567-4481-bb56-56871d8aaf5f"
+// data "CinematicArenaFlags" "Ignore"
+// data "SpellSoundMagnitude" "Small"
+// data "Sheathing" "DontChange"
+
+// Permanent status for those who accepted bribes
+// new entry "ACCEPTED_BRIBE"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// Bribe Accepted
+// data "DisplayName" "hACCEPTED_BRIBE_DisplayName;1"
+// This person has previously accepted a bribe from you.
+// data "Description" "hACCEPTED_BRIBE_Description;1"
+// data "Icon" "statIcons_Hindered"
+// data "StackId" "ACCEPTED_BRIBE"
+// data "StatusPropertyFlags" "DisableCombatlog"
+
+// new entry "PURSUIT_PROTOCOL_BLOCKED"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// data "DisplayName" ""
+// data "Description" ""
+// data "Icon" "statIcons_PursuitProtocol"
+// data "Boosts" "StatusImmunity(LOW_STEELWATCH_ENEMYOFABSOLUTE)"
+// data "StackId" "PURSUIT_PROTOCOL_BLOCKED"
+// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"

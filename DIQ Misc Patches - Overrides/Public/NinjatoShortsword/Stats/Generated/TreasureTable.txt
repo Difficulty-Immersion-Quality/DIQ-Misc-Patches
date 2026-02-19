@@ -1,0 +1,64 @@
+// new treasuretable "DEN_Weaponsmith_Trade"
+// CanMerge 1
+// Roah Moonglow - Goblin Camp
+new treasuretable "GOB_Quartermaster"
+CanMerge 1
+new subtable "-1"
+object category "I_WPN_Ninjato_Green",1,0,0,0,0,0,0,0
+new subtable "-1"
+object category "I_WPN_Katana_Green",1,0,0,0,0,0,0,0
+
+// Roah Moonglow (second appearance) - Moonrise Towers
+new treasuretable "MOO_ZhentQuartermaster"
+CanMerge 1
+new subtable "-1"
+object category "I_WPN_Ninjato_Green",1,0,0,0,0,0,0,0
+new subtable "-1"
+object category "I_WPN_Katana_Green",1,0,0,0,0,0,0,0
+
+// new treasuretable "HAV_Weaponsmith_Trade"
+// CanMerge 1
+// new subtable "-1"
+// object category "I_WPN_Ninjato_Blue",1,0,0,0,0,0,0,0
+// new subtable "-1"
+// object category "I_WPN_Katana_Blue",1,0,0,0,0,0,0,0
+
+// new treasuretable "HAV_HarperQuarterMaster"
+// CanMerge 1
+// new subtable "-1"
+// object category "I_WPN_Ninjato_Green",1,0,0,0,0,0,0,0
+// new subtable "-1"
+// object category "I_WPN_Katana_Green",1,0,0,0,0,0,0,0
+// new subtable "-1"
+// object category "I_WPN_Ninjato_Blue",1,0,0,0,0,0,0,0
+// new subtable "-1"
+// object category "I_WPN_Katana_Blue",1,0,0,0,0,0,0,0
+
+new treasuretable "MOO_BugBearvendor_Trade"
+CanMerge 1
+// new subtable "-1"
+// object category "I_WPN_Ninjato_Green",1,0,0,0,0,0,0,0
+// new subtable "-1"
+// object category "I_WPN_Katana_Green",1,0,0,0,0,0,0,0
+new subtable "-1"
+object category "I_WPN_Ninjato_Blue",1,0,0,0,0,0,0,0
+new subtable "-1"
+object category "I_WPN_Katana_Blue",1,0,0,0,0,0,0,0
+
+new treasuretable "LOW_MurderTribunal_ViciousWeapon"
+CanMerge 1
+new subtable "-1"
+object category "I_WPN_Ninjato_Purple",1,0,0,0,0,0,0,0
+
+new treasuretable "WYR_SharranInformer_Extended"
+CanMerge 1
+new subtable "-1"
+object category "I_WPN_Katana_Purple",1,0,0,0,0,0,0,0
+
+// NEW - Honestly, don't really want them dropping from Orin
+new treasuretable "GLO_Orin"
+CanMerge 1
+new subtable "-1"
+object category "I_WPN_Ninjato_Yellow",1,0,0,0,0,0,0,0
+new subtable "-1"
+object category "I_WPN_Katana_Yellow",1,0,0,0,0,0,0,0

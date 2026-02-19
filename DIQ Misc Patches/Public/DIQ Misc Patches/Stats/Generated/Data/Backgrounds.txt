@@ -1,0 +1,18 @@
+// ==================================== Impactful Backgrounds ====================================
+// Changes: Revenge only triggers when Durge would actually be downed, not just pulled out of a polymorph.
+
+new entry "LHB_IB_HAUNTEDONE_REVENGE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "LHB_IB_HAUNTEDONE_REVENGE"
+// Haunted One - Revenge
+// data "DisplayName" "LHB_IB_HauntedOne_Name;1"
+// When you are reduced to 0 &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt;, you immediately regain [1] and are compelled to attack the creature that killed you for 3 turns or until it dies.
+// data "Description" "LHB_IB_HauntedOne_Description;1"
+// data "DescriptionParams" "RegainHitPoints(Level)"
+// data "Icon" "Action_Monster_Slayer_Slam"
+// data "StackId" "LHB_IB_HAUNTEDONE_REVENGE"
+data "BoostConditions" "not Goon_IsRestrictedPolymorphStatus()"
+// data "Boosts" "DownedStatus(LHB_IB_HAUNTEDONE_REVENGE_DOWNED,7)"
+// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+// data "Passives" "LHB_IB_HauntedOne_Revenge"

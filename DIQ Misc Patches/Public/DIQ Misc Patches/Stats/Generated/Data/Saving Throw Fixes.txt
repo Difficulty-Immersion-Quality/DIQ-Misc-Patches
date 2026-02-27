@@ -202,27 +202,6 @@ data "SpellRoll" "not SavingThrow(Ability.Wisdom, 15, AdvantageOnFrightened(), D
 // data "RechargeValues" "5-6"
 // data "MemoryCost" "1"
 
-// ==================================== Gifts of the Absolute: Branded Equipment ====================================
-
-new entry "GotA_Projectile_Fear_Rage"
-type "SpellData"
-data "SpellType" "Projectile"
-using "GotA_Projectile_Fear_Rage"
-// data "AreaRadius" "3"
-// data "ExplodeRadius" "3"
-// data "SpellRoll" "not SavingThrow(Ability.Wisdom, 14)"
-data "SpellRoll" "not SavingThrow(Ability.Wisdom, 14, AdvantageOnFrightened(), DisadvantageOnFrightened())"
-// data "SpellSuccess" "ApplyStatus(FRIGHTENED,100,3)"
-// data "TargetConditions" "Enemy()"
-// data "Trajectories" "b8d62a7e-0fba-44f7-b928-3310fc901aad"
-// data "DisplayName" "h8c7babe9g0069g4b58gaaf0g5e86f6253bb26;1"
-// data "Description" "h8c7babe9g0069g4b58gaaf0g5e86f6253bb28;1"
-// data "TooltipAttackSave" "Wisdom"
-// data "TooltipStatusApply" "ApplyStatus(FRIGHTENED,100,3)"
-// data "CastTextEvent" "Cast"
-// data "SpellAnimation" "3ff87abf-1ea1-4c32-aadf-c822d74c7dc0,,;,,;cd5e5d4a-38e1-4d4d-b346-3fbc1e4c3c90,,;141f48d9-9615-496a-8737-9240f0dba60d,,;d8925ce4-d6d9-400c-92f5-ad772ef7f178,,;,,;,,;,,;,,"
-// data "VerbalIntent" "Debuff"
-
 // ==================================== Oath of the Bleak Walkers ====================================
 
 new entry "Projectile_TheBlackPath"

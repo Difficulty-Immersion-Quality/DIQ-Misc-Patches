@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+  <version major="4" minor="0" revision="9" build="328" />
+  <region id="CharacterCreationAppearanceVisuals">
+    <node id="root">
+      <children>
+    <!-- The demon heads have issues with KAVT, commented them out for now. -->
+        <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h658295515bf24035bc6dad80e996cbbb7fd0" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="3facf6c9-1ee9-4a56-a3e6-bd9528d4b517" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="f3253bc5-a735-4b57-8e87-681016feaa15" />
+					
+                    <attribute id="VisualResource" type="guid" value="fd350b12-5f16-4370-8488-3e4a9fac3bac" /> Mira DPR 
+					
+					</node>
+        <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h5975c12d165b4541bd8ab1a476f89cf11fg0" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="3facf6c9-1ee9-4a56-a3e6-bd9528d4b517" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="159b4fd7-9b4d-4852-91dd-b587fbaa35e1" />
+					
+                    <attribute id="VisualResource" type="guid" value="7917349f-bf25-4621-b1b0-6ee159c5f4fc" /> Rumi DPR 
+					
+					</node>
+        <!-- <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h4c53133e4c694ef68c03333aac4b7f835719" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="3facf6c9-1ee9-4a56-a3e6-bd9528d4b517" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="c523d1ea-9270-40a1-8262-4831bd5feb57" />
+					
+                    <attribute id="VisualResource" type="guid" value="0b7a4cb9-2dc8-45ad-8e43-ae0e17f995eb" /> Rumi Demon DPR 
+					
+					</node> -->
+        <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="hd0ea86d474594fa4b178357e8797874ee5c5" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="3facf6c9-1ee9-4a56-a3e6-bd9528d4b517" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="e644a2b3-bcfb-4c2d-9787-82318b09069f" />
+					
+                    <attribute id="VisualResource" type="guid" value="3d60ea7a-b0f7-43bc-aeb9-f382ab9ec687" /> Zoey DPR
+					
+					</node>
+        <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h658295515bf24035bc6dad80e996cbbb7fd0" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="4f5d1434-5175-4fa9-b7dc-ab24fba37929" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="fb6a286b-9088-494f-9fe3-de555f4aca12" />
+					
+                    <attribute id="VisualResource" type="guid" value="20beeeb5-5f59-4159-97df-540ce1f005a7" /> Mira DRW 
+					
+					</node>
+        <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h5975c12d165b4541bd8ab1a476f89cf11fg0" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="4f5d1434-5175-4fa9-b7dc-ab24fba37929" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="b294abf3-5c3a-4a6d-a89f-507368c7b02b" />
+					
+                    <attribute id="VisualResource" type="guid" value="e394e673-2d63-4687-9e88-d09d0d668bd7" /> Rumi DRW 
+					
+					</node>
+        <!-- <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h4c53133e4c694ef68c03333aac4b7f835719" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="4f5d1434-5175-4fa9-b7dc-ab24fba37929" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="540265ba-e32b-44ac-9bb0-d242c6780070" />
+					
+                    <attribute id="VisualResource" type="guid" value="533b28a1-adf4-475e-af4a-26228e2076b5" /> Rumi Demon DRW 
+					
+					</node> -->
+        <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="hd0ea86d474594fa4b178357e8797874ee5c5" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="4f5d1434-5175-4fa9-b7dc-ab24fba37929" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="1ca94372-4d0e-46f7-b4ff-e034b2ec5df6" />
+					
+                    <attribute id="VisualResource" type="guid" value="ca868ae1-4c22-4daa-9d9a-6d0e2158713a" /> Zoey DRW
+					
+					</node>
+        <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h658295515bf24035bc6dad80e996cbbb7fd0" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="6c038dcb-7eb5-431d-84f8-cecfaf1c0c5a" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="12a06ad5-f71c-418f-8455-a2d68a4db472" />
+					
+                    <attribute id="VisualResource" type="guid" value="418b8cc0-cb37-4127-a322-b0e4ece2183a" /> Mira ELF 
+					
+					</node>
+        <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h5975c12d165b4541bd8ab1a476f89cf11fg0" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="6c038dcb-7eb5-431d-84f8-cecfaf1c0c5a" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="933c318b-9c05-404d-a957-67ab866f0bef" />
+					
+                    <attribute id="VisualResource" type="guid" value="2b58b183-14c8-4801-ab68-b156fd49b251" /> Rumi ELF 
+					
+					</node>
+        <!-- <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h4c53133e4c694ef68c03333aac4b7f835719" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="6c038dcb-7eb5-431d-84f8-cecfaf1c0c5a" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="4a5b818b-9543-4a8e-bd11-247baa4980dd" />
+					
+                    <attribute id="VisualResource" type="guid" value="67e34997-821e-4940-83a1-52f2dec26279" /> Rumi Demon ELF 
+					
+					</node> -->
+        <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="hd0ea86d474594fa4b178357e8797874ee5c5" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="6c038dcb-7eb5-431d-84f8-cecfaf1c0c5a" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="20352730-e1d9-43f8-bc55-fc57846c682c" />
+					
+                    <attribute id="VisualResource" type="guid" value="e08a1433-4632-4808-978b-1ecb610fd0a7" /> Zoey ELF
+					
+					</node>
+        <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h658295515bf24035bc6dad80e996cbbb7fd0" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="45f4ac10-3c89-4fb2-b37d-f973bb9110c0" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="5835e9f2-63cf-4ae7-a972-92f9e110054d" />
+					
+                    <attribute id="VisualResource" type="guid" value="4c8a732e-d8ec-4956-a78c-0abe7ebd45f4" /> Mira HEL  
+					
+					</node>
+        <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h5975c12d165b4541bd8ab1a476f89cf11fg0" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="45f4ac10-3c89-4fb2-b37d-f973bb9110c0" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="cbd31ef1-e508-4c92-9b85-301969a39167" />
+					
+                    <attribute id="VisualResource" type="guid" value="fab1e469-cd43-478e-b3ae-fa146082cc19" /> Rumi HEL 
+					
+					</node>
+        <!-- <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h4c53133e4c694ef68c03333aac4b7f835719" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="45f4ac10-3c89-4fb2-b37d-f973bb9110c0" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="6e2c3830-8fba-4b17-bf14-344c74280236" />
+					
+                    <attribute id="VisualResource" type="guid" value="3b741302-1969-4f60-8236-1aaab6d1052b" /> Rumi Demon HEL 
+					
+					</node> -->
+        <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="hd0ea86d474594fa4b178357e8797874ee5c5" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="45f4ac10-3c89-4fb2-b37d-f973bb9110c0" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="4d812190-9e37-4e4f-bfa4-54dc47ca6341" />
+					
+                    <attribute id="VisualResource" type="guid" value="02442559-1f89-4c56-9b0e-d8714cc87dac" /> Zoey HEL
+					
+					</node>
+        <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h658295515bf24035bc6dad80e996cbbb7fd0" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="0eb594cb-8820-4be6-a58d-8be7a1a98fba" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="9cdd4f43-e263-4b23-ac5b-3dd8f2e1e50d" />
+					
+                    <attribute id="VisualResource" type="guid" value="41256309-678c-4a37-b18f-dbc24a313c65" /> Mira HUM 
+					
+					</node>
+        <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h5975c12d165b4541bd8ab1a476f89cf11fg0" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="0eb594cb-8820-4be6-a58d-8be7a1a98fba" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="7c27d456-b828-4773-a24d-e6d21209b58f" />
+					
+                    <attribute id="VisualResource" type="guid" value="9ef19ae5-81b9-4011-9b4d-22b0ba21c32f" /> Rumi HUM 
+					
+					</node>
+        <!-- <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h4c53133e4c694ef68c03333aac4b7f835719" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="0eb594cb-8820-4be6-a58d-8be7a1a98fba" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="4fee8551-a277-4882-9218-fdeaadbb7f69" />
+					
+                    <attribute id="VisualResource" type="guid" value="b1a8a570-f28d-4876-9194-dd2e5e3b453a" /> Rumi Demon HUM 
+					
+					</node> -->
+        <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="hd0ea86d474594fa4b178357e8797874ee5c5" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="0eb594cb-8820-4be6-a58d-8be7a1a98fba" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="14c1fc47-4ba2-4606-9215-9287cac6745b" />
+					
+                    <attribute id="VisualResource" type="guid" value="01bc11e0-96d2-43f9-b784-924cadecc3e7" /> Zoey HUM
+					
+					</node>
+        <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h658295515bf24035bc6dad80e996cbbb7fd0" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="b6dccbed-30f3-424b-a181-c4540cf38197" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="2c5d8c11-967f-49df-9e10-828cb4739ccf" />
+					
+                    <attribute id="VisualResource" type="guid" value="e4cfcd94-c4d9-40cb-9fea-835250b28646" /> Mira TIF  
+					
+					</node>
+        <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h5975c12d165b4541bd8ab1a476f89cf11fg0" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="b6dccbed-30f3-424b-a181-c4540cf38197" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="1eab4680-d9c8-4c97-8d31-1caa8680dad9" />
+					
+                    <attribute id="VisualResource" type="guid" value="a6a4d74b-9a5d-4bef-b98c-9edb6d46cb4f" /> Rumi TIF 
+					
+					</node>
+        <!-- <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h4c53133e4c694ef68c03333aac4b7f835719" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="b6dccbed-30f3-424b-a181-c4540cf38197" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="9659fbab-8f35-4f77-986c-7c49606a6fa1" />
+					
+                    <attribute id="VisualResource" type="guid" value="e6d6bf5b-44e3-4228-8672-9cb4d7d5ace0" /> Rumi Demon TIF  
+					
+					</node> -->
+        <node id="CharacterCreationAppearanceVisual">
+                    <attribute id="BodyShape" type="uint8" value="0" />
+					
+                    <attribute id="BodyType" type="uint8" value="1" />
+					
+                    <attribute id="DefaultSkinColor" type="guid" value="39949ade-52c7-d562-df3f-52da62275e26" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="hd0ea86d474594fa4b178357e8797874ee5c5" version="1" />
+					
+                    <attribute id="RaceUUID" type="guid" value="b6dccbed-30f3-424b-a181-c4540cf38197" />
+					
+                    <attribute id="SlotName" type="FixedString" value="Head" />
+                    <attribute id="UUID" type="guid" value="9b9e52d7-77c6-4de4-9b2b-1b567ae39083" />
+					
+                    <attribute id="VisualResource" type="guid" value="477972e4-ed70-48b9-9f29-e013e262a639" /> Zoey TIF 
+					
+					</node>
+      </children>
+    </node>
+  </region>
+</save>

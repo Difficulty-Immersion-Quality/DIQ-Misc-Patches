@@ -135,9 +135,6 @@
 	<content contentuid="hc06b2ac8g385fg4cb6gbd01g09fdd3a76351" version="1">Gained [1] &lt;LSTag Tooltip="TemporaryHitPoints"&gt;temporary hit points&lt;/LSTag&gt;</content>		
 	<content contentuid="hadd1d9a8gdeb7g4fa6g820eg2a482306bd34" version="1">You utter a final incantation, channeling the destructive energies of Netheril through your very being. The ancient runes upon the staff ignite with a flash as you unleash a devastating wave of force energy, obliterating yourself and dealing [1] to all creatures within a [2] radius. At character level 12, this damage increases to [3].</content>
 
-	<!-- War Caster (2024 and 2014)	 -->
-	<!-- FeatDescription: "WarCaster" --> <content contentuid="h6cee28687ca14f85a43334b0112a50d7ae73" version="1">War Caster</content>
-
 	<!-- Armory of Lathender, Helm, etc. -->
 	<!-- "" --> <content contentuid="hb5a37cf6g6c9bg4631g84bdgece2ba915ef0" version="1">The righteous blade of Helm, precisely where it belongs; buried through the chest of the wicked and the monstrous.</content>
 	<!-- "" --> <content contentuid="h93ae4f8dgf6b5g471ag9e76gad58ed6d0a67" version="1">During the Time of Troubles, Helm was forced to slay the goddess Mystra as she tried to return home. Something in this sword's unrelenting line speaks to that grief - a duty completed, at any cost.</content>
@@ -381,6 +378,10 @@
 	<content contentuid="h67a978c3g19bbg4cd4gaa57g209ba6ebdfc0" version="1">All creatures within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; trigger a &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; at the beginning of their next turn.</content>
 	<content contentuid="hea82684bg9595g4b2fgbccagbd45ada7c601" version="1">Wild Magic: Mass Polymorph</content>
 	<content contentuid="hd76df7e9g78ceg4d25g88c2ge9ebd0ed3097" version="1">All enemies within [1] of the &lt;LSTag Type="Spell" Tooltip="Shout__WildMagic"&gt;Wild Magic Surge&lt;/LSTag&gt; must succeed a &lt;LSTag Tooltip="Wisdom"&gt;Wisdom&lt;/LSTag&gt; &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; &lt;LSTag Type="Status" Tooltip="POLYMORPH_SHEEP"&gt;Polymorphed&lt;/LSTag&gt; into sheep.</content>
+
+	<!-- War Caster (2024 and 2014)	 -->
+	<!-- FeatDescription: "WarCaster" --> <content contentuid="h6cee28687ca14f85a43334b0112a50d7ae73" version="1">War Caster</content>
+	<!-- FeatDescription: "WarCaster" --> <content contentuid="h434207f7g8135g444fgaa52g30cafa4ec3e5" version="1">You have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; to maintain &lt;LSTag Tooltip="Concentration"&gt;Concentration&lt;/LSTag&gt;.&lt;br&gt;&lt;br&gt;You can also use a &lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;Reaction&lt;/LSTag&gt; to cast a spell when a hostile creature's movement provokes an &lt;LSTag Tooltip="OpportunityAttack"&gt;Opportunity Attack&lt;/LSTag&gt; from you.</content>
 
 	<!-- First Vampire Warlock -->
 	<!-- "DrainLife", "DRAIN_LIFE_TECHNICAL_1" --> <content contentuid="hf29194a6g5f46g4ae6g96d9gec912337bc90" version="1">When you attack or cast a spell, you can cast &lt;LSTag Type="Spell" Tooltip="Target_DrainLife_Base"&gt;Drain Life&lt;/LSTag&gt; until the end of your turn.</content>

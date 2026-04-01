@@ -5,7 +5,8 @@
 		<node id="root">
 			<children>
 				<node id="FeatDescription">
-					<attribute id="Description" type="TranslatedString" handle="h38ecd31dgf4a3g48f2g8f4eg001116af57de" version="1"/>
+					<!-- <attribute id="Description" type="TranslatedString" handle="h38ecd31dgf4a3g48f2g8f4eg001116af57de" version="1"/> -->
+					<attribute id="Description" type="TranslatedString" handle="h434207f7g8135g444fgaa52g30cafa4ec3e5" version="1"/>
 					<!-- <attribute id="DisplayName" type="TranslatedString" handle="h72ef015ag83f0g463ag93eegbdd654211c39" version="1"/> -->
 					<attribute id="DisplayName" type="TranslatedString" handle="h6cee28687ca14f85a43334b0112a50d7ae73" version="1"/>
 					<attribute id="ExactMatch" type="FixedString" value="WarCaster"/>

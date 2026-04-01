@@ -390,6 +390,9 @@
 
 	<!-- Ruleset -->
 	<!-- "HONOUR" --> <content contentuid="h4aa22d20g8ae4g46e2g845dg9f68ea8dd56f" version="1">Honour (NOT RECOMMENDED)</content>
+	<!-- "IRONMAN_MODE" --> <content contentuid="hcb448a40g3637g451dg9a48gca1ea35fb174" version="1">Single Save (NOT RECOMMENDED)</content>
+	<!-- "RULESET_LARIAN" --> <content contentuid="h995dc62dg95afg4b15gb0ffge35e57651f53" version="1">Standard Ruleset (NOT RECOMMENDED)</content>
+	<!-- "RULESET_HONOUR" --> <content contentuid="h5c0a0bf0g1189g4509ga43cg385a38913923" version="1">Honour Ruleset (RECOMMENDED)</content>
 
 	<!-- "" --> <content contentuid="" version="1"></content>
 	<!-- "" --> <content contentuid="" version="1"></content>

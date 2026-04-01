@@ -9,7 +9,9 @@
                     <!-- You will only have a single save slot. -->
                     <attribute id="Description" type="TranslatedString" handle="h465dc37dg304dg4745gbd0eg81f210051ab8" version="1"/>
                     <!-- Single Save -->
-                    <attribute id="DisplayName" type="TranslatedString" handle="hc46a669cgdbedg4bb4g8bfbg7940e7dd74d1" version="5"/>
+                    <!-- <attribute id="DisplayName" type="TranslatedString" handle="hc46a669cgdbedg4bb4g8bfbg7940e7dd74d1" version="5"/> -->
+                    <!-- Single Save (NOT RECOMMENDED) -->
+                    <attribute id="DisplayName" type="TranslatedString" handle="hcb448a40g3637g451dg9a48gca1ea35fb174" version="1"/>
                     <attribute id="EditableDuringGame" type="bool" value="false"/>
                     <attribute id="Name" type="LSString" value="IRONMAN_MODE"/>
                     <attribute id="RulesetModifierType" type="uint8" value="4"/>
@@ -238,7 +240,8 @@
                     <attribute id="DisplayName" type="TranslatedString" handle="hdce6af2ag7b3eg4858g8321g5fac31efbb59" version="4"/>
                     <attribute id="Name" type="LSString" value="STABLE_RANDOMNESS"/>
                     <attribute id="RulesetModifierType" type="uint8" value="4"/>
-                    <attribute id="ShowInCustom" type="bool" value="false"/>
+                    <!-- <attribute id="ShowInCustom" type="bool" value="false"/> -->
+                    <attribute id="ShowInCustom" type="bool" value="true"/>
                     <attribute id="UUID" type="guid" value="c8234320-35f5-44ff-85a2-4e4366de02f2"/>
                 </node>
                 <node id="RulesetModifier">
@@ -252,7 +255,8 @@
                     <attribute id="UUID" type="guid" value="db885144-a364-4e40-bae0-778608a5d689"/>
                 </node>
                 <node id="RulesetModifier">
-                    <attribute id="Default" type="LSString" value="false"/>
+                    <!-- <attribute id="Default" type="LSString" value="false"/> -->
+                    <attribute id="Default" type="LSString" value="true"/>
                     <!-- Alter the difficulty of your game, affecting your achievements. -->
                     <attribute id="Description" type="TranslatedString" handle="h024b5bf3g85d9g4df1gbb05g74d06d93fd0d" version="2"/>
                     <!-- Tactician Mode -->
@@ -292,20 +296,13 @@
                     <attribute id="RulesetModifierType" type="uint8" value="3"/>
                     <attribute id="UUID" type="guid" value="fccef0aa-8e28-4b7b-b661-c33094c5f3f7"/>
                 </node>
-                <!-- <node id="RulesetModifier">
+                <node id="RulesetModifier">
                     <attribute id="Default" type="LSString" value="false"/>
                     <attribute id="LoadModule" type="LSString" value="Honour"/>
                     <attribute id="Name" type="LSString" value="HONOUR_STATS"/>
                     <attribute id="RulesetModifierType" type="uint8" value="4"/>
                     <attribute id="UUID" type="guid" value="ef0506df-da9f-40e2-903a-1349523c1ae4"/>
-                </node> -->
-                <!-- <node id="RulesetModifier">
-                    <attribute id="Default" type="LSString" value="false"/>
-                    <attribute id="LoadModule" type="LSString" value="HonourX"/>
-                    <attribute id="Name" type="LSString" value="HONOUR_STATS"/>
-                    <attribute id="RulesetModifierType" type="uint8" value="4"/>
-                    <attribute id="UUID" type="guid" value="ef0506df-da9f-40e2-903a-1349523c1ae4"/>
-                </node> -->
+                </node>
             </children>
         </node>
     </region>

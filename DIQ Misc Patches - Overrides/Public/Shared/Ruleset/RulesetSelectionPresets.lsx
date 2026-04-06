@@ -4,6 +4,7 @@
     <region id="RulesetSelectionPresets">
         <node id="root">
             <children>
+            <!-- TODO: Try and get the continue button to stay without having any additional difficulty options? -->
                 <!-- <node id="RulesetSelectionPreset">
                     <attribute id="Asset" type="LSString" value="difficulty_01"/>
                     <attribute id="Description" type="TranslatedString" handle="h0391e720g05e0g4aefga7adgc720138eef0d" version="1"/>
@@ -103,8 +104,7 @@
                                     <attribute id="Rulesets" type="guid" value="3f777143-d1de-4035-b9e5-23763148b1fd"/>
                                 </node>
                                 <node id="Ruleset">
-                                    <!-- <attribute id="Rulesets" type="guid" value="3f1cb183-ef6e-4db6-b2ed-a703cb217264"/> -->
-                                    <attribute id="Rulesets" type="guid" value="5d595a7a-6182-4559-b404-ed7cc7ad8ada"/>
+                                    <attribute id="Rulesets" type="guid" value="3f1cb183-ef6e-4db6-b2ed-a703cb217264"/>
                                 </node>
                             </children>
                         </node>

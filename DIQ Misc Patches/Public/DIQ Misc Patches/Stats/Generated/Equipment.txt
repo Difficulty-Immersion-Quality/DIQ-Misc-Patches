@@ -306,6 +306,7 @@ new equipment "Cal Equipment"
 add initialweaponset "Melee"
 // add equipmentgroup
 // add equipment entry "WPN_Greataxe"
+add equipmentgroup
 add equipment entry "WPN_Handaxe"
 add equipmentgroup
 add equipment entry "ARM_Shield"

@@ -95,12 +95,11 @@ data "AIFlags" "CanNotUse"
 
 new entry "ARMOR_VANITY_CAMP_CLOTHES_CAMP_PASSIVE"
 type "PassiveData"
-using "ARMOR_VANITY_CAMP_CLOTHES_CAMP_PASSIVE"
 // Show Camp Clothes while in Camp
-// data "DisplayName" "heed701ea4fc64422b00b730ab01efcaa5c62;1"
+data "DisplayName" "heed701ea4fc64422b00b730ab01efcaa5c62;1"
 // When enabled the character will automatically have camp clothes shown when teleporting to Camp, and main armor shown when teleporting from Camp. (Owned by Armory mod)
-// data "Description" "hc5a9429bb41c4e90b02289e4067a25af56a1;1"
-// data "Icon" "Action_DivineIntervention_Supplies"
+data "Description" "hc5a9429bb41c4e90b02289e4067a25af56a1;1"
+data "Icon" "Action_DivineIntervention_Supplies"
 // data "Properties" "IsToggled;ToggledDefaultAddToHotbar"
 data "Properties" "IsHidden"
 // data "ToggleOnFunctors" "IF(not HasStatus('ARMOR_VANITY_CAMP_CLOTHES_CAMP_STATUS')):ApplyStatus(ARMOR_VANITY_CAMP_CLOTHES_CAMP_STATUS,100,-1)"

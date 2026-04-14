@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="1" revision="0" build="0"/>
+    <region id="SpellLists">
+        <node id="root">
+            <children>                
+                <node id="SpellList">
+                    <!-- <attribute id="Comment" type="LSString" value="Thief Jump"/>
+                    <attribute id="Spells" type="LSString" value="MO_Projectile_Jump_Dex"/>
+                    <attribute id="UUID" type="guid" value="d3944c57-d8a0-4c86-9d0a-88709ed0f360"/> -->
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

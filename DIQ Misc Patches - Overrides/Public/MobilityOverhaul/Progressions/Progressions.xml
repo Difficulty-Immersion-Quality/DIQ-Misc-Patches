@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="9" build="328"/>
+    <region id="Progressions">
+        <node id="root">
+            <children>
+                <node id="Progression">
+                    <!-- <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="Thief"/>
+                    <attribute id="PassivesAdded" type="LSString" value="FastHands;SecondStoryWork"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(d3944c57-d8a0-4c86-9d0a-88709ed0f360)"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="f6acc595-46b4-4d96-b7d5-6f33366fc2de"/>
+                    <attribute id="UUID" type="guid" value="3f95146b-90bc-4064-b3e0-4e1e751cd08d"/> -->
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

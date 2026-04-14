@@ -27,7 +27,7 @@ using "CelestialFury_Shock_Passive"
 // data "DisplayName" "haae9d0b2gd1f9g76dage666g9241926f1e50;1"
 // When the wielder lands a &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hit&lt;/LSTag&gt; with this weapon, it crackles with lightning shocking the target for an additional [1].
 // data "Description" "h1899baccg389eg3516g561fg35b9936f029b;10"
-// Attacks with this weapon have a small chance of wreathing the blade in electricity, dealing [1].
+// &lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt; with this weapon have a small chance of wreathing the blade in electricity, dealing [1].
 data "Description" "h4610246egd7fdg4e48gbd04ge999b518d89e;1"
 // data "DescriptionParams" "DealDamage(4d8+4, Lightning)"
 data "DescriptionParams" "DealDamage(1d20, Lightning)"

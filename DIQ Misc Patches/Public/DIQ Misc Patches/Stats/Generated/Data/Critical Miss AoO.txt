@@ -1,0 +1,96 @@
+// // =================================== Very WIP AoO critical miss stuff ===================================
+// // TODO: Hook into Wesslen's War Caster and have a Critical Miss trigger it, easy?
+
+// new entry "AttackOfOpportunity"
+// type "PassiveData"
+// using "AttackOfOpportunity"
+// // Opportunity Attack
+// // data "DisplayName" "ha0a9d4d4gdd96g431dgb386g6a35a5eb2878;1"
+// // Automatically attack an enemy moving out of your reach.
+// // data "Description" "hcc220960g681dg4db6g8cbag2c055807eed3;7"
+// // data "TooltipUseCosts" "ReactionActionPoint:1"
+// // data "Icon" "PassiveFeature_AttackOfOpportunity"
+// // data "Properties" "Highlighted"
+// // data "Boosts" "UnlockInterrupt(Interrupt_AttackOfOpportunity)"
+// data "Boosts" "UnlockInterrupt(Interrupt_AttackOfOpportunity);UnlockInterrupt(Interrupt_CriticalMiss)"
+
+// new entry "Passive_CriticalMiss"
+// type "PassiveData"
+// data "Properties" "Hidden"
+// data "Boosts" "UnlockInterrupt(Interrupt_CriticalMiss)"
+
+// // ...
+
+// new entry "Interrupt_CriticalMiss"
+// type "InterruptData"
+// data "DisplayName" "hbc174882g8929g4899gb508g494f38fc35b6;1"
+// data "Description" "hbb7b96cbgf9cfg451dg8a84g84af601a083b;1"
+// data "Icon" "PassiveFeature_AttackOfOpportunity"
+// data "InterruptContext" "OnCastHit"
+// data "InterruptContextScope" "Self"
+// data "Container" "YesNoDecision"
+// // data "Conditions" "IsAbleToReact(context.Observer) and Enemy(context.Source,context.Observer) and IsCriticalMiss() and not DistanceToEntityGreaterThan(18, context.ObserverPosition, context.Source) and not HasStatus('INVISIBILITY') and not AnyEntityIsItem() and HasLastAttackTriggered()"
+// data "Conditions" "context.HasContextFlag(StatsFunctorContext.OnCastHit) and IsAbleToReact(context.Observer) and Enemy(context.Source,context.Observer) and IsCriticalMiss() and not DistanceToEntityGreaterThan(18, context.ObserverPosition, context.Source) and not HasStatus('INVISIBILITY') and not AnyEntityIsItem() and HasLastAttackTriggered()"
+// data "Properties" "IF(IsCriticalMiss()):ApplyStatus(SWAP,CRITICAL_MISS)"
+// data "InterruptDefaultValue" "Enabled"
+// data "EnableCondition" "not HasStatus('SG_Blinded') and not Dead()"
+// data "EnableContext" "OnStatusApplied;OnStatusRemoved"
+
+// new entry "Interrupt_AttackOfOpportunity"
+// type "InterruptData"
+// using "Interrupt_AttackOfOpportunity"
+// // Opportunity Attack
+// // data "DisplayName" "ha47b8d48g1a33g43e3gb98agc3b2c22668b8;1"
+// // Attack an enemy moving out of your reach.
+// // data "Description" "h3e87bdfcg0860g468eg9a8eg1bd073914fee;1"
+// // data "Icon" "PassiveFeature_AttackOfOpportunity"
+// // data "InterruptContext" "OnLeaveAttackRange"
+// data "InterruptContext" "OnLeaveAttackRange;OnCastHit"
+// // data "InterruptContextScope" "Self"
+// // data "Container" "YesNoDecision"
+// // data "Conditions" "IsAbleToReact(context.Observer) and not Self(context.Observer, context.Target) and Enemy() and not HasStatus('SANCTUARY',context.Source) and not WieldingWeapon('Ammunition', false, false, context.Source) and not (not Player(context.Source) and Tagged('AI_IGNORED_TARGET')  and not HasStatus('GNOLL_SUDDENRUSH')) and not HasStatus('SHOCKWAVE') and not (HasStatus('MOBILE_NO_AOO', context.Source) and HasStatus('MOBILE_NO_AOO_SOURCE', context.Target)) and not HasStatus('FLAMING_SPHERE_AURA') and not HasStatus('SNEAKING',context.Target) and not HasStatus('SG_Ignore_AOO',context.Target)  and not AnyEntityIsItem() and not HasSpellFlag(SpellFlags.IgnoreAoO, context.Target) and not (HasStatus('FANCYFOOTWORK', context.Source,context.Target) and HasStatus('FANCYFOOTWORK_OWNER', context.Target)) and (not HasStatus('PANACHE', context.Source)) or (HasStatus('PANACHE', context.Source) and HasStatus('PANACHE_OWNER', context.Target));"
+// data "Conditions" "(Player(context.Observer) or not HasStatus('SG_Invisible', context.Observer)) and IsAbleToReact(context.Observer) and not Self(context.Observer, context.Target) and Enemy() and (Player(context.Source) or not HasStatus('SANCTUARY', context.Source)) and not WieldingWeapon('Ammunition', false, false, context.Source) and not HasStatus('SG_Incapacitated', context.Source) and not HasStatus('SG_Unconscious', context.Source) and not (not Player(context.Source) and Tagged('AI_IGNORED_TARGET')) and not HasStatus('GNOLL_SUDDENRUSH') and not HasStatus('SHOCKWAVE') and not (HasStatus('MOBILE_NO_AOO', context.Source) and HasStatus('MOBILE_NO_AOO_SOURCE', context.Target)) and not HasStatus('FLAMING_SPHERE_AURA') and not HasStatus('SNEAKING', context.Target) and not HasStatus('SG_Ignore_AOO', context.Target) and not AnyEntityIsItem() and not HasSpellFlag(SpellFlags.IgnoreAoO, context.Target) and not (HasStatus('FANCYFOOTWORK', context.Source, context.Target) and HasStatus('FANCYFOOTWORK_OWNER', context.Target)) and (not HasStatus('PANACHE', context.Source)) or (HasStatus('PANACHE', context.Source) and HasStatus('PANACHE_OWNER', context.Target)) and (not HasStatus('SG_Invisible', context.Target) or Goon_CanSeeInvisible()) or IsCriticalMiss()"
+// // data "Properties" "IF(not HasPassive('Sentinel_ZeroSpeed',context.Source)):UseAttack();IF(HasPassive('Sentinel_ZeroSpeed',context.Source)):UseSpell(Target_Sentinel_AttackOfOpportunity,true,true,true);TutorialEvent(SWAP,f658a860-7e3e-44fd-807b-88d3c0c31217)"
+// // data "Cost" "ReactionActionPoint:1"
+// // data "InterruptDefaultValue" "Enabled"
+// // data "EnableCondition" "not HasStatus('SG_Blinded')"
+// // data "EnableContext" "OnStatusApplied;OnStatusRemoved"
+// data "InterruptFlags" "InterruptWhileInvisible"
+
+// // ...
+
+// // new entry "CRITICAL_MISS"
+// // type "StatusData"
+// // data "StatusType" "BOOST"
+// // data "TickType" "EndTurn"
+// // data "RemoveConditions" "IsAttack()"
+// // data "RemoveEvents" "OnAttacked;OnTurn"
+// // data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+// // War Caster
+
+// new entry "Interrupt_UAWC_Common"
+// type "InterruptData"
+// using "Interrupt_UAWC_Common"
+// // data "Icon" "PassiveFeature_WarCaster_OpportunitySpell"
+// // data "Conditions" "DWE_UAWarCaster_InitFailedError()"
+// data "Conditions" "DWE_UAWarCaster_InitFailedError() or IsCriticalMiss()"
+// // data "EnableCondition" "DWE_UAWarCaster_InitFailedError()"
+// // data "InterruptContext" "OnLeaveAttackRange"
+// data "InterruptContext" "OnLeaveAttackRange;OnCastHit"
+// // data "InterruptContextScope" "Nearby"
+// data "InterruptContextScope" "Self"
+// // data "Container" "YesNoDecision"
+// // data "Cost" "ReactionActionPoint:1"
+// // data "InterruptDefaultValue" "Enabled;Ask"
+// // data "EnableContext" "OnStatusApplied;OnStatusRemoved"
+// // data "Stack" "AttackOfOpportunity"
+
+// new entry "Interrupt_UAWC_PM_Common"
+// // using "Interrupt_UAWC_Common"
+// using "Interrupt_UAWC_PM_Common"
+// // data "InterruptContext" "OnLeaveAttackRange;OnEnterAttackRange"
+// data "InterruptContext" "OnLeaveAttackRange;OnEnterAttackRange;OnCastHit"
+// // data "InterruptContextScope" "Self"
+
+// // context.HasContextFlag(InterruptContext.OnCastHit)

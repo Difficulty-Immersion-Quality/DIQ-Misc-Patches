@@ -186,7 +186,7 @@ new entry "Shout_Surrender"
 type "SpellData"
 data "SpellType" "Shout"
 using "Shout_Surrender"
-// data "SpellProperties" "ApplyStatus(DISENGAGE,100,1)"
+// data "SpellProperties" "ApplyStatus(REQUESTED_SURRENDER,100,1)"
 // data "TargetConditions" "Self()"
 // data "Icon" "icon_iSurrender"
 // Request surrender
@@ -218,13 +218,11 @@ data "SpellCategory" ""
 // data "SpellSoundMagnitude" "Small"
 // data "Sheathing" "DontChange"
 
-// Permanent status for those who accepted bribes
+// // Permanent status for those who accepted bribes
 // new entry "ACCEPTED_BRIBE"
 // type "StatusData"
 // data "StatusType" "BOOST"
-// Bribe Accepted
 // data "DisplayName" "hACCEPTED_BRIBE_DisplayName;1"
-// This person has previously accepted a bribe from you.
 // data "Description" "hACCEPTED_BRIBE_Description;1"
 // data "Icon" "statIcons_Hindered"
 // data "StackId" "ACCEPTED_BRIBE"
@@ -238,4 +236,12 @@ data "SpellCategory" ""
 // data "Icon" "statIcons_PursuitProtocol"
 // data "Boosts" "StatusImmunity(LOW_STEELWATCH_ENEMYOFABSOLUTE)"
 // data "StackId" "PURSUIT_PROTOCOL_BLOCKED"
+// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"
+
+// new entry "REQUESTED_SURRENDER"
+// type "StatusData"
+// data "StatusType" "BOOST"
+// data "DisplayName" ""
+// data "Description" ""
+// data "Icon" "statIcons_PursuitProtocol"
 // data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator"

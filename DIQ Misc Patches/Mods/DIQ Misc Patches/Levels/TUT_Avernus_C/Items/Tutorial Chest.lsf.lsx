@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="0" revision="9" build="328" lslib_meta="v1,bswap_guids" />
+	<region id="Templates">
+		<node id="Templates">
+			<children>
+				<node id="GameObjects">
+					<attribute id="FadeGroup" type="FixedString" value="" />
+					<attribute id="Flag" type="int32" value="1" />
+					<attribute id="GravityType" type="uint8" value="2" />
+					<attribute id="LevelName" type="FixedString" value="TUT_Avernus_C" />
+					<attribute id="MapKey" type="FixedString" value="e57e3af6-ae79-4d5c-9d11-f695b359c740" />
+					<attribute id="Name" type="LSString" value="S_Chest_Potions" />
+					<attribute id="TemplateName" type="FixedString" value="813c005f-72ab-4806-ad7e-2e3135e41d27" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="_OriginalFileVersion_" type="int64" value="144115207403209034" />
+					<children>
+						<node id="InventoryList">
+							<children>
+								<node id="InventoryItem">
+									<!-- <attribute id="Object" type="FixedString" value="TUT_Chest_Potions" /> -->
+									<attribute id="Object" type="FixedString" value="Goon_TUT_Chest_Potions" />
+								</node>
+							</children>
+						</node>
+						<node id="LayerList">
+							<children>
+								<node id="Layers">
+									<children>
+										<node id="Object">
+											<attribute id="MapKey" type="FixedString" value="TUT_Avernus_C" />
+											<children>
+												<node id="Layer">
+													<attribute id="Object" type="guid" value="63deda87-5c21-83d2-61d4-8920bda260da" />
+												</node>
+											</children>
+										</node>
+									</children>
+								</node>
+							</children>
+						</node>
+						<node id="Transform">
+							<attribute id="Position" type="fvec3" value="60.601612 18.593756 -360.50024" />
+							<attribute id="RotationQuat" type="fvec4" value="-0.043834146 -0.5523928 -0.04313926 0.83131135" />
+							<attribute id="Scale" type="float" value="1" />
+						</node>
+					</children>
+				</node>
+			</children>
+		</node>
+	</region>
+</save>

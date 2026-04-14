@@ -70,7 +70,7 @@ using "MAG_ImprovedGoonerCritical"
 // The number you need to &lt;LSTag Tooltip="AttackRoll"&gt;roll&lt;/LSTag&gt; a &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hit&lt;/LSTag&gt; while attacking is reduced by 3. This effect can stack.
 // data "Description" "hcb495aadg3f8fg63a7g8b52g970e6edf4e0f;1"
 // The number you need to &lt;LSTag Tooltip="AttackRoll"&gt;roll&lt;/LSTag&gt; a &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hit&lt;/LSTag&gt; while attacking is reduced by [1]. This effect can stack.
-data "Description" "he36bc98eg1d83g411dg97fcgf75cca30852d;1"
+data "Description" "hb4e340afgd8a7g4a70g9cb4g1a122d1d128f;1"
 data "DescriptionParams" "2"
 // data "Icon" "PassiveFeature_ImprovedCritical"
 // data "Properties" "Highlighted"

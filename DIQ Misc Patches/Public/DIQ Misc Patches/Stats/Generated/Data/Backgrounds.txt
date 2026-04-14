@@ -1,5 +1,6 @@
 // ==================================== Impactful Backgrounds ====================================
 // Changes: Revenge only triggers when Durge would actually be downed, not just pulled out of a polymorph.
+// TODO: Test
 
 new entry "LHB_IB_HAUNTEDONE_REVENGE"
 type "StatusData"

@@ -217,3 +217,333 @@ add equipmentgroup
 add equipment entry "WPN_Dagger"
 add equipmentgroup
 add equipment entry "ARM_Robe_Body"
+
+// ==================================== The Gur Redone - Monster Hunters of the Sword Coast ====================================
+
+// new equipment "EQP_Scimitar_Leather_DW"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Scimitar"
+// add equipmentgroup
+// add equipment entry "WPN_Scimitar"
+// add equipmentgroup
+// add equipment entry "ARM_Leather_Body"
+
+new equipment "Cassivora"
+add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Shortsword_2"
+add equipmentgroup
+add equipment entry "WPN_Scimitar_2"
+// add equipmentgroup
+// add equipment entry "WPN_Shortsword_2"
+add equipmentgroup
+add equipment entry "WPN_Shortsword_1"
+add equipmentgroup
+add equipment entry "ARM_Leather_Body"
+
+// ==================================== Tieflings Redone - Survivors of Elturel's Descent ====================================
+
+// new equipment "EQP_Longsword_Leather"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Longsword"
+// add equipmentgroup
+// add equipment entry "ARM_Leather_Body"
+
+// new equipment "Tilses Equipment"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Greatsword_1"
+// add equipmentgroup
+// add equipment entry "ARM_Plate_Body"
+
+// new equipment "EQP_GreatAxe_ScaleMail"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Greataxe"
+// add equipmentgroup
+// add equipment entry "ARM_ScaleMail_Body"
+
+// Greataxe lowkey cooler
+new equipment "Ikaron Equipment"
+add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Greatsword"
+add equipmentgroup
+add equipment entry "WPN_Greataxe"
+add equipmentgroup
+add equipment entry "ARM_Plate_Body"
+
+// new equipment "EQP_Staff_Robe"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Quarterstaff"
+// add equipmentgroup
+// add equipment entry "ARM_Robe_Body"
+
+// Doesn't really need a magical weapon
+new equipment "Rolan Equipment"
+add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Quarterstaff_1"
+add equipmentgroup
+add equipment entry "WPN_Quarterstaff"
+add equipmentgroup
+add equipment entry "ARM_Robe_Body"
+
+// new equipment "EQP_Javelin_Leather_Shield"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Javelin"
+// add equipmentgroup
+// add equipment entry "ARM_Shield"
+// add equipmentgroup
+// add equipment entry "ARM_Leather_Body"
+
+// Handaxe and shield > Greataxe
+new equipment "Cal Equipment"
+add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Greataxe"
+add equipmentgroup
+add equipment entry "WPN_Handaxe"
+add equipmentgroup
+add equipment entry "ARM_Shield"
+add equipmentgroup
+add equipment entry "ARM_Leather_Body"
+
+// new equipment "EQP_Shortbow"
+// add initialweaponset "Ranged"
+// add equipmentgroup
+// add equipment entry "WPN_Shortbow"
+
+// Gave her bow back
+new equipment "Lia Equipment"
+add initialweaponset "Melee"
+add equipmentgroup
+add equipment entry "WPN_Dagger"
+add equipmentgroup
+add equipment entry "WPN_Shortbow"
+
+// new equipment "EQP_Shortbow_Shortsword_Leather"
+// add initialweaponset "Ranged"
+// add equipmentgroup
+// add equipment entry "WPN_Shortbow"
+// add equipmentgroup
+// add equipment entry "ARM_Leather_Body"
+// add equipmentgroup
+// add equipment entry "WPN_Shortsword"
+
+// Damays lol
+// new equipment "Denarus Equipment"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Longsword"
+// add equipmentgroup
+// add equipment entry "ARM_Shield"
+// add equipmentgroup
+// add equipment entry "ARM_StuddedLeather_Body"
+
+// new equipment "EQP_Shortbow_Dagger_Leather"
+// add initialweaponset "Ranged"
+// add equipmentgroup
+// add equipment entry "WPN_Shortbow"
+// add equipmentgroup
+// add equipment entry "ARM_Leather_Body"
+// add equipmentgroup
+// add equipment entry "WPN_Dagger"
+
+// Restored her dagger
+new equipment "Nymessa Equipment"
+add initialweaponset "Ranged"
+add equipmentgroup
+add equipment entry "WPN_Longbow"
+add equipmentgroup
+add equipment entry "ARM_StuddedLeather_Body"
+add equipmentgroup
+add equipment entry "WPN_Dagger"
+
+// new equipment "EQP_Longbow_Greatsword"
+// add initialweaponset "Ranged"
+// add equipmentgroup
+// add equipment entry "WPN_Longbow"
+// add equipmentgroup
+// add equipment entry "WPN_Greatsword"
+
+// Asharak, restored his longbow
+new equipment "Ashrak Equipment"
+add initialweaponset "Melee"
+add equipmentgroup
+add equipment entry "WPN_Longbow"
+add equipmentgroup
+add equipment entry "WPN_Greatsword"
+add equipmentgroup
+add equipment entry "ARM_Padded_Body"
+
+// ==================================== Druids Redone - Keepers of the Emerald Grove ====================================
+
+// new equipment "EQP_Staff_Leather"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Quarterstaff"
+// add equipmentgroup
+// add equipment entry "ARM_Leather_Body"
+
+// x2 regular javelins > x1 magical
+new equipment "Jeorna Equipment"
+add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Javelin_1"
+add equipmentgroup
+add equipment entry "WPN_Javelin"
+add equipmentgroup
+add equipment entry "WPN_Javelin"
+add equipmentgroup
+add equipment entry "ARM_Leather_Body_Druid"
+
+// Made at parity with Kagha Redux - The Viper in the Grass
+new equipment "Kagha Equipment"
+add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Scimitar"
+add equipmentgroup
+add equipment entry "WPN_Scimitar_1"
+add equipmentgroup
+add equipment entry "WPN_Dagger_1"
+add equipmentgroup
+add equipment entry "ARM_Leather_Body_Druid"
+add equipmentgroup
+add equipment entry "MAG_Healer_HealSelfPoisonWeapon_Amulet"
+
+// new equipment "EQP_Greatclub"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Greatclub"
+
+// Magical greatclub > magical spear because rath is a top g bonker
+new equipment "Rath Equipment"
+add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Spear_1"
+add equipmentgroup
+add equipment entry "WPN_Greatclub_1"
+add equipmentgroup
+add equipment entry "ARM_Leather_Body_Druid"
+
+// new equipment "EQP_Shortbow_Dagger_Leather"
+// add initialweaponset "Ranged"
+// add equipmentgroup
+// add equipment entry "WPN_Shortbow"
+// add equipmentgroup
+// add equipment entry "ARM_Leather_Body"
+// add equipmentgroup
+// add equipment entry "WPN_Dagger"
+
+// x1 magical dagger, x1 regular dagger > magical staff
+new equipment "Olodan Equipment"
+add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Quarterstaff_1"
+add equipmentgroup
+add equipment entry "ARM_Hide_Body_1"
+add equipmentgroup
+add equipment entry "WPN_Dagger_1"
+add equipmentgroup
+add equipment entry "WPN_Dagger"
+
+// new equipment "EQP_Shortbow_Dagger_Leather"
+// add initialweaponset "Ranged"
+// add equipmentgroup
+// add equipment entry "WPN_Shortbow"
+// add equipmentgroup
+// add equipment entry "ARM_Leather_Body"
+// add equipmentgroup
+// add equipment entry "WPN_Dagger"
+
+// Restored shortbow, regular daggers > magical daggers
+new equipment "Pinta Equipment"
+add initialweaponset "Melee"
+add equipmentgroup
+add equipment entry "WPN_Shortbow"
+// add equipmentgroup
+// add equipment entry "WPN_Dagger_1"
+// add equipmentgroup
+// add equipment entry "WPN_Dagger_1"
+add equipmentgroup
+add equipment entry "ARM_Leather_Body_Druid"
+add equipmentgroup
+add equipment entry "WPN_Dagger"
+add equipmentgroup
+add equipment entry "WPN_Dagger"
+
+// new equipment "EQP_Staff_Robe"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Quarterstaff"
+// add equipmentgroup
+// add equipment entry "ARM_Robe_Body"
+
+// new equipment "Nettie Equipment"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Quarterstaff_Druid"
+// add equipmentgroup
+// add equipment entry "ARM_Leather_Body_Druid"
+
+// new equipment "EQP_Shortbow_Leather"
+// add initialweaponset "Ranged"
+// add equipmentgroup
+// add equipment entry "WPN_Shortbow"
+// add equipmentgroup
+// add equipment entry "ARM_Leather_Body"
+
+// unique weapon is no bueno
+new equipment "Mino Equipment"
+add initialweaponset "Ranged"
+// add equipmentgroup
+// add equipment entry "MAG_Hunting_Shortbow"
+add equipmentgroup
+add equipment entry "WPN_Shortbow"
+// add equipmentgroup
+// add equipment entry "ARM_Hide_Body_1"
+add equipmentgroup
+add equipment entry "ARM_Leather_Body"
+
+// new equipment "EQP_Club"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Club"
+
+// Regular scimitar > magical scimitar
+new equipment "Apikusis Equipment"
+add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Scimitar_1"
+add equipmentgroup
+add equipment entry "WPN_Scimitar"
+add equipmentgroup
+add equipment entry "ARM_Leather_Body_Druid"
+
+// new equipment "EQP_Club_Leather_Shield"
+// add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "WPN_Club"
+// add equipmentgroup
+// add equipment entry "ARM_Shield_C"
+// add equipmentgroup
+// add equipment entry "ARM_Leather_Body"
+
+// Unique stuff very no bueno
+new equipment "Maggran Equipment"
+add initialweaponset "Melee"
+// add equipmentgroup
+// add equipment entry "MAG_Druid_IronWood_Club"
+add equipmentgroup
+add equipment entry "WPN_Club"
+// add equipmentgroup
+// add equipment entry "MAG_Druid_Ironvine_Shield"
+add equipmentgroup
+add equipment entry "ARM_Shield_C"
+add equipmentgroup
+add equipment entry "ARM_Leather_Body_Druid"

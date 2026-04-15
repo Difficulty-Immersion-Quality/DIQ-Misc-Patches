@@ -4,6 +4,7 @@
     <region id="RulesetSelectionPresets">
         <node id="root">
             <children>
+                <!-- TODO: Figure a fix for "If you adjust your custom difficulty settings mid playthrough and have it use one of the vanilla difficulty presets (Tactician, Balanced, or Explorer), it will overwrite my custom ruleset settings and hitting "revert changes" will not get them back."  -->
                 <!-- <node id="RulesetSelectionPreset">
                     <attribute id="Asset" type="LSString" value="difficulty_01"/>
                     <attribute id="Description" type="TranslatedString" handle="h0391e720g05e0g4aefga7adgc720138eef0d" version="1"/>

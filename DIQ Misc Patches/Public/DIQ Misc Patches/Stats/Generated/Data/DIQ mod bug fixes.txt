@@ -290,14 +290,6 @@ data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;ApplyToDead;IgnoreR
 // data "Boosts" "RollBonus(MeleeWeaponAttack,2);RollBonus(RangedWeaponAttack,2);RollBonus(RangedOffHandWeaponAttack, 2)"
 data "Boosts" "RollBonus(MeleeWeaponAttack,2);RollBonus(MeleeOffHandWeaponAttack,2);RollBonus(RangedWeaponAttack,2);RollBonus(RangedOffHandWeaponAttack, 2)"
 
-// ==================================== Mobility Overhaul - Fix bugged tooltip ====================================
-
-new entry "UnarmoredMovement_1"
-using "UnarmoredMovement_1"
-type "PassiveData"
-// data "Description" "3048fe614f8834940b9a70e9d70b4a171;4"
-data "Description" "3048fe61f8834940b9a70e9d70b4a171;4"
-
 // ==================================== Target_PsionicPull, Target_SteelWatcher_Biped_RetrievingShot, Target_MAG_RetrievingShot, and Target_MAG_RetrievingShot_ShortRest (from VEO) all inherit from Target_Hex (in a chain) and Valdacil's Spell Adjustments just breaks them all ====================================
 
 new entry "Target_PsionicPull"

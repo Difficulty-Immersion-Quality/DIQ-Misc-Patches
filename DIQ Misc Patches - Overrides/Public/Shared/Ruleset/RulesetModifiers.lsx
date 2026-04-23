@@ -114,8 +114,7 @@
                     <attribute id="UUID" type="guid" value="b2bf9487-6d94-4292-803f-1c2bdf0975c6"/>
                 </node>
                 <node id="RulesetModifier">
-                    <!-- <attribute id="Default" type="LSString" value="1"/> -->
-                    <attribute id="Default" type="LSString" value="2.5"/>
+                    <attribute id="Default" type="LSString" value="1"/>
                     <!-- Adjust how many camp supplies a &lt;LSTag Tooltip="LongRest"&gt;Long Rest&lt;/LSTag&gt; costs. -->
                     <attribute id="Description" type="TranslatedString" handle="heeadf224gf0fcg441ag9081gb6b9e5119ccb" version="1"/>
                     <!-- Camp Cost Multiplier -->
@@ -140,7 +139,8 @@
                     <attribute id="UUID" type="guid" value="1d9a608a-3885-4d48-8816-458e40d1136e"/>
                 </node>
                 <node id="RulesetModifier">
-                    <attribute id="Default" type="LSString" value="2.5"/>
+                    <!-- <attribute id="Default" type="LSString" value="2.5"/> -->
+                    <attribute id="Default" type="LSString" value="3"/>
                     <!-- All prices traders ask for their wares are multiplied by this value. All prices you get for your gear are divided by this value. -->
                     <attribute id="Description" type="TranslatedString" handle="hc3d2e083g1f6dg4c9cg8655gc597ee0dd488" version="1"/>
                     <!-- Trader Price Modifier -->

@@ -1,0 +1,53 @@
+{
+    "SchemaVersion": 1,
+    "ModName": "Configurable Party Limit",
+    "Tabs": [
+        {
+            "TabName": "General",
+            "TabId": "general",
+            "Handles": {
+                "NameHandle": "hb55f961b11c94e898d116ca84efe6bf57176"
+            },
+            "Settings": [
+                {
+                    "Id": "inspiration_cap_mode",
+                    "Name": "Inspiration cap source",
+                    "Description": "Choose how Inspiration cap is calculated: Disabled keeps vanilla cap 4, 'Current members' follows active party size, 'Party limit' follows configured party limit.",
+                    "Type": "radio",
+                    "Default": "Disabled",
+                    "Options": {
+                        "Choices": [
+                            "Disabled",
+                            "Current members",
+                            "Party limit"
+                        ]
+                    },
+                    "Handles": {
+                        "NameHandle": "h200cedba08924f4b96da2915b8851f4e0593",
+                        "DescriptionHandle": "h30ce9bcb8a0941878db74c3c5e95173fba8g",
+                        "ChoicesHandles": [
+                            "h67af5c458a944acd8794bcd52512a9a936dg",
+                            "h4296d4b5e7c64deab9b022282d548ba57f02",
+                            "h8bca60d074554b1aa031f971ae075f67g9g9"
+                        ]
+                    }
+                },
+                {
+                    "Id": "party_limit",
+                    "Name": "Party size limit",
+                    "Description": "Set the maximum number of party members allowed.\nReducing this will not kick out existing party members, but will prevent others from joining until the party size is reduced.\n\nWARNING! THERE ARE BUGS ASSOCIATED WITH INCREASING THE PARTY SIZE BEYOND 4!\n\nGRYMFORGE BOAT RIDE:\nThe boat ride to Grymforge is scripted to only allow four party members, and so if you try to bring along more than four, some will get stuck at the dock, and not proceed across the river.\n\nCreate a save before using the boat, and follow these steps carefully:\n1 - Unlink your party into groups of four or less. With the main group of four(the characters you wish to experience the dialogue while on the boat), take the boat ride to Grymforge, and grab the immediate waypoint located there.\n2 - Now switch to the group left behind, and use the waypoint to teleport them over.\n\nIf for some reason your characters become invisible despite the method provided above, or you chose not to follow it, you can do this:\n1 - Group the main character up with the invisible party members, and ungroup all visible party members.\n2 - Then use the large Grymforge boat to cross the lake multiple times. Make sure you only have a party total of four.\n3 - Continue crossing the lake until all members are visible.\n\nSLEEPING BUG:\nThere is a small chance that some party members will not wake up after a long rest.\n\nHere's how you can fix it:\n- Switch to Lae'zel, or have an awake party member speak with her.\n- Alternatively, use the Group Hide(Shift+C on keyboard) feature.\n\nPERFORMANCE AND STABILITY:\nIncreasing the party size is to increase the burden on the game's systems and your hardware.\n\nWhile it should generally be fine, you may notice degraded performance and stability especially when running many more characters than 4, or if your modded environment is already unstable and/or using what headroom is available.",
+                    "Type": "slider_int",
+                    "Options": {
+                        "Min": 1,
+                        "Max": 30
+                    },
+                    "Default": 4,
+                    "Handles": {
+                        "NameHandle": "h7ef00f1c94cb4c8983f7bf92462debf0daf9",
+                        "DescriptionHandle": "h04587184g4b17g4872gba36g7e6d1b9b0efa"
+                    }
+                }
+            ]
+        }
+    ]
+}

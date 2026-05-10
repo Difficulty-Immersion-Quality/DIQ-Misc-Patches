@@ -60,6 +60,7 @@ data "Boosts" "IF(not Goon_CanIgnoreBlindness_Melee()):Disadvantage(AttackRoll);
 // end
 
 // ==================================== Heavily Obscured ====================================
+// TODO: move to Condition and Surface Overhaul?
 
 // Status indicating that a character is heavily obscured
 new entry "HEAVILY_OBSCURED_STATUS"
@@ -76,7 +77,6 @@ using "HEAVILY_OBSCURED_STATUS"
 // data "Boosts" "IF(not TD_BlindFighting()):Disadvantage(AttackTarget); IF(not TD_BlindFighting(context.Target)):Advantage(AttackRoll)"
 data "Boosts" "IF(not Goon_CanIgnoreBlindness_Melee()):Disadvantage(AttackTarget);IF(not Goon_CanIgnoreBlindness_Melee(context.Target)):Advantage(AttackRoll)"
 // data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog"
-
 
 // ==================================== Enveloped in Darkness ====================================
 

@@ -11,7 +11,8 @@ end
 
 local function GetEntityStatus(entity, statusId)
     if entity.ServerCharacter ~= nil then
-        return entity.ServerCharacter.Character:GetStatus(statusId)
+        -- return entity.ServerCharacter.Character:GetStatus(statusId)
+        return entity.ServerCharacter:GetStatus(statusId)
     elseif entity.ServerItem ~= nil then
         for _, esvStatus in pairs(entity.ServerItem.Item.StatusManager.Statuses) do
             if esvStatus.StatusId == statusId then
@@ -52,6 +53,7 @@ Ext.Events.DealtDamage:Subscribe(function(e)
     local target = e.Target.Uuid.EntityUuid
     if  e.Hit.HitWith ~= "FallDamage" and Osi.IsItem(target) == 0 and e.Caster ~= nil then
         local caster = GetEntityUuid(e.Caster)
+        -- local damage = e.Result.DamageSums.TotalDamageDone
         local damage = e.Result.Hit.TotalDamageDone
         local beforehp = Osi.GetVarInteger(target,"AotG")
         local hp = Osi.GetHitpoints(target)

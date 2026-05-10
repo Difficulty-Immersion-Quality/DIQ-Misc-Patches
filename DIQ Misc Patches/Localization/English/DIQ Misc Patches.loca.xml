@@ -197,7 +197,8 @@
 	<content contentuid="hfa0f925fgd4e3g41ccg94c1ga5f57ec84589" version="1">Wild Magic: Banished</content>
 	<content contentuid="h52c57a87gb39eg41f4g9e47gdda36e1e42af" version="1">You are &lt;LSTag Type="Status" Tooltip="BANISHED"&gt;Banish&lt;/LSTag&gt; to another plane of existence.</content>
 	<content contentuid="h3aaf2b53g7795g4fa1g9111gfe0a0f63d035" version="1">Wild Magic: Maximum Damage</content>
-	<content contentuid="h5dd2285cg4349g4e91g84c2gf163feb73f70" version="1">The next spell that hits does maximum damage.</content>
+	<content contentuid="h5dd2285cg4349g4e91g84c2gf163feb73f70" version="1">Your next spell that hits can deal maximum damage, at the cost of a &lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;reaction&lt;/LSTag&gt;.</content>
+	<content contentuid="hf2107c62g33c7g4785g9b3cgfee6fb236c67" version="1">Unleash the surge, causing your spell to deal maximum damage.</content>
 	<content contentuid="h5b4e767ag6647g4829ga608g8387c5ccca0d" version="1">Wild Magic: Static Shock</content>
 	<content contentuid="h97d9c295ge4cbg4fd4gbfdeg0298d2435981" version="1">You become charged with a massive amount of static electricity. When a creature hits you with a melee &lt;LSTag Tooltip="AttackRoll"&gt;attacks&lt;/LSTag&gt;, you deal [1] to them.</content>
 	<content contentuid="h0b736525g983ag4b79gb67bg891505c5b0fd" version="1">Wild Magic: Healed</content>

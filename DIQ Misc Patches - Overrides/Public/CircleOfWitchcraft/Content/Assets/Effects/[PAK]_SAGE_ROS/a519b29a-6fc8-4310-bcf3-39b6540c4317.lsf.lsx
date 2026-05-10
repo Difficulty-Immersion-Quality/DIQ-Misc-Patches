@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="8" revision="0" build="500" lslib_meta="v1,bswap_guids,lsf_keys_adjacency" />
+	<region id="VisualBank">
+		<node id="VisualBank">
+			<children>
+			<!-- Makes cauldrons look like ping buttplugs -->
+				<node id="Resource">
+					<!-- <attribute id="ID" type="FixedString" value="a519b29a-6fc8-4310-bcf3-39b6540c4317" />
+					<attribute id="Name" type="LSString" value="DEC_GEN_Kitchen_Pot_Cauldron_B_000" />
+					<attribute id="SourceFile" type="LSString" value="Generated/Public/CircleOfWitchcraft/DEC_GEN_Kitchen_Pot_Cauldron_B.GR2" />
+					<attribute id="Slot" type="FixedString" value="Unassigned" />
+					<attribute id="RemapperSlotId" type="FixedString" value="" />
+					<attribute id="AttachmentSkeletonResource" type="FixedString" value="" />
+					<attribute id="AttachBone" type="FixedString" value="" />
+					<attribute id="Template" type="FixedString" value="Generated/Public/CircleOfWitchcraft/DEC_GEN_Kitchen_Pot_Cauldron_B.Dummy_Root.0" />
+					<attribute id="SupportsVertexColorMask" type="bool" value="False" />
+					<attribute id="NeedsSkeletonRemap" type="bool" value="False" />
+					<attribute id="SkeletonResource" type="FixedString" value="" />
+					<attribute id="SoftbodyResourceID" type="FixedString" value="" />
+					<attribute id="HairPresetResourceId" type="FixedString" value="" />
+					<attribute id="ScalpMaterialId" type="FixedString" value="" />
+					<attribute id="SkeletonSlot" type="FixedString" value="" />
+					<attribute id="BlueprintInstanceResourceID" type="FixedString" value="" />
+					<attribute id="MaterialType" type="uint8" value="0" />
+					<attribute id="HairType" type="uint8" value="0" />
+					<attribute id="BoundsMin" type="fvec3" value="-0.270783 0.00018799999 -0.30164397" />
+					<attribute id="BoundsMax" type="fvec3" value="0.270783 0.62795836 0.2712681" />
+					<attribute id="ClothColliderResourceID" type="FixedString" value="" />
+					<children>
+						<node id="Objects">
+							<attribute id="ObjectID" type="FixedString" value="DEC_GEN_Kitchen_Pot_Cauldron_B.DEC_GEN_Kitchen_Pot_Cauldron_B_Mesh.0" />
+							<attribute id="MaterialID" type="FixedString" value="593a78b1-c38e-4d12-8eef-02b083a22151" />
+							<attribute id="LOD" type="uint8" value="0" />
+						</node>
+						<node id="Objects">
+							<attribute id="ObjectID" type="FixedString" value="DEC_GEN_Kitchen_Pot_Cauldron_B.DEC_GEN_Kitchen_Pot_Cauldron_B_Mesh_LOD1.1" />
+							<attribute id="MaterialID" type="FixedString" value="593a78b1-c38e-4d12-8eef-02b083a22151" />
+							<attribute id="LOD" type="uint8" value="1" />
+						</node>
+						<node id="Objects">
+							<attribute id="ObjectID" type="FixedString" value="DEC_GEN_Kitchen_Pot_Cauldron_B.DEC_GEN_Kitchen_Pot_Cauldron_B_Mesh_LOD2.2" />
+							<attribute id="MaterialID" type="FixedString" value="593a78b1-c38e-4d12-8eef-02b083a22151" />
+							<attribute id="LOD" type="uint8" value="2" />
+						</node>
+						<node id="AnimationWaterfall">
+							<attribute id="Object" type="FixedString" value="" />
+						</node>
+						<node id="ClothProxyMapping" />
+						<node id="Base" />
+					</children> -->
+				</node>
+			</children>
+		</node>
+	</region>
+</save>

@@ -1,0 +1,21 @@
+// ==================================== Extra Attack ====================================
+// Bug Fix: Prevent normal EA3 fucking with edge cases where an entity might have both it, and Chiz's EA3 for EK. (Highly unlikely scenario.)
+// TODO: Functions?
+// TODO: Maybe not do stinky overwrite like this in future.
+
+new entry "ExtraAttack_2"
+type "PassiveData"
+// using "ExtraAttack"
+using "ExtraAttack_2"
+// data "Conditions" "(context.HasContextFlag(StatsFunctorContext.OnCast) and ExtraAttackSpellCheck() and HasUseCosts('ActionPoint', true) and not Tagged('EXTRA_ATTACK_BLOCKED',context.Source) and not HasStatus('SLAYER_PLAYER',context.Source) and not HasStatus('SLAYER_PLAYER_10',context.Source) and TurnBased(context.Source)) or (context.HasContextFlag(StatsFunctorContext.OnStatusRemoved) and StatusId('INITIAL_ATTACK_TECHNICAL') and TurnBased()) or (context.HasContextFlag(StatsFunctorContext.OnStatusApplied) and StatusId('EXTRA_ATTACK_2_Q'))"
+data "Conditions" "(not HasPassive('ExtraAttack_2_EK') and not HasPassive('ExtraAttack_3_EK')) and (context.HasContextFlag(StatsFunctorContext.OnCast) and ExtraAttackSpellCheck() and HasUseCosts('ActionPoint', true) and not Tagged('EXTRA_ATTACK_BLOCKED',context.Source) and not HasStatus('SLAYER_PLAYER',context.Source) and not HasStatus('SLAYER_PLAYER_10',context.Source) and TurnBased(context.Source)) or (context.HasContextFlag(StatsFunctorContext.OnStatusRemoved) and StatusId('INITIAL_ATTACK_TECHNICAL') and TurnBased()) or (context.HasContextFlag(StatsFunctorContext.OnStatusApplied) and StatusId('EXTRA_ATTACK_2_Q'))"
+
+new entry "ExtraAttack_3"
+type "PassiveData"
+// using "ExtraAttack_2"
+using "ExtraAttack_3"
+// data "DisplayName" "he63a2c1ag91c1g43c8g9ed8gae8259444712;1"
+// data "Description" "h852450ffg190eg44c5g8843g5fb33d09b238;1"
+// data "Conditions" "(context.HasContextFlag(StatsFunctorContext.OnCast) and ExtraAttackSpellCheck() and HasUseCosts('ActionPoint', true) and not Tagged('EXTRA_ATTACK_BLOCKED',context.Source) and not HasStatus('SLAYER_PLAYER',context.Source) and not HasStatus('SLAYER_PLAYER_10',context.Source) and TurnBased(context.Source)) or (context.HasContextFlag(StatsFunctorContext.OnStatusRemoved) and StatusId('INITIAL_ATTACK_TECHNICAL') and TurnBased()) or (context.HasContextFlag(StatsFunctorContext.OnStatusApplied) and StatusId('EXTRA_ATTACK_3_Q'))"
+data "Conditions" "not HasPassive('ExtraAttack_3_EK') and (context.HasContextFlag(StatsFunctorContext.OnCast) and ExtraAttackSpellCheck() and HasUseCosts('ActionPoint', true) and not Tagged('EXTRA_ATTACK_BLOCKED',context.Source) and not HasStatus('SLAYER_PLAYER',context.Source) and not HasStatus('SLAYER_PLAYER_10',context.Source) and TurnBased(context.Source)) or (context.HasContextFlag(StatsFunctorContext.OnStatusRemoved) and StatusId('INITIAL_ATTACK_TECHNICAL') and TurnBased()) or (context.HasContextFlag(StatsFunctorContext.OnStatusApplied) and StatusId('EXTRA_ATTACK_3_Q'))"
+// data "StatsFunctors" "IF(((HasAnyHaste(context.Source) and not HasStatus('EXTRA_ATTACK_TRACKER', context.Source)) or (not HasAnyHaste(context.Source))) and context.HasContextFlag(StatsFunctorContext.OnCast)):ApplyStatus(SELF,EXTRA_ATTACK_3_Q,100,1);IF(((HasAnyHaste(context.Target) and not HasStatus('EXTRA_ATTACK_TRACKER')) or (not HasAnyHaste(context.Target))) and context.HasContextFlag(StatsFunctorContext.OnStatusRemoved)):ApplyStatus(EXTRA_ATTACK_3_Q,100,1);IF(context.HasContextFlag(StatsFunctorContext.OnStatusApplied) and not EXP_HasHigherPriorityExtraAttackQueued('EXTRA_ATTACK_3_Q') and not EXP_HasAnyExtraAttack()):ApplyStatus(EXTRA_ATTACK_3, 100, 1)"

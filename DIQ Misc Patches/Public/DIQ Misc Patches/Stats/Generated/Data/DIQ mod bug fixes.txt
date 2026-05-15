@@ -411,3 +411,27 @@ using "CSS_HelmArmory_Pass_ShieldHeal"
 // Landing an attack on a target heals allies for [1] in a [2] radius around you. This effect can only occur once per turn.
 data "Description" "h02da00cdgac67g45f4g8516g806b0ee900b7"
 // data "DescriptionParams" "RegainHitPoints(1d4);Distance(9)"
+
+// ==================================== Houndmaster Fighter Subclass ====================================
+// Bug Fix: The hound's Demoralizing Roar is no longer removed on the start of the target's turn.
+
+new entry "DEMORALIZING_ROAR"
+type "StatusData"
+data "StatusType" "BOOST"
+// using "PACK_HOWL_WOLF_DIRE"
+using "DEMORALIZING_ROAR"
+// Demoralizing Roar
+// data "DisplayName" "h0c9315aeg3299gb164g12f1gc0666ab63759;1"
+// Utterly demoralized by the monstrous roar of a war hound. Suffers &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on the next &lt;LSTag Tooltip="AttackRoll"&gt;attack roll&lt;/LSTag&gt;.
+// data "Description" "h633ad975g0015g7afdgc9fcg62c5fd00c3a9;3"
+// data "DescriptionParams" ""
+// data "Icon" "Action_Bear_GuardingRoar"
+// data "StillAnimationType" "Frightened"
+// data "StillAnimationPriority" "Frightened"
+// data "HitAnimationType" "MagicalDamage_Psychic"
+// data "StackId" "DEMORALIZING_ROAR"
+// data "TickType" ""
+data "TickType" "EndTurn"
+// data "Boosts" "Disadvantage(AttackRoll);"
+// data "RemoveEvents" "OnAttack"
+// data "StatusGroups" "SG_RemoveOnRespec"

@@ -1,0 +1,22 @@
+// Best in Party Skills: remove the stinky toggles for sleight of hand and sneaking... the script will still try to apply them, no very sophisticated of me but whatever.
+
+// new entry "CCO_Toggle_SleightOfHand"
+// type "PassiveData"
+// data "DisplayName" "h203e1f1bgabc4g26afg35c8g70ae608e3f5a;2"
+// data "Description" "h882ae486g2734g65f8g05e4ga1a967b809d3;5"
+// data "Icon" "iconSleightOfHand_CCO"
+// data "Properties" "IsToggled;ToggledDefaultAddToHotbar;ToggleForParty"
+// data "ToggleOnFunctors" "ApplyStatus(CCO_TOGGLE_SOH,100,-1)"
+// data "ToggleOffFunctors" "RemoveStatus(CCO_TOGGLE_SOH)"
+// data "ToggleGroup" "CCO_Toggle_SOH"
+
+// new entry "CCO_Toggle_Sneaking"
+// type "PassiveData"
+// data "DisplayName" "hcb78e42bg0562g21c9g6b74g022e08040a66;2"
+// data "Description" "hcd322d8dg0153gf2a9gfc6cgaf4ccb76f32d;6"
+// data "Icon" "iconStealth_CCO"
+// data "Properties" "IsToggled;ToggledDefaultAddToHotbar;ToggleForParty"
+// data "ToggleOnFunctors" "ApplyStatus(CCO_TOGGLE_SNEAK,100,-1)"
+// data "ToggleOffFunctors" "RemoveStatus(CCO_TOGGLE_SNEAK)"
+// data "ToggleGroup" "CCO_Toggle_Sneak"
+

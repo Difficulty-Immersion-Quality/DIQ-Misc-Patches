@@ -872,7 +872,9 @@ data "ProjectileCount" "1"
 data "Trajectories" "9a2a98bc-91aa-44fe-8c20-bc63264547a2"
 data "Icon" "Spell_Conjuration_IceKnife"
 data "RequirementConditions" "not HasStatus('MOD_LICH_BANE_COOLDOWN_TECHNICAL', context.Source)"
-data "DisplayName" "2488f5bb-1352-4faa-b569-e2fa06d783f2;1"
+// Lich's Bane
+data "DisplayName" "a34e7244-a103-4b84-9786-176ee17b92bf;1"
+// Cast a baleful frost upon your foe, applying &lt;LSTag Type="Status" Tooltip="MOD_SHIVERING_BLIGHT"&gt;Shivering Blight&lt;/LSTag&gt;. This merciless curse &lt;LSTag Type="Status" Tooltip="BLINDED"&gt;Blinds&lt;/LSTag&gt; and threatens to spread to the target's nearby allies with its cold embrace.
 data "Description" "ccbdf200-eba7-4b09-952b-9b9e251490a2;2"
 data "TooltipDamageList" "DealDamage(1d6+ProficiencyBonus,Cold)"
 data "TooltipAttackSave" "RangedSpellAttack"

@@ -84,33 +84,6 @@ using "MIND_WHIP_UNBLOCK"
 data "Boosts" "UnlockSpell(Shout_MindWhip_Unblock_Action);UnlockSpell(Shout_MindWhip_Unblock_BonusAction)"
 data "RemoveConditions" "SpellId('Shout_MindWhip_Unblock_Action') or SpellId('Shout_MindWhip_Unblock_BonusAction')"
 
-// ==================================== Power Hunger - Remove permanent HP buff from Ethel's Well, reverting them to vanilla ====================================
-
-new entry "HAG_WELL_GOOD"
-type "StatusData"
-data "StatusType" "BOOST"
-// Refreshed
-data "DisplayName" "h0b605d85g2b41g4ed0g8da4gcc420026fa11;1"
-// &lt;LSTag Tooltip="HitPoints"&gt;Hit point&lt;/LSTag&gt; maximum increased by 10 until the next Long Rest.
-data "Description" "ha939a997g35c3g4327g9669gbb729b3124a4;1"
-data "Icon" "statIcons_Refreshed"
-data "FormatColor" "Gold"
-data "StackId" "TEMPORARY_HP"
-data "StackPriority" "10"
-data "Boosts" "IncreaseMaxHP(10)"
-data "StatusPropertyFlags" "IgnoreResting"
-
-new entry "HAG_WELL_BAD"
-type "StatusData"
-data "StatusType" "BOOST"
-// Nauseated
-data "DisplayName" "h6a1092d0gad02g465egb335g175c25f2c89d;1"
-// Vulnerable to Psychic and Acid damage until next Long Rest.
-data "Description" "h09c67718g86e2g47abg9b69g8c7bfb650533;1"
-data "Icon" "statIcons_Nauseated"
-data "FormatColor" "PoisonGreen"
-data "Boosts" "Resistance(Psychic, Vulnerable);Resistance(Acid, Vulnerable)"
-
 // ==================================== Veenab's library - Swap "Gargantuan" for an integer value ====================================
 
 new entry "VBT_ENLARGE"

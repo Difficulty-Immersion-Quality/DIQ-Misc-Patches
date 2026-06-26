@@ -83,28 +83,3 @@ type "StatusData"
 using "MIND_WHIP_UNBLOCK"
 data "Boosts" "UnlockSpell(Shout_MindWhip_Unblock_Action);UnlockSpell(Shout_MindWhip_Unblock_BonusAction)"
 data "RemoveConditions" "SpellId('Shout_MindWhip_Unblock_Action') or SpellId('Shout_MindWhip_Unblock_BonusAction')"
-
-// ==================================== Veenab's library - Swap "Gargantuan" for an integer value ====================================
-
-new entry "VBT_ENLARGE"
-type "StatusData"
-data "StatusType" "BOOST"
-using "VBT_ENLARGE"
-// data "Boosts" "ObjectSize(Gargantuan);ScaleMultiplier(1.69);"
-data "Boosts" "ObjectSize(+1);ScaleMultiplier(1.69)"
-
-// ==================================== DIQ Armoury: Elven Weaponry - Paladin - Nerf the free Help action ====================================
-
-new entry "EW_BA_BlessedHand_Passive_I"
-using "EW_BA_BlessedHand_Passive_I"
-type "PassiveData"
-// data "Description" "h9673f37fgabecg4926gabc0gdd3118ce9ae8;1"
-data "Description" "h8dcb3690g0420g435bg88aeg0eb4ed7f34cc;1"
-// data "Boosts" "UnlockSpellVariant(SpellId('Target_Help'),ModifyUseCosts(Replace,ActionPoint,0,-1,ActionPoint))"
-data "Boosts" "UnlockSpellVariant(SpellId('Target_Help'),ModifyUseCosts(Replace,BonusActionPoint,1,0,ActionPoint))"
-
-new entry "EW_BA_BlessedHand_Passive_II"
-using "EW_BA_BlessedHand_Passive_II"
-type "PassiveData"
-// data "Description" "h465a8adfgcfb3g4fecgac27gaff9aaf74118;1"
-data "Description" "h027cfe16g350dg43c8gac97g46a6628b0384;1"

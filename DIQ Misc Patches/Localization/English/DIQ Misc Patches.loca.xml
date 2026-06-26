@@ -26,12 +26,6 @@
 	<!-- Changing Bloodless for friendlies --> 
 	<!-- GOON_ASTARION_WEAK_FRIENDLY --> <content contentuid="h03ca14d9g0ca8g41d7g8bcfg6ea42fd5705f" version="1">Blood Donor</content>
 	<!-- GOON_ASTARION_WEAK_FRIENDLY --> <content contentuid="h9b7c1291g114dg4269gba95g59b4193d84b4" version="1">You feel a bit woozy, though you'd feel a lot worse were the feeding involuntary.</content>
-	
-<!-- ==================================== Elven Weaponry Paladin ==================================== -->
-	<!-- "" -->
-	<content contentuid="h8dcb3690g0420g435bg88aeg0eb4ed7f34cc" version="1">The wearer can use &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Help&lt;/LSTag&gt; as a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt;.</content>
-	<!-- "" -->
-	<content contentuid="h027cfe16g350dg43c8gac97g46a6628b0384" version="1">The wearer can use &lt;LSTag Type="Spell" Tooltip="Target_Help"&gt;Help&lt;/LSTag&gt; as a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;Bonus Action&lt;/LSTag&gt; and they and their allies within [1] gain &lt;LSTag Type="Status" Tooltip="EW_BA_STATUS_BLESS"&gt;Bless&lt;/LSTag&gt;. This can stack with other sources of &lt;LSTag Type="Status" Tooltip="BLESS"&gt;Bless&lt;/LSTag&gt;.</content>
 
 <!-- ==================================== Heavy Armour Impedes Movement RAW (HeavyArmorMoveSpeed_SE) ==================================== -->
 	<!-- "IsWearingHeavyArmor_13" -->

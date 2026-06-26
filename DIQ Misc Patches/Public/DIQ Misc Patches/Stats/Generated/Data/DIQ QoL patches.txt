@@ -39,32 +39,6 @@ data "StatusEffect" "a0f74dff-7074-45aa-a4d2-a131d7f328f5"
 data "SoundLoop" "Misc_Status_Bloodeless_MO"
 data "SoundStop" "Misc_Status_Bloodeless_MO_Stop"
 
-// ==================================== Wifi Potions - Add "data "DefaultBoosts" "Tag(NOSORT)"" for exclusion from Simple Sorting Containers ====================================
-
-new entry "FallenStar_Wifi_Healing_Potion_Small"
-type "Object"
-using "FallenStar_Wifi_Healing_Potion_Small"
-// data "DefaultBoosts" "CriticalHit(AttackTarget,Failure,Never);CriticalHit(AttackTarget,Success,Never)"
-data "DefaultBoosts" "CriticalHit(AttackTarget,Failure,Never);CriticalHit(AttackTarget,Success,Never);Tag(NOSORT)"
-
-new entry "FallenStar_Wifi_Healing_Potion_Greater"
-type "Object"
-using "FallenStar_Wifi_Healing_Potion_Greater"
-// data "DefaultBoosts" "CriticalHit(AttackTarget,Failure,Never);CriticalHit(AttackTarget,Success,Never)"
-data "DefaultBoosts" "CriticalHit(AttackTarget,Failure,Never);CriticalHit(AttackTarget,Success,Never);Tag(NOSORT)"
-
-new entry "FallenStar_Wifi_Healing_Potion_Superior"
-type "Object"
-using "FallenStar_Wifi_Healing_Potion_Superior"
-// data "DefaultBoosts" "CriticalHit(AttackTarget,Failure,Never);CriticalHit(AttackTarget,Success,Never)"
-data "DefaultBoosts" "CriticalHit(AttackTarget,Failure,Never);CriticalHit(AttackTarget,Success,Never);Tag(NOSORT)"
-
-new entry "FallenStar_Wifi_Healing_Potion_Supreme"
-type "Object"
-using "FallenStar_Wifi_Healing_Potion_Supreme"
-// data "DefaultBoosts" "CriticalHit(AttackTarget,Failure,Never);CriticalHit(AttackTarget,Success,Never)"
-data "DefaultBoosts" "CriticalHit(AttackTarget,Failure,Never);CriticalHit(AttackTarget,Success,Never);Tag(NOSORT)"
-
 // ==================================== Necromancy of Thay - Remove "Attribute(InventoryBound)" - Also removed "data "DefaultBoosts" "Tag(NOSORT)"" for inclusion with Simple Sorting Containers ====================================
 
 new entry "FOR_DANGEROUSBOOK_BOUNDTO"
@@ -213,6 +187,8 @@ using "GLO_Jergal"
 data "DefaultBoosts" "ProficiencyBonus(SavingThrow, Wisdom);BlockRegainHP(Living;Construct);Tag(BLOCK_PICKPOCKET)"
 // data "PersonalStatusImmunities" "KNOCKED_OUT;SG_Charmed;SG_Frightened;SG_Poisoned;PARALYZED;STUNNED"
 // data "Passives" "AttackOfOpportunity;DarknessRules;ImmuneToControlUndead"
+
+// TODO: Aylin and Raphael?
 
 // ==================================== Speak with Dead ====================================
 // Changes: can speak with fucked corpses.

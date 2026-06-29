@@ -1,6 +1,9 @@
 // ==================================== Impactful Backgrounds ====================================
 // Changes: Revenge only triggers when Durge would actually be downed, not just pulled out of a polymorph.
-// TODO: Test
+// TODO: Confirm it to be the working.
+
+// data "BoostContext" "OnDamaged"
+// data "BoostConditions" "not Goon_IsRestrictedPolymorphStatus()"
 
 new entry "LHB_IB_HAUNTEDONE_REVENGE"
 type "StatusData"
@@ -13,7 +16,7 @@ using "LHB_IB_HAUNTEDONE_REVENGE"
 // data "DescriptionParams" "RegainHitPoints(Level)"
 // data "Icon" "Action_Monster_Slayer_Slam"
 // data "StackId" "LHB_IB_HAUNTEDONE_REVENGE"
-data "BoostConditions" "not Goon_IsRestrictedPolymorphStatus()"
 // data "Boosts" "DownedStatus(LHB_IB_HAUNTEDONE_REVENGE_DOWNED,7)"
+data "Boosts" "IF(not Goon_IsRestrictedPolymorphStatus()):DownedStatus(LHB_IB_HAUNTEDONE_REVENGE_DOWNED,7)"
 // data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
 // data "Passives" "LHB_IB_HauntedOne_Revenge"

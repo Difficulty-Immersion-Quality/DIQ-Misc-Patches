@@ -16,3 +16,22 @@ new treasuretable "SimpleSortingBags_TT"
 CanMerge 1
 new subtable "1,1"
 object category "I_SimpleSortingBagsTrinket",1,0,0,0,0,0,0,0
+
+// Bug: She can sell big potions.
+// new treasuretable "CRE_GithQuartermistress_Trade"
+// new subtable "1,1"
+// object category "T_Gold_Trader_Normal",1,0,0,0,0,0,0,0
+// new subtable "3,1;4,1"
+// object category "PotionHealing",1,0,0,0,0,0,0,0
+// new subtable "1,1"
+// object category "T_EquipmentTrader_Melee",1,0,0,0,0,0,0,0
+// new subtable "1,1"
+// object category "T_EquipmentTrader_BodyArmor",1,0,0,0,0,0,0,0
+// new subtable "1,1"
+// object category "T_EquipmentTrader_Ranged",1,0,0,0,0,0,0,0
+// new subtable "8,1"
+// object category "T_ST_SpecialArrow",1,0,0,0,0,0,0,0
+// new subtable "1,1"
+// object category "T_CRE_Supplies_Gith_Trader",1,0,0,0,0,0,0,0
+// new subtable "1,1"
+// object category "T_EquipmentTrader_RevivifyScrolls",1,0,0,0,0,0,0,0

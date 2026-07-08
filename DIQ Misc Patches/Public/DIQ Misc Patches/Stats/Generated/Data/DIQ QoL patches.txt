@@ -4,9 +4,9 @@ new entry "ASTARION_WEAK"
 type "StatusData"
 data "StatusType" "BOOST"
 using "ASTARION_WEAK"
-// Bloodless
+// // Bloodless
 // data "DisplayName" "h75bb76f6g44a5g4897g85ddg5c78bae1190b;1"
-// Feels a bit woozy. -1 to &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;, &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;, and most &lt;LSTag Tooltip="AbilityCheck"&gt;Ability Checks&lt;/LSTag&gt;.
+// // Feels a bit woozy. -1 to &lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt;, &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt;, and most &lt;LSTag Tooltip="AbilityCheck"&gt;Ability Checks&lt;/LSTag&gt;.
 // data "Description" "hc728060eg9aa6g46a7g987bg03664e5ec80a;1"
 // data "Icon" "Status_Astarion_Weak"
 // data "SoundLoop" "Misc_Status_Bloodeless_MO"
@@ -22,11 +22,10 @@ data "StatusEffect" ""
 new entry "GOON_ASTARION_WEAK_FRIENDLY"
 type "StatusData"
 data "StatusType" "BOOST"
-// Blood Donor
+// // Blood Donor
 data "DisplayName" "h03ca14d9g0ca8g41d7g8bcfg6ea42fd5705f;1"
-// You feel a bit woozy, though you'd feel a lot worse were the feeding involuntary.
+// // You feel a bit woozy, though you'd feel a lot worse were the feeding involuntary.
 data "Description" "h9b7c1291g114dg4269gba95g59b4193d84b4;1"
-// data "OnApplyFunctors" "ApplyStatus(GOON_ASTARION_WEAK_FRIENDLY,100,-1)"
 data "OnApplyFunctors" "ApplyStatus(GOON_ASTARION_WEAK_FRIENDLY_FX,100,1)"
 data "StackId" "ASTARION_WEAK"
 data "StackPriority" "2"

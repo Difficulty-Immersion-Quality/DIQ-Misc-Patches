@@ -6,6 +6,26 @@
 // // TODO: Grapple AoO.
 // // TODO: Weapon action AoO interrupts?
 
+// // Version 1 is not hopeless from some quick testing, but it's too early to say, and I really need to eat.
+
+// // If you want to play with it, change 
+// // new entry "Interrupt_UAWC_Common"
+// // data "InterruptContext" "OnLeaveAttackRange;OnPostRoll"
+
+// // Then try to find a way for DWE_UAWarCaster_Conditions_Self to detect the context it's in and branch on it. My first attempt would be checking the roll type to see if it's anything valid at all.
+
+// function DWE_UAWarCaster_Conditions_Self(range, bladeCantrip)
+// 	local source = context.Source
+// 	local observer = context.Observer
+
+// 	local result = Self(source, observer)
+// 	if not result.Result then
+// 		return result
+// 	end
+
+// 	return DWE_UAWarCaster_Conditions_Common()
+// end
+
 // new entry "AttackOfOpportunity"
 // type "PassiveData"
 // using "AttackOfOpportunity"

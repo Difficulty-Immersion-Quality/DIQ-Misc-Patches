@@ -1,11 +1,14 @@
 // =========================== Spider's Bane ===========================
 // Bug Fix: Free Action now ignores all Difficult Terrain as is implied in the the description.
 // Changes: Free Action now functions while under the effects of non-humanoid polymorphs.
+// Changes: Now has regular greatsword weapon actions.
+// Changes: +1 weapon instead of +2.
 // TODO: Template.
 
 new entry "UNI_SpidersBane"
 type "Weapon"
 // using "WPN_Greatsword_2"
+using "WPN_Greatsword_1"
 // data "RootTemplate" "cf34f344-06e8-4dce-83aa-6565de093a12"
 data "RootTemplate" "cf34f344-06e8-4dce-83aa-6565de093a12"
 // data "ValueUUID" "81764c3c-c7a9-49a7-b145-d31ffd5aebe1"

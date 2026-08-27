@@ -28,7 +28,7 @@ data "OnApplyFunctors" "BreakConcentration();RemoveStatus(MAG_FROST)"
 data "OnRemoveFunctors" "CreateExplosion(Projectile_Levistus_Shockwave);RemoveStatus(WARLOCK_TOMB_TEMP_HP)"
 data "StatusEffect" "62318bbf-d36a-497c-91a4-bda8f7fb7af7"
 
-new entry "MOD_RIMEBOUND_STUN
+new entry "MOD_RIMEBOUND_STUN"
 type "StatusData"
 data "StatusType" "INCAPACITATED"
 using "HOLD_PERSON"

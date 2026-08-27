@@ -29,3 +29,4 @@ data "OnApplyFunctors" "RemoveStatus(MOD_DIVINE_BLESSING);RegainHitPoints(1,Guar
 data "StatusGroups" "SG_Incapacitated"
 data "ApplyEffect" "5508ea40-3f23-436d-980d-0b8143f6e2f3"
 data "HideOverheadUI" "1"
+

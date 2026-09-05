@@ -9375,8 +9375,9 @@ data "Icon" "PassiveFeature_StalkersFlurry"
 data "DescriptionParams" "5;DealDamage(2d10, Force)"
 data "StackType" "Ignore"
 data "RemoveConditions" "((IsAttack()) or (IsSpell())) and (IsHit()) and not (IsCriticalMiss() or IsMiss())"
-data "Boosts" "IF(IsAttack()):DamageBonus(2d10, Force, false);IF(IsAttack()):RollBonus(Attack, 5);StatusImmunity(MOD_KILLER_INSTINCT_BONUS)"
+data "Boosts" "IF(IsAttack()):RollBonus(Attack, 5);StatusImmunity(MOD_KILLER_INSTINCT_BONUS)"
 data "RemoveEvents" "OnAttack"
+data "Passives" "Mod_Killer_Instinct_Damage_Bonus"
 data "OnApplyFunctors" "RemoveStatus(MOD_KILLER_INSTINCT_BONUS);ApplyStatus(MOD_KILLER_INSTINCT_SECONDARY_BONUS_VFX,100,-1)" 
 data "StatusEffect" "f86fa70a-3b45-4d97-9d15-62fbc417b369"
 
@@ -12378,5 +12379,3 @@ data "DisplayName" ""
 data "Description" ""
 data "RemoveConditions" "not Combat()"
 data "RemoveEvents" "OnCombatEnded"
-
-

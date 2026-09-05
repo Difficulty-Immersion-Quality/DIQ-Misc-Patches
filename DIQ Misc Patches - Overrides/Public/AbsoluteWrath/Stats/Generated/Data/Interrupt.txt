@@ -97,6 +97,7 @@ new entry "Mod_Interrupt_TheDueller_WitheringCut"
 type "InterruptData"
 // using "Interrupt_Smite_Divine"
 using "Interrupt_TheDueller_WitheringCut"
+data "DisplayName" "fb9e3948-d585-44eb-8257-bf0b0de6ad19;1"
 // When you hit a creature with melee weapon, you can spend a reaction to deal additional Necrotic damage equal to your &lt;LSTag Tooltip="ProficiencyBonus"&gt;Proficiency Bonus&lt;/LSTag&gt;.
 // data "Description" "h5ea742a7g0d9cg447cga012g95679912ce86;1"
 // When you hit a creature, you can spend a &lt;LSTag Type="ActionResource" Tooltip="ReactionActionPoint"&gt;Reaction&lt;/LSTag&gt; to deal additional[1] equal to your &lt;LSTag Tooltip="ProficiencyBonus"&gt;Proficiency Bonus&lt;/LSTag&gt;.

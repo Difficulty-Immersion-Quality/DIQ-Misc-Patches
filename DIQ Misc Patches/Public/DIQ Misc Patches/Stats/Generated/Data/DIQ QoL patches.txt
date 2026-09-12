@@ -127,22 +127,6 @@ data "SpellSuccess" "ApplyStatus(SELF, OFF_BALANCED,100,1)"
 // data "Sheathing" "DontChange"
 // data "SpellFlags" "None"
 
-// ==================================== Animate Dead Plus Plus & Automated Summons - Make all the toggles pop up together for consistency and less people asking how to get their Automate Summons back "I only have Undead Automation" etc. ====================================
-
-new entry "SHORT_REST"
-type "StatusData"
-data "StatusType" "BOOST"
-using "SHORT_REST"
-data "OnApplyFunctors" "IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES')):ApplyStatus(SAILORCAT_ADPP_PASSIVES,100,-1);IF(Player() and Tagged('PLAYABLE') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES_AUX')):ApplyStatus(SAILORCAT_ADPP_PASSIVES_AUX,100,-1);IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_AUTOMATED_SUMMONS_PASSIVES')):ApplyStatus(SAILORCAT_AUTOMATED_SUMMONS_PASSIVES,100,-1)"
-data "OnRemoveFunctors" "IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES')):ApplyStatus(SAILORCAT_ADPP_PASSIVES,100,-1);IF(Player() and Tagged('PLAYABLE') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES_AUX')):ApplyStatus(SAILORCAT_ADPP_PASSIVES_AUX,100,-1);IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_AUTOMATED_SUMMONS_PASSIVES')):ApplyStatus(SAILORCAT_AUTOMATED_SUMMONS_PASSIVES,100,-1)"
-
-new entry "NON_LETHAL"
-type "StatusData"
-data "StatusType" "BOOST"
-using "NON_LETHAL"
-data "OnApplyFunctors" "IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES')):ApplyStatus(SAILORCAT_ADPP_PASSIVES,100,-1);IF(Player() and Tagged('PLAYABLE') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES_AUX')):ApplyStatus(SAILORCAT_ADPP_PASSIVES_AUX,100,-1);IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_AUTOMATED_SUMMONS_PASSIVES')):ApplyStatus(SAILORCAT_AUTOMATED_SUMMONS_PASSIVES,100,-1)"
-data "OnRemoveFunctors" "IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES')):ApplyStatus(SAILORCAT_ADPP_PASSIVES,100,-1);IF(Player() and Tagged('PLAYABLE') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_ADPP_PASSIVES_AUX')):ApplyStatus(SAILORCAT_ADPP_PASSIVES_AUX,100,-1);IF(Player() and Tagged('PLAYABLE') and Tagged('AVATAR') and not Tagged('SUMMON') and not Summon() and not HasStatus('SAILORCAT_AUTOMATED_SUMMONS_PASSIVES')):ApplyStatus(SAILORCAT_AUTOMATED_SUMMONS_PASSIVES,100,-1)"
-
 // ==================================== Carry capacity and gold weight changes ====================================
 // Commented out, gonna leave it vanilla and see if other systems can actually make it interesting. But getting rid of gold weight is a pretty decent little qol in a world where carry cap matters
 

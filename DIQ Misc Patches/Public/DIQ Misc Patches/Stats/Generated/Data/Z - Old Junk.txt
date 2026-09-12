@@ -1,0 +1,442 @@
+// ==================================== Impactful Backgrounds ====================================
+// Changes: Revenge only triggers when Durge would actually be downed, not just pulled out of a polymorph.
+// TODO: Confirm it to be the working.
+
+// data "BoostContext" "OnDamaged"
+// data "BoostConditions" "not Goon_IsRestrictedPolymorphStatus()"
+
+new entry "LHB_IB_HAUNTEDONE_REVENGE"
+type "StatusData"
+data "StatusType" "BOOST"
+using "LHB_IB_HAUNTEDONE_REVENGE"
+// Haunted One - Revenge
+// data "DisplayName" "LHB_IB_HauntedOne_Name;1"
+// When you are reduced to 0 &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt;, you immediately regain [1] and are compelled to attack the creature that killed you for 3 turns or until it dies.
+// data "Description" "LHB_IB_HauntedOne_Description;1"
+// data "DescriptionParams" "RegainHitPoints(Level)"
+// data "Icon" "Action_Monster_Slayer_Slam"
+// data "StackId" "LHB_IB_HAUNTEDONE_REVENGE"
+// data "Boosts" "DownedStatus(LHB_IB_HAUNTEDONE_REVENGE_DOWNED,7)"
+data "Boosts" "IF(not Goon_IsRestrictedPolymorphStatus()):DownedStatus(LHB_IB_HAUNTEDONE_REVENGE_DOWNED,7)"
+// data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+// data "Passives" "LHB_IB_HauntedOne_Revenge"
+
+// ==================================== Bad inheritence ====================================
+
+new entry "Target_EruptingBlades"
+type "SpellData"
+data "SpellType" "Target"
+// using "Target_SneakAttack"
+using "Target_EruptingBlades"
+// data "AreaRadius" "6"
+// data "RequirementConditions" "WieldingFinesseWeaponInSpecificHand(context.Source,false) and HasActionResource('SneakAttack_Charge',1,0,false,false,context.Source) and HasActionResource('DivinePoint',1,0,false,false,context.Source) "
+// data "SpellRoll" "not SavingThrow(Ability.Dexterity, SourceSpellDC())"
+// data "SpellSuccess" "DealDamage(WisdomModifier+ LevelMapValue(SneakAttack)/2, Radiant);ExecuteWeaponFunctors(MainHand)"
+// data "SpellFail" "DealDamage((WisdomModifier+ LevelMapValue(SneakAttack)/2)/2, Radiant);ExecuteWeaponFunctors(MainHand)"
+// data "Icon" "Action_EruptingBlades"
+// data "DisplayName" "hd70e8d8bg5c3fg63a6g7b9ag6bb37dd48f02;1"
+// data "Description" "h08e909a4ge1b3ge56eg2e53gad298a30cda9;4"
+// data "DescriptionParams" "Distance(6);DealDamage(WisdomModifier+ LevelMapValue(SneakAttack)/2, Radiant)"
+// data "ExtraDescription" "h44bac007g4e1ag2ac1g2366g63df4ba2ae56;1"
+// data "TooltipDamageList" "DealDamage(WisdomModifier+ LevelMapValue(SneakAttack)/2, Radiant)"
+// data "TooltipAttackSave" "Dexterity"
+// data "TooltipOnSave" "f762efbb-f8f1-493e-b248-2de1567b4bd2"
+// data "CastSound" "Spell_Cast_Damage_Radiant_SacredFlame_L1to3"
+// data "TargetSound" "Spell_Impact_Damage_Radiant_SacredFlame_L1to3"
+// data "PreviewCursor" "Cast"
+// data "UseCosts" "ActionPoint:1;SneakAttack_Charge:1;DivinePoint:1"
+data "HitCosts" ""
+// data "WeaponTypes" "Melee"
+// data "SpellFlags" "IsMelee;IsHarmful"
+// data "HitAnimationType" "MagicalDamage_External"
+// data "PrepareEffect" "3dd8cb62-d04e-449c-bd94-ed59f472ec5a"
+// data "CastEffect" "bced542c-867a-46e2-a2aa-e652db749c61"
+// data "TargetEffect" "3a1161a5-ecfe-40f1-ac2a-c75a5e4d147e"
+// data "HitEffect" "3f463e65-07d8-4ece-92fb-0a82cb1d8678"
+// data "PositionEffect" "654c176c-5a37-447b-a634-e0ef114f77ed"
+// data "DamageType" "Radiant"
+// data "SpellSoundMagnitude" "Big"
+
+// ========================= Lathander's Armory fixes ================================== 
+
+// Fixes the Lathander's Crest trinket, having it heal properly
+
+// Add technical status to armour to track the wearer
+new entry "CSS_LATHANDER_CREST_TRINKET"
+type "Armor"
+// using "_Amulet_Magic"
+using "CSS_LATHANDER_CREST_TRINKET"
+data "StatusOnEquip" "LATHANDER_SURGEOFLIGHT_TECHNICAL"
+
+// Passive only gives 3 hit points to entity that has the technical status. SELF parameter removed from RegainHitPoints()
+new entry "CSS_Lathander_Pass_SurgeOfLight"
+type "PassiveData"
+using "CSS_Lathander_Pass_SurgeOfLight"
+// data "Conditions" "HasStatus('LATHANDER_SURGEOFLIGHT_TECHNICAL', context.Target)"
+data "Conditions" "(Character() and not Self()) or AreaRadiusGreaterThan(1)"
+// data "StatsFunctors" "IF(not HasStatus('MAG_HEAL_SELF_ONCE_TECHNICAL', context.Source)):RegainHitPoints(SELF,3);ApplyStatus(SELF, MAG_HEAL_SELF_ONCE_TECHNICAL, 100, 0)"
+data "StatsFunctors" "IF(not HasStatus('MAG_HEAL_SELF_ONCE_TECHNICAL', context.Source)):RegainHitPoints(3);ApplyStatus(SELF, MAG_HEAL_SELF_ONCE_TECHNICAL, 100, 0)"
+
+// New technical status
+new entry "LATHANDER_SURGEOFLIGHT_TECHNICAL"
+type "StatusData"
+data "StatusType" "BOOST"
+data "StackId" "LATHANDER_SURGEOFLIGHT_TECHNICAL"
+data "StatusPropertyFlags" "DisableOverhead;DisableCombatlog;DisablePortraitIndicator;ApplyToDead;IgnoreResting"
+
+// tooltip clarification for Aegis of the Aster's Spell Save DC
+// Replaces +1 spell save DC in Boosts with the existing High Spellcasting passive in PassivesOnEquip
+new entry "CSS_WPN_LATHANDER_GRDOFATH_A"
+type "Armor"
+using "CSS_WPN_LATHANDER_GRDOFATH_A"
+data "Boosts" "Advantage(SavingThrow, Dexterity)"
+data "PassivesOnEquip" "MAG_ShieldRiposte_Passive;CSS_Lathander_Pass_BalduHeal;MAG_SpellSaveDC_Enchantment_Lesser_Passive"
+
+// ILLUMINATED SHIT SHOULD WORK NOW
+new entry "CSS_Lathander_Pass_IlluminateAC" 
+type "PassiveData"
+// using "ARM_Shield_1"
+using "CSS_Lathander_Pass_IlluminateAC" 
+data "BoostContext" "OnObscurityChanged;OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
+data "BoostConditions" "HasObscuredState(ObscuredState.Clear,context.Source)"
+// data "Boosts" "Advantage(SavingThrow, Dexterity);SpellSaveDC(1)"
+data "Boosts" "AC(1)"
+
+new entry "CSS_Lathander_Pass_IlluminateConc" 
+type "PassiveData"
+using "CSS_Lathander_Pass_IlluminateConc" 
+// data "StatsFunctorContext" "OnObscurityChanged;OnCreate"
+data "StatsFunctorContext" ""
+data "BoostContext" "OnObscurityChanged;OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
+// data "BoostConditions" "IF(HasObscuredState(ObscuredState.Clear, context.Source))"
+data "BoostConditions" "HasObscuredState(ObscuredState.Clear,context.Source)"
+
+new entry "CSS_Lathander_Pass_IlluminateConc2" 
+type "PassiveData"
+using "CSS_Lathander_Pass_IlluminateConc2"
+// data "StatsFunctorContext" "OnObscurityChanged;OnCreate"
+data "StatsFunctorContext" ""
+data "BoostContext" "OnObscurityChanged;OnEquip;OnCreate;OnAttacked;OnMovedDistance;OnStatusApplied;OnStatusRemoved"
+// data "BoostConditions" "IF(not HasObscuredState(ObscuredState.Clear, context.Source))"
+data "BoostConditions" "not HasObscuredState(ObscuredState.Clear,context.Source)"
+
+// ApplyStatus(TURNED, 100, 3) needs to have SWAP as the first parameter as otherwise it turns yourself lmao
+new entry "CSS_Lathy_Pass_HolyRebuked"
+type "PassiveData"
+using "CSS_Lathy_Pass_HolyRebuked"
+data "Conditions" "IsMeleeAttack() and HasDamageEffectFlag(DamageFlags.Hit) and (Tagged('UNDEAD', context.Target))"
+// data "StatsFunctors" "ApplyStatus(TURNED, 100, 3)"
+data "StatsFunctors" "ApplyStatus(SWAP,TURNED, 100, 3)"
+
+// ==================================== Helm's Armoury fixes ====================================
+// Fixes Faithguard +2 AC remaining on target even if they no longer have Shield of Faith
+
+new entry "CSS_HelmArmory_Pass_Faithguard"
+type "PassiveData"
+using "CSS_HelmArmory_Pass_Faithguard"
+// // data "Description" "h05537877g5021g472dgbb5aga7e3c95f2f5a;1"
+// You gain an additional +[1] to &lt;LSTag Tooltip="ArmourClass"&gt;Armour Class&lt;/LSTag&gt; when &lt;LSTag Type="Status" Tooltip="SHIELD_OF_FAITH"&gt;Shield of Faith&lt;/LSTag&gt; is active.
+data "Description" "h5259232cg94bcg4f1fg86cag49bd2775aea0"
+// data "DescriptionParams" "2"
+data "StatsFunctors" "ApplyStatus(HELMARMORY_FAITHGUARD,100,-1)"
+// data "Boosts" "AC(2)"
+data "Boosts" ""
+
+// New status
+new entry "HELMARMORY_FAITHGUARD"
+type "StatusData"
+data "StatusType" "BOOST"
+data "DisplayName" "h96487335ga28eg4d11ga040g3988f3187acc;1"
+data "Description" "h433f9e7cg1f4dg4680ga58ag1299b22eca8e;1"
+data "DescriptionParams" "2"
+data "Icon" "Spell_Abjuration_ShieldOfFaith"
+data "StackId" "HELM_FAITHGUARD"
+data "StackType" ""
+data "Boosts" "AC(2)"
+data "Passives" ""
+data "RemoveConditions" "StatusId('SHIELD_OF_FAITH')"
+data "RemoveEvents" "OnStatusRemoved"
+
+// Additional loca changes
+
+new entry "CSS_HelmArmor_Pass_DivineVigilance"
+type "PassiveData"
+using "CSS_HelmArmor_Pass_DivineVigilance"
+// data "Description" "hd83228eagef0ag4a52gb1e1g7f9b3d4256fb;1"
+// You gain a +3 bonus to Initiative Rolls and have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on Perception &lt;LSTag Tooltip="AbilityCheck"&gt;Checks&lt;/LSTag&gt;.
+data "Description" "ha910c197g7b7ag443dga5cagace2a219dde8"
+
+new entry "CSS_HelmArmor_Pass_Weavebane"
+type "PassiveData"
+using "CSS_HelmArmor_Pass_Weavebane"
+// data "Description" "hee585df0g25c1g412dg84d4gfbdc30b31a36;1"
+// You have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; on &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throws&lt;/LSTag&gt; against spells. This weapon deals an additional [1] to targets &lt;LSTag Tooltip="Concentration"&gt;Concentrating&lt;/LSTag&gt; on a spell.
+data "Description" "h26e9271ag521dg49begb54eg511971cdde17"
+// data "DescriptionParams" "DealDamage(1d6,Force)"
+
+new entry "CSS_HelmArmory_Pass_ShieldHeal"
+type "PassiveData"
+using "CSS_HelmArmory_Pass_ShieldHeal"
+// data "Description" "h321e8eddg3384g4f8cg9088g1e21f99936ec"
+// Landing an attack on a target heals allies for [1] in a [2] radius around you. This effect can only occur once per turn.
+data "Description" "h02da00cdgac67g45f4g8516g806b0ee900b7"
+// data "DescriptionParams" "RegainHitPoints(1d4);Distance(9)"
+
+// ==================================== Houndmaster Fighter Subclass ====================================
+// Bug Fix: The hound's Demoralizing Roar is no longer removed on the start of the target's turn.
+
+new entry "DEMORALIZING_ROAR"
+type "StatusData"
+data "StatusType" "BOOST"
+// using "PACK_HOWL_WOLF_DIRE"
+using "DEMORALIZING_ROAR"
+// Demoralizing Roar
+// data "DisplayName" "h0c9315aeg3299gb164g12f1gc0666ab63759;1"
+// Utterly demoralized by the monstrous roar of a war hound. Suffers &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt; on the next &lt;LSTag Tooltip="AttackRoll"&gt;attack roll&lt;/LSTag&gt;.
+// data "Description" "h633ad975g0015g7afdgc9fcg62c5fd00c3a9;3"
+// data "DescriptionParams" ""
+// data "Icon" "Action_Bear_GuardingRoar"
+// data "StillAnimationType" "Frightened"
+// data "StillAnimationPriority" "Frightened"
+// data "HitAnimationType" "MagicalDamage_Psychic"
+// data "StackId" "DEMORALIZING_ROAR"
+// data "TickType" ""
+data "TickType" "EndTurn"
+// data "Boosts" "Disadvantage(AttackRoll);"
+// data "RemoveEvents" "OnAttack"
+// data "StatusGroups" "SG_RemoveOnRespec"
+
+// ==================================== Trying to make 5E Spells' Mind Whip not empty AI brains on to the floor when it has to pick between moving or attacking ====================================
+// Needs testing for QA
+// TODO: Integrate with my spell overhaul, redo entries.
+
+new entry "Target_TashasMindWhip"
+type "SpellData"
+data "SpellType" "Target"
+using "Target_TashasMindWhip"
+data "Description" "h35ddfb4bge571g48ebg8ad6gda948d6de5b6"
+data "Level" "2"
+data "SpellSchool" "Enchantment"
+data "TargetRadius" "18"
+data "SpellRoll" "not SavingThrow(Ability.Intelligence, SourceSpellDC())"
+data "SpellSuccess" "DealDamage(3d6, Psychic, Magical);AI_IGNORE:IF(Player() or Ally()):ApplyStatus(MIND_WHIP,100,1);AI_IGNORE:IF(not Player() and Enemy()):ApplyStatus(MIND_WHIP_ENEMY,100,1);AI_ONLY:ApplyStatus(STUNNED,100,1)"
+
+new entry "MIND_WHIP"
+type "StatusData"
+using "MIND_WHIP"
+data "Description" "h61f58e4dg5857g4303g8a98g8ef045af5464"
+data "OnApplyFunctors" "ApplyStatus(MIND_WHIP_ACTION_BLOCK,100,1);ApplyStatus(MIND_WHIP_BONUS_ACTION_BLOCK,100,1);ApplyStatus(MIND_WHIP_UNBLOCK,100,1)"
+
+new entry "MIND_WHIP_ACTION_BLOCK"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MIND_WHIP_ACTION_BLOCK"
+data "Boosts" "ActionResourceBlock(ActionPoint);ActionResourceBlock(Movement)"
+data "OnApplyFunctors" "RestoreResource(ActionPoint,100%,0);RestoreResource(Movement,100%,0)"
+data "TickType" "EndTurn"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
+
+new entry "MIND_WHIP_BONUS_ACTION_BLOCK"
+type "StatusData"
+data "StatusType" "BOOST"
+using "MIND_WHIP_BONUS_ACTION_BLOCK"
+data "Boosts" "ActionResourceBlock(BonusActionPoint);ActionResourceBlock(Movement)"
+data "TickType" "EndTurn"
+data "StatusPropertyFlags" "DisableCombatlog;DisableOverhead;DisablePortraitIndicator"
+
+new entry "MIND_WHIP_UNBLOCK"
+type "StatusData"
+using "MIND_WHIP_UNBLOCK"
+data "Boosts" "UnlockSpell(Shout_MindWhip_Unblock_Action);UnlockSpell(Shout_MindWhip_Unblock_BonusAction)"
+data "RemoveConditions" "SpellId('Shout_MindWhip_Unblock_Action') or SpellId('Shout_MindWhip_Unblock_BonusAction')"
+
+// ==================================== Common cloaks ===========================================
+// Make all unique
+
+new entry "ARA_Cloak_Common_1"
+type "Armor"
+using "ARA_Cloak_Common_1"
+data "Unique" "1"
+
+new entry "ARA_Cloak_Common_2"
+type "Armor"
+using "ARA_Cloak_Common_2"
+data "Unique" "1"
+
+new entry "ARA_Cloak_Common_3"
+type "Armor"
+using "ARA_Cloak_Common_3"
+data "Unique" "1"
+
+new entry "ARA_Cloak_Common_4"
+type "Armor"
+using "ARA_Cloak_Common_4"
+data "Unique" "1"
+
+new entry "ARA_Cloak_Common_5"
+type "Armor"
+using "ARA_Cloak_Common_5"
+data "Unique" "1"
+
+// ==================================== Uncommon cloaks ====================================
+
+// Fix this passive only applying to melee weapon attack rolls
+new entry "ARA_Cloak_ToHit_Passive"
+type "PassiveData"
+using "ARA_Cloak_ToHit_Passive"
+// data "Boosts" "RollBonus(MeleeWeaponAttack, 1)"
+data "Boosts" "RollBonus(Attack, 1)"
+
+// Nerf to all uncommon cloaks - either removing an ability score increase or removing/nerfing one of the other boosts
+new entry "ARA_Cloak_Uncommon_Barbarian_1"
+type "Armor"
+using "ARA_Cloak_Uncommon_Barbarian_1"
+// data "Boosts" "Ability(Strength, 2, 20);AC(1)"
+data "Boosts" "Ability(Strength, 1, 20);Ability(Constitution, 1, 20)"
+
+new entry "ARA_Cloak_Uncommon_Bard_1"
+type "Armor"
+using "ARA_Cloak_Uncommon_Bard_1"
+// data "Boosts" "Ability(Charisma, 1, 20);Ability(Dexterity, 1, 20)"
+data "Boosts" "Ability(Charisma, 1, 20);Ability(Dexterity, 1, 20)"
+// data "PassivesOnEquip" "ARA_Cloak_ToHit_Passive"
+data "PassivesOnEquip" ""
+
+new entry "ARA_Cloak_Uncommon_Cleric_1"
+type "Armor"
+using "ARA_Cloak_Uncommon_Cleric_1"
+// data "Boosts" "Ability(Wisdom, 2, 20);AC(1)"
+data "Boosts" "Ability(Wisdom, 1, 20);AC(1)"
+
+new entry "ARA_Cloak_Uncommon_Druid_1"
+type "Armor"
+using "ARA_Cloak_Uncommon_Druid_1"
+// data "Boosts" "Ability(Wisdom, 1, 20);Ability(Constitution, 1, 20);AC(1)"
+data "Boosts" "Ability(Constitution, 1, 20);AC(1)"
+
+new entry "ARA_Cloak_Uncommon_Fighter_1"
+type "Armor"
+using "ARA_Cloak_Uncommon_Fighter_1"
+// data "Boosts" "Ability(Strength, 1, 20);Ability(Constitution, 1, 20);AC(1)"
+data "Boosts" "Ability(Strength, 1, 20);AC(1)"
+
+new entry "ARA_Cloak_Uncommon_Monk_1"
+type "Armor"
+using "ARA_Cloak_Uncommon_Monk_1"
+// data "Boosts" "Ability(Dexterity, 2, 20);ActionResource(Movement,1.5,0)"
+data "Boosts" "Ability(Dexterity, 1, 20);ActionResource(Movement,3,0)"
+
+new entry "ARA_Cloak_Uncommon_Paladin_1"
+type "Armor"
+using "ARA_Cloak_Uncommon_Paladin_1"
+// data "Boosts" "Ability(Strength, 1, 20);Ability(Charisma, 1, 20)"
+data "Boosts" "Ability(Charisma, 1, 20)"
+data "PassivesOnEquip" "ARA_Cloak_ToHit_Passive"
+
+new entry "ARA_Cloak_Uncommon_Ranger_1"
+type "Armor"
+using "ARA_Cloak_Uncommon_Ranger_1"
+data "Boosts" "Ability(Dexterity, 1, 20);Ability(Wisdom, 1, 20)"
+// data "PassivesOnEquip" "ARA_Cloak_ToHit_Passive"
+data "PassivesOnEquip" ""
+
+new entry "ARA_Cloak_Uncommon_Rogue_1"
+type "Armor"
+using "ARA_Cloak_Uncommon_Rogue_1"
+// data "Boosts" "Ability(Dexterity, 2, 20)"
+data "Boosts" "Ability(Dexterity, 1, 20)"
+// data "PassivesOnEquip" "ARA_Cloak_ToHit_Passive;ARA_Cloak_ToUnarmedAttack_Passive"
+data "PassivesOnEquip" "ARA_Cloak_ToHit_Passive"
+
+new entry "ARA_Cloak_Uncommon_Sorcerer_1"
+type "Armor"
+using "ARA_Cloak_Uncommon_Sorcerer_1"
+// data "Boosts" "Ability(Charisma, 2, 20)"
+data "Boosts" "Ability(Charisma, 1, 20)"
+// data "PassivesOnEquip" "ARA_Cloak_SpellSaveDC_Passive"
+data "PassivesOnEquip" "ARA_Cloak_ToSpellAttack_Passive"
+
+new entry "ARA_Cloak_Uncommon_Warlock_1"
+type "Armor"
+using "_Back_Magic"
+data "Boosts" "Ability(Charisma, 1, 20)"
+// data "PassivesOnEquip" "ARA_Cloak_ToHit_Passive;ARA_Cloak_SpellSaveDC_Passive"
+data "PassivesOnEquip" "ARA_Cloak_ToSpellSave_Passive"
+
+new entry "ARA_Cloak_Uncommon_Wizard_1"
+type "Armor"
+using "ARA_Cloak_Uncommon_Wizard_1"
+// data "Boosts" "Ability(Intelligence, 2, 20)"
+data "Boosts" "Ability(Intelligence, 1, 20)"
+// data "PassivesOnEquip" "ARA_Cloak_SpellSaveDC_Passive"
+data "PassivesOnEquip" "ARA_Cloak_ToSpellSave_Passive"
+
+// ==================================== Legendary cloaks: remove AC/movement speed boosts and other nerfs ===========================================
+
+// Bonespike Cloak: reduce Wrath on being hit to 2 turns (from 3 turns) and the heal on save to only trigger once per turn
+new entry "ARA_Cloak_Legendary_Bonespike"
+type "Armor"
+using "ARA_Cloak_Legendary_Bonespike"
+// data "Boosts" "ActionResource(Movement,3,0)"
+data "Boosts" ""
+
+new entry "ARA_Cloak_WrathOnHit"
+type "PassiveData"
+using "ARA_Cloak_WrathOnHit"
+// data "DescriptionParams" "3"
+data "DescriptionParams" "2"
+// data "StatsFunctors" "ApplyStatus(MAG_VIOLENCE,100, 3);ApplyStatus(MAG_VIOLENCE_DURATION_TECHNICAL, 100, 1)"
+data "StatsFunctors" "ApplyStatus(MAG_VIOLENCE,100, 2);ApplyStatus(MAG_VIOLENCE_DURATION_TECHNICAL, 100, 1)"
+
+new entry "ARA_Cloak_HealOnSave"
+type "PassiveData"
+using "ARA_Cloak_HealOnSave"
+// Whenever the wearer succeeds on a &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; against a spell, they regain [1]. This effect can only occur once per turn.
+data "Description" "he1f00503g0dccg4a2eg9e31ga572de2a975a;1"
+data "Properties" "OncePerTurn"
+
+// Helldusk Cloak: reduce Heat on fire damage to 2 turns (from 3 turns)
+new entry "ARA_Cloak_Legendary_Helldusk"
+type "Armor"
+using "ARA_Cloak_Legendary_Helldusk"
+// data "Boosts" "AC(1)"
+data "Boosts" ""
+
+new entry "ARA_Cloak_HeatOnHit"
+type "PassiveData"
+using "ARA_Cloak_HeatOnHit"
+// Whenever you deal Fire damage to an enemy, you gain [1] turns of &lt;LSTag Type="Status" Tooltip="MAG_FIRE_HEAT"&gt;Heat&lt;/LSTag&gt;.
+data "Description" "hc2a1827agb2ecg4892g9b89g3ccffe8dc776;1"
+data "DescriptionParams" "2"
+// data "StatsFunctors" "IF(not HasStatus('MAG_FIRE_HEAT_ONCE_TECHNICAL', context.Source)):ApplyStatus(SELF, MAG_FIRE_HEAT_CHARGE_UP_TECHNICAL,100, 0);ApplyStatus(SELF, MAG_FIRE_HEAT, 100, 3);ApplyStatus(SELF, MAG_FIRE_HEAT_ONCE_TECHNICAL, 100, 0);ApplyStatus(SELF, MAG_FIRE_HEAT_DURATION_TECHNICAL, 100, 1)"
+data "StatsFunctors" "IF(not HasStatus('MAG_FIRE_HEAT_ONCE_TECHNICAL', context.Source)):ApplyStatus(SELF, MAG_FIRE_HEAT_CHARGE_UP_TECHNICAL,100, 0);ApplyStatus(SELF, MAG_FIRE_HEAT, 100, 2);ApplyStatus(SELF, MAG_FIRE_HEAT_ONCE_TECHNICAL, 100, 0);ApplyStatus(SELF, MAG_FIRE_HEAT_DURATION_TECHNICAL, 100, 1)"
+
+// Dark Justiciar Cloak: remove Lesser Restoration on heal
+new entry "ARA_Cloak_Legendary_Justiciar"
+type "Armor"
+using "ARA_Cloak_Legendary_Justiciar"
+// data "Boosts" "AC(1)"
+data "Boosts" ""
+
+new entry "ARA_Cloak_OnHealSanctuary"
+type "PassiveData"
+using "ARA_Cloak_OnHealSanctuary"
+// When you heal a creature, it gains the effect of &lt;LSTag Type="Status" Tooltip="SANCTUARY"&gt;Sanctuary&lt;/LSTag&gt; for 1 turn.
+data "Description" "h03436fd0gc4a9g4122g8b67g7546fcd668fe;1"
+data "StatsFunctors" "IF(context.HasContextFlag(StatsFunctorContext.OnHeal) and Character()):ApplyStatus(SANCTUARY,100,1)"
+
+// Bhaalist Cloak: remove crit threshold reduction
+new entry "ARA_Cloak_Legendary_Bhaalist"
+type "Armor"
+using "ARA_Cloak_Legendary_Bhaalist"
+// data "Boosts" "AC(1); UnlockSpell(ARA_Shout_Disappear)"
+data "Boosts" "UnlockSpell(ARA_Shout_Disappear)"
+// data "PassivesOnEquip" "ARA_Cloak_CatGrace;ARA_Cloak_PiercingAndForceResistanceBypass;ARA_Cloak_CritThreshold"
+data "PassivesOnEquip" "ARA_Cloak_CatGrace;ARA_Cloak_PiercingAndForceResistanceBypass"
+
+// Pale Widow Webbing: only remove AC, other passives untouched
+new entry "ARA_Cloak_Legendary_PaleWidow"
+type "Armor"
+using "ARA_Cloak_Legendary_PaleWidow"
+// data "Boosts" "AC(1);IF(Tagged('DROWELF',context.Source) or Tagged('DROWHALFELF',context.Source)):UnlockSpell(ARA_Target_SwordSpider)"
+data "Boosts" "IF(Tagged('DROWELF',context.Source) or Tagged('DROWHALFELF',context.Source)):UnlockSpell(ARA_Target_SwordSpider)"

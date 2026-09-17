@@ -1,31 +1,95 @@
-// ==================================== Highly contested Monk entry compatibility patching - OneDeezNnutsDMartialArts/Druid QoL/Vessel/WayOfTheBoulder/Hexblade ====================================
+// ==================================== Martial Arts: Dextrous Attacks ====================================
+// Highly contested Monk entry compatibility patching - OneDeezNnutsDMartialArts/Druid QoL/Vessel/WayOfTheBoulder/Hexblade
 // TODO: Update loca for this to specify all the functionality.
-// TODO: Functions to condense... functionality. Refer to Goon's Library KHN.
 
 new entry "MartialArts_DextrousUnarmedAttacks"
 type "PassiveData"
 using "MartialArts_DextrousUnarmedAttacks"
-// Martial Arts: Dextrous Attacks
+// // Martial Arts: Dextrous Attacks
 // data "DisplayName" "hd8a574dage906g4af9g92f1g1c532d7e9d70;2"
-// Attacks with &lt;LSTag Tooltip="MonkWeapon"&gt;Monk Weapons&lt;/LSTag&gt; and unarmed attacks scale with your &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; instead of your &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; if your Dexterity is higher.
+// // Attacks with &lt;LSTag Tooltip="MonkWeapon"&gt;Monk Weapons&lt;/LSTag&gt; and unarmed attacks scale with your &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; instead of your &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; if your Dexterity is higher.
 // data "Description" "h36aee87bgef1eg4ac9g882ag30aa1b4c2205;4"
+// // Attacks with &lt;LSTag Tooltip="MonkWeapon"&gt;Monk Weapons&lt;/LSTag&gt; and unarmed attacks scale with your &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; instead of your &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; if your Dexterity is higher.&lt;br&gt;
+data "Description" "h7820e61ag5f65g4297ga0baga10763a90cb5;1"
 // data "Icon" "PassiveFeature_MartialArts_DextrousUnarmedAttacks"
 // data "Properties" "Highlighted"
 // data "BoostContext" "OnStatusApply;OnStatusRemove;OnEquip;OnShortRest;OnCreate;OnLongRest;OnInventoryChanged"
 // data "BoostConditions" "IsDexterityGreaterThanStrength()"
-data "BoostConditions" "(IsDexterityGreaterThanStrength() and not Tagged('BOULDER', context.Source) and not Tagged('VESSEL', context.Source) and not HasStatus('ASTRALSELF_EMPOWERED_WISDOM', context.Source) and not (HasStatus('SHILLELAGH', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Wisdom >= context.Source.Dexterity)) or (HasStatus('PACT_BLADE', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)) or (HasStatus('HEXBLADE_BIND', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)))"
+data "BoostConditions" "Goon_IsCastingModifierGreaterThanDexterity_IsDexterityGreaterThanStrength()"
 // data "Boosts" "MonkWeaponAttackOverride()"
 
+// Community Library
 new entry "CL_Passive_OneDnD_MartialArts_DextrousAttacks"
 type "PassiveData"
 using "CL_Passive_OneDnD_MartialArts_DextrousAttacks"
-// Martial Arts: Dextrous Attacks
+// // Martial Arts: Dextrous Attacks
 // data "DisplayName" "h7b5cd44149e84c59b9647aa521207f2bc2ff;1"
-// Attacks with &lt;LSTag Tooltip="MonkWeapon"&gt;Monk Weapons&lt;/LSTag&gt; and unarmed attacks scale with your &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; instead of your &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; if your Dexterity is higher.
+// // Attacks with &lt;LSTag Tooltip="MonkWeapon"&gt;Monk Weapons&lt;/LSTag&gt; and unarmed attacks scale with your &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; instead of your &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; if your Dexterity is higher.
 // data "Description" "h125c54ac83574a7a9e9c9602de353dda6a19;1"
 // data "Icon" "PassiveFeature_MartialArts_DextrousUnarmedAttacks"
 // data "Properties" "IsHidden"
 // data "BoostContext" "OnStatusApply;OnStatusRemove;OnEquip;OnShortRest;OnCreate;OnLongRest;OnInventoryChanged"
 // data "BoostConditions" "IsDexterityGreaterThanStrength()"
-data "BoostConditions" "(IsDexterityGreaterThanStrength() and not Tagged('BOULDER', context.Source) and not Tagged('VESSEL', context.Source) and not HasStatus('ASTRALSELF_EMPOWERED_WISDOM', context.Source) and not (HasStatus('SHILLELAGH', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Wisdom >= context.Source.Dexterity)) or (HasStatus('PACT_BLADE', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)) or (HasStatus('HEXBLADE_BIND', GetItemInEquipmentSlot(EquipmentSlot.MeleeMainHand, context.Source)) and ConditionResult(context.Source.Charisma >= context.Source.Strength) and ConditionResult(context.Source.Charisma >= context.Source.Dexterity)))"
+data "BoostConditions" "Goon_IsCastingModifierGreaterThanDexterity_IsDexterityGreaterThanStrength()"
 // data "Boosts" "MonkWeaponAttackOverride()"
+
+// // 5e Monk Subclasses Combined
+// new entry "MartialArts_DextrousUnarmedAttacks_AS"
+// type "PassiveData"
+// using "MartialArts_DextrousUnarmedAttacks"
+// // data "BoostConditions" "IsDexterityGreaterThanStrength() and not HasStatus('WISDOM_ATTACK_OVERRIDE',context.Source)"
+// data "BoostConditions" "IsDexterityGreaterThanStrength() and not HasStatus('WISDOM_ATTACK_OVERRIDE',context.Source)"
+
+// new entry "MartialArts_AstralUnarmedAttacks"
+// type "PassiveData"
+// data "DisplayName" "hd8a574dage906g4af9g92f1g1c532d7e9d70;2"
+// data "Properties" "IsHidden"
+// // data "Boosts" "IF(AttackRollAbility(Ability.Strength) and IsDexterityGreaterThanStrength() and ASIsMonkWeaponOnlyAttack()):RollBonus(Attack,DexterityModifier-StrengthModifier);IF(AttackRollAbility(Ability.Strength) and IsDexterityGreaterThanStrength() and ASIsMonkWeaponOnlyAttack()):CharacterWeaponDamage(DexterityModifier-StrengthModifier)"
+// data "Boosts" "IF(AttackRollAbility(Ability.Strength) and IsDexterityGreaterThanStrength() and ASIsMonkWeaponOnlyAttack()):RollBonus(Attack,DexterityModifier-StrengthModifier);IF(AttackRollAbility(Ability.Strength) and IsDexterityGreaterThanStrength() and ASIsMonkWeaponOnlyAttack()):CharacterWeaponDamage(DexterityModifier-StrengthModifier)"
+
+// Way of the Boulder - A Hardy Monk Subclass
+new entry "LLBoulder_DextrousUnarmedAttacks"
+type "PassiveData"
+// using "MartialArts_DextrousUnarmedAttacks"
+using "LLBoulder_DextrousUnarmedAttacks"
+// data "Properties" "IsHidden"
+// data "BoostConditions" "IsDexterityGreaterThanStrength() and not ConditionResult(context.Source.Constitution>=context.Source.Dexterity)"
+data "BoostConditions" "Goon_IsCastingModifierGreaterThanDexterity_IsDexterityGreaterThanStrength()"
+
+// ==================================== Martial Arts: Deft Strikes ====================================
+// Bug Fix: LSTag fix for "CL_Target_OneDnD_MartialArts_UnarmedStrike_BonusAction".
+// Bug Fix: Vessel Custom Class adds conditions with no context, added the intended functionality.
+
+new entry "MartialArts_UnarmedDamage"
+type "PassiveData"
+using "MartialArts_UnarmedDamage"
+// // Martial Arts: Deft Strikes
+// data "DisplayName" "h5daf8c49g7850g40cbg8621gee83b925ec5f;3"
+// // Attacks with &lt;LSTag Tooltip="MonkWeapon"&gt;Monk Weapons&lt;/LSTag&gt; and unarmed attacks deal [1], unless their normal damage is higher.
+// data "Description" "h8117e94cg985cg4547gbf10g6f52ad127d97;8"
+// data "DescriptionParams" "DealDamage(LevelMapValue(MartialArts), Bludgeoning)"
+// data "Icon" "PassiveFeature_MartialArts_UnarmedDamage"
+// data "Properties" "Highlighted"
+data "Properties" "Highlighted;ForceShowInCC"
+// data "BoostConditions" "not Tagged('VESSEL',context.Source)" -- "Vessel Custom Class - Unleash your contained power" adds conditions with no context...
+data "BoostConditions" ""
+// data "Boosts" "MonkWeaponDamageDiceOverride(LevelMapValue(MartialArts))"
+data "Boosts" "IF(not Tagged('VESSEL', context.Source)):MonkWeaponDamageDiceOverride(LevelMapValue(MartialArts))"
+
+// Community Library
+new entry "CL_Passive_OneDnD_MartialArts"
+type "PassiveData"
+using "CL_Passive_OneDnD_MartialArts"
+// // Martial Arts
+// data "DisplayName" "hdd12131ed5034778826717a90a3386fab056;1"
+// // Attacks with &lt;LSTag Tooltip="MonkWeapon"&gt;Monk Weapons&lt;/LSTag&gt; and unarmed attacks deal [1], unless their normal damage is higher and scale with your &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; instead of your &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; if your Dexterity is higher. In addition, you can make &lt;LSTag Type="Spell" Tooltip="CL_Target_OneDnD_MartialArts_UnarmedStrikeBonus"&gt;Unarmed Strikes&lt;/LSTag&gt; as a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;bonus action&lt;/LSTag&gt;.
+// data "Description" "h3fedefce3b194d5e8fe1cf6d0a02d1d17566;1"
+// // &lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt; with &lt;LSTag Tooltip="MonkWeapon"&gt;Monk Weapons&lt;/LSTag&gt; and unarmed attacks deal [1], unless their normal damage is higher and scale with your &lt;LSTag Tooltip="Dexterity"&gt;Dexterity&lt;/LSTag&gt; instead of your &lt;LSTag Tooltip="Strength"&gt;Strength&lt;/LSTag&gt; if your Dexterity is higher. In addition, you can make &lt;LSTag Type="Spell" Tooltip="CL_Target_OneDnD_MartialArts_UnarmedStrike_BonusAction"&gt;Unarmed Strikes&lt;/LSTag&gt; as a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;bonus action&lt;/LSTag&gt;.
+data "Description" "h6d9c9b01g05ebg4a09g86e9g685b27ce3fac;1"
+// data "DescriptionParams" "DealDamage(LevelMapValue(CL_LM_OneDnD_MartialArts), Bludgeoning)"
+// // Level 1: 1d6. &lt;br&gt;Level 5: 1d8. &lt;br&gt;Level 11: 1d10. &lt;br&gt;Level 17: 1d12.
+// data "ExtraDescription" "hd91319eb04a8443b8f4934da6a92c9cb7ca9;1"
+// data "Icon" "PassiveFeature_MartialArts_UnarmedDamage"
+// data "Properties" "Highlighted;ForceShowInCC"
+// data "Boosts" "MonkWeaponDamageDiceOverride(LevelMapValue(CL_LM_OneDnD_MartialArts))"
+data "Boosts" "IF(not Tagged('VESSEL', context.Source)):MonkWeaponDamageDiceOverride(LevelMapValue(CL_LM_OneDnD_MartialArts))"

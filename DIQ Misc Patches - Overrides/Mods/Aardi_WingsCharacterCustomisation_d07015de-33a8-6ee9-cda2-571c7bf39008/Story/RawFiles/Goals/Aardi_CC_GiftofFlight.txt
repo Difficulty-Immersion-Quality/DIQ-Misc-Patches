@@ -1,0 +1,28 @@
+// Aardi's excellent CC wings make you actually fly, but that's not something suitable for DIQ.
+// There's also an alleged bug here with using disguise self and losing the ability to fly.
+
+// Version 1
+// SubGoalCombiner SGC_AND
+// INITSECTION
+
+// KBSECTION
+// IF 
+//     LevelGameplayStarted(_, _)
+// AND
+//     DB_Players(_Player)
+// AND
+//     IsTagged(_Player, (TAG)Aardi_GiftofFlight_4552df5e-1287-4b83-86ad-a001c7295149,1)
+// THEN
+// 	AddSpell(_Player,"Projectile_Fly");
+
+// IF 
+//     LevelGameplayStarted(_, _)
+// AND
+//     DB_Players(_Player)
+// AND NOT
+//     IsTagged(_Player, (TAG)Aardi_GiftofFlight_4552df5e-1287-4b83-86ad-a001c7295149,1)
+// THEN
+// 	    RemoveSpell(_Player,"Projectile_Fly");
+// EXITSECTION
+
+// ENDEXITSECTION

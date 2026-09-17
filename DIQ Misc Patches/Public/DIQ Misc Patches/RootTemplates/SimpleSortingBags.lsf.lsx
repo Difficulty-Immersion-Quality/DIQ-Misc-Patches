@@ -4,9 +4,8 @@
 	<region id="Templates">
 		<node id="Templates">
 			<children>
-				<!-- TODO: Adjust bounds to better match scale -->
-				<!-- TODO: Inherit from templates matching visuals and apply CanBePickedUp -->
-			<!-- Goon's custom JWL Trinket container -->
+		<!-- ==================================== Goon container for JWL Discordant Instruments ==================================== -->
+			<!-- Trinket Trunk -->
 				<node id="GameObjects">
 					<attribute id="MapKey" type="FixedString" value="28915a26-75ad-4afb-87b4-1c9439c073bc" />
 					<attribute id="Name" type="LSString" value="SimpleSortingBagsTrinket" />
@@ -21,12 +20,15 @@
 					<attribute id="Stats" type="FixedString" value="SimpleSortingBagsTrinket" />
 					<attribute id="Tooltip" type="uint8" value="2" />
 					<attribute id="ContainerAutoAddOnPickup" type="bool" value="True" />
-					<attribute id="ContainerContentFilterCondition" type="LSString" value="Tagged('TRINKET') and not Tagged('NOSORT') and not Tagged('AUTOWARES')" />
+					<attribute id="ContainerContentFilterCondition" type="LSString" value="Tagged('JWL_TRINKET') or Tagged('TRINKET') and not Tagged('NOSORT') and not Tagged('AUTOWARES')" />
 					<children>
 						<node id="InventoryList" />
 					</children>
 				</node>
-			<!-- Simple Sorting Bags -->
+		<!-- ==================================== Simple Sorting Bags ==================================== -->
+			<!-- TODO: Adjust bounds to better match scale -->
+			<!-- TODO: Inherit from templates matching visuals and apply CanBePickedUp -->
+			<!-- Adept Sorting Pack -->
 				<node id="GameObjects">
 					<attribute id="MapKey" type="FixedString" value="6b1ff3a4-b547-4e0a-b5cf-a0fb8e128333" />
 					<attribute id="Name" type="LSString" value="SimpleSortingBagsMaster" />
@@ -55,6 +57,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Scholar's Book Stack -->
 				<node id="GameObjects">
 					<attribute id="MapKey" type="FixedString" value="10718bc8-38e5-4400-9f31-e90d9821b732" />
 					<attribute id="Name" type="LSString" value="SimpleSortingBagsBook" />
@@ -78,6 +81,7 @@
 						<node id="InventoryList" />
 					</children>
 				</node>
+			<!-- Trunk of Protection -->
 				<node id="GameObjects">
 					<attribute id="MapKey" type="FixedString" value="182ab941-281f-4860-96d1-74b7b23b00f6" />
 					<attribute id="Name" type="LSString" value="SimpleSortingBagsArmor" />
@@ -101,6 +105,7 @@
 						<node id="InventoryList" />
 					</children>
 				</node>
+			<!-- Vanity Wardrobe -->
 				<node id="GameObjects">
 					<attribute id="MapKey" type="FixedString" value="284446be-c074-4f8f-8e94-084c040c1e46" />
 					<attribute id="Name" type="LSString" value="SimpleSortingBagsVanity" />
@@ -160,6 +165,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Assassin's Pouch -->
 				<node id="GameObjects">
 					<attribute id="MapKey" type="FixedString" value="3cd87d23-054b-40f7-9ec0-fec3be640621" />
 					<attribute id="Name" type="LSString" value="SimpleSortingBagsCoating" />
@@ -182,6 +188,8 @@
 						<node id="InventoryList" />
 					</children>
 				</node>
+			<!-- Accessory Lockbox -->
+				<!-- Note: Renamed from Trinket Lockbox -->
 				<node id="GameObjects">
 					<attribute id="MapKey" type="FixedString" value="545a5dc0-080a-40b5-b957-c7a898120da4" />
 					<attribute id="Name" type="LSString" value="SimpleSortingBagsAccessory" />
@@ -208,6 +216,7 @@
 						<node id="InventoryList" />
 					</children>
 				</node>
+			<!-- Boundless Quiver -->
 				<node id="GameObjects">
 					<attribute id="MapKey" type="FixedString" value="57a368c5-1e04-4e4c-8770-15b6df8cc949" />
 					<attribute id="Name" type="LSString" value="SimpleSortingBagsArrow" />
@@ -231,6 +240,7 @@
 						<node id="InventoryList" />
 					</children>
 				</node>
+			<!-- Trunk of Armament -->
 				<node id="GameObjects">
 					<attribute id="MapKey" type="FixedString" value="57cc3929-db6b-424e-9e34-182122d42b12" />
 					<attribute id="Name" type="LSString" value="SimpleSortingBagsWeapon" />
@@ -254,6 +264,7 @@
 						<node id="InventoryList" />
 					</children>
 				</node>
+			<!-- Fortified Elixir Case -->
 				<node id="GameObjects">
 					<attribute id="MapKey" type="FixedString" value="71be0599-fe71-4513-95b9-b61468b9fdb6" />
 					<attribute id="Name" type="LSString" value="SimpleSortingBagsElixir" />
@@ -316,6 +327,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Collector's Scroll Tome -->
 				<node id="GameObjects">
 					<attribute id="MapKey" type="FixedString" value="7371d675-3b7a-4af7-82e3-46a12e1c21ea" />
 					<attribute id="Name" type="LSString" value="SimpleSortingBagsScroll" />
@@ -338,6 +350,7 @@
 						<node id="InventoryList" />
 					</children>
 				</node>
+			<!-- Bombardier's Satchel -->
 				<node id="GameObjects">
 					<attribute id="MapKey" type="FixedString" value="74fddb80-83d4-4cd5-8a86-e73afe159281" />
 					<attribute id="Name" type="LSString" value="SimpleSortingBagsGrenade" />
@@ -361,6 +374,7 @@
 						<node id="InventoryList" />
 					</children>
 				</node>
+			<!-- Fortified Potion Case -->
 				<node id="GameObjects">
 					<attribute id="MapKey" type="FixedString" value="7a575167-2538-462a-9ccd-e229c8d94429" />
 					<attribute id="Name" type="LSString" value="SimpleSortingBagsPotion" />
@@ -386,6 +400,7 @@
 						<node id="InventoryList" />
 					</children>
 				</node>
+			<!-- Rugged Dye Rack -->
 				<node id="GameObjects">
 					<attribute id="MapKey" type="FixedString" value="f7a1614e-91b8-49af-88b2-fe648c5fbbe7" />
 					<attribute id="Name" type="LSString" value="SimpleSortingBagsDye" />
@@ -411,6 +426,7 @@
 						<node id="InventoryList" />
 					</children>
 				</node>
+			<!-- Adventure Backpack -->
 				<node id="GameObjects">
 					<attribute id="MapKey" type="FixedString" value="d370a212-de40-4c7e-92b3-c7a11f1186bc" />
 					<attribute id="Name" type="LSString" value="SimpleSortingBagsPersonal" />
@@ -429,12 +445,13 @@
 					<attribute id="Tooltip" type="uint8" value="2" />
 					<attribute id="ContainerAutoAddOnPickup" type="bool" value="True" />
 					<!-- <attribute id="ContainerContentFilterCondition" type="LSString" value="(IsOfProficiencyGroup('MusicalInstrument') or IsStoryItem() or Tagged('SHOVEL') or Tagged('Tool') or Tagged('LOOT_GOLD') or Tagged('PERSONAL') or Tagged('CANDLE')) and not Tagged('KEY') and not Tagged('NOSORT')" /> -->
-					<attribute id="ContainerContentFilterCondition" type="LSString" value="(IsOfProficiencyGroup('MusicalInstrument') or IsStoryItem() or Tagged('SHOVEL') or Tagged('Tool') or Tagged('LOOT_GOLD') or Tagged('PERSONAL') or Tagged('CANDLE')) and not Tagged('KEY') and not Tagged('NOSORT') and not Tagged('AUTOWARES') and not Tagged('TRINKET')" />
+					<attribute id="ContainerContentFilterCondition" type="LSString" value="(IsOfProficiencyGroup('MusicalInstrument') or IsStoryItem() or Tagged('SHOVEL') or Tagged('Tool') or Tagged('LOOT_GOLD') or Tagged('PERSONAL') or Tagged('CANDLE')) and not Tagged('KEY') and not Tagged('NOSORT') and not Tagged('AUTOWARES') and not Tagged('JWL_TRINKET') and not Tagged('TRINKET')" />
 					<children>
 						<node id="InventoryList" />
 					</children>
 				</node>
-			<!-- Vanilla overwrites -->
+		<!-- ==================================== Vanilla overwrites ==================================== -->
+			<!-- Summon Us -->
 				<node id="GameObjects">
 					<!-- Summon Us -->
 					<attribute id="DisplayName" type="TranslatedString" handle="h2db42111gf71cg4b21ga8c3gf801570c0b91" version="1" />
@@ -484,6 +501,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Soap Bar -->
 				<node id="GameObjects">
 					<!-- A sizeable bar of soap with a relaxing chamomile fragrance. -->
 					<attribute id="Description" type="TranslatedString" handle="hfc83a500ga0dcg4495g863bg21c561c101cc" version="1" />
@@ -572,6 +590,7 @@
 						</node>
 					</children>
 				</node>
+			<!-- Lump's War Horn -->
 				<node id="GameObjects">
 					<!-- A simple horn belonging to Lump the Enlightened. The mouthpiece is crusty with chunks of dried food. -->
 					<attribute id="Description" type="TranslatedString" handle="hcd67ead2g2f18g4e27g864fg0d9dda4c31c6" version="2" />

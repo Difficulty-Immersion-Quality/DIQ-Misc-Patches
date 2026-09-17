@@ -1,0 +1,27 @@
+// new entry "MAG_Legendary_Chromatic_NoxiousFumes_Passive"
+// type "PassiveData"
+// using "MAG_Legendary_Chromatic_NoxiousFumes_Passive"
+// data "Icon" "GenericIcon_DamageType_Acid"
+// data "Properties" "OncePerAttack;Highlighted"
+
+// new entry "MAG_Thunder_ReverberationOnStatusApply_Boots_Passive"
+// type "PassiveData"
+// using "MAG_Thunder_ReverberationOnStatusApply_Boots_Passive"
+// data "Conditions" "Enemy() and not Self() and not StatusId('MAG_THUNDER_REVERBERATION') and not StatusDoesNotInvokeOnStatusApply() and not HasStatus('MOD_SANCTIFIED', context.Target) and not HasStatus('MOD_REVERB_RECURSOR_FIX', context.Source)"
+// data "StatsFunctors" "ApplyStatus(MAG_THUNDER_REVERBERATION, 100, 2);ApplyStatus(MAG_THUNDER_REVERBERATION_DURATION_TECHNICAL, 100, 1);ApplyStatus(SELF, MOD_REVERB_RECURSOR_FIX, 100, 1)"
+
+// new entry "MAG_Gish_ArcaneSynergy_Circlet_Passive"
+// type "PassiveData"
+// using "MAG_Gish_ArcaneSynergy_Circlet_Passive"
+// data "Conditions" "not StatusId('MAG_GISH_ARCANE_SYNERGY') and not StatusDoesNotInvokeOnStatusApply() and not HasStatus('MOD_ARCANE_SYNERGY_RECURSOR_FIX', context.Source) and Enemy()"
+// data "StatsFunctors" "ApplyStatus(SELF, MAG_GISH_ARCANE_SYNERGY, 100, 2);ApplyStatus(SELF,MOD_ARCANE_SYNERGY_RECURSOR_FIX, 100, 1)"
+
+// new entry "UND_BlessingOfBOOOAL"
+// type "PassiveData"
+// using "UND_BlessingOfBOOOAL"
+// data "Properties" "IsHidden"
+
+// new entry "MAG_ZOC_ForceConduit_EnergyConversionBlast_Passive"
+// type "PassiveData"
+// using "MAG_ZOC_ForceConduit_EnergyConversionBlast_Passive"
+// data "Properties" "OncePerAttack;IsHidden"

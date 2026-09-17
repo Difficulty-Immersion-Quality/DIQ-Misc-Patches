@@ -1,0 +1,24 @@
+// ==================================== Necrotic Aura ====================================
+// Bug Fix: Safeguard to ensure the aura is removed when Gale is resurrected.
+
+new entry "ORI_GALE_NECROTICAURA"
+type "StatusData"
+data "StatusType" "BOOST"
+using "ORI_GALE_NECROTICAURA"
+// // Necrotic Aura
+// data "DisplayName" "hcd68fbb0g18dbg4f4fgb4dfg9a6ff0af3735;1"
+// // Gale exudes Necrotic energy. Nearby creatures take [1] every turn. 
+// data "Description" "h0ddd79bbg8ac7g499aga857g7244721b0e1b;1"
+// data "DescriptionParams" "DealDamage(1d4,Necrotic)"
+// data "Icon" "statIcons_GalesNecroticAura"
+// data "FormatColor" "Black"
+// data "SoundLoop" "Spell_Status_GaleNecroticAura"
+// data "SoundStop" "Spell_Status_GaleNecroticAura_Stop"
+// data "StackId" "RESURRECTING"
+// data "StackPriority" "1"
+// data "AuraRadius" "4"
+// data "AuraStatuses" "TARGET:IF(Character() and not Dead()):ApplyStatus(ORI_GALE_AURANECROSIS)"
+data "RemoveEvents" "OnApply;OnStatusApplied;OnStatusRemoved;OnTurn"
+data "RemoveConditions" "not Dead()"
+// data "StatusPropertyFlags" "ApplyToDead;InitiateCombat;BringIntoCombat"
+// data "StatusEffect" "cc9ae800-7cf8-495f-9c2e-22f765c1e737"

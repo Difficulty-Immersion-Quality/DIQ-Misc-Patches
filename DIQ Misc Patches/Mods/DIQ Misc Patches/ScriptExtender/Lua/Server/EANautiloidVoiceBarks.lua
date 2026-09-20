@@ -4,7 +4,7 @@
 local membrane = "TOOL_Ladder_MF_Membrane_3H_A_002_a8e40469-0efa-4077-b125-47058511202e";
 local membrane_icd = false;
 local function InsaneintheMembrane(charID)
-    Ext.Timer.WaitFor(10000, function()
+    Ext.Timer.WaitFor(15000, function()
         if membrane_icd == true then
             membrane_icd = false;
             if Exists(membrane) == 1 and GetDistanceTo(GetHostCharacter(), membrane) < 20 then

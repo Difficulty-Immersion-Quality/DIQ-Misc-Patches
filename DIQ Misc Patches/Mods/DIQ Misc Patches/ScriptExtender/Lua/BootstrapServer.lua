@@ -14,3 +14,4 @@ Ext.Vars.RegisterModVariable(ModuleUUID, "DIQMiscPatches_MOPassive", opts)
 Ext.Vars.RegisterModVariable(ModuleUUID, "DIQMiscPatches_UtilitySpell", opts)
 
 Ext.Require("Server/_Core.lua")
+Ext.Require("Server/EANautiloidVoiceBarks.lua")

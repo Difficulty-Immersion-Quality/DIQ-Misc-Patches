@@ -19,6 +19,47 @@
                     <attribute id="UUID" type="guid" value="d136c5d9-0ff0-43da-acce-a74a07f8d6bf" />
                     <attribute id="UpdatesSpellPowerLevel" type="bool" value="True" />
                 </node>
+                <!-- Hit Dice RAW action resources for easy mod removal sake. -->
+                <node id="ActionResourceDefinition">
+                    <attribute id="Description" type="TranslatedString" handle="h6817f3de33474f0198232329963b81524ga8" version="1" />
+                    <attribute id="DiceType" type="uint32" value="6" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h672e648e6c474ec79a0a63e8425627f89f0b" version="1" />
+                    <attribute id="MaxLevel" type="uint32" value="0" />
+                    <attribute id="Name" type="FixedString" value="HitDiceD6" />
+                    <attribute id="ReplenishType" type="FixedString" value="Rest" />
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true" />
+                    <attribute id="UUID" type="guid" value="1a94abf3-8d8b-4a82-be61-b2047560b435" />
+                </node>
+                <node id="ActionResourceDefinition">
+                    <attribute id="Description" type="TranslatedString" handle="h0b538fc63a9345f1b5aa934767c8b8c2b1e8" version="1" />
+                    <attribute id="DiceType" type="uint32" value="8" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h2d0bd7f7966549b68bbb3d3f7e5e82737150" version="1" />
+                    <attribute id="MaxLevel" type="uint32" value="0" />
+                    <attribute id="Name" type="FixedString" value="HitDiceD8" />
+                    <attribute id="ReplenishType" type="FixedString" value="Rest" />
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true" />
+                    <attribute id="UUID" type="guid" value="558dbf4e-5ffc-4d2f-bcc0-044b74ce8ce9" />
+                </node>
+                <node id="ActionResourceDefinition">
+                    <attribute id="Description" type="TranslatedString" handle="h624b41d075ad4fd5b88621fa6fb5492635a1" version="1" />
+                    <attribute id="DiceType" type="uint32" value="10" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h17cc6990f91341cb84dd3e537c59c267c8b1" version="1" />
+                    <attribute id="MaxLevel" type="uint32" value="0" />
+                    <attribute id="Name" type="FixedString" value="HitDiceD10" />
+                    <attribute id="ReplenishType" type="FixedString" value="Rest" />
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true" />
+                    <attribute id="UUID" type="guid" value="2b21f349-0111-463b-a9e8-36eee2cc4d01" />
+                </node>
+                <node id="ActionResourceDefinition">
+                    <attribute id="Description" type="TranslatedString" handle="hba96159c6ee84512ba28139a45babef95900" version="1" />
+                    <attribute id="DiceType" type="uint32" value="12" />
+                    <attribute id="DisplayName" type="TranslatedString" handle="h8b997b4f1b024922a901911e049402764a8a" version="1" />
+                    <attribute id="MaxLevel" type="uint32" value="0" />
+                    <attribute id="Name" type="FixedString" value="HitDiceD12" />
+                    <attribute id="ReplenishType" type="FixedString" value="Rest" />
+                    <attribute id="ShowOnActionResourcePanel" type="bool" value="true" />
+                    <attribute id="UUID" type="guid" value="9273979e-8fb1-46c5-8381-ec4902397d96" />
+                </node>
             </children>
         </node>
     </region>

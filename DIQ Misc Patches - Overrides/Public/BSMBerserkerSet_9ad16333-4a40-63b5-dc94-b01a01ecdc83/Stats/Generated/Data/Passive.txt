@@ -1,0 +1,131 @@
+// ==================================== Passive.txt ====================================
+// Changes: Removed "MAG_Violence_ViolenceOnDamaged_Passive" changes.
+
+new entry "BSM_BS_SuperiorLastStand_Passive"
+type "PassiveData"
+// // Superior Last Stand
+data "DisplayName" "h29736cccgdbd7g4c22g7a4fg530db2885666;1"
+// // During combat, you gain 1 turn of &lt;LSTag Type="Status" Tooltip="MAG_VIOLENCE"&gt;Wrath&lt;/LSTag&gt;. The lower your &lt;LSTag Tooltip="HitPoints"&gt;Hit Points&lt;/LSTag&gt;, the more turns of &lt;LSTag Type="Status" Tooltip="MAG_VIOLENCE"&gt;Wrath&lt;/LSTag&gt; you gain.
+data "Description" "h64f63bafgd429g74c7g9e84g0775fc67889a;1"
+// // Hit Point Range:&lt;br&gt;&lt;br&gt;From 100% to 51%: 1 Turn of Wrath.&lt;br&gt;From 50% to 21%: 2 Turns of Wrath.&lt;br&gt;Below 20%: 3 Turns of Wrath.
+data "ExtraDescription" "h0dc674a0g0458gb6cbgcd46g88ab49b35d65;1"
+
+new entry "BSM_BS_BerzerkerSeekingBlood_Passive"
+type "PassiveData"
+using "MAG_Barbarian_Hide_Helmet_Bloodseeker_Passive"
+// // Berzerker Seeking Blood
+data "DisplayName" "h43ac5116g7397g2902ge78fg7bb4c3f371be;1"
+// // Gain a bonus to your attack rolls based on your remaining &lt;LSTag Tooltip="HitPoints"&gt;Hit Points&lt;/LSTag&gt;.
+data "Description" "hca3727bbg1d00gd3a2gd8dcg3660b692cadb;2"
+data "DescriptionParams" ""
+// // Hit Point Range:&lt;br&gt;&lt;br&gt;Above 50%: +1.&lt;br&gt;Below 50%: +2.&lt;br&gt;Below 25%: +4.
+data "ExtraDescription" "h9d9a58a6g363egecb7g5c1fg26388d33375e;1"
+data "BoostContext" "OnCreate;OnEquip;OnAttack"
+data "Boosts" "IF(HasHPPercentageWithoutTemporaryHPEqualOrMoreThan(51, context.Source)):RollBonus(Attack, 1);IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(50, context.Source) and HasHPPercentageWithoutTemporaryHPEqualOrMoreThan(26, context.Source)):RollBonus(Attack, 2);IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(25, context.Source)):RollBonus(Attack, 4)"
+
+new entry "BSM_BS_BerzerkerMindAndSoul_Passive"
+type "PassiveData"
+// // Berzerker Mind and Soul
+data "DisplayName" "h2e55e708gd9ccg9305gfc80gdd0e1d866fb5;1"
+// // Grants a bonus to your Wisdom, Intelligence and Charisma &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; based on your missing &lt;LSTag Tooltip="HitPoints"&gt;Hit Points&lt;/LSTag&gt;.
+data "Description" "hb5d2682bg1577gee57g5175g372a51f83f37;2"
+// // Hit Point Range:&lt;br&gt;&lt;br&gt;Below 75%: +1.&lt;br&gt;Below 50%: +2.&lt;br&gt;Below 25%: +4.
+data "ExtraDescription" "h36b7b1c4ga8a7gf8c6ge1d8gfff324d135c4;1"
+data "BoostContext" "OnCreate;OnAttacked;OnEquip"
+data "Boosts" "IF(HasHPPercentageWithoutTemporaryHPEqualOrMoreThan(51, context.Source)):RollBonus(SavingThrow,1, Intelligence);IF(HasHPPercentageWithoutTemporaryHPEqualOrMoreThan(51, context.Source)):RollBonus(SavingThrow,1, Wisdom);IF(HasHPPercentageWithoutTemporaryHPEqualOrMoreThan(51, context.Source)):RollBonus(SavingThrow,1, Charisma);IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(50, context.Source) and HasHPPercentageWithoutTemporaryHPEqualOrMoreThan(26, context.Source)):RollBonus(SavingThrow,2, Intelligence);IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(50, context.Source) and HasHPPercentageWithoutTemporaryHPEqualOrMoreThan(26, context.Source)):RollBonus(SavingThrow,2, Wisdom);IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(50, context.Source) and HasHPPercentageWithoutTemporaryHPEqualOrMoreThan(26, context.Source)):RollBonus(SavingThrow,2, Charisma);IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(25, context.Source)):RollBonus(SavingThrow,4, Intelligence);IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(25, context.Source)):RollBonus(SavingThrow,4, Wisdom);IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(25, context.Source)):RollBonus(SavingThrow,4, Charisma)"
+
+// new entry "MAG_Violence_ViolenceOnDamaged_Passive"
+// type "PassiveData"
+// using "MAG_Violence_ViolenceOnDamaged_Passive"
+// data "DescriptionParams" "2"
+// data "Properties" ""
+
+new entry "BSM_BS_BrutalImpactRemove_Tech"
+type "PassiveData"
+// // Brutal Impact Remove
+data "DisplayName" "h5cdd2cb2gfd83g5bffg74e3g1151f78facbc;1"
+data "Properties" "IsHidden"
+data "StatsFunctorContext" "OnDamage"
+data "Conditions" "HasStatus('BSM_BS_BRUTALIMPACT_STATUS', context.Source)"
+data "StatsFunctors" "RemoveStatus(SELF,BSM_BS_BRUTALIMPACT_STATUS)"
+
+new entry "BSM_BS_ReactiveArmor_Passive"
+type "PassiveData"
+// // Reactive Armor
+data "DisplayName" "h4a2d4741g15e9g1648g5cd2gb105128595e0;1"
+// // During combat, when an enemy damages the wearer, having 30% &lt;LSTag Tooltip="HitPoints"&gt;hit points&lt;/LSTag&gt; or less, they gain &lt;LSTag Type="Status" Tooltip="BSM_BS_REACTIVEARMOR_STATUS"&gt;Reactive Armor&lt;/LSTag&gt; for [1] turns.
+data "Description" "h0656afbdgdd52ga412g5eefg8226966105d8;1"
+data "DescriptionParams" "1"
+// // Reduces damage taken by [1] for each turn of Reactive Armor, up to a maximum of 5 turns.
+data "ExtraDescription" "h7573fe2ag98a4g78d2g7389g3f720e579db0;2"
+data "ExtraDescriptionParams" "2"
+data "StatsFunctorContext" "OnDamaged"
+data "Conditions" "HasHPPercentageWithoutTemporaryHPEqualOrLessThan(30, context.Target)"
+data "StatsFunctors" "ApplyStatus(BSM_BS_REACTIVEARMOR_STATUS,100, 1);ApplyStatus(BSM_BS_REACTIVEARMOR_DURATION_TECHNICAL, 100, 1)"
+
+new entry "BSM_BS_OniSkin_Passive"
+type "PassiveData"
+// // Oni Skin
+data "DisplayName" "h45062854g9231g6160g065ag8336f0324abe;1"
+// // When your &lt;LSTag Tooltip="HitPoints"&gt;Hit Points&lt;/LSTag&gt; drop below 50%, you gain Fire &lt;LSTag Tooltip="Resistant"&gt;Resistant&lt;/LSTag&gt; and immunity to &lt;LSTag Type="Status" Tooltip="BURNING"&gt;Burning&lt;/LSTag&gt;. When your &lt;LSTag Tooltip="HitPoints"&gt;Hit Points&lt;/LSTag&gt; drop below 30%, you gain immunity to &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hits&lt;/LSTag&gt;.
+data "Description" "h60235c96gef02g74cfgae03g017066ba10d1;1"
+data "BoostContext" "OnAttacked;OnStatusApplied;OnEquip;OnCreate"
+data "Boosts" "IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(50, context.Source)):Resistance(Fire, Resistant);IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(50, context.Source)):StatusImmunity(BURNING);IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(30, context.Target)):CriticalHit(AttackTarget,Success,Never)"
+
+new entry "BSM_BS_FLR_Passive"
+type "PassiveData"
+// // Unleashed Wrath
+data "DisplayName" "h206c13a8g322bg0fc9g0a4agf0ebc831cc53;1"
+// // When the wielder has 50% &lt;LSTag Tooltip="HitPoints"&gt;Hit Points&lt;/LSTag&gt; or less, they deal an additional [1]. At 25% damage increases to [2]. At 10% each attack restores [3] per attack.
+// data "Description" "hd45ebfe6gcb2bg11b6gcf10g79de54ab45aa;2"
+// // When the wearer has 50% &lt;LSTag Tooltip="HitPoints"&gt;Hit Points&lt;/LSTag&gt; or less, they deal an additional [1]. At 25%[2] damage increases to [3]. At 10%[2] each attack restores [4].
+data "Description" "hac08b3e1g80c5g40f4g9126g3a1035f54fa5;1"
+// data "DescriptionParams" "DealDamage(1d4,Force);DealDamage(2d4,Force);RegainHitPoints(1d4)"
+data "DescriptionParams" "DealDamage(1d4,Force);RegainHitPoints(,);DealDamage(2d4,Force);RegainHitPoints(1d4)"
+// data "Boosts" ""
+data "Boosts" "IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(50, context.Source) and HasHPPercentageWithoutTemporaryHPEqualOrMoreThan(26, context.Source)):CharacterWeaponDamage(1d4,Force);IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(25, context.Source)):CharacterWeaponDamage(2d4,Force)"
+data "Properties" "OncePerAttack"
+data "StatsFunctorContext" "OnDamage"
+// data "StatsFunctors" "IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(50, context.Source) and HasHPPercentageWithoutTemporaryHPEqualOrMoreThan(26, context.Source)):DealDamage(1d4,Force,Magical);IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(25, context.Source)):DealDamage(2d4,Force,Magical);IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(10, context.Source)):RegainHitPoints(SELF,1d4)"
+data "StatsFunctors" "IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(10, context.Source)):RegainHitPoints(SELF,1d4)"
+
+new entry "BSM_BS_BerzerkerRing_Passive"
+type "PassiveData"
+data "DisplayName" "h04a30485g2247gf6a4g60fag18c06177aecf;1"
+data "Description" "h706d0b75g32f9gdec5g2497g9ddfecb254b0;1"
+data "DescriptionParams" "25;2"
+data "BoostContext" "OnDamaged;OnEquip;OnCreate;OnTurn;OnRound"
+data "BoostConditions" "HasHPPercentageWithoutTemporaryHPEqualOrLessThan(25, context.Source)"
+data "Boosts" "Ability(Dexterity,2);Ability(Strength,2)"
+
+new entry "BSM_BS_Grudge_Passive"
+type "PassiveData"
+data "DisplayName" "hcb2bbb7ag2eedg389bg5f93g1f34bbebc791;1"
+data "Description" "h0dedecb7g5dd0g3c91g3cb8g7d4b813c538e;1"
+data "DescriptionParams" "75;1;2;10"
+data "StatsFunctorContext" "OnDamaged;OnAttacked"
+data "StatsFunctors" "IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(75, context.Target)):ApplyStatus(BSM_BS_GRUDGE_STATUS,100, 2)"
+
+new entry "BSM_BS_FreeMovement_Passive"
+type "PassiveData"
+data "DisplayName" "hddcca0fdg2dc8g8129g0737gce4f3eac0853;1"
+data "Description" "heb1e20c1g755eg19aag00e0g5cea8ef2db45;1"
+data "BoostContext" "OnEquip;OnCreate;OnDamaged;OnTurn;OnRound"
+data "BoostConditions" "HasHPPercentageWithoutTemporaryHPEqualOrLessThan(50, context.Source)"
+data "Boosts" "StatusImmunity(SG_Paralyzed);StatusImmunity(SG_Restrained);StatusImmunity(SG_DifficultTerrain);ActionResourcePreventReduction(Movement)"
+
+new entry "BSM_BS_UnstoppableMassacre_Passive"
+type "PassiveData"
+data "DisplayName" "h3feb70b5g1ca0g1e13g4133gb42c3ab42d02;1"
+data "Description" "h2152dfe3g545dgb76fge1dbg0ff883911869;1"
+data "StatsFunctorContext" "OnDamage"
+data "Conditions" "IsKillingBlow()"
+data "StatsFunctors" "RestoreResource(SELF, Movement, 50%, 0)"
+
+new entry "BSM_BS_BerzerkerReflexes_Passive"
+type "PassiveData"
+data "DisplayName" "hbf9b136fg88c6ga0adg30b8g4fec3649889a;1"
+data "Description" "h05823fd9g918cg88cegc3f8gcc67799c2811;1"
+data "ExtraDescription" "h655a4299g3bfcg8065g1f35g330d808383ee;1"
+data "BoostContext" "OnEquip;OnCreate;OnAttacked"
+data "Boosts" "IF(HasHPPercentageWithoutTemporaryHPEqualOrMoreThan(51, context.Source)):RollBonus(SavingThrow,1, Dexterity);IF(HasHPPercentageWithoutTemporaryHPEqualOrMoreThan(51, context.Source)):RollBonus(SavingThrow,1, Strength);IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(50, context.Source) and HasHPPercentageWithoutTemporaryHPEqualOrMoreThan(26, context.Source)):RollBonus(SavingThrow,2, Dexterity);IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(50, context.Source) and HasHPPercentageWithoutTemporaryHPEqualOrMoreThan(26, context.Source)):RollBonus(SavingThrow,2, Strength);IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(25, context.Source)):RollBonus(SavingThrow,3, Dexterity);IF(HasHPPercentageWithoutTemporaryHPEqualOrLessThan(25, context.Source)):RollBonus(SavingThrow,3, Strength)"

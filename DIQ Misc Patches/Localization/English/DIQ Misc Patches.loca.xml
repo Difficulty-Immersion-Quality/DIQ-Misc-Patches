@@ -53,7 +53,14 @@
 	<!-- Target_Sunburst --> 
 	<content contentuid="h47af5db9g9ba8g4a63g8e1ag84d5a7040e3f" version="1">Allies make this &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; with &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; and Undead make it with &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt;. </content>
 
-	<!-- "CelestialFury_Shock_Passive" --> <content contentuid="h4610246egd7fdg4e48gbd04ge999b518d89e" version="1">&lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt; with this weapon have a small chance of wreathing the blade in electricity, dealing [1].</content>
+	<!-- "CelestialFury_Shock_Passive" -->
+    <content contentuid="h4610246egd7fdg4e48gbd04ge999b518d89e" version="1">&lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt; with this weapon have a small chance of wreathing the blade in electricity, dealing [1].</content>
+
+	<!-- "BladeOfFrontiers" -->
+    <content contentuid="h7a8e39feg8516g4f74g8ba9g13d9771aaedf" version="1">The champion of the Sword Coast, renowned for his heroic deeds and unusual stone eye.&lt;br&gt;&lt;br&gt;Wyll can see in magical and ordinary darkness up to a range of [1]. If he has the &lt;LSTag Type="Passive" Tooltip="DevilsSight"&gt;Devil's Sight&lt;/LSTag&gt; invocation, he gains &lt;LSTag Type="Passive" Tooltip="MAG_Infernal_Metal_Helmet_InfernalSight_Passive"&gt;Infernal Sight&lt;/LSTag&gt;.</content>
+
+	<!-- "BLINDED" -->
+    <content contentuid="h3f73842fga672g4098g8355g761983e226be" version="1">A blinded creature can't see and automatically fails any &lt;LSTag Tooltip="AbilityCheck"&gt;ability check&lt;/LSTag&gt; that requires sight.&lt;br&gt;&lt;br&gt;&lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; against the creature have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt;, and the creature's attack rolls have &lt;LSTag Tooltip="Disadvantage"&gt;disadvantage&lt;/LSTag&gt;. Additionally, the creature's attacks incur a -1 penalty if the distance to the target is beyond [1], and a further -1 penalty for every [2] beyond that.</content>
 
 <!-- ==================================== Community Library ==================================== -->
 	<!-- "CL_Passive_OneDnD_MartialArts" -->
@@ -63,9 +70,14 @@
 	<!-- "MAG_ImprovedGoonerCritical" -->
 	<content contentuid="hb4e340afgd8a7g4a70g9cb4g1a122d1d128f" version="1">The number you need to &lt;LSTag Tooltip="AttackRoll"&gt;roll&lt;/LSTag&gt; a &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hit&lt;/LSTag&gt; while attacking is reduced by [1]. This effect can stack.</content>
 
-	<!-- "BladeOfFrontiers" --> <content contentuid="h7a8e39feg8516g4f74g8ba9g13d9771aaedf" version="1">The champion of the Sword Coast, renowned for his heroic deeds and unusual stone eye.&lt;br&gt;&lt;br&gt;Wyll can see in magical and ordinary darkness up to a range of [1]. If he has the &lt;LSTag Type="Passive" Tooltip="DevilsSight"&gt;Devil's Sight&lt;/LSTag&gt; invocation, he gains &lt;LSTag Type="Passive" Tooltip="MAG_Infernal_Metal_Helmet_InfernalSight_Passive"&gt;Infernal Sight&lt;/LSTag&gt;.</content>
+<!-- ==================================== The Berserker Set - On the Edge of Death: Berserker Set - Base Mod ==================================== -->
+	<!-- "893b0b74-e513-4d4c-b49d-4e31847b5464" -->
+	<content contentuid="h8f4514e7ga9fcg4b1cgbc95gadda407560ff" version="1">&lt;LSTag Type="Image" Info="TutorialYellowWarning"&gt;Requires at least 6 rounds of &lt;LSTag Type="Status" Tooltip="MAG_VIOLENCE"&gt;Wrath&lt;/LSTag&gt; to be used.</content>
+	<!-- "CE_Status_MAG_VIOLENCE_False" -->
+	<content contentuid="h35b60961gbf3fg4807g8e62g7be338cee58c" version="1">Requires at least 6 rounds of &lt;LSTag Type="Status" Tooltip="MAG_VIOLENCE"&gt;Wrath&lt;/LSTag&gt; to be used.</content>
 
-	<!-- "BLINDED" --> <content contentuid="h3f73842fga672g4098g8355g761983e226be" version="1">A blinded creature can't see and automatically fails any &lt;LSTag Tooltip="AbilityCheck"&gt;ability check&lt;/LSTag&gt; that requires sight.&lt;br&gt;&lt;br&gt;&lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; against the creature have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt;, and the creature's attack rolls have &lt;LSTag Tooltip="Disadvantage"&gt;disadvantage&lt;/LSTag&gt;. Additionally, the creature's attacks incur a -1 penalty if the distance to the target is beyond [1], and a further -1 penalty for every [2] beyond that.</content>
+	<!-- "BSM_BS_FLR_Passive" -->
+	<content contentuid="hac08b3e1g80c5g40f4g9126g3a1035f54fa5" version="1">When the wearer has 50% &lt;LSTag Tooltip="HitPoints"&gt;Hit Points&lt;/LSTag&gt; or less, they deal an additional [1]. At 25%[2] damage increases to [3]. At 10%[2] each attack restores [4].</content>
 
 <!-- ==================================== d100 Wild Magic ==================================== -->
     <!-- d100 Wild Magic: 1-10 -->

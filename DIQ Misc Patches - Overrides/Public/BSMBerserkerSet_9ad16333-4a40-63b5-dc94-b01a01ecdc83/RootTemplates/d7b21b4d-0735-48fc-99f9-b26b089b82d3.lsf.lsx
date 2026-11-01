@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<save>
+	<version major="4" minor="7" revision="1" build="3" lslib_meta="v1,bswap_guids,lsf_keys_adjacency" />
+	<region id="Templates">
+		<node id="Templates">
+			<children>
+				<node id="GameObjects">
+					<attribute id="MapKey" type="FixedString" value="d7b21b4d-0735-48fc-99f9-b26b089b82d3" />
+					<attribute id="Name" type="LSString" value="BSM_BS_TheOniSkin" />
+					<attribute id="LevelName" type="FixedString" value="" />
+					<attribute id="Type" type="FixedString" value="item" />
+					<attribute id="ParentTemplateId" type="FixedString" value="935c1a18-d402-4fa8-9793-50813c08df02" />
+					<attribute id="DisplayName" type="TranslatedString" handle="hab16a775g92beg5704g5469g7e99774a6c5e" version="2" />
+					<attribute id="Stats" type="FixedString" value="BSM_BS_TheOniSkin" />
+					<attribute id="Description" type="TranslatedString" handle="heede5d63g42d1gc696g0b3dg15841ed02e15" version="2" />
+				</node>
+			</children>
+		</node>
+	</region>
+</save>

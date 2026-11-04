@@ -4261,7 +4261,7 @@ data "DescriptionParams" "16;2"
 // data "ExtraDescription" ";3"
 // data "StatsFunctorContext" "OnDamage"
 // data "Conditions" "IsAttackType(AttackType.MeleeUnarmedAttack) and Character()"
-// data "StatsFunctors" "IF(not SavingThrow(Ability.Strength, 16)):ApplyStatus(MAG_ATTACK_DEBUFF,100,2)
+// data "StatsFunctors" "IF(not SavingThrow(Ability.Strength, 16)):ApplyStatus(MAG_ATTACK_DEBUFF,100,2)"
 
 // ==================================== Veil and Venom - Rogue Equipment ====================================
 

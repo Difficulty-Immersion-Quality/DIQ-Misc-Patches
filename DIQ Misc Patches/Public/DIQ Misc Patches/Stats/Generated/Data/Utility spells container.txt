@@ -3,7 +3,7 @@
 new entry "Shout_DIQ_Utility_Spells_Container"
 type "SpellData"
 data "SpellType" "Shout"
-data "ContainerSpells" "Teleport_All;Shout_SailorCat_MassUnsummon;Shout_SailorCat_MassUnsummon_Local;Target_RemoveBrokenObjects;LOKE_GLASSES_GIVE_GLASSES;LOKE_GLASSES_REMOVE_GLASSES"
+data "ContainerSpells" "Shout_BaldursEmporium_Respec;Shout_BaldursEmporium_Mirror;Shout_BaldursEmporium_Resculpt;Shout_BaldursEmporium_Restore;Teleport_All;Shout_SailorCat_MassUnsummon;Shout_SailorCat_MassUnsummon_Local;Target_RemoveBrokenObjects;LOKE_GLASSES_GIVE_GLASSES;LOKE_GLASSES_REMOVE_GLASSES"
 data "TargetConditions" "Self()"
 data "Icon" "PassiveFeature_Generic_Threat"
 data "DisplayName" "h6186a929ge943g4ba9g98f1g972f22701086"
@@ -16,7 +16,7 @@ data "SpellFlags" "IsLinkedSpellContainer"
 
 // ==================================== Add the utility spells to the container ====================================
 
-// Not listed in ContainerSpells?
+// Not listed in ContainerSpells? So just weird ass implementation that keeps it glued to the character?
 new entry "Shout_Ziphop"
 type "SpellData"
 data "SpellType" "Shout"

@@ -53,7 +53,14 @@
 	<!-- Target_Sunburst --> 
 	<content contentuid="h47af5db9g9ba8g4a63g8e1ag84d5a7040e3f" version="1">Allies make this &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; with &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt; and Undead make it with &lt;LSTag Tooltip="Disadvantage"&gt;Disadvantage&lt;/LSTag&gt;. </content>
 
-	<!-- "CelestialFury_Shock_Passive" --> <content contentuid="h4610246egd7fdg4e48gbd04ge999b518d89e" version="1">&lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt; with this weapon have a small chance of wreathing the blade in electricity, dealing [1].</content>
+	<!-- "CelestialFury_Shock_Passive" -->
+    <content contentuid="h4610246egd7fdg4e48gbd04ge999b518d89e" version="1">&lt;LSTag Tooltip="AttackRoll"&gt;Attacks&lt;/LSTag&gt; with this weapon have a small chance of wreathing the blade in electricity, dealing [1].</content>
+
+	<!-- "BladeOfFrontiers" -->
+    <content contentuid="h7a8e39feg8516g4f74g8ba9g13d9771aaedf" version="1">The champion of the Sword Coast, renowned for his heroic deeds and unusual stone eye.&lt;br&gt;&lt;br&gt;Wyll can see in magical and ordinary darkness up to a range of [1]. If he has the &lt;LSTag Type="Passive" Tooltip="DevilsSight"&gt;Devil's Sight&lt;/LSTag&gt; invocation, he gains &lt;LSTag Type="Passive" Tooltip="MAG_Infernal_Metal_Helmet_InfernalSight_Passive"&gt;Infernal Sight&lt;/LSTag&gt;.</content>
+
+	<!-- "BLINDED" -->
+    <content contentuid="h3f73842fga672g4098g8355g761983e226be" version="1">A blinded creature can't see and automatically fails any &lt;LSTag Tooltip="AbilityCheck"&gt;ability check&lt;/LSTag&gt; that requires sight.&lt;br&gt;&lt;br&gt;&lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; against the creature have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt;, and the creature's attack rolls have &lt;LSTag Tooltip="Disadvantage"&gt;disadvantage&lt;/LSTag&gt;. Additionally, the creature's attacks incur a -1 penalty if the distance to the target is beyond [1], and a further -1 penalty for every [2] beyond that.</content>
 
 <!-- ==================================== Community Library ==================================== -->
 	<!-- "CL_Passive_OneDnD_MartialArts" -->
@@ -63,9 +70,14 @@
 	<!-- "MAG_ImprovedGoonerCritical" -->
 	<content contentuid="hb4e340afgd8a7g4a70g9cb4g1a122d1d128f" version="1">The number you need to &lt;LSTag Tooltip="AttackRoll"&gt;roll&lt;/LSTag&gt; a &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hit&lt;/LSTag&gt; while attacking is reduced by [1]. This effect can stack.</content>
 
-	<!-- "BladeOfFrontiers" --> <content contentuid="h7a8e39feg8516g4f74g8ba9g13d9771aaedf" version="1">The champion of the Sword Coast, renowned for his heroic deeds and unusual stone eye.&lt;br&gt;&lt;br&gt;Wyll can see in magical and ordinary darkness up to a range of [1]. If he has the &lt;LSTag Type="Passive" Tooltip="DevilsSight"&gt;Devil's Sight&lt;/LSTag&gt; invocation, he gains &lt;LSTag Type="Passive" Tooltip="MAG_Infernal_Metal_Helmet_InfernalSight_Passive"&gt;Infernal Sight&lt;/LSTag&gt;.</content>
+<!-- ==================================== The Berserker Set - On the Edge of Death: Berserker Set - Base Mod ==================================== -->
+	<!-- "893b0b74-e513-4d4c-b49d-4e31847b5464" -->
+	<content contentuid="h8f4514e7ga9fcg4b1cgbc95gadda407560ff" version="1">&lt;LSTag Type="Image" Info="TutorialYellowWarning"&gt;Requires at least 6 rounds of &lt;LSTag Type="Status" Tooltip="MAG_VIOLENCE"&gt;Wrath&lt;/LSTag&gt; to be used.</content>
+	<!-- "CE_Status_MAG_VIOLENCE_False" -->
+	<content contentuid="h35b60961gbf3fg4807g8e62g7be338cee58c" version="1">Requires at least 6 rounds of &lt;LSTag Type="Status" Tooltip="MAG_VIOLENCE"&gt;Wrath&lt;/LSTag&gt; to be used.</content>
 
-	<!-- "BLINDED" --> <content contentuid="h3f73842fga672g4098g8355g761983e226be" version="1">A blinded creature can't see and automatically fails any &lt;LSTag Tooltip="AbilityCheck"&gt;ability check&lt;/LSTag&gt; that requires sight.&lt;br&gt;&lt;br&gt;&lt;LSTag Tooltip="AttackRoll"&gt;Attack Rolls&lt;/LSTag&gt; against the creature have &lt;LSTag Tooltip="Advantage"&gt;Advantage&lt;/LSTag&gt;, and the creature's attack rolls have &lt;LSTag Tooltip="Disadvantage"&gt;disadvantage&lt;/LSTag&gt;. Additionally, the creature's attacks incur a -1 penalty if the distance to the target is beyond [1], and a further -1 penalty for every [2] beyond that.</content>
+	<!-- "BSM_BS_FLR_Passive" -->
+	<content contentuid="hac08b3e1g80c5g40f4g9126g3a1035f54fa5" version="1">When the wearer has 50% &lt;LSTag Tooltip="HitPoints"&gt;Hit Points&lt;/LSTag&gt; or less, they deal an additional [1]. At 25%[2] damage increases to [3]. At 10%[2] each attack restores [4].</content>
 
 <!-- ==================================== d100 Wild Magic ==================================== -->
     <!-- d100 Wild Magic: 1-10 -->
@@ -440,7 +452,7 @@
 	<content contentuid="h58b6b6e7gb35fg499dga233g0c3f45fc94c1" version="1">Meld with the shadows, teleporting up to [1] to an area of dim light or darkness and granting you &lt;LSTag Type="Status" Tooltip="VV_SHADOW_MELD"&gt;Shrouding Shadow&lt;/LSTag&gt;.</content>
 	<!-- Wands and Weave - Wizard Equipment  -->
 	<content contentuid="h8cf49e5dg153cg4c5fg818bgaa4f69a9489e" version="1">When the wearer deals damage with a &lt;LSTag Tooltip="MeleeSpellAttack"&gt;Melee Spell Attack&lt;/LSTag&gt; or a &lt;LSTag Tooltip="MeleeWeaponAttack"&gt;Melee Weapon Attack&lt;/LSTag&gt; that is also a spell, gain [1] turns of &lt;LSTag Type="Status" Tooltip="MAG_GISH_ARCANE_ACUITY"&gt;Arcane Acuity&lt;/LSTag&gt;.</content>
-	<content contentuid="h73cc541fgdb06g4bd6g8266g6135495e8449" version="1">When you deal[1] to a creature, a fire surface erupts around it in a [2] radius. Your[3] spells also deal an additional [2]. This bonus damage only applies once per attack.</content>
+	<content contentuid="h73cc541fgdb06g4bd6g8266g6135495e8449" version="1">When you deal[1] to a creature, a fire surface erupts around it in a [2] radius. Your[1] spells also deal an additional [3]. This bonus damage only applies once per attack.</content>
 	<content contentuid="h5f03de22gc497g4f11g9becg5b857c8e7c05" version="1">When you make a &lt;LSTag Tooltip="SavingThrow"&gt;Saving Throw&lt;/LSTag&gt; to maintain &lt;LSTag Tooltip="Concentration"&gt;Concentration&lt;/LSTag&gt; on a spell, a roll result of [1] or lower is considered a [2].</content>
 	<content contentuid="h6d3628a4g96b5g440eg8743g8aacfa9fb6f7" version="1">You gain &lt;LSTag Tooltip="Resistant"&gt;Resistance&lt;/LSTag&gt; to[1].</content>
 	<content contentuid="h473add14gc447g4f65gb635g4aeb9e0871de" version="1">Call down a barrage of fiery comets that crash down and explode in a [1] radius.</content>

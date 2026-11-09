@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="3"/>
+    <region id="ConditionErrors">
+        <node id="root">
+            <children>
+                <node id="ConditionErrors">
+                    <!-- Requires at least 6 turns of &lt;LSTag Type="Status" Tooltip="MAG_VIOLENCE"&gt;Wrath&lt;/LSTag&gt; status to be used. -->
+                    <!-- <attribute id="DisplayName" type="TranslatedString" handle="hc8d38b1egbe88gf1e4gb67fg78d3bb744aed" version="1"/> -->
+                    <!-- Requires at least 6 rounds of &lt;LSTag Type="Status" Tooltip="MAG_VIOLENCE"&gt;Wrath&lt;/LSTag&gt; to be used. -->
+                    <attribute id="DisplayName" type="TranslatedString" handle="h35b60961gbf3fg4807g8e62g7be338cee58c" version="1"/>
+                    <attribute id="Identifier" type="FixedString" value="CE_Status_MAG_VIOLENCE_False"/>
+                    <attribute id="UUID" type="guid" value="55b2dea9-f551-463a-9adb-b77efe1b343c"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

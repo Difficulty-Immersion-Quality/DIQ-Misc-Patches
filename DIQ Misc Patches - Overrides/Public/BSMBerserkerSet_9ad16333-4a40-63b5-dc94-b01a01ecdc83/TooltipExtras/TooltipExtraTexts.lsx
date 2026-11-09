@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="3"/>
+    <region id="TooltipExtraTexts">
+        <node id="root">
+            <children>
+                <node id="TooltipExtraTexts">
+                    <!-- &lt;i&gt;To my dear friend.&lt;/i&gt;&lt;br&gt;&lt;br&gt;Thank you for the suggestion to loot the vault of relics of the Cult of Bane, you know my fascination with relics and magical artifacts. Unfortunately things have gone much worse than planned and I find myself in the urgency to ask you a great favor.&lt;br&gt;&lt;br&gt;Although I have managed to get the loot, in the process I have learned some very sensitive information that could possibly lead to a large-scale threat, you will understand that the sensitivity of the information requires that we meet in person to discuss it.&lt;br&gt;&lt;br&gt;At the moment I require that you please safeguard one of the relics that I took without the consent of the cultists, in total I managed to get 5 artifacts, which for my own safety I have had to guard in different places or entrust to certain people, including you.&lt;br&gt;&lt;br&gt;As I write this letter to you, I find myself being pursued by the former owners of the artifacts, and due to the improvised nature of my escape, I have left most of the artifacts in the vicinity of Moonrise Towers...&lt;br&gt;&lt;br&gt;Hoping that these powerful artifacts do not fall into the wrong hands and that my actions help delay the plans of the Bane cult, I say goodbye, until the next time we can meet. -->
+                    <attribute id="Text" type="TranslatedString" handle="hfb9a07e6g9337gc7bfgbbb3ga3e1f8c0978e" version="2"/>
+                    <attribute id="UUID" type="guid" value="a1cfd874-5b31-4362-a1f7-bd978aa79da9"/>
+                </node>
+                <node id="TooltipExtraTexts">
+                    <!-- From: Bane's Inter-Cult Relations Department.&lt;br&gt;To: Balthazar, Commander of the Reborn Dead.&lt;br&gt;&lt;br&gt;By this letter, we deeply appreciate that you contacted us as soon as possible in order to recover one of the VERY IMPORTANT artifacts that were stolen from our vault. Described by you as "A hat with bones, with the smell of death and blood."&lt;br&gt;&lt;br&gt;We ask that you please keep this important artifact safe until a designated member of our Cult can meet with you in person. We apologize in advance for any inconvenience caused.&lt;br&gt;&lt;br&gt;Additionally, and if it does not cause you any problems, we would appreciate if you would help us with the recovery of the rest of the artifacts. Our Intelligence informs us that the approximate location of the rest of the relics is as follows:&lt;br&gt;&lt;br&gt;- Ring, an adventurer last seen entering the swamp that serves as the headquarters of the Witch known as Aunt Ethel.&lt;br&gt;- Cloth armor, inside the Temple of Shar, near Moonrise Towers.&lt;br&gt;- A pair of Boots, last seen in the Moonrise Towers region.&lt;br&gt;- A pair of Gloves, near Rosymorn Monastery.&lt;br&gt;&lt;br&gt;With nothing more to add, we say goodbye, thanking you for your collaboration and giving good faith to the history of collaboration of the gods whom we faithfully serve.&lt;br&gt;&lt;br&gt;Signed: Bob, head of the BIRD Division. -->
+                    <attribute id="Text" type="TranslatedString" handle="hb4bbe756g22d0g1973g1424g9808fbd28c29" version="2"/>
+                    <attribute id="UUID" type="guid" value="1f375a0d-4283-4dd6-a831-e590f15c6011"/>
+                </node>
+                <node id="TooltipExtraTexts">
+                    <!-- &lt;LSTag Type="Image" Info="TutorialYellowWarning"&gt;Requires at least 6 turns of &lt;LSTag Type="Status" Tooltip="MAG_VIOLENCE"&gt;Wrath&lt;/LSTag&gt; status to be used. -->
+                    <!-- <attribute id="Text" type="TranslatedString" handle="h9727a5d0g0764g712ag8a96ge3fd35070830" version="3"/> -->
+                    <!-- &lt;LSTag Type="Image" Info="TutorialYellowWarning"&gt;Requires at least 6 rounds of &lt;LSTag Type="Status" Tooltip="MAG_VIOLENCE"&gt;Wrath&lt;/LSTag&gt; to be used. -->
+                    <attribute id="Text" type="TranslatedString" handle="h8f4514e7ga9fcg4b1cgbc95gadda407560ff" version="3"/>
+                    <attribute id="UUID" type="guid" value="893b0b74-e513-4d4c-b49d-4e31847b5464"/>
+                </node>
+            </children>
+        </node>
+    </region>
+</save>

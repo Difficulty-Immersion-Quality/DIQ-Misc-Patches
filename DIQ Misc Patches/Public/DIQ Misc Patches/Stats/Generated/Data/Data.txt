@@ -435,10 +435,10 @@ key "SneakFollowDistance","9"
 // key "MaxPickingDistance","30"
 
 // key "LearnSpellCostPerLevel","50"
-key "LearnSpellCostPerLevel","500"
+key "LearnSpellCostPerLevel","100"
 
 // key "SavantLearnSpellCostPerLevel","25"
-key "SavantLearnSpellCostPerLevel","250"
+key "SavantLearnSpellCostPerLevel","50"
 
 // key "MaxShortRestPoints","2"
 

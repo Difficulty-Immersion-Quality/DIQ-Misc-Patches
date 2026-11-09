@@ -1,0 +1,48 @@
+local __util = require 'larian.util'
+
+-- ==================================== Great Weapon Master - All In ====================================
+-- Changes: Added support for theoretical 1 hand wielding of 2 hand weapons, while also patching over Heavy Weapons RAW by MaxStrengthWizard.
+-- return IsProficientWith(entity, weapon) & (isHeavy & isMelee) & (isTwoHanded | isVersatile) & (~isOffhandMelee & ~isOffhandAmmunition & ~hasShield)
+
+function GreatWeaponMaster(entity)
+    entity = entity or context.Source
+    local weapon = context.AttackWeapon
+
+    if not HasWeaponProperty(WeaponProperties.Melee, weapon).Result then return ConditionResult(false) end
+    if not HasWeaponProperty(WeaponProperties.Heavy, weapon).Result then return ConditionResult(false) end
+    if not IsProficientWith(entity, weapon).Result                  then return ConditionResult(false) end
+
+    if not HasWeaponProperty(WeaponProperties.Twohanded, weapon).Result
+       and not HasWeaponProperty(WeaponProperties.Versatile, weapon).Result then
+        return ConditionResult(false)
+    end
+
+    if HasShieldEquipped(entity).Result                         then return ConditionResult(false) end
+    if WieldingWeapon('Melee', true, false, entity).Result      then return ConditionResult(false) end
+
+    return ConditionResult(true)
+end
+
+-- ==================================== Smol ====================================
+
+function SizeEqualOrSmallerHWRAW(size, entity)
+    entity = entity or context.Target
+    return ConditionResult(entity.Size ~= Size.None and entity.Size.value <= size.value)
+end
+
+-- ==================================== Performant conditions ====================================
+
+function Goon_IsHeavyWeaponStrengthPenalty(isRanged, source, weapon)
+    source = source or context.Source
+    weapon = weapon or context.AttackWeapon
+
+    if isRanged then
+        if not IsRangedWeaponAttack().Result then return ConditionResult(false) end
+    else
+        if not IsMeleeWeaponAttack().Result then return ConditionResult(false) end
+    end
+
+    if source.Strength >= 13 then return ConditionResult(false) end
+
+    return HasWeaponProperty(WeaponProperties.Heavy, weapon)
+end

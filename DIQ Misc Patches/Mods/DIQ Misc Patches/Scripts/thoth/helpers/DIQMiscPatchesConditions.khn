@@ -1,45 +1,36 @@
--- ==================================== Great Weapon Master - All In ====================================
--- Changes: Added support for theoretical 1 hand wielding of 2 hand weapons, while also patching over Heavy Weapons RAW by MaxStrengthWizard.
--- return IsProficientWith(entity, weapon) & (isHeavy & isMelee) & (isTwoHanded | isVersatile) & (~isOffhandMelee & ~isOffhandAmmunition & ~hasShield)
-
-function GreatWeaponMaster(entity)
-    local entity = entity or context.Source
-    local weapon = context.AttackWeapon
-
-    local isHeavy = HasWeaponProperty(WeaponProperties.Heavy, weapon)
-    local isTwoHanded = HasWeaponProperty(WeaponProperties.Twohanded, weapon)
-    local isMelee = HasWeaponProperty(WeaponProperties.Melee, weapon)
-    local isVersatile = HasWeaponProperty(WeaponProperties.Versatile, weapon)
-    local isOffhandMelee = WieldingWeapon('Melee', true, false, entity)
-    local isOffhandAmmunition = WieldingWeapon('Ammunition', true, false, entity)
-    local hasShield = HasShieldEquipped(entity)
-
-    return IsProficientWith(entity, weapon) & isMelee & (isTwoHanded | isVersatile) & (~isOffhandMelee & ~isOffhandAmmunition & ~hasShield)
-end
-
 -- ==================================== Metamagic fixes ====================================
 
 -- Bug Fix: No longer functions for melee range spells.
 function TwinnedProjectileSpellCheck()
-    -- return ~NumberOfTargetsGreaterThan(1) & ~AreaRadiusGreaterThan(0) & (HasSpellFlag(SpellFlags.Spell)
-    return ~NumberOfTargetsGreaterThan(1) & ~AreaRadiusGreaterThan(0) & (HasSpellFlag(SpellFlags.Spell) & TargetRadiusGreaterThan(1.5) | NonSpellMetamagicAbilities()) & SpellTypeIs(SpellType.Projectile) & ~MetamagicExclusionSpells() & ~IsSpellChildOrVariantFromContext('Projectile_WitchBolt') & ~IsSpellChildOrVariantFromContext('Projectile_ChainLightning')
+    -- return ~NumberOfTargetsGreaterThan(1) & ~AreaRadiusGreaterThan(0) & (HasSpellFlag(SpellFlags.Spell) | NonSpellMetamagicAbilities()) & SpellTypeIs(SpellType.Projectile) & ~MetamagicExclusionSpells() & ~IsSpellChildOrVariantFromContext('Projectile_WitchBolt') & ~IsSpellChildOrVariantFromContext('Projectile_ChainLightning')
+    if not SpellTypeIs(SpellType.Projectile).Result                     then return ConditionResult(false) end
+    if NumberOfTargetsGreaterThan(1).Result                             then return ConditionResult(false) end
+    if AreaRadiusGreaterThan(0).Result                                  then return ConditionResult(false) end
+    if IsSpellChildOrVariantFromContext('Projectile_WitchBolt').Result  then return ConditionResult(false) end
+    if MetamagicExclusionSpells().Result                                then return ConditionResult(false) end
+
+    if HasSpellFlag(SpellFlags.Spell).Result and TargetRadiusGreaterThan(1.5).Result then 
+        return ConditionResult(true) 
+    end
+    return NonSpellMetamagicAbilities()
 end
 
 -- Bug Fix: Break off functionality with item spell variants and such.
 function MetamagicExclusionSpells()
-    return IsSpellChildOrVariantFromContext('Target_MistyStep')
-         | IsSpellChildOrVariantFromContext('Target_WildMagic_Teleport')
-         | IsSpellChildOrVariantFromContext('Target_SpeakWithDead')
-         | IsSpellChildOrVariantFromContext('Target_SpeakWithDead_FreeRecast')
-         | IsSpellChildOrVariantFromContext('Target_SpeakWithDead_Amulet_CHA')
-         | IsSpellChildOrVariantFromContext('Target_Light')
-         | IsSpellChildOrVariantFromContext('Projectile_ChainLightning')
-         -- TODO: Probably a whole lot more shit to add right here...
-         | IsSpellChildOrVariantFromContext('Target_UNI_MistyStep_Nightwalkers')
-         | IsSpellChildOrVariantFromContext('Target_UNI_MistyStep_DrowCommander_Amulet')
-         | IsSpellChildOrVariantFromContext('Target_WYR_Circus_TeleportBoots_MistyStep')
-         | IsSpellChildOrVariantFromContext('Target_UND_Light_Tower_Ring')
-         | IsSpellChildOrVariantFromContext('Projectile_MAG_Legendary_Chromatic_ChainLightning')
+    if IsSpellChildOrVariantFromContext('Target_MistyStep').Result                                  then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_WildMagic_Teleport').Result                         then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_SpeakWithDead').Result                              then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_SpeakWithDead_FreeRecast').Result                   then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_SpeakWithDead_Amulet_CHA').Result                   then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Light').Result                                      then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Projectile_ChainLightning').Result                         then return ConditionResult(true) end
+    -- TODO: Probably a whole lot more shit to add right here...
+    if IsSpellChildOrVariantFromContext('Target_UNI_MistyStep_Nightwalkers').Result                 then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_UNI_MistyStep_DrowCommander_Amulet').Result         then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_WYR_Circus_TeleportBoots_MistyStep').Result         then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_UND_Light_Tower_Ring').Result                       then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Projectile_MAG_Legendary_Chromatic_ChainLightning').Result then return ConditionResult(true) end
+    return ConditionResult(false)
 end
 
 -- ==================================== Recast spells ====================================
@@ -47,67 +38,68 @@ end
 -- Note: Entirely irrelevant with Expansion's RAW Bladesinger. This function is only called by "Bladesong_Damage".
 
 function IsRecastSpell()
-    return IsSpellChildOrVariantFromContext('Target_Hex_Reapply')
-         | IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Strength')
-         | IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Dexterity')
-         | IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Constitution')
-         | IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Intelligence')
-         | IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Wisdom')
-         | IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Charisma')
-        --  Valdacil's Spell Adjustments IIRC, or was it a Syrchalis thing?
-         | IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Wildshape')
-         | IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Strength_Wildshape')
-         | IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Dexterity_Wildshape')
-         | IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Constitution_Wildshape')
-         | IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Intelligence_Wildshape')
-         | IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Wisdom_Wildshape')
-         | IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Charisma_Wildshape')
-         | IsSpellChildOrVariantFromContext('Target_Moonbeam_Move')
-         | IsSpellChildOrVariantFromContext('Target_Moonbeam_Move_3')
-         | IsSpellChildOrVariantFromContext('Target_Moonbeam_Move_4')
-         | IsSpellChildOrVariantFromContext('Target_Moonbeam_Move_5')
-         | IsSpellChildOrVariantFromContext('Target_Moonbeam_Move_6')
-         | IsSpellChildOrVariantFromContext('Target_Moonbeam_Move_7')
-         | IsSpellChildOrVariantFromContext('Target_Moonbeam_Move_8')
-         | IsSpellChildOrVariantFromContext('Target_Moonbeam_Move_9')
-        -- | IsSpellChildOrVariantFromContext('ThatOneItemMoonbeamIStillNeedToFix')
-         | IsSpellChildOrVariantFromContext('Target_CallLightning_LightningBolt')
-         | IsSpellChildOrVariantFromContext('Target_CallLightning_LightningBolt_4')
-         | IsSpellChildOrVariantFromContext('Target_CallLightning_LightningBolt_5')
-         | IsSpellChildOrVariantFromContext('Target_CallLightning_LightningBolt_6')
-         | IsSpellChildOrVariantFromContext('Target_CallLightning_LightningBolt_7')
-         | IsSpellChildOrVariantFromContext('Target_CallLightning_LightningBolt_8')
-         | IsSpellChildOrVariantFromContext('Target_CallLightning_LightningBolt_9')
-         | IsSpellChildOrVariantFromContext('Target_HeatMetal_Reapply')
-         | IsSpellChildOrVariantFromContext('Target_HeatMetal_Reapply_4')
-         | IsSpellChildOrVariantFromContext('Target_HeatMetal_Reapply_5')
-         | IsSpellChildOrVariantFromContext('Target_HeatMetal_Reapply_6')
-         | IsSpellChildOrVariantFromContext('Target_HeatMetal_Reapply_7')
-         | IsSpellChildOrVariantFromContext('Target_HeatMetal_Reapply_8')
-         | IsSpellChildOrVariantFromContext('Target_HeatMetal_Reapply_9')
-         | IsSpellChildOrVariantFromContext('Target_VampiricTouch_Free')
-         | IsSpellChildOrVariantFromContext('Target_VampiricTouch_Free_4')
-         | IsSpellChildOrVariantFromContext('Target_VampiricTouch_Free_5')
-         | IsSpellChildOrVariantFromContext('Target_VampiricTouch_Free_6')
-         | IsSpellChildOrVariantFromContext('Target_VampiricTouch_Free_7')
-         | IsSpellChildOrVariantFromContext('Target_VampiricTouch_Free_8')
-         | IsSpellChildOrVariantFromContext('Target_VampiricTouch_Free_9')
-         | IsSpellChildOrVariantFromContext('Target_Cloudkill_Recast')
-         | IsSpellChildOrVariantFromContext('Target_Cloudkill_Recast_6')
-         | IsSpellChildOrVariantFromContext('Target_Cloudkill_Recast_7')
-         | IsSpellChildOrVariantFromContext('Target_Cloudkill_Recast_8')
-         | IsSpellChildOrVariantFromContext('Target_Cloudkill_Recast_9')
-         | IsSpellChildOrVariantFromContext('Target_HuntersMark_Reapply')
-         | IsSpellChildOrVariantFromContext('Target_TAD_Imperil_Recast')
-         | IsSpellChildOrVariantFromContext('Target_MF_Imperil_Recast')
-         | IsSpellChildOrVariantFromContext('Zone_Sunbeam_Recreate')
-         | IsSpellChildOrVariantFromContext('Target_TAD_BlackHole_Recast')
-         | IsSpellChildOrVariantFromContext('Throw_Telekinesis_Recast')
-         | IsSpellChildOrVariantFromContext('Target_Eyebite_Asleep_Free')
-         | IsSpellChildOrVariantFromContext('Target_Eyebite_Panicked_Free')
-         | IsSpellChildOrVariantFromContext('Target_Eyebite_Sickened_Free')
-         | IsSpellChildOrVariantFromContext('Target_DispelEvilAndGood_BreakEnchantment')
-         | IsSpellChildOrVariantFromContext('Target_SpeakWithDead_FreeRecast')
-         | IsSpellChildOrVariantFromContext('Target_AuraOfVitality_Activate')
-         | IsSpellChildOrVariantFromContext('Shout_WitchBolt_Activate')
+    if IsSpellChildOrVariantFromContext('Target_Hex_Reapply').Result                        then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Strength').Result               then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Dexterity').Result              then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Constitution').Result           then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Intelligence').Result           then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Wisdom').Result                 then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Charisma').Result               then return ConditionResult(true) end
+    --  Valdacil's Spell Adjustments IIRC, or was it a Syrchalis thing?
+    if IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Wildshape').Result              then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Strength_Wildshape').Result     then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Dexterity_Wildshape').Result    then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Constitution_Wildshape').Result then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Intelligence_Wildshape').Result then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Wisdom_Wildshape').Result       then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Hex_Reapply_Charisma_Wildshape').Result     then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Moonbeam_Move').Result                      then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Moonbeam_Move_3').Result                    then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Moonbeam_Move_4').Result                    then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Moonbeam_Move_5').Result                    then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Moonbeam_Move_6').Result                    then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Moonbeam_Move_7').Result                    then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Moonbeam_Move_8').Result                    then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Moonbeam_Move_9').Result                    then return ConditionResult(true) end
+    -- | IsSpellChildOrVariantFromContext('ThatOneItemMoonbeamIStillNeedToFix')
+    if IsSpellChildOrVariantFromContext('Target_CallLightning_LightningBolt').Result        then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_CallLightning_LightningBolt_4').Result      then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_CallLightning_LightningBolt_5').Result      then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_CallLightning_LightningBolt_6').Result      then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_CallLightning_LightningBolt_7').Result      then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_CallLightning_LightningBolt_8').Result      then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_CallLightning_LightningBolt_9').Result      then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_HeatMetal_Reapply').Result                  then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_HeatMetal_Reapply_4').Result                then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_HeatMetal_Reapply_5').Result                then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_HeatMetal_Reapply_6').Result                then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_HeatMetal_Reapply_7').Result                then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_HeatMetal_Reapply_8').Result                then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_HeatMetal_Reapply_9').Result                then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_VampiricTouch_Free').Result                 then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_VampiricTouch_Free_4').Result               then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_VampiricTouch_Free_5').Result               then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_VampiricTouch_Free_6').Result               then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_VampiricTouch_Free_7').Result               then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_VampiricTouch_Free_8').Result               then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_VampiricTouch_Free_9').Result               then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Cloudkill_Recast').Result                   then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Cloudkill_Recast_6').Result                 then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Cloudkill_Recast_7').Result                 then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Cloudkill_Recast_8').Result                 then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Cloudkill_Recast_9').Result                 then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_HuntersMark_Reapply').Result                then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_TAD_Imperil_Recast').Result                 then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_MF_Imperil_Recast').Result                  then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Zone_Sunbeam_Recreate').Result                     then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_TAD_BlackHole_Recast').Result               then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Throw_Telekinesis_Recast').Result                  then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Eyebite_Asleep_Free').Result                then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Eyebite_Panicked_Free').Result              then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_Eyebite_Sickened_Free').Result              then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_DispelEvilAndGood_BreakEnchantment').Result then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_SpeakWithDead_FreeRecast').Result           then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Target_AuraOfVitality_Activate').Result            then return ConditionResult(true) end
+    if IsSpellChildOrVariantFromContext('Shout_WitchBolt_Activate').Result                  then return ConditionResult(true) end
+    return ConditionResult(false)
 end

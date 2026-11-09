@@ -1,0 +1,26 @@
+// treasure itemtypes "Common","Uncommon","Rare","Epic","Legendary","Divine","Unique"
+
+new treasuretable "CRE_TreasuryVault_3_Treasure"
+CanMerge 1
+new subtable "-1"
+object category "I_BSM_BS_FistsLordRage",1,0,0,0,0,0,0,0
+
+new treasuretable "MOO_BugBearvendor_Trade"
+CanMerge 1
+new subtable "-1"
+object category "I_BSM_BS_TheUnstopableWrath",1,0,0,0,0,0,0,0
+
+new treasuretable "HAG_Lair_RingChest"
+CanMerge 1
+new subtable "-1"
+object category "I_BSM_BS_TheBerserkerPact",1,0,0,0,0,0,0,0
+
+new treasuretable "SHA_Orthon_Chest"
+CanMerge 1
+new subtable "-1"
+object category "I_BSM_BS_TheOniSkin",1,0,0,0,0,0,0,0
+
+new treasuretable "MOO_SecretStudyTreasure_Chest"
+CanMerge 1
+new subtable "-1"
+object category "I_BSM_BS_HelmetOfWrath",1,0,0,0,0,0,0,0

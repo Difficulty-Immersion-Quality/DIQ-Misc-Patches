@@ -1,0 +1,12 @@
+new entry "BSM_BS_QuestLetter_Intro"
+type "Object"
+using "OBJ_Scroll"
+data "RootTemplate" "caf238cc-ef4d-4762-b2e7-0373e8e7119e"
+data "Rarity" "Uncommon"
+data "Flags" "Unbreakable"
+data "DefaultBoosts" ""
+
+new entry "BSM_BS_QuestLetter_BaneCult"
+type "Object"
+using "BSM_BS_QuestLetter_Intro"
+

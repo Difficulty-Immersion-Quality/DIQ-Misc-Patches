@@ -5,6 +5,7 @@
         <node id="root">
             <children>
         <!-- The Umni dryad heads have issues with KAVT, commented them out for now. -->
+        <!-- TODO: Test with STAV. -->
                 <!-- GNOMES -->
                 <node id="CharacterCreationAppearanceVisual">
                     <attribute id="BodyShape" type="uint8" value="0" />

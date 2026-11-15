@@ -9,7 +9,7 @@
           <attribute id="Author" type="LSString" value="Goonsack" />
           <attribute id="CharacterCreationLevelName" type="FixedString" value="" />
           <attribute id="Description" type="LSString" value="Many fixes, tweaks, adjustments, tomfoolery, experiments, shenanigans, gobbledegook..." />
-          <attribute id="Folder" type="LSString" value="DIQ Misc Patches - Overrides" />
+          <attribute id="Folder" type="LSString" value="DIQhoot Patches - Overrides" />
           <attribute id="GMTemplate" type="FixedString" value="" />
           <attribute id="LobbyLevelName" type="FixedString" value="" />
           <attribute id="MD5" type="LSString" value="" />

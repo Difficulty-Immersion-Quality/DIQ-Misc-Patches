@@ -305,13 +305,13 @@
 
 <!-- ==================================== Essential Feats ==================================== -->
 	<!-- FeatDescription: "SYR_DeadlyAlacrity" -->
-	<content contentuid="h05592f25gb130g4a5aga4f6g5b2e34c88557" version="1">Increase an ability other than &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; by 1. The number you need to roll for a &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hit&lt;/LSTag&gt; is reduced by 1. When you hit a target with an &lt;LSTag Tooltip="AttackRoll"&gt;Attack&lt;/LSTag&gt;, you regain 1m of &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt;. If you &lt;LSTag Tooltip="CriticalHit"&gt;Critically Hit&lt;/LSTag&gt; or strike a killing blow, you regain 3m instead.</content>
+	<content contentuid="h05592f25gb130g4a5aga4f6g5b2e34c88557" version="1">Increase an &lt;LSTag Tooltip="Abilities"&gt;Ability&lt;/LSTag&gt; other than &lt;LSTag Tooltip="Constitution"&gt;Constitution&lt;/LSTag&gt; by 1. The number you need to roll for a &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hit&lt;/LSTag&gt; is reduced by 1. When you hit a target with an &lt;LSTag Tooltip="AttackRoll"&gt;Attack&lt;/LSTag&gt;, you regain 1m of &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt;. If you &lt;LSTag Tooltip="CriticalHit"&gt;Critically Hit&lt;/LSTag&gt; or strike a killing blow, you regain 3m instead.</content>
 	<!-- "SYR_Feat_DeadlyAlacrity_Passive" -->
 	<content contentuid="h71fc36b8g0e9ag4e65g90aeg8f5e8ed9e72c" version="1">The number you need to roll for a &lt;LSTag Tooltip="CriticalHit"&gt;Critical Hit&lt;/LSTag&gt; is reduced by 1. When you hit a target with an &lt;LSTag Tooltip="AttackRoll"&gt;Attack&lt;/LSTag&gt;, you regain [1] of &lt;LSTag Tooltip="MovementSpeed"&gt;movement speed&lt;/LSTag&gt;. If you &lt;LSTag Tooltip="CriticalHit"&gt;Critically Hit&lt;/LSTag&gt; or strike a killing blow, you regain [2] instead.</content>
 	<!-- "SYR_Target_Telekinetic_Push" -->
 	<content contentuid="h18a0b190gb0d7g44fegbbc1g2dc5b5d4cb4c" version="1">Shove a creature telekinetically. Shove distance is based on your &lt;LSTag Tooltip="ProficiencyBonus"&gt;Proficiency Bonus&lt;/LSTag&gt;, currently [1]m.</content>
 	<!-- "SYR_Target_Telekinetic_Pull" -->
-	<content contentuid="h330d4e29g5fc9g431cga5b1g382b3381a235" version="1">Shove a creature telekinetically. Shove distance is based on your &lt;LSTag Tooltip="ProficiencyBonus"&gt;Proficiency Bonus&lt;/LSTag&gt;, currently [1]m.</content>
+	<content contentuid="h330d4e29g5fc9g431cga5b1g382b3381a235" version="1">Pull a creature telekinetically. Pull distance is based on your &lt;LSTag Tooltip="ProficiencyBonus"&gt;Proficiency Bonus&lt;/LSTag&gt;, currently [1]m.</content>
 	<!-- FeatDescription: "SYR_WarMagic" -->
 	<content contentuid="h36fe367cg8a9bg43a4g8b94gd2a2f7d38a8c" version="1">After casting a spell or cantrip, you can make a basic attack as a &lt;LSTag Type="ActionResource" Tooltip="BonusActionPoint"&gt;bonus action&lt;/LSTag&gt;. This attack deals half damage.</content>
 	<!-- "SYR_Feat_WarMagic_AltSpell_Passive" -->

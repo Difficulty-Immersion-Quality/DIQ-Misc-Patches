@@ -28,8 +28,7 @@
                 </node>
         <node id="SpellList">
                     <attribute id="Comment" type="LSString" value="Hellish Rebuke" />
-                    <!-- <attribute id="Spells" type="LSString" value="Shout_SYR_HellTouched_HellishRebuke" /> -->
-                    <attribute id="Spells" type="LSString" value="SYR_Shout_HellTouched_HellishRebuke" />
+                    <attribute id="Spells" type="LSString" value="Shout_SYR_HellTouched_HellishRebuke" />
                     <attribute id="UUID" type="guid" value="4dac0a31-6e48-44ee-9947-5978d1609150" />
                 </node>
         <node id="SpellList">

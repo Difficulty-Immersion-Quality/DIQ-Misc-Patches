@@ -1,6 +1,7 @@
 // ==================================== Blinded ====================================
 // TODO: Explain all this shit, and probably move it to Goon's Condition and Surface Overhaul.
 // Note: Includes reference field in order of vanilla > Expansion > True Darkness RAW.
+// Note: "Being Blinded has no effect on the range of Throw or any other action with the IgnoreVisionBlock flag".
 
 new entry "BLINDED"
 type "StatusData"

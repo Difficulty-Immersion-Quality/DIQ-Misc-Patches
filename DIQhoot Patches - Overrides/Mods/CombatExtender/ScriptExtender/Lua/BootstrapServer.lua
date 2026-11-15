@@ -1,5 +1,6 @@
 local function OnSessionLoaded()
-    modTable = Ext.Mod.GetMod("0c692104-c83f-48b8-9fcd-ca7e33be5098")
+    -- modTable = Ext.Mod.GetMod("0c692104-c83f-48b8-9fcd-ca7e33be5098")
+    local modTable = Ext.Mod.GetMod("0c692104-c83f-48b8-9fcd-ca7e33be5098") -- CX FIX: was an unused global
 
 
     -- Define global variables
@@ -15,7 +16,8 @@ local function OnSessionLoaded()
     EntityHealthAdjustment = {}
     EntityResetState = {}
     CloneState = {}
-    PersistentVars = Mods["CombatExtender"].PersistentVars or {}
+    -- PersistentVars = Mods["CombatExtender"].PersistentVars or {}
+    PersistentVars = PersistentVars or {} -- CX FIX: Mods["CombatExtender"] errors if the ModTable name differs; this is the same table otherwise
     PersistentVars["baseLevel"] = PersistentVars["baseLevel"] or {}
     PersistentVars["clonedEntities"] = PersistentVars["clonedEntities"] or {}
 
@@ -29,7 +31,8 @@ local function OnSessionLoaded()
         if not indent then indent = 0 end
 
         for k, v in pairs(tbl) do
-            formatting = string.rep("  ", indent) .. k .. ": "
+            -- formatting = string.rep("  ", indent) .. k .. ": "
+            local formatting = string.rep("  ", indent) .. k .. ": " -- CX FIX: was leaking a global
 
             if type(v) == "table" then
 
@@ -43,6 +46,47 @@ local function OnSessionLoaded()
     function DebugPrint(...)
         if Ext.Debug.IsDeveloperMode() then
 
+        end
+    end
+
+    -- CX FIX #6: shared level-scaling helper. LevelIncrement 0 (or missing) used to produce inf/NaN boosts.
+    function ScaledBoost(static, perInc, inc, level)
+        static = static or 0
+        perInc = perInc or 0
+        if not inc or inc <= 0 then
+            return static
+        end
+        return static + perInc * math.floor(level / inc - 0.1)
+    end
+
+    -- CX FIX (reapply): list the Params of every "combatextender" boost of one type on a character
+    function GetCXBoostParams(guid, boostType)
+        local result = {}
+        local entity = Ext.Entity.Get(guid)
+        local container = entity and entity.BoostsContainer
+        if not container then
+            return result
+        end
+        for _, boostEntry in ipairs(container.Boosts) do
+            if boostEntry.Type == boostType then
+                for _, boost in ipairs(boostEntry.Boosts) do
+                    local info = boost.BoostInfo
+                    if info and info.Cause and info.Cause.Cause == "combatextender" and info.Params and info.Params.Params then
+                        table.insert(result, info.Params.Params)
+                    end
+                end
+            end
+        end
+        return result
+    end
+
+    -- CX FIX (reapply): remove our own boosts of one type before re-adding, so a reapply can't stack them.
+    -- paramPrefix narrows it down where types are shared, e.g. "SpellSlot," vs "ActionPoint," under ActionResource.
+    function RemoveCXBoosts(guid, boostType, paramPrefix)
+        for _, params in ipairs(GetCXBoostParams(guid, boostType)) do
+            if not paramPrefix or params:sub(1, #paramPrefix) == paramPrefix then
+                RemoveBoosts(guid, string.format("%s(%s)", boostType, params), 0, "combatextender", "1")
+            end
         end
     end
 
@@ -132,7 +176,11 @@ local function OnSessionLoaded()
             end
 
             if healthMultiplierPartyScaling ~= 0 then
-                healthSettings.Allies.HealthMultiplierPartyScaling = healthMultiplierPartyScaling
+                -- healthSettings.Allies.HealthMultiplierPartyScaling = healthMultiplierPartyScaling
+                -- CX FIX #9: only tag Allies when ally overrides are enabled, otherwise Allies stops being empty and allies get scaled
+                if next(healthSettings.Allies) ~= nil then
+                    healthSettings.Allies.HealthMultiplierPartyScaling = healthMultiplierPartyScaling
+                end
                 healthSettings.Bosses.HealthMultiplierPartyScaling = healthMultiplierPartyScaling
                 healthSettings.Enemies.HealthMultiplierPartyScaling = healthMultiplierPartyScaling
             end
@@ -498,6 +546,23 @@ local function OnSessionLoaded()
     function readJsonFile()
         if IsMCMLoaded() and MCMGet("Use_MCM_Settings") then
             ConfigTable = CreateConfigTable()
+            -- CX FIX #12: carry custom Overrides/Clones over from the existing JSON so saveConfigTable doesn't wipe them
+            local okLoad, existingContent = pcall(Ext.IO.LoadFile, "CombatExtender.json")
+            if okLoad and existingContent then
+                local okParse, existingTable = pcall(Ext.Json.Parse, existingContent)
+                if okParse and type(existingTable) == "table" then
+                    if type(existingTable.Overrides) == "table" then
+                        for key, value in pairs(existingTable.Overrides) do
+                            if ConfigTable.Overrides[key] == nil then
+                                ConfigTable.Overrides[key] = value
+                            end
+                        end
+                    end
+                    if type(existingTable.Clones) == "table" then
+                        ConfigTable.Clones = existingTable.Clones
+                    end
+                end
+            end
             saveConfigTable()
         else
             local status, fileContent = pcall(Ext.IO.LoadFile, "CombatExtender.json")
@@ -510,7 +575,9 @@ local function OnSessionLoaded()
             end
 
             local parseStatus, result = pcall(Ext.Json.Parse, fileContent)
-            if not parseStatus then
+            -- if not parseStatus then
+            if not parseStatus or type(result) ~= "table" then -- CX FIX #10: also reject non-table results
+                Ext.Utils.PrintWarning("[CombatExtender] CombatExtender.json failed to parse; boosts are disabled until it is fixed.")
                 return
             end
 
@@ -605,6 +672,7 @@ local function OnSessionLoaded()
 
     function ProcessPartyMembers()
         local partyMembers = Osi.DB_PartyMembers:Get(nil)
+        Party = {} -- CX FIX: rebuild each time so dismissed members don't stay in Party
         for _, d in ipairs(partyMembers) do
             Party[d[1]] = true
         end
@@ -652,7 +720,7 @@ local function OnSessionLoaded()
                         -- Convert party member GUID to handle and back to UUID? for comparison
                         local partyMemberHandle = Ext.Entity.UuidToHandle(partyMemberGuid)
                         if partyMemberHandle then
-                            local handle = Ext.Loca.GetTranslatedString(partyMemberHandle.DisplayName.NameKey.Handle.Handle)
+                            -- local handle = Ext.Loca.GetTranslatedString(partyMemberHandle.DisplayName.NameKey.Handle.Handle) -- CX FIX: unused, and errors if DisplayName is nil
                             local convertedPartyMemberGuid = Ext.Entity.HandleToUuid(partyMemberHandle)
                             --
                             if causeUuid == convertedPartyMemberGuid then
@@ -672,11 +740,18 @@ local function OnSessionLoaded()
     function GiveHPIncrease(guid, SkipCheck)
         local healthConfig
 
+        -- CX FIX #10: bail out if the config failed to load instead of erroring every timer tick
+        if not ConfigTable or not ConfigTable["Health"] then
+            return
+        end
+
         if IsTargetABoss(guid) == 1 then
             healthConfig = ConfigTable["Health"]["Bosses"]
         elseif SkipCheck then
             healthConfig = ConfigTable["Health"]["Enemies"]
-            if next(ConfigTable["Health"]["Allies"]) ~= nil then
+            -- if next(ConfigTable["Health"]["Allies"]) ~= nil then
+            -- CX FIX #13: known enemies keep the Enemies config even when Allies is configured
+            if next(ConfigTable["Health"]["Allies"]) ~= nil and IsTargetAnEnemy(guid) == 0 then
                 healthConfig = ConfigTable["Health"]["Allies"]
             end
         elseif IsTargetAnEnemy(guid) == 0 then
@@ -692,13 +767,28 @@ local function OnSessionLoaded()
         local healthMultiplier = tonumber(healthConfig["HealthMultiplier"])
 
         -- Check if Party Scaling is configured
+        if not healthConfig then
+            return
+        end
+
+        -- if healthConfig["HealthMultiplierPartyScaling"] then
+        --     local partySize = GetPartySize()
+        --     if partySize <= 4 then
+        --         return
+        --     end
+        --     local partyScalingMultiplier = tonumber(healthConfig["HealthMultiplierPartyScaling"])
+        --     healthMultiplier = partyScalingMultiplier * partySize
+        -- end
+        -- CX FIX #3: a party of 4 or fewer now skips only the party-scaling override, not all HP scaling.
+        -- Formula left as-is: scaling * partySize REPLACES HealthMultiplier (e.g. 0.2 * 5 = 1.0 = no change).
         if healthConfig["HealthMultiplierPartyScaling"] then
             local partySize = GetPartySize()
-            if partySize <= 4 then
-                return
+            if partySize > 4 then
+                local partyScalingMultiplier = tonumber(healthConfig["HealthMultiplierPartyScaling"])
+                if partyScalingMultiplier then
+                    healthMultiplier = partyScalingMultiplier * partySize
+                end
             end
-            local partyScalingMultiplier = tonumber(healthConfig["HealthMultiplierPartyScaling"])
-            healthMultiplier = partyScalingMultiplier * partySize
         end
 
         -- For healthMultiplier 0 equals level-based scaling
@@ -713,7 +803,15 @@ local function OnSessionLoaded()
 
         -- Get the character's current max health and the boost parameters
         local entity = Ext.Entity.Get(guid)
-        local handle = Ext.Loca.GetTranslatedString(entity.DisplayName.NameKey.Handle.Handle)
+        -- local handle = Ext.Loca.GetTranslatedString(entity.DisplayName.NameKey.Handle.Handle)
+        -- CX FIX: nil-check entity/DisplayName before reading them
+        if not (entity and entity.Health) then
+            return
+        end
+        local handle = ""
+        if entity.DisplayName and entity.DisplayName.NameKey and entity.DisplayName.NameKey.Handle then
+            handle = Ext.Loca.GetTranslatedString(entity.DisplayName.NameKey.Handle.Handle)
+        end
         local currentMaxHealth = entity and entity.Health.MaxHp
         local boostsContainer = entity and entity.BoostsContainer
         local increaseMaxHPEntries
@@ -729,6 +827,7 @@ local function OnSessionLoaded()
         local isReset = false
         local isProgressionBoosted = false
         local boostParams
+        local cxHpTotal = 0 -- CX FIX (reapply): sum of our own IncreaseMaxHP boosts
 
         if currentMaxHealth == 1 then -- Primarily for potential character creation issues
             return
@@ -748,6 +847,7 @@ local function OnSessionLoaded()
                 if entry.BoostInfo.Cause.Cause == "combatextender" then
                     isBoosted = true -- Set flag to true if a combatextender boost is found
                     boostParams = tonumber(entry.BoostInfo.Params.Params)
+                    cxHpTotal = cxHpTotal + (boostParams or 0)
                 elseif entry.BoostInfo.Cause.Cause == "reset" then
                     isReset = true -- Set flag to true if a reset boost is found
                 elseif entry.BoostInfo.Cause.Type == "Progression" then
@@ -771,8 +871,11 @@ local function OnSessionLoaded()
 
                 baseHealth = math.floor(entity.BaseHp.Vitality * 1.3) -- 1.3 multiplier is default for Tactician
 
-                if isProgressionBoosted and currentMaxHealth < 100 then
-                    healthToUse = currentMaxHealth
+                -- if isProgressionBoosted and currentMaxHealth < 100 then
+                --     healthToUse = currentMaxHealth
+                -- CX FIX (reapply): strip our own boosts first, otherwise after a load the multiplier lands on already-boosted HP
+                if isProgressionBoosted and (currentMaxHealth - cxHpTotal) < 100 then
+                    healthToUse = currentMaxHealth - cxHpTotal
                 else
                     healthToUse = baseHealth
                 end
@@ -819,8 +922,17 @@ local function OnSessionLoaded()
                 return
             end
 
+            -- if currentMaxHealth == desiredMaxHealth then
+            --     --
+            --     return
+            -- end
+            -- CX FIX (reapply): equal HP with no combatextender boost means MaxHp was loaded from the save but the boost wasn't.
+            -- Re-add it (in or out of combat); once MaxHp is recalculated it lands on desiredMaxHealth again.
             if currentMaxHealth == desiredMaxHealth then
-                --
+                if hpIncrease <= 0 then
+                    return
+                end
+                AddBoosts(guid, hpBoost, "combatextender", "1")
                 return
             end
             --
@@ -1009,7 +1121,8 @@ local function OnSessionLoaded()
 
 
                     local template = GetTemplate(entityToClone)
-                    clonedEntity = CreateAt(template, clone_x + Random(4) - 4, clone_y, clone_z + Random(4) - 4, 0, 0, "")
+                    -- clonedEntity = CreateAt(template, clone_x + Random(4) - 4, clone_y, clone_z + Random(4) - 4, 0, 0, "")
+                    clonedEntity = CreateAt(template, clone_x + Random(8) - 4, clone_y, clone_z + Random(8) - 4, 0, 0, "") -- CX FIX: offset was always -4..-1
 
 
                     Transform(clonedEntity, entityToClone, "a2ff752c-84da-442b-bee1-0e593c377a72") -- Custom shape shift rule
@@ -1027,6 +1140,11 @@ local function OnSessionLoaded()
 
                 local originalEntity = Ext.Entity.Get(entityToClone)
                 local clonedEntityData = Ext.Entity.Get(clonedEntity)
+
+                -- CX FIX: a dead/removed clone (or missing original) left a stale key and errored below
+                if not (originalEntity and clonedEntityData and originalEntity.Health and clonedEntityData.Health) then
+                    return
+                end
 
                 -- Get the cloneEntityKey
                 local cloneEntityKey = PersistentVars["clonedEntities"][guid]
@@ -1145,6 +1263,8 @@ local function OnSessionLoaded()
         -- Define the passives we are interested in
         local passives = { "CX_Spells_L1", "CX_Spells_L2", "CX_Spells_L3", "CX_Spells_L4", "CX_Spells_L5", "CX_Spells_L6" }
 
+        RemoveCXBoosts(guid, "ActionResource", "SpellSlot,") -- CX FIX (reapply): clear our old slots so they can't stack
+
         -- Iterate over the passives
         for _, passive in ipairs(passives) do
             -- Check if the target has the current passive
@@ -1182,10 +1302,17 @@ local function OnSessionLoaded()
     function GiveActionPointBoost(guid, actionType)
         local actionPointConfig
 
+        -- CX FIX #10: older JSON without this section
+        if not ConfigTable.ExtraAction then
+            return
+        end
+
         if IsTargetABoss(guid) == 1 then
             actionPointConfig = ConfigTable["ExtraAction"]["Bosses"][actionType]
         elseif IsTargetAnEnemy(guid) == 0 then
-            if next(ConfigTable["ExtraAction"]["Allies"]) == nil or next(ConfigTable["ExtraAction"]["Allies"][actionType]) == nil then
+            -- if next(ConfigTable["ExtraAction"]["Allies"]) == nil or next(ConfigTable["ExtraAction"]["Allies"][actionType]) == nil then
+            -- CX FIX #14: next(nil) errored when Allies existed but lacked this actionType
+            if next(ConfigTable["ExtraAction"]["Allies"]) == nil or ConfigTable["ExtraAction"]["Allies"][actionType] == nil or next(ConfigTable["ExtraAction"]["Allies"][actionType]) == nil then
                 return
             else
                 actionPointConfig = ConfigTable["ExtraAction"]["Allies"][actionType]
@@ -1194,15 +1321,21 @@ local function OnSessionLoaded()
             actionPointConfig = ConfigTable["ExtraAction"]["Enemies"][actionType]
         end
 
+        if not actionPointConfig then
+            return
+        end
+
         local additional = tonumber(actionPointConfig["Additional"])
 
         -- Check if the configuration is enabled for this type of character
-        if additional == 0 then
+        -- if additional == 0 then
+        if not additional or additional == 0 then
             return
         end
 
         local actionResource = (actionType == "Action") and "ActionPoint" or "BonusActionPoint"
         local actionPoints = string.format("ActionResource(%s,%s,0)", actionResource, additional)
+        RemoveCXBoosts(guid, "ActionResource", actionResource .. ",") -- CX FIX (reapply)
         AddBoosts(guid, actionPoints, "combatextender", "1")
     end
 
@@ -1214,7 +1347,14 @@ local function OnSessionLoaded()
             return
         end
 
-        if guid == "S_UND_KethericCity_AdamantineGolem_2a5997fc-5f2a-4a13-b309-bed16da3b255" or "S_CRE_GuardianOfFaith_5144e2e8-fbd7-41b3-a6fb-f4cf5759cb95" then
+        -- if guid == "S_UND_KethericCity_AdamantineGolem_2a5997fc-5f2a-4a13-b309-bed16da3b255" or "S_CRE_GuardianOfFaith_5144e2e8-fbd7-41b3-a6fb-f4cf5759cb95" then
+        -- CX FIX #1: the bare string was always truthy, so this returned for everyone and movement never applied
+        if guid == "S_UND_KethericCity_AdamantineGolem_2a5997fc-5f2a-4a13-b309-bed16da3b255" or guid == "S_CRE_GuardianOfFaith_5144e2e8-fbd7-41b3-a6fb-f4cf5759cb95" then
+            return
+        end
+
+        -- CX FIX #10: older JSON without this section
+        if not ConfigTable.Movement then
             return
         end
 
@@ -1230,19 +1370,30 @@ local function OnSessionLoaded()
             movementConfig = ConfigTable["Movement"]["Enemies"]
         end
 
+        if not movementConfig then
+            return
+        end
+
         local staticBoost = tonumber(movementConfig["StaticBoost"])
 
-        if staticBoost == 0 then
+        -- if staticBoost == 0 then
+        if not staticBoost or staticBoost == 0 then
             return
         end
 
         local movement = "ActionResource(Movement," .. staticBoost .. ",0)"
+        RemoveCXBoosts(guid, "ActionResource", "Movement,") -- CX FIX (reapply)
         AddBoosts(guid, movement, "combatextender", "1")
     end
 
     -- Armour Class
     function GiveACBoost(guid)
         local armourClassConfig
+
+        -- CX FIX #10: older JSON without this section
+        if not ConfigTable.ArmourClass then
+            return
+        end
 
         if IsTargetABoss(guid) == 1 then
             armourClassConfig = ConfigTable["ArmourClass"]["Bosses"]
@@ -1256,6 +1407,10 @@ local function OnSessionLoaded()
             armourClassConfig = ConfigTable["ArmourClass"]["Enemies"]
         end
 
+        if not armourClassConfig then
+            return
+        end
+
         local staticBoost = tonumber(armourClassConfig["StaticBoost"])
         local boostPerIncrement = tonumber(armourClassConfig["BoostPerIncrement"])
         local levelIncrement = tonumber(armourClassConfig["LevelIncrement"])
@@ -1265,9 +1420,15 @@ local function OnSessionLoaded()
         end
 
         local levelMultiplier = GetLevel(guid)
-        local totalBoost = staticBoost + boostPerIncrement * math.floor(levelMultiplier / levelIncrement - 0.1)
+        -- local totalBoost = staticBoost + boostPerIncrement * math.floor(levelMultiplier / levelIncrement - 0.1)
+        local totalBoost = ScaledBoost(staticBoost, boostPerIncrement, levelIncrement, levelMultiplier) -- CX FIX #6
+
+        if totalBoost == 0 then
+            return
+        end
 
         local ac = "AC(" .. totalBoost .. ")"
+        RemoveCXBoosts(guid, "AC") -- CX FIX (reapply)
         AddBoosts(guid, ac, "combatextender", "1")
     end
 
@@ -1291,6 +1452,10 @@ local function OnSessionLoaded()
             spellSaveDCConfig = ConfigTable["SpellSaveDC"]["Enemies"]
         end
 
+        if not spellSaveDCConfig then
+            return
+        end
+
         local staticBoost = tonumber(spellSaveDCConfig["StaticBoost"])
         local boostPerIncrement = tonumber(spellSaveDCConfig["BoostPerIncrement"])
         local levelIncrement = tonumber(spellSaveDCConfig["LevelIncrement"])
@@ -1300,9 +1465,15 @@ local function OnSessionLoaded()
         end
 
         local levelMultiplier = GetLevel(guid)
-        local totalBoost = staticBoost + boostPerIncrement * math.floor(levelMultiplier / levelIncrement - 0.1)
+        -- local totalBoost = staticBoost + boostPerIncrement * math.floor(levelMultiplier / levelIncrement - 0.1)
+        local totalBoost = ScaledBoost(staticBoost, boostPerIncrement, levelIncrement, levelMultiplier) -- CX FIX #6
+
+        if totalBoost == 0 then
+            return
+        end
 
         local ssdc = "SpellSaveDC(" .. totalBoost .. ")"
+        RemoveCXBoosts(guid, "SpellSaveDC") -- CX FIX (reapply)
         AddBoosts(guid, ssdc, "combatextender", "1")
     end
 
@@ -1311,8 +1482,19 @@ local function OnSessionLoaded()
             return
         end
 
-        local abilitiesCpp = Ext.Entity.Get(guid).Stats.Abilities
-        local spellCastingAbility = Ext.Entity.Get(guid).Stats.SpellCastingAbility
+        -- local abilitiesCpp = Ext.Entity.Get(guid).Stats.Abilities
+        -- local spellCastingAbility = Ext.Entity.Get(guid).Stats.SpellCastingAbility
+        local statsEntity = Ext.Entity.Get(guid)
+        if not (statsEntity and statsEntity.Stats) then -- CX FIX: nil guard
+            return
+        end
+        local abilitiesCpp = statsEntity.Stats.Abilities
+        local spellCastingAbility = statsEntity.Stats.SpellCastingAbility
+        -- CX FIX #16: normalise to a plain string in case SE hands back an enum userdata
+        if type(spellCastingAbility) == "userdata" then
+            local okLabel, label = pcall(function() return spellCastingAbility.Label end)
+            spellCastingAbility = (okLabel and label) or tostring(spellCastingAbility)
+        end
         local abilityNames = { "Strength", "Dexterity", "Constitution", "Intelligence", "Wisdom", "Charisma" }
         local abilityBoostConfig = ConfigTable["AbilityPoints"]["Enemies"]
 
@@ -1337,7 +1519,14 @@ local function OnSessionLoaded()
         else
             -- Calculate the total boost based on the new format
             local levelMultiplier = GetLevel(guid)
-            abilityBoostConfig = staticBoost + boostPerIncrement * math.floor(levelMultiplier / levelIncrement - 0.1)
+            -- abilityBoostConfig = staticBoost + boostPerIncrement * math.floor(levelMultiplier / levelIncrement - 0.1)
+            abilityBoostConfig = ScaledBoost(staticBoost, boostPerIncrement, levelIncrement, levelMultiplier) -- CX FIX #6
+        end
+
+        -- CX FIX #7: a 0 boost still added +1 to odd scores via the even-number rounding below
+        abilityBoostConfig = tonumber(abilityBoostConfig) or 0
+        if abilityBoostConfig == 0 then
+            return
         end
 
         -- Convert C++ array to Lua table, ignoring the first value
@@ -1345,6 +1534,22 @@ local function OnSessionLoaded()
         for i = 2, #abilitiesCpp do
             abilities[abilityNames[i - 1]] = abilitiesCpp[i]
         end
+
+        -- CX FIX (reapply): take our own Ability boosts back out of the scores before picking the top two and rounding,
+        -- then remove them, so a reapply on load/region change replaces them instead of stacking on top
+        local cxAbilityBoosts = {}
+        for _, params in ipairs(GetCXBoostParams(guid, "Ability")) do
+            local name, amount = params:match("^%s*(%a+)%s*,%s*(-?%d+)")
+            if name and amount then
+                cxAbilityBoosts[name] = (cxAbilityBoosts[name] or 0) + tonumber(amount)
+            end
+        end
+        for name, amount in pairs(cxAbilityBoosts) do
+            if abilities[name] then
+                abilities[name] = abilities[name] - amount
+            end
+        end
+        RemoveCXBoosts(guid, "Ability")
 
         -- Sort abilities by value to find the top two
         local sortedAbilities = {}
@@ -1376,23 +1581,30 @@ local function OnSessionLoaded()
         for _, abilityInfo in ipairs(abilitiesToBoost) do
             local abilityName = abilityInfo.name
             local currentAbilityValue = abilities[abilityName] or abilityInfo.value
-            local boostAmount = abilityBoostConfig
-            local finalAbilityValue = currentAbilityValue + boostAmount
+            if currentAbilityValue ~= nil then -- CX FIX #16: unknown ability name, skip instead of erroring
+                local boostAmount = abilityBoostConfig
+                local finalAbilityValue = currentAbilityValue + boostAmount
 
-            -- Ensure the final ability value is an even number
-            if finalAbilityValue % 2 ~= 0 then
-                boostAmount = boostAmount + 1
+                -- Ensure the final ability value is an even number
+                if finalAbilityValue % 2 ~= 0 then
+                    boostAmount = boostAmount + 1
+                end
+
+                local boostString = string.format("Ability(%s,%d)", abilityName, boostAmount)
+                --
+                AddBoosts(guid, boostString, "combatextender", "1")
             end
-
-            local boostString = string.format("Ability(%s,%d)", abilityName, boostAmount)
-            --
-            AddBoosts(guid, boostString, "combatextender", "1")
         end
     end
 
     -- Roll Bonus
     function GiveRollBonus(guid, rollType)
         local rollBonusConfig
+
+        -- CX FIX #10: older JSON without this section
+        if not ConfigTable.Rolls then
+            return
+        end
 
         if IsTargetABoss(guid) == 1 then
             rollBonusConfig = ConfigTable["Rolls"]["Bosses"][rollType]
@@ -1406,6 +1618,10 @@ local function OnSessionLoaded()
             rollBonusConfig = ConfigTable["Rolls"]["Enemies"][rollType]
         end
 
+        if not rollBonusConfig then
+            return
+        end
+
         local staticRollBonus = tonumber(rollBonusConfig["StaticRollBonus"])
         local rollBonusPerIncrement = tonumber(rollBonusConfig["RollBonusPerIncrement"])
         local levelIncrement = tonumber(rollBonusConfig["LevelIncrement"])
@@ -1415,7 +1631,9 @@ local function OnSessionLoaded()
         end
 
         local levelMultiplier = GetLevel(guid)
-        local totalRollBonus = staticRollBonus + rollBonusPerIncrement * math.floor(levelMultiplier / levelIncrement - 0.1)
+        -- local totalRollBonus = staticRollBonus + rollBonusPerIncrement * math.floor(levelMultiplier / levelIncrement - 0.1)
+        local totalRollBonus = ScaledBoost(staticRollBonus, rollBonusPerIncrement, levelIncrement, levelMultiplier) -- CX FIX #6
+        totalRollBonus = math.floor(totalRollBonus) -- CX FIX: keep it an integer so the status name is CX_ATTACK_3, not CX_ATTACK_3.0
 
         -- Retrieve the BoostsContainer for the entity
         local boostsContainer = Ext.Entity.Get(guid).BoostsContainer
@@ -1440,6 +1658,8 @@ local function OnSessionLoaded()
             end
         end
 
+        RemoveCXBoosts(guid, "RollBonus", rollType .. ",") -- CX FIX (reapply): the 11+ path adds a boost directly, clear it too
+
         if totalRollBonus >= 1 and totalRollBonus <= 10 then -- Apply status if totalRollBonus is within the specified range
             local status = "CX_" .. string.upper(rollType) .. "_" .. totalRollBonus
             ApplyStatus(guid, status, -1)
@@ -1455,6 +1675,11 @@ local function OnSessionLoaded()
     function GiveDamageBoost(guid)
         local damageConfig
 
+        -- CX FIX #10: older JSON without this section
+        if not ConfigTable.Damage then
+            return
+        end
+
         if IsTargetABoss(guid) == 1 then
             damageConfig = ConfigTable["Damage"]["Bosses"]
         elseif IsTargetAnEnemy(guid) == 0 then
@@ -1467,6 +1692,10 @@ local function OnSessionLoaded()
             damageConfig = ConfigTable["Damage"]["Enemies"]
         end
 
+        if not damageConfig then
+            return
+        end
+
         local staticDamageBoost = tonumber(damageConfig["StaticDamageBoost"])
         local damagePerIncrement = tonumber(damageConfig["DamagePerIncrement"])
         local levelIncrement = tonumber(damageConfig["LevelIncrement"])
@@ -1476,9 +1705,15 @@ local function OnSessionLoaded()
         end
 
         local levelMultiplier = GetLevel(guid)
-        local totalDamageBoost = staticDamageBoost + damagePerIncrement * math.floor(levelMultiplier / levelIncrement - 0.1)
+        -- local totalDamageBoost = staticDamageBoost + damagePerIncrement * math.floor(levelMultiplier / levelIncrement - 0.1)
+        local totalDamageBoost = ScaledBoost(staticDamageBoost, damagePerIncrement, levelIncrement, levelMultiplier) -- CX FIX #6
+
+        if totalDamageBoost == 0 then
+            return
+        end
 
         local damageBonus = "DamageBonus(" .. totalDamageBoost .. ")"
+        RemoveCXBoosts(guid, "DamageBonus") -- CX FIX (reapply)
         AddBoosts(guid, damageBonus, "combatextender", "1")
     end
 
@@ -1520,7 +1755,10 @@ local function OnSessionLoaded()
         end
 
         -- Attempt to get the configuration for the current act and entity type
-        local actConfig = ConfigTable["Level"][entityType]["Act"][tostring(currentAct)]
+        -- local actConfig = ConfigTable["Level"][entityType]["Act"][tostring(currentAct)]
+        -- CX FIX: nil-safe lookup when Level lacks Characters/Bosses or Act
+        local entityLevelConfig = ConfigTable["Level"][entityType]
+        local actConfig = entityLevelConfig and entityLevelConfig["Act"] and entityLevelConfig["Act"][tostring(currentAct)]
         if not actConfig then
             return
         end
@@ -1532,7 +1770,8 @@ local function OnSessionLoaded()
         local currentLevel = GetLevel(guid)
         local desiredLevel = playerLevel + offset
 
-        if desiredLevel > maxLevel then -- Ensure new level does not exceed max level
+        -- if desiredLevel > maxLevel then -- Ensure new level does not exceed max level
+        if maxLevel and desiredLevel > maxLevel then -- CX FIX #15: no cap when MaxLevel is missing instead of erroring
             desiredLevel = maxLevel
         end
 
@@ -1548,16 +1787,23 @@ local function OnSessionLoaded()
         if sourceEntity then
             local pos = sourceEntity.Transform.Transform.Translate
             for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("BaseHp")) do
-                if entity.ServerCharacter ~= nil then
+                -- if entity.ServerCharacter ~= nil then
+                if entity.ServerCharacter ~= nil and entity.Transform and entity.Uuid then -- CX FIX: nil guards
                     local target = entity.Transform.Transform.Translate
                     local distance = math.sqrt((pos[1] - target[1]) ^ 2 + (pos[2] - target[2]) ^ 2 + (pos[3] - target[3]) ^ 2)
                     if distance <= radius then
+                        -- CX FIX: DisplayName can be nil
+                        local displayHandle = ""
+                        if entity.DisplayName and entity.DisplayName.NameKey and entity.DisplayName.NameKey.Handle then
+                            displayHandle = Ext.Loca.GetTranslatedString(entity.DisplayName.NameKey.Handle.Handle)
+                        end
                         table.insert(nearbyCharacters, {
                             Entity = entity,
                             Guid = entity.Uuid.EntityUuid,
                             Name = entity.ServerCharacter.Template.Name,
                             Distance = distance,
-                            Handle = Ext.Loca.GetTranslatedString(entity.DisplayName.NameKey.Handle.Handle),
+                            -- Handle = Ext.Loca.GetTranslatedString(entity.DisplayName.NameKey.Handle.Handle),
+                            Handle = displayHandle,
                         })
                     end
                 end
@@ -1572,7 +1818,9 @@ local function OnSessionLoaded()
         local nearbyCharacters = GetNearbyCharacters(160)
         for _, character in ipairs(nearbyCharacters) do
             local guid = character.Name .. "_" .. character.Guid
-            if IsCharacter(guid) == 1 and CheckIfParty(guid) == 0 and CheckIfExcluded(guid) == 0 then
+            -- if IsCharacter(guid) == 1 and CheckIfParty(guid) == 0 and CheckIfExcluded(guid) == 0 then
+            -- CX FIX: skip clones and party summons, matching the ActionResources subscriber
+            if IsCharacter(guid) == 1 and CheckIfParty(guid) == 0 and CheckIfExcluded(guid) == 0 and IsClone(guid) == 0 and IsPartySummon(guid) == 0 then
                 GiveHPIncrease(guid, true)
                 GiveLevel(guid)
                 CheckOverride(guid)
@@ -1608,10 +1856,16 @@ local function OnSessionLoaded()
 
 
                 -- Retrieve the BoostsContainer for the entity
-                local boostsContainer = Ext.Entity.Get(guid).BoostsContainer
+                -- local boostsContainer = Ext.Entity.Get(guid).BoostsContainer
+                local cleanupEntity = Ext.Entity.Get(guid) -- CX FIX: nil guard
+                local boostsContainer = cleanupEntity and cleanupEntity.BoostsContainer
                 if not boostsContainer then
                     goto continue
                 end
+
+                -- CX FIX: collect first, remove after, so we don't edit the boost lists while iterating them
+                local statusesToRemove = {}
+                local boostsToRemove = {}
 
                 local boostTypes = { "AC", "Ability", "ActionResource", "DamageBonus", "RollBonus", "SpellSaveDC" }
                 for _, boostEntry in ipairs(boostsContainer.Boosts) do
@@ -1629,16 +1883,30 @@ local function OnSessionLoaded()
                             local boostInfo = boost.BoostInfo
                             if boostInfo and boostInfo.Cause and boostInfo.Cause.Cause then
                                 local cause = boostInfo.Cause.Cause
+                                -- if boostEntry.Type == "RollBonus" and cause and cause ~= "" and cause:find("CX_") then
+                                --     RemoveStatus(guid, cause, "")
+                                -- elseif boostEntry.Type ~= "RollBonus" and boostInfo.Cause.Cause == "combatextender" then
+                                --     local boostParams = boostInfo.Params.Params
+                                --     local boostRemovalString = string.format("%s(%s)", boostEntry.Type, boostParams)
+                                --     RemoveBoosts(guid, boostRemovalString, 0, "combatextender", "1")
+                                -- end
+                                -- CX FIX #8: RollBonus boosts of 11+ are added directly with cause "combatextender" and were never removed
                                 if boostEntry.Type == "RollBonus" and cause and cause ~= "" and cause:find("CX_") then
-                                    RemoveStatus(guid, cause, "")
-                                elseif boostEntry.Type ~= "RollBonus" and boostInfo.Cause.Cause == "combatextender" then
+                                    statusesToRemove[cause] = true
+                                elseif cause == "combatextender" then
                                     local boostParams = boostInfo.Params.Params
                                     local boostRemovalString = string.format("%s(%s)", boostEntry.Type, boostParams)
-                                    RemoveBoosts(guid, boostRemovalString, 0, "combatextender", "1")
+                                    table.insert(boostsToRemove, boostRemovalString)
                                 end
                             end
                         end
                     end
+                end
+                for statusName, _ in pairs(statusesToRemove) do
+                    RemoveStatus(guid, statusName, "")
+                end
+                for _, boostRemovalString in ipairs(boostsToRemove) do
+                    RemoveBoosts(guid, boostRemovalString, 0, "combatextender", "1")
                 end
                 RemoveStatus(guid, CX_APPLIED, "")
                 count = count + 1
@@ -1648,6 +1916,9 @@ local function OnSessionLoaded()
     end
 
     -- Damage Listener
+    -- CX FIX #11: disabled. It computed values and discarded them, and errored on every environmental/surface hit
+    -- (null attacker GUID -> UuidToHandle returns nil -> .DisplayName on nil).
+    --[==[
     Ext.Osiris.RegisterListener("AttackedBy", 7, "after", function(defender, attackerOwner, attacker2, damageType, damageAmount, damageCause, storyActionID)
         --
         if IsCharacter(defender) == 1 then
@@ -1663,14 +1934,16 @@ local function OnSessionLoaded()
             local attackerTo
         end
     end)
+    ]==]
 
     -- Continuous Listener
     Ext.Entity.Subscribe("ActionResources", function(entity, _, _)
-        if entity.Uuid and entity.Uuid.EntityUuid then
+        -- if entity.Uuid and entity.Uuid.EntityUuid then
+        if entity.Uuid and entity.Uuid.EntityUuid and entity.ServerCharacter then -- CX FIX: ServerCharacter can be nil
             local uuid = entity.Uuid.EntityUuid
             local name = entity.ServerCharacter.Template.Name
             local guid = name .. "_" .. uuid
-            local handle = Ext.Loca.GetTranslatedString(entity.DisplayName.NameKey.Handle.Handle)
+            -- local handle = Ext.Loca.GetTranslatedString(entity.DisplayName.NameKey.Handle.Handle) -- CX FIX: unused, ran on every action resource change, errors if DisplayName is nil
 
             -- Check if the entity is not already in the Entities table
             if not Entities[guid] then
@@ -1772,18 +2045,31 @@ local function OnSessionLoaded()
         Loaded = true -- Game has now fully loaded
 
         -- Identify Act and set variable
+        -- if levelName == "WLD_Main_A" or levelName == "CRE_Main_A" or levelName == "TUT_Avernus_C" or levelName == "SYS_CC_I" then
+        --     Act = 1
+        -- elseif levelName == "SCL_Main_A" then
+        --     Act = 2
+        -- elseif levelName == "BGO_Main_A" or levelName == "CTY_Main_A" then
+        --     Act = 3
+        -- else
+        --     Act = 1
+        -- end
+        -- CX FIX #4: added Iron Throne / finale to Act 3, and unknown levels now keep the previous Act instead of dropping to 1
         if levelName == "WLD_Main_A" or levelName == "CRE_Main_A" or levelName == "TUT_Avernus_C" or levelName == "SYS_CC_I" then
             Act = 1
         elseif levelName == "SCL_Main_A" then
             Act = 2
-        elseif levelName == "BGO_Main_A" or levelName == "CTY_Main_A" then
+        elseif levelName == "BGO_Main_A" or levelName == "CTY_Main_A" or levelName == "IRN_Main_A" or levelName == "END_Main" then
             Act = 3
-        else
-            Act = 1
         end
+
+        -- CX FIX #5: a new game never fires SavegameLoaded, so the party list and out-of-combat timer were never started
+        ProcessPartyMembers()
+        StartCXTimer()
 
         -- Combat Save Loading: We re-apply the boosts to all nearby characters that have status CX_APPLIED, which persists in the savefile
         -- 50 meters is beyond the range at which characters join the ongoing combat
+        -- CX NOTE: the comment above says 50 but the radius used is 100
         local nearbyCharacters = GetNearbyCharacters(100)
 
         for _, character in ipairs(nearbyCharacters) do
@@ -1802,6 +2088,7 @@ local function OnSessionLoaded()
                 CheckPassive(guid)
                 CheckOverride(guid)
                 GiveSpellSlots(guid)
+                GiveAbilityPointBoost(guid) -- CX FIX (reapply): re-enabled and moved ahead of HP so CON is back first; it now strips its own old boosts before re-adding
                 GiveHPIncrease(guid, false)
                 GiveRollBonus(guid, "Attack")
                 GiveRollBonus(guid, "SavingThrow")
@@ -1819,7 +2106,10 @@ local function OnSessionLoaded()
     end)
 
     Ext.Osiris.RegisterListener("CombatEnded", 1, "after", function(combat)
-        if (combat == CurrentCombat) then
+        -- if (combat == CurrentCombat) then
+        -- CX FIX #2: CurrentCombat gets overwritten by any nearby combat, so also clean up whenever the party is out of combat
+        ProcessPartyMembers()
+        if combat == CurrentCombat or not IsPartyInCombat() then
             ProcessPartyMembers()
             CombatNPCS = {}
             StartCXTimer()

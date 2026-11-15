@@ -48,7 +48,7 @@ function RecruitmentManager:CanDismiss(dismisser, target)
 -- DIQ Misc Patches start
     -- return isAvatar and isSameUser and not IsIncapacitated and not dismissBlocked
     return isAvatar and isSameUser and not IsIncapacitated and not dismissBlocked and not IsInCombat
--- DIQ Misc Patches start
+-- DIQ Misc Patches end
 end
 
 ---@param recruiter EntityHandle

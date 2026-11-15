@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <save>
   <version major="4" minor="0" revision="9" build="328" />
   <region id="SpellLists">
@@ -28,6 +28,7 @@
                 </node>
         <node id="SpellList">
                     <attribute id="Comment" type="LSString" value="Hellish Rebuke" />
+                    <!-- <attribute id="Spells" type="LSString" value="Shout_SYR_HellTouched_HellishRebuke" /> -->
                     <attribute id="Spells" type="LSString" value="SYR_Shout_HellTouched_HellishRebuke" />
                     <attribute id="UUID" type="guid" value="4dac0a31-6e48-44ee-9947-5978d1609150" />
                 </node>

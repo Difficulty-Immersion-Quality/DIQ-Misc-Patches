@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="0" revision="9" build="330"/>
+    <region id="Progressions">
+        <node id="root">
+            <children>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(SpellSlot,1,1)"/>
+                    <attribute id="Level" type="uint8" value="2"/>
+                    <attribute id="Name" type="LSString" value="Druid"/>
+                    <attribute id="ProgressionType" type="uint8" value="0"/>
+                    <attribute id="TableUUID" type="guid" value="6e7b7bad-e122-4679-8b3c-8f8987a9d466"/>
+                    <attribute id="UUID" type="guid" value="95322dde-349a-4101-964f-9aa46abd890b"/>
+                    <children>
+                        <node id="SubClasses">
+                            <children>
+                                <node id="SubClass"> Circle of the Land
+                                    <attribute id="Object" type="guid" value="7458da78-34b7-4150-a42f-37197ab04510"/>
+                                </node>
+                                <node id="SubClass"> Circle of the Moon
+                                    <attribute id="Object" type="guid" value="3eab0689-e51b-4634-a690-0375d3cb2716"/>
+                                </node>
+                                <node id="SubClass"> Circle of Spores
+                                    <attribute id="Object" type="guid" value="4b61af6c-4a44-436e-aa0a-0d11a2d6b8ee"/>
+                                </node>
+                                <node id="SubClass"> Circle of Stormchasers
+                                    <attribute id="Object" type="guid" value="90615bcd-6584-4ba7-8196-6df053d263fe"/>
+                                </node>
+                            </children>
+                        </node>
+                    </children>
+                </node>
+            <!-- Bug Fix: The level 1 node uses the same UUID for the node and table, need to change the node UUID to something new. -->
+				<node id="Progression">
+                    <attribute id="Level" type="uint8" value="1"/>
+                    <attribute id="Name" type="LSString" value="CircleofStormchasers"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/>
+                    <!-- <attribute id="UUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/> -->
+                    <attribute id="UUID" type="guid" value="be8a0c99-6a36-4822-8044-c5257fac11a6"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(WildShape,2,0)"/>
+                    <attribute id="Level" type="uint8" value="2"/>
+                    <attribute id="Name" type="LSString" value="CircleofStormchasers"/> 
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(0f094e35-9675-464d-8cae-8e58c28de955,,,,AlwaysPrepared);AddSpells(7c066262-c22d-4d25-8da5-5ace8bf7ac84,,,,AlwaysPrepared);AddSpells(898f5a9b-0bbc-4f68-aabf-01ba46bec439,,,,AlwaysPrepared)"/> 
+                    <attribute id="TableUUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/>
+                    <attribute id="UUID" type="guid" value="bde465a9-81a1-4a6e-b558-b61424f6c414"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="3"/>
+                    <attribute id="Name" type="LSString" value="CircleofStormchasers"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(07a7eb1b-555f-4f72-8a80-812bc85c7dc0,,,,AlwaysPrepared)"/> 
+                    <attribute id="TableUUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/>
+                    <attribute id="UUID" type="guid" value="d54c2e5e-0993-4a08-ba72-7064696509e3"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="4"/>
+                    <attribute id="Name" type="LSString" value="CircleofStormchasers"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(ef953742-69fa-4730-a289-bf9ce9629b1a,,,,AlwaysPrepared)"/> 
+                    <attribute id="TableUUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/>
+                    <attribute id="UUID" type="guid" value="acb37ed5-3dfe-405d-be35-3871c627691c"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="5"/>
+                    <attribute id="Name" type="LSString" value="CircleofStormchasers"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(e304a9ac-4eb6-415d-a8ff-7a761a4d0f0b,,,,AlwaysPrepared)"/> 
+                    <attribute id="TableUUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/>
+                    <attribute id="UUID" type="guid" value="fc915fbe-ab23-44ce-9bf6-cfd555152837"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(StormsReachResource,3,0)"/>
+                    <attribute id="Level" type="uint8" value="6"/>
+                    <attribute id="Name" type="LSString" value="CircleofStormchasers"/> 
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(c15f9224-a600-4a10-a5e7-642eed9c4222,,,,AlwaysPrepared);AddSpells(9de57961-f0f1-4a23-971d-25e77f219d96,,,,AlwaysPrepared)"/> 
+                    <attribute id="TableUUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/>
+                    <attribute id="UUID" type="guid" value="f2fb0828-8b8a-4cc4-8036-6f7625769c02"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="7"/>
+                    <attribute id="Name" type="LSString" value="CircleofStormchasers"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(b6bbec02-8ade-4fe2-a565-f50974d3a5d4,,,,AlwaysPrepared)"/> 
+                    <attribute id="TableUUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/>
+                    <attribute id="UUID" type="guid" value="0d82dc0f-8540-44dd-89a4-3d04f8a8a29e"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="8"/>
+                    <attribute id="Name" type="LSString" value="CircleofStormchasers"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/>
+                    <attribute id="UUID" type="guid" value="5408a865-6e82-4cef-9ff3-168568cad14b"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(StormsReachResource,1,0)"/>
+                    <attribute id="Level" type="uint8" value="9"/>
+                    <attribute id="Name" type="LSString" value="CircleofStormchasers"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(c76e8936-c70b-4720-82d8-85206e2c42d5,,,,AlwaysPrepared)"/> 
+                    <attribute id="TableUUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/>
+                    <attribute id="UUID" type="guid" value="470c468a-658e-47e8-b12b-385a191eb2d1"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="10"/>
+                    <attribute id="Name" type="LSString" value="CircleofStormchasers"/> 
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="PassivesAdded" type="LSString" value="EmpoweredShift"/>
+                    <attribute id="Selectors" type="LSString" value="AddSpells(e4d81321-c46f-4334-af8b-b6f4f87d811c,,,,AlwaysPrepared)"/> 
+                    <attribute id="TableUUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/>
+                    <attribute id="UUID" type="guid" value="a128e9ec-0f51-4f5d-808f-491de3dc86c5"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="11"/>
+                    <attribute id="Name" type="LSString" value="CircleofStormchasers"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/>
+                    <attribute id="UUID" type="guid" value="cbf27ca0-9c30-40b7-90df-3cec506aabfe"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="12"/>
+                    <attribute id="Name" type="LSString" value="CircleofStormchasers"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/>
+                    <attribute id="UUID" type="guid" value="80231a95-e4fa-41da-9563-03ab8a2cd55e"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(StormsReachResource,1,0)"/>
+                    <attribute id="Level" type="uint8" value="13"/>
+                    <attribute id="Name" type="LSString" value="CircleofStormchasers"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/> 
+                    <attribute id="TableUUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/>
+                    <attribute id="UUID" type="guid" value="4c8c4757-d063-4d91-a6fa-cb7d91d2f66c"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="14"/>
+                    <attribute id="Name" type="LSString" value="CircleofStormchasers"/> 
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="PassivesAdded" type="LSString" value="ReapTheWhirlwindResistances;ReapTheWhirlwindSpellcasting"/>
+                    <attribute id="TableUUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/>
+                    <attribute id="UUID" type="guid" value="d53114cb-4574-4eb3-ba51-067047d9c517"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="15"/>
+                    <attribute id="Name" type="LSString" value="CircleofStormchasers"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/>
+                    <attribute id="UUID" type="guid" value="332cfd55-edbf-4e59-826f-b4eb1e7ae81d"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="16"/>
+                    <attribute id="Name" type="LSString" value="CircleofStormchasers"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/>
+                    <attribute id="UUID" type="guid" value="a0a41e4b-d15b-45d8-9867-ff294d9e5b02"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Boosts" type="LSString" value="ActionResource(StormsReachResource,1,0)"/>
+                    <attribute id="Level" type="uint8" value="17"/>
+                    <attribute id="Name" type="LSString" value="CircleofStormchasers"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/> 
+                    <attribute id="TableUUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/>
+                    <attribute id="UUID" type="guid" value="0b03cf84-75f7-4f45-9bed-3c2c4a385c37"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="18"/>
+                    <attribute id="Name" type="LSString" value="CircleofStormchasers"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/>
+                    <attribute id="UUID" type="guid" value="50e71a09-aace-4eee-b270-87363fbcfd6d"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="19"/>
+                    <attribute id="Name" type="LSString" value="CircleofStormchasers"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/>
+                    <attribute id="UUID" type="guid" value="74e9f9ab-39d3-41e8-89c3-ebe85f9b6c9d"/>
+                </node>
+                <node id="Progression">
+                    <attribute id="Level" type="uint8" value="20"/>
+                    <attribute id="Name" type="LSString" value="CircleofStormchasers"/>
+                    <attribute id="ProgressionType" type="uint8" value="1"/>
+                    <attribute id="TableUUID" type="guid" value="1f1ca1f1-d7a1-416a-8ada-8aca5c62a3a7"/>
+                    <attribute id="UUID" type="guid" value="7d86b964-9f4f-458e-97cd-5065c58a94c0"/>
+                </node>
+			</children>
+        </node>
+    </region>
+</save>

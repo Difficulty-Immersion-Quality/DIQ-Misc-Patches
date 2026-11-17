@@ -6,7 +6,7 @@ local opts = {
     WriteableOnClient = false,
     Persistent = true,
     SyncToClient = false,
-    SyncToServer = true,
+    SyncToServer = false,
     SyncOnWrite = false,
     DontCache = false
 }

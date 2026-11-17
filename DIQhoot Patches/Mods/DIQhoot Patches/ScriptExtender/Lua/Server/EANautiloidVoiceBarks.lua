@@ -3,6 +3,8 @@
 
 local membrane = "TOOL_Ladder_MF_Membrane_3H_A_002_a8e40469-0efa-4077-b125-47058511202e";
 local membrane_icd = false;
+local template_listener, level_listener
+
 local function InsaneintheMembrane(charID)
     Ext.Timer.WaitFor(15000, function()
         if membrane_icd == true then

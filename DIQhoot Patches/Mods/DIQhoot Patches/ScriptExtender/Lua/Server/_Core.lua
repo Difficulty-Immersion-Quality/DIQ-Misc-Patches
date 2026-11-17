@@ -1,75 +1,112 @@
-Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(levelName, isEditorMode)
-    -- Ext.Utils.Print("[DIQ Misc Patches] LevelGameplayStarted: " .. tostring(levelName) .. ", isEditorMode: " .. tostring(isEditorMode))
-    local modVars = Ext.Vars.GetModVariables(ModuleUUID)
-    local assignedSpells = modVars.DIQMiscPatches_UtilitySpell or {}
-    modVars.DIQMiscPatches_UtilitySpell = assignedSpells
+-- ==================================== Locals ====================================
 
-    for _, row in pairs(Osi.DB_Players:Get(nil) or {}) do
-        local charID = row[1]
-        -- Ext.Utils.Print("[DIQ Misc Patches] Checking player: " .. tostring(charID))
-        if type(charID) == "string" and not assignedSpells[charID] then
-            -- Ext.Utils.Print("[DIQ Misc Patches] Adding spell to: " .. tostring(charID))
-            Osi.AddSpell(charID, "Shout_DIQ_Utility_Spells_Container", 0, 0)
-            assignedSpells[charID] = true
-        else
-            -- Ext.Utils.Print("[DIQ Misc Patches] Spell already assigned or invalid charID: " .. tostring(charID))
+local UTILITY_SPELL = "Shout_DIQ_Utility_Spells_Container"
+local MOBILITY_PASSIVE = "EqLib_Uni1_Passive" -- TODO: Yeet when I do my own mobility overhaul
+
+local legacyEntriesMigrated = {}
+local mobilityPassiveAvailable
+
+local function isMobilityPassiveAvailable()
+    if mobilityPassiveAvailable == nil then
+        mobilityPassiveAvailable = Ext.Stats.Get(MOBILITY_PASSIVE, nil, false) ~= nil
+    end
+    return mobilityPassiveAvailable
+end
+
+-- ==================================== Legacy vars handling ====================================
+-- Older saves keyed some entries by full Osiris GUIDSTRINGs (Name_uuid) instead of bare UUIDs.
+
+local function migrateLegacyEntries(varName, assigned)
+    if legacyEntriesMigrated[varName] then return end
+
+    local legacyIDs = {}
+    for charID in pairs(assigned) do
+        if charID ~= charID:sub(-36) then
+            table.insert(legacyIDs, charID)
         end
     end
-end)
 
-Ext.Osiris.RegisterListener("CharacterJoinedParty", 1, "after", function(charID)
-    -- Ext.Utils.Print("[DIQ Misc Patches] CharacterJoinedParty: " .. tostring(charID))
+    for _, legacyID in ipairs(legacyIDs) do
+        local charID = legacyID:sub(-36)
+        assigned[charID] = assigned[charID] or assigned[legacyID]
+        assigned[legacyID] = nil
+    end
+
+    legacyEntriesMigrated[varName] = true
+end
+
+local function getAssigned(varName)
     local modVars = Ext.Vars.GetModVariables(ModuleUUID)
-    local assignedSpells = modVars.DIQMiscPatches_UtilitySpell or {}
-    modVars.DIQMiscPatches_UtilitySpell = assignedSpells
+    local assigned = modVars[varName] or {}
+    modVars[varName] = assigned
+    migrateLegacyEntries(varName, assigned)
+    return assigned
+end
 
-    if type(charID) == "string" and not assignedSpells[charID] then
+-- ==================================== Give stuff functions ====================================
+
+local function ApplyUtilitySpell(charID, assigned)
+    charID = charID:sub(-36)
+    -- Ext.Utils.Print("[DIQ Misc Patches] Checking player: " .. tostring(charID))
+    if not assigned[charID] then
         -- Ext.Utils.Print("[DIQ Misc Patches] Adding spell to: " .. tostring(charID))
-        Osi.AddSpell(charID, "Shout_DIQ_Utility_Spells_Container", 0, 0)
-        assignedSpells[charID] = true
+        if Osi.HasSpell(charID, UTILITY_SPELL) == 0 then
+            Osi.AddSpell(charID, UTILITY_SPELL, 0, 0)
+        end
+        assigned[charID] = true
     else
         -- Ext.Utils.Print("[DIQ Misc Patches] Spell already assigned or invalid charID: " .. tostring(charID))
     end
+end
+
+local function ApplyMobilityPassive(charID, assigned)
+    charID = charID:sub(-36)
+    -- Ext.Utils.Print("[DIQ Misc Patches] Checking player for passive: " .. tostring(charID))
+    if not assigned[charID] then
+        -- Ext.Utils.Print("[DIQ Misc Patches] Assigning passive to player " .. tostring(charID))
+        if Osi.HasPassive(charID, MOBILITY_PASSIVE) == 0 then
+            Osi.AddPassive(charID, MOBILITY_PASSIVE)
+        end
+        assigned[charID] = true
+    else
+        -- Ext.Utils.Print("[DIQ Misc Patches] Skipping already assigned player " .. tostring(charID))
+    end
+end
+
+-- ==================================== Listeners ====================================
+
+Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(levelName, isEditorMode)
+    -- Ext.Utils.Print("[DIQ Misc Patches] LevelGameplayStarted: " .. tostring(levelName) .. ", isEditorMode: " .. tostring(isEditorMode))
+    if Osi.IsCharacterCreationLevel(levelName) == 1 then return end
+
+    -- Fetch each ModVar table once per level load, not once per character
+    local assignedSpells = getAssigned("DIQMiscPatches_UtilitySpell")
+    local passiveAvailable = isMobilityPassiveAvailable()
+    local assignedPassives = passiveAvailable and getAssigned("DIQMiscPatches_MOPassive")
+    local processed = {}
+
+    for _, row in ipairs(Osi.DB_Players:Get(nil) or {}) do
+        local charID = row[1]:sub(-36)
+        processed[charID] = true
+        ApplyUtilitySpell(charID, assignedSpells)
+        if passiveAvailable then
+            ApplyMobilityPassive(charID, assignedPassives)
+        end
+    end
+
+    if not passiveAvailable then return end
+
+    -- All other ServerCharacters (players already handled above)
+    for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter") or {}) do
+        local charID = entity.Uuid and entity.Uuid.EntityUuid
+        -- Ext.Utils.Print("[DIQ Misc Patches] Checking ServerCharacter for passive: " .. tostring(charID))
+        if charID and not processed[charID] then
+            ApplyMobilityPassive(charID, assignedPassives)
+        end
+    end
 end)
 
--- TODO: Yeet when I do my own mobility overhaul
-Ext.Osiris.RegisterListener("LevelGameplayStarted", 2, "after", function(level, _)
-    -- Ext.Utils.Print("[DIQ Misc Patches] LevelGameplayStarted for mobility passive: " .. tostring(level))
-    local modVars = Ext.Vars.GetModVariables(ModuleUUID)
-    local assigned = modVars.DIQMiscPatches_MOPassive or {}
-    modVars.DIQMiscPatches_MOPassive = assigned
-
-    -- Unique players from DB_Players
-    for i, row in ipairs(Osi.DB_Players:Get(nil) or {}) do
-        local charID = row[1]
-        -- Ext.Utils.Print("[DIQ Misc Patches] Checking player for passive: " .. tostring(charID))
-        if type(charID) == "string" then
-            if not assigned[charID] then
-                -- Ext.Utils.Print("[DIQ Misc Patches] Assigning passive to player " .. tostring(charID))
-                Osi.AddPassive(charID, "EqLib_Uni1_Passive")
-                assigned[charID] = true
-            else
-                -- Ext.Utils.Print("[DIQ Misc Patches] Skipping already assigned player " .. tostring(charID))
-            end
-        else
-            -- Ext.Utils.Print("[DIQ Misc Patches] Invalid character ID in DB_Players row " .. tostring(i))
-        end
-    end
-
-    -- All ServerCharacters (excluding already assigned)
-    for _, entity in ipairs(Ext.Entity.GetAllEntitiesWithComponent("ServerCharacter") or {}) do
-        local charID = entity.Uuid and entity.Uuid.EntityUuid or entity
-        -- Ext.Utils.Print("[DIQ Misc Patches] Checking ServerCharacter for passive: " .. tostring(charID))
-        if type(charID) == "string" then
-            if not assigned[charID] then
-                -- Ext.Utils.Print("[DIQ Misc Patches] Assigning passive to ServerCharacter " .. tostring(charID))
-                Osi.AddPassive(charID, "EqLib_Uni1_Passive")
-                assigned[charID] = true
-            else
-                -- Ext.Utils.Print("[DIQ Misc Patches] Skipping already assigned ServerCharacter " .. tostring(charID))
-            end
-        else
-            -- Ext.Utils.Print("[DIQ Misc Patches] Invalid ServerCharacter ID: " .. tostring(charID))
-        end
-    end
+Ext.Osiris.RegisterListener("DB_Players", 1, "after", function(charID)
+    -- Ext.Utils.Print("[DIQ Misc Patches] CharacterJoinedParty: " .. tostring(charID))
+    ApplyUtilitySpell(charID, getAssigned("DIQMiscPatches_UtilitySpell"))
 end)

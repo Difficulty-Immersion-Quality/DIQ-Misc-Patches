@@ -12,6 +12,8 @@ local opts = {
 }
 Ext.Vars.RegisterModVariable(ModuleUUID, "DIQMiscPatches_MOPassive", opts)
 Ext.Vars.RegisterModVariable(ModuleUUID, "DIQMiscPatches_UtilitySpell", opts)
+Ext.Vars.RegisterModVariable(ModuleUUID, "DIQMiscPatches_OneTimeXP", opts)
 
 Ext.Require("Server/_Core.lua")
 Ext.Require("Server/EANautiloidVoiceBarks.lua")
+Ext.Require("Server/OneTimeXP.lua")

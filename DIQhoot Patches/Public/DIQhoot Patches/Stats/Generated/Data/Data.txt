@@ -332,8 +332,10 @@ key "FleeDistance","30"
 // key "GMItemResistanceMax","1000"
 
 // key "TraderDroppedItemsPercentage","51"
+key "TraderDroppedItemsPercentage","100"
 
 // key "TraderDroppedItemsCap","3"
+key "TraderDroppedItemsCap","9999"
 
 // key "TraderDonationsRequiredAttitude","-45"
 
@@ -659,7 +661,7 @@ key "InitiativeDie","20"
 
 // key "MoveToTargetCloseEnoughMax","3.5"
 
-// key "MultiplyEffectsByDurationTurnLimit","20"
+// key "MultiplyEffectsByDurationTurnLimit","20" // TODO: Increase?
 
 // key "InterruptFarDistance","30"
 

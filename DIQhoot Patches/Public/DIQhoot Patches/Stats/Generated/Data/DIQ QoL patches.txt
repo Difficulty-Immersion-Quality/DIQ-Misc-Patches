@@ -26,6 +26,7 @@ data "StatusType" "BOOST"
 data "DisplayName" "h03ca14d9g0ca8g41d7g8bcfg6ea42fd5705f;1"
 // // You feel a bit woozy, though you'd feel a lot worse were the feeding involuntary.
 data "Description" "h9b7c1291g114dg4269gba95g59b4193d84b4;1"
+data "Icon" "Status_Astarion_Weak"
 data "OnApplyFunctors" "ApplyStatus(GOON_ASTARION_WEAK_FRIENDLY_FX,100,1)"
 data "StackId" "ASTARION_WEAK"
 data "StackPriority" "2"
